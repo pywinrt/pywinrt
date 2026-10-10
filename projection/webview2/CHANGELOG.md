@@ -34,3 +34,6 @@ releases before v4.0 are.
   `CoreWebView2SharedWorker` and the managers and event arguments that go with
   them - and find-on-page, `CoreWebView2Find` and `CoreWebView2FindOptions`.
   Nothing was removed.
+
+### Fixed
+- Fixed type hints incorrectly accepting a call to a class with no constructor.

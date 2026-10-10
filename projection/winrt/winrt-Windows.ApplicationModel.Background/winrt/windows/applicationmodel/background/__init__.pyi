@@ -260,7 +260,8 @@ class AlarmApplicationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AlarmApplicationManager(winrt.system.Object, metaclass=AlarmApplicationManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppBroadcastTrigger(IBackgroundTrigger, winrt.system.Object):
@@ -274,6 +275,8 @@ class AppBroadcastTrigger(IBackgroundTrigger, winrt.system.Object):
 
 @typing.final
 class AppBroadcastTriggerProviderInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.ApplicationModel.Background.AppBroadcastTriggerProviderInfo::get_VideoKeyFrameInterval()
     @_property
     def video_key_frame_interval(self) -> datetime.timedelta: ...
@@ -327,6 +330,8 @@ class ApplicationTrigger(IBackgroundTrigger, winrt.system.Object):
 
 @typing.final
 class ApplicationTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.Background.ApplicationTriggerDetails::get_Arguments()
     @_property
     def arguments(self) -> windows_foundation_collections.ValueSet: ...
@@ -384,7 +389,8 @@ class BackgroundExecutionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundExecutionManager(winrt.system.Object, metaclass=BackgroundExecutionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BackgroundTaskBuilder_Static(winrt._winrt.Object_Static):
@@ -448,6 +454,8 @@ class BackgroundTaskBuilder(winrt.system.Object, metaclass=BackgroundTaskBuilder
 
 @typing.final
 class BackgroundTaskCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs::CheckResult()
     def check_result(self) -> None: ...
     # System.Guid Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs::get_InstanceId()
@@ -456,11 +464,15 @@ class BackgroundTaskCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class BackgroundTaskDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Background.BackgroundTaskDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class BackgroundTaskProgressEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs::get_InstanceId()
     @_property
     def instance_id(self) -> _uuid.UUID: ...
@@ -481,6 +493,8 @@ class BackgroundTaskRegistration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundTaskRegistration(IBackgroundTaskRegistration3, IBackgroundTaskRegistration2, IBackgroundTaskRegistration, winrt.system.Object, metaclass=BackgroundTaskRegistration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Background.BackgroundTaskRegistration::Unregister(System.Boolean)
     def unregister(self, cancel_task: bool, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Background.BackgroundTaskRegistration::add_Completed(Windows.ApplicationModel.Background.BackgroundTaskCompletedEventHandler)
@@ -547,7 +561,8 @@ class BackgroundWorkCost_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundWorkCost(winrt.system.Object, metaclass=BackgroundWorkCost_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BluetoothLEAdvertisementPublisherTrigger(IBackgroundTrigger, winrt.system.Object):
@@ -650,6 +665,8 @@ class CachedFileUpdaterTrigger(IBackgroundTrigger, winrt.system.Object):
 
 @typing.final
 class CachedFileUpdaterTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Background.CachedFileUpdaterTriggerDetails::get_CanRequestUserInput()
     @_property
     def can_request_user_input(self) -> bool: ...
@@ -707,6 +724,8 @@ class DeviceConnectionChangeTrigger_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeviceConnectionChangeTrigger(IBackgroundTrigger, winrt.system.Object, metaclass=DeviceConnectionChangeTrigger_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger::get_MaintainConnection()
     @_property
     def maintain_connection(self) -> bool: ...
@@ -771,7 +790,8 @@ class DeviceUseTrigger(IBackgroundTrigger, winrt.system.Object):
 
 @typing.final
 class DeviceWatcherTrigger(IBackgroundTrigger, winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class EmailStoreNotificationTrigger(IBackgroundTrigger, winrt.system.Object):
@@ -797,6 +817,8 @@ class GattServiceProviderTrigger_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattServiceProviderTrigger(IBackgroundTrigger, winrt.system.Object, metaclass=GattServiceProviderTrigger_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters Windows.ApplicationModel.Background.GattServiceProviderTrigger::get_AdvertisingParameters()
     @_property
     def advertising_parameters(self) -> windows_devices_bluetooth_genericattributeprofile.GattServiceProviderAdvertisingParameters: ...
@@ -812,6 +834,8 @@ class GattServiceProviderTrigger(IBackgroundTrigger, winrt.system.Object, metacl
 
 @typing.final
 class GattServiceProviderTriggerResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.ApplicationModel.Background.GattServiceProviderTriggerResult::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -988,7 +1012,8 @@ class StorageLibraryContentChangedTrigger_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageLibraryContentChangedTrigger(IBackgroundTrigger, winrt.system.Object, metaclass=StorageLibraryContentChangedTrigger_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SystemCondition(IBackgroundCondition, winrt.system.Object):

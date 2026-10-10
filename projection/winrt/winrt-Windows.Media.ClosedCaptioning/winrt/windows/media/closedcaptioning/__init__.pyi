@@ -107,7 +107,8 @@ class ClosedCaptionProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ClosedCaptionTheme_Static(winrt._winrt.Object_Static):
@@ -128,6 +129,8 @@ class ClosedCaptionTheme_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ClosedCaptionTheme(winrt.system.Object, metaclass=ClosedCaptionTheme_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.ClosedCaptioning.ClosedCaptionColor Windows.Media.ClosedCaptioning.ClosedCaptionTheme::get_BackgroundColor()
     @_property
     def background_color(self) -> ClosedCaptionColor: ...

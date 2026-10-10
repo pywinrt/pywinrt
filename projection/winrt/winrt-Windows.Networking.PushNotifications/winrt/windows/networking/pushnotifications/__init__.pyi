@@ -34,6 +34,8 @@ class PushNotificationType(enum.IntEnum):
 
 @typing.final
 class PushNotificationChannel(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.PushNotifications.PushNotificationChannel::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Networking.PushNotifications.PushNotificationChannel::add_PushNotificationReceived(Windows.Foundation.TypedEventHandler`2<Windows.Networking.PushNotifications.PushNotificationChannel,Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs>)
@@ -72,10 +74,13 @@ class PushNotificationChannelManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PushNotificationChannelManager(winrt.system.Object, metaclass=PushNotificationChannelManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PushNotificationChannelManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.PushNotifications.PushNotificationChannel> Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser::CreatePushNotificationChannelForApplicationAsync()
     def create_push_notification_channel_for_application_async(self) -> windows_foundation.IAsyncOperation[PushNotificationChannel]: ...
@@ -104,10 +109,13 @@ class PushNotificationChannelManagerForUser(winrt.system.Object):
 
 @typing.final
 class PushNotificationChannelsRevokedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PushNotificationReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -132,6 +140,8 @@ class PushNotificationReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class RawNotification(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.PushNotifications.RawNotification::get_Content()
     @_property
     def content(self) -> str: ...

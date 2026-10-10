@@ -106,6 +106,8 @@ class AgentProvisioningProgressReport(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionConnectionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Setup.DeploymentSessionConnectionChange Windows.Management.Setup.DeploymentSessionConnectionChangedEventArgs::get_Change()
     @_property
     def change(self) -> DeploymentSessionConnectionChange: ...
@@ -115,6 +117,8 @@ class DeploymentSessionConnectionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionHeartbeatRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Management.Setup.DeploymentSessionHeartbeatRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -124,6 +128,8 @@ class DeploymentSessionHeartbeatRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class DeploymentSessionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Setup.DeploymentSessionStateChange Windows.Management.Setup.DeploymentSessionStateChangedEventArgs::get_Change()
     @_property
     def change(self) -> DeploymentSessionStateChange: ...
@@ -210,6 +216,8 @@ class DeploymentWorkloadBatch(winrt.system.Object):
 
 @typing.final
 class DevicePreparationExecutionContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Setup.DevicePreparationExecutionContext::get_Context()
     @_property
     def context(self) -> str: ...
@@ -221,6 +229,8 @@ class MachineProvisioningProgressReporter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MachineProvisioningProgressReporter(winrt.system.Object, metaclass=MachineProvisioningProgressReporter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Management.Setup.DevicePreparationExecutionContext> Windows.Management.Setup.MachineProvisioningProgressReporter::GetDevicePreparationExecutionContextAsync()
     def get_device_preparation_execution_context_async(self) -> windows_foundation.IAsyncOperation[DevicePreparationExecutionContext]: ...
     # System.Void Windows.Management.Setup.MachineProvisioningProgressReporter::ReportProgress(Windows.Management.Setup.AgentProvisioningProgressReport)

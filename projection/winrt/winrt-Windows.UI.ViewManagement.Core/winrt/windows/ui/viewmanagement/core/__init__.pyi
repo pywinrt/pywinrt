@@ -60,6 +60,8 @@ class CoreFrameworkInputView_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreFrameworkInputView(winrt.system.Object, metaclass=CoreFrameworkInputView_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.ViewManagement.Core.CoreFrameworkInputView::add_OcclusionsChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.ViewManagement.Core.CoreFrameworkInputView,Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs>)
     def add_occlusions_changed(self, handler: windows_foundation.TypedEventHandler[CoreFrameworkInputView, CoreFrameworkInputViewOcclusionsChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.ViewManagement.Core.CoreFrameworkInputView::remove_OcclusionsChanged(Windows.Foundation.EventRegistrationToken)
@@ -71,6 +73,8 @@ class CoreFrameworkInputView(winrt.system.Object, metaclass=CoreFrameworkInputVi
 
 @typing.final
 class CoreFrameworkInputViewAnimationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.ViewManagement.Core.CoreFrameworkInputViewAnimationStartingEventArgs::get_AnimationDuration()
     @_property
     def animation_duration(self) -> datetime.timedelta: ...
@@ -83,6 +87,8 @@ class CoreFrameworkInputViewAnimationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreFrameworkInputViewOcclusionsChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreFrameworkInputViewOcclusionsChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -99,6 +105,8 @@ class CoreInputView_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreInputView(winrt.system.Object, metaclass=CoreInputView_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.ViewManagement.Core.CoreInputViewOcclusion> Windows.UI.ViewManagement.Core.CoreInputView::GetCoreInputViewOcclusions()
     def get_core_input_view_occlusions(self) -> _cabc.Sequence[CoreInputViewOcclusion]: ...
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputView::IsKindSupported(Windows.UI.ViewManagement.Core.CoreInputViewKind)
@@ -152,6 +160,8 @@ class CoreInputView(winrt.system.Object, metaclass=CoreInputView_Static):
 
 @typing.final
 class CoreInputViewAnimationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputViewAnimationStartingEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -167,11 +177,15 @@ class CoreInputViewAnimationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreInputViewHidingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputViewHidingEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
 
 @typing.final
 class CoreInputViewOcclusion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.ViewManagement.Core.CoreInputViewOcclusion::get_OccludingRect()
     @_property
     def occluding_rect(self) -> windows_foundation.Rect: ...
@@ -181,6 +195,8 @@ class CoreInputViewOcclusion(winrt.system.Object):
 
 @typing.final
 class CoreInputViewOcclusionsChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputViewOcclusionsChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -193,11 +209,15 @@ class CoreInputViewOcclusionsChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreInputViewShowingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputViewShowingEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
 
 @typing.final
 class CoreInputViewTransferringXYFocusEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs::get_TransferHandled()
     @_property
     def transfer_handled(self) -> bool: ...
@@ -224,6 +244,8 @@ class UISettingsController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UISettingsController(winrt.system.Object, metaclass=UISettingsController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.ViewManagement.Core.UISettingsController::SetAdvancedEffectsEnabled(System.Boolean)
     def set_advanced_effects_enabled(self, value: bool, /) -> None: ...
     # System.Void Windows.UI.ViewManagement.Core.UISettingsController::SetAnimationsEnabled(System.Boolean)

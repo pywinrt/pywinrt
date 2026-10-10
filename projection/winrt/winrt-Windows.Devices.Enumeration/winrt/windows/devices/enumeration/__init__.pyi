@@ -167,6 +167,8 @@ class Panel(enum.IntEnum):
 
 @typing.final
 class DeviceAccessChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DeviceAccessStatus Windows.Devices.Enumeration.DeviceAccessChangedEventArgs::get_Status()
     @_property
     def status(self) -> DeviceAccessStatus: ...
@@ -188,6 +190,8 @@ class DeviceAccessInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeviceAccessInformation(winrt.system.Object, metaclass=DeviceAccessInformation_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Enumeration.DeviceAccessInformation::add_AccessChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Enumeration.DeviceAccessInformation,Windows.Devices.Enumeration.DeviceAccessChangedEventArgs>)
     def add_access_changed(self, handler: windows_foundation.TypedEventHandler[DeviceAccessInformation, DeviceAccessChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Enumeration.DeviceAccessInformation::remove_AccessChanged(Windows.Foundation.EventRegistrationToken)
@@ -201,12 +205,16 @@ class DeviceAccessInformation(winrt.system.Object, metaclass=DeviceAccessInforma
 
 @typing.final
 class DeviceConnectionChangeTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
 
 @typing.final
 class DeviceDisconnectButtonClickedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.Enumeration.DeviceDisconnectButtonClickedEventArgs::get_Device()
     @_property
     def device(self) -> DeviceInformation: ...
@@ -308,6 +316,8 @@ class DeviceInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeviceInformation(winrt.system.Object, metaclass=DeviceInformation_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceThumbnail> Windows.Devices.Enumeration.DeviceInformation::GetGlyphThumbnailAsync()
     def get_glyph_thumbnail_async(self) -> windows_foundation.IAsyncOperation[DeviceThumbnail]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DeviceThumbnail> Windows.Devices.Enumeration.DeviceInformation::GetThumbnailAsync()
@@ -347,6 +357,8 @@ class DeviceInformationCollection(_cabc.Sequence[DeviceInformation], winrt.syste
     def __getitem__(self, index: typing.SupportsIndex) -> DeviceInformation: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[DeviceInformation]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Devices.Enumeration.DeviceInformation> Windows.Devices.Enumeration.DeviceInformationCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[DeviceInformation]: ...
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.Enumeration.DeviceInformationCollection::GetAt(System.UInt32)
@@ -361,6 +373,8 @@ class DeviceInformationCollection(_cabc.Sequence[DeviceInformation], winrt.syste
 
 @typing.final
 class DeviceInformationCustomPairing(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Enumeration.DeviceInformationCustomPairing::AddPairingSetMember(Windows.Devices.Enumeration.DeviceInformation)
     def add_pairing_set_member(self, device: DeviceInformation, /) -> None: ...
     @typing.overload
@@ -398,6 +412,8 @@ class DeviceInformationPairing_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeviceInformationPairing(winrt.system.Object, metaclass=DeviceInformationPairing_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Enumeration.DevicePairingResult> Windows.Devices.Enumeration.DeviceInformationPairing::PairAsync()
     def pair_async(self) -> windows_foundation.IAsyncOperation[DevicePairingResult]: ...
@@ -432,6 +448,8 @@ class DeviceInformationPairing(winrt.system.Object, metaclass=DeviceInformationP
 
 @typing.final
 class DeviceInformationUpdate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Enumeration.DeviceInformationUpdate::get_Id()
     @_property
     def id(self) -> str: ...
@@ -444,6 +462,8 @@ class DeviceInformationUpdate(winrt.system.Object):
 
 @typing.final
 class DevicePairingRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Devices.Enumeration.DevicePairingRequestedEventArgs::Accept()
     def accept(self) -> None: ...
@@ -472,6 +492,8 @@ class DevicePairingRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class DevicePairingResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DevicePairingProtectionLevel Windows.Devices.Enumeration.DevicePairingResult::get_ProtectionLevelUsed()
     @_property
     def protection_level_used(self) -> DevicePairingProtectionLevel: ...
@@ -481,6 +503,8 @@ class DevicePairingResult(winrt.system.Object):
 
 @typing.final
 class DevicePairingSetMembersRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Enumeration.DeviceInformation> Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs::get_PairingSetMembers()
     @_property
     def pairing_set_members(self) -> _cabc.Sequence[DeviceInformation]: ...
@@ -542,6 +566,8 @@ class DevicePicker(winrt.system.Object):
 
 @typing.final
 class DevicePickerAppearance(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Enumeration.DevicePickerAppearance::get_Title()
     @_property
     def title(self) -> str: ...
@@ -587,6 +613,8 @@ class DevicePickerAppearance(winrt.system.Object):
 
 @typing.final
 class DevicePickerFilter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.Enumeration.DeviceClass> Windows.Devices.Enumeration.DevicePickerFilter::get_SupportedDeviceClasses()
     @_property
     def supported_device_classes(self) -> _cabc.MutableSequence[DeviceClass]: ...
@@ -596,6 +624,8 @@ class DevicePickerFilter(winrt.system.Object):
 
 @typing.final
 class DeviceSelectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.Enumeration.DeviceSelectedEventArgs::get_SelectedDevice()
     @_property
     def selected_device(self) -> DeviceInformation: ...
@@ -604,6 +634,8 @@ class DeviceSelectedEventArgs(winrt.system.Object):
 class DeviceThumbnail(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Devices.Enumeration.DeviceThumbnail::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
     # System.Void Windows.Devices.Enumeration.DeviceThumbnail::Close()
@@ -641,12 +673,16 @@ class DeviceThumbnail(windows_storage_streams.IRandomAccessStreamWithContentType
 
 @typing.final
 class DeviceUnpairingResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DeviceUnpairingResultStatus Windows.Devices.Enumeration.DeviceUnpairingResult::get_Status()
     @_property
     def status(self) -> DeviceUnpairingResultStatus: ...
 
 @typing.final
 class DeviceWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Background.DeviceWatcherTrigger Windows.Devices.Enumeration.DeviceWatcher::GetBackgroundTrigger(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Enumeration.DeviceWatcherEventKind>)
     def get_background_trigger(self, requested_event_kinds: _cabc.Iterable[DeviceWatcherEventKind], /) -> windows_applicationmodel_background.DeviceWatcherTrigger: ...
     # System.Void Windows.Devices.Enumeration.DeviceWatcher::Start()
@@ -679,6 +715,8 @@ class DeviceWatcher(winrt.system.Object):
 
 @typing.final
 class DeviceWatcherEvent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.Enumeration.DeviceWatcherEvent::get_DeviceInformation()
     @_property
     def device_information(self) -> DeviceInformation: ...
@@ -691,12 +729,16 @@ class DeviceWatcherEvent(winrt.system.Object):
 
 @typing.final
 class DeviceWatcherTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Enumeration.DeviceWatcherEvent> Windows.Devices.Enumeration.DeviceWatcherTriggerDetails::get_DeviceWatcherEvents()
     @_property
     def device_watcher_events(self) -> _cabc.Sequence[DeviceWatcherEvent]: ...
 
 @typing.final
 class EnclosureLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Enumeration.EnclosureLocation::get_InDock()
     @_property
     def in_dock(self) -> bool: ...

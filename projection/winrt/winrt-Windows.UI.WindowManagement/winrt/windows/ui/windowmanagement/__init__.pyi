@@ -75,6 +75,8 @@ class AppWindow_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.UI.WindowManagement.AppWindow::CloseAsync()
     def close_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.DisplayRegion> Windows.UI.WindowManagement.AppWindow::GetDisplayRegions()
@@ -148,6 +150,8 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
 
 @typing.final
 class AppWindowChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.WindowManagement.AppWindowChangedEventArgs::get_DidAvailableWindowPresentationsChange()
     @_property
     def did_available_window_presentations_change(self) -> bool: ...
@@ -175,6 +179,8 @@ class AppWindowChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppWindowCloseRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.UI.WindowManagement.AppWindowCloseRequestedEventArgs::get_Cancel()
@@ -186,12 +192,16 @@ class AppWindowCloseRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppWindowClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowClosedReason Windows.UI.WindowManagement.AppWindowClosedEventArgs::get_Reason()
     @_property
     def reason(self) -> AppWindowClosedReason: ...
 
 @typing.final
 class AppWindowFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowFrameStyle Windows.UI.WindowManagement.AppWindowFrame::GetFrameStyle()
     def get_frame_style(self) -> AppWindowFrameStyle: ...
     # System.Void Windows.UI.WindowManagement.AppWindowFrame::SetFrameStyle(Windows.UI.WindowManagement.AppWindowFrameStyle)
@@ -202,6 +212,8 @@ class AppWindowFrame(winrt.system.Object):
 
 @typing.final
 class AppWindowPlacement(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.DisplayRegion Windows.UI.WindowManagement.AppWindowPlacement::get_DisplayRegion()
     @_property
     def display_region(self) -> DisplayRegion: ...
@@ -217,6 +229,8 @@ class AppWindowPresentationConfiguration_Static(winrt._winrt.Object_Static):
 
 class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowPresentationKind Windows.UI.WindowManagement.AppWindowPresentationConfiguration::get_Kind()
     @_property
     @typing.final
@@ -224,6 +238,8 @@ class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindo
 
 @typing.final
 class AppWindowPresenter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowPresentationConfiguration Windows.UI.WindowManagement.AppWindowPresenter::GetConfiguration()
     def get_configuration(self) -> AppWindowPresentationConfiguration: ...
     # System.Boolean Windows.UI.WindowManagement.AppWindowPresenter::IsPresentationSupported(Windows.UI.WindowManagement.AppWindowPresentationKind)
@@ -235,6 +251,8 @@ class AppWindowPresenter(winrt.system.Object):
 
 @typing.final
 class AppWindowTitleBar(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowTitleBarVisibility Windows.UI.WindowManagement.AppWindowTitleBar::GetPreferredVisibility()
     def get_preferred_visibility(self) -> AppWindowTitleBarVisibility: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.AppWindowTitleBarOcclusion> Windows.UI.WindowManagement.AppWindowTitleBar::GetTitleBarOcclusions()
@@ -325,6 +343,8 @@ class AppWindowTitleBar(winrt.system.Object):
 
 @typing.final
 class AppWindowTitleBarOcclusion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.WindowManagement.AppWindowTitleBarOcclusion::get_OccludingRect()
     @_property
     def occluding_rect(self) -> windows_foundation.Rect: ...
@@ -339,6 +359,8 @@ class DefaultPresentationConfiguration(AppWindowPresentationConfiguration):
 
 @typing.final
 class DisplayRegion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.WindowManagement.DisplayRegion::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.UI.WindowManagement.DisplayRegion,System.Object>)
     def add_changed(self, handler: windows_foundation.TypedEventHandler[DisplayRegion, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.WindowManagement.DisplayRegion::remove_Changed(Windows.Foundation.EventRegistrationToken)
@@ -376,7 +398,8 @@ class WindowServices_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WindowingEnvironment_Static(winrt._winrt.Object_Static):
@@ -393,6 +416,8 @@ class WindowingEnvironment_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowingEnvironment(winrt.system.Object, metaclass=WindowingEnvironment_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.DisplayRegion> Windows.UI.WindowManagement.WindowingEnvironment::GetDisplayRegions()
     def get_display_regions(self) -> _cabc.Sequence[DisplayRegion]: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.WindowManagement.WindowingEnvironment::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.UI.WindowManagement.WindowingEnvironment,Windows.UI.WindowManagement.WindowingEnvironmentChangedEventArgs>)
@@ -408,16 +433,21 @@ class WindowingEnvironment(winrt.system.Object, metaclass=WindowingEnvironment_S
 
 @typing.final
 class WindowingEnvironmentAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.WindowingEnvironment Windows.UI.WindowManagement.WindowingEnvironmentAddedEventArgs::get_WindowingEnvironment()
     @_property
     def windowing_environment(self) -> WindowingEnvironment: ...
 
 @typing.final
 class WindowingEnvironmentChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class WindowingEnvironmentRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.WindowingEnvironment Windows.UI.WindowManagement.WindowingEnvironmentRemovedEventArgs::get_WindowingEnvironment()
     @_property
     def windowing_environment(self) -> WindowingEnvironment: ...

@@ -170,6 +170,8 @@ class SpatialAnchor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAnchor(winrt.system.Object, metaclass=SpatialAnchor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Perception.Spatial.SpatialAnchor::add_RawCoordinateSystemAdjusted(Windows.Foundation.TypedEventHandler`2<Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs>)
     def add_raw_coordinate_system_adjusted(self, handler: windows_foundation.TypedEventHandler[SpatialAnchor, SpatialAnchorRawCoordinateSystemAdjustedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Perception.Spatial.SpatialAnchor::remove_RawCoordinateSystemAdjusted(Windows.Foundation.EventRegistrationToken)
@@ -186,6 +188,8 @@ class SpatialAnchor(winrt.system.Object, metaclass=SpatialAnchor_Static):
 
 @typing.final
 class SpatialAnchorExportSufficiency(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Perception.Spatial.SpatialAnchorExportSufficiency::get_IsMinimallySufficient()
     @_property
     def is_minimally_sufficient(self) -> bool: ...
@@ -205,6 +209,8 @@ class SpatialAnchorExporter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAnchorExporter(winrt.system.Object, metaclass=SpatialAnchorExporter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.SpatialAnchorExportSufficiency> Windows.Perception.Spatial.SpatialAnchorExporter::GetAnchorExportSufficiencyAsync(Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorExportPurpose)
     def get_anchor_export_sufficiency_async(self, anchor: SpatialAnchor, purpose: SpatialAnchorExportPurpose, /) -> windows_foundation.IAsyncOperation[SpatialAnchorExportSufficiency]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Perception.Spatial.SpatialAnchorExporter::TryExportAnchorAsync(Windows.Perception.Spatial.SpatialAnchor,Windows.Perception.Spatial.SpatialAnchorExportPurpose,Windows.Storage.Streams.IOutputStream)
@@ -217,16 +223,21 @@ class SpatialAnchorManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAnchorManager(winrt.system.Object, metaclass=SpatialAnchorManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SpatialAnchorRawCoordinateSystemAdjustedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Matrix4x4 Windows.Perception.Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs::get_OldRawCoordinateSystemToNewRawCoordinateSystemTransform()
     @_property
     def old_raw_coordinate_system_to_new_raw_coordinate_system_transform(self) -> windows_foundation_numerics.Matrix4x4: ...
 
 @typing.final
 class SpatialAnchorStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Perception.Spatial.SpatialAnchorStore::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Perception.Spatial.SpatialAnchor> Windows.Perception.Spatial.SpatialAnchorStore::GetAllSavedAnchors()
@@ -251,7 +262,8 @@ class SpatialAnchorTransferManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
 class SpatialAnchorTransferManager(winrt.system.Object, metaclass=SpatialAnchorTransferManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SpatialBoundingVolume_Static(winrt._winrt.Object_Static):
@@ -266,10 +278,13 @@ class SpatialBoundingVolume_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialBoundingVolume(winrt.system.Object, metaclass=SpatialBoundingVolume_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SpatialCoordinateSystem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Matrix4x4> Windows.Perception.Spatial.SpatialCoordinateSystem::TryGetTransformTo(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_transform_to(self, target: SpatialCoordinateSystem, /) -> windows_foundation_numerics.Matrix4x4 | None: ...
 
@@ -291,12 +306,16 @@ class SpatialEntity(winrt.system.Object):
 
 @typing.final
 class SpatialEntityAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialEntity Windows.Perception.Spatial.SpatialEntityAddedEventArgs::get_Entity()
     @_property
     def entity(self) -> SpatialEntity: ...
 
 @typing.final
 class SpatialEntityRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialEntity Windows.Perception.Spatial.SpatialEntityRemovedEventArgs::get_Entity()
     @_property
     def entity(self) -> SpatialEntity: ...
@@ -315,6 +334,8 @@ class SpatialEntityStore_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialEntityStore(winrt.system.Object, metaclass=SpatialEntityStore_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialEntityWatcher Windows.Perception.Spatial.SpatialEntityStore::CreateEntityWatcher()
     def create_entity_watcher(self) -> SpatialEntityWatcher: ...
     # Windows.Foundation.IAsyncAction Windows.Perception.Spatial.SpatialEntityStore::RemoveAsync(Windows.Perception.Spatial.SpatialEntity)
@@ -324,12 +345,16 @@ class SpatialEntityStore(winrt.system.Object, metaclass=SpatialEntityStore_Stati
 
 @typing.final
 class SpatialEntityUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialEntity Windows.Perception.Spatial.SpatialEntityUpdatedEventArgs::get_Entity()
     @_property
     def entity(self) -> SpatialEntity: ...
 
 @typing.final
 class SpatialEntityWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Perception.Spatial.SpatialEntityWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Perception.Spatial.SpatialEntityWatcher::Stop()
@@ -356,6 +381,8 @@ class SpatialEntityWatcher(winrt.system.Object):
 
 @typing.final
 class SpatialLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Quaternion Windows.Perception.Spatial.SpatialLocation::get_AbsoluteAngularAcceleration()
     @_property
     @deprecated("Use AbsoluteAngularAccelerationAxisAngle instead of AbsoluteAngularAcceleration. For more info, see MSDN.")
@@ -390,6 +417,8 @@ class SpatialLocator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialLocator(winrt.system.Object, metaclass=SpatialLocator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference Windows.Perception.Spatial.SpatialLocator::CreateAttachedFrameOfReferenceAtCurrentHeading()
     def create_attached_frame_of_reference_at_current_heading(self) -> SpatialLocatorAttachedFrameOfReference: ...
@@ -454,6 +483,8 @@ class SpatialLocator(winrt.system.Object, metaclass=SpatialLocator_Static):
 
 @typing.final
 class SpatialLocatorAttachedFrameOfReference(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference::AdjustHeading(System.Double)
     def adjust_heading(self, heading_offset_in_radians: winrt.system.Double, /) -> None: ...
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.SpatialLocatorAttachedFrameOfReference::GetStationaryCoordinateSystemAtTimestamp(Windows.Perception.PerceptionTimestamp)
@@ -475,6 +506,8 @@ class SpatialLocatorAttachedFrameOfReference(winrt.system.Object):
 
 @typing.final
 class SpatialLocatorPositionalTrackingDeactivatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Perception.Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs::get_Canceled()
     @_property
     def canceled(self) -> bool: ...
@@ -496,6 +529,8 @@ class SpatialStageFrameOfReference_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialStageFrameOfReference(winrt.system.Object, metaclass=SpatialStageFrameOfReference_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.SpatialStageFrameOfReference::GetCoordinateSystemAtCurrentLocation(Windows.Perception.Spatial.SpatialLocator)
     def get_coordinate_system_at_current_location(self, locator: SpatialLocator, /) -> SpatialCoordinateSystem: ...
     # Windows.Foundation.Numerics.Vector3[] Windows.Perception.Spatial.SpatialStageFrameOfReference::TryGetMovementBounds(Windows.Perception.Spatial.SpatialCoordinateSystem)
@@ -512,6 +547,8 @@ class SpatialStageFrameOfReference(winrt.system.Object, metaclass=SpatialStageFr
 
 @typing.final
 class SpatialStationaryFrameOfReference(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.SpatialStationaryFrameOfReference::get_CoordinateSystem()
     @_property
     def coordinate_system(self) -> SpatialCoordinateSystem: ...

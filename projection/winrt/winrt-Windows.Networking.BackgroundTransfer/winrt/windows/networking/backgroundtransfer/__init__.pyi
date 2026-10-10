@@ -241,6 +241,8 @@ class BackgroundTransferCompletionGroup(winrt.system.Object):
 
 @typing.final
 class BackgroundTransferCompletionGroupTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.BackgroundTransfer.DownloadOperation> Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails::get_Downloads()
     @_property
     def downloads(self) -> _cabc.Sequence[DownloadOperation]: ...
@@ -270,7 +272,8 @@ class BackgroundTransferError_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundTransferError(winrt.system.Object, metaclass=BackgroundTransferError_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BackgroundTransferGroup_Static(winrt._winrt.Object_Static):
@@ -279,6 +282,8 @@ class BackgroundTransferGroup_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundTransferGroup(winrt.system.Object, metaclass=BackgroundTransferGroup_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.BackgroundTransfer.BackgroundTransferBehavior Windows.Networking.BackgroundTransfer.BackgroundTransferGroup::get_TransferBehavior()
     @_property
     def transfer_behavior(self) -> BackgroundTransferBehavior: ...
@@ -291,6 +296,8 @@ class BackgroundTransferGroup(winrt.system.Object, metaclass=BackgroundTransferG
 
 @typing.final
 class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs::get_AddedRanges()
@@ -435,10 +442,13 @@ class ContentPrefetcher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ContentPrefetcher(winrt.system.Object, metaclass=ContentPrefetcher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DownloadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.BackgroundTransfer.DownloadOperation,Windows.Networking.BackgroundTransfer.DownloadOperation> Windows.Networking.BackgroundTransfer.DownloadOperation::AttachAsync()
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[DownloadOperation, DownloadOperation]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange> Windows.Networking.BackgroundTransfer.DownloadOperation::GetDownloadedRanges()
@@ -517,6 +527,8 @@ class DownloadOperation(IBackgroundTransferOperationPriority, IBackgroundTransfe
 
 @typing.final
 class ResponseInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Networking.BackgroundTransfer.ResponseInformation::get_ActualUri()
     @_property
     def actual_uri(self) -> windows_foundation.Uri: ...
@@ -533,6 +545,8 @@ class ResponseInformation(winrt.system.Object):
 @typing.final
 @deprecated("UnconstrainedTransferRequestResult is deprecated and may not work on all platforms. For more info, see MSDN.")
 class UnconstrainedTransferRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult::get_IsUnconstrained()
     @_property
     @deprecated("IsUnconstrained is deprecated and may not work on all platforms. For more info, see MSDN.")
@@ -540,6 +554,8 @@ class UnconstrainedTransferRequestResult(winrt.system.Object):
 
 @typing.final
 class UploadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.BackgroundTransfer.UploadOperation,Windows.Networking.BackgroundTransfer.UploadOperation> Windows.Networking.BackgroundTransfer.UploadOperation::AttachAsync()
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[UploadOperation, UploadOperation]: ...
     # Windows.Networking.BackgroundTransfer.ResponseInformation Windows.Networking.BackgroundTransfer.UploadOperation::GetResponseInformation()

@@ -188,6 +188,8 @@ class Certificate(winrt.system.Object):
 
 @typing.final
 class CertificateChain(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Security.Cryptography.Certificates.CertificateChain::GetCertificates(System.Boolean)
     def get_certificates(self, include_root: bool, /) -> _cabc.Sequence[Certificate]: ...
     @typing.overload
@@ -230,7 +232,8 @@ class CertificateEnrollmentManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CertificateEnrollmentManager(winrt.system.Object, metaclass=CertificateEnrollmentManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CertificateExtension(winrt.system.Object):
@@ -474,6 +477,8 @@ class CertificateRequestProperties(winrt.system.Object):
 
 @typing.final
 class CertificateStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Cryptography.Certificates.CertificateStore::Add(Windows.Security.Cryptography.Certificates.Certificate)
     def add(self, certificate: Certificate, /) -> None: ...
     # System.Void Windows.Security.Cryptography.Certificates.CertificateStore::Delete(Windows.Security.Cryptography.Certificates.Certificate)
@@ -507,7 +512,8 @@ class CertificateStores_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CertificateStores(winrt.system.Object, metaclass=CertificateStores_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ChainBuildingParameters(winrt.system.Object):
@@ -623,6 +629,8 @@ class CmsSignerInfo(winrt.system.Object):
 
 @typing.final
 class CmsTimestampInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Cryptography.Certificates.Certificate> Windows.Security.Cryptography.Certificates.CmsTimestampInfo::get_Certificates()
     @_property
     def certificates(self) -> _cabc.Sequence[Certificate]: ...
@@ -668,7 +676,8 @@ class KeyAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyAlgorithmNames(winrt.system.Object, metaclass=KeyAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KeyAttestationHelper_Static(winrt._winrt.Object_Static):
@@ -687,7 +696,8 @@ class KeyAttestationHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyAttestationHelper(winrt.system.Object, metaclass=KeyAttestationHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KeyStorageProviderNames_Static(winrt._winrt.Object_Static):
@@ -706,7 +716,8 @@ class KeyStorageProviderNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyStorageProviderNames(winrt.system.Object, metaclass=KeyStorageProviderNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PfxImportParameters(winrt.system.Object):
@@ -768,7 +779,8 @@ class StandardCertificateStoreNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StandardCertificateStoreNames(winrt.system.Object, metaclass=StandardCertificateStoreNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SubjectAlternativeNameInfo(winrt.system.Object):
@@ -815,6 +827,8 @@ class SubjectAlternativeNameInfo(winrt.system.Object):
 
 @typing.final
 class UserCertificateEnrollmentManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager::CreateRequestAsync(Windows.Security.Cryptography.Certificates.CertificateRequestProperties)
     def create_request_async(self, request: CertificateRequestProperties, /) -> windows_foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -839,6 +853,8 @@ class UserCertificateEnrollmentManager(winrt.system.Object):
 
 @typing.final
 class UserCertificateStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Cryptography.Certificates.UserCertificateStore::RequestAddAsync(Windows.Security.Cryptography.Certificates.Certificate)
     def request_add_async(self, certificate: Certificate, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Cryptography.Certificates.UserCertificateStore::RequestDeleteAsync(Windows.Security.Cryptography.Certificates.Certificate)

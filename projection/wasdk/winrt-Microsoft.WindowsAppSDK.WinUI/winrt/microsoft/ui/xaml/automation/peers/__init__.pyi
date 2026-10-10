@@ -414,6 +414,8 @@ class AutomationPeer_Static(microsoft_ui_xaml.DependencyObject_Static):
     def listener_exists(cls, event_id: AutomationEvents, /) -> bool: ...
 
 class AutomationPeer(microsoft_ui_xaml.DependencyObject, metaclass=AutomationPeer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.String Microsoft.UI.Xaml.Automation.Peers.AutomationPeer::GetAcceleratorKey()
     def get_accelerator_key(self) -> str: ...
@@ -730,7 +732,8 @@ class ButtonBaseAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     ...
 
 class ButtonBaseAutomationPeer(FrameworkElementAutomationPeer, metaclass=ButtonBaseAutomationPeer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class CalendarDatePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     ...
@@ -844,7 +847,8 @@ class DatePickerAutomationPeer(FrameworkElementAutomationPeer, metaclass=DatePic
 
 @typing.final
 class DatePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class DropDownButtonAutomationPeer_Static(ButtonAutomationPeer_Static):
     ...
@@ -1068,7 +1072,8 @@ class ListBoxItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xam
 
 @typing.final
 class ListPickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ListViewAutomationPeer_Static(ListViewBaseAutomationPeer_Static):
     ...
@@ -1094,7 +1099,8 @@ class ListViewBaseHeaderItemAutomationPeer_Static(FrameworkElementAutomationPeer
     ...
 
 class ListViewBaseHeaderItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListViewBaseHeaderItemAutomationPeer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ListViewHeaderItemAutomationPeer_Static(ListViewBaseHeaderItemAutomationPeer_Static):
     ...
@@ -1118,6 +1124,8 @@ class ListViewItemDataAutomationPeer(SelectorItemAutomationPeer, microsoft_ui_xa
 
 @typing.final
 class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.IScrollProvider, microsoft_ui_xaml_automation_provider.IItemContainerProvider, microsoft_ui_xaml_automation_provider.ISelectionProvider):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer::FindItemByProperty(Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple,Microsoft.UI.Xaml.Automation.AutomationProperty,System.Object)
     def find_item_by_property(self, start_after: microsoft_ui_xaml_automation_provider.IRawElementProviderSimple, automation_property: microsoft_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> microsoft_ui_xaml_automation_provider.IRawElementProviderSimple: ...
     # Microsoft.UI.Xaml.Automation.Provider.IRawElementProviderSimple[] Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorAutomationPeer::GetSelection()
@@ -1153,6 +1161,8 @@ class LoopingSelectorAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui
 
 @typing.final
 class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, microsoft_ui_xaml_automation_provider.IScrollItemProvider):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer::AddToSelection()
     def add_to_selection(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemAutomationPeer::RemoveFromSelection()
@@ -1170,6 +1180,8 @@ class LoopingSelectorItemAutomationPeer(FrameworkElementAutomationPeer, microsof
 
 @typing.final
 class LoopingSelectorItemDataAutomationPeer(AutomationPeer, microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Automation.Peers.LoopingSelectorItemDataAutomationPeer::Realize()
     def realize(self) -> None: ...
 
@@ -1261,7 +1273,8 @@ class PersonPictureAutomationPeer(FrameworkElementAutomationPeer, metaclass=Pers
 
 @typing.final
 class PickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class PipsPagerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     ...
@@ -1643,7 +1656,8 @@ class TimePickerAutomationPeer(FrameworkElementAutomationPeer, metaclass=TimePic
 
 @typing.final
 class TimePickerFlyoutPresenterAutomationPeer(FrameworkElementAutomationPeer):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ToggleButtonAutomationPeer_Static(ButtonBaseAutomationPeer_Static):
     ...

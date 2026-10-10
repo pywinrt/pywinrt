@@ -38,6 +38,8 @@ class AppRestartFailureReason(enum.IntEnum):
 
 @typing.final
 class AppListEntry(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Core.AppListEntry::LaunchAsync()
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Core.AppListEntry::LaunchForUserAsync(Windows.System.User)
@@ -132,10 +134,13 @@ class CoreApplication_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreApplication(winrt.system.Object, metaclass=CoreApplication_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CoreApplicationView(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Core.CoreApplicationView::add_Activated(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Core.CoreApplicationView,Windows.ApplicationModel.Activation.IActivatedEventArgs>)
     def add_activated(self, handler: windows_foundation.TypedEventHandler[CoreApplicationView, windows_applicationmodel_activation.IActivatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Core.CoreApplicationView::remove_Activated(Windows.Foundation.EventRegistrationToken)
@@ -171,6 +176,8 @@ class CoreApplicationView(winrt.system.Object):
 
 @typing.final
 class CoreApplicationViewTitleBar(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Core.CoreApplicationViewTitleBar::add_IsVisibleChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Core.CoreApplicationViewTitleBar,System.Object>)
     def add_is_visible_changed(self, handler: windows_foundation.TypedEventHandler[CoreApplicationViewTitleBar, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Core.CoreApplicationViewTitleBar::remove_IsVisibleChanged(Windows.Foundation.EventRegistrationToken)
@@ -200,11 +207,15 @@ class CoreApplicationViewTitleBar(winrt.system.Object):
 
 @typing.final
 class HostedViewClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Core.HostedViewClosingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class UnhandledError(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Core.UnhandledError::Propagate()
     def propagate(self) -> None: ...
     # System.Boolean Windows.ApplicationModel.Core.UnhandledError::get_Handled()
@@ -213,6 +224,8 @@ class UnhandledError(winrt.system.Object):
 
 @typing.final
 class UnhandledErrorDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Core.UnhandledError Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs::get_UnhandledError()
     @_property
     def unhandled_error(self) -> UnhandledError: ...

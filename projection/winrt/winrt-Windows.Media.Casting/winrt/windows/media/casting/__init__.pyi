@@ -54,6 +54,8 @@ class CastingPlaybackTypes(enum.IntFlag):
 class CastingConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Casting.CastingConnection::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Casting.CastingConnectionErrorStatus> Windows.Media.Casting.CastingConnection::DisconnectAsync()
@@ -83,6 +85,8 @@ class CastingConnection(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class CastingConnectionErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Casting.CastingConnectionErrorStatus Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs::get_ErrorStatus()
     @_property
     def error_status(self) -> CastingConnectionErrorStatus: ...
@@ -103,6 +107,8 @@ class CastingDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CastingDevice(winrt.system.Object, metaclass=CastingDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Casting.CastingConnection Windows.Media.Casting.CastingDevice::CreateCastingConnection()
     def create_casting_connection(self) -> CastingConnection: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Casting.CastingPlaybackTypes> Windows.Media.Casting.CastingDevice::GetSupportedCastingPlaybackTypesAsync()
@@ -149,6 +155,8 @@ class CastingDevicePicker(winrt.system.Object):
 
 @typing.final
 class CastingDevicePickerFilter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Casting.CastingDevicePickerFilter::get_SupportsVideo()
     @_property
     def supports_video(self) -> bool: ...
@@ -173,12 +181,16 @@ class CastingDevicePickerFilter(winrt.system.Object):
 
 @typing.final
 class CastingDeviceSelectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Casting.CastingDevice Windows.Media.Casting.CastingDeviceSelectedEventArgs::get_SelectedCastingDevice()
     @_property
     def selected_casting_device(self) -> CastingDevice: ...
 
 @typing.final
 class CastingSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Media.Casting.CastingSource::get_PreferredSourceUri()
     @_property
     def preferred_source_uri(self) -> windows_foundation.Uri: ...

@@ -87,10 +87,13 @@ class AppServiceCatalog_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppServiceClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.AppService.AppServiceClosedStatus Windows.ApplicationModel.AppService.AppServiceClosedEventArgs::get_Status()
     @_property
     def status(self) -> AppServiceClosedStatus: ...
@@ -142,11 +145,15 @@ class AppServiceConnection(windows_foundation.IClosable, winrt.system.Object, me
 
 @typing.final
 class AppServiceDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.AppService.AppServiceDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class AppServiceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.AppService.AppServiceResponseStatus> Windows.ApplicationModel.AppService.AppServiceRequest::SendResponseAsync(Windows.Foundation.Collections.ValueSet)
     def send_response_async(self, message: windows_foundation_collections.ValueSet, /) -> windows_foundation.IAsyncOperation[AppServiceResponseStatus]: ...
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.AppServiceRequest::get_Message()
@@ -155,6 +162,8 @@ class AppServiceRequest(winrt.system.Object):
 
 @typing.final
 class AppServiceRequestReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.AppService.AppServiceDeferral Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> AppServiceDeferral: ...
     # Windows.ApplicationModel.AppService.AppServiceRequest Windows.ApplicationModel.AppService.AppServiceRequestReceivedEventArgs::get_Request()
@@ -163,6 +172,8 @@ class AppServiceRequestReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppServiceResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.AppServiceResponse::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...
@@ -172,6 +183,8 @@ class AppServiceResponse(winrt.system.Object):
 
 @typing.final
 class AppServiceTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.AppService.AppServiceTriggerDetails::CheckCallerForCapabilityAsync(System.String)
     def check_caller_for_capability_async(self, capability_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.ApplicationModel.AppService.AppServiceConnection Windows.ApplicationModel.AppService.AppServiceTriggerDetails::get_AppServiceConnection()
@@ -192,6 +205,8 @@ class AppServiceTriggerDetails(winrt.system.Object):
 
 @typing.final
 class StatelessAppServiceResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.ApplicationModel.AppService.StatelessAppServiceResponse::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...

@@ -48,6 +48,8 @@ class BackgroundAudioTrack_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Editing.BackgroundAudioTrack Windows.Media.Editing.BackgroundAudioTrack::Clone()
     def clone(self) -> BackgroundAudioTrack: ...
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Editing.BackgroundAudioTrack::GetAudioEncodingProperties()
@@ -91,6 +93,8 @@ class BackgroundAudioTrack(winrt.system.Object, metaclass=BackgroundAudioTrack_S
 
 @typing.final
 class EmbeddedAudioTrack(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Editing.EmbeddedAudioTrack::GetAudioEncodingProperties()
     def get_audio_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
@@ -107,6 +111,8 @@ class MediaClip_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Editing.MediaClip Windows.Media.Editing.MediaClip::Clone()
     def clone(self) -> MediaClip: ...
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.Editing.MediaClip::GetVideoEncodingProperties()

@@ -127,6 +127,8 @@ class DnssdServiceInstanceCollection(_cabc.Sequence[DnssdServiceInstance], winrt
     def __getitem__(self, index: typing.SupportsIndex) -> DnssdServiceInstance: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[DnssdServiceInstance]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance> Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[DnssdServiceInstance]: ...
     # Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection::GetAt(System.UInt32)
@@ -141,6 +143,8 @@ class DnssdServiceInstanceCollection(_cabc.Sequence[DnssdServiceInstance], winrt
 
 @typing.final
 class DnssdServiceWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher::Stop()

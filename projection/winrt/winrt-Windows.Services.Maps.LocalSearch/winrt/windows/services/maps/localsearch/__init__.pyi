@@ -64,10 +64,13 @@ class LocalCategories_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LocalCategories(winrt.system.Object, metaclass=LocalCategories_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LocalLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.MapAddress Windows.Services.Maps.LocalSearch.LocalLocation::get_Address()
     @_property
     def address(self) -> windows_services_maps.MapAddress: ...
@@ -106,10 +109,13 @@ class LocalLocationFinder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LocalLocationFinderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.LocalSearch.LocalLocation> Windows.Services.Maps.LocalSearch.LocalLocationFinderResult::get_LocalLocations()
     @_property
     def local_locations(self) -> _cabc.Sequence[LocalLocation]: ...
@@ -119,6 +125,8 @@ class LocalLocationFinderResult(winrt.system.Object):
 
 @typing.final
 class LocalLocationHoursOfOperationItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Globalization.DayOfWeek Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem::get_Day()
     @_property
     def day(self) -> windows_globalization.DayOfWeek: ...
@@ -131,6 +139,8 @@ class LocalLocationHoursOfOperationItem(winrt.system.Object):
 
 @typing.final
 class LocalLocationRatingInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Double> Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo::get_AggregateRating()
     @_property
     def aggregate_rating(self) -> winrt.system.Double | None: ...
@@ -148,5 +158,6 @@ class PlaceInfoHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlaceInfoHelper(winrt.system.Object, metaclass=PlaceInfoHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

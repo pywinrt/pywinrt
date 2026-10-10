@@ -65,6 +65,8 @@ class SearchPane_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("SearchPane may be altered or unavailable for releases after Windows 10.")
 class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Search.SearchPane::SetLocalContentSuggestionSettings(Windows.ApplicationModel.Search.LocalContentSuggestionSettings)
     @deprecated("ISearchPane may be altered or unavailable for releases after Windows 10.")
     def set_local_content_suggestion_settings(self, settings: LocalContentSuggestionSettings, /) -> None: ...
@@ -165,6 +167,8 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
 @typing.final
 @deprecated("SearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneQueryChangedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -180,6 +184,8 @@ class SearchPaneQueryChangedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.sy
 
 @typing.final
 class SearchPaneQueryLinguisticDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails::get_QueryTextAlternatives()
     @_property
     def query_text_alternatives(self) -> _cabc.Sequence[str]: ...
@@ -193,6 +199,8 @@ class SearchPaneQueryLinguisticDetails(winrt.system.Object):
 @typing.final
 @deprecated("SearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -209,6 +217,8 @@ class SearchPaneQuerySubmittedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("SearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs::get_Tag()
     @_property
     @deprecated("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -217,6 +227,8 @@ class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("SearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest::GetDeferral()
     @deprecated("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
     def get_deferral(self) -> SearchPaneSuggestionsRequestDeferral: ...
@@ -232,6 +244,8 @@ class SearchPaneSuggestionsRequest(winrt.system.Object):
 @typing.final
 @deprecated("SearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral::Complete()
     @deprecated("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
@@ -239,6 +253,8 @@ class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
 @typing.final
 @deprecated("SearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneSuggestionsRequestedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs::get_Language()
     @_property
     @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -259,6 +275,8 @@ class SearchPaneSuggestionsRequestedEventArgs(ISearchPaneQueryChangedEventArgs, 
 @typing.final
 @deprecated("SearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs::get_Visible()
     @_property
     @deprecated("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -279,6 +297,8 @@ class SearchQueryLinguisticDetails(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionCollection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionCollection::AppendQuerySuggestion(System.String)
     def append_query_suggestion(self, text: str, /) -> None: ...
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionCollection::AppendQuerySuggestions(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -293,6 +313,8 @@ class SearchSuggestionCollection(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral Windows.ApplicationModel.Search.SearchSuggestionsRequest::GetDeferral()
     def get_deferral(self) -> SearchSuggestionsRequestDeferral: ...
     # System.Boolean Windows.ApplicationModel.Search.SearchSuggestionsRequest::get_IsCanceled()
@@ -304,6 +326,8 @@ class SearchSuggestionsRequest(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral::Complete()
     def complete(self) -> None: ...
 

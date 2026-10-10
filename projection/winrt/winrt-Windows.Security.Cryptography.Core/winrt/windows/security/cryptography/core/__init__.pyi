@@ -129,7 +129,8 @@ class AsymmetricAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AsymmetricAlgorithmNames(winrt.system.Object, metaclass=AsymmetricAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AsymmetricKeyAlgorithmProvider_Static(winrt._winrt.Object_Static):
@@ -138,6 +139,8 @@ class AsymmetricKeyAlgorithmProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AsymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=AsymmetricKeyAlgorithmProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::CreateKeyPair(System.UInt32)
     def create_key_pair(self, key_size: winrt.system.UInt32, /) -> CryptographicKey: ...
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider::CreateKeyPairWithCurveName(System.String)
@@ -205,10 +208,13 @@ class CryptographicEngine_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CryptographicEngine(winrt.system.Object, metaclass=CryptographicEngine_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CryptographicHash(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Cryptography.Core.CryptographicHash::Append(Windows.Storage.Streams.IBuffer)
     def append(self, data: winrt.system.Buffer, /) -> None: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicHash::GetValueAndReset()
@@ -216,6 +222,8 @@ class CryptographicHash(winrt.system.Object):
 
 @typing.final
 class CryptographicKey(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.CryptographicKey::Export()
     def export(self) -> windows_storage_streams.IBuffer: ...
@@ -391,10 +399,13 @@ class EccCurveNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EccCurveNames(winrt.system.Object, metaclass=EccCurveNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class EncryptedAndAuthenticatedData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData::get_AuthenticationTag()
     @_property
     def authentication_tag(self) -> windows_storage_streams.IBuffer: ...
@@ -422,7 +433,8 @@ class HashAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HashAlgorithmNames(winrt.system.Object, metaclass=HashAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HashAlgorithmProvider_Static(winrt._winrt.Object_Static):
@@ -431,6 +443,8 @@ class HashAlgorithmProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HashAlgorithmProvider(winrt.system.Object, metaclass=HashAlgorithmProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Core.CryptographicHash Windows.Security.Cryptography.Core.HashAlgorithmProvider::CreateHash()
     def create_hash(self) -> CryptographicHash: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.HashAlgorithmProvider::HashData(Windows.Storage.Streams.IBuffer)
@@ -507,7 +521,8 @@ class KeyDerivationAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyDerivationAlgorithmNames(winrt.system.Object, metaclass=KeyDerivationAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KeyDerivationAlgorithmProvider_Static(winrt._winrt.Object_Static):
@@ -516,6 +531,8 @@ class KeyDerivationAlgorithmProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyDerivationAlgorithmProvider(winrt.system.Object, metaclass=KeyDerivationAlgorithmProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider::CreateKey(Windows.Storage.Streams.IBuffer)
     def create_key(self, key_material: winrt.system.Buffer, /) -> CryptographicKey: ...
     # System.String Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider::get_AlgorithmName()
@@ -535,6 +552,8 @@ class KeyDerivationParameters_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyDerivationParameters(winrt.system.Object, metaclass=KeyDerivationParameters_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Core.KeyDerivationParameters::get_KdfGenericBinary()
     @_property
     def kdf_generic_binary(self) -> windows_storage_streams.IBuffer: ...
@@ -574,7 +593,8 @@ class MacAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MacAlgorithmNames(winrt.system.Object, metaclass=MacAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MacAlgorithmProvider_Static(winrt._winrt.Object_Static):
@@ -583,6 +603,8 @@ class MacAlgorithmProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MacAlgorithmProvider(winrt.system.Object, metaclass=MacAlgorithmProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Core.CryptographicHash Windows.Security.Cryptography.Core.MacAlgorithmProvider::CreateHash(Windows.Storage.Streams.IBuffer)
     def create_hash(self, key_material: winrt.system.Buffer, /) -> CryptographicHash: ...
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.MacAlgorithmProvider::CreateKey(Windows.Storage.Streams.IBuffer)
@@ -603,7 +625,8 @@ class PersistedKeyProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PersistedKeyProvider(winrt.system.Object, metaclass=PersistedKeyProvider_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SymmetricAlgorithmNames_Static(winrt._winrt.Object_Static):
@@ -667,7 +690,8 @@ class SymmetricAlgorithmNames_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SymmetricAlgorithmNames(winrt.system.Object, metaclass=SymmetricAlgorithmNames_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SymmetricKeyAlgorithmProvider_Static(winrt._winrt.Object_Static):
@@ -676,6 +700,8 @@ class SymmetricKeyAlgorithmProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SymmetricKeyAlgorithmProvider(winrt.system.Object, metaclass=SymmetricKeyAlgorithmProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Core.CryptographicKey Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider::CreateSymmetricKey(Windows.Storage.Streams.IBuffer)
     def create_symmetric_key(self, key_material: winrt.system.Buffer, /) -> CryptographicKey: ...
     # System.String Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider::get_AlgorithmName()

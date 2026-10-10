@@ -80,6 +80,8 @@ class ImageDescriptionGenerator_Static(winrt._winrt.Object_Static):
 class ImageDescriptionGenerator(windows_foundation.IClosable, winrt.system.Object, metaclass=ImageDescriptionGenerator_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.Imaging.ImageDescriptionResult,System.String> Microsoft.Windows.AI.Imaging.ImageDescriptionGenerator::DescribeAsync(Microsoft.Graphics.Imaging.ImageBuffer,Microsoft.Windows.AI.Imaging.ImageDescriptionKind,Microsoft.Windows.AI.ContentSafety.ContentFilterOptions)
@@ -87,6 +89,8 @@ class ImageDescriptionGenerator(windows_foundation.IClosable, winrt.system.Objec
 
 @typing.final
 class ImageDescriptionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.AI.Imaging.ImageDescriptionResult::get_Description()
     @_property
     def description(self) -> str: ...
@@ -109,6 +113,8 @@ class ImageObjectExtractor_Static(winrt._winrt.Object_Static):
 class ImageObjectExtractor(windows_foundation.IClosable, winrt.system.Object, metaclass=ImageObjectExtractor_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Imaging.ImageObjectExtractor::Close()
     def close(self) -> None: ...
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Windows.AI.Imaging.ImageObjectExtractor::GetImageBufferObjectMask(Microsoft.Windows.AI.Imaging.ImageObjectExtractorHint)
@@ -142,6 +148,8 @@ class ImageObjectRemover_Static(winrt._winrt.Object_Static):
 class ImageObjectRemover(windows_foundation.IClosable, winrt.system.Object, metaclass=ImageObjectRemover_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Imaging.ImageObjectRemover::Close()
     def close(self) -> None: ...
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Windows.AI.Imaging.ImageObjectRemover::RemoveFromImageBuffer(Microsoft.Graphics.Imaging.ImageBuffer,Microsoft.Graphics.Imaging.ImageBuffer)
@@ -162,6 +170,8 @@ class ImageScaler_Static(winrt._winrt.Object_Static):
 class ImageScaler(windows_foundation.IClosable, winrt.system.Object, metaclass=ImageScaler_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Imaging.ImageScaler::Close()
     def close(self) -> None: ...
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Windows.AI.Imaging.ImageScaler::ScaleImageBuffer(Microsoft.Graphics.Imaging.ImageBuffer,System.Int32,System.Int32)
@@ -174,6 +184,8 @@ class ImageScaler(windows_foundation.IClosable, winrt.system.Object, metaclass=I
 
 @typing.final
 class RecognizedLine(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox Microsoft.Windows.AI.Imaging.RecognizedLine::get_BoundingBox()
     @_property
     def bounding_box(self) -> RecognizedTextBoundingBox: ...
@@ -192,6 +204,8 @@ class RecognizedLine(winrt.system.Object):
 
 @typing.final
 class RecognizedText(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.Imaging.RecognizedLine[] Microsoft.Windows.AI.Imaging.RecognizedText::get_Lines()
     @_property
     def lines(self) -> RecognizedLine: ...
@@ -201,6 +215,8 @@ class RecognizedText(winrt.system.Object):
 
 @typing.final
 class RecognizedWord(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.Imaging.RecognizedTextBoundingBox Microsoft.Windows.AI.Imaging.RecognizedWord::get_BoundingBox()
     @_property
     def bounding_box(self) -> RecognizedTextBoundingBox: ...
@@ -224,6 +240,8 @@ class TextRecognizer_Static(winrt._winrt.Object_Static):
 class TextRecognizer(windows_foundation.IClosable, winrt.system.Object, metaclass=TextRecognizer_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Imaging.TextRecognizer::Close()
     def close(self) -> None: ...
     # Microsoft.Windows.AI.Imaging.RecognizedText Microsoft.Windows.AI.Imaging.TextRecognizer::RecognizeTextFromImage(Microsoft.Graphics.Imaging.ImageBuffer)

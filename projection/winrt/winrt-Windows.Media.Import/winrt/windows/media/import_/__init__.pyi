@@ -132,6 +132,8 @@ class PhotoImportProgress:
 
 @typing.final
 class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Import.PhotoImportItem> Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult::get_DeletedItems()
     @_property
     def deleted_items(self) -> _cabc.Sequence[PhotoImportItem]: ...
@@ -174,6 +176,8 @@ class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportFindItemsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Import.PhotoImportFindItemsResult::AddItemsInDateRangeToSelection(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
     def add_items_in_date_range_to_selection(self, range_start: datetime.datetime, range_length: datetime.timedelta, /) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Import.PhotoImportImportItemsResult,Windows.Media.Import.PhotoImportProgress> Windows.Media.Import.PhotoImportFindItemsResult::ImportItemsAsync()
@@ -269,6 +273,8 @@ class PhotoImportFindItemsResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportImportItemsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult,System.Double> Windows.Media.Import.PhotoImportImportItemsResult::DeleteImportedItemsFromSourceAsync()
     def delete_imported_items_from_source_async(self) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]: ...
     # System.Boolean Windows.Media.Import.PhotoImportImportItemsResult::get_HasSucceeded()
@@ -313,6 +319,8 @@ class PhotoImportImportItemsResult(winrt.system.Object):
 
 @typing.final
 class PhotoImportItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Import.PhotoImportItem::get_IsSelected()
     @_property
     def is_selected(self) -> bool: ...
@@ -358,6 +366,8 @@ class PhotoImportItem(winrt.system.Object):
 
 @typing.final
 class PhotoImportItemImportedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Import.PhotoImportItem Windows.Media.Import.PhotoImportItemImportedEventArgs::get_ImportedItem()
     @_property
     def imported_item(self) -> PhotoImportItem: ...
@@ -373,10 +383,13 @@ class PhotoImportManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhotoImportManager(winrt.system.Object, metaclass=PhotoImportManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PhotoImportOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult,System.Double> Windows.Media.Import.PhotoImportOperation::get_ContinueDeletingImportedItemsFromSourceAsync()
     @_property
     def continue_deleting_imported_items_from_source_async(self) -> windows_foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]: ...
@@ -395,6 +408,8 @@ class PhotoImportOperation(winrt.system.Object):
 
 @typing.final
 class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Import.PhotoImportSelectionChangedEventArgs::get_IsSelectionEmpty()
     @_property
     def is_selection_empty(self) -> bool: ...
@@ -403,6 +418,8 @@ class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
 class PhotoImportSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Import.PhotoImportSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Import.PhotoImportFindItemsResult,System.UInt32> Windows.Media.Import.PhotoImportSession::FindItemsAsync(Windows.Media.Import.PhotoImportContentTypeFilter,Windows.Media.Import.PhotoImportItemSelectionMode)
@@ -452,6 +469,8 @@ class PhotoImportSession(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class PhotoImportSidecar(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Media.Import.PhotoImportSidecar::get_Date()
     @_property
     def date(self) -> datetime.datetime: ...
@@ -471,6 +490,8 @@ class PhotoImportSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Import.PhotoImportSession Windows.Media.Import.PhotoImportSource::CreateImportSession()
     def create_import_session(self) -> PhotoImportSession: ...
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Media.Import.PhotoImportSource::get_BatteryLevelPercent()
@@ -524,6 +545,8 @@ class PhotoImportSource(winrt.system.Object, metaclass=PhotoImportSource_Static)
 
 @typing.final
 class PhotoImportStorageMedium(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Import.PhotoImportStorageMedium::Refresh()
     def refresh(self) -> None: ...
     # System.UInt64 Windows.Media.Import.PhotoImportStorageMedium::get_AvailableSpaceInBytes()
@@ -550,6 +573,8 @@ class PhotoImportStorageMedium(winrt.system.Object):
 
 @typing.final
 class PhotoImportVideoSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Media.Import.PhotoImportVideoSegment::get_Date()
     @_property
     def date(self) -> datetime.datetime: ...

@@ -71,6 +71,8 @@ class AccountsSettingsPane_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AccountsSettingsPane(winrt.system.Object, metaclass=AccountsSettingsPane_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.ApplicationSettings.AccountsSettingsPane::add_AccountCommandsRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.ApplicationSettings.AccountsSettingsPane,Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs>)
     def add_account_commands_requested(self, handler: windows_foundation.TypedEventHandler[AccountsSettingsPane, AccountsSettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPane::remove_AccountCommandsRequested(Windows.Foundation.EventRegistrationToken)
@@ -78,6 +80,8 @@ class AccountsSettingsPane(winrt.system.Object, metaclass=AccountsSettingsPane_S
 
 @typing.final
 class AccountsSettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> AccountsSettingsPaneEventDeferral: ...
     # System.String Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs::get_HeaderText()
@@ -104,6 +108,8 @@ class AccountsSettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class AccountsSettingsPaneEventDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral::Complete()
     def complete(self) -> None: ...
 
@@ -164,6 +170,8 @@ class SettingsPane_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPane(winrt.system.Object, metaclass=SettingsPane_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.ApplicationSettings.SettingsPane::add_CommandsRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.ApplicationSettings.SettingsPane,Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs>)
     @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_commands_requested(self, handler: windows_foundation.TypedEventHandler[SettingsPane, SettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -174,6 +182,8 @@ class SettingsPane(winrt.system.Object, metaclass=SettingsPane_Static):
 @typing.final
 @deprecated("SettingsPaneCommandsRequest is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPaneCommandsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.UI.ApplicationSettings.SettingsCommand> Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest::get_ApplicationCommands()
     @_property
     @deprecated("SettingsPaneCommandsRequest is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -182,6 +192,8 @@ class SettingsPaneCommandsRequest(winrt.system.Object):
 @typing.final
 @deprecated("SettingsPaneCommandsRequestedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SettingsPaneCommandsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs::get_Request()
     @_property
     @deprecated("SettingsPaneCommandsRequestedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -202,6 +214,8 @@ class WebAccountCommand(winrt.system.Object):
 
 @typing.final
 class WebAccountInvokedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.ApplicationSettings.WebAccountAction Windows.UI.ApplicationSettings.WebAccountInvokedArgs::get_Action()
     @_property
     def action(self) -> WebAccountAction: ...

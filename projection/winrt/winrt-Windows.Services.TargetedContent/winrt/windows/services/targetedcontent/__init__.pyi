@@ -82,16 +82,22 @@ class TargetedContentValueKind(enum.IntEnum):
 
 @typing.final
 class TargetedContentAction(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Services.TargetedContent.TargetedContentAction::InvokeAsync()
     def invoke_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
 class TargetedContentAvailabilityChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class TargetedContentChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Services.TargetedContent.TargetedContentChangedEventArgs::get_HasPreviousContentExpired()
@@ -100,6 +106,8 @@ class TargetedContentChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class TargetedContentCollection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.TargetedContent.TargetedContentCollection::ReportCustomInteraction(System.String)
     def report_custom_interaction(self, custom_interaction_name: str, /) -> None: ...
     # System.Void Windows.Services.TargetedContent.TargetedContentCollection::ReportInteraction(Windows.Services.TargetedContent.TargetedContentInteraction)
@@ -127,6 +135,8 @@ class TargetedContentContainer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentContainer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.TargetedContent.TargetedContentObject Windows.Services.TargetedContent.TargetedContentContainer::SelectSingleObject(System.String)
     def select_single_object(self, path: str, /) -> TargetedContentObject: ...
     # Windows.Services.TargetedContent.TargetedContentAvailability Windows.Services.TargetedContent.TargetedContentContainer::get_Availability()
@@ -144,11 +154,15 @@ class TargetedContentContainer(winrt.system.Object, metaclass=TargetedContentCon
 
 @typing.final
 class TargetedContentFile(windows_storage_streams.IRandomAccessStreamReference, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentFile::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
 
 @typing.final
 class TargetedContentImage(windows_storage_streams.IRandomAccessStreamReference, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Services.TargetedContent.TargetedContentImage::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # System.UInt32 Windows.Services.TargetedContent.TargetedContentImage::get_Height()
@@ -160,6 +174,8 @@ class TargetedContentImage(windows_storage_streams.IRandomAccessStreamReference,
 
 @typing.final
 class TargetedContentItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.TargetedContent.TargetedContentItem::ReportCustomInteraction(System.String)
     def report_custom_interaction(self, custom_interaction_name: str, /) -> None: ...
     # System.Void Windows.Services.TargetedContent.TargetedContentItem::ReportInteraction(Windows.Services.TargetedContent.TargetedContentInteraction)
@@ -179,6 +195,8 @@ class TargetedContentItem(winrt.system.Object):
 
 @typing.final
 class TargetedContentItemState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.TargetedContent.TargetedContentAppInstallationState Windows.Services.TargetedContent.TargetedContentItemState::get_AppInstallationState()
     @_property
     def app_installation_state(self) -> TargetedContentAppInstallationState: ...
@@ -188,6 +206,8 @@ class TargetedContentItemState(winrt.system.Object):
 
 @typing.final
 class TargetedContentObject(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.TargetedContent.TargetedContentCollection Windows.Services.TargetedContent.TargetedContentObject::get_Collection()
     @_property
     def collection(self) -> TargetedContentCollection: ...
@@ -203,6 +223,8 @@ class TargetedContentObject(winrt.system.Object):
 
 @typing.final
 class TargetedContentStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Services.TargetedContent.TargetedContentStateChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -215,6 +237,8 @@ class TargetedContentSubscription_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TargetedContentSubscription(winrt.system.Object, metaclass=TargetedContentSubscription_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.TargetedContent.TargetedContentContainer> Windows.Services.TargetedContent.TargetedContentSubscription::GetContentContainerAsync()
     def get_content_container_async(self) -> windows_foundation.IAsyncOperation[TargetedContentContainer]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Services.TargetedContent.TargetedContentSubscription::add_AvailabilityChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.TargetedContent.TargetedContentSubscription,Windows.Services.TargetedContent.TargetedContentAvailabilityChangedEventArgs>)
@@ -235,6 +259,8 @@ class TargetedContentSubscription(winrt.system.Object, metaclass=TargetedContent
 
 @typing.final
 class TargetedContentSubscriptionOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::Update()
     def update(self) -> None: ...
     # System.Boolean Windows.Services.TargetedContent.TargetedContentSubscriptionOptions::get_AllowPartialContentAvailability()
@@ -255,6 +281,8 @@ class TargetedContentSubscriptionOptions(winrt.system.Object):
 
 @typing.final
 class TargetedContentValue(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.TargetedContent.TargetedContentAction Windows.Services.TargetedContent.TargetedContentValue::get_Action()
     @_property
     def action(self) -> TargetedContentAction: ...

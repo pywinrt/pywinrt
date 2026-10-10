@@ -107,6 +107,8 @@ class XboxLiveDeviceAddress_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XboxLiveDeviceAddress(winrt.system.Object, metaclass=XboxLiveDeviceAddress_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Networking.XboxLive.XboxLiveDeviceAddress::Compare(Windows.Networking.XboxLive.XboxLiveDeviceAddress)
     def compare(self, other_device_address: XboxLiveDeviceAddress, /) -> winrt.system.Int32: ...
     # System.String Windows.Networking.XboxLive.XboxLiveDeviceAddress::GetSnapshotAsBase64()
@@ -138,6 +140,8 @@ class XboxLiveEndpointPair_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XboxLiveEndpointPair(winrt.system.Object, metaclass=XboxLiveEndpointPair_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Networking.XboxLive.XboxLiveEndpointPair::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Networking.XboxLive.XboxLiveEndpointPair::GetLocalSocketAddressBytes(System.Byte[])
@@ -172,6 +176,8 @@ class XboxLiveEndpointPair(winrt.system.Object, metaclass=XboxLiveEndpointPair_S
 
 @typing.final
 class XboxLiveEndpointPairCreationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.XboxLive.XboxLiveDeviceAddress Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult::get_DeviceAddress()
     @_property
     def device_address(self) -> XboxLiveDeviceAddress: ...
@@ -187,6 +193,8 @@ class XboxLiveEndpointPairCreationResult(winrt.system.Object):
 
 @typing.final
 class XboxLiveEndpointPairStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.XboxLive.XboxLiveEndpointPairState Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs::get_NewState()
     @_property
     def new_state(self) -> XboxLiveEndpointPairState: ...
@@ -204,6 +212,8 @@ class XboxLiveEndpointPairTemplate_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XboxLiveEndpointPairTemplate(winrt.system.Object, metaclass=XboxLiveEndpointPairTemplate_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult> Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate::CreateEndpointPairAsync(Windows.Networking.XboxLive.XboxLiveDeviceAddress)
     def create_endpoint_pair_async(self, device_address: XboxLiveDeviceAddress, /) -> windows_foundation.IAsyncOperation[XboxLiveEndpointPairCreationResult]: ...
@@ -260,6 +270,8 @@ class XboxLiveEndpointPairTemplate(winrt.system.Object, metaclass=XboxLiveEndpoi
 
 @typing.final
 class XboxLiveInboundEndpointPairCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.XboxLive.XboxLiveEndpointPair Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs::get_EndpointPair()
     @_property
     def endpoint_pair(self) -> XboxLiveEndpointPair: ...
@@ -347,6 +359,8 @@ class XboxLiveQualityOfServiceMeasurement(winrt.system.Object, metaclass=XboxLiv
 
 @typing.final
 class XboxLiveQualityOfServiceMetricResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.XboxLive.XboxLiveDeviceAddress Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult::get_DeviceAddress()
     @_property
     def device_address(self) -> XboxLiveDeviceAddress: ...
@@ -362,6 +376,8 @@ class XboxLiveQualityOfServiceMetricResult(winrt.system.Object):
 
 @typing.final
 class XboxLiveQualityOfServicePrivatePayloadResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.XboxLive.XboxLiveDeviceAddress Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult::get_DeviceAddress()
     @_property
     def device_address(self) -> XboxLiveDeviceAddress: ...

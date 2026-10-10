@@ -187,6 +187,8 @@ class CoreProximityEvaluation:
 
 @typing.final
 class AcceleratorKeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Core.CoreAcceleratorKeyEventType Windows.UI.Core.AcceleratorKeyEventArgs::get_EventType()
     @_property
     def event_type(self) -> CoreAcceleratorKeyEventType: ...
@@ -208,6 +210,8 @@ class AcceleratorKeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class AutomationProviderRequestedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.UI.Core.AutomationProviderRequestedEventArgs::get_AutomationProvider()
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
@@ -223,6 +227,8 @@ class AutomationProviderRequestedEventArgs(ICoreWindowEventArgs, winrt.system.Ob
 
 @typing.final
 class BackRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.BackRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -232,6 +238,8 @@ class BackRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CharacterReceivedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.UI.Core.CharacterReceivedEventArgs::get_KeyCode()
     @_property
     def key_code(self) -> winrt.system.UInt32: ...
@@ -247,6 +255,8 @@ class CharacterReceivedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class ClosestInteractiveBoundsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs::get_ClosestInteractiveBounds()
     @_property
     def closest_interactive_bounds(self) -> windows_foundation.Rect: ...
@@ -262,6 +272,8 @@ class ClosestInteractiveBoundsRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreAcceleratorKeys(ICoreAcceleratorKeys, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.CoreAcceleratorKeys::add_AcceleratorKeyActivated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs>)
     def add_accelerator_key_activated(self, handler: windows_foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Core.CoreAcceleratorKeys::remove_AcceleratorKeyActivated(Windows.Foundation.EventRegistrationToken)
@@ -269,6 +281,8 @@ class CoreAcceleratorKeys(ICoreAcceleratorKeys, winrt.system.Object):
 
 @typing.final
 class CoreComponentInputSource(ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Core.CoreComponentInputSource::GetCurrentKeyEventDeviceId()
     def get_current_key_event_device_id(self) -> str: ...
     # Windows.UI.Core.CoreVirtualKeyStates Windows.UI.Core.CoreComponentInputSource::GetCurrentKeyState(Windows.System.VirtualKey)
@@ -377,6 +391,8 @@ class CoreCursor(winrt.system.Object):
 
 @typing.final
 class CoreDispatcher(ICoreAcceleratorKeys, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreDispatcher::ProcessEvents(Windows.UI.Core.CoreProcessEventsOption)
     def process_events(self, options: CoreProcessEventsOption, /) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.UI.Core.CoreDispatcher::RunAsync(Windows.UI.Core.CoreDispatcherPriority,Windows.UI.Core.DispatchedHandler)
@@ -415,6 +431,8 @@ class CoreDispatcher(ICoreAcceleratorKeys, winrt.system.Object):
 
 @typing.final
 class CoreIndependentInputSource(ICorePointerRedirector, ICorePointerInputSource2, ICorePointerInputSource, ICoreInputSourceBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreIndependentInputSource::ReleasePointerCapture()
     def release_pointer_capture(self) -> None: ...
     # System.Void Windows.UI.Core.CoreIndependentInputSource::SetPointerCapture()
@@ -499,6 +517,8 @@ class CoreIndependentInputSourceController_Static(winrt._winrt.Object_Static):
 class CoreIndependentInputSourceController(windows_foundation.IClosable, winrt.system.Object, metaclass=CoreIndependentInputSourceController_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreIndependentInputSourceController::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -534,6 +554,8 @@ class CoreWindow_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreWindow(ICorePointerRedirector, ICoreWindow, winrt.system.Object, metaclass=CoreWindow_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreWindow::Activate()
     def activate(self) -> None: ...
     # System.Void Windows.UI.Core.CoreWindow::Close()
@@ -743,6 +765,8 @@ class CoreWindowDialog(winrt.system.Object):
 
 @typing.final
 class CoreWindowEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.CoreWindowEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -798,6 +822,8 @@ class CoreWindowFlyout(winrt.system.Object):
 
 @typing.final
 class CoreWindowPopupShowingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreWindowPopupShowingEventArgs::SetDesiredSize(Windows.Foundation.Size)
     def set_desired_size(self, value: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...
 
@@ -808,6 +834,8 @@ class CoreWindowResizeManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreWindowResizeManager(winrt.system.Object, metaclass=CoreWindowResizeManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Core.CoreWindowResizeManager::NotifyLayoutCompleted()
     def notify_layout_completed(self) -> None: ...
     # System.Boolean Windows.UI.Core.CoreWindowResizeManager::get_ShouldWaitForLayoutCompletion()
@@ -819,12 +847,16 @@ class CoreWindowResizeManager(winrt.system.Object, metaclass=CoreWindowResizeMan
 
 @typing.final
 class IdleDispatchedHandlerArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.IdleDispatchedHandlerArgs::get_IsDispatcherIdle()
     @_property
     def is_dispatcher_idle(self) -> bool: ...
 
 @typing.final
 class InputEnabledEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.InputEnabledEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -837,6 +869,8 @@ class InputEnabledEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class KeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.KeyEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -855,6 +889,8 @@ class KeyEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class PointerEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Core.PointerEventArgs::GetIntermediatePoints()
     def get_intermediate_points(self) -> _cabc.MutableSequence[windows_ui_input.PointerPoint]: ...
     # System.Boolean Windows.UI.Core.PointerEventArgs::get_Handled()
@@ -877,6 +913,8 @@ class SystemNavigationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.SystemNavigationManager::add_BackRequested(Windows.Foundation.EventHandler`1<Windows.UI.Core.BackRequestedEventArgs>)
     def add_back_requested(self, handler: windows_foundation.EventHandler[BackRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Core.SystemNavigationManager::remove_BackRequested(Windows.Foundation.EventRegistrationToken)
@@ -890,6 +928,8 @@ class SystemNavigationManager(winrt.system.Object, metaclass=SystemNavigationMan
 
 @typing.final
 class TouchHitTestingEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Core.CoreProximityEvaluation Windows.UI.Core.TouchHitTestingEventArgs::EvaluateProximity(Windows.Foundation.Rect)
     def evaluate_proximity(self, control_bounding_box: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> CoreProximityEvaluation: ...
     # Deprecated alias of evaluate_proximity() for pywinrt v3.x compatibility.
@@ -919,6 +959,8 @@ class TouchHitTestingEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class VisibilityChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.VisibilityChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -931,6 +973,8 @@ class VisibilityChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class WindowActivatedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.WindowActivatedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -943,6 +987,8 @@ class WindowActivatedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
 
 @typing.final
 class WindowSizeChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Core.WindowSizeChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...

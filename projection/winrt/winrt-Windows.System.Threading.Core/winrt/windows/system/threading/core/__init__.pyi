@@ -51,6 +51,8 @@ class SignalNotifier_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SignalNotifier(winrt.system.Object, metaclass=SignalNotifier_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.Threading.Core.SignalNotifier::Enable()
     def enable(self) -> None: ...
     # System.Void Windows.System.Threading.Core.SignalNotifier::Terminate()

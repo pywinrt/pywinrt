@@ -105,6 +105,8 @@ class MouseDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MouseDevice(winrt.system.Object, metaclass=MouseDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.MouseDevice::add_MouseMoved(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.MouseDevice,Windows.Devices.Input.MouseEventArgs>)
     def add_mouse_moved(self, handler: windows_foundation.TypedEventHandler[MouseDevice, MouseEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Input.MouseDevice::remove_MouseMoved(Windows.Foundation.EventRegistrationToken)
@@ -112,6 +114,8 @@ class MouseDevice(winrt.system.Object, metaclass=MouseDevice_Static):
 
 @typing.final
 class MouseEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.MouseDelta Windows.Devices.Input.MouseEventArgs::get_MouseDelta()
     @_property
     def mouse_delta(self) -> MouseDelta: ...
@@ -123,6 +127,8 @@ class PenButtonListener_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PenButtonListener(winrt.system.Object, metaclass=PenButtonListener_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Input.PenButtonListener::IsSupported()
     def is_supported(self) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenButtonListener::add_IsSupportedChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener,System.Object>)
@@ -149,6 +155,8 @@ class PenDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PenDevice(winrt.system.Object, metaclass=PenDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Devices.Input.PenDevice::get_PenId()
     @_property
     def pen_id(self) -> _uuid.UUID: ...
@@ -163,6 +171,8 @@ class PenDockListener_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Input.PenDockListener::IsSupported()
     def is_supported(self) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.PenDockListener::add_Docked(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener,Windows.Devices.Input.PenDockedEventArgs>)
@@ -180,23 +190,28 @@ class PenDockListener(winrt.system.Object, metaclass=PenDockListener_Static):
 
 @typing.final
 class PenDockedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PenTailButtonClickedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PenTailButtonDoubleClickedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PenTailButtonLongPressedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PenUndockedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PointerDevice_Static(winrt._winrt.Object_Static):
@@ -207,6 +222,8 @@ class PointerDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PointerDevice(winrt.system.Object, metaclass=PointerDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Input.PointerDevice::get_IsIntegrated()
     @_property
     def is_integrated(self) -> bool: ...

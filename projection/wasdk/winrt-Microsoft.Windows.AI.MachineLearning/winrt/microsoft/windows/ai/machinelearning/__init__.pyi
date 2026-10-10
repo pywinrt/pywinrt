@@ -54,6 +54,8 @@ class ExecutionProviderReadyState(enum.IntEnum):
 
 @typing.final
 class CatalogModelInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult,System.Double> Microsoft.Windows.AI.MachineLearning.CatalogModelInfo::GetInstanceAsync()
     def get_instance_async(self) -> windows_foundation.IAsyncOperationWithProgress[CatalogModelInstanceResult, winrt.system.Double]: ...
@@ -100,6 +102,8 @@ class CatalogModelInfo(winrt.system.Object):
 class CatalogModelInstance(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.MachineLearning.CatalogModelInstance::Close()
     def close(self) -> None: ...
     # Microsoft.Windows.AI.MachineLearning.CatalogModelInfo Microsoft.Windows.AI.MachineLearning.CatalogModelInstance::get_ModelInfo()
@@ -111,6 +115,8 @@ class CatalogModelInstance(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class CatalogModelInstanceResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.MachineLearning.CatalogModelInstance Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult::GetInstance()
     def get_instance(self) -> CatalogModelInstance: ...
     # System.String Microsoft.Windows.AI.MachineLearning.CatalogModelInstanceResult::get_DiagnosticText()
@@ -125,6 +131,8 @@ class CatalogModelInstanceResult(winrt.system.Object):
 
 @typing.final
 class ExecutionProvider(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult,System.Double> Microsoft.Windows.AI.MachineLearning.ExecutionProvider::EnsureReadyAsync()
     def ensure_ready_async(self) -> windows_foundation.IAsyncOperationWithProgress[ExecutionProviderReadyResult, winrt.system.Double]: ...
     # System.Boolean Microsoft.Windows.AI.MachineLearning.ExecutionProvider::TryRegister()
@@ -152,6 +160,8 @@ class ExecutionProviderCatalog_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ExecutionProviderCatalog(winrt.system.Object, metaclass=ExecutionProviderCatalog_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Foundation.Collections.IVector`1<Microsoft.Windows.AI.MachineLearning.ExecutionProvider>,System.Double> Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog::EnsureAndRegisterCertifiedAsync()
     def ensure_and_register_certified_async(self) -> windows_foundation.IAsyncOperationWithProgress[_cabc.MutableSequence[ExecutionProvider], winrt.system.Double]: ...
     # Microsoft.Windows.AI.MachineLearning.ExecutionProvider[] Microsoft.Windows.AI.MachineLearning.ExecutionProviderCatalog::FindAllProviders()
@@ -161,6 +171,8 @@ class ExecutionProviderCatalog(winrt.system.Object, metaclass=ExecutionProviderC
 
 @typing.final
 class ExecutionProviderReadyResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.AI.MachineLearning.ExecutionProviderReadyResult::get_DiagnosticText()
     @_property
     def diagnostic_text(self) -> str: ...
@@ -200,6 +212,8 @@ class ModelCatalogSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ModelCatalogSource(winrt.system.Object, metaclass=ModelCatalogSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.AI.MachineLearning.ModelCatalogSource::get_Id()
     @_property
     def id(self) -> str: ...

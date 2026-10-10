@@ -33,6 +33,8 @@ class AppRecordingManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.AppRecording.AppRecordingStatus Windows.Media.AppRecording.AppRecordingManager::GetStatus()
     def get_status(self) -> AppRecordingStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingResult> Windows.Media.AppRecording.AppRecordingManager::RecordTimeSpanToFileAsync(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan,Windows.Storage.StorageFile)
@@ -47,6 +49,8 @@ class AppRecordingManager(winrt.system.Object, metaclass=AppRecordingManager_Sta
 
 @typing.final
 class AppRecordingResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.AppRecording.AppRecordingResult::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
@@ -62,6 +66,8 @@ class AppRecordingResult(winrt.system.Object):
 
 @typing.final
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.AppRecording.AppRecordingSaveScreenshotResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -74,6 +80,8 @@ class AppRecordingSaveScreenshotResult(winrt.system.Object):
 
 @typing.final
 class AppRecordingSavedScreenshotInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -83,6 +91,8 @@ class AppRecordingSavedScreenshotInfo(winrt.system.Object):
 
 @typing.final
 class AppRecordingStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.AppRecording.AppRecordingStatus::get_CanRecord()
     @_property
     def can_record(self) -> bool: ...
@@ -98,6 +108,8 @@ class AppRecordingStatus(winrt.system.Object):
 
 @typing.final
 class AppRecordingStatusDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.AppRecording.AppRecordingStatusDetails::get_IsAnyAppBroadcasting()
     @_property
     def is_any_app_broadcasting(self) -> bool: ...

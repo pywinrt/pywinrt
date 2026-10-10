@@ -45,6 +45,8 @@ class SetFileNameResult(enum.IntEnum):
 
 @typing.final
 class FileOpenPickerUI(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.AddFileResult Windows.Storage.Pickers.Provider.FileOpenPickerUI::AddFile(System.String,Windows.Storage.IStorageFile)
     def add_file(self, id: str, file: windows_storage.IStorageFile, /) -> AddFileResult: ...
     # System.Boolean Windows.Storage.Pickers.Provider.FileOpenPickerUI::CanAddFile(Windows.Storage.IStorageFile)
@@ -82,6 +84,8 @@ class FileOpenPickerUI(winrt.system.Object):
 @typing.final
 @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
 class FileRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.Pickers.Provider.FileRemovedEventArgs::get_Id()
     @_property
     @deprecated("Since Windows 10, only apps can remove files, not end users so the FileRemoved event will not be raised.")
@@ -89,6 +93,8 @@ class FileRemovedEventArgs(winrt.system.Object):
 
 @typing.final
 class FileSavePickerUI(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.SetFileNameResult Windows.Storage.Pickers.Provider.FileSavePickerUI::TrySetFileName(System.String)
     def try_set_file_name(self, value: str, /) -> SetFileNameResult: ...
     # Windows.Foundation.EventRegistrationToken Windows.Storage.Pickers.Provider.FileSavePickerUI::add_FileNameChanged(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Pickers.Provider.FileSavePickerUI,System.Object>)
@@ -117,11 +123,15 @@ class FileSavePickerUI(winrt.system.Object):
 
 @typing.final
 class PickerClosingDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Pickers.Provider.PickerClosingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class PickerClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.PickerClosingOperation Windows.Storage.Pickers.Provider.PickerClosingEventArgs::get_ClosingOperation()
     @_property
     def closing_operation(self) -> PickerClosingOperation: ...
@@ -131,6 +141,8 @@ class PickerClosingEventArgs(winrt.system.Object):
 
 @typing.final
 class PickerClosingOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.PickerClosingDeferral Windows.Storage.Pickers.Provider.PickerClosingOperation::GetDeferral()
     def get_deferral(self) -> PickerClosingDeferral: ...
     # Windows.Foundation.DateTime Windows.Storage.Pickers.Provider.PickerClosingOperation::get_Deadline()
@@ -139,6 +151,8 @@ class PickerClosingOperation(winrt.system.Object):
 
 @typing.final
 class TargetFileRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.TargetFileRequestDeferral Windows.Storage.Pickers.Provider.TargetFileRequest::GetDeferral()
     def get_deferral(self) -> TargetFileRequestDeferral: ...
     # Windows.Storage.IStorageFile Windows.Storage.Pickers.Provider.TargetFileRequest::get_TargetFile()
@@ -150,11 +164,15 @@ class TargetFileRequest(winrt.system.Object):
 
 @typing.final
 class TargetFileRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Pickers.Provider.TargetFileRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class TargetFileRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Pickers.Provider.TargetFileRequest Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs::get_Request()
     @_property
     def request(self) -> TargetFileRequest: ...

@@ -128,22 +128,30 @@ class PrintContent(enum.IntEnum):
 
 @typing.final
 class ActivatedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.WebUI.ActivatedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ActivatedOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WebUI.ActivatedDeferral Windows.UI.WebUI.ActivatedOperation::GetDeferral()
     def get_deferral(self) -> ActivatedDeferral: ...
 
 @typing.final
 class BackgroundActivatedEventArgs(windows_applicationmodel_activation.IBackgroundActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.UI.WebUI.BackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
 class EnteredBackgroundEventArgs(windows_applicationmodel.IEnteredBackgroundEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.WebUI.EnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -151,6 +159,8 @@ class EnteredBackgroundEventArgs(windows_applicationmodel.IEnteredBackgroundEven
 class HtmlPrintDocumentSource(windows_foundation.IClosable, windows_graphics_printing.IPrintDocumentSource, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.WebUI.HtmlPrintDocumentSource::Close()
     def close(self) -> None: ...
     # System.Boolean Windows.UI.WebUI.HtmlPrintDocumentSource::TrySetPageRange(System.String)
@@ -209,11 +219,15 @@ class HtmlPrintDocumentSource(windows_foundation.IClosable, windows_graphics_pri
 
 @typing.final
 class LeavingBackgroundEventArgs(windows_applicationmodel.ILeavingBackgroundEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.WebUI.LeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class NewWebUIViewCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.WebUI.NewWebUIViewCreatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Activation.IActivatedEventArgs Windows.UI.WebUI.NewWebUIViewCreatedEventArgs::get_ActivatedEventArgs()
@@ -228,17 +242,23 @@ class NewWebUIViewCreatedEventArgs(winrt.system.Object):
 
 @typing.final
 class SuspendingDeferral(windows_applicationmodel.ISuspendingDeferral, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.WebUI.SuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class SuspendingEventArgs(windows_applicationmodel.ISuspendingEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.SuspendingOperation Windows.UI.WebUI.SuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> windows_applicationmodel.SuspendingOperation: ...
 
 @typing.final
 class SuspendingOperation(windows_applicationmodel.ISuspendingOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.SuspendingDeferral Windows.UI.WebUI.SuspendingOperation::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel.SuspendingDeferral: ...
     # Windows.Foundation.DateTime Windows.UI.WebUI.SuspendingOperation::get_Deadline()
@@ -288,10 +308,13 @@ class WebUIApplication_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebUIApplication(winrt.system.Object, metaclass=WebUIApplication_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -316,6 +339,8 @@ class WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(windows_applicat
 
 @typing.final
 class WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -340,6 +365,8 @@ class WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(windows_appli
 
 @typing.final
 class WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -364,6 +391,8 @@ class WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(windows_appl
 
 @typing.final
 class WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -394,6 +423,8 @@ class WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(windows_
 
 @typing.final
 class WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs, windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -427,10 +458,13 @@ class WebUIBackgroundTaskInstance_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebUIBackgroundTaskInstance(winrt.system.Object, metaclass=WebUIBackgroundTaskInstance_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebUIBackgroundTaskInstanceRuntimeClass(windows_applicationmodel_background.IBackgroundTaskInstance, IWebUIBackgroundTaskInstance, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Background.BackgroundTaskDeferral Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel_background.BackgroundTaskDeferral: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.WebUI.WebUIBackgroundTaskInstanceRuntimeClass::add_Canceled(Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler)
@@ -464,6 +498,8 @@ class WebUIBackgroundTaskInstanceRuntimeClass(windows_applicationmodel_backgroun
 
 @typing.final
 class WebUIBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIBarcodeScannerPreviewActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -485,6 +521,8 @@ class WebUIBarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsDeferral, 
 
 @typing.final
 class WebUICachedFileUpdaterActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICachedFileUpdaterActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -506,6 +544,8 @@ class WebUICachedFileUpdaterActivatedEventArgs(windows_applicationmodel_activati
 
 @typing.final
 class WebUICameraSettingsActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -527,6 +567,8 @@ class WebUICameraSettingsActivatedEventArgs(IActivatedEventArgsDeferral, windows
 
 @typing.final
 class WebUICommandLineActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.ICommandLineActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUICommandLineActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -548,6 +590,8 @@ class WebUICommandLineActivatedEventArgs(IActivatedEventArgsDeferral, windows_ap
 
 @typing.final
 class WebUIContactCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactCallActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -575,6 +619,8 @@ class WebUIContactCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_ap
 
 @typing.final
 class WebUIContactMapActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactMapActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactMapActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -599,6 +645,8 @@ class WebUIContactMapActivatedEventArgs(IActivatedEventArgsDeferral, windows_app
 
 @typing.final
 class WebUIContactMessageActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactMessageActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -626,6 +674,8 @@ class WebUIContactMessageActivatedEventArgs(IActivatedEventArgsDeferral, windows
 
 @typing.final
 class WebUIContactPanelActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs, windows_applicationmodel_activation.IContactPanelActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPanelActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -650,6 +700,8 @@ class WebUIContactPanelActivatedEventArgs(windows_applicationmodel_activation.IA
 
 @typing.final
 class WebUIContactPickerActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactPickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -668,6 +720,8 @@ class WebUIContactPickerActivatedEventArgs(IActivatedEventArgsDeferral, windows_
 
 @typing.final
 class WebUIContactPostActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactPostActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactPostActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -695,6 +749,8 @@ class WebUIContactPostActivatedEventArgs(IActivatedEventArgsDeferral, windows_ap
 
 @typing.final
 class WebUIContactVideoCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs, windows_applicationmodel_activation.IContactActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -722,6 +778,8 @@ class WebUIContactVideoCallActivatedEventArgs(IActivatedEventArgsDeferral, windo
 
 @typing.final
 class WebUIDeviceActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IDeviceActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDeviceActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -749,6 +807,8 @@ class WebUIDeviceActivatedEventArgs(windows_applicationmodel_activation.IActivat
 
 @typing.final
 class WebUIDevicePairingActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IDevicePairingActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDevicePairingActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -770,6 +830,8 @@ class WebUIDevicePairingActivatedEventArgs(windows_applicationmodel_activation.I
 
 @typing.final
 class WebUIDialReceiverActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IDialReceiverActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIDialReceiverActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -800,6 +862,8 @@ class WebUIDialReceiverActivatedEventArgs(windows_applicationmodel_activation.IA
 
 @typing.final
 class WebUIFileActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IFileActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -830,6 +894,8 @@ class WebUIFileActivatedEventArgs(windows_applicationmodel_activation.IActivated
 
 @typing.final
 class WebUIFileOpenPickerActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2, windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -855,6 +921,8 @@ class WebUIFileOpenPickerActivatedEventArgs(windows_applicationmodel_activation.
 @typing.final
 @deprecated("WebUIFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFileOpenPickerContinuationEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileOpenPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -880,6 +948,8 @@ class WebUIFileOpenPickerContinuationEventArgs(windows_applicationmodel_activati
 
 @typing.final
 class WebUIFileSavePickerActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2, windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileSavePickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -908,6 +978,8 @@ class WebUIFileSavePickerActivatedEventArgs(windows_applicationmodel_activation.
 @typing.final
 @deprecated("WebUIFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFileSavePickerContinuationEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFileSavePickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -934,6 +1006,8 @@ class WebUIFileSavePickerContinuationEventArgs(windows_applicationmodel_activati
 @typing.final
 @deprecated("WebUIFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIFolderPickerContinuationEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IFolderPickerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIFolderPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -959,6 +1033,8 @@ class WebUIFolderPickerContinuationEventArgs(windows_applicationmodel_activation
 
 @typing.final
 class WebUILaunchActivatedEventArgs(windows_applicationmodel_activation.ILaunchActivatedEventArgs2, windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IPrelaunchActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -992,6 +1068,8 @@ class WebUILaunchActivatedEventArgs(windows_applicationmodel_activation.ILaunchA
 
 @typing.final
 class WebUILockScreenActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ILockScreenActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1016,6 +1094,8 @@ class WebUILockScreenActivatedEventArgs(windows_applicationmodel_activation.IAct
 
 @typing.final
 class WebUILockScreenCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs, windows_applicationmodel_activation.ILaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1043,6 +1123,8 @@ class WebUILockScreenCallActivatedEventArgs(IActivatedEventArgsDeferral, windows
 
 @typing.final
 class WebUILockScreenComponentActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUILockScreenComponentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1058,22 +1140,30 @@ class WebUILockScreenComponentActivatedEventArgs(IActivatedEventArgsDeferral, wi
 
 @typing.final
 class WebUINavigatedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.WebUI.WebUINavigatedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class WebUINavigatedEventArgs(IWebUINavigatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.WebUINavigatedEventArgs::get_NavigatedOperation()
     @_property
     def navigated_operation(self) -> WebUINavigatedOperation: ...
 
 @typing.final
 class WebUINavigatedOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WebUI.WebUINavigatedDeferral Windows.UI.WebUI.WebUINavigatedOperation::GetDeferral()
     def get_deferral(self) -> WebUINavigatedDeferral: ...
 
 @typing.final
 class WebUIPhoneCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IPhoneCallActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPhoneCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1095,6 +1185,8 @@ class WebUIPhoneCallActivatedEventArgs(IActivatedEventArgsDeferral, windows_appl
 
 @typing.final
 class WebUIPrint3DWorkflowActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1113,6 +1205,8 @@ class WebUIPrint3DWorkflowActivatedEventArgs(IActivatedEventArgsDeferral, window
 
 @typing.final
 class WebUIPrintTaskSettingsActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1131,6 +1225,8 @@ class WebUIPrintTaskSettingsActivatedEventArgs(IActivatedEventArgsDeferral, wind
 
 @typing.final
 class WebUIPrintWorkflowForegroundTaskActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIPrintWorkflowForegroundTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1146,6 +1242,8 @@ class WebUIPrintWorkflowForegroundTaskActivatedEventArgs(IActivatedEventArgsDefe
 
 @typing.final
 class WebUIProtocolActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.IProtocolActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIProtocolActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1176,6 +1274,8 @@ class WebUIProtocolActivatedEventArgs(windows_applicationmodel_activation.IActiv
 
 @typing.final
 class WebUIProtocolForResultsActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, windows_applicationmodel_activation.IProtocolActivatedEventArgs, windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1209,6 +1309,8 @@ class WebUIProtocolForResultsActivatedEventArgs(windows_applicationmodel_activat
 
 @typing.final
 class WebUIRestrictedLaunchActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIRestrictedLaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1230,6 +1332,8 @@ class WebUIRestrictedLaunchActivatedEventArgs(windows_applicationmodel_activatio
 
 @typing.final
 class WebUISearchActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IApplicationViewActivatedEventArgs, windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails, windows_applicationmodel_activation.ISearchActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUISearchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1257,6 +1361,8 @@ class WebUISearchActivatedEventArgs(IActivatedEventArgsDeferral, windows_applica
 
 @typing.final
 class WebUIShareTargetActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IShareTargetActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIShareTargetActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1278,6 +1384,8 @@ class WebUIShareTargetActivatedEventArgs(windows_applicationmodel_activation.IAc
 
 @typing.final
 class WebUIStartupTaskActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IStartupTaskActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIStartupTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1299,6 +1407,8 @@ class WebUIStartupTaskActivatedEventArgs(IActivatedEventArgsDeferral, windows_ap
 
 @typing.final
 class WebUIToastNotificationActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IToastNotificationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIToastNotificationActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1323,6 +1433,8 @@ class WebUIToastNotificationActivatedEventArgs(windows_applicationmodel_activati
 
 @typing.final
 class WebUIUserDataAccountProviderActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1354,6 +1466,8 @@ class WebUIView_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebUIView(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl, winrt.system.Object, metaclass=WebUIView_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.WebUI.WebUIView::AddInitializeScript(System.String)
     def add_initialize_script(self, script: str, /) -> None: ...
     # Windows.Foundation.Uri Windows.UI.WebUI.WebUIView::BuildLocalStreamUri(System.String,System.String)
@@ -1500,6 +1614,8 @@ class WebUIView(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl,
 
 @typing.final
 class WebUIVoiceCommandActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIVoiceCommandActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1522,6 +1638,8 @@ class WebUIVoiceCommandActivatedEventArgs(windows_applicationmodel_activation.IA
 @typing.final
 @deprecated("WebUIWalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WebUIWalletActionActivatedEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWalletActionActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWalletActionActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1549,6 +1667,8 @@ class WebUIWalletActionActivatedEventArgs(IActivatedEventArgsDeferral, windows_a
 
 @typing.final
 class WebUIWebAccountProviderActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWebAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -1570,6 +1690,8 @@ class WebUIWebAccountProviderActivatedEventArgs(windows_applicationmodel_activat
 
 @typing.final
 class WebUIWebAuthenticationBrokerContinuationEventArgs(IActivatedEventArgsDeferral, windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs, windows_applicationmodel_activation.IContinuationActivatedEventArgs, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.UI.WebUI.WebUIWebAuthenticationBrokerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...

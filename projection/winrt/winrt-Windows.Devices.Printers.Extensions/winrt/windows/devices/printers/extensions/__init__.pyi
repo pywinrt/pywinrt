@@ -41,6 +41,8 @@ class Print3DWorkflowStatus(enum.IntEnum):
 
 @typing.final
 class Print3DWorkflow(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.Devices.Printers.Extensions.Print3DWorkflow::GetPrintModelPackage()
     def get_print_model_package(self) -> winrt.system.Object: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Printers.Extensions.Print3DWorkflow::add_PrintRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Printers.Extensions.Print3DWorkflow,Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs>)
@@ -63,6 +65,8 @@ class Print3DWorkflow(winrt.system.Object):
 
 @typing.final
 class Print3DWorkflowPrintRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::SetExtendedStatus(Windows.Devices.Printers.Extensions.Print3DWorkflowDetail)
     def set_extended_status(self, value: Print3DWorkflowDetail, /) -> None: ...
     # System.Void Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs::SetSource(System.Object)
@@ -75,6 +79,8 @@ class Print3DWorkflowPrintRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs::get_NewDeviceId()
     @_property
     def new_device_id(self) -> str: ...
@@ -86,10 +92,13 @@ class PrintExtensionContext_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PrintExtensionContext(winrt.system.Object, metaclass=PrintExtensionContext_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PrintNotificationEventDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Printers.Extensions.PrintNotificationEventDetails::get_EventData()
     @_property
     def event_data(self) -> str: ...
@@ -102,6 +111,8 @@ class PrintNotificationEventDetails(winrt.system.Object):
 
 @typing.final
 class PrintTaskConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Printers.Extensions.PrintTaskConfiguration::add_SaveRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Printers.Extensions.PrintTaskConfiguration,Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs>)
     def add_save_requested(self, event_handler: windows_foundation.TypedEventHandler[PrintTaskConfiguration, PrintTaskConfigurationSaveRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfiguration::remove_SaveRequested(Windows.Foundation.EventRegistrationToken)
@@ -112,6 +123,8 @@ class PrintTaskConfiguration(winrt.system.Object):
 
 @typing.final
 class PrintTaskConfigurationSaveRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::Cancel()
     def cancel(self) -> None: ...
     # Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest::GetDeferral()
@@ -124,11 +137,15 @@ class PrintTaskConfigurationSaveRequest(winrt.system.Object):
 
 @typing.final
 class PrintTaskConfigurationSaveRequestedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class PrintTaskConfigurationSaveRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs::get_Request()
     @_property
     def request(self) -> PrintTaskConfigurationSaveRequest: ...

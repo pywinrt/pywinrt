@@ -71,7 +71,8 @@ class AutoSuggestBoxHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AutoSuggestBoxHelper(winrt.system.Object, metaclass=AutoSuggestBoxHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ColorPickerSlider_Static(windows_ui_xaml_controls.Slider_Static):
     # Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider::get_ColorChannelProperty()
@@ -260,7 +261,8 @@ class ComboBoxHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ComboBoxHelper(winrt.system.Object, metaclass=ComboBoxHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class CommandBarFlyoutCommandBar_Static(windows_ui_xaml_controls.CommandBar_Static):
     ...
@@ -284,10 +286,13 @@ class CommandBarFlyoutCommandBarAutomationProperties_Static(winrt._winrt.Object_
 
 @typing.final
 class CommandBarFlyoutCommandBarAutomationProperties(winrt.system.Object, metaclass=CommandBarFlyoutCommandBarAutomationProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CommandBarFlyoutCommandBarTemplateSettings(windows_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings::get_CloseAnimationEndPosition()
     @_property
     def close_animation_end_position(self) -> winrt.system.Double: ...

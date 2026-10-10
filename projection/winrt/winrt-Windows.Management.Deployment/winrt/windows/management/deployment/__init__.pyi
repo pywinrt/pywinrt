@@ -268,6 +268,8 @@ class AppInstallerManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppInstallerManager(winrt.system.Object, metaclass=AppInstallerManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Management.Deployment.AppInstallerManager::ClearAutoUpdateSettings(System.String)
     def clear_auto_update_settings(self, package_family_name: str, /) -> None: ...
     # System.Void Windows.Management.Deployment.AppInstallerManager::PauseAutoUpdatesUntil(System.String,Windows.Foundation.DateTime)
@@ -371,6 +373,8 @@ class CreateSharedPackageContainerOptions(winrt.system.Object):
 
 @typing.final
 class CreateSharedPackageContainerResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Deployment.SharedPackageContainer Windows.Management.Deployment.CreateSharedPackageContainerResult::get_Container()
     @_property
     def container(self) -> SharedPackageContainer: ...
@@ -399,6 +403,8 @@ class DeleteSharedPackageContainerOptions(winrt.system.Object):
 
 @typing.final
 class DeleteSharedPackageContainerResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Management.Deployment.DeleteSharedPackageContainerResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -408,6 +414,8 @@ class DeleteSharedPackageContainerResult(winrt.system.Object):
 
 @typing.final
 class DeploymentResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Management.Deployment.DeploymentResult::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -729,6 +737,8 @@ class PackageManager(winrt.system.Object):
 
 @typing.final
 class PackageManagerDebugSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Management.Deployment.PackageManagerDebugSettings::SetContentGroupStateAsync(Windows.ApplicationModel.Package,System.String,Windows.ApplicationModel.PackageContentGroupState)
     def set_content_group_state_async(self, package: windows_applicationmodel.Package, content_group_name: str, state: windows_applicationmodel.PackageContentGroupState, /) -> windows_foundation.IAsyncAction: ...
@@ -742,6 +752,8 @@ class PackageManagerDebugSettings(winrt.system.Object):
 
 @typing.final
 class PackageUserInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Deployment.PackageInstallState Windows.Management.Deployment.PackageUserInformation::get_InstallState()
     @_property
     def install_state(self) -> PackageInstallState: ...
@@ -751,6 +763,8 @@ class PackageUserInformation(winrt.system.Object):
 
 @typing.final
 class PackageVolume(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.Package> Windows.Management.Deployment.PackageVolume::FindPackage(System.String)
     def find_package(self, package_full_name: str, /) -> _cabc.MutableSequence[windows_applicationmodel.Package]: ...
     # Deprecated alias of find_package() for pywinrt v3.x compatibility.
@@ -969,6 +983,8 @@ class RemovePackageOptions(winrt.system.Object):
 
 @typing.final
 class SharedPackageContainer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.Management.Deployment.SharedPackageContainerMember> Windows.Management.Deployment.SharedPackageContainer::GetMembers()
     def get_members(self) -> _cabc.MutableSequence[SharedPackageContainerMember]: ...
     # Windows.Management.Deployment.UpdateSharedPackageContainerResult Windows.Management.Deployment.SharedPackageContainer::RemovePackageFamily(System.String,Windows.Management.Deployment.UpdateSharedPackageContainerOptions)
@@ -993,6 +1009,8 @@ class SharedPackageContainerManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SharedPackageContainerManager(winrt.system.Object, metaclass=SharedPackageContainerManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Deployment.CreateSharedPackageContainerResult Windows.Management.Deployment.SharedPackageContainerManager::CreateContainer(System.String,Windows.Management.Deployment.CreateSharedPackageContainerOptions)
     def create_container(self, name: str, options: CreateSharedPackageContainerOptions, /) -> CreateSharedPackageContainerResult: ...
     # Windows.Management.Deployment.DeleteSharedPackageContainerResult Windows.Management.Deployment.SharedPackageContainerManager::DeleteContainer(System.String,Windows.Management.Deployment.DeleteSharedPackageContainerOptions)
@@ -1114,6 +1132,8 @@ class UpdateSharedPackageContainerOptions(winrt.system.Object):
 
 @typing.final
 class UpdateSharedPackageContainerResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Management.Deployment.UpdateSharedPackageContainerResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...

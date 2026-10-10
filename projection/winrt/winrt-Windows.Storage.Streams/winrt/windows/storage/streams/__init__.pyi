@@ -166,6 +166,8 @@ class DataReader(windows_foundation.IClosable, IDataReader, winrt.system.Object,
 
 @typing.final
 class DataReaderLoadOperation(windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataReaderLoadOperation::Close()
@@ -266,6 +268,8 @@ class DataWriter(windows_foundation.IClosable, IDataWriter, winrt.system.Object)
 
 @typing.final
 class DataWriterStoreOperation(windows_foundation.IAsyncOperation[winrt.system.UInt32], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Storage.Streams.DataWriterStoreOperation::Close()
@@ -292,6 +296,8 @@ class DataWriterStoreOperation(windows_foundation.IAsyncOperation[winrt.system.U
 class FileInputStream(IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.FileInputStream::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt32> Windows.Storage.Streams.FileInputStream::ReadAsync(Windows.Storage.Streams.IBuffer,System.UInt32,Windows.Storage.Streams.InputStreamOptions)
@@ -301,6 +307,8 @@ class FileInputStream(IInputStream, windows_foundation.IClosable, winrt.system.O
 class FileOutputStream(IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.FileOutputStream::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.FileOutputStream::FlushAsync()
@@ -355,6 +363,8 @@ class FileRandomAccessStream_Static(winrt._winrt.Object_Static):
 class FileRandomAccessStream(IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object, metaclass=FileRandomAccessStream_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.FileRandomAccessStream::CloneStream()
     def clone_stream(self) -> IRandomAccessStream: ...
     # System.Void Windows.Storage.Streams.FileRandomAccessStream::Close()
@@ -428,6 +438,8 @@ class InMemoryRandomAccessStream(IRandomAccessStream, IOutputStream, IInputStrea
 class InputStreamOverStream(IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.InputStreamOverStream::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Storage.Streams.IBuffer,System.UInt32> Windows.Storage.Streams.InputStreamOverStream::ReadAsync(Windows.Storage.Streams.IBuffer,System.UInt32,Windows.Storage.Streams.InputStreamOptions)
@@ -437,6 +449,8 @@ class InputStreamOverStream(IInputStream, windows_foundation.IClosable, winrt.sy
 class OutputStreamOverStream(IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Streams.OutputStreamOverStream::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.Streams.OutputStreamOverStream::FlushAsync()
@@ -461,12 +475,15 @@ class RandomAccessStream_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RandomAccessStream(winrt.system.Object, metaclass=RandomAccessStream_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RandomAccessStreamOverStream(IRandomAccessStream, IOutputStream, IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.Streams.RandomAccessStreamOverStream::CloneStream()
     def clone_stream(self) -> IRandomAccessStream: ...
     # System.Void Windows.Storage.Streams.RandomAccessStreamOverStream::Close()
@@ -510,6 +527,8 @@ class RandomAccessStreamReference_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RandomAccessStreamReference(IRandomAccessStreamReference, winrt.system.Object, metaclass=RandomAccessStreamReference_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Storage.Streams.RandomAccessStreamReference::OpenReadAsync()
     def open_read_async(self) -> windows_foundation.IAsyncOperation[IRandomAccessStreamWithContentType]: ...
 

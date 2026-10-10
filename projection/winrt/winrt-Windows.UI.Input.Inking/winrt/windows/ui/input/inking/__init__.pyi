@@ -184,6 +184,8 @@ class InkDrawingAttributes(winrt.system.Object, metaclass=InkDrawingAttributes_S
 
 @typing.final
 class InkDrawingAttributesPencilProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties::get_Opacity()
     @_property
     def opacity(self) -> winrt.system.Double: ...
@@ -193,6 +195,8 @@ class InkDrawingAttributesPencilProperties(winrt.system.Object):
 
 @typing.final
 class InkInputConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Inking.InkInputConfiguration::get_IsPrimaryBarrelButtonInputEnabled()
     @_property
     def is_primary_barrel_button_input_enabled(self) -> bool: ...
@@ -214,6 +218,8 @@ class InkInputConfiguration(winrt.system.Object):
 
 @typing.final
 class InkInputProcessingConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Inking.InkInputRightDragAction Windows.UI.Input.Inking.InkInputProcessingConfiguration::get_RightDragAction()
     @_property
     def right_drag_action(self) -> InkInputRightDragAction: ...
@@ -290,6 +296,8 @@ class InkManager(IInkRecognizerContainer, IInkStrokeContainer, winrt.system.Obje
 
 @typing.final
 class InkModelerAttributes(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Input.Inking.InkModelerAttributes::get_ScalingFactor()
     @_property
     def scaling_factor(self) -> winrt.system.Single: ...
@@ -333,6 +341,8 @@ class InkPoint(winrt.system.Object):
 
 @typing.final
 class InkPresenter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Inking.InkSynchronizer Windows.UI.Input.Inking.InkPresenter::ActivateCustomDrying()
     def activate_custom_drying(self) -> InkSynchronizer: ...
     # Windows.UI.Input.Inking.InkDrawingAttributes Windows.UI.Input.Inking.InkPresenter::CopyDefaultDrawingAttributes()
@@ -516,6 +526,8 @@ class InkPresenterRuler(IInkPresenterStencil, winrt.system.Object):
 
 @typing.final
 class InkRecognitionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkStroke> Windows.UI.Input.Inking.InkRecognitionResult::GetStrokes()
     def get_strokes(self) -> _cabc.Sequence[InkStroke]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.UI.Input.Inking.InkRecognitionResult::GetTextCandidates()
@@ -526,6 +538,8 @@ class InkRecognitionResult(winrt.system.Object):
 
 @typing.final
 class InkRecognizer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Input.Inking.InkRecognizer::get_Name()
     @_property
     def name(self) -> str: ...
@@ -542,6 +556,8 @@ class InkRecognizerContainer(IInkRecognizerContainer, winrt.system.Object):
 
 @typing.final
 class InkStroke(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Inking.InkStroke Windows.UI.Input.Inking.InkStroke::Clone()
     def clone(self) -> InkStroke: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkPoint> Windows.UI.Input.Inking.InkStroke::GetInkPoints()
@@ -660,6 +676,8 @@ class InkStrokeContainer(IInkStrokeContainer, winrt.system.Object):
 
 @typing.final
 class InkStrokeInput(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Inking.InkStrokeInput::add_StrokeCanceled(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Inking.InkStrokeInput,Windows.UI.Core.PointerEventArgs>)
     def add_stroke_canceled(self, handler: windows_foundation.TypedEventHandler[InkStrokeInput, windows_ui_core.PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.Inking.InkStrokeInput::remove_StrokeCanceled(Windows.Foundation.EventRegistrationToken)
@@ -682,6 +700,8 @@ class InkStrokeInput(winrt.system.Object):
 
 @typing.final
 class InkStrokeRenderingSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Input.Inking.InkStrokeRenderingSegment::get_BezierControlPoint1()
     @_property
     def bezier_control_point1(self) -> windows_foundation.Point: ...
@@ -706,18 +726,24 @@ class InkStrokeRenderingSegment(winrt.system.Object):
 
 @typing.final
 class InkStrokesCollectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkStroke> Windows.UI.Input.Inking.InkStrokesCollectedEventArgs::get_Strokes()
     @_property
     def strokes(self) -> _cabc.Sequence[InkStroke]: ...
 
 @typing.final
 class InkStrokesErasedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkStroke> Windows.UI.Input.Inking.InkStrokesErasedEventArgs::get_Strokes()
     @_property
     def strokes(self) -> _cabc.Sequence[InkStroke]: ...
 
 @typing.final
 class InkSynchronizer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.InkStroke> Windows.UI.Input.Inking.InkSynchronizer::BeginDry()
     def begin_dry(self) -> _cabc.Sequence[InkStroke]: ...
     # System.Void Windows.UI.Input.Inking.InkSynchronizer::EndDry()
@@ -725,6 +751,8 @@ class InkSynchronizer(winrt.system.Object):
 
 @typing.final
 class InkUnprocessedInput(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Inking.InkUnprocessedInput::add_PointerEntered(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Inking.InkUnprocessedInput,Windows.UI.Core.PointerEventArgs>)
     def add_pointer_entered(self, handler: windows_foundation.TypedEventHandler[InkUnprocessedInput, windows_ui_core.PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.Inking.InkUnprocessedInput::remove_PointerEntered(Windows.Foundation.EventRegistrationToken)
@@ -764,6 +792,8 @@ class PenAndInkSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PenAndInkSettings(winrt.system.Object, metaclass=PenAndInkSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.Inking.PenAndInkSettings::SetPenHandedness(Windows.UI.Input.Inking.PenHandedness)
     def set_pen_handedness(self, value: PenHandedness, /) -> None: ...
     # System.String Windows.UI.Input.Inking.PenAndInkSettings::get_FontFamilyName()

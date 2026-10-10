@@ -26,6 +26,8 @@ __all__ = [
 
 @typing.final
 class SpatialSurfaceInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh> Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo::TryComputeLatestMeshAsync(System.Double)
     def try_compute_latest_mesh_async(self, max_triangles_per_cubic_meter: winrt.system.Double, /) -> windows_foundation.IAsyncOperation[SpatialSurfaceMesh | None]: ...
@@ -47,6 +49,8 @@ class SpatialSurfaceInfo(winrt.system.Object):
 
 @typing.final
 class SpatialSurfaceMesh(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh::get_CoordinateSystem()
     @_property
     def coordinate_system(self) -> windows_perception_spatial.SpatialCoordinateSystem: ...
@@ -68,6 +72,8 @@ class SpatialSurfaceMesh(winrt.system.Object):
 
 @typing.final
 class SpatialSurfaceMeshBuffer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer::get_Data()
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...

@@ -167,6 +167,8 @@ class BitmapBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosabl
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Imaging.BitmapBuffer::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IMemoryBufferReference Windows.Graphics.Imaging.BitmapBuffer::CreateReference()
@@ -179,6 +181,8 @@ class BitmapBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosabl
 
 @typing.final
 class BitmapCodecInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Graphics.Imaging.BitmapCodecInformation::get_CodecId()
     @_property
     def codec_id(self) -> _uuid.UUID: ...
@@ -236,6 +240,8 @@ class BitmapDecoder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BitmapDecoder(IBitmapFrameWithSoftwareBitmap, IBitmapFrame, winrt.system.Object, metaclass=BitmapDecoder_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapFrame> Windows.Graphics.Imaging.BitmapDecoder::GetFrameAsync(System.UInt32)
     def get_frame_async(self, frame_index: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[BitmapFrame]: ...
     @typing.overload
@@ -348,6 +354,8 @@ class BitmapEncoder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapEncoder::FlushAsync()
     def flush_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -397,6 +405,8 @@ class BitmapEncoder(winrt.system.Object, metaclass=BitmapEncoder_Static):
 
 @typing.final
 class BitmapFrame(IBitmapFrameWithSoftwareBitmap, IBitmapFrame, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.BitmapFrame::GetPixelDataAsync()
     def get_pixel_data_async(self) -> windows_foundation.IAsyncOperation[PixelDataProvider]: ...
@@ -456,6 +466,8 @@ class BitmapFrame(IBitmapFrameWithSoftwareBitmap, IBitmapFrame, winrt.system.Obj
 
 @typing.final
 class BitmapProperties(IBitmapPropertiesView, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.BitmapProperties::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_properties_async(self, properties_to_retrieve: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
     # Windows.Foundation.IAsyncAction Windows.Graphics.Imaging.BitmapProperties::SetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Graphics.Imaging.BitmapTypedValue>>)
@@ -463,6 +475,8 @@ class BitmapProperties(IBitmapPropertiesView, winrt.system.Object):
 
 @typing.final
 class BitmapPropertiesView(IBitmapPropertiesView, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.BitmapPropertiesView::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_properties_async(self, properties_to_retrieve: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[BitmapPropertySet]: ...
 
@@ -547,6 +561,8 @@ class BitmapTypedValue(winrt.system.Object):
 class ImageStream(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Graphics.Imaging.ImageStream::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
     # System.Void Windows.Graphics.Imaging.ImageStream::Close()
@@ -584,6 +600,8 @@ class ImageStream(windows_storage_streams.IRandomAccessStreamWithContentType, wi
 
 @typing.final
 class PixelDataProvider(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte[] Windows.Graphics.Imaging.PixelDataProvider::DetachPixelData()
     def detach_pixel_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 

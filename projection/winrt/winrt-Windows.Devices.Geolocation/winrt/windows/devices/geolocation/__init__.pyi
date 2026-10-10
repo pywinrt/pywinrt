@@ -106,6 +106,8 @@ class BasicGeoposition:
 
 @typing.final
 class CivicAddress(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Geolocation.CivicAddress::get_City()
     @_property
     def city(self) -> str: ...
@@ -201,6 +203,8 @@ class Geocircle(IGeoshape, winrt.system.Object):
 
 @typing.final
 class Geocoordinate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Geolocation.Geocoordinate::get_Accuracy()
     @_property
     def accuracy(self) -> winrt.system.Double: ...
@@ -246,6 +250,8 @@ class Geocoordinate(winrt.system.Object):
 
 @typing.final
 class GeocoordinateSatelliteData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Double> Windows.Devices.Geolocation.GeocoordinateSatelliteData::get_HorizontalDilutionOfPrecision()
     @_property
     def horizontal_dilution_of_precision(self) -> winrt.system.Double | None: ...
@@ -383,6 +389,8 @@ class Geopoint(IGeoshape, winrt.system.Object):
 
 @typing.final
 class Geoposition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.CivicAddress Windows.Devices.Geolocation.Geoposition::get_CivicAddress()
     @_property
     def civic_address(self) -> CivicAddress: ...
@@ -395,6 +403,8 @@ class Geoposition(winrt.system.Object):
 
 @typing.final
 class Geovisit(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.Geoposition Windows.Devices.Geolocation.Geovisit::get_Position()
     @_property
     def position(self) -> Geoposition: ...
@@ -427,29 +437,39 @@ class GeovisitMonitor(winrt.system.Object, metaclass=GeovisitMonitor_Static):
 
 @typing.final
 class GeovisitStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.Geovisit Windows.Devices.Geolocation.GeovisitStateChangedEventArgs::get_Visit()
     @_property
     def visit(self) -> Geovisit: ...
 
 @typing.final
 class GeovisitTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geovisit> Windows.Devices.Geolocation.GeovisitTriggerDetails::ReadReports()
     def read_reports(self) -> _cabc.Sequence[Geovisit]: ...
 
 @typing.final
 class PositionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.Geoposition Windows.Devices.Geolocation.PositionChangedEventArgs::get_Position()
     @_property
     def position(self) -> Geoposition: ...
 
 @typing.final
 class StatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.PositionStatus Windows.Devices.Geolocation.StatusChangedEventArgs::get_Status()
     @_property
     def status(self) -> PositionStatus: ...
 
 @typing.final
 class VenueData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Geolocation.VenueData::get_Id()
     @_property
     def id(self) -> str: ...

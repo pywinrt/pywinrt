@@ -85,6 +85,8 @@ class AtomPubClient(windows_web_syndication.ISyndicationClient, winrt.system.Obj
 
 @typing.final
 class ResourceCollection(windows_web_syndication.ISyndicationNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ResourceCollection::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Web.AtomPub.ResourceCollection::get_Accepts()
@@ -138,6 +140,8 @@ class ResourceCollection(windows_web_syndication.ISyndicationNode, winrt.system.
 
 @typing.final
 class ServiceDocument(windows_web_syndication.ISyndicationNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.ServiceDocument::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.Workspace> Windows.Web.AtomPub.ServiceDocument::get_Workspaces()
@@ -182,6 +186,8 @@ class ServiceDocument(windows_web_syndication.ISyndicationNode, winrt.system.Obj
 
 @typing.final
 class Workspace(windows_web_syndication.ISyndicationNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.AtomPub.Workspace::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Web.AtomPub.ResourceCollection> Windows.Web.AtomPub.Workspace::get_Collections()

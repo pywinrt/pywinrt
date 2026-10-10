@@ -104,18 +104,24 @@ class SpeechRecognizerState(enum.IntEnum):
 
 @typing.final
 class SpeechContinuousRecognitionCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus Windows.Media.SpeechRecognition.SpeechContinuousRecognitionCompletedEventArgs::get_Status()
     @_property
     def status(self) -> SpeechRecognitionResultStatus: ...
 
 @typing.final
 class SpeechContinuousRecognitionResultGeneratedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognitionResult Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs::get_Result()
     @_property
     def result(self) -> SpeechRecognitionResult: ...
 
 @typing.final
 class SpeechContinuousRecognitionSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::CancelAsync()
     def cancel_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession::PauseAsync()
@@ -151,6 +157,8 @@ class SpeechContinuousRecognitionSession(winrt.system.Object):
 
 @typing.final
 class SpeechRecognitionCompilationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus Windows.Media.SpeechRecognition.SpeechRecognitionCompilationResult::get_Status()
     @_property
     def status(self) -> SpeechRecognitionResultStatus: ...
@@ -188,12 +196,16 @@ class SpeechRecognitionGrammarFileConstraint(ISpeechRecognitionConstraint, winrt
 
 @typing.final
 class SpeechRecognitionHypothesis(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis::get_Text()
     @_property
     def text(self) -> str: ...
 
 @typing.final
 class SpeechRecognitionHypothesisGeneratedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognitionHypothesis Windows.Media.SpeechRecognition.SpeechRecognitionHypothesisGeneratedEventArgs::get_Hypothesis()
     @_property
     def hypothesis(self) -> SpeechRecognitionHypothesis: ...
@@ -231,12 +243,16 @@ class SpeechRecognitionListConstraint(ISpeechRecognitionConstraint, winrt.system
 
 @typing.final
 class SpeechRecognitionQualityDegradingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs::get_Problem()
     @_property
     def problem(self) -> SpeechRecognitionAudioProblem: ...
 
 @typing.final
 class SpeechRecognitionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.SpeechRecognition.SpeechRecognitionResult> Windows.Media.SpeechRecognition.SpeechRecognitionResult::GetAlternates(System.UInt32)
     def get_alternates(self, max_alternates: winrt.system.UInt32, /) -> _cabc.Sequence[SpeechRecognitionResult]: ...
     # Windows.Media.SpeechRecognition.SpeechRecognitionConfidence Windows.Media.SpeechRecognition.SpeechRecognitionResult::get_Confidence()
@@ -269,6 +285,8 @@ class SpeechRecognitionResult(winrt.system.Object):
 
 @typing.final
 class SpeechRecognitionSemanticInterpretation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Foundation.Collections.IVectorView`1<System.String>> Windows.Media.SpeechRecognition.SpeechRecognitionSemanticInterpretation::get_Properties()
     @_property
     def properties(self) -> _cabc.Mapping[str, _cabc.Sequence[str]]: ...
@@ -309,6 +327,8 @@ class SpeechRecognitionTopicConstraint(ISpeechRecognitionConstraint, winrt.syste
 
 @typing.final
 class SpeechRecognitionVoiceCommandDefinitionConstraint(ISpeechRecognitionConstraint, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint::get_Tag()
     @_property
     def tag(self) -> str: ...
@@ -396,12 +416,16 @@ class SpeechRecognizer(windows_foundation.IClosable, winrt.system.Object, metacl
 
 @typing.final
 class SpeechRecognizerStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SpeechRecognition.SpeechRecognizerState Windows.Media.SpeechRecognition.SpeechRecognizerStateChangedEventArgs::get_State()
     @_property
     def state(self) -> SpeechRecognizerState: ...
 
 @typing.final
 class SpeechRecognizerTimeouts(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts::get_InitialSilenceTimeout()
     @_property
     def initial_silence_timeout(self) -> datetime.timedelta: ...
@@ -423,6 +447,8 @@ class SpeechRecognizerTimeouts(winrt.system.Object):
 
 @typing.final
 class SpeechRecognizerUIOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions::get_ShowConfirmation()
     @_property
     def show_confirmation(self) -> bool: ...

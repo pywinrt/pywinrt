@@ -16,6 +16,8 @@ __all__ = [
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo::get_KeyId()
     @_property
     def key_id(self) -> str: ...
@@ -40,6 +42,8 @@ class EnterpriseKeyCredentialRegistrationManager_Static(winrt._winrt.Object_Stat
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo>> Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager::GetRegistrationsAsync()
     def get_registrations_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[EnterpriseKeyCredentialRegistrationInfo]]: ...
 

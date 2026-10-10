@@ -92,6 +92,8 @@ class AppNotification(winrt.system.Object):
 
 @typing.final
 class AppNotificationActivatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs::get_Argument()
     @_property
     def argument(self) -> str: ...
@@ -112,6 +114,8 @@ class AppNotificationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppNotificationManager(winrt.system.Object, metaclass=AppNotificationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Microsoft.Windows.AppNotifications.AppNotification>> Microsoft.Windows.AppNotifications.AppNotificationManager::GetAllAsync()
     def get_all_async(self) -> windows_foundation.IAsyncOperation[_cabc.MutableSequence[AppNotification]]: ...
     @typing.overload

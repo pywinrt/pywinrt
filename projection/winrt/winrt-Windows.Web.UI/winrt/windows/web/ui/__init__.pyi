@@ -55,18 +55,24 @@ class WebViewControlPermissionType(enum.IntEnum):
 
 @typing.final
 class WebViewControlContentLoadingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Web.UI.WebViewControlContentLoadingEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class WebViewControlDOMContentLoadedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
 
 @typing.final
 class WebViewControlDeferredPermissionRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.UI.WebViewControlDeferredPermissionRequest::Allow()
     def allow(self) -> None: ...
     # System.Void Windows.Web.UI.WebViewControlDeferredPermissionRequest::Deny()
@@ -83,6 +89,8 @@ class WebViewControlDeferredPermissionRequest(winrt.system.Object):
 
 @typing.final
 class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs::get_StopPageScriptExecution()
     @_property
     def stop_page_script_execution(self) -> bool: ...
@@ -95,6 +103,8 @@ class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.WebViewControlNavigationCompletedEventArgs::get_IsSuccess()
     @_property
     def is_success(self) -> bool: ...
@@ -107,6 +117,8 @@ class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.WebViewControlNavigationStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -119,6 +131,8 @@ class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs::get_Handled()
@@ -142,6 +156,8 @@ class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlPermissionRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.UI.WebViewControlPermissionRequest::Allow()
     def allow(self) -> None: ...
     # System.Void Windows.Web.UI.WebViewControlPermissionRequest::Defer()
@@ -163,12 +179,16 @@ class WebViewControlPermissionRequest(winrt.system.Object):
 
 @typing.final
 class WebViewControlPermissionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.UI.WebViewControlPermissionRequest Windows.Web.UI.WebViewControlPermissionRequestedEventArgs::get_PermissionRequest()
     @_property
     def permission_request(self) -> WebViewControlPermissionRequest: ...
 
 @typing.final
 class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Web.UI.WebViewControlScriptNotifyEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
@@ -178,6 +198,8 @@ class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.WebViewControlSettings::get_IsScriptNotifyAllowed()
     @_property
     def is_script_notify_allowed(self) -> bool: ...
@@ -199,6 +221,8 @@ class WebViewControlSettings(winrt.system.Object):
 
 @typing.final
 class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -211,6 +235,8 @@ class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object)
 
 @typing.final
 class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs::get_MediaType()
     @_property
     def media_type(self) -> str: ...
@@ -223,6 +249,8 @@ class WebViewControlUnviewableContentIdentifiedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Web.Http.HttpResponseMessage Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs::get_Response()

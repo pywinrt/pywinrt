@@ -19,6 +19,8 @@ class ThemeSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ThemeSettings(winrt.system.Object, metaclass=ThemeSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.System.ThemeSettings::add_Changed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.System.ThemeSettings,System.Object>)
     def add_changed(self, handler: windows_foundation.TypedEventHandler[ThemeSettings, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.UI.System.ThemeSettings::remove_Changed(Windows.Foundation.EventRegistrationToken)

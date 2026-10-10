@@ -185,6 +185,8 @@ class TextLexicalMatchType(enum.IntEnum):
 
 @typing.final
 class AppContentIndexListener(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.Search.AppContentIndex.AppContentIndexListener::add_ContentItemStatusChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Search.AppContentIndex.AppContentIndexer,Windows.Foundation.Collections.IMapView`2<System.String,Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult>>)
     def add_content_item_status_changed(self, handler: windows_foundation.TypedEventHandler[AppContentIndexer, _cabc.Mapping[str, ContentItemStatusResult]], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppContentIndexListener::remove_ContentItemStatusChanged(Windows.Foundation.EventRegistrationToken)
@@ -217,6 +219,8 @@ class AppContentIndexer_Static(winrt._winrt.Object_Static):
 class AppContentIndexer(windows_foundation.IClosable, winrt.system.Object, metaclass=AppContentIndexer_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::AddOrUpdate(Microsoft.Windows.Search.AppContentIndex.IndexableAppContent)
     def add_or_update(self, indexable_content: IndexableAppContent, /) -> None: ...
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppContentIndexer::Close()
@@ -304,6 +308,8 @@ class AppIndexContentRegion_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppIndexContentRegion(winrt.system.Object, metaclass=AppIndexContentRegion_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Search.AppContentIndex.RegionContentKind Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion::get_ContentKind()
     @_property
     def content_kind(self) -> RegionContentKind: ...
@@ -313,6 +319,8 @@ class AppIndexContentRegion(winrt.system.Object, metaclass=AppIndexContentRegion
 
 @typing.final
 class AppIndexImageQuery(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Search.AppContentIndex.ImageQueryMatch> Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery::GetNextMatches(System.Int32)
     def get_next_matches(self, max_count: winrt.system.Int32, /) -> _cabc.Sequence[ImageQueryMatch]: ...
     # System.String Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuery::get_Language()
@@ -332,6 +340,8 @@ class AppIndexImageQuerySession_Static(winrt._winrt.Object_Static):
 class AppIndexImageQuerySession(windows_foundation.IClosable, winrt.system.Object, metaclass=AppIndexImageQuerySession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::Close()
     def close(self) -> None: ...
     # Microsoft.Windows.Search.AppContentIndex.ImageQuerySessionResult Microsoft.Windows.Search.AppContentIndex.AppIndexImageQuerySession::GetResult()
@@ -369,6 +379,8 @@ class AppIndexQueryMatch_Static(winrt._winrt.Object_Static):
 
 class AppIndexQueryMatch(winrt.system.Object, metaclass=AppIndexQueryMatch_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch::get_ContentId()
     @_property
     @typing.final
@@ -384,6 +396,8 @@ class AppIndexQueryMatch(winrt.system.Object, metaclass=AppIndexQueryMatch_Stati
 
 @typing.final
 class AppIndexTextQuery(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Search.AppContentIndex.TextQueryMatch> Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery::GetNextMatches(System.Int32)
     def get_next_matches(self, max_count: winrt.system.Int32, /) -> _cabc.Sequence[TextQueryMatch]: ...
     # System.String Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuery::get_Language()
@@ -403,6 +417,8 @@ class AppIndexTextQuerySession_Static(winrt._winrt.Object_Static):
 class AppIndexTextQuerySession(windows_foundation.IClosable, winrt.system.Object, metaclass=AppIndexTextQuerySession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::Close()
     def close(self) -> None: ...
     # Microsoft.Windows.Search.AppContentIndex.TextQuerySessionResult Microsoft.Windows.Search.AppContentIndex.AppIndexTextQuerySession::GetResult()
@@ -437,6 +453,8 @@ class AppIndexTextQuerySession(windows_foundation.IClosable, winrt.system.Object
 
 @typing.final
 class AppManagedImageQueryMatch(ImageQueryMatch):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Rect> Microsoft.Windows.Search.AppContentIndex.AppManagedImageQueryMatch::get_RegionOfInterest()
     @_property
     def region_of_interest(self) -> windows_foundation.Rect | None: ...
@@ -472,12 +490,16 @@ class AppManagedIndexableAppContent_Static(IndexableAppContent_Static):
 
 @typing.final
 class AppManagedIndexableAppContent(IndexableAppContent, metaclass=AppManagedIndexableAppContent_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::get_ContentRegions()
     @_property
     def content_regions(self) -> _cabc.Sequence[AppIndexContentRegion]: ...
 
 @typing.final
 class AppManagedOcrTextQueryMatch(TextQueryMatch):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.AppManagedOcrTextQueryMatch::get_Fragment()
     @_property
     def fragment(self) -> str: ...
@@ -487,6 +509,8 @@ class AppManagedOcrTextQueryMatch(TextQueryMatch):
 
 @typing.final
 class AppManagedTextQueryMatch(TextQueryMatch):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.Windows.Search.AppContentIndex.AppManagedTextQueryMatch::get_TextLength()
     @_property
     def text_length(self) -> winrt.system.Int32: ...
@@ -497,6 +521,8 @@ class AppManagedTextQueryMatch(TextQueryMatch):
 @typing.final
 class ContentItemReader(winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[str]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<System.String> Microsoft.Windows.Search.AppContentIndex.ContentItemReader::First()
     def first(self) -> windows_foundation_collections.IIterator[str]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Microsoft.Windows.Search.AppContentIndex.ContentItemReader::GetNextItems(System.Int32)
@@ -504,6 +530,8 @@ class ContentItemReader(winrt.system.Object):
 
 @typing.final
 class ContentItemStatusResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Search.AppContentIndex.ContentItemErrorDetail Microsoft.Windows.Search.AppContentIndex.ContentItemStatusResult::get_ErrorDetail()
     @_property
     def error_detail(self) -> ContentItemErrorDetail: ...
@@ -551,6 +579,8 @@ class ContentRegionTextOptions(winrt.system.Object):
 
 @typing.final
 class DeleteIndexResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.Windows.Search.AppContentIndex.DeleteIndexResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -603,6 +633,8 @@ class GetOrCreateIndexOptions(winrt.system.Object):
 
 @typing.final
 class GetOrCreateIndexResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.Windows.Search.AppContentIndex.GetOrCreateIndexResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -620,7 +652,8 @@ class ImageQueryMatch_Static(AppIndexQueryMatch_Static):
     ...
 
 class ImageQueryMatch(AppIndexQueryMatch, metaclass=ImageQueryMatch_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ImageQueryOptions(winrt.system.Object):
@@ -640,6 +673,8 @@ class ImageQueryOptions(winrt.system.Object):
 
 @typing.final
 class ImageQuerySessionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Windows.Search.AppContentIndex.ImageQuerySessionResult::get_IsValid()
     @_property
     def is_valid(self) -> bool: ...
@@ -655,6 +690,8 @@ class ImageQuerySessionResult(winrt.system.Object):
 
 @typing.final
 class IndexCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Search.AppContentIndex.IndexCapability> Microsoft.Windows.Search.AppContentIndex.IndexCapabilities::GetCapabilitiesWithErrors()
     def get_capabilities_with_errors(self) -> _cabc.Sequence[IndexCapability]: ...
     # Microsoft.Windows.Search.AppContentIndex.IndexCapabilityState Microsoft.Windows.Search.AppContentIndex.IndexCapabilities::GetCapabilityState(Microsoft.Windows.Search.AppContentIndex.IndexCapability)
@@ -665,6 +702,8 @@ class IndexCapabilities(winrt.system.Object):
 
 @typing.final
 class IndexCapabilitiesOfCurrentSystem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Search.AppContentIndex.IndexCapabilityOfCurrentSystemStatus Microsoft.Windows.Search.AppContentIndex.IndexCapabilitiesOfCurrentSystem::GetIndexCapabilityStatus(Microsoft.Windows.Search.AppContentIndex.IndexCapability)
     def get_index_capability_status(self, capability: IndexCapability, /) -> IndexCapabilityOfCurrentSystemStatus: ...
     # Microsoft.Windows.Search.AppContentIndex.IndexCapabilityLanguageStatus Microsoft.Windows.Search.AppContentIndex.IndexCapabilitiesOfCurrentSystem::GetLanguageStatusForIndexCapability(Microsoft.Windows.Search.AppContentIndex.IndexCapability,System.String)
@@ -672,6 +711,8 @@ class IndexCapabilitiesOfCurrentSystem(winrt.system.Object):
 
 @typing.final
 class IndexCapabilityState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Search.AppContentIndex.IndexCapability Microsoft.Windows.Search.AppContentIndex.IndexCapabilityState::get_Capability()
     @_property
     def capability(self) -> IndexCapability: ...
@@ -687,6 +728,8 @@ class IndexCapabilityState(winrt.system.Object):
 
 @typing.final
 class IndexStatistics(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.Windows.Search.AppContentIndex.IndexStatistics::get_CompletedCount()
     @_property
     def completed_count(self) -> winrt.system.Int32: ...
@@ -717,6 +760,8 @@ class IndexableAppContent_Static(winrt._winrt.Object_Static):
 
 class IndexableAppContent(winrt.system.Object, metaclass=IndexableAppContent_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.IndexableAppContent::get_ContentId()
     @_property
     @typing.final
@@ -726,7 +771,8 @@ class TextQueryMatch_Static(AppIndexQueryMatch_Static):
     ...
 
 class TextQueryMatch(AppIndexQueryMatch, metaclass=TextQueryMatch_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TextQueryOptions(winrt.system.Object):
@@ -758,6 +804,8 @@ class TextQueryOptions(winrt.system.Object):
 
 @typing.final
 class TextQuerySessionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Windows.Search.AppContentIndex.TextQuerySessionResult::get_IsValid()
     @_property
     def is_valid(self) -> bool: ...

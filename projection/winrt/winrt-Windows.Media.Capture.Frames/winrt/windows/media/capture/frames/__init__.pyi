@@ -97,6 +97,8 @@ class MultiSourceMediaFrameReaderStartStatus(enum.IntEnum):
 
 @typing.final
 class AudioMediaFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.AudioFrame Windows.Media.Capture.Frames.AudioMediaFrame::GetAudioFrame()
     def get_audio_frame(self) -> windows_media.AudioFrame: ...
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Capture.Frames.AudioMediaFrame::get_AudioEncodingProperties()
@@ -108,6 +110,8 @@ class AudioMediaFrame(winrt.system.Object):
 
 @typing.final
 class BufferMediaFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Media.Capture.Frames.BufferMediaFrame::get_Buffer()
     @_property
     def buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -117,6 +121,8 @@ class BufferMediaFrame(winrt.system.Object):
 
 @typing.final
 class DepthMediaFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper Windows.Media.Capture.Frames.DepthMediaFrame::TryCreateCoordinateMapper(Windows.Media.Devices.Core.CameraIntrinsics,Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_create_coordinate_mapper(self, camera_intrinsics: windows_media_devices_core.CameraIntrinsics, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> windows_media_devices_core.DepthCorrelatedCoordinateMapper | None: ...
     # Windows.Media.Capture.Frames.DepthMediaFrameFormat Windows.Media.Capture.Frames.DepthMediaFrame::get_DepthFormat()
@@ -137,6 +143,8 @@ class DepthMediaFrame(winrt.system.Object):
 
 @typing.final
 class DepthMediaFrameFormat(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Capture.Frames.DepthMediaFrameFormat::get_DepthScaleInMeters()
     @_property
     def depth_scale_in_meters(self) -> winrt.system.Double: ...
@@ -146,6 +154,8 @@ class DepthMediaFrameFormat(winrt.system.Object):
 
 @typing.final
 class InfraredMediaFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.Frames.MediaFrameReference Windows.Media.Capture.Frames.InfraredMediaFrame::get_FrameReference()
     @_property
     def frame_reference(self) -> MediaFrameReference: ...
@@ -158,10 +168,13 @@ class InfraredMediaFrame(winrt.system.Object):
 
 @typing.final
 class MediaFrameArrivedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MediaFrameFormat(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Capture.Frames.MediaFrameFormat::get_FrameRate()
     @_property
     def frame_rate(self) -> windows_media_mediaproperties.MediaRatio: ...
@@ -185,6 +198,8 @@ class MediaFrameFormat(winrt.system.Object):
 class MediaFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.Frames.MediaFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MediaFrameReaderStartStatus> Windows.Media.Capture.Frames.MediaFrameReader::StartAsync()
@@ -208,6 +223,8 @@ class MediaFrameReader(windows_foundation.IClosable, winrt.system.Object):
 class MediaFrameReference(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.Frames.MediaFrameReference::Close()
     def close(self) -> None: ...
     # Windows.Media.Capture.Frames.BufferMediaFrame Windows.Media.Capture.Frames.MediaFrameReference::get_BufferMediaFrame()
@@ -240,6 +257,8 @@ class MediaFrameReference(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class MediaFrameSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.Frames.MediaFrameSource::SetFormatAsync(Windows.Media.Capture.Frames.MediaFrameFormat)
     def set_format_async(self, format: MediaFrameFormat, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Media.Devices.Core.CameraIntrinsics Windows.Media.Capture.Frames.MediaFrameSource::TryGetCameraIntrinsics(Windows.Media.Capture.Frames.MediaFrameFormat)
@@ -263,6 +282,8 @@ class MediaFrameSource(winrt.system.Object):
 
 @typing.final
 class MediaFrameSourceController(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> Windows.Media.Capture.Frames.MediaFrameSourceController::GetPropertyAsync(System.String)
     def get_property_async(self, property_id: str, /) -> windows_foundation.IAsyncOperation[MediaFrameSourceGetPropertyResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult> Windows.Media.Capture.Frames.MediaFrameSourceController::GetPropertyByExtendedIdAsync(System.Byte[],Windows.Foundation.IReference`1<System.UInt32>)
@@ -280,6 +301,8 @@ class MediaFrameSourceController(winrt.system.Object):
 
 @typing.final
 class MediaFrameSourceGetPropertyResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult::get_Status()
     @_property
     def status(self) -> MediaFrameSourceGetPropertyStatus: ...
@@ -298,6 +321,8 @@ class MediaFrameSourceGroup_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaFrameSourceGroup(winrt.system.Object, metaclass=MediaFrameSourceGroup_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Capture.Frames.MediaFrameSourceGroup::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -310,6 +335,8 @@ class MediaFrameSourceGroup(winrt.system.Object, metaclass=MediaFrameSourceGroup
 
 @typing.final
 class MediaFrameSourceInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.Panel Windows.Media.Capture.Frames.MediaFrameSourceInfo::GetRelativePanel(Windows.UI.WindowManagement.DisplayRegion)
     def get_relative_panel(self, display_region: windows_ui_windowmanagement.DisplayRegion, /) -> windows_devices_enumeration.Panel: ...
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Media.Capture.Frames.MediaFrameSourceInfo::get_CoordinateSystem()
@@ -345,12 +372,15 @@ class MediaFrameSourceInfo(winrt.system.Object):
 
 @typing.final
 class MultiSourceMediaFrameArrivedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MultiSourceMediaFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.Frames.MultiSourceMediaFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MultiSourceMediaFrameReaderStartStatus> Windows.Media.Capture.Frames.MultiSourceMediaFrameReader::StartAsync()
@@ -374,6 +404,8 @@ class MultiSourceMediaFrameReader(windows_foundation.IClosable, winrt.system.Obj
 class MultiSourceMediaFrameReference(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.Frames.MultiSourceMediaFrameReference::Close()
     def close(self) -> None: ...
     # Windows.Media.Capture.Frames.MediaFrameReference Windows.Media.Capture.Frames.MultiSourceMediaFrameReference::TryGetFrameReferenceBySourceId(System.String)
@@ -381,6 +413,8 @@ class MultiSourceMediaFrameReference(windows_foundation.IClosable, winrt.system.
 
 @typing.final
 class VideoMediaFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.VideoFrame Windows.Media.Capture.Frames.VideoMediaFrame::GetVideoFrame()
     def get_video_frame(self) -> windows_media.VideoFrame: ...
     # Windows.Media.Devices.Core.CameraIntrinsics Windows.Media.Capture.Frames.VideoMediaFrame::get_CameraIntrinsics()
@@ -407,6 +441,8 @@ class VideoMediaFrame(winrt.system.Object):
 
 @typing.final
 class VideoMediaFrameFormat(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.Frames.DepthMediaFrameFormat Windows.Media.Capture.Frames.VideoMediaFrameFormat::get_DepthFormat()
     @_property
     def depth_format(self) -> DepthMediaFrameFormat: ...

@@ -185,6 +185,8 @@ class BluetoothAdapter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Radios.Radio> Windows.Devices.Bluetooth.BluetoothAdapter::GetRadioAsync()
     def get_radio_async(self) -> windows_foundation.IAsyncOperation[windows_devices_radios.Radio]: ...
     # System.UInt64 Windows.Devices.Bluetooth.BluetoothAdapter::get_BluetoothAddress()
@@ -236,6 +238,8 @@ class BluetoothClassOfDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothClassOfDevice(winrt.system.Object, metaclass=BluetoothClassOfDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothMajorClass Windows.Devices.Bluetooth.BluetoothClassOfDevice::get_MajorClass()
     @_property
     def major_class(self) -> BluetoothMajorClass: ...
@@ -274,6 +278,8 @@ class BluetoothDevice_Static(winrt._winrt.Object_Static):
 class BluetoothDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=BluetoothDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.BluetoothDevice::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -355,6 +361,8 @@ class BluetoothDeviceId_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothDeviceId(winrt.system.Object, metaclass=BluetoothDeviceId_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Bluetooth.BluetoothDeviceId::get_Id()
     @_property
     def id(self) -> str: ...
@@ -374,6 +382,8 @@ class BluetoothLEAppearance_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothLEAppearance(winrt.system.Object, metaclass=BluetoothLEAppearance_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Devices.Bluetooth.BluetoothLEAppearance::get_Category()
     @_property
     def category(self) -> winrt.system.UInt16: ...
@@ -455,7 +465,8 @@ class BluetoothLEAppearanceCategories_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothLEAppearanceCategories(winrt.system.Object, metaclass=BluetoothLEAppearanceCategories_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BluetoothLEAppearanceSubcategories_Static(winrt._winrt.Object_Static):
@@ -546,10 +557,13 @@ class BluetoothLEAppearanceSubcategories_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothLEAppearanceSubcategories(winrt.system.Object, metaclass=BluetoothLEAppearanceSubcategories_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BluetoothLEConnectionParameters(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Devices.Bluetooth.BluetoothLEConnectionParameters::get_ConnectionInterval()
     @_property
     def connection_interval(self) -> winrt.system.UInt16: ...
@@ -562,6 +576,8 @@ class BluetoothLEConnectionParameters(winrt.system.Object):
 
 @typing.final
 class BluetoothLEConnectionPhy(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo Windows.Devices.Bluetooth.BluetoothLEConnectionPhy::get_ReceiveInfo()
     @_property
     def receive_info(self) -> BluetoothLEConnectionPhyInfo: ...
@@ -571,6 +587,8 @@ class BluetoothLEConnectionPhy(winrt.system.Object):
 
 @typing.final
 class BluetoothLEConnectionPhyInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo::get_IsCodedPhy()
     @_property
     def is_coded_phy(self) -> bool: ...
@@ -620,6 +638,8 @@ class BluetoothLEDevice_Static(winrt._winrt.Object_Static):
 class BluetoothLEDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=BluetoothLEDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.BluetoothLEDevice::Close()
     def close(self) -> None: ...
     # Windows.Devices.Bluetooth.BluetoothLEConnectionParameters Windows.Devices.Bluetooth.BluetoothLEDevice::GetConnectionParameters()
@@ -722,6 +742,8 @@ class BluetoothLEPreferredConnectionParameters_Static(winrt._winrt.Object_Static
 
 @typing.final
 class BluetoothLEPreferredConnectionParameters(winrt.system.Object, metaclass=BluetoothLEPreferredConnectionParameters_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters::get_ConnectionLatency()
     @_property
     def connection_latency(self) -> winrt.system.UInt16: ...
@@ -739,6 +761,8 @@ class BluetoothLEPreferredConnectionParameters(winrt.system.Object, metaclass=Bl
 class BluetoothLEPreferredConnectionParametersRequest(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest::Close()
     def close(self) -> None: ...
     # Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest::get_Status()
@@ -782,5 +806,6 @@ class BluetoothUuidHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothUuidHelper(winrt.system.Object, metaclass=BluetoothUuidHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

@@ -63,7 +63,8 @@ class ApplicationLanguages_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ApplicationLanguages(winrt.system.Object, metaclass=ApplicationLanguages_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class Calendar(winrt.system.Object):
@@ -420,7 +421,8 @@ class CalendarIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CalendarIdentifiers(winrt.system.Object, metaclass=CalendarIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ClockIdentifiers_Static(winrt._winrt.Object_Static):
@@ -433,7 +435,8 @@ class ClockIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ClockIdentifiers(winrt.system.Object, metaclass=ClockIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CurrencyAmount(winrt.system.Object):
@@ -936,7 +939,8 @@ class CurrencyIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CurrencyIdentifiers(winrt.system.Object, metaclass=CurrencyIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GeographicRegion_Static(winrt._winrt.Object_Static):
@@ -973,6 +977,8 @@ class GeographicRegion(winrt.system.Object, metaclass=GeographicRegion_Static):
 
 @typing.final
 class JapanesePhoneme(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Globalization.JapanesePhoneme::get_DisplayText()
     @_property
     def display_text(self) -> str: ...
@@ -998,7 +1004,8 @@ class JapanesePhoneticAnalyzer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class JapanesePhoneticAnalyzer(winrt.system.Object, metaclass=JapanesePhoneticAnalyzer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class Language_Static(winrt._winrt.Object_Static):
@@ -1185,5 +1192,6 @@ class NumeralSystemIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class NumeralSystemIdentifiers(winrt.system.Object, metaclass=NumeralSystemIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

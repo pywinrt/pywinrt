@@ -29,6 +29,8 @@ class UserNotificationListener_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserNotificationListener(winrt.system.Object, metaclass=UserNotificationListener_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Notifications.Management.UserNotificationListener::ClearNotifications()
     def clear_notifications(self) -> None: ...
     # Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus Windows.UI.Notifications.Management.UserNotificationListener::GetAccessStatus()

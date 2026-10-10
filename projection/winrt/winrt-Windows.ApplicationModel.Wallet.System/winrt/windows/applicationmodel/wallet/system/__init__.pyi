@@ -27,6 +27,8 @@ class WalletItemAppAssociation(enum.IntEnum):
 @typing.final
 @deprecated("WalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemSystemStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.System.WalletItemSystemStore::DeleteAsync(Windows.ApplicationModel.Wallet.WalletItem)
     @deprecated("IWalletItemSystemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def delete_async(self, item: windows_applicationmodel_wallet.WalletItem, /) -> windows_foundation.IAsyncAction: ...
@@ -58,5 +60,6 @@ class WalletManagerSystem_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("WalletManagerSystem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletManagerSystem(winrt.system.Object, metaclass=WalletManagerSystem_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

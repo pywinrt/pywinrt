@@ -61,6 +61,8 @@ class Lamp_Static(winrt._winrt.Object_Static):
 class Lamp(windows_foundation.IClosable, winrt.system.Object, metaclass=Lamp_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Lights.Lamp::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Lights.Lamp::add_AvailabilityChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Lights.Lamp,Windows.Devices.Lights.LampAvailabilityChangedEventArgs>)
@@ -101,6 +103,8 @@ class LampArray_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LampArray(winrt.system.Object, metaclass=LampArray_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32[] Windows.Devices.Lights.LampArray::GetIndicesForKey(Windows.System.VirtualKey)
     def get_indices_for_key(self, key: windows_system.VirtualKey, /) -> winrt.system.Array[winrt.system.Int32]: ...
     # System.Int32[] Windows.Devices.Lights.LampArray::GetIndicesForPurposes(Windows.Devices.Lights.LampPurposes)
@@ -177,12 +181,16 @@ class LampArray(winrt.system.Object, metaclass=LampArray_Static):
 
 @typing.final
 class LampAvailabilityChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Lights.LampAvailabilityChangedEventArgs::get_IsAvailable()
     @_property
     def is_available(self) -> bool: ...
 
 @typing.final
 class LampInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Windows.Devices.Lights.LampInfo::GetNearestSupportedColor(Windows.UI.Color)
     def get_nearest_supported_color(self, desired_color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> windows_ui.Color: ...
     # System.Int32 Windows.Devices.Lights.LampInfo::get_BlueLevelCount()

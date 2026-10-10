@@ -316,6 +316,8 @@ class Appointment(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendar(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.AppointmentCalendar::DeleteAppointmentAsync(System.String)
     def delete_appointment_async(self, local_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.AppointmentCalendar::DeleteAppointmentInstanceAsync(System.String,Windows.Foundation.DateTime)
@@ -473,6 +475,8 @@ class AppointmentCalendar(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarSyncManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager::SyncAsync()
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager::add_SyncStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager,System.Object>)
@@ -500,6 +504,8 @@ class AppointmentCalendarSyncManager(winrt.system.Object):
 
 @typing.final
 class AppointmentConflictResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.ApplicationModel.Appointments.AppointmentConflictResult::get_Date()
     @_property
     def date(self) -> datetime.datetime: ...
@@ -509,6 +515,8 @@ class AppointmentConflictResult(winrt.system.Object):
 
 @typing.final
 class AppointmentException(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Appointments.Appointment Windows.ApplicationModel.Appointments.AppointmentException::get_Appointment()
     @_property
     def appointment(self) -> Appointment: ...
@@ -614,10 +622,13 @@ class AppointmentManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppointmentManager(winrt.system.Object, metaclass=AppointmentManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppointmentManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Appointments.AppointmentStore> Windows.ApplicationModel.Appointments.AppointmentManagerForUser::RequestStoreAsync(Windows.ApplicationModel.Appointments.AppointmentStoreAccessType)
     def request_store_async(self, options: AppointmentStoreAccessType, /) -> windows_foundation.IAsyncOperation[AppointmentStore]: ...
     @typing.overload
@@ -781,7 +792,8 @@ class AppointmentProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppointmentProperties(winrt.system.Object, metaclass=AppointmentProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppointmentRecurrence(winrt.system.Object):
@@ -849,6 +861,8 @@ class AppointmentRecurrence(winrt.system.Object):
 
 @typing.final
 class AppointmentStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Appointments.AppointmentCalendar> Windows.ApplicationModel.Appointments.AppointmentStore::CreateAppointmentCalendarAsync(System.String)
     def create_appointment_calendar_async(self, name: str, /) -> windows_foundation.IAsyncOperation[AppointmentCalendar]: ...
@@ -945,6 +959,8 @@ class AppointmentStore(winrt.system.Object):
 
 @typing.final
 class AppointmentStoreChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Appointments.Appointment Windows.ApplicationModel.Appointments.AppointmentStoreChange::get_Appointment()
     @_property
     def appointment(self) -> Appointment: ...
@@ -957,6 +973,8 @@ class AppointmentStoreChange(winrt.system.Object):
 
 @typing.final
 class AppointmentStoreChangeReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader::AcceptChanges()
     def accept_changes(self) -> None: ...
     # System.Void Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader::AcceptChangesThrough(Windows.ApplicationModel.Appointments.AppointmentStoreChange)
@@ -966,6 +984,8 @@ class AppointmentStoreChangeReader(winrt.system.Object):
 
 @typing.final
 class AppointmentStoreChangeTracker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker::Enable()
     def enable(self) -> None: ...
     # Windows.ApplicationModel.Appointments.AppointmentStoreChangeReader Windows.ApplicationModel.Appointments.AppointmentStoreChangeTracker::GetChangeReader()
@@ -978,17 +998,22 @@ class AppointmentStoreChangeTracker(winrt.system.Object):
 
 @typing.final
 class AppointmentStoreChangedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class AppointmentStoreChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Appointments.AppointmentStoreChangedDeferral Windows.ApplicationModel.Appointments.AppointmentStoreChangedEventArgs::GetDeferral()
     def get_deferral(self) -> AppointmentStoreChangedDeferral: ...
 
 @typing.final
 class AppointmentStoreNotificationTriggerDetails(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class FindAppointmentsOptions(winrt.system.Object):

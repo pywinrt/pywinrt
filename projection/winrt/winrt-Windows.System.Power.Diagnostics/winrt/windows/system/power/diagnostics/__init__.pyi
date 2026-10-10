@@ -28,7 +28,8 @@ class BackgroundEnergyDiagnostics_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
 class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnergyDiagnostics_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ForegroundEnergyDiagnostics_Static(winrt._winrt.Object_Static):
@@ -46,5 +47,6 @@ class ForegroundEnergyDiagnostics_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Foreground Energy Diagnostics has been deprecated. For more info, see MSDN.")
 class ForegroundEnergyDiagnostics(winrt.system.Object, metaclass=ForegroundEnergyDiagnostics_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

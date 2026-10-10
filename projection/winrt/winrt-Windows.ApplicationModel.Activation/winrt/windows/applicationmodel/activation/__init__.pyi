@@ -206,6 +206,8 @@ class ApplicationExecutionState(enum.IntEnum):
 
 @typing.final
 class AppointmentsProviderAddAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderAddAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -227,6 +229,8 @@ class AppointmentsProviderAddAppointmentActivatedEventArgs(IActivatedEventArgsWi
 
 @typing.final
 class AppointmentsProviderRemoveAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderRemoveAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -248,6 +252,8 @@ class AppointmentsProviderRemoveAppointmentActivatedEventArgs(IActivatedEventArg
 
 @typing.final
 class AppointmentsProviderReplaceAppointmentActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderReplaceAppointmentActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -269,6 +275,8 @@ class AppointmentsProviderReplaceAppointmentActivatedEventArgs(IActivatedEventAr
 
 @typing.final
 class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -296,6 +304,8 @@ class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(IActivatedEve
 
 @typing.final
 class AppointmentsProviderShowTimeFrameActivatedEventArgs(IActivatedEventArgsWithUser, IAppointmentsProviderShowTimeFrameActivatedEventArgs, IAppointmentsProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -320,12 +330,16 @@ class AppointmentsProviderShowTimeFrameActivatedEventArgs(IActivatedEventArgsWit
 
 @typing.final
 class BackgroundActivatedEventArgs(IBackgroundActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Background.IBackgroundTaskInstance Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs::get_TaskInstance()
     @_property
     def task_instance(self) -> windows_applicationmodel_background.IBackgroundTaskInstance: ...
 
 @typing.final
 class BarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsWithUser, IBarcodeScannerPreviewActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -344,6 +358,8 @@ class BarcodeScannerPreviewActivatedEventArgs(IActivatedEventArgsWithUser, IBarc
 
 @typing.final
 class CachedFileUpdaterActivatedEventArgs(IActivatedEventArgsWithUser, ICachedFileUpdaterActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -362,6 +378,8 @@ class CachedFileUpdaterActivatedEventArgs(IActivatedEventArgsWithUser, ICachedFi
 
 @typing.final
 class CameraSettingsActivatedEventArgs(ICameraSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -380,6 +398,8 @@ class CameraSettingsActivatedEventArgs(ICameraSettingsActivatedEventArgs, IActiv
 
 @typing.final
 class CommandLineActivatedEventArgs(IActivatedEventArgsWithUser, ICommandLineActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -398,6 +418,8 @@ class CommandLineActivatedEventArgs(IActivatedEventArgsWithUser, ICommandLineAct
 
 @typing.final
 class CommandLineActivationOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Activation.CommandLineActivationOperation::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Int32 Windows.ApplicationModel.Activation.CommandLineActivationOperation::get_ExitCode()
@@ -415,6 +437,8 @@ class CommandLineActivationOperation(winrt.system.Object):
 
 @typing.final
 class ContactCallActivatedEventArgs(IContactCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -439,6 +463,8 @@ class ContactCallActivatedEventArgs(IContactCallActivatedEventArgs, IContactActi
 
 @typing.final
 class ContactMapActivatedEventArgs(IContactMapActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -460,6 +486,8 @@ class ContactMapActivatedEventArgs(IContactMapActivatedEventArgs, IContactActiva
 
 @typing.final
 class ContactMessageActivatedEventArgs(IContactMessageActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -484,6 +512,8 @@ class ContactMessageActivatedEventArgs(IContactMessageActivatedEventArgs, IConta
 
 @typing.final
 class ContactPanelActivatedEventArgs(IActivatedEventArgsWithUser, IActivatedEventArgs, IContactPanelActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -505,6 +535,8 @@ class ContactPanelActivatedEventArgs(IActivatedEventArgsWithUser, IActivatedEven
 
 @typing.final
 class ContactPickerActivatedEventArgs(IContactPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -520,6 +552,8 @@ class ContactPickerActivatedEventArgs(IContactPickerActivatedEventArgs, IActivat
 
 @typing.final
 class ContactPostActivatedEventArgs(IContactPostActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -544,6 +578,8 @@ class ContactPostActivatedEventArgs(IContactPostActivatedEventArgs, IContactActi
 
 @typing.final
 class ContactVideoCallActivatedEventArgs(IContactVideoCallActivatedEventArgs, IContactActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -568,6 +604,8 @@ class ContactVideoCallActivatedEventArgs(IContactVideoCallActivatedEventArgs, IC
 
 @typing.final
 class DeviceActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDeviceActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DeviceActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -595,6 +633,8 @@ class DeviceActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvide
 
 @typing.final
 class DevicePairingActivatedEventArgs(IActivatedEventArgsWithUser, IDevicePairingActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -613,6 +653,8 @@ class DevicePairingActivatedEventArgs(IActivatedEventArgsWithUser, IDevicePairin
 
 @typing.final
 class DialReceiverActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IDialReceiverActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -643,6 +685,8 @@ class DialReceiverActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherP
 
 @typing.final
 class FileActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IFileActivatedEventArgsWithCallerPackageFamilyName, IFileActivatedEventArgsWithNeighboringFiles, IFileActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -676,6 +720,8 @@ class FileActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider,
 
 @typing.final
 class FileOpenPickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerActivatedEventArgs2, IFileOpenPickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -698,6 +744,8 @@ class FileOpenPickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileOpenPic
 @typing.final
 @deprecated("FileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FileOpenPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileOpenPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -720,6 +768,8 @@ class FileOpenPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileOpen
 
 @typing.final
 class FileSavePickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileSavePickerActivatedEventArgs2, IFileSavePickerActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -745,6 +795,8 @@ class FileSavePickerActivatedEventArgs(IActivatedEventArgsWithUser, IFileSavePic
 @typing.final
 @deprecated("FileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FileSavePickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileSavePickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -768,6 +820,8 @@ class FileSavePickerContinuationEventArgs(IActivatedEventArgsWithUser, IFileSave
 @typing.final
 @deprecated("FolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class FolderPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFolderPickerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -790,6 +844,8 @@ class FolderPickerContinuationEventArgs(IActivatedEventArgsWithUser, IFolderPick
 
 @typing.final
 class LaunchActivatedEventArgs(IActivatedEventArgsWithUser, ILaunchActivatedEventArgs2, IViewSwitcherProvider, IPrelaunchActivatedEventArgs, IApplicationViewActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -823,6 +879,8 @@ class LaunchActivatedEventArgs(IActivatedEventArgsWithUser, ILaunchActivatedEven
 
 @typing.final
 class LockScreenActivatedEventArgs(IActivatedEventArgsWithUser, ILockScreenActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -841,6 +899,8 @@ class LockScreenActivatedEventArgs(IActivatedEventArgsWithUser, ILockScreenActiv
 
 @typing.final
 class LockScreenCallActivatedEventArgs(IViewSwitcherProvider, IApplicationViewActivatedEventArgs, ILockScreenCallActivatedEventArgs, ILaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -868,6 +928,8 @@ class LockScreenCallActivatedEventArgs(IViewSwitcherProvider, IApplicationViewAc
 
 @typing.final
 class LockScreenComponentActivatedEventArgs(IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -880,6 +942,8 @@ class LockScreenComponentActivatedEventArgs(IActivatedEventArgs, winrt.system.Ob
 
 @typing.final
 class PhoneCallActivatedEventArgs(IActivatedEventArgsWithUser, IPhoneCallActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -898,6 +962,8 @@ class PhoneCallActivatedEventArgs(IActivatedEventArgsWithUser, IPhoneCallActivat
 
 @typing.final
 class PickerReturnedActivatedEventArgs(IPickerReturnedActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -913,6 +979,8 @@ class PickerReturnedActivatedEventArgs(IPickerReturnedActivatedEventArgs, IActiv
 
 @typing.final
 class Print3DWorkflowActivatedEventArgs(IPrint3DWorkflowActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -928,6 +996,8 @@ class Print3DWorkflowActivatedEventArgs(IPrint3DWorkflowActivatedEventArgs, IAct
 
 @typing.final
 class PrintTaskSettingsActivatedEventArgs(IPrintTaskSettingsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -943,6 +1013,8 @@ class PrintTaskSettingsActivatedEventArgs(IPrintTaskSettingsActivatedEventArgs, 
 
 @typing.final
 class ProtocolActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -973,6 +1045,8 @@ class ProtocolActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvi
 
 @typing.final
 class ProtocolForResultsActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, IApplicationViewActivatedEventArgs, IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, IProtocolActivatedEventArgs, IProtocolForResultsActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1006,6 +1080,8 @@ class ProtocolForResultsActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwi
 
 @typing.final
 class RestrictedLaunchActivatedEventArgs(IActivatedEventArgsWithUser, IRestrictedLaunchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1024,6 +1100,8 @@ class RestrictedLaunchActivatedEventArgs(IActivatedEventArgsWithUser, IRestricte
 
 @typing.final
 class SearchActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvider, ISearchActivatedEventArgsWithLinguisticDetails, IApplicationViewActivatedEventArgs, ISearchActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.SearchActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1054,6 +1132,8 @@ class SearchActivatedEventArgs(IActivatedEventArgsWithUser, IViewSwitcherProvide
 
 @typing.final
 class ShareTargetActivatedEventArgs(IActivatedEventArgsWithUser, IShareTargetActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1072,6 +1152,8 @@ class ShareTargetActivatedEventArgs(IActivatedEventArgsWithUser, IShareTargetAct
 
 @typing.final
 class SplashScreen(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Activation.SplashScreen::add_Dismissed(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Activation.SplashScreen,System.Object>)
     def add_dismissed(self, handler: windows_foundation.TypedEventHandler[SplashScreen, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Activation.SplashScreen::remove_Dismissed(Windows.Foundation.EventRegistrationToken)
@@ -1082,6 +1164,8 @@ class SplashScreen(winrt.system.Object):
 
 @typing.final
 class StartupTaskActivatedEventArgs(IActivatedEventArgsWithUser, IStartupTaskActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1100,12 +1184,16 @@ class StartupTaskActivatedEventArgs(IActivatedEventArgsWithUser, IStartupTaskAct
 
 @typing.final
 class TileActivatedInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ShownTileNotification> Windows.ApplicationModel.Activation.TileActivatedInfo::get_RecentlyShownNotifications()
     @_property
     def recently_shown_notifications(self) -> _cabc.Sequence[windows_ui_notifications.ShownTileNotification]: ...
 
 @typing.final
 class ToastNotificationActivatedEventArgs(IApplicationViewActivatedEventArgs, IActivatedEventArgsWithUser, IToastNotificationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1130,6 +1218,8 @@ class ToastNotificationActivatedEventArgs(IApplicationViewActivatedEventArgs, IA
 
 @typing.final
 class UserDataAccountProviderActivatedEventArgs(IUserDataAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1145,6 +1235,8 @@ class UserDataAccountProviderActivatedEventArgs(IUserDataAccountProviderActivate
 
 @typing.final
 class VoiceCommandActivatedEventArgs(IActivatedEventArgsWithUser, IVoiceCommandActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1164,6 +1256,8 @@ class VoiceCommandActivatedEventArgs(IActivatedEventArgsWithUser, IVoiceCommandA
 @typing.final
 @deprecated("WalletActionActivatedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletActionActivatedEventArgs(IWalletActionActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1188,6 +1282,8 @@ class WalletActionActivatedEventArgs(IWalletActionActivatedEventArgs, IActivated
 
 @typing.final
 class WebAccountProviderActivatedEventArgs(IActivatedEventArgsWithUser, IWebAccountProviderActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...
@@ -1206,6 +1302,8 @@ class WebAccountProviderActivatedEventArgs(IActivatedEventArgsWithUser, IWebAcco
 
 @typing.final
 class WebAuthenticationBrokerContinuationEventArgs(IWebAuthenticationBrokerContinuationEventArgs, IContinuationActivatedEventArgs, IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs::get_Kind()
     @_property
     def kind(self) -> ActivationKind: ...

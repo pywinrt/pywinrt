@@ -355,6 +355,8 @@ class DatagramSocket(windows_foundation.IClosable, winrt.system.Object, metaclas
 
 @typing.final
 class DatagramSocketControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketQualityOfService Windows.Networking.Sockets.DatagramSocketControl::get_QualityOfService()
     @_property
     def quality_of_service(self) -> SocketQualityOfService: ...
@@ -388,6 +390,8 @@ class DatagramSocketControl(winrt.system.Object):
 
 @typing.final
 class DatagramSocketInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.HostName Windows.Networking.Sockets.DatagramSocketInformation::get_LocalAddress()
     @_property
     def local_address(self) -> windows_networking.HostName: ...
@@ -403,6 +407,8 @@ class DatagramSocketInformation(winrt.system.Object):
 
 @typing.final
 class DatagramSocketMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.DataReader Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs::GetDataReader()
     def get_data_reader(self) -> windows_storage_streams.DataReader: ...
     # Windows.Storage.Streams.IInputStream Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs::GetDataStream()
@@ -464,6 +470,8 @@ class MessageWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Ob
 
 @typing.final
 class MessageWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketMessageType Windows.Networking.Sockets.MessageWebSocketControl::get_MessageType()
     @_property
     def message_type(self) -> SocketMessageType: ...
@@ -524,6 +532,8 @@ class MessageWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.syste
 
 @typing.final
 class MessageWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.MessageWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -548,6 +558,8 @@ class MessageWebSocketInformation(IWebSocketInformation2, IWebSocketInformation,
 
 @typing.final
 class MessageWebSocketMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.DataReader Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs::GetDataReader()
     def get_data_reader(self) -> windows_storage_streams.DataReader: ...
     # Windows.Storage.Streams.IInputStream Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs::GetDataStream()
@@ -563,6 +575,8 @@ class MessageWebSocketMessageReceivedEventArgs(winrt.system.Object):
 class ServerMessageWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Networking.Sockets.ServerMessageWebSocket::Close()
     def close(self) -> None: ...
@@ -593,6 +607,8 @@ class ServerMessageWebSocket(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ServerMessageWebSocketControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketMessageType Windows.Networking.Sockets.ServerMessageWebSocketControl::get_MessageType()
     @_property
     def message_type(self) -> SocketMessageType: ...
@@ -602,6 +618,8 @@ class ServerMessageWebSocketControl(winrt.system.Object):
 
 @typing.final
 class ServerMessageWebSocketInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.ServerMessageWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -616,6 +634,8 @@ class ServerMessageWebSocketInformation(winrt.system.Object):
 class ServerStreamWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Networking.Sockets.ServerStreamWebSocket::Close()
     def close(self) -> None: ...
@@ -642,6 +662,8 @@ class ServerStreamWebSocket(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ServerStreamWebSocketInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.ServerStreamWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -667,6 +689,8 @@ class SocketActivityInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SocketActivityInformation(winrt.system.Object, metaclass=SocketActivityInformation_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketActivityContext Windows.Networking.Sockets.SocketActivityInformation::get_Context()
     @_property
     def context(self) -> SocketActivityContext: ...
@@ -691,6 +715,8 @@ class SocketActivityInformation(winrt.system.Object, metaclass=SocketActivityInf
 
 @typing.final
 class SocketActivityTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketActivityTriggerReason Windows.Networking.Sockets.SocketActivityTriggerDetails::get_Reason()
     @_property
     def reason(self) -> SocketActivityTriggerReason: ...
@@ -705,7 +731,8 @@ class SocketError_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SocketError(winrt.system.Object, metaclass=SocketError_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StreamSocket_Static(winrt._winrt.Object_Static):
@@ -799,6 +826,8 @@ class StreamSocket(windows_foundation.IClosable, winrt.system.Object, metaclass=
 
 @typing.final
 class StreamSocketControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketQualityOfService Windows.Networking.Sockets.StreamSocketControl::get_QualityOfService()
     @_property
     def quality_of_service(self) -> SocketQualityOfService: ...
@@ -853,6 +882,8 @@ class StreamSocketControl(winrt.system.Object):
 
 @typing.final
 class StreamSocketInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.StreamSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -957,12 +988,16 @@ class StreamSocketListener(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class StreamSocketListenerConnectionReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.StreamSocket Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs::get_Socket()
     @_property
     def socket(self) -> StreamSocket: ...
 
 @typing.final
 class StreamSocketListenerControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.SocketQualityOfService Windows.Networking.Sockets.StreamSocketListenerControl::get_QualityOfService()
     @_property
     def quality_of_service(self) -> SocketQualityOfService: ...
@@ -996,6 +1031,8 @@ class StreamSocketListenerControl(winrt.system.Object):
 
 @typing.final
 class StreamSocketListenerInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Sockets.StreamSocketListenerInformation::get_LocalPort()
     @_property
     def local_port(self) -> str: ...
@@ -1042,6 +1079,8 @@ class StreamWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Obj
 
 @typing.final
 class StreamWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.Sockets.StreamWebSocketControl::get_NoDelay()
     @_property
     def no_delay(self) -> bool: ...
@@ -1090,6 +1129,8 @@ class StreamWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system
 
 @typing.final
 class StreamWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.StreamWebSocketInformation::get_BandwidthStatistics()
     @_property
     def bandwidth_statistics(self) -> BandwidthStatistics: ...
@@ -1114,6 +1155,8 @@ class StreamWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, 
 
 @typing.final
 class WebSocketClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Networking.Sockets.WebSocketClosedEventArgs::get_Code()
     @_property
     def code(self) -> winrt.system.UInt16: ...
@@ -1128,7 +1171,8 @@ class WebSocketError_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebSocketError(winrt.system.Object, metaclass=WebSocketError_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebSocketKeepAlive(windows_applicationmodel_background.IBackgroundTask, winrt.system.Object):
@@ -1138,6 +1182,8 @@ class WebSocketKeepAlive(windows_applicationmodel_background.IBackgroundTask, wi
 
 @typing.final
 class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs::Reject()

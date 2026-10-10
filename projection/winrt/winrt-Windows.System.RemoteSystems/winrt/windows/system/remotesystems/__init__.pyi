@@ -167,7 +167,8 @@ class KnownRemoteSystemCapabilities_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownRemoteSystemCapabilities(winrt.system.Object, metaclass=KnownRemoteSystemCapabilities_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RemoteSystem_Static(winrt._winrt.Object_Static):
@@ -200,6 +201,8 @@ class RemoteSystem_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteSystem(winrt.system.Object, metaclass=RemoteSystem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.RemoteSystems.RemoteSystem::GetCapabilitySupportedAsync(System.String)
     def get_capability_supported_async(self, capability_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.String Windows.System.RemoteSystems.RemoteSystem::get_DisplayName()
@@ -238,12 +241,16 @@ class RemoteSystem(winrt.system.Object, metaclass=RemoteSystem_Static):
 
 @typing.final
 class RemoteSystemAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystem Windows.System.RemoteSystems.RemoteSystemAddedEventArgs::get_RemoteSystem()
     @_property
     def remote_system(self) -> RemoteSystem: ...
 
 @typing.final
 class RemoteSystemApp(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,System.String> Windows.System.RemoteSystems.RemoteSystemApp::get_Attributes()
     @_property
     def attributes(self) -> _cabc.Mapping[str, str]: ...
@@ -275,6 +282,8 @@ class RemoteSystemAppRegistration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteSystemAppRegistration(winrt.system.Object, metaclass=RemoteSystemAppRegistration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.RemoteSystems.RemoteSystemAppRegistration::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Windows.System.RemoteSystems.RemoteSystemAppRegistration::get_Attributes()
@@ -298,6 +307,8 @@ class RemoteSystemConnectionInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteSystemConnectionInfo(winrt.system.Object, metaclass=RemoteSystemConnectionInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.System.RemoteSystems.RemoteSystemConnectionInfo::get_IsProximal()
     @_property
     def is_proximal(self) -> bool: ...
@@ -333,7 +344,8 @@ class RemoteSystemDiscoveryTypeFilter(IRemoteSystemFilter, winrt.system.Object):
 
 @typing.final
 class RemoteSystemEnumerationCompletedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class RemoteSystemKindFilter(IRemoteSystemFilter, winrt.system.Object):
@@ -371,10 +383,13 @@ class RemoteSystemKinds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteSystemKinds(winrt.system.Object, metaclass=RemoteSystemKinds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RemoteSystemRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs::get_RemoteSystemId()
     @_property
     def remote_system_id(self) -> str: ...
@@ -388,6 +403,8 @@ class RemoteSystemSession_Static(winrt._winrt.Object_Static):
 class RemoteSystemSession(windows_foundation.IClosable, winrt.system.Object, metaclass=RemoteSystemSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteSystems.RemoteSystemSession::Close()
     def close(self) -> None: ...
     # Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher Windows.System.RemoteSystems.RemoteSystemSession::CreateParticipantWatcher()
@@ -410,6 +427,8 @@ class RemoteSystemSession(windows_foundation.IClosable, winrt.system.Object, met
 
 @typing.final
 class RemoteSystemSessionAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionInfo Windows.System.RemoteSystems.RemoteSystemSessionAddedEventArgs::get_SessionInfo()
     @_property
     def session_info(self) -> RemoteSystemSessionInfo: ...
@@ -431,6 +450,8 @@ class RemoteSystemSessionController(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionCreationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSession Windows.System.RemoteSystems.RemoteSystemSessionCreationResult::get_Session()
     @_property
     def session(self) -> RemoteSystemSession: ...
@@ -440,12 +461,16 @@ class RemoteSystemSessionCreationResult(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionDisconnectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedReason Windows.System.RemoteSystems.RemoteSystemSessionDisconnectedEventArgs::get_Reason()
     @_property
     def reason(self) -> RemoteSystemSessionDisconnectedReason: ...
 
 @typing.final
 class RemoteSystemSessionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.System.RemoteSystems.RemoteSystemSessionJoinResult> Windows.System.RemoteSystems.RemoteSystemSessionInfo::JoinAsync()
     def join_async(self) -> windows_foundation.IAsyncOperation[RemoteSystemSessionJoinResult]: ...
     # System.String Windows.System.RemoteSystems.RemoteSystemSessionInfo::get_ControllerDisplayName()
@@ -457,6 +482,8 @@ class RemoteSystemSessionInfo(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionInvitation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystem Windows.System.RemoteSystems.RemoteSystemSessionInvitation::get_Sender()
     @_property
     def sender(self) -> RemoteSystem: ...
@@ -474,12 +501,16 @@ class RemoteSystemSessionInvitationListener(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionInvitationReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionInvitation Windows.System.RemoteSystems.RemoteSystemSessionInvitationReceivedEventArgs::get_Invitation()
     @_property
     def invitation(self) -> RemoteSystemSessionInvitation: ...
 
 @typing.final
 class RemoteSystemSessionJoinRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest::Accept()
     def accept(self) -> None: ...
     # Windows.System.RemoteSystems.RemoteSystemSessionParticipant Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest::get_Participant()
@@ -488,6 +519,8 @@ class RemoteSystemSessionJoinRequest(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionJoinRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.System.RemoteSystems.RemoteSystemSessionJoinRequest Windows.System.RemoteSystems.RemoteSystemSessionJoinRequestedEventArgs::get_JoinRequest()
@@ -496,6 +529,8 @@ class RemoteSystemSessionJoinRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionJoinResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSession Windows.System.RemoteSystems.RemoteSystemSessionJoinResult::get_Session()
     @_property
     def session(self) -> RemoteSystemSession: ...
@@ -535,6 +570,8 @@ class RemoteSystemSessionOptions(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionParticipant(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName> Windows.System.RemoteSystems.RemoteSystemSessionParticipant::GetHostNames()
     def get_host_names(self) -> _cabc.Sequence[windows_networking.HostName]: ...
     # Windows.System.RemoteSystems.RemoteSystem Windows.System.RemoteSystems.RemoteSystemSessionParticipant::get_RemoteSystem()
@@ -543,18 +580,24 @@ class RemoteSystemSessionParticipant(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionParticipantAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionParticipant Windows.System.RemoteSystems.RemoteSystemSessionParticipantAddedEventArgs::get_Participant()
     @_property
     def participant(self) -> RemoteSystemSessionParticipant: ...
 
 @typing.final
 class RemoteSystemSessionParticipantRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionParticipant Windows.System.RemoteSystems.RemoteSystemSessionParticipantRemovedEventArgs::get_Participant()
     @_property
     def participant(self) -> RemoteSystemSessionParticipant: ...
 
 @typing.final
 class RemoteSystemSessionParticipantWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher::Stop()
@@ -577,18 +620,24 @@ class RemoteSystemSessionParticipantWatcher(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionInfo Windows.System.RemoteSystems.RemoteSystemSessionRemovedEventArgs::get_SessionInfo()
     @_property
     def session_info(self) -> RemoteSystemSessionInfo: ...
 
 @typing.final
 class RemoteSystemSessionUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemSessionInfo Windows.System.RemoteSystems.RemoteSystemSessionUpdatedEventArgs::get_SessionInfo()
     @_property
     def session_info(self) -> RemoteSystemSessionInfo: ...
 
 @typing.final
 class RemoteSystemSessionValueSetReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.System.RemoteSystems.RemoteSystemSessionValueSetReceivedEventArgs::get_Message()
     @_property
     def message(self) -> windows_foundation_collections.ValueSet: ...
@@ -598,6 +647,8 @@ class RemoteSystemSessionValueSetReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class RemoteSystemSessionWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteSystems.RemoteSystemSessionWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.RemoteSystems.RemoteSystemSessionWatcher::Stop()
@@ -627,12 +678,16 @@ class RemoteSystemStatusTypeFilter(IRemoteSystemFilter, winrt.system.Object):
 
 @typing.final
 class RemoteSystemUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystem Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs::get_RemoteSystem()
     @_property
     def remote_system(self) -> RemoteSystem: ...
 
 @typing.final
 class RemoteSystemWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteSystems.RemoteSystemWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.RemoteSystems.RemoteSystemWatcher::Stop()
@@ -663,6 +718,8 @@ class RemoteSystemWatcher(winrt.system.Object):
 
 @typing.final
 class RemoteSystemWatcherErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteSystems.RemoteSystemWatcherError Windows.System.RemoteSystems.RemoteSystemWatcherErrorOccurredEventArgs::get_Error()
     @_property
     def error(self) -> RemoteSystemWatcherError: ...

@@ -18,10 +18,13 @@ class ClassicAppManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ClassicAppManager(winrt.system.Object, metaclass=ClassicAppManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class InstalledClassicAppInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Deployment.Preview.InstalledClassicAppInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...

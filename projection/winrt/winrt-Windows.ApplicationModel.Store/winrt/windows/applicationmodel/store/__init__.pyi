@@ -104,7 +104,8 @@ class CurrentApp_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CurrentAppSimulator_Static(winrt._winrt.Object_Static):
@@ -158,10 +159,13 @@ class CurrentAppSimulator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CurrentAppSimulator(winrt.system.Object, metaclass=CurrentAppSimulator_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LicenseInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Store.LicenseInformation::add_LicenseChanged(Windows.ApplicationModel.Store.LicenseChangedEventHandler)
     def add_license_changed(self, handler: LicenseChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Store.LicenseInformation::remove_LicenseChanged(Windows.Foundation.EventRegistrationToken)
@@ -181,6 +185,8 @@ class LicenseInformation(winrt.system.Object):
 
 @typing.final
 class ListingInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.ApplicationModel.Store.ListingInformation::get_AgeRating()
     @_property
     def age_rating(self) -> winrt.system.UInt32: ...
@@ -214,6 +220,8 @@ class ListingInformation(winrt.system.Object):
 
 @typing.final
 class ProductLicense(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.ApplicationModel.Store.ProductLicense::get_ExpirationDate()
     @_property
     def expiration_date(self) -> datetime.datetime: ...
@@ -229,6 +237,8 @@ class ProductLicense(winrt.system.Object):
 
 @typing.final
 class ProductListing(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.ProductListing::get_FormattedPrice()
     @_property
     def formatted_price(self) -> str: ...
@@ -293,6 +303,8 @@ class ProductPurchaseDisplayProperties(winrt.system.Object):
 
 @typing.final
 class PurchaseResults(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.PurchaseResults::get_OfferId()
     @_property
     def offer_id(self) -> str: ...
@@ -308,6 +320,8 @@ class PurchaseResults(winrt.system.Object):
 
 @typing.final
 class UnfulfilledConsumable(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.UnfulfilledConsumable::get_OfferId()
     @_property
     def offer_id(self) -> str: ...

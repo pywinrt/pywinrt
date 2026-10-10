@@ -36,6 +36,8 @@ class DevicePortalConnection_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnection_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Networking.Sockets.ServerMessageWebSocket Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetServerMessageWebSocketForRequest(Windows.Web.Http.HttpRequestMessage)
     def get_server_message_web_socket_for_request(self, request: windows_web_http.HttpRequestMessage, /) -> windows_networking_sockets.ServerMessageWebSocket: ...
@@ -74,12 +76,16 @@ class DevicePortalConnection(winrt.system.Object, metaclass=DevicePortalConnecti
 
 @typing.final
 class DevicePortalConnectionClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs::get_Reason()
     @_property
     def reason(self) -> DevicePortalConnectionClosedReason: ...
 
 @typing.final
 class DevicePortalConnectionRequestReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Web.Http.HttpRequestMessage Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs::get_RequestMessage()

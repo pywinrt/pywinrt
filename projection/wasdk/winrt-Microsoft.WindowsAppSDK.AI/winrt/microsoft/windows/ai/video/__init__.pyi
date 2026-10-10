@@ -45,6 +45,8 @@ class VideoScaler_Static(winrt._winrt.Object_Static):
 class VideoScaler(windows_foundation.IClosable, winrt.system.Object, metaclass=VideoScaler_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Video.VideoScaler::Close()
     def close(self) -> None: ...
     # Microsoft.Windows.AI.Video.VideoScalerResult Microsoft.Windows.AI.Video.VideoScaler::Scale(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface,Microsoft.Windows.AI.Video.VideoScalerOptions)
@@ -61,6 +63,8 @@ class VideoScalerOptions(winrt.system.Object):
 
 @typing.final
 class VideoScalerResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.Video.VideoScalerStatus Microsoft.Windows.AI.Video.VideoScalerResult::get_Status()
     @_property
     def status(self) -> VideoScalerStatus: ...

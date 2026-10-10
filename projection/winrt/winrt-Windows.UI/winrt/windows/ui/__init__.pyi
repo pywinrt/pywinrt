@@ -47,7 +47,8 @@ class ColorHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class Colors_Static(winrt._winrt.Object_Static):
@@ -477,15 +478,19 @@ class Colors_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Colors(winrt.system.Object, metaclass=Colors_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class UIContentRoot(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.UIContext Windows.UI.UIContentRoot::get_UIContext()
     @_property
     def ui_context(self) -> UIContext: ...
 
 @typing.final
 class UIContext(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

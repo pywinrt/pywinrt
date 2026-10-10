@@ -46,6 +46,8 @@ class HttpDiagnosticProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::Start()
     def start(self) -> None: ...
     # System.Void Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::Stop()
@@ -65,6 +67,8 @@ class HttpDiagnosticProvider(winrt.system.Object, metaclass=HttpDiagnosticProvid
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -89,6 +93,8 @@ class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Objec
 
 @typing.final
 class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps::get_CacheCheckedTimestamp()
     @_property
     def cache_checked_timestamp(self) -> datetime.datetime | None: ...
@@ -119,6 +125,8 @@ class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -143,6 +151,8 @@ class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -155,6 +165,8 @@ class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class HttpDiagnosticSourceLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation::get_ColumnNumber()
     @_property
     def column_number(self) -> winrt.system.UInt64: ...

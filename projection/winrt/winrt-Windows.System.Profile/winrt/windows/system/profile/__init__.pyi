@@ -76,10 +76,13 @@ class AnalyticsInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AnalyticsInfo(winrt.system.Object, metaclass=AnalyticsInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AnalyticsVersionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.Profile.AnalyticsVersionInfo::get_DeviceFamily()
     @_property
     def device_family(self) -> str: ...
@@ -97,7 +100,8 @@ class AppApplicability_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class EducationSettings_Static(winrt._winrt.Object_Static):
@@ -107,7 +111,8 @@ class EducationSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HardwareIdentification_Static(winrt._winrt.Object_Static):
@@ -116,10 +121,13 @@ class HardwareIdentification_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentification_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HardwareToken(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.System.Profile.HardwareToken::get_Certificate()
     @_property
     def certificate(self) -> windows_storage_streams.IBuffer: ...
@@ -201,7 +209,8 @@ class KnownRetailInfoProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlatformAutomaticAppSignInManager_Static(winrt._winrt.Object_Static):
@@ -211,7 +220,8 @@ class PlatformAutomaticAppSignInManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlatformAutomaticAppSignInManager(winrt.system.Object, metaclass=PlatformAutomaticAppSignInManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings_Static(winrt._winrt.Object_Static):
@@ -227,7 +237,8 @@ class PlatformDiagnosticsAndUsageDataSettings_Static(winrt._winrt.Object_Static)
 
 @typing.final
 class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object, metaclass=PlatformDiagnosticsAndUsageDataSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RetailInfo_Static(winrt._winrt.Object_Static):
@@ -243,7 +254,8 @@ class RetailInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SharedModeSettings_Static(winrt._winrt.Object_Static):
@@ -256,7 +268,8 @@ class SharedModeSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SharedModeSettings(winrt.system.Object, metaclass=SharedModeSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SmartAppControlPolicy_Static(winrt._winrt.Object_Static):
@@ -270,7 +283,8 @@ class SmartAppControlPolicy_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmartAppControlPolicy(winrt.system.Object, metaclass=SmartAppControlPolicy_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SystemIdentification_Static(winrt._winrt.Object_Static):
@@ -281,10 +295,13 @@ class SystemIdentification_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemIdentification(winrt.system.Object, metaclass=SystemIdentification_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SystemIdentificationInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.System.Profile.SystemIdentificationInfo::get_Id()
     @_property
     def id(self) -> windows_storage_streams.IBuffer: ...
@@ -304,10 +321,13 @@ class SystemSetupInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemSetupInfo(winrt.system.Object, metaclass=SystemSetupInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UnsupportedAppRequirement(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Profile.UnsupportedAppRequirementReasons Windows.System.Profile.UnsupportedAppRequirement::get_Reasons()
     @_property
     def reasons(self) -> UnsupportedAppRequirementReasons: ...
@@ -336,5 +356,6 @@ class WindowsIntegrityPolicy_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowsIntegrityPolicy(winrt.system.Object, metaclass=WindowsIntegrityPolicy_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

@@ -70,6 +70,8 @@ class WiFiDirectPairingProcedure(enum.IntEnum):
 
 @typing.final
 class WiFiDirectAdvertisement(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.WiFiDirectAdvertisementListenStateDiscoverability Windows.Devices.WiFiDirect.WiFiDirectAdvertisement::get_ListenStateDiscoverability()
     @_property
     def listen_state_discoverability(self) -> WiFiDirectAdvertisementListenStateDiscoverability: ...
@@ -115,6 +117,8 @@ class WiFiDirectAdvertisementPublisher(winrt.system.Object):
 
 @typing.final
 class WiFiDirectAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.WiFiDirectError Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs::get_Error()
     @_property
     def error(self) -> WiFiDirectError: ...
@@ -158,6 +162,8 @@ class WiFiDirectConnectionParameters(windows_devices_enumeration.IDevicePairingS
 class WiFiDirectConnectionRequest(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest::Close()
     def close(self) -> None: ...
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest::get_DeviceInformation()
@@ -166,6 +172,8 @@ class WiFiDirectConnectionRequest(windows_foundation.IClosable, winrt.system.Obj
 
 @typing.final
 class WiFiDirectConnectionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs::GetConnectionRequest()
     def get_connection_request(self) -> WiFiDirectConnectionRequest: ...
 
@@ -188,6 +196,8 @@ class WiFiDirectDevice_Static(winrt._winrt.Object_Static):
 class WiFiDirectDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=WiFiDirectDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.WiFiDirect.WiFiDirectDevice::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair> Windows.Devices.WiFiDirect.WiFiDirectDevice::GetConnectionEndpointPairs()
@@ -234,6 +244,8 @@ class WiFiDirectInformationElement(winrt.system.Object, metaclass=WiFiDirectInfo
 
 @typing.final
 class WiFiDirectLegacySettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.WiFiDirect.WiFiDirectLegacySettings::get_Ssid()
     @_property
     def ssid(self) -> str: ...

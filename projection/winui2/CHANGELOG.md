@@ -23,3 +23,6 @@ releases before v4.0 are.
   modules are all in this one. Which module a namespace is imported from is
   unaffected; what changes is which package to install to get it. The whole
   family is one 0.13 MB wheel.
+
+### Fixed
+- Fixed type hints incorrectly accepting a call to a class with no constructor.

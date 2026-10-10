@@ -32,7 +32,8 @@ class CommunicationBlockingAccessManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=CommunicationBlockingAccessManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CommunicationBlockingAppManager_Static(winrt._winrt.Object_Static):
@@ -46,5 +47,6 @@ class CommunicationBlockingAppManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CommunicationBlockingAppManager(winrt.system.Object, metaclass=CommunicationBlockingAppManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

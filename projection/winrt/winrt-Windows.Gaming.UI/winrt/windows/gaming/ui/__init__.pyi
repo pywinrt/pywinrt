@@ -54,10 +54,13 @@ class GameBar_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameBar(winrt.system.Object, metaclass=GameBar_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GameChatMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Gaming.UI.GameChatMessageReceivedEventArgs::get_AppDisplayName()
     @_property
     def app_display_name(self) -> str: ...
@@ -81,6 +84,8 @@ class GameChatOverlay_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameChatOverlay(winrt.system.Object, metaclass=GameChatOverlay_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.UI.GameChatOverlay::AddMessage(System.String,System.String,Windows.Gaming.UI.GameChatMessageOrigin)
     def add_message(self, sender: str, message: str, origin: GameChatMessageOrigin, /) -> None: ...
     # Windows.Gaming.UI.GameChatOverlayPosition Windows.Gaming.UI.GameChatOverlay::get_DesiredPosition()
@@ -102,6 +107,8 @@ class GameChatOverlayMessageSource(winrt.system.Object):
 
 @typing.final
 class GameUIProviderActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.UI.GameUIProviderActivatedEventArgs::ReportCompleted(Windows.Foundation.Collections.ValueSet)
     def report_completed(self, results: windows_foundation_collections.ValueSet, /) -> None: ...
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Gaming.UI.GameUIProviderActivatedEventArgs::get_Kind()

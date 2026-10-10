@@ -76,6 +76,8 @@ class HdmiDisplayInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HdmiDisplayInformation(winrt.system.Object, metaclass=HdmiDisplayInformation_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Display.Core.HdmiDisplayMode Windows.Graphics.Display.Core.HdmiDisplayInformation::GetCurrentDisplayMode()
     def get_current_display_mode(self) -> HdmiDisplayMode: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Display.Core.HdmiDisplayMode> Windows.Graphics.Display.Core.HdmiDisplayInformation::GetSupportedDisplayModes()
@@ -106,6 +108,8 @@ class HdmiDisplayInformation(winrt.system.Object, metaclass=HdmiDisplayInformati
 
 @typing.final
 class HdmiDisplayMode(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Display.Core.HdmiDisplayMode::IsEqual(Windows.Graphics.Display.Core.HdmiDisplayMode)
     def is_equal(self, mode: HdmiDisplayMode, /) -> bool: ...
     # System.UInt16 Windows.Graphics.Display.Core.HdmiDisplayMode::get_BitsPerPixel()

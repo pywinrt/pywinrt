@@ -15,6 +15,8 @@ __all__ = [
 
 @typing.final
 class CharacterGrouping(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Globalization.Collation.CharacterGrouping::get_First()
     @_property
     def first(self) -> str: ...

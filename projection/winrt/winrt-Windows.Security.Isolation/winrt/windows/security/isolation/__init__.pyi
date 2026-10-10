@@ -207,6 +207,8 @@ class IsolatedWindowsEnvironment_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsEnvironment_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironment::ChangePriority(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority)
     @deprecated("IsolatedWindowsEnvironment is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
@@ -299,6 +301,8 @@ class IsolatedWindowsEnvironment(winrt.system.Object, metaclass=IsolatedWindowsE
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentCreateResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult::ChangeCreationPriority(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority)
     @deprecated("IsolatedWindowsEnvironmentCreateResult is deprecated and might not work on all platforms. For more info, see MSDN.")
     def change_creation_priority(self, priority: IsolatedWindowsEnvironmentCreationPriority, /) -> None: ...
@@ -318,6 +322,8 @@ class IsolatedWindowsEnvironmentCreateResult(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentFile is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentFile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentFile::Close()
     @deprecated("IsolatedWindowsEnvironmentFile is deprecated and might not work on all platforms. For more info, see MSDN.")
     def close(self) -> None: ...
@@ -352,11 +358,14 @@ class IsolatedWindowsEnvironmentHost_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentHost is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentHost(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentHost_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentLaunchFileResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentLaunchFileResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -486,7 +495,8 @@ class IsolatedWindowsEnvironmentOwnerRegistration_Static(winrt._winrt.Object_Sta
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentOwnerRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentOwnerRegistration(winrt.system.Object, metaclass=IsolatedWindowsEnvironmentOwnerRegistration_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentOwnerRegistrationData is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -512,6 +522,8 @@ class IsolatedWindowsEnvironmentOwnerRegistrationData(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentOwnerRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentOwnerRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -524,6 +536,8 @@ class IsolatedWindowsEnvironmentOwnerRegistrationResult(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentPostMessageResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentPostMessageResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -536,6 +550,8 @@ class IsolatedWindowsEnvironmentPostMessageResult(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess::WaitForExit()
     @deprecated("IsolatedWindowsEnvironmentProcess is deprecated and might not work on all platforms. For more info, see MSDN.")
     def wait_for_exit(self) -> None: ...
@@ -570,6 +586,8 @@ class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentShareFileResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentShareFileResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -599,6 +617,8 @@ class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentShareFolderResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentShareFolderResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -611,6 +631,8 @@ class IsolatedWindowsEnvironmentShareFolderResult(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentStartProcessResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentStartProcessResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult::get_ExtendedError()
     @_property
     @deprecated("IsolatedWindowsEnvironmentStartProcessResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -640,6 +662,8 @@ class IsolatedWindowsEnvironmentTelemetryParameters(winrt.system.Object):
 @typing.final
 @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo::TryWaitForSignInAsync()
     @deprecated("IsolatedWindowsEnvironmentUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
     def try_wait_for_sign_in_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -673,7 +697,8 @@ class IsolatedWindowsHostMessenger_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("IsolatedWindowsHostMessenger is deprecated and might not work on all platforms. For more info, see MSDN.")
 class IsolatedWindowsHostMessenger(winrt.system.Object, metaclass=IsolatedWindowsHostMessenger_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 type HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]
 type MessageReceivedCallback = typing.Callable[[_uuid.UUID, _cabc.Sequence[winrt.system.Object]], object]

@@ -27,6 +27,8 @@ class CompositionDebugOverdrawContentKinds(enum.IntFlag):
 
 @typing.final
 class CompositionDebugHeatMaps(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps::Hide(Windows.UI.Composition.Visual)
     def hide(self, subtree: windows_ui_composition.Visual, /) -> None: ...
     # System.Void Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps::ShowMemoryUsage(Windows.UI.Composition.Visual)
@@ -43,6 +45,8 @@ class CompositionDebugSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CompositionDebugSettings(winrt.system.Object, metaclass=CompositionDebugSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps Windows.UI.Composition.Diagnostics.CompositionDebugSettings::get_HeatMaps()
     @_property
     def heat_maps(self) -> CompositionDebugHeatMaps: ...

@@ -35,6 +35,8 @@ class OcrEngine_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Ocr.OcrResult> Windows.Media.Ocr.OcrEngine::RecognizeAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def recognize_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[OcrResult]: ...
     # Windows.Globalization.Language Windows.Media.Ocr.OcrEngine::get_RecognizerLanguage()
@@ -43,6 +45,8 @@ class OcrEngine(winrt.system.Object, metaclass=OcrEngine_Static):
 
 @typing.final
 class OcrLine(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Ocr.OcrLine::get_Text()
     @_property
     def text(self) -> str: ...
@@ -52,6 +56,8 @@ class OcrLine(winrt.system.Object):
 
 @typing.final
 class OcrResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Ocr.OcrLine> Windows.Media.Ocr.OcrResult::get_Lines()
     @_property
     def lines(self) -> _cabc.Sequence[OcrLine]: ...
@@ -64,6 +70,8 @@ class OcrResult(winrt.system.Object):
 
 @typing.final
 class OcrWord(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.Media.Ocr.OcrWord::get_BoundingRect()
     @_property
     def bounding_rect(self) -> windows_foundation.Rect: ...

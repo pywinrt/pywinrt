@@ -128,6 +128,8 @@ class Print3DManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Print3DManager(winrt.system.Object, metaclass=Print3DManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing3D.Print3DManager::add_TaskRequested(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing3D.Print3DManager,Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs>)
     def add_task_requested(self, event_handler: windows_foundation.TypedEventHandler[Print3DManager, Print3DTaskRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Printing3D.Print3DManager::remove_TaskRequested(Windows.Foundation.EventRegistrationToken)
@@ -135,6 +137,8 @@ class Print3DManager(winrt.system.Object, metaclass=Print3DManager_Static):
 
 @typing.final
 class Print3DTask(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing3D.Print3DTask::add_Completed(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing3D.Print3DTask,Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs>)
     def add_completed(self, event_handler: windows_foundation.TypedEventHandler[Print3DTask, Print3DTaskCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Printing3D.Print3DTask::remove_Completed(Windows.Foundation.EventRegistrationToken)
@@ -153,6 +157,8 @@ class Print3DTask(winrt.system.Object):
 
 @typing.final
 class Print3DTaskCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing3D.Print3DTaskCompletion Windows.Graphics.Printing3D.Print3DTaskCompletedEventArgs::get_Completion()
     @_property
     def completion(self) -> Print3DTaskCompletion: ...
@@ -162,23 +168,31 @@ class Print3DTaskCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class Print3DTaskRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing3D.Print3DTask Windows.Graphics.Printing3D.Print3DTaskRequest::CreateTask(System.String,System.String,Windows.Graphics.Printing3D.Print3DTaskSourceRequestedHandler)
     def create_task(self, title: str, printer_id: str, handler: Print3DTaskSourceRequestedHandler, /) -> Print3DTask: ...
 
 @typing.final
 class Print3DTaskRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing3D.Print3DTaskRequest Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs::get_Request()
     @_property
     def request(self) -> Print3DTaskRequest: ...
 
 @typing.final
 class Print3DTaskSourceChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing3D.Printing3D3MFPackage Windows.Graphics.Printing3D.Print3DTaskSourceChangedEventArgs::get_Source()
     @_property
     def source(self) -> Printing3D3MFPackage: ...
 
 @typing.final
 class Print3DTaskSourceRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing3D.Print3DTaskSourceRequestedArgs::SetSource(Windows.Graphics.Printing3D.Printing3D3MFPackage)
     def set_source(self, source: Printing3D3MFPackage, /) -> None: ...
 
@@ -471,6 +485,8 @@ class Printing3DMesh(winrt.system.Object):
 
 @typing.final
 class Printing3DMeshVerificationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing3D.Printing3DMeshVerificationResult::get_IsValid()
     @_property
     def is_valid(self) -> bool: ...

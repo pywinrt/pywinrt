@@ -42,6 +42,8 @@ class DiagnosticActionState(enum.IntEnum):
 
 @typing.final
 class DiagnosticActionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.System.Diagnostics.DiagnosticActionResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -61,6 +63,8 @@ class DiagnosticInvoker_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DiagnosticInvoker(winrt.system.Object, metaclass=DiagnosticInvoker_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> Windows.System.Diagnostics.DiagnosticInvoker::RunDiagnosticActionAsync(Windows.Data.Json.JsonObject)
     def run_diagnostic_action_async(self, context: windows_data_json.JsonObject, /) -> windows_foundation.IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.System.Diagnostics.DiagnosticActionResult,Windows.System.Diagnostics.DiagnosticActionState> Windows.System.Diagnostics.DiagnosticInvoker::RunDiagnosticActionFromStringAsync(System.String)
@@ -68,11 +72,15 @@ class DiagnosticInvoker(winrt.system.Object, metaclass=DiagnosticInvoker_Static)
 
 @typing.final
 class ProcessCpuUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.ProcessCpuUsageReport Windows.System.Diagnostics.ProcessCpuUsage::GetReport()
     def get_report(self) -> ProcessCpuUsageReport: ...
 
 @typing.final
 class ProcessCpuUsageReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.System.Diagnostics.ProcessCpuUsageReport::get_KernelTime()
     @_property
     def kernel_time(self) -> datetime.timedelta: ...
@@ -91,6 +99,8 @@ class ProcessDiagnosticInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProcessDiagnosticInfo(winrt.system.Object, metaclass=ProcessDiagnosticInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.System.AppDiagnosticInfo> Windows.System.Diagnostics.ProcessDiagnosticInfo::GetAppDiagnosticInfos()
     def get_app_diagnostic_infos(self) -> _cabc.MutableSequence[windows_system.AppDiagnosticInfo]: ...
     # Windows.System.Diagnostics.ProcessCpuUsage Windows.System.Diagnostics.ProcessDiagnosticInfo::get_CpuUsage()
@@ -120,11 +130,15 @@ class ProcessDiagnosticInfo(winrt.system.Object, metaclass=ProcessDiagnosticInfo
 
 @typing.final
 class ProcessDiskUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.ProcessDiskUsageReport Windows.System.Diagnostics.ProcessDiskUsage::GetReport()
     def get_report(self) -> ProcessDiskUsageReport: ...
 
 @typing.final
 class ProcessDiskUsageReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int64 Windows.System.Diagnostics.ProcessDiskUsageReport::get_BytesReadCount()
     @_property
     def bytes_read_count(self) -> winrt.system.Int64: ...
@@ -146,11 +160,15 @@ class ProcessDiskUsageReport(winrt.system.Object):
 
 @typing.final
 class ProcessMemoryUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.ProcessMemoryUsageReport Windows.System.Diagnostics.ProcessMemoryUsage::GetReport()
     def get_report(self) -> ProcessMemoryUsageReport: ...
 
 @typing.final
 class ProcessMemoryUsageReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.System.Diagnostics.ProcessMemoryUsageReport::get_NonPagedPoolSizeInBytes()
     @_property
     def non_paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
@@ -190,11 +208,15 @@ class ProcessMemoryUsageReport(winrt.system.Object):
 
 @typing.final
 class SystemCpuUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.SystemCpuUsageReport Windows.System.Diagnostics.SystemCpuUsage::GetReport()
     def get_report(self) -> SystemCpuUsageReport: ...
 
 @typing.final
 class SystemCpuUsageReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.System.Diagnostics.SystemCpuUsageReport::get_IdleTime()
     @_property
     def idle_time(self) -> datetime.timedelta: ...
@@ -217,6 +239,8 @@ class SystemDiagnosticInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemDiagnosticInfo(winrt.system.Object, metaclass=SystemDiagnosticInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.SystemCpuUsage Windows.System.Diagnostics.SystemDiagnosticInfo::get_CpuUsage()
     @_property
     def cpu_usage(self) -> SystemCpuUsage: ...
@@ -226,11 +250,15 @@ class SystemDiagnosticInfo(winrt.system.Object, metaclass=SystemDiagnosticInfo_S
 
 @typing.final
 class SystemMemoryUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.SystemMemoryUsageReport Windows.System.Diagnostics.SystemMemoryUsage::GetReport()
     def get_report(self) -> SystemMemoryUsageReport: ...
 
 @typing.final
 class SystemMemoryUsageReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.System.Diagnostics.SystemMemoryUsageReport::get_AvailableSizeInBytes()
     @_property
     def available_size_in_bytes(self) -> winrt.system.UInt64: ...

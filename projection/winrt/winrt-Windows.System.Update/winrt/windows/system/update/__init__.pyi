@@ -59,6 +59,8 @@ class SystemUpdateStartInstallAction(enum.IntEnum):
 
 @typing.final
 class SystemUpdateItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.Update.SystemUpdateItem::get_Description()
     @_property
     def description(self) -> str: ...
@@ -86,6 +88,8 @@ class SystemUpdateItem(winrt.system.Object):
 
 @typing.final
 class SystemUpdateLastErrorInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.System.Update.SystemUpdateLastErrorInfo::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -160,5 +164,6 @@ class SystemUpdateManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemUpdateManager(winrt.system.Object, metaclass=SystemUpdateManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

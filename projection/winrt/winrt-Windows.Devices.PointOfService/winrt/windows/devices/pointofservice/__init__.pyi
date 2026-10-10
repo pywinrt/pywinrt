@@ -401,6 +401,8 @@ class BarcodeScanner_Static(winrt._winrt.Object_Static):
 class BarcodeScanner(windows_foundation.IClosable, winrt.system.Object, metaclass=BarcodeScanner_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.BarcodeScanner::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
     def check_health_async(self, level: UnifiedPosHealthCheckLevel, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedBarcodeScanner> Windows.Devices.PointOfService.BarcodeScanner::ClaimScannerAsync()
@@ -433,6 +435,8 @@ class BarcodeScanner(windows_foundation.IClosable, winrt.system.Object, metaclas
 
 @typing.final
 class BarcodeScannerCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.PointOfService.BarcodeScannerCapabilities::get_IsImagePreviewSupported()
     @_property
     def is_image_preview_supported(self) -> bool: ...
@@ -454,12 +458,16 @@ class BarcodeScannerCapabilities(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.BarcodeScannerReport Windows.Devices.PointOfService.BarcodeScannerDataReceivedEventArgs::get_Report()
     @_property
     def report(self) -> BarcodeScannerReport: ...
 
 @typing.final
 class BarcodeScannerErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.UnifiedPosErrorData Windows.Devices.PointOfService.BarcodeScannerErrorOccurredEventArgs::get_ErrorData()
     @_property
     def error_data(self) -> UnifiedPosErrorData: ...
@@ -472,6 +480,8 @@ class BarcodeScannerErrorOccurredEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerImagePreviewReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStreamWithContentType Windows.Devices.PointOfService.BarcodeScannerImagePreviewReceivedEventArgs::get_Preview()
     @_property
     def preview(self) -> windows_storage_streams.IRandomAccessStreamWithContentType: ...
@@ -491,6 +501,8 @@ class BarcodeScannerReport(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerStatusUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.PointOfService.BarcodeScannerStatusUpdatedEventArgs::get_ExtendedStatus()
     @_property
     def extended_status(self) -> winrt.system.UInt32: ...
@@ -787,10 +799,13 @@ class BarcodeSymbologies_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BarcodeSymbologies(winrt.system.Object, metaclass=BarcodeSymbologies_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BarcodeSymbologyAttributes(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.PointOfService.BarcodeSymbologyAttributes::get_IsCheckDigitValidationEnabled()
     @_property
     def is_check_digit_validation_enabled(self) -> bool: ...
@@ -852,6 +867,8 @@ class CashDrawer_Static(winrt._winrt.Object_Static):
 class CashDrawer(windows_foundation.IClosable, winrt.system.Object, metaclass=CashDrawer_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.CashDrawer::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
     def check_health_async(self, level: UnifiedPosHealthCheckLevel, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedCashDrawer> Windows.Devices.PointOfService.CashDrawer::ClaimDrawerAsync()
@@ -882,6 +899,8 @@ class CashDrawer(windows_foundation.IClosable, winrt.system.Object, metaclass=Ca
 
 @typing.final
 class CashDrawerCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.PointOfService.CashDrawerCapabilities::get_IsDrawerOpenSensorAvailable()
     @_property
     def is_drawer_open_sensor_available(self) -> bool: ...
@@ -903,6 +922,8 @@ class CashDrawerCapabilities(winrt.system.Object):
 
 @typing.final
 class CashDrawerCloseAlarm(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.CashDrawerCloseAlarm::StartAsync()
     def start_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.PointOfService.CashDrawerCloseAlarm::add_AlarmTimeoutExpired(Windows.Foundation.TypedEventHandler`2<Windows.Devices.PointOfService.CashDrawerCloseAlarm,System.Object>)
@@ -936,12 +957,16 @@ class CashDrawerCloseAlarm(winrt.system.Object):
 
 @typing.final
 class CashDrawerClosedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.CashDrawerClosedEventArgs::get_CashDrawer()
     @_property
     def cash_drawer(self) -> CashDrawer: ...
 
 @typing.final
 class CashDrawerEventSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.PointOfService.CashDrawerEventSource::add_DrawerClosed(Windows.Foundation.TypedEventHandler`2<Windows.Devices.PointOfService.CashDrawerEventSource,Windows.Devices.PointOfService.CashDrawerClosedEventArgs>)
     def add_drawer_closed(self, handler: windows_foundation.TypedEventHandler[CashDrawerEventSource, CashDrawerClosedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.PointOfService.CashDrawerEventSource::remove_DrawerClosed(Windows.Foundation.EventRegistrationToken)
@@ -953,12 +978,16 @@ class CashDrawerEventSource(winrt.system.Object):
 
 @typing.final
 class CashDrawerOpenedEventArgs(ICashDrawerEventSourceEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.CashDrawer Windows.Devices.PointOfService.CashDrawerOpenedEventArgs::get_CashDrawer()
     @_property
     def cash_drawer(self) -> CashDrawer: ...
 
 @typing.final
 class CashDrawerStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.PointOfService.CashDrawerStatus::get_ExtendedStatus()
     @_property
     def extended_status(self) -> winrt.system.UInt32: ...
@@ -968,6 +997,8 @@ class CashDrawerStatus(winrt.system.Object):
 
 @typing.final
 class CashDrawerStatusUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.CashDrawerStatus Windows.Devices.PointOfService.CashDrawerStatusUpdatedEventArgs::get_Status()
     @_property
     def status(self) -> CashDrawerStatus: ...
@@ -976,6 +1007,8 @@ class CashDrawerStatusUpdatedEventArgs(winrt.system.Object):
 class ClaimedBarcodeScanner(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.ClaimedBarcodeScanner::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.ClaimedBarcodeScanner::DisableAsync()
@@ -1059,12 +1092,15 @@ class ClaimedBarcodeScanner(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ClaimedBarcodeScannerClosedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClaimedCashDrawer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.ClaimedCashDrawer::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.ClaimedCashDrawer::DisableAsync()
@@ -1102,10 +1138,13 @@ class ClaimedCashDrawer(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ClaimedCashDrawerClosedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClaimedJournalPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.JournalPrintJob Windows.Devices.PointOfService.ClaimedJournalPrinter::CreateJob()
     def create_job(self) -> JournalPrintJob: ...
     # System.Boolean Windows.Devices.PointOfService.ClaimedJournalPrinter::ValidateData(System.String)
@@ -1184,6 +1223,8 @@ class ClaimedLineDisplay_Static(winrt._winrt.Object_Static):
 class ClaimedLineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=ClaimedLineDisplay_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.ClaimedLineDisplay::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
     def check_health_async(self, level: UnifiedPosHealthCheckLevel, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.LineDisplayPowerStatus> Windows.Devices.PointOfService.ClaimedLineDisplay::CheckPowerStatusAsync()
@@ -1272,12 +1313,15 @@ class ClaimedLineDisplay(windows_foundation.IClosable, winrt.system.Object, meta
 
 @typing.final
 class ClaimedLineDisplayClosedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClaimedMagneticStripeReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.ClaimedMagneticStripeReader::AuthenticateDeviceAsync(System.Byte[])
     def authenticate_device_async(self, response_token: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Devices.PointOfService.ClaimedMagneticStripeReader::Close()
@@ -1366,12 +1410,15 @@ class ClaimedMagneticStripeReader(windows_foundation.IClosable, winrt.system.Obj
 
 @typing.final
 class ClaimedMagneticStripeReaderClosedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClaimedPosPrinter(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.ClaimedPosPrinter::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.ClaimedPosPrinter::DisableAsync()
@@ -1431,10 +1478,13 @@ class ClaimedPosPrinter(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ClaimedPosPrinterClosedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClaimedReceiptPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.ReceiptPrintJob Windows.Devices.PointOfService.ClaimedReceiptPrinter::CreateJob()
     def create_job(self) -> ReceiptPrintJob: ...
     # System.Boolean Windows.Devices.PointOfService.ClaimedReceiptPrinter::ValidateData(System.String)
@@ -1511,6 +1561,8 @@ class ClaimedReceiptPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object
 
 @typing.final
 class ClaimedSlipPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.ClaimedSlipPrinter::ChangePrintSide(Windows.Devices.PointOfService.PosPrinterPrintSide)
     def change_print_side(self, print_side: PosPrinterPrintSide, /) -> None: ...
     # System.Void Windows.Devices.PointOfService.ClaimedSlipPrinter::CloseJaws()
@@ -1603,6 +1655,8 @@ class ClaimedSlipPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object):
 
 @typing.final
 class JournalPrintJob(IPosPrinterJob, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.JournalPrintJob::ExecuteAsync()
     def execute_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Void Windows.Devices.PointOfService.JournalPrintJob::FeedPaperByLine(System.Int32)
@@ -1628,6 +1682,8 @@ class JournalPrintJob(IPosPrinterJob, winrt.system.Object):
 
 @typing.final
 class JournalPrinterCapabilities(ICommonPosPrintStationCapabilities, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.JournalPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
@@ -1710,6 +1766,8 @@ class LineDisplay_Static(winrt._winrt.Object_Static):
 class LineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=LineDisplay_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.LineDisplayPowerStatus> Windows.Devices.PointOfService.LineDisplay::CheckPowerStatusAsync()
     def check_power_status_async(self) -> windows_foundation.IAsyncOperation[LineDisplayPowerStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedLineDisplay> Windows.Devices.PointOfService.LineDisplay::ClaimAsync()
@@ -1740,6 +1798,8 @@ class LineDisplay(windows_foundation.IClosable, winrt.system.Object, metaclass=L
 
 @typing.final
 class LineDisplayAttributes(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Size Windows.Devices.PointOfService.LineDisplayAttributes::get_ScreenSizeInCharacters()
     @_property
     def screen_size_in_characters(self) -> windows_foundation.Size: ...
@@ -1785,6 +1845,8 @@ class LineDisplayAttributes(winrt.system.Object):
 
 @typing.final
 class LineDisplayCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.LineDisplayTextAttributeGranularity Windows.Devices.PointOfService.LineDisplayCapabilities::get_CanBlink()
     @_property
     def can_blink(self) -> LineDisplayTextAttributeGranularity: ...
@@ -1842,6 +1904,8 @@ class LineDisplayCapabilities(winrt.system.Object):
 
 @typing.final
 class LineDisplayCursor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.LineDisplayCursorAttributes Windows.Devices.PointOfService.LineDisplayCursor::GetAttributes()
     def get_attributes(self) -> LineDisplayCursorAttributes: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.LineDisplayCursor::TryUpdateAttributesAsync(Windows.Devices.PointOfService.LineDisplayCursorAttributes)
@@ -1870,6 +1934,8 @@ class LineDisplayCursor(winrt.system.Object):
 
 @typing.final
 class LineDisplayCursorAttributes(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.Devices.PointOfService.LineDisplayCursorAttributes::get_Position()
     @_property
     def position(self) -> windows_foundation.Point: ...
@@ -1897,6 +1963,8 @@ class LineDisplayCursorAttributes(winrt.system.Object):
 
 @typing.final
 class LineDisplayCustomGlyphs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.LineDisplayCustomGlyphs::TryRedefineAsync(System.UInt32,Windows.Storage.Streams.IBuffer)
     def try_redefine_async(self, glyph_code: winrt.system.UInt32, glyph_data: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Size Windows.Devices.PointOfService.LineDisplayCustomGlyphs::get_SizeInPixels()
@@ -1908,6 +1976,8 @@ class LineDisplayCustomGlyphs(winrt.system.Object):
 
 @typing.final
 class LineDisplayMarquee(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.LineDisplayMarquee::TryStartScrollingAsync(Windows.Devices.PointOfService.LineDisplayScrollDirection)
     def try_start_scrolling_async(self, direction: LineDisplayScrollDirection, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.LineDisplayMarquee::TryStopScrollingAsync()
@@ -1933,6 +2003,8 @@ class LineDisplayMarquee(winrt.system.Object):
 
 @typing.final
 class LineDisplayStatisticsCategorySelector(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.PointOfService.LineDisplayStatisticsCategorySelector::get_AllStatistics()
     @_property
     def all_statistics(self) -> str: ...
@@ -1945,12 +2017,16 @@ class LineDisplayStatisticsCategorySelector(winrt.system.Object):
 
 @typing.final
 class LineDisplayStatusUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.LineDisplayPowerStatus Windows.Devices.PointOfService.LineDisplayStatusUpdatedEventArgs::get_Status()
     @_property
     def status(self) -> LineDisplayPowerStatus: ...
 
 @typing.final
 class LineDisplayStoredBitmap(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.LineDisplayStoredBitmap::TryDeleteAsync()
     def try_delete_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.String Windows.Devices.PointOfService.LineDisplayStoredBitmap::get_EscapeSequence()
@@ -1961,6 +2037,8 @@ class LineDisplayStoredBitmap(winrt.system.Object):
 class LineDisplayWindow(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.LineDisplayWindow::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.PointOfService.LineDisplayWindow::ReadCharacterAtCursorAsync()
@@ -2054,6 +2132,8 @@ class MagneticStripeReader_Static(winrt._winrt.Object_Static):
 class MagneticStripeReader(windows_foundation.IClosable, winrt.system.Object, metaclass=MagneticStripeReader_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.MagneticStripeReader::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
     def check_health_async(self, level: UnifiedPosHealthCheckLevel, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedMagneticStripeReader> Windows.Devices.PointOfService.MagneticStripeReader::ClaimReaderAsync()
@@ -2083,6 +2163,8 @@ class MagneticStripeReader(windows_foundation.IClosable, winrt.system.Object, me
 
 @typing.final
 class MagneticStripeReaderAamvaCardDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs::get_Address()
     @_property
     def address(self) -> str: ...
@@ -2143,6 +2225,8 @@ class MagneticStripeReaderAamvaCardDataReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderBankCardDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs::get_AccountNumber()
     @_property
     def account_number(self) -> str: ...
@@ -2173,6 +2257,8 @@ class MagneticStripeReaderBankCardDataReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.MagneticStripeReaderAuthenticationLevel Windows.Devices.PointOfService.MagneticStripeReaderCapabilities::get_AuthenticationLevel()
     @_property
     def authentication_level(self) -> MagneticStripeReaderAuthenticationLevel: ...
@@ -2224,7 +2310,8 @@ class MagneticStripeReaderCardTypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MagneticStripeReaderCardTypes(winrt.system.Object, metaclass=MagneticStripeReaderCardTypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MagneticStripeReaderEncryptionAlgorithms_Static(winrt._winrt.Object_Static):
@@ -2240,10 +2327,13 @@ class MagneticStripeReaderEncryptionAlgorithms_Static(winrt._winrt.Object_Static
 
 @typing.final
 class MagneticStripeReaderEncryptionAlgorithms(winrt.system.Object, metaclass=MagneticStripeReaderEncryptionAlgorithms_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MagneticStripeReaderErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.UnifiedPosErrorData Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs::get_ErrorData()
     @_property
     def error_data(self) -> UnifiedPosErrorData: ...
@@ -2265,6 +2355,8 @@ class MagneticStripeReaderErrorOccurredEventArgs(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.PointOfService.MagneticStripeReaderReport::get_AdditionalSecurityInformation()
     @_property
     def additional_security_information(self) -> windows_storage_streams.IBuffer: ...
@@ -2295,6 +2387,8 @@ class MagneticStripeReaderReport(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderStatusUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.PointOfService.MagneticStripeReaderStatusUpdatedEventArgs::get_ExtendedStatus()
     @_property
     def extended_status(self) -> winrt.system.UInt32: ...
@@ -2304,6 +2398,8 @@ class MagneticStripeReaderStatusUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderTrackData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.PointOfService.MagneticStripeReaderTrackData::get_Data()
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...
@@ -2316,6 +2412,8 @@ class MagneticStripeReaderTrackData(winrt.system.Object):
 
 @typing.final
 class MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.MagneticStripeReaderReport Windows.Devices.PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs::get_Report()
     @_property
     def report(self) -> MagneticStripeReaderReport: ...
@@ -2341,6 +2439,8 @@ class PosPrinter_Static(winrt._winrt.Object_Static):
 class PosPrinter(windows_foundation.IClosable, winrt.system.Object, metaclass=PosPrinter_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.PointOfService.PosPrinter::CheckHealthAsync(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel)
     def check_health_async(self, level: UnifiedPosHealthCheckLevel, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedPosPrinter> Windows.Devices.PointOfService.PosPrinter::ClaimPrinterAsync()
@@ -2376,6 +2476,8 @@ class PosPrinter(windows_foundation.IClosable, winrt.system.Object, metaclass=Po
 
 @typing.final
 class PosPrinterCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.PointOfService.PosPrinterCapabilities::get_CanMapCharacterSet()
     @_property
     def can_map_character_set(self) -> bool: ...
@@ -2421,10 +2523,13 @@ class PosPrinterCharacterSetIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PosPrinterCharacterSetIds(winrt.system.Object, metaclass=PosPrinterCharacterSetIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PosPrinterFontProperty(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.PointOfService.SizeUInt32> Windows.Devices.PointOfService.PosPrinterFontProperty::get_CharacterSizes()
     @_property
     def character_sizes(self) -> _cabc.Sequence[SizeUInt32]: ...
@@ -2519,10 +2624,13 @@ class PosPrinterPrintOptions(winrt.system.Object):
 
 @typing.final
 class PosPrinterReleaseDeviceRequestedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PosPrinterStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.PointOfService.PosPrinterStatus::get_ExtendedStatus()
     @_property
     def extended_status(self) -> winrt.system.UInt32: ...
@@ -2532,12 +2640,16 @@ class PosPrinterStatus(winrt.system.Object):
 
 @typing.final
 class PosPrinterStatusUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.PosPrinterStatus Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs::get_Status()
     @_property
     def status(self) -> PosPrinterStatus: ...
 
 @typing.final
 class ReceiptPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Devices.PointOfService.ReceiptPrintJob::CutPaper()
     def cut_paper(self) -> None: ...
@@ -2631,6 +2743,8 @@ class ReceiptPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
 
 @typing.final
 class ReceiptPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.ReceiptPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...
@@ -2727,6 +2841,8 @@ class ReceiptPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrint
 
 @typing.final
 class SlipPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.SlipPrintJob::DrawRuledLine(System.String,Windows.Devices.PointOfService.PosPrinterLineDirection,System.UInt32,Windows.Devices.PointOfService.PosPrinterLineStyle,System.UInt32)
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.SlipPrintJob::ExecuteAsync()
@@ -2806,6 +2922,8 @@ class SlipPrintJob(IReceiptOrSlipJob, IPosPrinterJob, winrt.system.Object):
 
 @typing.final
 class SlipPrinterCapabilities(ICommonReceiptSlipCapabilities, ICommonPosPrintStationCapabilities, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.PosPrinterCartridgeSensors Windows.Devices.PointOfService.SlipPrinterCapabilities::get_CartridgeSensors()
     @_property
     def cartridge_sensors(self) -> PosPrinterCartridgeSensors: ...

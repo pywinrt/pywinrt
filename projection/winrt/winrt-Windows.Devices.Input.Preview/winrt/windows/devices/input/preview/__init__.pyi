@@ -34,6 +34,8 @@ class GazeDeviceConfigurationStatePreview(enum.IntEnum):
 
 @typing.final
 class GazeDevicePreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription> Windows.Devices.Input.Preview.GazeDevicePreview::GetBooleanControlDescriptions(System.UInt16,System.UInt16)
     def get_boolean_control_descriptions(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> _cabc.Sequence[windows_devices_humaninterfacedevice.HidBooleanControlDescription]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription> Windows.Devices.Input.Preview.GazeDevicePreview::GetNumericControlDescriptions(System.UInt16,System.UInt16)
@@ -55,12 +57,16 @@ class GazeDevicePreview(winrt.system.Object):
 
 @typing.final
 class GazeDeviceWatcherAddedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.Preview.GazeDevicePreview Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs::get_Device()
     @_property
     def device(self) -> GazeDevicePreview: ...
 
 @typing.final
 class GazeDeviceWatcherPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Input.Preview.GazeDeviceWatcherPreview::Start()
     def start(self) -> None: ...
     # System.Void Windows.Devices.Input.Preview.GazeDeviceWatcherPreview::Stop()
@@ -84,18 +90,24 @@ class GazeDeviceWatcherPreview(winrt.system.Object):
 
 @typing.final
 class GazeDeviceWatcherRemovedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.Preview.GazeDevicePreview Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs::get_Device()
     @_property
     def device(self) -> GazeDevicePreview: ...
 
 @typing.final
 class GazeDeviceWatcherUpdatedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.Preview.GazeDevicePreview Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs::get_Device()
     @_property
     def device(self) -> GazeDevicePreview: ...
 
 @typing.final
 class GazeEnteredPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -108,6 +120,8 @@ class GazeEnteredPreviewEventArgs(winrt.system.Object):
 
 @typing.final
 class GazeExitedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -127,6 +141,8 @@ class GazeInputSourcePreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GazeInputSourcePreview(winrt.system.Object, metaclass=GazeInputSourcePreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Input.Preview.GazeInputSourcePreview::add_GazeEntered(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.Preview.GazeInputSourcePreview,Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs>)
     def add_gaze_entered(self, handler: windows_foundation.TypedEventHandler[GazeInputSourcePreview, GazeEnteredPreviewEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Input.Preview.GazeInputSourcePreview::remove_GazeEntered(Windows.Foundation.EventRegistrationToken)
@@ -142,6 +158,8 @@ class GazeInputSourcePreview(winrt.system.Object, metaclass=GazeInputSourcePrevi
 
 @typing.final
 class GazeMovedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.Input.Preview.GazePointPreview> Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs::GetIntermediatePoints()
     def get_intermediate_points(self) -> _cabc.MutableSequence[GazePointPreview]: ...
     # System.Boolean Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs::get_Handled()
@@ -156,6 +174,8 @@ class GazeMovedPreviewEventArgs(winrt.system.Object):
 
 @typing.final
 class GazePointPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Point> Windows.Devices.Input.Preview.GazePointPreview::get_EyeGazePosition()
     @_property
     def eye_gaze_position(self) -> windows_foundation.Point | None: ...

@@ -37,6 +37,8 @@ class RemoteDesktopLocalAction(enum.IntEnum):
 
 @typing.final
 class PerformLocalActionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs::get_Action()
     @_property
     def action(self) -> RemoteDesktopLocalAction: ...
@@ -48,6 +50,8 @@ class RemoteDesktopConnectionInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopConnectionInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo::PerformLocalActionFromRemote(Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction)
     def perform_local_action_from_remote(self, action: RemoteDesktopLocalAction, /) -> None: ...
     # System.Void Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo::SetConnectionStatus(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionStatus)
@@ -66,6 +70,8 @@ class RemoteDesktopConnectionRemoteInfo_Static(winrt._winrt.Object_Static):
 class RemoteDesktopConnectionRemoteInfo(windows_foundation.IClosable, winrt.system.Object, metaclass=RemoteDesktopConnectionRemoteInfo_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo::Close()
     def close(self) -> None: ...
     # System.Void Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo::ReportSwitched()
@@ -103,5 +109,6 @@ class RemoteDesktopRegistrar_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteDesktopRegistrar(winrt.system.Object, metaclass=RemoteDesktopRegistrar_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

@@ -332,6 +332,8 @@ class AppInitiatedVoipPhoneCallOptions(winrt.system.Object):
 
 @typing.final
 class CallAnswerEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.VoipPhoneCallMedia Windows.ApplicationModel.Calls.CallAnswerEventArgs::get_AcceptedMedia()
     @_property
     def accepted_media(self) -> VoipPhoneCallMedia: ...
@@ -341,12 +343,16 @@ class CallAnswerEventArgs(winrt.system.Object):
 
 @typing.final
 class CallRejectEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason Windows.ApplicationModel.Calls.CallRejectEventArgs::get_RejectReason()
     @_property
     def reject_reason(self) -> VoipPhoneCallRejectReason: ...
 
 @typing.final
 class CallStateChangeEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.VoipPhoneCallState Windows.ApplicationModel.Calls.CallStateChangeEventArgs::get_State()
     @_property
     def state(self) -> VoipPhoneCallState: ...
@@ -429,11 +435,15 @@ class IncomingVoipPhoneCallOptions(winrt.system.Object):
 
 @typing.final
 class LockScreenCallEndCallDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class LockScreenCallEndRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> LockScreenCallEndCallDeferral: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs::get_Deadline()
@@ -442,6 +452,8 @@ class LockScreenCallEndRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class LockScreenCallUI(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.LockScreenCallUI::Dismiss()
     def dismiss(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Calls.LockScreenCallUI::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Calls.LockScreenCallUI,System.Object>)
@@ -461,6 +473,8 @@ class LockScreenCallUI(winrt.system.Object):
 
 @typing.final
 class MuteChangeEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Calls.MuteChangeEventArgs::get_Muted()
     @_property
     def muted(self) -> bool: ...
@@ -506,6 +520,8 @@ class PhoneCall_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneCall(winrt.system.Object, metaclass=PhoneCall_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.PhoneCallOperationStatus Windows.ApplicationModel.Calls.PhoneCall::AcceptIncoming()
     def accept_incoming(self) -> PhoneCallOperationStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneCallOperationStatus> Windows.ApplicationModel.Calls.PhoneCall::AcceptIncomingAsync()
@@ -590,7 +606,8 @@ class PhoneCallBlocking_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneCallBlocking(winrt.system.Object, metaclass=PhoneCallBlocking_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PhoneCallHistoryEntry(winrt.system.Object):
@@ -744,6 +761,8 @@ class PhoneCallHistoryEntryQueryOptions(winrt.system.Object):
 
 @typing.final
 class PhoneCallHistoryEntryReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry>> Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[PhoneCallHistoryEntry]]: ...
 
@@ -756,10 +775,13 @@ class PhoneCallHistoryManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneCallHistoryManager(winrt.system.Object, metaclass=PhoneCallHistoryManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PhoneCallHistoryManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneCallHistoryStore> Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser::RequestStoreAsync(Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType)
     def request_store_async(self, access_type: PhoneCallHistoryStoreAccessType, /) -> windows_foundation.IAsyncOperation[PhoneCallHistoryStore]: ...
     # Windows.System.User Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser::get_User()
@@ -768,6 +790,8 @@ class PhoneCallHistoryManagerForUser(winrt.system.Object):
 
 @typing.final
 class PhoneCallHistoryStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Calls.PhoneCallHistoryStore::DeleteEntriesAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Calls.PhoneCallHistoryEntry>)
     def delete_entries_async(self, call_history_entries: _cabc.Iterable[PhoneCallHistoryEntry], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Calls.PhoneCallHistoryStore::DeleteEntryAsync(Windows.ApplicationModel.Calls.PhoneCallHistoryEntry)
@@ -801,6 +825,8 @@ class PhoneCallHistoryStore(winrt.system.Object):
 
 @typing.final
 class PhoneCallInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.PhoneCallDirection Windows.ApplicationModel.Calls.PhoneCallInfo::get_CallDirection()
     @_property
     def call_direction(self) -> PhoneCallDirection: ...
@@ -841,10 +867,13 @@ class PhoneCallManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneCallManager(winrt.system.Object, metaclass=PhoneCallManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PhoneCallStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Guid> Windows.ApplicationModel.Calls.PhoneCallStore::GetDefaultLineAsync()
     def get_default_line_async(self) -> windows_foundation.IAsyncOperation[_uuid.UUID]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Calls.PhoneCallStore::IsEmergencyPhoneNumberAsync(System.String)
@@ -854,6 +883,8 @@ class PhoneCallStore(winrt.system.Object):
 
 @typing.final
 class PhoneCallVideoCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities::get_IsVideoCallingCapable()
     @_property
     def is_video_calling_capable(self) -> bool: ...
@@ -865,10 +896,13 @@ class PhoneCallVideoCapabilitiesManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneCallVideoCapabilitiesManager(winrt.system.Object, metaclass=PhoneCallVideoCapabilitiesManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PhoneCallsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Calls.PhoneCall> Windows.ApplicationModel.Calls.PhoneCallsResult::get_AllActivePhoneCalls()
     @_property
     def all_active_phone_calls(self) -> _cabc.Sequence[PhoneCall]: ...
@@ -923,6 +957,8 @@ class PhoneLine_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneLine(winrt.system.Object, metaclass=PhoneLine_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.PhoneLine::Dial(System.String,System.String)
     def dial(self, number: str, display_name: str, /) -> None: ...
     # System.Void Windows.ApplicationModel.Calls.PhoneLine::DialWithOptions(Windows.ApplicationModel.Calls.PhoneDialOptions)
@@ -986,6 +1022,8 @@ class PhoneLine(winrt.system.Object, metaclass=PhoneLine_Static):
 
 @typing.final
 class PhoneLineCellularDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Calls.PhoneLineCellularDetails::GetNetworkOperatorDisplayText(Windows.ApplicationModel.Calls.PhoneLineNetworkOperatorDisplayTextLocation)
     def get_network_operator_display_text(self, location: PhoneLineNetworkOperatorDisplayTextLocation, /) -> str: ...
     # System.Boolean Windows.ApplicationModel.Calls.PhoneLineCellularDetails::get_IsModemOn()
@@ -1003,6 +1041,8 @@ class PhoneLineCellularDetails(winrt.system.Object):
 
 @typing.final
 class PhoneLineConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.ApplicationModel.Calls.PhoneLineConfiguration::get_ExtendedProperties()
     @_property
     def extended_properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
@@ -1012,6 +1052,8 @@ class PhoneLineConfiguration(winrt.system.Object):
 
 @typing.final
 class PhoneLineDialResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.PhoneCallOperationStatus Windows.ApplicationModel.Calls.PhoneLineDialResult::get_DialCallStatus()
     @_property
     def dial_call_status(self) -> PhoneCallOperationStatus: ...
@@ -1036,6 +1078,8 @@ class PhoneLineTransportDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PhoneLineTransportDevice(winrt.system.Object, metaclass=PhoneLineTransportDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Calls.PhoneLineTransportDevice::Connect()
     def connect(self) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Calls.PhoneLineTransportDevice::ConnectAsync()
@@ -1075,6 +1119,8 @@ class PhoneLineTransportDevice(winrt.system.Object, metaclass=PhoneLineTransport
 
 @typing.final
 class PhoneLineWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.PhoneLineWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.ApplicationModel.Calls.PhoneLineWatcher::Stop()
@@ -1105,12 +1151,16 @@ class PhoneLineWatcher(winrt.system.Object):
 
 @typing.final
 class PhoneLineWatcherEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.Calls.PhoneLineWatcherEventArgs::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...
 
 @typing.final
 class PhoneVoicemail(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Calls.PhoneVoicemail::DialVoicemailAsync()
     def dial_voicemail_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Int32 Windows.ApplicationModel.Calls.PhoneVoicemail::get_MessageCount()
@@ -1134,6 +1184,8 @@ class VoipCallCoordinator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VoipCallCoordinator(winrt.system.Object, metaclass=VoipCallCoordinator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.VoipCallCoordinator::CancelUpgrade(System.Guid)
     def cancel_upgrade(self, call_upgrade_guid: _uuid.UUID, /) -> None: ...
     # System.Void Windows.ApplicationModel.Calls.VoipCallCoordinator::NotifyMuted()
@@ -1187,6 +1239,8 @@ class VoipCallCoordinator(winrt.system.Object, metaclass=VoipCallCoordinator_Sta
 
 @typing.final
 class VoipPhoneCall(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Calls.VoipPhoneCall::AddAssociatedCallControlDevice(System.String)
     def add_associated_call_control_device(self, device_id: str, /) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.ApplicationModel.Calls.VoipPhoneCall::GetAssociatedCallControlDevices()

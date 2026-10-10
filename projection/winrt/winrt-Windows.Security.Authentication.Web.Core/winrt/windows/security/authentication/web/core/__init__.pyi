@@ -58,6 +58,8 @@ class WebTokenRequestStatus(enum.IntEnum):
 
 @typing.final
 class FindAllAccountsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Credentials.WebAccount> Windows.Security.Authentication.Web.Core.FindAllAccountsResult::get_Accounts()
     @_property
     def accounts(self) -> _cabc.Sequence[windows_security_credentials.WebAccount]: ...
@@ -70,12 +72,16 @@ class FindAllAccountsResult(winrt.system.Object):
 
 @typing.final
 class WebAccountEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Credentials.WebAccount Windows.Security.Authentication.Web.Core.WebAccountEventArgs::get_Account()
     @_property
     def account(self) -> windows_security_credentials.WebAccount: ...
 
 @typing.final
 class WebAccountMonitor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Security.Authentication.Web.Core.WebAccountMonitor::add_DefaultSignInAccountChanged(Windows.Foundation.TypedEventHandler`2<Windows.Security.Authentication.Web.Core.WebAccountMonitor,System.Object>)
     def add_default_sign_in_account_changed(self, handler: windows_foundation.TypedEventHandler[WebAccountMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Security.Authentication.Web.Core.WebAccountMonitor::remove_DefaultSignInAccountChanged(Windows.Foundation.EventRegistrationToken)
@@ -105,6 +111,8 @@ class WebAuthenticationAddAccountResponse(winrt.system.Object):
 
 @typing.final
 class WebAuthenticationAddAccountResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult::get_ResponseData()
     @_property
     def response_data(self) -> WebAuthenticationAddAccountResponse: ...
@@ -190,7 +198,8 @@ class WebAuthenticationCoreManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebAuthenticationCoreManager(winrt.system.Object, metaclass=WebAuthenticationCoreManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebAuthenticationTransferTokenRequest(winrt.system.Object):
@@ -267,6 +276,8 @@ class WebTokenRequest(winrt.system.Object):
 
 @typing.final
 class WebTokenRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Web.Core.WebTokenRequestResult::InvalidateCacheAsync()
     def invalidate_cache_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Web.Core.WebTokenResponse> Windows.Security.Authentication.Web.Core.WebTokenRequestResult::get_ResponseData()

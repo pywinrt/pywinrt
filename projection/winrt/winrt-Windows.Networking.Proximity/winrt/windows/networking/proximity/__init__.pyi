@@ -60,6 +60,8 @@ class TriggeredConnectState(enum.IntEnum):
 
 @typing.final
 class ConnectionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Proximity.PeerInformation Windows.Networking.Proximity.ConnectionRequestedEventArgs::get_PeerInformation()
     @_property
     def peer_information(self) -> PeerInformation: ...
@@ -137,10 +139,13 @@ class PeerFinder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PeerFinder(winrt.system.Object, metaclass=PeerFinder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PeerInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Proximity.PeerInformation::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -159,6 +164,8 @@ class PeerInformation(winrt.system.Object):
 
 @typing.final
 class PeerWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.Proximity.PeerWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Networking.Proximity.PeerWatcher::Stop()
@@ -198,6 +205,8 @@ class ProximityDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Int64 Windows.Networking.Proximity.ProximityDevice::PublishBinaryMessage(System.String,Windows.Storage.Streams.IBuffer)
     def publish_binary_message(self, message_type: str, message: winrt.system.Buffer, /) -> winrt.system.Int64: ...
@@ -254,6 +263,8 @@ class ProximityDevice(winrt.system.Object, metaclass=ProximityDevice_Static):
 
 @typing.final
 class ProximityMessage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Networking.Proximity.ProximityMessage::get_Data()
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...
@@ -269,6 +280,8 @@ class ProximityMessage(winrt.system.Object):
 
 @typing.final
 class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs::get_Id()
     @_property
     def id(self) -> winrt.system.UInt32: ...

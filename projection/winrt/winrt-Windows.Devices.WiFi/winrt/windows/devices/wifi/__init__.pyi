@@ -140,6 +140,8 @@ class WiFiAdapter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WiFiAdapter(winrt.system.Object, metaclass=WiFiAdapter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult> Windows.Devices.WiFi.WiFiAdapter::ConnectAsync(Windows.Devices.WiFi.WiFiAvailableNetwork,Windows.Devices.WiFi.WiFiReconnectionKind)
     def connect_async(self, available_network: WiFiAvailableNetwork, reconnection_kind: WiFiReconnectionKind, /) -> windows_foundation.IAsyncOperation[WiFiConnectionResult]: ...
@@ -183,6 +185,8 @@ class WiFiAdapter(winrt.system.Object, metaclass=WiFiAdapter_Static):
 
 @typing.final
 class WiFiAvailableNetwork(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Devices.WiFi.WiFiAvailableNetwork::get_BeaconInterval()
     @_property
     def beacon_interval(self) -> datetime.timedelta: ...
@@ -219,12 +223,16 @@ class WiFiAvailableNetwork(winrt.system.Object):
 
 @typing.final
 class WiFiConnectionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFi.WiFiConnectionStatus Windows.Devices.WiFi.WiFiConnectionResult::get_ConnectionStatus()
     @_property
     def connection_status(self) -> WiFiConnectionStatus: ...
 
 @typing.final
 class WiFiNetworkReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAvailableNetwork> Windows.Devices.WiFi.WiFiNetworkReport::get_AvailableNetworks()
     @_property
     def available_networks(self) -> _cabc.Sequence[WiFiAvailableNetwork]: ...
@@ -234,6 +242,8 @@ class WiFiNetworkReport(winrt.system.Object):
 
 @typing.final
 class WiFiOnDemandHotspotConnectTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails::Connect()
     def connect(self) -> WiFiOnDemandHotspotConnectionResult: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult> Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails::ConnectAsync()
@@ -246,6 +256,8 @@ class WiFiOnDemandHotspotConnectTriggerDetails(winrt.system.Object):
 
 @typing.final
 class WiFiOnDemandHotspotConnectionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFi.WiFiOnDemandHotspotConnectStatus Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult::get_Status()
     @_property
     def status(self) -> WiFiOnDemandHotspotConnectStatus: ...
@@ -257,6 +269,8 @@ class WiFiOnDemandHotspotNetwork_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WiFiOnDemandHotspotNetwork(winrt.system.Object, metaclass=WiFiOnDemandHotspotNetwork_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork::GetProperties()
     def get_properties(self) -> WiFiOnDemandHotspotNetworkProperties: ...
     # System.Void Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork::UpdateProperties(Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties)
@@ -267,6 +281,8 @@ class WiFiOnDemandHotspotNetwork(winrt.system.Object, metaclass=WiFiOnDemandHots
 
 @typing.final
 class WiFiOnDemandHotspotNetworkProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties::get_Ssid()
     @_property
     def ssid(self) -> str: ...
@@ -312,6 +328,8 @@ class WiFiOnDemandHotspotNetworkProperties(winrt.system.Object):
 
 @typing.final
 class WiFiWpsConfigurationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFi.WiFiWpsConfigurationStatus Windows.Devices.WiFi.WiFiWpsConfigurationResult::get_Status()
     @_property
     def status(self) -> WiFiWpsConfigurationStatus: ...

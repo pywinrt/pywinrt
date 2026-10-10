@@ -134,6 +134,8 @@ class MiracastReceiver(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverApplySettingsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Miracast.MiracastReceiverApplySettingsResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -145,6 +147,8 @@ class MiracastReceiverApplySettingsResult(winrt.system.Object):
 class MiracastReceiverConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Miracast.MiracastReceiverConnection::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -180,6 +184,8 @@ class MiracastReceiverConnection(windows_foundation.IClosable, winrt.system.Obje
 
 @typing.final
 class MiracastReceiverConnectionCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Media.Miracast.MiracastReceiverConnection Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs::get_Connection()
@@ -191,6 +197,8 @@ class MiracastReceiverConnectionCreatedEventArgs(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverCursorImageChannel(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Miracast.MiracastReceiverCursorImageChannel::add_ImageStreamChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Miracast.MiracastReceiverCursorImageChannel,System.Object>)
     def add_image_stream_changed(self, handler: windows_foundation.TypedEventHandler[MiracastReceiverCursorImageChannel, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Miracast.MiracastReceiverCursorImageChannel::remove_ImageStreamChanged(Windows.Foundation.EventRegistrationToken)
@@ -214,6 +222,8 @@ class MiracastReceiverCursorImageChannel(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverCursorImageChannelSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.SizeInt32 Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings::get_MaxImageSize()
     @_property
     def max_image_size(self) -> windows_graphics.SizeInt32: ...
@@ -229,12 +239,16 @@ class MiracastReceiverCursorImageChannelSettings(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverDisconnectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Miracast.MiracastReceiverConnection Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs::get_Connection()
     @_property
     def connection(self) -> MiracastReceiverConnection: ...
 
 @typing.final
 class MiracastReceiverGameControllerDevice(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Miracast.MiracastReceiverGameControllerDevice::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Miracast.MiracastReceiverGameControllerDevice,System.Object>)
     def add_changed(self, handler: windows_foundation.TypedEventHandler[MiracastReceiverGameControllerDevice, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Miracast.MiracastReceiverGameControllerDevice::remove_Changed(Windows.Foundation.EventRegistrationToken)
@@ -260,6 +274,8 @@ class MiracastReceiverGameControllerDevice(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverInputDevices(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Miracast.MiracastReceiverGameControllerDevice Windows.Media.Miracast.MiracastReceiverInputDevices::get_GameController()
     @_property
     def game_controller(self) -> MiracastReceiverGameControllerDevice: ...
@@ -269,6 +285,8 @@ class MiracastReceiverInputDevices(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverKeyboardDevice(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Miracast.MiracastReceiverKeyboardDevice::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Miracast.MiracastReceiverKeyboardDevice,System.Object>)
     def add_changed(self, handler: windows_foundation.TypedEventHandler[MiracastReceiverKeyboardDevice, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Miracast.MiracastReceiverKeyboardDevice::remove_Changed(Windows.Foundation.EventRegistrationToken)
@@ -288,6 +306,8 @@ class MiracastReceiverKeyboardDevice(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverMediaSourceCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Media.Miracast.MiracastReceiverConnection Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs::get_Connection()
@@ -304,6 +324,8 @@ class MiracastReceiverMediaSourceCreatedEventArgs(winrt.system.Object):
 class MiracastReceiverSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Miracast.MiracastReceiverSession::Close()
     def close(self) -> None: ...
     # Windows.Media.Miracast.MiracastReceiverSessionStartResult Windows.Media.Miracast.MiracastReceiverSession::Start()
@@ -337,6 +359,8 @@ class MiracastReceiverSession(windows_foundation.IClosable, winrt.system.Object)
 
 @typing.final
 class MiracastReceiverSessionStartResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Miracast.MiracastReceiverSessionStartResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -346,6 +370,8 @@ class MiracastReceiverSessionStartResult(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Miracast.MiracastReceiverSettings::get_RequireAuthorizationFromKnownTransmitters()
     @_property
     def require_authorization_from_known_transmitters(self) -> bool: ...
@@ -379,6 +405,8 @@ class MiracastReceiverSettings(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Miracast.MiracastReceiverStatus::get_IsConnectionTakeoverSupported()
     @_property
     def is_connection_takeover_supported(self) -> bool: ...
@@ -397,6 +425,8 @@ class MiracastReceiverStatus(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverStreamControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Miracast.MiracastReceiverVideoStreamSettings Windows.Media.Miracast.MiracastReceiverStreamControl::GetVideoStreamSettings()
     def get_video_stream_settings(self) -> MiracastReceiverVideoStreamSettings: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Miracast.MiracastReceiverVideoStreamSettings> Windows.Media.Miracast.MiracastReceiverStreamControl::GetVideoStreamSettingsAsync()
@@ -414,6 +444,8 @@ class MiracastReceiverStreamControl(winrt.system.Object):
 
 @typing.final
 class MiracastReceiverVideoStreamSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.SizeInt32 Windows.Media.Miracast.MiracastReceiverVideoStreamSettings::get_Size()
     @_property
     def size(self) -> windows_graphics.SizeInt32: ...
@@ -429,6 +461,8 @@ class MiracastReceiverVideoStreamSettings(winrt.system.Object):
 
 @typing.final
 class MiracastTransmitter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Miracast.MiracastReceiverConnection> Windows.Media.Miracast.MiracastTransmitter::GetConnections()
     def get_connections(self) -> _cabc.Sequence[MiracastReceiverConnection]: ...
     # System.String Windows.Media.Miracast.MiracastTransmitter::get_Name()

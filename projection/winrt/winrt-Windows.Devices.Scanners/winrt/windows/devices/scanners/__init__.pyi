@@ -76,6 +76,8 @@ class ImageScanner_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ImageScanner(winrt.system.Object, metaclass=ImageScanner_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Scanners.ImageScanner::IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)
     def is_preview_supported(self, scan_source: ImageScannerScanSource, /) -> bool: ...
     # System.Boolean Windows.Devices.Scanners.ImageScanner::IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)
@@ -102,6 +104,8 @@ class ImageScanner(winrt.system.Object, metaclass=ImageScanner_Static):
 
 @typing.final
 class ImageScannerAutoConfiguration(IImageScannerFormatConfiguration, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Scanners.ImageScannerAutoConfiguration::IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)
     def is_format_supported(self, value: ImageScannerFormat, /) -> bool: ...
     # Windows.Devices.Scanners.ImageScannerFormat Windows.Devices.Scanners.ImageScannerAutoConfiguration::get_Format()
@@ -116,6 +120,8 @@ class ImageScannerAutoConfiguration(IImageScannerFormatConfiguration, winrt.syst
 
 @typing.final
 class ImageScannerFeederConfiguration(IImageScannerSourceConfiguration, IImageScannerFormatConfiguration, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Scanners.ImageScannerFeederConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...
     # System.Boolean Windows.Devices.Scanners.ImageScannerFeederConfiguration::IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)
@@ -265,6 +271,8 @@ class ImageScannerFeederConfiguration(IImageScannerSourceConfiguration, IImageSc
 
 @typing.final
 class ImageScannerFlatbedConfiguration(IImageScannerSourceConfiguration, IImageScannerFormatConfiguration, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Scanners.ImageScannerFlatbedConfiguration::IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)
     def is_auto_cropping_mode_supported(self, value: ImageScannerAutoCroppingMode, /) -> bool: ...
     # System.Boolean Windows.Devices.Scanners.ImageScannerFlatbedConfiguration::IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)
@@ -364,6 +372,8 @@ class ImageScannerFlatbedConfiguration(IImageScannerSourceConfiguration, IImageS
 
 @typing.final
 class ImageScannerPreviewResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Scanners.ImageScannerFormat Windows.Devices.Scanners.ImageScannerPreviewResult::get_Format()
     @_property
     def format(self) -> ImageScannerFormat: ...
@@ -373,6 +383,8 @@ class ImageScannerPreviewResult(winrt.system.Object):
 
 @typing.final
 class ImageScannerScanResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFile> Windows.Devices.Scanners.ImageScannerScanResult::get_ScannedFiles()
     @_property
     def scanned_files(self) -> _cabc.Sequence[windows_storage.StorageFile]: ...

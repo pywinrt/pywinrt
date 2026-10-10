@@ -37,11 +37,15 @@ class UserDataStorageItemProtectionStatus(enum.IntEnum):
 
 @typing.final
 class UserDataAvailabilityStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class UserDataBufferUnprotectResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.DataProtection.UserDataBufferUnprotectStatus Windows.Security.DataProtection.UserDataBufferUnprotectResult::get_Status()
     @_property
     def status(self) -> UserDataBufferUnprotectStatus: ...
@@ -58,6 +62,8 @@ class UserDataProtectionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserDataProtectionManager(winrt.system.Object, metaclass=UserDataProtectionManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.DataProtection.UserDataStorageItemProtectionInfo> Windows.Security.DataProtection.UserDataProtectionManager::GetStorageItemProtectionInfoAsync(Windows.Storage.IStorageItem)
     def get_storage_item_protection_info_async(self, storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[UserDataStorageItemProtectionInfo]: ...
     # System.Boolean Windows.Security.DataProtection.UserDataProtectionManager::IsContinuedDataAvailabilityExpected(Windows.Security.DataProtection.UserDataAvailability)
@@ -75,6 +81,8 @@ class UserDataProtectionManager(winrt.system.Object, metaclass=UserDataProtectio
 
 @typing.final
 class UserDataStorageItemProtectionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.DataProtection.UserDataAvailability Windows.Security.DataProtection.UserDataStorageItemProtectionInfo::get_Availability()
     @_property
     def availability(self) -> UserDataAvailability: ...

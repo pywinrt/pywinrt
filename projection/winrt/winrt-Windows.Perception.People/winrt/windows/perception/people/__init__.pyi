@@ -92,6 +92,8 @@ class EyesPose_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EyesPose(winrt.system.Object, metaclass=EyesPose_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Perception.Spatial.SpatialRay> Windows.Perception.People.EyesPose::get_Gaze()
     @_property
     def gaze(self) -> windows_perception_spatial.SpatialRay | None: ...
@@ -104,6 +106,8 @@ class EyesPose(winrt.system.Object, metaclass=EyesPose_Static):
 
 @typing.final
 class HandMeshObserver(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Perception.People.HandMeshObserver::GetTriangleIndices(System.UInt16[])
     def get_triangle_indices(self, indices: winrt.system.Array[winrt.system.UInt16] | winrt.system.WriteableBuffer, /) -> None: ...
     # Windows.Perception.People.HandMeshVertexState Windows.Perception.People.HandMeshObserver::GetVertexStateForPose(Windows.Perception.People.HandPose)
@@ -129,6 +133,8 @@ class HandMeshObserver(winrt.system.Object):
 
 @typing.final
 class HandMeshVertexState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Perception.People.HandMeshVertexState::GetVertices(Windows.Perception.People.HandMeshVertex[])
     def get_vertices(self, vertices: winrt.system.Array[HandMeshVertex] | winrt.system.WriteableBuffer, /) -> None: ...
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.People.HandMeshVertexState::get_CoordinateSystem()
@@ -140,6 +146,8 @@ class HandMeshVertexState(winrt.system.Object):
 
 @typing.final
 class HandPose(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.People.JointPose Windows.Perception.People.HandPose::GetRelativeJoint(Windows.Perception.People.HandJointKind,Windows.Perception.People.HandJointKind)
     def get_relative_joint(self, joint: HandJointKind, reference_joint: HandJointKind, /) -> JointPose: ...
     # System.Void Windows.Perception.People.HandPose::GetRelativeJoints(Windows.Perception.People.HandJointKind[],Windows.Perception.People.HandJointKind[],Windows.Perception.People.JointPose[])
@@ -151,6 +159,8 @@ class HandPose(winrt.system.Object):
 
 @typing.final
 class HeadPose(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Windows.Perception.People.HeadPose::get_ForwardDirection()
     @_property
     def forward_direction(self) -> windows_foundation_numerics.Vector3: ...

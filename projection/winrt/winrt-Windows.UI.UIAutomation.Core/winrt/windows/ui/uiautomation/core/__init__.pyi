@@ -54,6 +54,8 @@ class AutomationRemoteOperationOperandId:
 
 @typing.final
 class AutomationRemoteOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::GetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def get_operand(self, operand_id: AutomationRemoteOperationOperandId | tuple[winrt.system.Int32], /) -> winrt.system.Object: ...
     # System.Boolean Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult::HasOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
@@ -77,7 +79,8 @@ class CoreAutomationRegistrar_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreAutomationRegistrar(winrt.system.Object, metaclass=CoreAutomationRegistrar_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CoreAutomationRemoteOperation(winrt.system.Object):
@@ -97,6 +100,8 @@ class CoreAutomationRemoteOperation(winrt.system.Object):
 
 @typing.final
 class CoreAutomationRemoteOperationContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext::GetOperand(Windows.UI.UIAutomation.Core.AutomationRemoteOperationOperandId)
     def get_operand(self, id: AutomationRemoteOperationOperandId | tuple[winrt.system.Int32], /) -> winrt.system.Object: ...
     @typing.overload
@@ -136,6 +141,8 @@ class RemoteAutomationClientSession(winrt.system.Object):
 
 @typing.final
 class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs::get_LocalPipeName()
     @_property
     def local_pipe_name(self) -> str: ...
@@ -145,6 +152,8 @@ class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs::get_LocalPipeName()
     @_property
     def local_pipe_name(self) -> str: ...
@@ -156,10 +165,13 @@ class RemoteAutomationServer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteAutomationServer(winrt.system.Object, metaclass=RemoteAutomationServer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RemoteAutomationWindow(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.UI.UIAutomation.Core.RemoteAutomationWindow::UnregisterAsync()
     def unregister_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Object Windows.UI.UIAutomation.Core.RemoteAutomationWindow::get_AutomationProvider()

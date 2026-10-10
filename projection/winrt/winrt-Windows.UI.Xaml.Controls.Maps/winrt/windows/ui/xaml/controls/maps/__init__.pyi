@@ -1596,6 +1596,8 @@ class MapScene_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class MapScene(windows_ui_xaml.DependencyObject, metaclass=MapScene_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Maps.MapScene::add_TargetCameraChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.Maps.MapScene,Windows.UI.Xaml.Controls.Maps.MapTargetCameraChangedEventArgs>)
     def add_target_camera_changed(self, handler: windows_foundation.TypedEventHandler[MapScene, MapTargetCameraChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Controls.Maps.MapScene::remove_TargetCameraChanged(Windows.Foundation.EventRegistrationToken)
@@ -1627,7 +1629,8 @@ class MapStyleSheet_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class MapStyleSheet(windows_ui_xaml.DependencyObject, metaclass=MapStyleSheet_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MapStyleSheetEntries_Static(winrt._winrt.Object_Static):
@@ -1826,7 +1829,8 @@ class MapStyleSheetEntries_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapStyleSheetEntries(winrt.system.Object, metaclass=MapStyleSheetEntries_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MapStyleSheetEntryStates_Static(winrt._winrt.Object_Static):
@@ -1842,7 +1846,8 @@ class MapStyleSheetEntryStates_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapStyleSheetEntryStates(winrt.system.Object, metaclass=MapStyleSheetEntryStates_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MapTargetCameraChangedEventArgs(winrt.system.Object):
@@ -2181,6 +2186,8 @@ class StreetsidePanorama_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class StreetsidePanorama(windows_ui_xaml.DependencyObject, metaclass=StreetsidePanorama_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.Geopoint Windows.UI.Xaml.Controls.Maps.StreetsidePanorama::get_Location()
     @_property
     def location(self) -> windows_devices_geolocation.Geopoint: ...

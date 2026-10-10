@@ -257,10 +257,13 @@ class AccessKeyManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AccessKeyManager(winrt.system.Object, metaclass=AccessKeyManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CanExecuteRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.CanExecuteRequestedEventArgs::get_CanExecute()
     @_property
     def can_execute(self) -> bool: ...
@@ -273,6 +276,8 @@ class CanExecuteRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -315,6 +320,8 @@ class DoubleTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ExecuteRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.UI.Xaml.Input.ExecuteRequestedEventArgs::get_Parameter()
     @_property
     def parameter(self) -> winrt.system.Object: ...
@@ -420,10 +427,13 @@ class FocusManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FocusManager(winrt.system.Object, metaclass=FocusManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class FocusManagerGotFocusEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.UI.Xaml.Input.FocusManagerGotFocusEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
@@ -433,6 +443,8 @@ class FocusManagerGotFocusEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusManagerLostFocusEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.UI.Xaml.Input.FocusManagerLostFocusEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> _uuid.UUID: ...
@@ -442,12 +454,16 @@ class FocusManagerLostFocusEventArgs(winrt.system.Object):
 
 @typing.final
 class FocusMovementResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.FocusMovementResult::get_Succeeded()
     @_property
     def succeeded(self) -> bool: ...
 
 @typing.final
 class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.GettingFocusEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
     # System.Boolean Windows.UI.Xaml.Input.GettingFocusEventArgs::TrySetNewFocusedElement(Windows.UI.Xaml.DependencyObject)
@@ -506,6 +522,8 @@ class HoldingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class InertiaExpansionBehavior(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Input.InertiaExpansionBehavior::get_DesiredExpansion()
     @_property
     def desired_expansion(self) -> winrt.system.Double: ...
@@ -521,6 +539,8 @@ class InertiaExpansionBehavior(winrt.system.Object):
 
 @typing.final
 class InertiaRotationBehavior(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Input.InertiaRotationBehavior::get_DesiredRotation()
     @_property
     def desired_rotation(self) -> winrt.system.Double: ...
@@ -536,6 +556,8 @@ class InertiaRotationBehavior(winrt.system.Object):
 
 @typing.final
 class InertiaTranslationBehavior(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Input.InertiaTranslationBehavior::get_DesiredDisplacement()
     @_property
     def desired_displacement(self) -> winrt.system.Double: ...
@@ -571,6 +593,8 @@ class InputScopeName(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class KeyRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.KeyRoutedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -647,6 +671,8 @@ class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAc
 
 @typing.final
 class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -662,6 +688,8 @@ class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
 
 @typing.final
 class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.LosingFocusEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
     # System.Boolean Windows.UI.Xaml.Input.LosingFocusEventArgs::TrySetNewFocusedElement(Windows.UI.Xaml.DependencyObject)
@@ -885,6 +913,8 @@ class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -900,6 +930,8 @@ class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class Pointer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.Pointer::get_IsInContact()
     @_property
     def is_in_contact(self) -> bool: ...
@@ -915,6 +947,8 @@ class Pointer(winrt.system.Object):
 
 @typing.final
 class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.PointerPoint Windows.UI.Xaml.Input.PointerRoutedEventArgs::GetCurrentPoint(Windows.UI.Xaml.UIElement)
     def get_current_point(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_ui_input.PointerPoint: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Input.PointerPoint> Windows.UI.Xaml.Input.PointerRoutedEventArgs::GetIntermediatePoints(Windows.UI.Xaml.UIElement)
@@ -937,6 +971,8 @@ class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...

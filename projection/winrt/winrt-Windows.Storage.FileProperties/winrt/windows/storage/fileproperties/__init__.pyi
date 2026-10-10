@@ -80,6 +80,8 @@ class VideoOrientation(enum.IntEnum):
 
 @typing.final
 class BasicProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.BasicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -104,6 +106,8 @@ class BasicProperties(IStorageItemExtraProperties, winrt.system.Object):
 
 @typing.final
 class DocumentProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.DocumentProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -146,10 +150,13 @@ class GeotagHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GeotagHelper(winrt.system.Object, metaclass=GeotagHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ImageProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.ImageProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -216,6 +223,8 @@ class ImageProperties(IStorageItemExtraProperties, winrt.system.Object):
 
 @typing.final
 class MusicProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.MusicProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload
@@ -306,6 +315,8 @@ class MusicProperties(IStorageItemExtraProperties, winrt.system.Object):
 
 @typing.final
 class StorageItemContentProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.DocumentProperties> Windows.Storage.FileProperties.StorageItemContentProperties::GetDocumentPropertiesAsync()
     def get_document_properties_async(self) -> windows_foundation.IAsyncOperation[DocumentProperties]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.ImageProperties> Windows.Storage.FileProperties.StorageItemContentProperties::GetImagePropertiesAsync()
@@ -331,6 +342,8 @@ class StorageItemContentProperties(IStorageItemExtraProperties, winrt.system.Obj
 class StorageItemThumbnail(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Storage.FileProperties.StorageItemThumbnail::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
     # System.Void Windows.Storage.FileProperties.StorageItemThumbnail::Close()
@@ -380,6 +393,8 @@ class StorageItemThumbnail(windows_storage_streams.IRandomAccessStreamWithConten
 
 @typing.final
 class VideoProperties(IStorageItemExtraProperties, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.VideoProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def retrieve_properties_async(self, properties_to_retrieve: _cabc.Iterable[str] | None, /) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, winrt.system.Object]]: ...
     @typing.overload

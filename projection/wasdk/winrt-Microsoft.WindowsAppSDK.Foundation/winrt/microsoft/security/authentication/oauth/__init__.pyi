@@ -41,6 +41,8 @@ class TokenFailureKind(enum.IntEnum):
 
 @typing.final
 class AuthFailure(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,System.String> Microsoft.Security.Authentication.OAuth.AuthFailure::get_AdditionalParams()
     @_property
     def additional_params(self) -> _cabc.Mapping[str, str]: ...
@@ -120,6 +122,8 @@ class AuthRequestParams(winrt.system.Object, metaclass=AuthRequestParams_Static)
 
 @typing.final
 class AuthRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Security.Authentication.OAuth.AuthFailure Microsoft.Security.Authentication.OAuth.AuthRequestResult::get_Failure()
     @_property
     def failure(self) -> AuthFailure: ...
@@ -132,6 +136,8 @@ class AuthRequestResult(winrt.system.Object):
 
 @typing.final
 class AuthResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Security.Authentication.OAuth.AuthResponse::get_AccessToken()
     @_property
     def access_token(self) -> str: ...
@@ -196,10 +202,13 @@ class OAuth2Manager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class OAuth2Manager(winrt.system.Object, metaclass=OAuth2Manager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TokenFailure(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Data.Json.IJsonValue> Microsoft.Security.Authentication.OAuth.TokenFailure::get_AdditionalParams()
     @_property
     def additional_params(self) -> _cabc.Mapping[str, windows_data_json.IJsonValue]: ...
@@ -293,6 +302,8 @@ class TokenRequestParams(winrt.system.Object, metaclass=TokenRequestParams_Stati
 
 @typing.final
 class TokenRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Security.Authentication.OAuth.TokenFailure Microsoft.Security.Authentication.OAuth.TokenRequestResult::get_Failure()
     @_property
     def failure(self) -> TokenFailure: ...
@@ -305,6 +316,8 @@ class TokenRequestResult(winrt.system.Object):
 
 @typing.final
 class TokenResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Security.Authentication.OAuth.TokenResponse::get_AccessToken()
     @_property
     def access_token(self) -> str: ...

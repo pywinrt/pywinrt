@@ -30,6 +30,8 @@ class Battery_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Power.BatteryReport Windows.Devices.Power.Battery::GetReport()
     def get_report(self) -> BatteryReport: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Power.Battery::add_ReportUpdated(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Power.Battery,System.Object>)
@@ -42,6 +44,8 @@ class Battery(winrt.system.Object, metaclass=Battery_Static):
 
 @typing.final
 class BatteryReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Devices.Power.BatteryReport::get_ChargeRateInMilliwatts()
     @_property
     def charge_rate_in_milliwatts(self) -> winrt.system.Int32 | None: ...
@@ -60,6 +64,8 @@ class BatteryReport(winrt.system.Object):
 
 @typing.final
 class PowerGridData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Power.PowerGridData::get_IsLowUserExperienceImpact()
     @_property
     def is_low_user_experience_impact(self) -> bool: ...
@@ -78,6 +84,8 @@ class PowerGridForecast_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PowerGridForecast(winrt.system.Object, metaclass=PowerGridForecast_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Devices.Power.PowerGridForecast::get_BlockDuration()
     @_property
     def block_duration(self) -> datetime.timedelta: ...

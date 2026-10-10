@@ -82,6 +82,8 @@ class Block_Static(TextElement_Static):
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Block(TextElement, metaclass=Block_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.TextAlignment Microsoft.UI.Xaml.Documents.Block::get_TextAlignment()
     @_property
     def text_alignment(self) -> microsoft_ui_xaml.TextAlignment: ...
@@ -135,6 +137,8 @@ class BlockCollection(_cabc.MutableSequence[Block], winrt.system.Object):
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[Block]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: Block, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Documents.BlockCollection::Append(Microsoft.UI.Xaml.Documents.Block)
     def append(self, value: Block, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Documents.BlockCollection::Clear()
@@ -410,13 +414,15 @@ class Hyperlink(Span, metaclass=Hyperlink_Static):
 
 @typing.final
 class HyperlinkClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class Inline_Static(TextElement_Static):
     ...
 
 class Inline(TextElement, metaclass=Inline_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class InlineCollection(_cabc.MutableSequence[Inline], winrt.system.Object):
@@ -435,6 +441,8 @@ class InlineCollection(_cabc.MutableSequence[Inline], winrt.system.Object):
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[Inline]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: Inline, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Documents.InlineCollection::Append(Microsoft.UI.Xaml.Documents.Inline)
     def append(self, value: Inline, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Documents.InlineCollection::Clear()
@@ -610,6 +618,8 @@ class TextElement_Static(microsoft_ui_xaml.DependencyObject_Static):
     def text_decorations_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class TextElement(microsoft_ui_xaml.DependencyObject, metaclass=TextElement_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Object Microsoft.UI.Xaml.Documents.TextElement::FindName(System.String)
     def find_name(self, name: str, /) -> winrt.system.Object: ...
@@ -824,10 +834,13 @@ class TextHighlighterBase_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class TextHighlighterBase(microsoft_ui_xaml.DependencyObject, metaclass=TextHighlighterBase_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TextPointer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Microsoft.UI.Xaml.Documents.TextPointer::GetCharacterRect(Microsoft.UI.Xaml.Documents.LogicalDirection)
     def get_character_rect(self, direction: LogicalDirection, /) -> windows_foundation.Rect: ...
     # Microsoft.UI.Xaml.Documents.TextPointer Microsoft.UI.Xaml.Documents.TextPointer::GetPositionAtOffset(System.Int32,Microsoft.UI.Xaml.Documents.LogicalDirection)
@@ -1151,7 +1164,8 @@ class Typography_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Typography(winrt.system.Object, metaclass=Typography_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class Underline(Span):

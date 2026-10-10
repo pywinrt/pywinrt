@@ -214,10 +214,13 @@ class CachedFileUpdater_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CachedFileUpdater(winrt.system.Object, metaclass=CachedFileUpdater_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CachedFileUpdaterUI(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Provider.FileUpdateRequestDeferral Windows.Storage.Provider.CachedFileUpdaterUI::GetDeferral()
     def get_deferral(self) -> FileUpdateRequestDeferral: ...
     # Windows.Foundation.EventRegistrationToken Windows.Storage.Provider.CachedFileUpdaterUI::add_FileUpdateRequested(Windows.Foundation.TypedEventHandler`2<Windows.Storage.Provider.CachedFileUpdaterUI,Windows.Storage.Provider.FileUpdateRequestedEventArgs>)
@@ -246,6 +249,8 @@ class CachedFileUpdaterUI(winrt.system.Object):
 
 @typing.final
 class FileUpdateRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Provider.FileUpdateRequestDeferral Windows.Storage.Provider.FileUpdateRequest::GetDeferral()
     def get_deferral(self) -> FileUpdateRequestDeferral: ...
     # System.Void Windows.Storage.Provider.FileUpdateRequest::UpdateLocalFile(Windows.Storage.IStorageFile)
@@ -271,11 +276,15 @@ class FileUpdateRequest(winrt.system.Object):
 
 @typing.final
 class FileUpdateRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Provider.FileUpdateRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class FileUpdateRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Provider.FileUpdateRequest Windows.Storage.Provider.FileUpdateRequestedEventArgs::get_Request()
     @_property
     def request(self) -> FileUpdateRequest: ...
@@ -335,7 +344,8 @@ class StorageProviderItemProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageProviderItemProperties(winrt.system.Object, metaclass=StorageProviderItemProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StorageProviderItemProperty(winrt.system.Object):
@@ -412,6 +422,8 @@ class StorageProviderKnownFolderSyncInfo(winrt.system.Object):
 
 @typing.final
 class StorageProviderKnownFolderSyncRequestArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.Guid> Windows.Storage.Provider.StorageProviderKnownFolderSyncRequestArgs::get_KnownFolders()
     @_property
     def known_folders(self) -> _cabc.Sequence[_uuid.UUID]: ...
@@ -483,6 +495,8 @@ class StorageProviderQuotaUI(winrt.system.Object):
 
 @typing.final
 class StorageProviderSearchQueryOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.Provider.StorageProviderSearchQueryOptions::get_FolderScope()
     @_property
     def folder_scope(self) -> str: ...
@@ -642,6 +656,8 @@ class StorageProviderSuggestionResult(IStorageProviderQueryResult, winrt.system.
 
 @typing.final
 class StorageProviderSuggestionsQueryOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Storage.Provider.StorageProviderSuggestionsQueryOptions::get_MaxResults()
     @_property
     def max_results(self) -> winrt.system.UInt32: ...
@@ -781,7 +797,8 @@ class StorageProviderSyncRootManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageProviderSyncRootManager(winrt.system.Object, metaclass=StorageProviderSyncRootManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IStorageProviderItemPropertySource: ...

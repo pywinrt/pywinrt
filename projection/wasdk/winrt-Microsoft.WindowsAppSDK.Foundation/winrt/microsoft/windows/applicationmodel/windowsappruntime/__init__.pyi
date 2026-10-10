@@ -155,7 +155,8 @@ class DeploymentManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeploymentManager(winrt.system.Object, metaclass=DeploymentManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DeploymentResult(winrt.system.Object):
@@ -187,7 +188,8 @@ class ReleaseInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ReleaseInfo(winrt.system.Object, metaclass=ReleaseInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RuntimeCompatibilityOptions(winrt.system.Object):
@@ -221,5 +223,6 @@ class RuntimeInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RuntimeInfo(winrt.system.Object, metaclass=RuntimeInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

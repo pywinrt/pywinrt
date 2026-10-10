@@ -32,6 +32,8 @@ class UserDataAccountProviderPartnerAccountKind(enum.IntEnum):
 
 @typing.final
 class UserDataAccountPartnerAccountInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo::get_AccountKind()
     @_property
     def account_kind(self) -> UserDataAccountProviderPartnerAccountKind: ...
@@ -44,6 +46,8 @@ class UserDataAccountPartnerAccountInfo(winrt.system.Object):
 
 @typing.final
 class UserDataAccountProviderAddAccountOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation::ReportCompleted(System.String)
     def report_completed(self, user_data_account_id: str, /) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.UserDataAccountContentKinds Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation::get_ContentKinds()
@@ -58,6 +62,8 @@ class UserDataAccountProviderAddAccountOperation(IUserDataAccountProviderOperati
 
 @typing.final
 class UserDataAccountProviderResolveErrorsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation::get_Kind()
@@ -69,6 +75,8 @@ class UserDataAccountProviderResolveErrorsOperation(IUserDataAccountProviderOper
 
 @typing.final
 class UserDataAccountProviderSettingsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation::get_Kind()

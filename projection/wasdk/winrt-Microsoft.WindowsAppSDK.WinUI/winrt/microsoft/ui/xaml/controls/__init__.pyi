@@ -1185,6 +1185,8 @@ class ZoomMode(enum.IntEnum):
 
 @typing.final
 class AnchorRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.AnchorRequestedEventArgs::get_Anchor()
     @_property
     def anchor(self) -> microsoft_ui_xaml.UIElement: ...
@@ -1468,6 +1470,8 @@ class AnnotatedScrollBar(Control, metaclass=AnnotatedScrollBar_Static):
 
 @typing.final
 class AnnotatedScrollBarDetailLabelRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.AnnotatedScrollBarDetailLabelRequestedEventArgs::get_Content()
     @_property
     def content(self) -> winrt.system.Object: ...
@@ -1490,6 +1494,8 @@ class AnnotatedScrollBarLabel(winrt.system.Object):
 
 @typing.final
 class AnnotatedScrollBarScrollingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.AnnotatedScrollBarScrollingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -2163,6 +2169,8 @@ class BreadcrumbBarItem(ContentControl, metaclass=BreadcrumbBarItem_Static):
 
 @typing.final
 class BreadcrumbBarItemClickedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.BreadcrumbBarItemClickedEventArgs::get_Index()
     @_property
     def index(self) -> winrt.system.Int32: ...
@@ -2421,6 +2429,8 @@ class CalendarDatePicker(Control, metaclass=CalendarDatePicker_Static):
 
 @typing.final
 class CalendarDatePickerDateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarDatePickerDateChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> datetime.datetime | None: ...
@@ -3299,6 +3309,8 @@ class CalendarViewDayItem(Control, metaclass=CalendarViewDayItem_Static):
 
 @typing.final
 class CalendarViewDayItemChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs::RegisterUpdateCallback(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.CalendarView,Microsoft.UI.Xaml.Controls.CalendarViewDayItemChangingEventArgs>)
     def register_update_callback(self, callback: windows_foundation.TypedEventHandler[CalendarView, CalendarViewDayItemChangingEventArgs], /) -> None: ...
@@ -3317,6 +3329,8 @@ class CalendarViewDayItemChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class CalendarViewSelectedDatesChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.CalendarViewSelectedDatesChangedEventArgs::get_AddedDates()
     @_property
     def added_dates(self) -> _cabc.Sequence[datetime.datetime]: ...
@@ -3326,6 +3340,8 @@ class CalendarViewSelectedDatesChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class CandidateWindowBoundsChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs::get_Bounds()
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
@@ -3405,6 +3421,8 @@ class ChoosingItemContainerEventArgs(winrt.system.Object):
 
 @typing.final
 class CleanUpVirtualizedItemEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.CleanUpVirtualizedItemEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -3420,6 +3438,8 @@ class CleanUpVirtualizedItemEventArgs(microsoft_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ColorChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Microsoft.UI.Xaml.Controls.ColorChangedEventArgs::get_NewColor()
     @_property
     def new_color(self) -> windows_ui.Color: ...
@@ -3712,6 +3732,8 @@ class ColumnDefinitionCollection(_cabc.MutableSequence[ColumnDefinition], winrt.
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[ColumnDefinition]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: ColumnDefinition, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::Append(Microsoft.UI.Xaml.Controls.ColumnDefinition)
     def append(self, value: ColumnDefinition, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection::Clear()
@@ -3934,6 +3956,8 @@ class ComboBoxItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass
 
 @typing.final
 class ComboBoxTextSubmittedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.ComboBoxTextSubmittedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -4387,11 +4411,15 @@ class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
 
 @typing.final
 class ContentDialogButtonClickDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ContentDialogButtonClickDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentDialogButtonClickEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ContentDialogButtonClickDeferral Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs::GetDeferral()
     def get_deferral(self) -> ContentDialogButtonClickDeferral: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialogButtonClickEventArgs::get_Cancel()
@@ -4403,17 +4431,23 @@ class ContentDialogButtonClickEventArgs(winrt.system.Object):
 
 @typing.final
 class ContentDialogClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ContentDialogResult Microsoft.UI.Xaml.Controls.ContentDialogClosedEventArgs::get_Result()
     @_property
     def result(self) -> ContentDialogResult: ...
 
 @typing.final
 class ContentDialogClosingDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ContentDialogClosingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentDialogClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ContentDialogClosingDeferral Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::GetDeferral()
     def get_deferral(self) -> ContentDialogClosingDeferral: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.ContentDialogClosingEventArgs::get_Cancel()
@@ -4428,7 +4462,8 @@ class ContentDialogClosingEventArgs(winrt.system.Object):
 
 @typing.final
 class ContentDialogOpenedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ContentPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ContentPresenter::get_BackgroundProperty()
@@ -4734,6 +4769,8 @@ class ContentPresenter(microsoft_ui_xaml.FrameworkElement, metaclass=ContentPres
 
 @typing.final
 class ContextMenuEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.ContextMenuEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -4866,6 +4903,8 @@ class Control_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Boolean Microsoft.UI.Xaml.Controls.Control::ApplyTemplate()
     def apply_template(self) -> bool: ...
@@ -5130,6 +5169,8 @@ class ControlTemplate(microsoft_ui_xaml.FrameworkTemplate):
 
 @typing.final
 class CoreWebView2InitializedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.UI.Xaml.Controls.CoreWebView2InitializedEventArgs::get_Exception()
     @_property
     def exception(self) -> windows_foundation.HResult: ...
@@ -5462,6 +5503,8 @@ class DatePickerFlyoutItem_Static(microsoft_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class DatePickerFlyoutItem(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ICustomPropertyProvider, metaclass=DatePickerFlyoutItem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Data.ICustomProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::GetCustomProperty(System.String)
     def get_custom_property(self, name: str, /) -> microsoft_ui_xaml_data.ICustomProperty: ...
     # Microsoft.UI.Xaml.Data.ICustomProperty Microsoft.UI.Xaml.Controls.DatePickerFlyoutItem::GetIndexedProperty(System.String,Windows.UI.Xaml.Interop.TypeName)
@@ -5492,6 +5535,8 @@ class DatePickerFlyoutPresenter_Static(Control_Static):
 
 @typing.final
 class DatePickerFlyoutPresenter(Control, metaclass=DatePickerFlyoutPresenter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.DatePickerFlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
@@ -5501,6 +5546,8 @@ class DatePickerFlyoutPresenter(Control, metaclass=DatePickerFlyoutPresenter_Sta
 
 @typing.final
 class DatePickerSelectedValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Microsoft.UI.Xaml.Controls.DatePickerSelectedValueChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> datetime.datetime | None: ...
@@ -5510,6 +5557,8 @@ class DatePickerSelectedValueChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DatePickerValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Microsoft.UI.Xaml.Controls.DatePickerValueChangedEventArgs::get_NewDate()
     @_property
     def new_date(self) -> datetime.datetime: ...
@@ -5519,6 +5568,8 @@ class DatePickerValueChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DragItemsCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
@@ -5633,14 +5684,18 @@ class Expander(ContentControl, metaclass=Expander_Static):
 
 @typing.final
 class ExpanderCollapsedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ExpanderExpandingEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ExpanderTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.ExpanderTemplateSettings::get_ContentHeight()
     @_property
     def content_height(self) -> winrt.system.Double: ...
@@ -5715,10 +5770,13 @@ class FlyoutPresenter(ContentControl, metaclass=FlyoutPresenter_Static):
 
 @typing.final
 class FocusDisengagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class FocusEngagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -6262,6 +6320,8 @@ class GroupStyleSelector(winrt.system.Object, metaclass=GroupStyleSelector_Stati
 
 @typing.final
 class HasValidationErrorsChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.HasValidationErrorsChangedEventArgs::get_NewValue()
     @_property
     def new_value(self) -> bool: ...
@@ -6455,6 +6515,8 @@ class HubSectionCollection(_cabc.MutableSequence[HubSection], winrt.system.Objec
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[HubSection]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: HubSection, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::Append(Microsoft.UI.Xaml.Controls.HubSection)
     def append(self, value: HubSection, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.HubSectionCollection::Clear()
@@ -6513,6 +6575,8 @@ class IconElement_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class IconElement(microsoft_ui_xaml.FrameworkElement, metaclass=IconElement_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Media.Brush Microsoft.UI.Xaml.Controls.IconElement::get_Foreground()
     @_property
     def foreground(self) -> microsoft_ui_xaml_media.Brush: ...
@@ -6528,6 +6592,8 @@ class IconSource_Static(microsoft_ui_xaml.DependencyObject_Static):
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class IconSource(microsoft_ui_xaml.DependencyObject, metaclass=IconSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Microsoft.UI.Xaml.Controls.IconElement Microsoft.UI.Xaml.Controls.IconSource::CreateIconElement()
     def create_icon_element(self) -> IconElement: ...
@@ -6878,6 +6944,8 @@ class InfoBarClosedEventArgs_Static(winrt._winrt.Object_Static):
 
 class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventArgs_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.InfoBarCloseReason Microsoft.UI.Xaml.Controls.InfoBarClosedEventArgs::get_Reason()
     @_property
     @typing.final
@@ -6888,6 +6956,8 @@ class InfoBarClosingEventArgs_Static(winrt._winrt.Object_Static):
 
 class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEventArgs_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.InfoBarClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -6918,7 +6988,8 @@ class InfoBarTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=Info
 
 @typing.final
 class IsTextTrimmedChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ItemClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
@@ -6944,6 +7015,8 @@ class ItemCollection(windows_foundation_collections.IObservableVector[winrt.syst
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[winrt.system.Object]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: winrt.system.Object, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::Append(System.Object)
     def append(self, value: winrt.system.Object, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ItemCollection::Clear()
@@ -6978,6 +7051,8 @@ class ItemCollection(windows_foundation_collections.IObservableVector[winrt.syst
 
 @typing.final
 class ItemCollectionTransition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress Microsoft.UI.Xaml.Controls.ItemCollectionTransition::Start()
     def start(self) -> ItemCollectionTransitionProgress: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.ItemCollectionTransition::get_HasStarted()
@@ -6998,6 +7073,8 @@ class ItemCollectionTransition(winrt.system.Object):
 
 @typing.final
 class ItemCollectionTransitionCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemCollectionTransitionCompletedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
@@ -7007,6 +7084,8 @@ class ItemCollectionTransitionCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class ItemCollectionTransitionProgress(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress::Complete()
     def complete(self) -> None: ...
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemCollectionTransitionProgress::get_Element()
@@ -7068,6 +7147,8 @@ class ItemContainer(Control, metaclass=ItemContainer_Static):
 
 @typing.final
 class ItemContainerGenerator(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.DependencyObject Microsoft.UI.Xaml.Controls.ItemContainerGenerator::ContainerFromIndex(System.Int32)
     @deprecated("ContainerFromIndex may be altered or unavailable for releases after Windows 8.1. Instead, use ItemsControl.ContainerFromIndex.")
     def container_from_index(self, index: winrt.system.Int32, /) -> microsoft_ui_xaml.DependencyObject: ...
@@ -7485,12 +7566,16 @@ class ItemsRepeater(microsoft_ui_xaml.FrameworkElement, metaclass=ItemsRepeater_
 
 @typing.final
 class ItemsRepeaterElementClearingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementClearingEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
 
 @typing.final
 class ItemsRepeaterElementIndexChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementIndexChangedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
@@ -7503,6 +7588,8 @@ class ItemsRepeaterElementIndexChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class ItemsRepeaterElementPreparedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ItemsRepeaterElementPreparedEventArgs::get_Element()
     @_property
     def element(self) -> microsoft_ui_xaml.UIElement: ...
@@ -7789,13 +7876,16 @@ class ItemsView(Control, metaclass=ItemsView_Static):
 
 @typing.final
 class ItemsViewItemInvokedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.ItemsViewItemInvokedEventArgs::get_InvokedItem()
     @_property
     def invoked_item(self) -> winrt.system.Object: ...
 
 @typing.final
 class ItemsViewSelectionChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ItemsWrapGrid_Static(Panel_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.ItemsWrapGrid::get_AreStickyGroupHeadersEnabledProperty()
@@ -7914,6 +8004,8 @@ class Layout_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class Layout(microsoft_ui_xaml.DependencyObject, metaclass=Layout_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.Layout::Arrange(Microsoft.UI.Xaml.Controls.LayoutContext,Windows.Foundation.Size)
     def arrange(self, context: LayoutContext, final_size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Size: ...
@@ -7958,6 +8050,8 @@ class LayoutContext_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class LayoutContext(microsoft_ui_xaml.DependencyObject, metaclass=LayoutContext_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.LayoutContext::get_LayoutState()
     @_property
     def layout_state(self) -> winrt.system.Object: ...
@@ -8068,6 +8162,8 @@ class LinedFlowLayoutItemCollectionTransitionProvider(ItemCollectionTransitionPr
 
 @typing.final
 class LinedFlowLayoutItemsInfoRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::SetDesiredAspectRatios(System.Double[])
     def set_desired_aspect_ratios(self, values: winrt.system.Array[winrt.system.Double] | winrt.system.ReadableBuffer, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.LinedFlowLayoutItemsInfoRequestedEventArgs::SetMaxWidths(System.Double[])
@@ -8229,7 +8325,8 @@ class ListPickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, m
 
 @typing.final
 class ListPickerFlyoutPresenter(Control):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ListView_Static(ListViewBase_Static):
     ...
@@ -8324,6 +8421,8 @@ class ListViewBase_Static(microsoft_ui_xaml_controls_primitives.Selector_Static)
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ISemanticZoomInformation, metaclass=ListViewBase_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
@@ -8565,7 +8664,8 @@ class ListViewBaseHeaderItem_Static(ContentControl_Static):
     ...
 
 class ListViewBaseHeaderItem(ContentControl, metaclass=ListViewBaseHeaderItem_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ListViewHeaderItem_Static(ListViewBaseHeaderItem_Static):
     ...
@@ -8592,7 +8692,8 @@ class ListViewPersistenceHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ListViewPersistenceHelper(winrt.system.Object, metaclass=ListViewPersistenceHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class MapControl_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MapControl::get_CenterProperty()
@@ -8668,6 +8769,8 @@ class MapControl(Control, metaclass=MapControl_Static):
 
 @typing.final
 class MapControlMapServiceErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.UI.Xaml.Controls.MapControlMapServiceErrorOccurredEventArgs::get_DiagnosticMessage()
     @_property
     def diagnostic_message(self) -> str: ...
@@ -8676,10 +8779,13 @@ class MapElement_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class MapElement(microsoft_ui_xaml.DependencyObject, metaclass=MapElement_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MapElementClickEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.MapElement Microsoft.UI.Xaml.Controls.MapElementClickEventArgs::get_Element()
     @_property
     def element(self) -> MapElement: ...
@@ -8729,7 +8835,8 @@ class MapLayer_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class MapLayer(microsoft_ui_xaml.DependencyObject, metaclass=MapLayer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class MediaPlayerElement_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MediaPlayerElement::get_AreTransportControlsEnabledProperty()
@@ -9162,7 +9269,8 @@ class MediaTransportControlsHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaTransportControlsHelper(winrt.system.Object, metaclass=MediaTransportControlsHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class MenuBar_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuBar::get_ItemsProperty()
@@ -9304,7 +9412,8 @@ class MenuFlyoutItemBase_Static(Control_Static):
     ...
 
 class MenuFlyoutItemBase(Control, metaclass=MenuFlyoutItemBase_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class MenuFlyoutPresenter_Static(ItemsControl_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuFlyoutPresenter::get_IsDefaultShadowEnabledProperty()
@@ -9842,10 +9951,13 @@ class NavigationView(ContentControl, metaclass=NavigationView_Static):
 
 @typing.final
 class NavigationViewBackRequestedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class NavigationViewDisplayModeChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode Microsoft.UI.Xaml.Controls.NavigationViewDisplayModeChangedEventArgs::get_DisplayMode()
     @_property
     def display_mode(self) -> NavigationViewDisplayMode: ...
@@ -9955,6 +10067,8 @@ class NavigationViewItemBase_Static(ContentControl_Static):
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class NavigationViewItemBase(ContentControl, metaclass=NavigationViewItemBase_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewItemBase::get_IsSelected()
     @_property
     def is_selected(self) -> bool: ...
@@ -9965,6 +10079,8 @@ class NavigationViewItemBase(ContentControl, metaclass=NavigationViewItemBase_St
 
 @typing.final
 class NavigationViewItemCollapsedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItemCollapsedEventArgs::get_CollapsedItem()
     @_property
     def collapsed_item(self) -> winrt.system.Object: ...
@@ -9974,6 +10090,8 @@ class NavigationViewItemCollapsedEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationViewItemExpandingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.NavigationViewItemExpandingEventArgs::get_ExpandingItem()
     @_property
     def expanding_item(self) -> winrt.system.Object: ...
@@ -10011,6 +10129,8 @@ class NavigationViewItemSeparator(NavigationViewItemBase, metaclass=NavigationVi
 
 @typing.final
 class NavigationViewPaneClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewPaneClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -10020,6 +10140,8 @@ class NavigationViewPaneClosingEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationViewSelectionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.NavigationViewSelectionChangedEventArgs::get_IsSettingsSelected()
     @_property
     def is_settings_selected(self) -> bool: ...
@@ -10364,6 +10486,8 @@ class NumberBox(Control, metaclass=NumberBox_Static):
 
 @typing.final
 class NumberBoxValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs::get_NewValue()
     @_property
     def new_value(self) -> winrt.system.Double: ...
@@ -10434,6 +10558,8 @@ class Panel_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def is_items_host_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Panel(microsoft_ui_xaml.FrameworkElement, metaclass=Panel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.Panel::get_ChildrenTransitions()
     @_property
     def children_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...
@@ -10793,6 +10919,8 @@ class PasswordBox(Control, metaclass=PasswordBox_Static):
 
 @typing.final
 class PasswordBoxPasswordChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.PasswordBoxPasswordChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
@@ -10950,6 +11078,8 @@ class PersonPicture(Control, metaclass=PersonPicture_Static):
 
 @typing.final
 class PersonPictureTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Media.ImageBrush Microsoft.UI.Xaml.Controls.PersonPictureTemplateSettings::get_ActualImageBrush()
     @_property
     def actual_image_brush(self) -> microsoft_ui_xaml_media.ImageBrush: ...
@@ -10994,7 +11124,8 @@ class PickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, metac
 
 @typing.final
 class PickerFlyoutPresenter(ContentControl):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class PipsPager_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.PipsPager::get_MaxVisiblePipsProperty()
@@ -11134,10 +11265,13 @@ class PipsPager(Control, metaclass=PipsPager_Static):
 
 @typing.final
 class PipsPagerSelectedIndexChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PipsPagerTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<System.Int32> Microsoft.UI.Xaml.Controls.PipsPagerTemplateSettings::get_PipsPagerItems()
     @_property
     def pips_pager_items(self) -> _cabc.MutableSequence[winrt.system.Int32]: ...
@@ -11387,6 +11521,8 @@ class ProgressBar(microsoft_ui_xaml_controls_primitives.RangeBase, metaclass=Pro
 
 @typing.final
 class ProgressBarTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Media.RectangleGeometry Microsoft.UI.Xaml.Controls.ProgressBarTemplateSettings::get_ClipRect()
     @_property
     def clip_rect(self) -> microsoft_ui_xaml_media.RectangleGeometry: ...
@@ -11487,6 +11623,8 @@ class ProgressRing(Control, metaclass=ProgressRing_Static):
 
 @typing.final
 class ProgressRingTemplateSettings(microsoft_ui_xaml.DependencyObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.ProgressRingTemplateSettings::get_EllipseDiameter()
     @_property
     def ellipse_diameter(self) -> winrt.system.Double: ...
@@ -11932,17 +12070,23 @@ class RefreshContainer(ContentControl, metaclass=RefreshContainer_Static):
 
 @typing.final
 class RefreshInteractionRatioChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.RefreshInteractionRatioChangedEventArgs::get_InteractionRatio()
     @_property
     def interaction_ratio(self) -> winrt.system.Double: ...
 
 @typing.final
 class RefreshRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.UI.Xaml.Controls.RefreshRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class RefreshStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.RefreshVisualizerState Microsoft.UI.Xaml.Controls.RefreshStateChangedEventArgs::get_NewState()
     @_property
     def new_state(self) -> RefreshVisualizerState: ...
@@ -12549,6 +12693,8 @@ class RichEditBox(Control, metaclass=RichEditBox_Static):
 
 @typing.final
 class RichEditBoxSelectionChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBoxSelectionChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -12564,6 +12710,8 @@ class RichEditBoxSelectionChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class RichEditBoxTextChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.RichEditBoxTextChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
@@ -12986,6 +13134,8 @@ class RowDefinitionCollection(_cabc.MutableSequence[RowDefinition], winrt.system
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[RowDefinition]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: RowDefinition, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::Append(Microsoft.UI.Xaml.Controls.RowDefinition)
     def append(self, value: RowDefinition, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.RowDefinitionCollection::Clear()
@@ -13916,6 +14066,8 @@ class ScrollViewer(ContentControl, IScrollAnchorProvider, metaclass=ScrollViewer
 
 @typing.final
 class ScrollViewerView(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Microsoft.UI.Xaml.Controls.ScrollViewerView::get_HorizontalOffset()
     @_property
     def horizontal_offset(self) -> winrt.system.Double: ...
@@ -13935,6 +14087,8 @@ class ScrollViewerViewChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollViewerViewChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ScrollViewerView Microsoft.UI.Xaml.Controls.ScrollViewerViewChangingEventArgs::get_FinalView()
     @_property
     def final_view(self) -> ScrollViewerView: ...
@@ -13947,6 +14101,8 @@ class ScrollViewerViewChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollingAnchorRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.ScrollingAnchorRequestedEventArgs::get_AnchorElement()
     @_property
     def anchor_element(self) -> microsoft_ui_xaml.UIElement: ...
@@ -13959,6 +14115,8 @@ class ScrollingAnchorRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollingBringingIntoViewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.ScrollingSnapPointsMode Microsoft.UI.Xaml.Controls.ScrollingBringingIntoViewEventArgs::get_SnapPointsMode()
     @_property
     def snap_points_mode(self) -> ScrollingSnapPointsMode: ...
@@ -13986,6 +14144,8 @@ class ScrollingBringingIntoViewEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollingScrollAnimationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.ScrollingScrollAnimationStartingEventArgs::get_Animation()
     @_property
     def animation(self) -> microsoft_ui_composition.CompositionAnimation: ...
@@ -14004,6 +14164,8 @@ class ScrollingScrollAnimationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollingScrollCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingScrollCompletedEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
@@ -14034,6 +14196,8 @@ class ScrollingScrollOptions(winrt.system.Object, metaclass=ScrollingScrollOptio
 
 @typing.final
 class ScrollingZoomAnimationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.CompositionAnimation Microsoft.UI.Xaml.Controls.ScrollingZoomAnimationStartingEventArgs::get_Animation()
     @_property
     def animation(self) -> microsoft_ui_composition.CompositionAnimation: ...
@@ -14055,6 +14219,8 @@ class ScrollingZoomAnimationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class ScrollingZoomCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.ScrollingZoomCompletedEventArgs::get_CorrelationId()
     @_property
     def correlation_id(self) -> winrt.system.Int32: ...
@@ -14088,6 +14254,8 @@ class SectionsInViewChangedEventArgs_Static(winrt._winrt.Object_Static):
 
 class SectionsInViewChangedEventArgs(winrt.system.Object, metaclass=SectionsInViewChangedEventArgs_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Microsoft.UI.Xaml.Controls.HubSection> Microsoft.UI.Xaml.Controls.SectionsInViewChangedEventArgs::get_AddedSections()
     @_property
     @typing.final
@@ -14170,7 +14338,8 @@ class SelectorBarItem(ItemContainer, metaclass=SelectorBarItem_Static):
 
 @typing.final
 class SelectorBarSelectionChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SemanticZoom_Static(Control_Static):
@@ -14444,7 +14613,8 @@ class SplitButton(ContentControl, metaclass=SplitButton_Static):
 
 @typing.final
 class SplitButtonClickEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class SplitMenuFlyoutItem_Static(MenuFlyoutItem_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.SplitMenuFlyoutItem::get_SubMenuItemStyleProperty()
@@ -14615,6 +14785,8 @@ class SplitView(Control, metaclass=SplitView_Static):
 
 @typing.final
 class SplitViewPaneClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.SplitViewPaneClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -14958,6 +15130,8 @@ class SwipeItem(microsoft_ui_xaml.DependencyObject, metaclass=SwipeItem_Static):
 
 @typing.final
 class SwipeItemInvokedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.SwipeControl Microsoft.UI.Xaml.Controls.SwipeItemInvokedEventArgs::get_SwipeControl()
     @_property
     def swipe_control(self) -> SwipeControl: ...
@@ -15380,6 +15554,8 @@ class TabView(Control, metaclass=TabView_Static):
 
 @typing.final
 class TabViewExternalTornOutTabsDroppedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs::get_DropIndex()
     @_property
     def drop_index(self) -> winrt.system.Int32: ...
@@ -15392,6 +15568,8 @@ class TabViewExternalTornOutTabsDroppedEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewExternalTornOutTabsDroppingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs::get_AllowDrop()
     @_property
     def allow_drop(self) -> bool: ...
@@ -15500,6 +15678,8 @@ class TabViewItemTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=
 
 @typing.final
 class TabViewTabCloseRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
@@ -15509,6 +15689,8 @@ class TabViewTabCloseRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewTabDragCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
@@ -15521,6 +15703,8 @@ class TabViewTabDragCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewTabDragStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -15539,6 +15723,8 @@ class TabViewTabDragStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewTabDroppedOutsideEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs::get_Item()
     @_property
     def item(self) -> winrt.system.Object: ...
@@ -15548,6 +15734,8 @@ class TabViewTabDroppedOutsideEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewTabTearOutRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object[] Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs::get_Items()
     @_property
     def items(self) -> winrt.system.Object: ...
@@ -15560,6 +15748,8 @@ class TabViewTabTearOutRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class TabViewTabTearOutWindowRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.WindowId Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs::get_NewWindowId()
     @_property
     def new_window_id(self) -> microsoft_ui.WindowId: ...
@@ -15832,12 +16022,16 @@ class TeachingTip(ContentControl, metaclass=TeachingTip_Static):
 
 @typing.final
 class TeachingTipClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.TeachingTipCloseReason Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs::get_Reason()
     @_property
     def reason(self) -> TeachingTipCloseReason: ...
 
 @typing.final
 class TeachingTipClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs::get_Cancel()
@@ -16594,6 +16788,8 @@ class TextBox(Control, metaclass=TextBox_Static):
 
 @typing.final
 class TextBoxBeforeTextChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -16606,6 +16802,8 @@ class TextBoxBeforeTextChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class TextBoxSelectionChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -16621,13 +16819,16 @@ class TextBoxSelectionChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class TextBoxTextChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs::get_IsContentChanging()
     @_property
     def is_content_changing(self) -> bool: ...
 
 @typing.final
 class TextChangedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class TextCommandBarFlyout_Static(CommandBarFlyout_Static):
     ...
@@ -16637,6 +16838,8 @@ class TextCommandBarFlyout(CommandBarFlyout, metaclass=TextCommandBarFlyout_Stat
 
 @typing.final
 class TextCompositionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
@@ -16646,6 +16849,8 @@ class TextCompositionChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class TextCompositionEndedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
@@ -16655,6 +16860,8 @@ class TextCompositionEndedEventArgs(winrt.system.Object):
 
 @typing.final
 class TextCompositionStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs::get_Length()
     @_property
     def length(self) -> winrt.system.Int32: ...
@@ -16664,6 +16871,8 @@ class TextCompositionStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class TextControlCopyingToClipboardEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -16673,6 +16882,8 @@ class TextControlCopyingToClipboardEventArgs(winrt.system.Object):
 
 @typing.final
 class TextControlCuttingToClipboardEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -16682,6 +16893,8 @@ class TextControlCuttingToClipboardEventArgs(winrt.system.Object):
 
 @typing.final
 class TextControlPasteEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -16841,6 +17054,8 @@ class TimePickerFlyoutPresenter_Static(Control_Static):
 
 @typing.final
 class TimePickerFlyoutPresenter(Control, metaclass=TimePickerFlyoutPresenter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TimePickerFlyoutPresenter::get_IsDefaultShadowEnabled()
     @_property
     def is_default_shadow_enabled(self) -> bool: ...
@@ -16850,6 +17065,8 @@ class TimePickerFlyoutPresenter(Control, metaclass=TimePickerFlyoutPresenter_Sta
 
 @typing.final
 class TimePickerSelectedValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Microsoft.UI.Xaml.Controls.TimePickerSelectedValueChangedEventArgs::get_NewTime()
     @_property
     def new_time(self) -> datetime.timedelta | None: ...
@@ -16859,6 +17076,8 @@ class TimePickerSelectedValueChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class TimePickerValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.TimePickerValueChangedEventArgs::get_NewTime()
     @_property
     def new_time(self) -> datetime.timedelta: ...
@@ -17074,7 +17293,8 @@ class ToggleSplitButton(SplitButton, metaclass=ToggleSplitButton_Static):
 
 @typing.final
 class ToggleSplitButtonIsCheckedChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ToggleSwitch_Static(Control_Static):
@@ -17274,7 +17494,8 @@ class ToolTipService_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ToolTipService(winrt.system.Object, metaclass=ToolTipService_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class TreeView_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.TreeView::get_SelectedItemProperty()
@@ -17469,6 +17690,8 @@ class TreeView(Control, metaclass=TreeView_Static):
 
 @typing.final
 class TreeViewCollapsedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeViewCollapsedEventArgs::get_Node()
     @_property
     def node(self) -> TreeViewNode: ...
@@ -17478,6 +17701,8 @@ class TreeViewCollapsedEventArgs(winrt.system.Object):
 
 @typing.final
 class TreeViewDragItemsCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Xaml.Controls.TreeViewDragItemsCompletedEventArgs::get_DropResult()
     @_property
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
@@ -17490,6 +17715,8 @@ class TreeViewDragItemsCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class TreeViewDragItemsStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewDragItemsStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -17505,6 +17732,8 @@ class TreeViewDragItemsStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class TreeViewExpandingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Controls.TreeViewNode Microsoft.UI.Xaml.Controls.TreeViewExpandingEventArgs::get_Node()
     @_property
     def node(self) -> TreeViewNode: ...
@@ -17615,6 +17844,8 @@ class TreeViewItem(ListViewItem, metaclass=TreeViewItem_Static):
 
 @typing.final
 class TreeViewItemInvokedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Controls.TreeViewItemInvokedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -17728,6 +17959,8 @@ class TreeViewNode(microsoft_ui_xaml.DependencyObject, metaclass=TreeViewNode_St
 
 @typing.final
 class TreeViewSelectionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<System.Object> Microsoft.UI.Xaml.Controls.TreeViewSelectionChangedEventArgs::get_AddedItems()
     @_property
     def added_items(self) -> _cabc.MutableSequence[winrt.system.Object]: ...
@@ -17870,6 +18103,8 @@ class UIElementCollection(_cabc.MutableSequence[microsoft_ui_xaml.UIElement], wi
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[microsoft_ui_xaml.UIElement]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: microsoft_ui_xaml.UIElement, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::Append(Microsoft.UI.Xaml.UIElement)
     def append(self, value: microsoft_ui_xaml.UIElement, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.UIElementCollection::Clear()
@@ -18189,6 +18424,8 @@ class VirtualizingPanel_Static(Panel_Static):
     ...
 
 class VirtualizingPanel(Panel, metaclass=VirtualizingPanel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Microsoft.UI.Xaml.Controls.VirtualizingPanel::AddInternalChild(Microsoft.UI.Xaml.UIElement)
     def _add_internal_child(self, child: microsoft_ui_xaml.UIElement, /) -> None: ...

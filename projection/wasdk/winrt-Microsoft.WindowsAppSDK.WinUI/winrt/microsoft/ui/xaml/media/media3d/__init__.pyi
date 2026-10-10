@@ -187,7 +187,8 @@ class Matrix3DHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Matrix3DHelper(winrt.system.Object, metaclass=Matrix3DHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PerspectiveTransform3D_Static(Transform3D_Static):
@@ -227,5 +228,6 @@ class Transform3D_Static(microsoft_ui_xaml.DependencyObject_Static):
     ...
 
 class Transform3D(microsoft_ui_xaml.DependencyObject, metaclass=Transform3D_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

@@ -35,6 +35,8 @@ class BadgeNotificationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BadgeNotificationManager(winrt.system.Object, metaclass=BadgeNotificationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.BadgeNotifications.BadgeNotificationManager::ClearBadge()
     def clear_badge(self) -> None: ...
     # System.Void Microsoft.Windows.BadgeNotifications.BadgeNotificationManager::SetBadgeAsCount(System.UInt32)

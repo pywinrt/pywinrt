@@ -51,7 +51,8 @@ class ThreadPool_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ThreadPoolTimer_Static(winrt._winrt.Object_Static):
@@ -78,6 +79,8 @@ class ThreadPoolTimer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ThreadPoolTimer(winrt.system.Object, metaclass=ThreadPoolTimer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.Threading.ThreadPoolTimer::Cancel()
     def cancel(self) -> None: ...
     # Windows.Foundation.TimeSpan Windows.System.Threading.ThreadPoolTimer::get_Delay()

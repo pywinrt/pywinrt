@@ -24,6 +24,8 @@ class StartupAppImpactPreview(enum.IntEnum):
 
 @typing.final
 class StartupAppInfoPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Preview.StartupAppInfoPreview::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -47,6 +49,8 @@ class StartupAppsManagerPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StartupAppsManagerPreview(winrt.system.Object, metaclass=StartupAppsManagerPreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Preview.StartupAppInfoPreview> Windows.ApplicationModel.Preview.StartupAppsManagerPreview::GetStartupAppInfos()
     def get_startup_app_infos(self) -> _cabc.Sequence[StartupAppInfoPreview]: ...
 

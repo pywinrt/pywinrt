@@ -148,5 +148,6 @@ class PowerManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

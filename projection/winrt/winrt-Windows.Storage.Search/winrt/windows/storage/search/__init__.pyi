@@ -111,6 +111,8 @@ class ContentIndexer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Storage.Search.ContentIndexer::AddAsync(Windows.Storage.Search.IIndexableContent)
     def add_async(self, indexable_content: IIndexableContent, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -146,6 +148,8 @@ class ContentIndexer(winrt.system.Object, metaclass=ContentIndexer_Static):
 
 @typing.final
 class ContentIndexerQuery(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Storage.Search.IIndexableContent>> Windows.Storage.Search.ContentIndexerQuery::GetAsync()
     def get_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IIndexableContent]]: ...
@@ -288,6 +292,8 @@ class SortEntryVector(_cabc.MutableSequence[SortEntry], winrt.system.Object):
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[SortEntry | tuple[str, bool]]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: SortEntry | tuple[str, bool], /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Search.SortEntryVector::Append(Windows.Storage.Search.SortEntry)
     def append(self, value: SortEntry | tuple[str, bool], /) -> None: ...
     # System.Void Windows.Storage.Search.SortEntryVector::Clear()
@@ -318,6 +324,8 @@ class SortEntryVector(_cabc.MutableSequence[SortEntry], winrt.system.Object):
 
 @typing.final
 class StorageFileQueryResult(IStorageQueryResultBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Search.StorageFileQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFileQueryResult::FindStartIndexAsync(System.Object)
@@ -352,6 +360,8 @@ class StorageFileQueryResult(IStorageQueryResultBase, winrt.system.Object):
 
 @typing.final
 class StorageFolderQueryResult(IStorageQueryResultBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Search.StorageFolderQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageFolderQueryResult::FindStartIndexAsync(System.Object)
@@ -384,6 +394,8 @@ class StorageFolderQueryResult(IStorageQueryResultBase, winrt.system.Object):
 
 @typing.final
 class StorageItemQueryResult(IStorageQueryResultBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.Search.StorageItemQueryResult::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)
     def apply_new_query_options(self, new_query_options: QueryOptions, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Storage.Search.StorageItemQueryResult::FindStartIndexAsync(System.Object)
@@ -416,6 +428,8 @@ class StorageItemQueryResult(IStorageQueryResultBase, winrt.system.Object):
 
 @typing.final
 class StorageLibraryChangeTrackerTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageLibraryChangeTracker Windows.Storage.Search.StorageLibraryChangeTrackerTriggerDetails::get_ChangeTracker()
     @_property
     def change_tracker(self) -> windows_storage.StorageLibraryChangeTracker: ...
@@ -425,6 +439,8 @@ class StorageLibraryChangeTrackerTriggerDetails(winrt.system.Object):
 
 @typing.final
 class StorageLibraryContentChangedTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Search.StorageItemQueryResult Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails::CreateModifiedSinceQuery(Windows.Foundation.DateTime)
     def create_modified_since_query(self, last_query_time: datetime.datetime, /) -> StorageItemQueryResult: ...
     # Windows.Storage.StorageFolder Windows.Storage.Search.StorageLibraryContentChangedTriggerDetails::get_Folder()

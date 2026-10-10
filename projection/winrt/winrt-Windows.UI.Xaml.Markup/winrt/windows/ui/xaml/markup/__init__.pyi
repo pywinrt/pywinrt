@@ -72,7 +72,8 @@ class XamlBinaryWriter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class XamlBindingHelper_Static(winrt._winrt.Object_Static):
@@ -126,7 +127,8 @@ class XamlBindingHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlBindingHelper(winrt.system.Object, metaclass=XamlBindingHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class XamlMarkupHelper_Static(winrt._winrt.Object_Static):
@@ -135,7 +137,8 @@ class XamlMarkupHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlMarkupHelper(winrt.system.Object, metaclass=XamlMarkupHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class XamlReader_Static(winrt._winrt.Object_Static):
@@ -146,7 +149,8 @@ class XamlReader_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class _IComponentConnector: ...

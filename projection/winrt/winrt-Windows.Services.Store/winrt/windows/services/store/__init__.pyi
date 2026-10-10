@@ -164,6 +164,8 @@ class StorePackageUpdateStatus:
 
 @typing.final
 class StoreAcquireLicenseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreAcquireLicenseResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -173,6 +175,8 @@ class StoreAcquireLicenseResult(winrt.system.Object):
 
 @typing.final
 class StoreAppLicense(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Services.Store.StoreLicense> Windows.Services.Store.StoreAppLicense::get_AddOnLicenses()
     @_property
     def add_on_licenses(self) -> _cabc.Mapping[str, StoreLicense]: ...
@@ -206,6 +210,8 @@ class StoreAppLicense(winrt.system.Object):
 
 @typing.final
 class StoreAvailability(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StorePurchaseResult> Windows.Services.Store.StoreAvailability::RequestPurchaseAsync()
     def request_purchase_async(self) -> windows_foundation.IAsyncOperation[StorePurchaseResult]: ...
@@ -231,6 +237,8 @@ class StoreAvailability(winrt.system.Object):
 
 @typing.final
 class StoreCanAcquireLicenseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreCanAcquireLicenseResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -243,6 +251,8 @@ class StoreCanAcquireLicenseResult(winrt.system.Object):
 
 @typing.final
 class StoreCollectionData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Services.Store.StoreCollectionData::get_AcquiredDate()
     @_property
     def acquired_date(self) -> datetime.datetime: ...
@@ -270,6 +280,8 @@ class StoreCollectionData(winrt.system.Object):
 
 @typing.final
 class StoreConsumableResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Services.Store.StoreConsumableResult::get_BalanceRemaining()
     @_property
     def balance_remaining(self) -> winrt.system.UInt32: ...
@@ -292,6 +304,8 @@ class StoreContext_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreAcquireLicenseResult> Windows.Services.Store.StoreContext::AcquireStoreLicenseForOptionalPackageAsync(Windows.ApplicationModel.Package)
     def acquire_store_license_for_optional_package_async(self, optional_package: windows_applicationmodel.Package, /) -> windows_foundation.IAsyncOperation[StoreAcquireLicenseResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreCanAcquireLicenseResult> Windows.Services.Store.StoreContext::CanAcquireStoreLicenseAsync(System.String)
@@ -397,6 +411,8 @@ class StoreContext(winrt.system.Object, metaclass=StoreContext_Static):
 
 @typing.final
 class StoreImage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Store.StoreImage::get_Caption()
     @_property
     def caption(self) -> str: ...
@@ -415,6 +431,8 @@ class StoreImage(winrt.system.Object):
 
 @typing.final
 class StoreLicense(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Services.Store.StoreLicense::get_ExpirationDate()
     @_property
     def expiration_date(self) -> datetime.datetime: ...
@@ -445,6 +463,8 @@ class StorePackageInstallOptions(winrt.system.Object):
 class StorePackageLicense(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.Store.StorePackageLicense::Close()
     def close(self) -> None: ...
     # System.Void Windows.Services.Store.StorePackageLicense::ReleaseLicense()
@@ -462,6 +482,8 @@ class StorePackageLicense(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class StorePackageUpdate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Services.Store.StorePackageUpdate::get_Mandatory()
     @_property
     def mandatory(self) -> bool: ...
@@ -471,6 +493,8 @@ class StorePackageUpdate(winrt.system.Object):
 
 @typing.final
 class StorePackageUpdateResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Store.StorePackageUpdateState Windows.Services.Store.StorePackageUpdateResult::get_OverallState()
     @_property
     def overall_state(self) -> StorePackageUpdateState: ...
@@ -483,6 +507,8 @@ class StorePackageUpdateResult(winrt.system.Object):
 
 @typing.final
 class StorePrice(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Store.StorePrice::get_CurrencyCode()
     @_property
     def currency_code(self) -> str: ...
@@ -513,6 +539,8 @@ class StorePrice(winrt.system.Object):
 
 @typing.final
 class StoreProduct(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Store.StoreProduct::GetIsAnySkuInstalledAsync()
     def get_is_any_sku_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     @typing.overload
@@ -580,6 +608,8 @@ class StoreProductOptions(winrt.system.Object):
 
 @typing.final
 class StoreProductPagedQueryResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreProductPagedQueryResult> Windows.Services.Store.StoreProductPagedQueryResult::GetNextAsync()
     def get_next_async(self) -> windows_foundation.IAsyncOperation[StoreProductPagedQueryResult]: ...
     # Windows.Foundation.HResult Windows.Services.Store.StoreProductPagedQueryResult::get_ExtendedError()
@@ -594,6 +624,8 @@ class StoreProductPagedQueryResult(winrt.system.Object):
 
 @typing.final
 class StoreProductQueryResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreProductQueryResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -603,6 +635,8 @@ class StoreProductQueryResult(winrt.system.Object):
 
 @typing.final
 class StoreProductResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreProductResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -631,6 +665,8 @@ class StorePurchaseProperties(winrt.system.Object):
 
 @typing.final
 class StorePurchaseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StorePurchaseResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -640,6 +676,8 @@ class StorePurchaseResult(winrt.system.Object):
 
 @typing.final
 class StoreQueueItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Services.Store.StoreQueueItem::CancelInstallAsync()
     def cancel_install_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Services.Store.StoreQueueItemStatus Windows.Services.Store.StoreQueueItem::GetCurrentStatus()
@@ -668,12 +706,16 @@ class StoreQueueItem(winrt.system.Object):
 
 @typing.final
 class StoreQueueItemCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Store.StoreQueueItemStatus Windows.Services.Store.StoreQueueItemCompletedEventArgs::get_Status()
     @_property
     def status(self) -> StoreQueueItemStatus: ...
 
 @typing.final
 class StoreQueueItemStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreQueueItemStatus::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -689,6 +731,8 @@ class StoreQueueItemStatus(winrt.system.Object):
 
 @typing.final
 class StoreRateAndReviewResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreRateAndReviewResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -709,10 +753,13 @@ class StoreRequestHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StoreRequestHelper(winrt.system.Object, metaclass=StoreRequestHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StoreSendRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreSendRequestResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -725,6 +772,8 @@ class StoreSendRequestResult(winrt.system.Object):
 
 @typing.final
 class StoreSku(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Store.StoreSku::GetIsInstalledAsync()
     def get_is_installed_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     @typing.overload
@@ -788,6 +837,8 @@ class StoreSku(winrt.system.Object):
 
 @typing.final
 class StoreSubscriptionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Services.Store.StoreSubscriptionInfo::get_BillingPeriod()
     @_property
     def billing_period(self) -> winrt.system.UInt32: ...
@@ -806,6 +857,8 @@ class StoreSubscriptionInfo(winrt.system.Object):
 
 @typing.final
 class StoreUninstallStorePackageResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Services.Store.StoreUninstallStorePackageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -815,6 +868,8 @@ class StoreUninstallStorePackageResult(winrt.system.Object):
 
 @typing.final
 class StoreVideo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Store.StoreVideo::get_Caption()
     @_property
     def caption(self) -> str: ...

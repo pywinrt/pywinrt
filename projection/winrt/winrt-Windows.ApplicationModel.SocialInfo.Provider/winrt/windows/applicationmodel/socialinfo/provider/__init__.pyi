@@ -21,6 +21,8 @@ __all__ = [
 @typing.final
 @deprecated("SocialDashboardItemUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialDashboardItemUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater::CommitAsync()
     @deprecated("ISocialDashboardItemUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
     def commit_async(self) -> windows_foundation.IAsyncAction: ...
@@ -60,6 +62,8 @@ class SocialDashboardItemUpdater(winrt.system.Object):
 @typing.final
 @deprecated("SocialFeedUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater::CommitAsync()
     @deprecated("ISocialFeedUpdater is deprecated and might not work on all platforms. For more info, see MSDN.")
     def commit_async(self) -> windows_foundation.IAsyncAction: ...
@@ -100,5 +104,6 @@ class SocialInfoProviderManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("SocialInfoProviderManager is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialInfoProviderManager(winrt.system.Object, metaclass=SocialInfoProviderManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

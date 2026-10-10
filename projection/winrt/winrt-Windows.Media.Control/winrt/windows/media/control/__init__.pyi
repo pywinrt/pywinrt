@@ -38,10 +38,13 @@ class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
 
 @typing.final
 class CurrentSessionChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo Windows.Media.Control.GlobalSystemMediaTransportControlsSession::GetPlaybackInfo()
     def get_playback_info(self) -> GlobalSystemMediaTransportControlsSessionPlaybackInfo: ...
     # Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties Windows.Media.Control.GlobalSystemMediaTransportControlsSession::GetTimelineProperties()
@@ -101,6 +104,8 @@ class GlobalSystemMediaTransportControlsSessionManager_Static(winrt._winrt.Objec
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, metaclass=GlobalSystemMediaTransportControlsSessionManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Control.GlobalSystemMediaTransportControlsSession Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager::GetCurrentSession()
     def get_current_session(self) -> GlobalSystemMediaTransportControlsSession | None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Control.GlobalSystemMediaTransportControlsSession> Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager::GetSessions()
@@ -116,6 +121,8 @@ class GlobalSystemMediaTransportControlsSessionManager(winrt.system.Object, meta
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Control.GlobalSystemMediaTransportControlsSessionMediaProperties::get_AlbumArtist()
     @_property
     def album_artist(self) -> str: ...
@@ -149,6 +156,8 @@ class GlobalSystemMediaTransportControlsSessionMediaProperties(winrt.system.Obje
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackControls::get_IsChannelDownEnabled()
     @_property
     def is_channel_down_enabled(self) -> bool: ...
@@ -197,6 +206,8 @@ class GlobalSystemMediaTransportControlsSessionPlaybackControls(winrt.system.Obj
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Media.MediaPlaybackAutoRepeatMode> Windows.Media.Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo::get_AutoRepeatMode()
     @_property
     def auto_repeat_mode(self) -> windows_media.MediaPlaybackAutoRepeatMode | None: ...
@@ -218,6 +229,8 @@ class GlobalSystemMediaTransportControlsSessionPlaybackInfo(winrt.system.Object)
 
 @typing.final
 class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Control.GlobalSystemMediaTransportControlsSessionTimelineProperties::get_EndTime()
     @_property
     def end_time(self) -> datetime.timedelta: ...
@@ -239,17 +252,21 @@ class GlobalSystemMediaTransportControlsSessionTimelineProperties(winrt.system.O
 
 @typing.final
 class MediaPropertiesChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PlaybackInfoChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SessionsChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TimelinePropertiesChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

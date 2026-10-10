@@ -112,7 +112,8 @@ class GameControllerProviderInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameControllerProviderInfo(winrt.system.Object, metaclass=GameControllerProviderInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LegacyGipGameControllerProvider_Static(winrt._winrt.Object_Static):
@@ -131,6 +132,8 @@ class LegacyGipGameControllerProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LegacyGipGameControllerProvider(winrt.system.Object, metaclass=LegacyGipGameControllerProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider::ExecuteCommand(Windows.Gaming.Input.Preview.DeviceCommand)
     def execute_command(self, command: DeviceCommand, /) -> None: ...
     # Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider::GetDeviceFirmwareCorruptionState()

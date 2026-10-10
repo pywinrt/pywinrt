@@ -16,6 +16,8 @@ __all__ = [
 
 @typing.final
 class VariablePhotoCapturedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs::get_CaptureTimeOffset()
     @_property
     def capture_time_offset(self) -> datetime.timedelta: ...
@@ -31,6 +33,8 @@ class VariablePhotoCapturedEventArgs(winrt.system.Object):
 
 @typing.final
 class VariablePhotoSequenceCapture(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.Core.VariablePhotoSequenceCapture::FinishAsync()
     def finish_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.Core.VariablePhotoSequenceCapture::StartAsync()

@@ -96,6 +96,8 @@ class MediaTranscoder(winrt.system.Object):
 
 @typing.final
 class PrepareTranscodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncActionWithProgress`1<System.Double> Windows.Media.Transcoding.PrepareTranscodeResult::TranscodeAsync()
     def transcode_async(self) -> windows_foundation.IAsyncActionWithProgress[winrt.system.Double]: ...
     # System.Boolean Windows.Media.Transcoding.PrepareTranscodeResult::get_CanTranscode()

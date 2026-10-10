@@ -61,10 +61,13 @@ class AdvertisingManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AdvertisingManager(winrt.system.Object, metaclass=AdvertisingManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AdvertisingManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.UserProfile.AdvertisingManagerForUser::get_AdvertisingId()
     @_property
     def advertising_id(self) -> str: ...
@@ -81,6 +84,8 @@ class AssignedAccessSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AssignedAccessSettings(winrt.system.Object, metaclass=AssignedAccessSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.System.UserProfile.AssignedAccessSettings::get_IsEnabled()
     @_property
     def is_enabled(self) -> bool: ...
@@ -100,6 +105,8 @@ class DiagnosticsSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DiagnosticsSettings(winrt.system.Object, metaclass=DiagnosticsSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.System.UserProfile.DiagnosticsSettings::get_CanUseDiagnosticsToTailorExperiences()
     @_property
     def can_use_diagnostics_to_tailor_experiences(self) -> bool: ...
@@ -118,6 +125,8 @@ class FirstSignInSettings(_cabc.Mapping[str, winrt.system.Object], winrt.system.
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.System.UserProfile.FirstSignInSettings::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]: ...
     # System.Boolean Windows.System.UserProfile.FirstSignInSettings::HasKey(System.String)
@@ -159,10 +168,13 @@ class GlobalizationPreferences_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GlobalizationPreferences(winrt.system.Object, metaclass=GlobalizationPreferences_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GlobalizationPreferencesForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.System.UserProfile.GlobalizationPreferencesForUser::get_Calendars()
     @_property
     def calendars(self) -> _cabc.Sequence[str]: ...
@@ -203,7 +215,8 @@ class LockScreen_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LockScreen(winrt.system.Object, metaclass=LockScreen_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UserInformation_Static(winrt._winrt.Object_Static):
@@ -258,7 +271,8 @@ class UserInformation_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Use User instead of UserInformation. For more info, see MSDN.")
 class UserInformation(winrt.system.Object, metaclass=UserInformation_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UserProfilePersonalizationSettings_Static(winrt._winrt.Object_Static):
@@ -270,6 +284,8 @@ class UserProfilePersonalizationSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserProfilePersonalizationSettings(winrt.system.Object, metaclass=UserProfilePersonalizationSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.UserProfile.UserProfilePersonalizationSettings::TrySetLockScreenImageAsync(Windows.Storage.StorageFile)
     def try_set_lock_screen_image_async(self, image_file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.System.UserProfile.UserProfilePersonalizationSettings::TrySetWallpaperImageAsync(Windows.Storage.StorageFile)

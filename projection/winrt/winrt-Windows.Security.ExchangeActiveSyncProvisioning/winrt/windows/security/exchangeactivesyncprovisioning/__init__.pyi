@@ -215,6 +215,8 @@ class EasClientSecurityPolicy(winrt.system.Object):
 
 @typing.final
 class EasComplianceResults(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults::get_Compliant()
     @_property
     def compliant(self) -> bool: ...

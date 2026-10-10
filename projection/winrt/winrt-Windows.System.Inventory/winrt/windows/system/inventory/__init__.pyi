@@ -20,6 +20,8 @@ class InstalledDesktopApp_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class InstalledDesktopApp(windows_foundation.IStringable, winrt.system.Object, metaclass=InstalledDesktopApp_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.Inventory.InstalledDesktopApp::ToString()
     def to_string(self) -> str: ...
     # System.String Windows.System.Inventory.InstalledDesktopApp::get_DisplayName()

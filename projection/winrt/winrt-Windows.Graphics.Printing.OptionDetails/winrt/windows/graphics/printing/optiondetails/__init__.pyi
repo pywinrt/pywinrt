@@ -56,6 +56,8 @@ class PrintOptionType(enum.IntEnum):
 
 @typing.final
 class PrintBindingOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails::get_WarningText()
@@ -97,6 +99,8 @@ class PrintBindingOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails
 
 @typing.final
 class PrintBorderingOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails::get_WarningText()
@@ -138,6 +142,8 @@ class PrintBorderingOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintCollationOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails::get_WarningText()
@@ -179,6 +185,8 @@ class PrintCollationOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintColorModeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails::get_WarningText()
@@ -220,6 +228,8 @@ class PrintColorModeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintCopiesOptionDetails(IPrintNumberOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails::get_WarningText()
@@ -264,6 +274,8 @@ class PrintCopiesOptionDetails(IPrintNumberOptionDetails, IPrintOptionDetails, w
 
 @typing.final
 class PrintCustomItemDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomItemDetails::get_ItemDisplayName()
     @_property
     def item_display_name(self) -> str: ...
@@ -276,6 +288,8 @@ class PrintCustomItemDetails(winrt.system.Object):
 
 @typing.final
 class PrintCustomItemListOptionDetails(IPrintItemListOptionDetails, IPrintCustomOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails::AddItem(System.String,System.String)
     def add_item(self, item_id: str, display_name: str, /) -> None: ...
@@ -329,6 +343,8 @@ class PrintCustomItemListOptionDetails(IPrintItemListOptionDetails, IPrintCustom
 
 @typing.final
 class PrintCustomTextOptionDetails(IPrintCustomOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails::get_DisplayName()
@@ -379,6 +395,8 @@ class PrintCustomTextOptionDetails(IPrintCustomOptionDetails, IPrintOptionDetail
 
 @typing.final
 class PrintCustomToggleOptionDetails(IPrintCustomOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintCustomToggleOptionDetails::get_DisplayName()
@@ -423,6 +441,8 @@ class PrintCustomToggleOptionDetails(IPrintCustomOptionDetails, IPrintOptionDeta
 
 @typing.final
 class PrintDuplexOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails::get_WarningText()
@@ -464,6 +484,8 @@ class PrintDuplexOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails,
 
 @typing.final
 class PrintHolePunchOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # System.String Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails::get_WarningText()
@@ -505,6 +527,8 @@ class PrintHolePunchOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintMediaSizeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails::get_Items()
@@ -546,6 +570,8 @@ class PrintMediaSizeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintMediaTypeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails::get_Items()
@@ -587,6 +613,8 @@ class PrintMediaTypeOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetai
 
 @typing.final
 class PrintOrientationOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintOrientationOptionDetails::get_Items()
@@ -628,6 +656,8 @@ class PrintOrientationOptionDetails(IPrintItemListOptionDetails, IPrintOptionDet
 
 @typing.final
 class PrintPageRangeOptionDetails(IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Graphics.Printing.OptionDetails.PrintOptionStates Windows.Graphics.Printing.OptionDetails.PrintPageRangeOptionDetails::get_State()
@@ -666,6 +696,8 @@ class PrintPageRangeOptionDetails(IPrintOptionDetails, winrt.system.Object):
 
 @typing.final
 class PrintQualityOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails::get_Items()
@@ -707,6 +739,8 @@ class PrintQualityOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails
 
 @typing.final
 class PrintStapleOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails::TrySetValue(System.Object)
     def try_set_value(self, value: winrt.system.Object, /) -> bool: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Object> Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails::get_Items()
@@ -748,6 +782,8 @@ class PrintStapleOptionDetails(IPrintItemListOptionDetails, IPrintOptionDetails,
 
 @typing.final
 class PrintTaskOptionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs::get_OptionId()
     @_property
     def option_id(self) -> winrt.system.Object: ...
@@ -759,6 +795,8 @@ class PrintTaskOptionDetails_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PrintTaskOptionDetails(windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration, windows_graphics_printing.IPrintTaskOptionsCore, winrt.system.Object, metaclass=PrintTaskOptionDetails_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.OptionDetails.PrintCustomItemListOptionDetails Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails::CreateItemListOption(System.String,System.String)
     def create_item_list_option(self, option_id: str, display_name: str, /) -> PrintCustomItemListOptionDetails: ...
     # Windows.Graphics.Printing.OptionDetails.PrintCustomTextOptionDetails Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails::CreateTextOption(System.String,System.String)

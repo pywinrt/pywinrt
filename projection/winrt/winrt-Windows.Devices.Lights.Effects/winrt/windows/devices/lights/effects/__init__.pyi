@@ -79,6 +79,8 @@ class LampArrayBitmapEffect(ILampArrayEffect, winrt.system.Object):
 
 @typing.final
 class LampArrayBitmapRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs::UpdateBitmap(Windows.Graphics.Imaging.SoftwareBitmap)
     def update_bitmap(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> None: ...
     # Windows.Foundation.TimeSpan Windows.Devices.Lights.Effects.LampArrayBitmapRequestedEventArgs::get_SinceStarted()
@@ -297,6 +299,8 @@ class LampArraySolidEffect(ILampArrayEffect, winrt.system.Object):
 
 @typing.final
 class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs::SetColor(Windows.UI.Color)
     def set_color(self, desired_color: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8], /) -> None: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayUpdateRequestedEventArgs::SetColorForIndex(System.Int32,Windows.UI.Color)

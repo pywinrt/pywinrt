@@ -15,6 +15,8 @@ __all__ = [
 
 @typing.final
 class PerceptionTimestamp(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Perception.PerceptionTimestamp::get_PredictionAmount()
     @_property
     def prediction_amount(self) -> datetime.timedelta: ...
@@ -34,5 +36,6 @@ class PerceptionTimestampHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PerceptionTimestampHelper(winrt.system.Object, metaclass=PerceptionTimestampHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

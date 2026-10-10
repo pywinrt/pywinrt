@@ -55,6 +55,8 @@ class RfcommDeviceService_Static(winrt._winrt.Object_Static):
 class RfcommDeviceService(windows_foundation.IClosable, winrt.system.Object, metaclass=RfcommDeviceService_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -93,6 +95,8 @@ class RfcommDeviceService(windows_foundation.IClosable, winrt.system.Object, met
 
 @typing.final
 class RfcommDeviceServicesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -127,6 +131,8 @@ class RfcommServiceId_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RfcommServiceId(winrt.system.Object, metaclass=RfcommServiceId_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId::AsShortId()
     def as_short_id(self) -> winrt.system.UInt32: ...
     # System.String Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId::AsString()
@@ -142,6 +148,8 @@ class RfcommServiceProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RfcommServiceProvider(winrt.system.Object, metaclass=RfcommServiceProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider::StartAdvertising(Windows.Networking.Sockets.StreamSocketListener)
     def start_advertising(self, listener: windows_networking_sockets.StreamSocketListener, /) -> None: ...

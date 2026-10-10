@@ -26,6 +26,8 @@ class AdcChannelMode(enum.IntEnum):
 class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Adc.AdcChannel::Close()
     def close(self) -> None: ...
     # System.Double Windows.Devices.Adc.AdcChannel::ReadRatio()
@@ -45,6 +47,8 @@ class AdcController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AdcController(winrt.system.Object, metaclass=AdcController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Adc.AdcController::IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)
     def is_channel_mode_supported(self, channel_mode: AdcChannelMode, /) -> bool: ...
     # Windows.Devices.Adc.AdcChannel Windows.Devices.Adc.AdcController::OpenChannel(System.Int32)

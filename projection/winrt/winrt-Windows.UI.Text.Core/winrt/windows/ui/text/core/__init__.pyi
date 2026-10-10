@@ -144,6 +144,8 @@ class CoreTextRange:
 
 @typing.final
 class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Text.Core.CoreTextCompositionSegment> Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs::get_CompositionSegments()
@@ -155,6 +157,8 @@ class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreTextCompositionSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Text.Core.CoreTextCompositionSegment::get_PreconversionString()
     @_property
     def preconversion_string(self) -> str: ...
@@ -164,6 +168,8 @@ class CoreTextCompositionSegment(winrt.system.Object):
 
 @typing.final
 class CoreTextCompositionStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs::get_IsCanceled()
@@ -172,6 +178,8 @@ class CoreTextCompositionStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreTextEditContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Text.Core.CoreTextEditContext::NotifyFocusEnter()
     def notify_focus_enter(self) -> None: ...
     # System.Void Windows.UI.Text.Core.CoreTextEditContext::NotifyFocusLeave()
@@ -249,6 +257,8 @@ class CoreTextEditContext(winrt.system.Object):
 
 @typing.final
 class CoreTextFormatUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.UI.Text.Core.CoreTextFormatUpdatingResult Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs::get_Result()
@@ -281,6 +291,8 @@ class CoreTextFormatUpdatingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreTextLayoutBounds(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.Text.Core.CoreTextLayoutBounds::get_TextBounds()
     @_property
     def text_bounds(self) -> windows_foundation.Rect: ...
@@ -296,6 +308,8 @@ class CoreTextLayoutBounds(winrt.system.Object):
 
 @typing.final
 class CoreTextLayoutRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextLayoutRequest::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.UI.Text.Core.CoreTextLayoutRequest::get_IsCanceled()
@@ -313,12 +327,16 @@ class CoreTextLayoutRequest(winrt.system.Object):
 
 @typing.final
 class CoreTextLayoutRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextLayoutRequest Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs::get_Request()
     @_property
     def request(self) -> CoreTextLayoutRequest: ...
 
 @typing.final
 class CoreTextSelectionRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextSelectionRequest::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.UI.Text.Core.CoreTextRange Windows.UI.Text.Core.CoreTextSelectionRequest::get_Selection()
@@ -333,12 +351,16 @@ class CoreTextSelectionRequest(winrt.system.Object):
 
 @typing.final
 class CoreTextSelectionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextSelectionRequest Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs::get_Request()
     @_property
     def request(self) -> CoreTextSelectionRequest: ...
 
 @typing.final
 class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.UI.Text.Core.CoreTextSelectionUpdatingResult Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs::get_Result()
@@ -362,7 +384,8 @@ class CoreTextServicesConstants_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesConstants_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CoreTextServicesManager_Static(winrt._winrt.Object_Static):
@@ -371,6 +394,8 @@ class CoreTextServicesManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreTextServicesManager(winrt.system.Object, metaclass=CoreTextServicesManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextEditContext Windows.UI.Text.Core.CoreTextServicesManager::CreateEditContext()
     def create_edit_context(self) -> CoreTextEditContext: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Text.Core.CoreTextServicesManager::add_InputLanguageChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Text.Core.CoreTextServicesManager,System.Object>)
@@ -383,6 +408,8 @@ class CoreTextServicesManager(winrt.system.Object, metaclass=CoreTextServicesMan
 
 @typing.final
 class CoreTextTextRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextTextRequest::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.String Windows.UI.Text.Core.CoreTextTextRequest::get_Text()
@@ -400,12 +427,16 @@ class CoreTextTextRequest(winrt.system.Object):
 
 @typing.final
 class CoreTextTextRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextTextRequest Windows.UI.Text.Core.CoreTextTextRequestedEventArgs::get_Request()
     @_property
     def request(self) -> CoreTextTextRequest: ...
 
 @typing.final
 class CoreTextTextUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.UI.Text.Core.CoreTextTextUpdatingResult Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs::get_Result()

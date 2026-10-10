@@ -99,6 +99,8 @@ class AppWindow_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Windowing.AppWindow::AssociateWithDispatcherQueue(Microsoft.UI.Dispatching.DispatcherQueue)
     def associate_with_dispatcher_queue(self, dispatcher_queue: microsoft_ui_dispatching.DispatcherQueue, /) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindow::Destroy()
@@ -201,6 +203,8 @@ class AppWindow(winrt.system.Object, metaclass=AppWindow_Static):
 
 @typing.final
 class AppWindowChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Windowing.AppWindowChangedEventArgs::get_DidPositionChange()
     @_property
     def did_position_change(self) -> bool: ...
@@ -228,6 +232,8 @@ class AppWindowChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppWindowClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Windowing.AppWindowClosingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -240,6 +246,8 @@ class AppWindowPresenter_Static(winrt._winrt.Object_Static):
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Windowing.AppWindowPresenterKind Microsoft.UI.Windowing.AppWindowPresenter::get_Kind()
     @_property
     @typing.final
@@ -252,6 +260,8 @@ class AppWindowTitleBar_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppWindowTitleBar(winrt.system.Object, metaclass=AppWindowTitleBar_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::ResetToDefault()
     def reset_to_default(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.AppWindowTitleBar::SetDragRectangles(Windows.Graphics.RectInt32[])
@@ -370,6 +380,8 @@ class CompactOverlayPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresenter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Windowing.CompactOverlaySize Microsoft.UI.Windowing.CompactOverlayPresenter::get_InitialSize()
     @_property
     def initial_size(self) -> CompactOverlaySize: ...
@@ -397,6 +409,8 @@ class DisplayArea_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayArea(winrt.system.Object, metaclass=DisplayArea_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.DisplayId Microsoft.UI.Windowing.DisplayArea::get_DisplayId()
     @_property
     def display_id(self) -> microsoft_ui.DisplayId: ...
@@ -412,6 +426,8 @@ class DisplayArea(winrt.system.Object, metaclass=DisplayArea_Static):
 
 @typing.final
 class DisplayAreaWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Windowing.DisplayAreaWatcher::Start()
     def start(self) -> None: ...
     # System.Void Microsoft.UI.Windowing.DisplayAreaWatcher::Stop()
@@ -447,7 +463,8 @@ class FullScreenPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class FullScreenPresenter(AppWindowPresenter, metaclass=FullScreenPresenter_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class OverlappedPresenter_Static(AppWindowPresenter_Static):
@@ -465,6 +482,8 @@ class OverlappedPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Maximize()
     def maximize(self) -> None: ...
     @typing.overload

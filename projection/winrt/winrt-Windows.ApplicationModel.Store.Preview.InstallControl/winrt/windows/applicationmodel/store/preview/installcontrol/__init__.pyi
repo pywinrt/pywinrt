@@ -69,6 +69,8 @@ class GetEntitlementStatus(enum.IntEnum):
 
 @typing.final
 class AppInstallItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem::Cancel()
     def cancel(self) -> None: ...
@@ -355,6 +357,8 @@ class AppInstallManager(winrt.system.Object):
 
 @typing.final
 class AppInstallManagerItemEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallItem Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManagerItemEventArgs::get_Item()
     @_property
     def item(self) -> AppInstallItem: ...
@@ -455,6 +459,8 @@ class AppInstallOptions(winrt.system.Object):
 
 @typing.final
 class AppInstallStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallStatus::get_BytesDownloaded()
     @_property
     def bytes_downloaded(self) -> winrt.system.UInt64: ...
@@ -504,6 +510,8 @@ class AppUpdateOptions(winrt.system.Object):
 
 @typing.final
 class GetEntitlementResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementStatus Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult::get_Status()
     @_property
     def status(self) -> GetEntitlementStatus: ...

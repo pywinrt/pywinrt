@@ -18,6 +18,8 @@ class InkWorkspaceHostedAppManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class InkWorkspaceHostedAppManager(winrt.system.Object, metaclass=InkWorkspaceHostedAppManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager::SetThumbnailAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def set_thumbnail_async(self, bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncAction: ...
 

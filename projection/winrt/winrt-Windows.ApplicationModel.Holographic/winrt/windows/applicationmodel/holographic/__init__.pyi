@@ -19,6 +19,8 @@ class HolographicKeyboard_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HolographicKeyboard(winrt.system.Object, metaclass=HolographicKeyboard_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Holographic.HolographicKeyboard::ResetPlacementOverride()
     def reset_placement_override(self) -> None: ...
     @typing.overload

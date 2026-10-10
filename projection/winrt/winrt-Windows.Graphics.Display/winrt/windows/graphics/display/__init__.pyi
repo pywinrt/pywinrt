@@ -104,6 +104,8 @@ class NitRange:
 
 @typing.final
 class AdvancedColorInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Display.AdvancedColorInfo::IsAdvancedColorKindAvailable(Windows.Graphics.Display.AdvancedColorKind)
     def is_advanced_color_kind_available(self, kind: AdvancedColorKind, /) -> bool: ...
     # System.Boolean Windows.Graphics.Display.AdvancedColorInfo::IsHdrMetadataFormatCurrentlySupported(Windows.Graphics.Display.HdrMetadataFormat)
@@ -147,6 +149,8 @@ class BrightnessOverride_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BrightnessOverride(winrt.system.Object, metaclass=BrightnessOverride_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Graphics.Display.BrightnessOverride::GetLevelForScenario(Windows.Graphics.Display.DisplayBrightnessScenario)
     def get_level_for_scenario(self, scenario: DisplayBrightnessScenario, /) -> winrt.system.Double: ...
     # System.Void Windows.Graphics.Display.BrightnessOverride::SetBrightnessLevel(System.Double,Windows.Graphics.Display.DisplayBrightnessOverrideOptions)
@@ -190,6 +194,8 @@ class BrightnessOverrideSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BrightnessOverrideSettings(winrt.system.Object, metaclass=BrightnessOverrideSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Graphics.Display.BrightnessOverrideSettings::get_DesiredLevel()
     @_property
     def desired_level(self) -> winrt.system.Double: ...
@@ -204,6 +210,8 @@ class ColorOverrideSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ColorOverrideSettings(winrt.system.Object, metaclass=ColorOverrideSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Display.DisplayColorOverrideScenario Windows.Graphics.Display.ColorOverrideSettings::get_DesiredDisplayColorOverrideScenario()
     @_property
     def desired_display_color_override_scenario(self) -> DisplayColorOverrideScenario: ...
@@ -215,6 +223,8 @@ class DisplayEnhancementOverride_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayEnhancementOverride(winrt.system.Object, metaclass=DisplayEnhancementOverride_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities Windows.Graphics.Display.DisplayEnhancementOverride::GetCurrentDisplayEnhancementOverrideCapabilities()
     def get_current_display_enhancement_override_capabilities(self) -> DisplayEnhancementOverrideCapabilities: ...
     # System.Void Windows.Graphics.Display.DisplayEnhancementOverride::RequestOverride()
@@ -254,6 +264,8 @@ class DisplayEnhancementOverride(winrt.system.Object, metaclass=DisplayEnhanceme
 
 @typing.final
 class DisplayEnhancementOverrideCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Display.NitRange> Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities::GetSupportedNitRanges()
     def get_supported_nit_ranges(self) -> _cabc.Sequence[NitRange]: ...
     # System.Boolean Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities::get_IsBrightnessControlSupported()
@@ -265,6 +277,8 @@ class DisplayEnhancementOverrideCapabilities(winrt.system.Object):
 
 @typing.final
 class DisplayEnhancementOverrideCapabilitiesChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs::get_Capabilities()
     @_property
     def capabilities(self) -> DisplayEnhancementOverrideCapabilities: ...
@@ -286,6 +300,8 @@ class DisplayInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayInformation(winrt.system.Object, metaclass=DisplayInformation_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Display.AdvancedColorInfo Windows.Graphics.Display.DisplayInformation::GetAdvancedColorInfo()
     def get_advanced_color_info(self) -> AdvancedColorInfo: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Graphics.Display.DisplayInformation::GetColorProfileAsync()
@@ -411,7 +427,8 @@ class DisplayProperties_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("DisplayProperties may be altered or unavailable for releases after Windows Phone 8.1. Instead, use DisplayInformation.")
 class DisplayProperties(winrt.system.Object, metaclass=DisplayProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DisplayServices_Static(winrt._winrt.Object_Static):
@@ -420,6 +437,7 @@ class DisplayServices_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayServices(winrt.system.Object, metaclass=DisplayServices_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 type DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], object]

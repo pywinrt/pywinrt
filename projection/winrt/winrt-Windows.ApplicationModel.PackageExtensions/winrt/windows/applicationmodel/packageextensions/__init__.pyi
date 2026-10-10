@@ -23,6 +23,8 @@ __all__ = [
 
 @typing.final
 class PackageExtension(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IPropertySet Windows.ApplicationModel.PackageExtensions.PackageExtension::GetExtensionProperties()
     def get_extension_properties(self) -> windows_foundation_collections.IPropertySet: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IPropertySet> Windows.ApplicationModel.PackageExtensions.PackageExtension::GetExtensionPropertiesAsync()
@@ -53,6 +55,8 @@ class PackageExtensionCatalog_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageExtensionCatalog(winrt.system.Object, metaclass=PackageExtensionCatalog_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.PackageExtensions.PackageExtension> Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog::FindAll()
     def find_all(self) -> _cabc.Sequence[PackageExtension]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.PackageExtensions.PackageExtension>> Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog::FindAllAsync()
@@ -82,6 +86,8 @@ class PackageExtensionCatalog(winrt.system.Object, metaclass=PackageExtensionCat
 
 @typing.final
 class PackageExtensionPackageInstalledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.PackageExtensions.PackageExtension> Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageInstalledEventArgs::get_Extensions()
     @_property
     def extensions(self) -> _cabc.Sequence[PackageExtension]: ...
@@ -94,6 +100,8 @@ class PackageExtensionPackageInstalledEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageExtensionPackageStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageStatusChangedEventArgs::get_Package()
     @_property
     def package(self) -> windows_applicationmodel.Package: ...
@@ -103,6 +111,8 @@ class PackageExtensionPackageStatusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageExtensionPackageUninstallingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUninstallingEventArgs::get_Package()
     @_property
     def package(self) -> windows_applicationmodel.Package: ...
@@ -112,6 +122,8 @@ class PackageExtensionPackageUninstallingEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageExtensionPackageUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.PackageExtensions.PackageExtension> Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatedEventArgs::get_Extensions()
     @_property
     def extensions(self) -> _cabc.Sequence[PackageExtension]: ...
@@ -124,6 +136,8 @@ class PackageExtensionPackageUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageExtensionPackageUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageExtensions.PackageExtensionPackageUpdatingEventArgs::get_Package()
     @_property
     def package(self) -> windows_applicationmodel.Package: ...

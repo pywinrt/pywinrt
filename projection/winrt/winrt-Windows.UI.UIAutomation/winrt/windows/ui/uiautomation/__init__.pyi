@@ -15,6 +15,8 @@ __all__ = [
 
 @typing.final
 class AutomationConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.UIAutomation.AutomationConnection::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
@@ -27,12 +29,16 @@ class AutomationConnection(winrt.system.Object):
 
 @typing.final
 class AutomationConnectionBoundObject(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.UIAutomation.AutomationConnection Windows.UI.UIAutomation.AutomationConnectionBoundObject::get_Connection()
     @_property
     def connection(self) -> AutomationConnection: ...
 
 @typing.final
 class AutomationElement(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.UIAutomation.AutomationElement::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
@@ -45,5 +51,6 @@ class AutomationElement(winrt.system.Object):
 
 @typing.final
 class AutomationTextRange(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

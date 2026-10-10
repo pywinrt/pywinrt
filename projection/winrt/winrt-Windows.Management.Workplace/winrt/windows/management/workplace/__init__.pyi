@@ -33,7 +33,8 @@ class MdmPolicy_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MdmPolicy(winrt.system.Object, metaclass=MdmPolicy_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WorkplaceSettings_Static(winrt._winrt.Object_Static):
@@ -43,5 +44,6 @@ class WorkplaceSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WorkplaceSettings(winrt.system.Object, metaclass=WorkplaceSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

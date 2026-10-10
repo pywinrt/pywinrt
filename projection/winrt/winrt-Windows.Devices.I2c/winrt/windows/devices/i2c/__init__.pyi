@@ -82,6 +82,8 @@ class I2cController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class I2cController(winrt.system.Object, metaclass=I2cController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.I2c.I2cDevice Windows.Devices.I2c.I2cController::GetDevice(Windows.Devices.I2c.I2cConnectionSettings)
     def get_device(self, settings: I2cConnectionSettings, /) -> I2cDevice: ...
 
@@ -104,6 +106,8 @@ class I2cDevice_Static(winrt._winrt.Object_Static):
 class I2cDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=I2cDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.I2c.I2cDevice::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.I2c.I2cDevice::Read(System.Byte[])

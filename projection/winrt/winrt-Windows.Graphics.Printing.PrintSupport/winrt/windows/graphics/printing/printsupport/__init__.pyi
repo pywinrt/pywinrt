@@ -90,6 +90,8 @@ class PrintSupportAppInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PrintSupportAppInfo(winrt.system.Object, metaclass=PrintSupportAppInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.AppInfo Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::get_AppInfo()
     @_property
     def app_info(self) -> windows_applicationmodel.AppInfo: ...
@@ -99,6 +101,8 @@ class PrintSupportAppInfo(winrt.system.Object, metaclass=PrintSupportAppInfo_Sta
 
 @typing.final
 class PrintSupportCommunicationErrorDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs::get_CommunicationConfiguration()
@@ -113,6 +117,8 @@ class PrintSupportCommunicationErrorDetectedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintSupportEnterpriseManagementUIEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.PrintSupport.PrintSupportEnterpriseManagementUIEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -131,6 +137,8 @@ class PrintSupportEnterpriseManagementUIEventArgs(windows_applicationmodel_activ
 
 @typing.final
 class PrintSupportExtensionSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession::add_PrintDeviceCapabilitiesChanged(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession,Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs>)
@@ -155,12 +163,16 @@ class PrintSupportExtensionSession(winrt.system.Object):
 
 @typing.final
 class PrintSupportExtensionTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionTriggerDetails::get_Session()
     @_property
     def session(self) -> PrintSupportExtensionSession: ...
 
 @typing.final
 class PrintSupportIppCommunicationConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration::get_CanModifyTimeouts()
     @_property
     def can_modify_timeouts(self) -> bool: ...
@@ -176,6 +188,8 @@ class PrintSupportIppCommunicationConfiguration(winrt.system.Object):
 
 @typing.final
 class PrintSupportIppCommunicationTimeouts(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts::get_SendTimeout()
     @_property
     def send_timeout(self) -> datetime.timedelta: ...
@@ -197,6 +211,8 @@ class PrintSupportIppCommunicationTimeouts(winrt.system.Object):
 
 @typing.final
 class PrintSupportMxdcImageQualityConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintSupport.XpsImageQuality Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration::get_TextOutputQuality()
     @_property
     def text_output_quality(self) -> XpsImageQuality: ...
@@ -242,6 +258,8 @@ class PrintSupportMxdcImageQualityConfiguration(winrt.system.Object):
 
 @typing.final
 class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.XmlDocument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::GetCurrentPrintDeviceCapabilities()
     def get_current_print_device_capabilities(self) -> windows_data_xml_dom.XmlDocument: ...
     # Windows.Data.Xml.Dom.XmlDocument Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs::GetCurrentPrintDeviceResources()
@@ -277,7 +295,8 @@ class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(winrt._winrt.Object
 
 @typing.final
 class PrintSupportPrintDeviceCapabilitiesUpdatePolicy(winrt.system.Object, metaclass=PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PrintSupportPrintTicketElement(winrt.system.Object):
@@ -297,6 +316,8 @@ class PrintSupportPrintTicketElement(winrt.system.Object):
 
 @typing.final
 class PrintSupportPrintTicketValidationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs::SetPrintJobShowsUI(System.Boolean)
@@ -309,6 +330,8 @@ class PrintSupportPrintTicketValidationRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintSupportPrinterSelectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportPrinterSelectedEventArgs::SetAdaptiveCard(Windows.UI.Shell.IAdaptiveCard)
@@ -332,6 +355,8 @@ class PrintSupportPrinterSelectedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintSupportSessionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Printers.IppPrintDevice Windows.Graphics.Printing.PrintSupport.PrintSupportSessionInfo::get_Printer()
     @_property
     def printer(self) -> windows_devices_printers.IppPrintDevice: ...
@@ -341,6 +366,8 @@ class PrintSupportSessionInfo(winrt.system.Object):
 
 @typing.final
 class PrintSupportSettingsActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs::get_Kind()
@@ -364,6 +391,8 @@ class PrintSupportSettingsActivatedEventArgs(windows_applicationmodel_activation
 
 @typing.final
 class PrintSupportSettingsUISession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession::UpdatePrintTicket(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket)
     def update_print_ticket(self, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, /) -> None: ...
     # System.String Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsUISession::get_DocumentTitle()

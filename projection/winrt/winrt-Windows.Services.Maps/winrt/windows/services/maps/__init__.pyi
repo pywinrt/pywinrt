@@ -189,6 +189,8 @@ class EnhancedWaypoint(winrt.system.Object):
 
 @typing.final
 class ManeuverWarning(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.ManeuverWarningKind Windows.Services.Maps.ManeuverWarning::get_Kind()
     @_property
     def kind(self) -> ManeuverWarningKind: ...
@@ -198,6 +200,8 @@ class ManeuverWarning(winrt.system.Object):
 
 @typing.final
 class MapAddress(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Maps.MapAddress::get_BuildingFloor()
     @_property
     def building_floor(self) -> str: ...
@@ -249,6 +253,8 @@ class MapAddress(winrt.system.Object):
 
 @typing.final
 class MapLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.MapAddress Windows.Services.Maps.MapLocation::get_Address()
     @_property
     def address(self) -> MapAddress: ...
@@ -287,10 +293,13 @@ class MapLocationFinder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapLocationFinder(winrt.system.Object, metaclass=MapLocationFinder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MapLocationFinderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.MapLocation> Windows.Services.Maps.MapLocationFinderResult::get_Locations()
     @_property
     def locations(self) -> _cabc.Sequence[MapLocation]: ...
@@ -307,10 +316,13 @@ class MapManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapManager(winrt.system.Object, metaclass=MapManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MapRoute(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Services.Maps.MapRoute::get_BoundingBox()
     @_property
     def bounding_box(self) -> windows_devices_geolocation.GeoboundingBox: ...
@@ -448,10 +460,13 @@ class MapRouteFinder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapRouteFinder(winrt.system.Object, metaclass=MapRouteFinder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MapRouteFinderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.MapRoute Windows.Services.Maps.MapRouteFinderResult::get_Route()
     @_property
     def route(self) -> MapRoute: ...
@@ -464,6 +479,8 @@ class MapRouteFinderResult(winrt.system.Object):
 
 @typing.final
 class MapRouteLeg(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Services.Maps.MapRouteLeg::get_BoundingBox()
     @_property
     def bounding_box(self) -> windows_devices_geolocation.GeoboundingBox: ...
@@ -488,6 +505,8 @@ class MapRouteLeg(winrt.system.Object):
 
 @typing.final
 class MapRouteManeuver(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Maps.MapRouteManeuver::get_ExitNumber()
     @_property
     def exit_number(self) -> str: ...
@@ -542,7 +561,8 @@ class MapService_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MapService(winrt.system.Object, metaclass=MapService_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlaceInfo_Static(winrt._winrt.Object_Static):
@@ -584,6 +604,8 @@ class PlaceInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlaceInfo(winrt.system.Object, metaclass=PlaceInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Services.Maps.PlaceInfo::Show(Windows.Foundation.Rect)
     def show(self, selection: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> None: ...

@@ -349,6 +349,8 @@ class InputInjector_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class InputInjector(winrt.system.Object, metaclass=InputInjector_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.Preview.Injection.InputInjector::InitializeGamepadInjection()
     def initialize_gamepad_injection(self) -> None: ...
     # System.Void Windows.UI.Input.Preview.Injection.InputInjector::InitializePenInjection(Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode)

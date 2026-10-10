@@ -175,6 +175,8 @@ class RcsServiceKind(enum.IntEnum):
 
 @typing.final
 class ChatCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Chat.ChatCapabilities::get_IsChatCapable()
     @_property
     def is_chat_capable(self) -> bool: ...
@@ -216,10 +218,13 @@ class ChatCapabilitiesManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ChatConversation(IChatItem, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatConversation::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.ApplicationModel.Chat.ChatMessageReader Windows.ApplicationModel.Chat.ChatConversation::GetMessageReader()
@@ -283,6 +288,8 @@ class ChatConversation(IChatItem, winrt.system.Object):
 
 @typing.final
 class ChatConversationReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatConversation>> Windows.ApplicationModel.Chat.ChatConversationReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[ChatConversation]]: ...
@@ -529,10 +536,13 @@ class ChatMessageBlocking_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ChatMessageBlocking(winrt.system.Object, metaclass=ChatMessageBlocking_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ChatMessageChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Chat.ChatMessageChangeType Windows.ApplicationModel.Chat.ChatMessageChange::get_ChangeType()
     @_property
     def change_type(self) -> ChatMessageChangeType: ...
@@ -542,6 +552,8 @@ class ChatMessageChange(winrt.system.Object):
 
 @typing.final
 class ChatMessageChangeReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Chat.ChatMessageChangeReader::AcceptChanges()
     def accept_changes(self) -> None: ...
     # System.Void Windows.ApplicationModel.Chat.ChatMessageChangeReader::AcceptChangesThrough(Windows.ApplicationModel.Chat.ChatMessageChange)
@@ -551,6 +563,8 @@ class ChatMessageChangeReader(winrt.system.Object):
 
 @typing.final
 class ChatMessageChangeTracker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Chat.ChatMessageChangeTracker::Enable()
     def enable(self) -> None: ...
     # Windows.ApplicationModel.Chat.ChatMessageChangeReader Windows.ApplicationModel.Chat.ChatMessageChangeTracker::GetChangeReader()
@@ -560,11 +574,15 @@ class ChatMessageChangeTracker(winrt.system.Object):
 
 @typing.final
 class ChatMessageChangedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Chat.ChatMessageChangedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ChatMessageChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Chat.ChatMessageChangedDeferral Windows.ApplicationModel.Chat.ChatMessageChangedEventArgs::GetDeferral()
     def get_deferral(self) -> ChatMessageChangedDeferral: ...
 
@@ -587,10 +605,13 @@ class ChatMessageManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ChatMessageManager(winrt.system.Object, metaclass=ChatMessageManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ChatMessageNotificationTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Chat.ChatMessage Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails::get_ChatMessage()
     @_property
     def chat_message(self) -> ChatMessage: ...
@@ -609,6 +630,8 @@ class ChatMessageNotificationTriggerDetails(winrt.system.Object):
 
 @typing.final
 class ChatMessageReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatMessage>> Windows.ApplicationModel.Chat.ChatMessageReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[ChatMessage]]: ...
@@ -622,6 +645,8 @@ class ChatMessageReader(winrt.system.Object):
 
 @typing.final
 class ChatMessageStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::DeleteMessageAsync(System.String)
     def delete_message_async(self, local_message_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageStore::DownloadMessageAsync(System.String)
@@ -720,6 +745,8 @@ class ChatMessageStore(winrt.system.Object):
 
 @typing.final
 class ChatMessageStoreChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Chat.ChatMessageStoreChangedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
@@ -729,6 +756,8 @@ class ChatMessageStoreChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class ChatMessageTransport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageTransport::RequestSetAsNotificationProviderAsync()
     def request_set_as_notification_provider_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Boolean Windows.ApplicationModel.Chat.ChatMessageTransport::get_IsActive()
@@ -752,6 +781,8 @@ class ChatMessageTransport(winrt.system.Object):
 
 @typing.final
 class ChatMessageTransportConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.ApplicationModel.Chat.ChatMessageTransportConfiguration::get_ExtendedProperties()
     @_property
     def extended_properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
@@ -770,6 +801,8 @@ class ChatMessageTransportConfiguration(winrt.system.Object):
 
 @typing.final
 class ChatMessageValidationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.ApplicationModel.Chat.ChatMessageValidationResult::get_MaxPartCount()
     @_property
     def max_part_count(self) -> winrt.system.UInt32 | None: ...
@@ -832,6 +865,8 @@ class ChatRecipientDeliveryInfo(winrt.system.Object):
 
 @typing.final
 class ChatSearchReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.IChatItem>> Windows.ApplicationModel.Chat.ChatSearchReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IChatItem]]: ...
@@ -845,6 +880,8 @@ class ChatSearchReader(winrt.system.Object):
 
 @typing.final
 class ChatSyncConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Chat.ChatRestoreHistorySpan Windows.ApplicationModel.Chat.ChatSyncConfiguration::get_RestoreHistorySpan()
     @_property
     def restore_history_span(self) -> ChatRestoreHistorySpan: ...
@@ -860,6 +897,8 @@ class ChatSyncConfiguration(winrt.system.Object):
 
 @typing.final
 class ChatSyncManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatSyncManager::AssociateAccountAsync(Windows.Security.Credentials.WebAccount)
     def associate_account_async(self, web_account: windows_security_credentials.WebAccount, /) -> windows_foundation.IAsyncAction: ...
     # System.Boolean Windows.ApplicationModel.Chat.ChatSyncManager::IsAccountAssociated(Windows.Security.Credentials.WebAccount)
@@ -876,6 +915,8 @@ class ChatSyncManager(winrt.system.Object):
 
 @typing.final
 class RcsEndUserMessage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.RcsEndUserMessage::SendResponseAsync(Windows.ApplicationModel.Chat.RcsEndUserMessageAction)
     def send_response_async(self, action: RcsEndUserMessageAction, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.RcsEndUserMessage::SendResponseWithPinAsync(Windows.ApplicationModel.Chat.RcsEndUserMessageAction,System.String)
@@ -898,12 +939,16 @@ class RcsEndUserMessage(winrt.system.Object):
 
 @typing.final
 class RcsEndUserMessageAction(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Chat.RcsEndUserMessageAction::get_Label()
     @_property
     def label(self) -> str: ...
 
 @typing.final
 class RcsEndUserMessageAvailableEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs::get_IsMessageAvailable()
     @_property
     def is_message_available(self) -> bool: ...
@@ -913,6 +958,8 @@ class RcsEndUserMessageAvailableEventArgs(winrt.system.Object):
 
 @typing.final
 class RcsEndUserMessageAvailableTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableTriggerDetails::get_Text()
     @_property
     def text(self) -> str: ...
@@ -922,6 +969,8 @@ class RcsEndUserMessageAvailableTriggerDetails(winrt.system.Object):
 
 @typing.final
 class RcsEndUserMessageManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Chat.RcsEndUserMessageManager::add_MessageAvailableChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Chat.RcsEndUserMessageManager,Windows.ApplicationModel.Chat.RcsEndUserMessageAvailableEventArgs>)
     def add_message_available_changed(self, handler: windows_foundation.TypedEventHandler[RcsEndUserMessageManager, RcsEndUserMessageAvailableEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.Chat.RcsEndUserMessageManager::remove_MessageAvailableChanged(Windows.Foundation.EventRegistrationToken)
@@ -944,16 +993,21 @@ class RcsManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RcsManager(winrt.system.Object, metaclass=RcsManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RcsServiceKindSupportedChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Chat.RcsServiceKind Windows.ApplicationModel.Chat.RcsServiceKindSupportedChangedEventArgs::get_ServiceKind()
     @_property
     def service_kind(self) -> RcsServiceKind: ...
 
 @typing.final
 class RcsTransport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Chat.RcsTransport::IsServiceKindSupported(Windows.ApplicationModel.Chat.RcsServiceKind)
     def is_service_kind_supported(self, service_kind: RcsServiceKind, /) -> bool: ...
     # System.Boolean Windows.ApplicationModel.Chat.RcsTransport::IsStoreAndForwardEnabled(Windows.ApplicationModel.Chat.RcsServiceKind)
@@ -980,6 +1034,8 @@ class RcsTransport(winrt.system.Object):
 
 @typing.final
 class RcsTransportConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.ApplicationModel.Chat.RcsTransportConfiguration::get_MaxAttachmentCount()
     @_property
     def max_attachment_count(self) -> winrt.system.Int32: ...
@@ -1001,6 +1057,8 @@ class RcsTransportConfiguration(winrt.system.Object):
 
 @typing.final
 class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Chat.RemoteParticipantComposingChangedEventArgs::get_IsComposing()
     @_property
     def is_composing(self) -> bool: ...

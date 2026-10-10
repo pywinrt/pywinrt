@@ -100,6 +100,8 @@ class ConstantForceEffect(IForceFeedbackEffect, winrt.system.Object):
 
 @typing.final
 class ForceFeedbackMotor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor::LoadEffectAsync(Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect)
     def load_effect_async(self, effect: IForceFeedbackEffect, /) -> windows_foundation.IAsyncOperation[ForceFeedbackLoadEffectResult]: ...
     # System.Void Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor::PauseAllEffects()

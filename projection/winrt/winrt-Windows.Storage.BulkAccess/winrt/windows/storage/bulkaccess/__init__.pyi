@@ -25,6 +25,8 @@ __all__ = [
 
 @typing.final
 class FileInformation(windows_storage.IStorageFile2, windows_storage.IStorageFilePropertiesWithAvailability, windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageItem2, windows_storage.IStorageItemProperties, windows_storage.IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Storage.BulkAccess.FileInformation::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     def copy_and_replace_async(self, file_to_replace: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -252,6 +254,8 @@ class FileInformationFactory(winrt.system.Object):
 
 @typing.final
 class FolderInformation(windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageFolder2, windows_storage.IStorageItem2, windows_storage_search.IStorageFolderQueryOperations, windows_storage.IStorageItemProperties, windows_storage.IStorageFolder, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Storage.BulkAccess.FolderInformation::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
     @typing.overload

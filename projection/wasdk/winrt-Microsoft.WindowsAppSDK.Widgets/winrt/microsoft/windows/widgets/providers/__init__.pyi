@@ -39,6 +39,8 @@ __all__ = [
 
 @typing.final
 class WidgetActionInvokedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetActionInvokedArgs::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
@@ -54,6 +56,8 @@ class WidgetActionInvokedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetAnalyticsInfoReportedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs::get_AnalyticsJson()
     @_property
     def analytics_json(self) -> str: ...
@@ -63,6 +67,8 @@ class WidgetAnalyticsInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetContext::get_DefinitionId()
     @_property
     def definition_id(self) -> str: ...
@@ -78,12 +84,16 @@ class WidgetContext(winrt.system.Object):
 
 @typing.final
 class WidgetContextChangedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Widgets.Providers.WidgetContext Microsoft.Windows.Widgets.Providers.WidgetContextChangedArgs::get_WidgetContext()
     @_property
     def widget_context(self) -> WidgetContext: ...
 
 @typing.final
 class WidgetCustomizationRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
@@ -93,6 +103,8 @@ class WidgetCustomizationRequestedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetErrorInfoReportedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs::get_ErrorJson()
     @_property
     def error_json(self) -> str: ...
@@ -102,6 +114,8 @@ class WidgetErrorInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetInfo::get_CustomState()
     @_property
     def custom_state(self) -> str: ...
@@ -131,6 +145,8 @@ class WidgetManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WidgetManager(IWidgetManager2, IWidgetManager, winrt.system.Object, metaclass=WidgetManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.Widgets.Providers.WidgetManager::DeleteWidget(System.String)
     def delete_widget(self, widget_id: str, /) -> None: ...
     # System.String[] Microsoft.Windows.Widgets.Providers.WidgetManager::GetWidgetIds()
@@ -146,6 +162,8 @@ class WidgetManager(IWidgetManager2, IWidgetManager, winrt.system.Object, metacl
 
 @typing.final
 class WidgetMessageReceivedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs::get_Message()
     @_property
     def message(self) -> str: ...
@@ -155,6 +173,8 @@ class WidgetMessageReceivedArgs(winrt.system.Object):
 
 @typing.final
 class WidgetResourceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Providers.WidgetResourceRequest::get_Method()
     @_property
     def method(self) -> str: ...
@@ -176,6 +196,8 @@ class WidgetResourceRequest(winrt.system.Object):
 
 @typing.final
 class WidgetResourceRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Windows.Widgets.Providers.WidgetResourceResponse Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs::get_Response()

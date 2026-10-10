@@ -49,6 +49,8 @@ class OfflineMapPackage_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::RequestStartDownloadAsync()
     def request_start_download_async(self) -> windows_foundation.IAsyncOperation[OfflineMapPackageStartDownloadResult]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Services.Maps.OfflineMaps.OfflineMapPackage::add_StatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Services.Maps.OfflineMaps.OfflineMapPackage,System.Object>)
@@ -70,6 +72,8 @@ class OfflineMapPackage(winrt.system.Object, metaclass=OfflineMapPackage_Static)
 
 @typing.final
 class OfflineMapPackageQueryResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackage> Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult::get_Packages()
     @_property
     def packages(self) -> _cabc.Sequence[OfflineMapPackage]: ...
@@ -79,6 +83,8 @@ class OfflineMapPackageQueryResult(winrt.system.Object):
 
 @typing.final
 class OfflineMapPackageStartDownloadResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadStatus Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult::get_Status()
     @_property
     def status(self) -> OfflineMapPackageStartDownloadStatus: ...

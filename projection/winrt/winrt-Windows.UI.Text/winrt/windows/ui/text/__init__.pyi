@@ -461,10 +461,13 @@ class FontWeights_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FontWeights(winrt.system.Object, metaclass=FontWeights_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class RichEditTextDocument(ITextDocument, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Text.RichEditTextDocument::ApplyDisplayUpdates()
     def apply_display_updates(self) -> winrt.system.Int32: ...
     # System.Int32 Windows.UI.Text.RichEditTextDocument::BatchDisplayUpdates()
@@ -549,6 +552,8 @@ class RichEditTextDocument(ITextDocument, winrt.system.Object):
 
 @typing.final
 class RichEditTextRange(ITextRange, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Text.RichEditTextRange::CanPaste(System.Int32)
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
     # System.Void Windows.UI.Text.RichEditTextRange::ChangeCase(Windows.UI.Text.LetterCase)
@@ -709,7 +714,8 @@ class TextConstants_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _ITextCharacterFormat: ...

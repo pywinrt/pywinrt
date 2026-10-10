@@ -207,7 +207,8 @@ Calling the class constructs an object with the class's activation factory.
 A class with several constructors chooses one by the number of arguments, in
 the same way as [methods](#methods), and the arguments are positional only. A
 class that has no constructor raises [`TypeError`][TypeError] when it is
-called; its objects come from the methods and properties of other objects.
+called, and a type checker refuses the call; its objects come from the methods
+and properties of other objects.
 
 ```python
 from winrt.windows.foundation import Uri

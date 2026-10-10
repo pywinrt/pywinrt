@@ -40,6 +40,8 @@ __all__ = [
 
 @typing.final
 class CustomQueryParametersRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.CustomQueryParametersRequestedArgs::get_FeedProviderDefinitionId()
     @_property
     def feed_provider_definition_id(self) -> str: ...
@@ -56,6 +58,8 @@ class CustomQueryParametersUpdateOptions(winrt.system.Object):
 
 @typing.final
 class FeedAnalyticsInfoReportedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs::get_AnalyticsJson()
     @_property
     def analytics_json(self) -> str: ...
@@ -68,6 +72,8 @@ class FeedAnalyticsInfoReportedArgs(winrt.system.Object):
 
 @typing.final
 class FeedDisabledArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedDisabledArgs::get_FeedDefinitionId()
     @_property
     def feed_definition_id(self) -> str: ...
@@ -77,6 +83,8 @@ class FeedDisabledArgs(winrt.system.Object):
 
 @typing.final
 class FeedEnabledArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedEnabledArgs::get_FeedDefinitionId()
     @_property
     def feed_definition_id(self) -> str: ...
@@ -86,6 +94,8 @@ class FeedEnabledArgs(winrt.system.Object):
 
 @typing.final
 class FeedErrorInfoReportedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs::get_ErrorJson()
     @_property
     def error_json(self) -> str: ...
@@ -103,6 +113,8 @@ class FeedManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FeedManager(IFeedManager3, IFeedManager2, IFeedManager, winrt.system.Object, metaclass=FeedManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo[] Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::GetEnabledFeedProviders()
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
     # System.Void Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::SendMessageToContent(System.String,System.String,System.String)
@@ -116,6 +128,8 @@ class FeedManager(IFeedManager3, IFeedManager2, IFeedManager, winrt.system.Objec
 
 @typing.final
 class FeedMessageReceivedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs::get_FeedDefinitionId()
     @_property
     def feed_definition_id(self) -> str: ...
@@ -128,18 +142,24 @@ class FeedMessageReceivedArgs(winrt.system.Object):
 
 @typing.final
 class FeedProviderDisabledArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderDisabledArgs::get_FeedProviderDefinitionId()
     @_property
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
 class FeedProviderEnabledArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderEnabledArgs::get_FeedProviderDefinitionId()
     @_property
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
 class FeedProviderInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String[] Microsoft.Windows.Widgets.Feeds.Providers.FeedProviderInfo::get_EnabledFeedDefinitionIds()
     @_property
     def enabled_feed_definition_ids(self) -> str: ...
@@ -149,6 +169,8 @@ class FeedProviderInfo(winrt.system.Object):
 
 @typing.final
 class FeedResourceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest::get_Method()
     @_property
     def method(self) -> str: ...
@@ -173,6 +195,8 @@ class FeedResourceRequest(winrt.system.Object):
 
 @typing.final
 class FeedResourceRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs::get_Response()

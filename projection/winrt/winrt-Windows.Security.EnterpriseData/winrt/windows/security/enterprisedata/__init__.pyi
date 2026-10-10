@@ -100,6 +100,8 @@ class ProtectionPolicyRequestAccessBehavior(enum.IntEnum):
 
 @typing.final
 class BufferProtectUnprotectResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.EnterpriseData.BufferProtectUnprotectResult::get_Buffer()
     @_property
     def buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -109,6 +111,8 @@ class BufferProtectUnprotectResult(winrt.system.Object):
 
 @typing.final
 class DataProtectionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.EnterpriseData.DataProtectionInfo::get_Identity()
     @_property
     def identity(self) -> str: ...
@@ -133,10 +137,13 @@ class DataProtectionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DataProtectionManager(winrt.system.Object, metaclass=DataProtectionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class FileProtectionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.EnterpriseData.FileProtectionInfo::get_Identity()
     @_property
     def identity(self) -> str: ...
@@ -202,7 +209,8 @@ class FileProtectionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class FileRevocationManager_Static(winrt._winrt.Object_Static):
@@ -222,7 +230,8 @@ class FileRevocationManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
 class FileRevocationManager(winrt.system.Object, metaclass=FileRevocationManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class FileUnprotectOptions(winrt.system.Object):
@@ -236,12 +245,16 @@ class FileUnprotectOptions(winrt.system.Object):
 
 @typing.final
 class ProtectedAccessResumedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs::get_Identities()
     @_property
     def identities(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
 class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.DateTime Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs::get_Deadline()
@@ -253,6 +266,8 @@ class ProtectedAccessSuspendingEventArgs(winrt.system.Object):
 
 @typing.final
 class ProtectedContainerExportResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Security.EnterpriseData.ProtectedContainerExportResult::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -262,6 +277,8 @@ class ProtectedContainerExportResult(winrt.system.Object):
 
 @typing.final
 class ProtectedContainerImportResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Security.EnterpriseData.ProtectedContainerImportResult::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -271,12 +288,16 @@ class ProtectedContainerImportResult(winrt.system.Object):
 
 @typing.final
 class ProtectedContentRevokedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs::get_Identities()
     @_property
     def identities(self) -> _cabc.Sequence[str]: ...
 
 @typing.final
 class ProtectedFileCreateResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Security.EnterpriseData.ProtectedFileCreateResult::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -449,6 +470,8 @@ class ProtectionPolicyManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.EnterpriseData.ProtectionPolicyManager::get_Identity()
     @_property
     def identity(self) -> str: ...
@@ -466,6 +489,8 @@ class ProtectionPolicyManager(winrt.system.Object, metaclass=ProtectionPolicyMan
 class ThreadNetworkContext(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.EnterpriseData.ThreadNetworkContext::Close()
     def close(self) -> None: ...
 

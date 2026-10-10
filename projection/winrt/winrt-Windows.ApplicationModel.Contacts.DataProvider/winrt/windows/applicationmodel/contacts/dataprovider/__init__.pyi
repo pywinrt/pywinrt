@@ -23,6 +23,8 @@ __all__ = [
 
 @typing.final
 class ContactDataProviderConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection::add_ServerSearchReadBatchRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection,Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs>)
@@ -44,12 +46,16 @@ class ContactDataProviderConnection(winrt.system.Object):
 
 @typing.final
 class ContactDataProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> ContactDataProviderConnection: ...
 
 @typing.final
 class ContactListCreateOrUpdateContactRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest::ReportCompletedAsync(Windows.ApplicationModel.Contacts.Contact)
     def report_completed_async(self, created_or_updated_contact: windows_applicationmodel_contacts.Contact, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest::ReportFailedAsync()
@@ -63,6 +69,8 @@ class ContactListCreateOrUpdateContactRequest(winrt.system.Object):
 
 @typing.final
 class ContactListCreateOrUpdateContactRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs::get_Request()
@@ -71,6 +79,8 @@ class ContactListCreateOrUpdateContactRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class ContactListDeleteContactRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest::ReportFailedAsync()
@@ -84,6 +94,8 @@ class ContactListDeleteContactRequest(winrt.system.Object):
 
 @typing.final
 class ContactListDeleteContactRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs::get_Request()
@@ -92,6 +104,8 @@ class ContactListDeleteContactRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class ContactListServerSearchReadBatchRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest::ReportFailedAsync(Windows.ApplicationModel.Contacts.ContactBatchStatus)
@@ -113,6 +127,8 @@ class ContactListServerSearchReadBatchRequest(winrt.system.Object):
 
 @typing.final
 class ContactListServerSearchReadBatchRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs::get_Request()
@@ -121,6 +137,8 @@ class ContactListServerSearchReadBatchRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class ContactListSyncManagerSyncRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest::ReportFailedAsync()
@@ -131,6 +149,8 @@ class ContactListSyncManagerSyncRequest(winrt.system.Object):
 
 @typing.final
 class ContactListSyncManagerSyncRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs::get_Request()

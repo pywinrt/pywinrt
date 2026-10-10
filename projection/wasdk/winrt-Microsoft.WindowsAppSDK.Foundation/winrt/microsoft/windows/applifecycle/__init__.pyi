@@ -83,10 +83,13 @@ class ActivationRegistrationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ActivationRegistrationManager(winrt.system.Object, metaclass=ActivationRegistrationManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppActivationArguments(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Microsoft.Windows.AppLifecycle.AppActivationArguments::get_Data()
     @_property
     def data(self) -> winrt.system.Object: ...
@@ -107,6 +110,8 @@ class AppInstance_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AppLifecycle.AppActivationArguments Microsoft.Windows.AppLifecycle.AppInstance::GetActivatedEventArgs()
     def get_activated_event_args(self) -> AppActivationArguments: ...
     # Windows.Foundation.IAsyncAction Microsoft.Windows.AppLifecycle.AppInstance::RedirectActivationToAsync(Microsoft.Windows.AppLifecycle.AppActivationArguments)

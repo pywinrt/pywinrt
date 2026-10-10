@@ -45,6 +45,8 @@ class WebViewControlProcessCapabilityState(enum.IntEnum):
 
 @typing.final
 class WebViewControl(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.UI.Interop.WebViewControl::AddInitializeScript(System.String)
     def add_initialize_script(self, script: str, /) -> None: ...
     # Windows.Foundation.Uri Windows.Web.UI.Interop.WebViewControl::BuildLocalStreamUri(System.String,System.String)
@@ -215,6 +217,8 @@ class WebViewControl(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewCon
 
 @typing.final
 class WebViewControlAcceleratorKeyPressedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -236,6 +240,8 @@ class WebViewControlAcceleratorKeyPressedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebViewControlMoveFocusRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.UI.Interop.WebViewControlMoveFocusReason Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs::get_Reason()
     @_property
     def reason(self) -> WebViewControlMoveFocusReason: ...

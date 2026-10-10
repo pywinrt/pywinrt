@@ -71,6 +71,8 @@ class InkAnalysisStrokeKind(enum.IntEnum):
 
 @typing.final
 class InkAnalysisInkBullet(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # System.String Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet::get_RecognizedText()
@@ -97,6 +99,8 @@ class InkAnalysisInkBullet(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisInkDrawing(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Point Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing::get_Center()
@@ -129,6 +133,8 @@ class InkAnalysisInkDrawing(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisInkWord(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # System.String Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord::get_RecognizedText()
@@ -158,6 +164,8 @@ class InkAnalysisInkWord(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisLine(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisLine::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # System.Int32 Windows.UI.Input.Inking.Analysis.InkAnalysisLine::get_IndentLevel()
@@ -187,6 +195,8 @@ class InkAnalysisLine(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisListItem(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisListItem::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # System.String Windows.UI.Input.Inking.Analysis.InkAnalysisListItem::get_RecognizedText()
@@ -213,6 +223,8 @@ class InkAnalysisListItem(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisNode(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisNode::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.Analysis.InkAnalysisNode::get_BoundingRect()
@@ -236,6 +248,8 @@ class InkAnalysisNode(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisParagraph(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph::get_BoundingRect()
@@ -262,12 +276,16 @@ class InkAnalysisParagraph(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Inking.Analysis.InkAnalysisStatus Windows.UI.Input.Inking.Analysis.InkAnalysisResult::get_Status()
     @_property
     def status(self) -> InkAnalysisStatus: ...
 
 @typing.final
 class InkAnalysisRoot(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode> Windows.UI.Input.Inking.Analysis.InkAnalysisRoot::FindNodes(Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind)
     def find_nodes(self, node_kind: InkAnalysisNodeKind, /) -> _cabc.Sequence[IInkAnalysisNode]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisRoot::GetStrokeIds()
@@ -296,6 +314,8 @@ class InkAnalysisRoot(IInkAnalysisNode, winrt.system.Object):
 
 @typing.final
 class InkAnalysisWritingRegion(IInkAnalysisNode, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion::GetStrokeIds()
     def get_stroke_ids(self) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Rect Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion::get_BoundingRect()

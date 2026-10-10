@@ -16,6 +16,8 @@ __all__ = [
 
 @typing.final
 class OemSupportInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.System.Profile.SystemManufacturers.OemSupportInfo::get_SupportAppLink()
     @_property
     def support_app_link(self) -> windows_foundation.Uri: ...
@@ -34,10 +36,13 @@ class SmbiosInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmbiosInformation(winrt.system.Object, metaclass=SmbiosInformation_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SystemSupportDeviceInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.Profile.SystemManufacturers.SystemSupportDeviceInfo::get_FriendlyName()
     @_property
     def friendly_name(self) -> str: ...
@@ -74,5 +79,6 @@ class SystemSupportInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemSupportInfo(winrt.system.Object, metaclass=SystemSupportInfo_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

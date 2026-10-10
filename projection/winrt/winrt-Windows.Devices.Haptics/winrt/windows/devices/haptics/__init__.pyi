@@ -57,6 +57,8 @@ class InputHapticsManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class InputHapticsManager(winrt.system.Object, metaclass=InputHapticsManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Haptics.InputHapticsManager::ClearOverrideHapticsController(Windows.Devices.Haptics.HapticsControllerOverrideToken)
     def clear_override_haptics_controller(self, token: HapticsControllerOverrideToken | tuple[winrt.system.Int64], /) -> None: ...
     # Windows.Devices.Haptics.HapticsControllerOverrideToken Windows.Devices.Haptics.InputHapticsManager::SetOverrideHapticsController(Windows.Devices.Haptics.HapticDeviceType,Windows.Devices.Haptics.SimpleHapticsController)
@@ -149,10 +151,13 @@ class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object, metaclass=KnownSimpleHapticsControllerWaveforms_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SimpleHapticsController(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Devices.Haptics.SimpleHapticsController::SendHapticFeedback(Windows.Devices.Haptics.SimpleHapticsControllerFeedback)
     def send_haptic_feedback(self, feedback: SimpleHapticsControllerFeedback, /) -> None: ...
@@ -190,6 +195,8 @@ class SimpleHapticsController(winrt.system.Object):
 
 @typing.final
 class SimpleHapticsControllerFeedback(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Devices.Haptics.SimpleHapticsControllerFeedback::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
@@ -212,6 +219,8 @@ class VibrationDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Haptics.VibrationDevice::get_Id()
     @_property
     def id(self) -> str: ...

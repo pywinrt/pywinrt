@@ -432,6 +432,8 @@ class Brush_Static(windows_ui_xaml.DependencyObject_Static):
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Brush(windows_ui_xaml.DependencyObject, windows_ui_composition.IAnimationObject, metaclass=Brush_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Media.Brush::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
     def populate_property_info(self, property_name: str, property_info: windows_ui_composition.AnimationPropertyInfo, /) -> None: ...
     # System.Void Windows.UI.Xaml.Media.Brush::PopulatePropertyInfoOverride(System.String,Windows.UI.Composition.AnimationPropertyInfo)
@@ -508,7 +510,8 @@ class CacheMode_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class CacheMode(windows_ui_xaml.DependencyObject, metaclass=CacheMode_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CompositeTransform_Static(Transform_Static):
@@ -615,7 +618,8 @@ class CompositionTarget_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CompositionTarget(winrt.system.Object, metaclass=CompositionTarget_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DoubleCollection(_cabc.MutableSequence[winrt.system.Double], winrt.system.Object):
@@ -716,6 +720,8 @@ class GeneralTransform_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class GeneralTransform(windows_ui_xaml.DependencyObject, metaclass=GeneralTransform_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Windows.Foundation.Rect Windows.UI.Xaml.Media.GeneralTransform::TransformBounds(Windows.Foundation.Rect)
     def transform_bounds(self, rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Rect: ...
@@ -749,6 +755,8 @@ class Geometry_Static(windows_ui_xaml.DependencyObject_Static):
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Geometry(windows_ui_xaml.DependencyObject, metaclass=Geometry_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Transform Windows.UI.Xaml.Media.Geometry::get_Transform()
     @_property
     def transform(self) -> Transform: ...
@@ -851,6 +859,8 @@ class GradientBrush_Static(Brush_Static):
     def spread_method_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class GradientBrush(Brush, metaclass=GradientBrush_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.GradientSpreadMethod Windows.UI.Xaml.Media.GradientBrush::get_SpreadMethod()
     @_property
     def spread_method(self) -> GradientSpreadMethod: ...
@@ -979,7 +989,8 @@ class ImageSource_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class ImageSource(windows_ui_xaml.DependencyObject, metaclass=ImageSource_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class LineGeometry_Static(Geometry_Static):
@@ -1052,6 +1063,8 @@ class LinearGradientBrush(GradientBrush, metaclass=LinearGradientBrush_Static):
 
 @typing.final
 class LoadedImageSourceLoadCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.LoadedImageSourceLoadStatus Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs::get_Status()
     @_property
     def status(self) -> LoadedImageSourceLoadStatus: ...
@@ -1083,6 +1096,8 @@ class LoadedImageSurface_Static(winrt._winrt.Object_Static):
 class LoadedImageSurface(windows_ui_composition.ICompositionSurface, windows_foundation.IClosable, winrt.system.Object, metaclass=LoadedImageSurface_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Media.LoadedImageSurface::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Media.LoadedImageSurface::add_LoadCompleted(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Media.LoadedImageSurface,Windows.UI.Xaml.Media.LoadedImageSourceLoadCompletedEventArgs>)
@@ -1129,7 +1144,8 @@ class MatrixHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MatrixHelper(winrt.system.Object, metaclass=MatrixHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MatrixTransform_Static(Transform_Static):
@@ -1149,6 +1165,8 @@ class MatrixTransform(Transform, metaclass=MatrixTransform_Static):
 
 @typing.final
 class MediaTransportControlsThumbnailRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs::SetThumbnailImage(Windows.Storage.Streams.IInputStream)
@@ -1282,7 +1300,8 @@ class PathSegment_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class PathSegment(windows_ui_xaml.DependencyObject, metaclass=PathSegment_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PathSegmentCollection(_cabc.MutableSequence[PathSegment], winrt.system.Object):
@@ -1549,7 +1568,8 @@ class Projection_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Projection(windows_ui_xaml.DependencyObject, metaclass=Projection_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class QuadraticBezierSegment_Static(PathSegment_Static):
@@ -1598,12 +1618,16 @@ class RectangleGeometry(Geometry, metaclass=RectangleGeometry_Static):
 
 @typing.final
 class RenderedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.Xaml.Media.RenderedEventArgs::get_FrameDuration()
     @_property
     def frame_duration(self) -> datetime.timedelta: ...
 
 @typing.final
 class RenderingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.Xaml.Media.RenderingEventArgs::get_RenderingTime()
     @_property
     def rendering_time(self) -> datetime.timedelta: ...
@@ -1643,6 +1667,8 @@ class RevealBrush_Static(XamlCompositionBrushBase_Static):
     def target_theme_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RevealBrush(XamlCompositionBrushBase, metaclass=RevealBrush_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.ApplicationTheme Windows.UI.Xaml.Media.RevealBrush::get_TargetTheme()
     @_property
     def target_theme(self) -> windows_ui_xaml.ApplicationTheme: ...
@@ -1746,7 +1772,8 @@ class Shadow_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Shadow(windows_ui_xaml.DependencyObject, metaclass=Shadow_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SkewTransform_Static(Transform_Static):
@@ -1835,6 +1862,8 @@ class TileBrush_Static(Brush_Static):
     def stretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TileBrush(Brush, metaclass=TileBrush_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Stretch Windows.UI.Xaml.Media.TileBrush::get_Stretch()
     @_property
     def stretch(self) -> Stretch: ...
@@ -1951,7 +1980,8 @@ class Transform_Static(GeneralTransform_Static):
     ...
 
 class Transform(GeneralTransform, metaclass=Transform_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TransformCollection(_cabc.MutableSequence[Transform], winrt.system.Object):
@@ -2078,7 +2108,8 @@ class VisualTreeHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VisualTreeHelper(winrt.system.Object, metaclass=VisualTreeHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class XamlCompositionBrushBase_Static(Brush_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Media.XamlCompositionBrushBase::get_FallbackColorProperty()
@@ -2087,6 +2118,8 @@ class XamlCompositionBrushBase_Static(Brush_Static):
     def fallback_color_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::OnConnected()
     def _on_connected(self) -> None: ...
     # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::OnDisconnected()

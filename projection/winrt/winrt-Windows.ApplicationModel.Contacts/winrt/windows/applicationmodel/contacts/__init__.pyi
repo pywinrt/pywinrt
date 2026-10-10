@@ -260,6 +260,8 @@ class PinnedContactSurface(enum.IntEnum):
 
 @typing.final
 class AggregateContactManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.Contact>> Windows.ApplicationModel.Contacts.AggregateContactManager::FindRawContactsAsync(Windows.ApplicationModel.Contacts.Contact)
     def find_raw_contacts_async(self, contact: Contact, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[Contact]]: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.AggregateContactManager::SetRemoteIdentificationInformationAsync(System.String,System.String,System.String)
@@ -537,6 +539,8 @@ class ContactAnnotation(winrt.system.Object):
 
 @typing.final
 class ContactAnnotationList(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.ContactAnnotationList::DeleteAnnotationAsync(Windows.ApplicationModel.Contacts.ContactAnnotation)
     def delete_annotation_async(self, annotation: ContactAnnotation, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.ContactAnnotationList::DeleteAsync()
@@ -561,6 +565,8 @@ class ContactAnnotationList(winrt.system.Object):
 
 @typing.final
 class ContactAnnotationStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactAnnotationList> Windows.ApplicationModel.Contacts.ContactAnnotationStore::CreateAnnotationListAsync()
     def create_annotation_list_async(self) -> windows_foundation.IAsyncOperation[ContactAnnotationList]: ...
@@ -588,6 +594,8 @@ class ContactAnnotationStore(winrt.system.Object):
 
 @typing.final
 class ContactBatch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.ContactBatch::get_Contacts()
     @_property
     def contacts(self) -> _cabc.Sequence[Contact]: ...
@@ -599,6 +607,8 @@ class ContactBatch(winrt.system.Object):
 class ContactCardDelayedDataLoader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader::Close()
     def close(self) -> None: ...
     # System.Void Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader::SetData(Windows.ApplicationModel.Contacts.Contact)
@@ -625,6 +635,8 @@ class ContactCardOptions(winrt.system.Object):
 
 @typing.final
 class ContactChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Contacts.ContactChangeType Windows.ApplicationModel.Contacts.ContactChange::get_ChangeType()
     @_property
     def change_type(self) -> ContactChangeType: ...
@@ -634,6 +646,8 @@ class ContactChange(winrt.system.Object):
 
 @typing.final
 class ContactChangeReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.ContactChangeReader::AcceptChanges()
     def accept_changes(self) -> None: ...
     # System.Void Windows.ApplicationModel.Contacts.ContactChangeReader::AcceptChangesThrough(Windows.ApplicationModel.Contacts.ContactChange)
@@ -643,6 +657,8 @@ class ContactChangeReader(winrt.system.Object):
 
 @typing.final
 class ContactChangeTracker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.ContactChangeTracker::Enable()
     def enable(self) -> None: ...
     # Windows.ApplicationModel.Contacts.ContactChangeReader Windows.ApplicationModel.Contacts.ContactChangeTracker::GetChangeReader()
@@ -655,11 +671,15 @@ class ContactChangeTracker(winrt.system.Object):
 
 @typing.final
 class ContactChangedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.ContactChangedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContactChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Contacts.ContactChangedDeferral Windows.ApplicationModel.Contacts.ContactChangedEventArgs::GetDeferral()
     def get_deferral(self) -> ContactChangedDeferral: ...
 
@@ -825,10 +845,13 @@ class ContactFieldFactory(IContactInstantMessageFieldFactory, IContactLocationFi
 
 @typing.final
 class ContactGroup(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ContactInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.ApplicationModel.Contacts.ContactInformation::GetThumbnailAsync()
     def get_thumbnail_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.ContactField> Windows.ApplicationModel.Contacts.ContactInformation::QueryCustomFields(System.String)
@@ -957,10 +980,13 @@ class ContactLaunchActionVerbs_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ContactLaunchActionVerbs(winrt.system.Object, metaclass=ContactLaunchActionVerbs_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ContactList(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.ContactList::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Contacts.ContactList::DeleteContactAsync(Windows.ApplicationModel.Contacts.Contact)
@@ -1047,6 +1073,8 @@ class ContactList(winrt.system.Object):
 
 @typing.final
 class ContactListLimitedWriteOperations(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations::TryCreateOrUpdateContactAsync(Windows.ApplicationModel.Contacts.Contact)
     def try_create_or_update_contact_async(self, contact: Contact, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Contacts.ContactListLimitedWriteOperations::TryDeleteContactAsync(System.String)
@@ -1054,6 +1082,8 @@ class ContactListLimitedWriteOperations(winrt.system.Object):
 
 @typing.final
 class ContactListSyncConstraints(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Contacts.ContactListSyncConstraints::get_CanSyncDescriptions()
     @_property
     def can_sync_descriptions(self) -> bool: ...
@@ -1225,6 +1255,8 @@ class ContactListSyncConstraints(winrt.system.Object):
 
 @typing.final
 class ContactListSyncManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Contacts.ContactListSyncManager::SyncAsync()
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Contacts.ContactListSyncManager::add_SyncStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Contacts.ContactListSyncManager,System.Object>)
@@ -1373,10 +1405,13 @@ class ContactManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ContactManager(winrt.system.Object, metaclass=ContactManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ContactManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManagerForUser::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact)
     def convert_contact_to_v_card_async(self, contact: Contact, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
@@ -1413,6 +1448,8 @@ class ContactManagerForUser(winrt.system.Object):
 
 @typing.final
 class ContactMatchReason(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Contacts.ContactMatchReasonKind Windows.ApplicationModel.Contacts.ContactMatchReason::get_Field()
     @_property
     def field(self) -> ContactMatchReasonKind: ...
@@ -1425,6 +1462,8 @@ class ContactMatchReason(winrt.system.Object):
 
 @typing.final
 class ContactPanel(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Contacts.ContactPanel::ClosePanel()
     def close_panel(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Contacts.ContactPanel::add_Closing(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Contacts.ContactPanel,Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs>)
@@ -1444,11 +1483,15 @@ class ContactPanel(winrt.system.Object):
 
 @typing.final
 class ContactPanelClosingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Contacts.ContactPanelClosingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class ContactPanelLaunchFullAppRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Contacts.ContactPanelLaunchFullAppRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -1556,6 +1599,8 @@ class ContactQueryOptions(winrt.system.Object):
 
 @typing.final
 class ContactQueryTextSearch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Contacts.ContactQueryTextSearch::get_Text()
     @_property
     def text(self) -> str: ...
@@ -1577,6 +1622,8 @@ class ContactQueryTextSearch(winrt.system.Object):
 
 @typing.final
 class ContactReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Contacts.ContactMatchReason> Windows.ApplicationModel.Contacts.ContactReader::GetMatchingPropertiesWithMatchReason(Windows.ApplicationModel.Contacts.Contact)
     def get_matching_properties_with_match_reason(self, contact: Contact, /) -> _cabc.Sequence[ContactMatchReason]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactBatch> Windows.ApplicationModel.Contacts.ContactReader::ReadBatchAsync()
@@ -1606,6 +1653,8 @@ class ContactSignificantOther(winrt.system.Object):
 
 @typing.final
 class ContactStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.ContactList> Windows.ApplicationModel.Contacts.ContactStore::CreateContactListAsync(System.String)
     def create_contact_list_async(self, display_name: str, /) -> windows_foundation.IAsyncOperation[ContactList]: ...
@@ -1659,7 +1708,8 @@ class ContactStore(winrt.system.Object):
 
 @typing.final
 class ContactStoreNotificationTriggerDetails(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ContactWebsite(winrt.system.Object):
@@ -1721,10 +1771,13 @@ class KnownContactField_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("KnownContactField  may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
 class KnownContactField(winrt.system.Object, metaclass=KnownContactField_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PinnedContactIdsQueryResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult::get_ContactIds()
     @_property
     def contact_ids(self) -> _cabc.MutableSequence[str]: ...
@@ -1740,6 +1793,8 @@ class PinnedContactManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.PinnedContactIdsQueryResult> Windows.ApplicationModel.Contacts.PinnedContactManager::GetPinnedContactIdsAsync()
     def get_pinned_contact_ids_async(self) -> windows_foundation.IAsyncOperation[PinnedContactIdsQueryResult]: ...
     # System.Boolean Windows.ApplicationModel.Contacts.PinnedContactManager::IsContactPinned(Windows.ApplicationModel.Contacts.Contact,Windows.ApplicationModel.Contacts.PinnedContactSurface)

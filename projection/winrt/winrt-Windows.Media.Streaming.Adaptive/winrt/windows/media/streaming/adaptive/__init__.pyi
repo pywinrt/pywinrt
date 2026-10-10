@@ -103,6 +103,8 @@ class AdaptiveMediaSource_Static(winrt._winrt.Object_Static):
 class AdaptiveMediaSource(windows_foundation.IClosable, windows_media_core.IMediaSource, winrt.system.Object, metaclass=AdaptiveMediaSource_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::Close()
     def close(self) -> None: ...
     # Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::GetCorrelatedTimes()
@@ -196,6 +198,8 @@ class AdaptiveMediaSource(windows_foundation.IClosable, windows_media_core.IMedi
 
 @typing.final
 class AdaptiveMediaSourceAdvancedSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Double> Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings::get_DesiredBitrateHeadroomRatio()
     @_property
     def desired_bitrate_headroom_ratio(self) -> winrt.system.Double | None: ...
@@ -217,6 +221,8 @@ class AdaptiveMediaSourceAdvancedSettings(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceCorrelatedTimes(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes::get_Position()
     @_property
     def position(self) -> datetime.timedelta | None: ...
@@ -229,6 +235,8 @@ class AdaptiveMediaSourceCorrelatedTimes(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceCreationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.Http.HttpResponseMessage Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult::get_HttpResponseMessage()
     @_property
     def http_response_message(self) -> windows_web_http.HttpResponseMessage: ...
@@ -244,6 +252,8 @@ class AdaptiveMediaSourceCreationResult(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDiagnosticAvailableEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs::get_Bitrate()
     @_property
     def bitrate(self) -> winrt.system.UInt32 | None: ...
@@ -283,6 +293,8 @@ class AdaptiveMediaSourceDiagnosticAvailableEventArgs(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDiagnostics(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics::add_DiagnosticAvailable(Windows.Foundation.TypedEventHandler`2<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics,Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs>)
     def add_diagnostic_available(self, handler: windows_foundation.TypedEventHandler[AdaptiveMediaSourceDiagnostics, AdaptiveMediaSourceDiagnosticAvailableEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics::remove_DiagnosticAvailable(Windows.Foundation.EventRegistrationToken)
@@ -290,6 +302,8 @@ class AdaptiveMediaSourceDiagnostics(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadBitrateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs::get_NewValue()
     @_property
     def new_value(self) -> winrt.system.UInt32: ...
@@ -302,6 +316,8 @@ class AdaptiveMediaSourceDownloadBitrateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.Http.HttpResponseMessage Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs::get_HttpResponseMessage()
     @_property
     def http_response_message(self) -> windows_web_http.HttpResponseMessage: ...
@@ -335,6 +351,8 @@ class AdaptiveMediaSourceDownloadCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.Http.HttpResponseMessage Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs::get_HttpResponseMessage()
     @_property
     def http_response_message(self) -> windows_web_http.HttpResponseMessage: ...
@@ -371,11 +389,15 @@ class AdaptiveMediaSourceDownloadFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadRequestedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class AdaptiveMediaSourceDownloadRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> AdaptiveMediaSourceDownloadRequestedDeferral: ...
     # Windows.Foundation.IReference`1<System.UInt64> Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs::get_ResourceByteRangeLength()
@@ -408,6 +430,8 @@ class AdaptiveMediaSourceDownloadRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult::get_ResourceUri()
     @_property
     def resource_uri(self) -> windows_foundation.Uri: ...
@@ -453,6 +477,8 @@ class AdaptiveMediaSourceDownloadResult(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourceDownloadStatistics(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics::get_ContentBytesReceivedCount()
     @_property
     def content_bytes_received_count(self) -> winrt.system.UInt64: ...
@@ -468,6 +494,8 @@ class AdaptiveMediaSourceDownloadStatistics(winrt.system.Object):
 
 @typing.final
 class AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs::get_AudioOnly()
     @_property
     def audio_only(self) -> bool: ...

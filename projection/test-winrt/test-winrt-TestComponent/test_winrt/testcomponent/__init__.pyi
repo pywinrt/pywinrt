@@ -337,7 +337,8 @@ class TestRunner_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IRequiredFour: ...

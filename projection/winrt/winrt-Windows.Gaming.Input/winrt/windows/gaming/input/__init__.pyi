@@ -345,6 +345,8 @@ class ArcadeStick_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ArcadeStick(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=ArcadeStick_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.ArcadeStick::GetButtonLabel(Windows.Gaming.Input.ArcadeStickButtons)
     def get_button_label(self, button: ArcadeStickButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.ArcadeStickReading Windows.Gaming.Input.ArcadeStick::GetCurrentReading()
@@ -391,6 +393,8 @@ class FlightStick_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FlightStick(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=FlightStick_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.FlightStick::GetButtonLabel(Windows.Gaming.Input.FlightStickButtons)
     def get_button_label(self, button: FlightStickButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.FlightStickReading Windows.Gaming.Input.FlightStick::GetCurrentReading()
@@ -440,6 +444,8 @@ class Gamepad_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Gamepad(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=Gamepad_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.Gamepad::GetButtonLabel(Windows.Gaming.Input.GamepadButtons)
     def get_button_label(self, button: GamepadButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.GamepadReading Windows.Gaming.Input.Gamepad::GetCurrentReading()
@@ -476,6 +482,8 @@ class Gamepad(IGameControllerBatteryInfo, IGameController, winrt.system.Object, 
 
 @typing.final
 class Headset(IGameControllerBatteryInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Power.BatteryReport Windows.Gaming.Input.Headset::TryGetBatteryReport()
     def try_get_battery_report(self) -> windows_devices_power.BatteryReport | None: ...
     # System.String Windows.Gaming.Input.Headset::get_CaptureDeviceId()
@@ -503,6 +511,8 @@ class RacingWheel_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RacingWheel(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=RacingWheel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.RacingWheel::GetButtonLabel(Windows.Gaming.Input.RacingWheelButtons)
     def get_button_label(self, button: RacingWheelButtons, /) -> GameControllerButtonLabel: ...
     # Windows.Gaming.Input.RacingWheelReading Windows.Gaming.Input.RacingWheel::GetCurrentReading()
@@ -567,6 +577,8 @@ class RawGameController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RawGameController(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=RawGameController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.RawGameController::GetButtonLabel(System.Int32)
     def get_button_label(self, button_index: winrt.system.Int32, /) -> GameControllerButtonLabel: ...
     # System.UInt64 Windows.Gaming.Input.RawGameController::GetCurrentReading(System.Boolean[],Windows.Gaming.Input.GameControllerSwitchPosition[],System.Double[])
@@ -642,6 +654,8 @@ class UINavigationController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UINavigationController(IGameControllerBatteryInfo, IGameController, winrt.system.Object, metaclass=UINavigationController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.Input.UINavigationReading Windows.Gaming.Input.UINavigationController::GetCurrentReading()
     def get_current_reading(self) -> UINavigationReading: ...
     # Windows.Gaming.Input.GameControllerButtonLabel Windows.Gaming.Input.UINavigationController::GetOptionalButtonLabel(Windows.Gaming.Input.OptionalUINavigationButtons)

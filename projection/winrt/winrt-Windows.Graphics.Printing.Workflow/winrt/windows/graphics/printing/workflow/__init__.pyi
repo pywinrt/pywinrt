@@ -128,6 +128,8 @@ class PrintWorkflowUICompletionStatus(enum.IntEnum):
 
 @typing.final
 class PrintWorkflowBackgroundSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession::add_SetupRequested(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs>)
@@ -144,6 +146,8 @@ class PrintWorkflowBackgroundSession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowBackgroundSetupRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSetupRequestedEventArgs::GetUserPrintTicketAsync()
@@ -156,6 +160,8 @@ class PrintWorkflowBackgroundSetupRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration::AbortPrintFlow(Windows.Graphics.Printing.Workflow.PrintWorkflowJobAbortReason)
     def abort_print_flow(self, reason: PrintWorkflowJobAbortReason, /) -> None: ...
     # System.String Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration::get_JobTitle()
@@ -170,6 +176,8 @@ class PrintWorkflowConfiguration(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowForegroundSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession::add_SetupRequested(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs>)
@@ -186,6 +194,8 @@ class PrintWorkflowForegroundSession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> Windows.Graphics.Printing.Workflow.PrintWorkflowForegroundSetupRequestedEventArgs::GetUserPrintTicketAsync()
@@ -196,6 +206,8 @@ class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowJobActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.Workflow.PrintWorkflowJobActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -214,6 +226,8 @@ class PrintWorkflowJobActivatedEventArgs(windows_applicationmodel_activation.IAc
 
 @typing.final
 class PrintWorkflowJobBackgroundSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession::add_JobStarting(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs>)
@@ -238,6 +252,8 @@ class PrintWorkflowJobBackgroundSession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowJobIssueDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs::get_SkipSystemErrorToast()
@@ -264,6 +280,8 @@ class PrintWorkflowJobIssueDetectedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowJobNotificationEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs::get_Configuration()
@@ -275,6 +293,8 @@ class PrintWorkflowJobNotificationEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowJobStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs::DisableIppCompressionForJob()
     def disable_ipp_compression_for_job(self) -> None: ...
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs::GetDeferral()
@@ -299,12 +319,16 @@ class PrintWorkflowJobStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowJobTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.Workflow.PrintWorkflowJobBackgroundSession Windows.Graphics.Printing.Workflow.PrintWorkflowJobTriggerDetails::get_PrintWorkflowJobSession()
     @_property
     def print_workflow_job_session(self) -> PrintWorkflowJobBackgroundSession: ...
 
 @typing.final
 class PrintWorkflowJobUISession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession::add_JobNotification(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowJobUISession,Windows.Graphics.Printing.Workflow.PrintWorkflowJobNotificationEventArgs>)
@@ -329,10 +353,13 @@ class PrintWorkflowObjectModelSourceFileContent(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowObjectModelTargetPackage(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PrintWorkflowPdlConverter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Graphics.Printing.Workflow.PrintWorkflowPdlConverter::ConvertPdlAsync(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket,Windows.Storage.Streams.IInputStream,Windows.Storage.Streams.IOutputStream)
     def convert_pdl_async(self, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, input_stream: windows_storage_streams.IInputStream, output_stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncAction: ...
@@ -344,6 +371,8 @@ class PrintWorkflowPdlConverter(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPdlDataAvailableEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration Windows.Graphics.Printing.Workflow.PrintWorkflowPdlDataAvailableEventArgs::get_Configuration()
@@ -358,6 +387,8 @@ class PrintWorkflowPdlDataAvailableEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPdlModificationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream Windows.Graphics.Printing.Workflow.PrintWorkflowPdlModificationRequestedEventArgs::CreateJobOnPrinter(System.String)
     def create_job_on_printer(self, target_content_type: str, /) -> PrintWorkflowPdlTargetStream: ...
     @typing.overload
@@ -393,6 +424,8 @@ class PrintWorkflowPdlModificationRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPdlSourceContent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent::GetContentFileAsync()
     def get_content_file_async(self) -> windows_foundation.IAsyncOperation[windows_storage.StorageFile]: ...
     # Windows.Storage.Streams.IInputStream Windows.Graphics.Printing.Workflow.PrintWorkflowPdlSourceContent::GetInputStream()
@@ -403,6 +436,8 @@ class PrintWorkflowPdlSourceContent(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPdlTargetStream(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream::CompleteStreamSubmission(Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedStatus)
     def complete_stream_submission(self, status: PrintWorkflowSubmittedStatus, /) -> None: ...
     # Windows.Storage.Streams.IOutputStream Windows.Graphics.Printing.Workflow.PrintWorkflowPdlTargetStream::GetOutputStream()
@@ -410,6 +445,8 @@ class PrintWorkflowPdlTargetStream(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPrinterJob(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::ConvertPrintTicketToJobAttributes(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket,System.String)
     def convert_print_ticket_to_job_attributes(self, print_ticket: windows_graphics_printing_printticket.WorkflowPrintTicket, target_pdl_format: str, /) -> _cabc.MutableMapping[str, windows_devices_printers.IppAttributeValue]: ...
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob::GetJobAttributes(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -440,6 +477,8 @@ class PrintWorkflowPrinterJob(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowPrinterJobStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJobStatusChangedEventArgs::get_Configuration()
@@ -451,6 +490,8 @@ class PrintWorkflowPrinterJobStatusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowSourceContent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket> Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent::GetJobPrintTicketAsync()
     def get_job_print_ticket_async(self) -> windows_foundation.IAsyncOperation[windows_graphics_printing_printticket.WorkflowPrintTicket]: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent Windows.Graphics.Printing.Workflow.PrintWorkflowSourceContent::GetSourceSpoolDataAsStreamContent()
@@ -460,16 +501,22 @@ class PrintWorkflowSourceContent(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowSpoolStreamContent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IInputStream Windows.Graphics.Printing.Workflow.PrintWorkflowSpoolStreamContent::GetInputStream()
     def get_input_stream(self) -> windows_storage_streams.IInputStream: ...
 
 @typing.final
 class PrintWorkflowStreamTarget(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IOutputStream Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget::GetOutputStream()
     def get_output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
 class PrintWorkflowSubmittedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowTarget Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedEventArgs::GetTarget(Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket)
@@ -480,6 +527,8 @@ class PrintWorkflowSubmittedEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowSubmittedOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation::Complete(Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedStatus)
     def complete(self, status: PrintWorkflowSubmittedStatus, /) -> None: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation::get_Configuration()
@@ -491,6 +540,8 @@ class PrintWorkflowSubmittedOperation(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowTarget(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.Workflow.PrintWorkflowStreamTarget Windows.Graphics.Printing.Workflow.PrintWorkflowTarget::get_TargetAsStream()
     @_property
     def target_as_stream(self) -> PrintWorkflowStreamTarget: ...
@@ -500,12 +551,16 @@ class PrintWorkflowTarget(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.Workflow.PrintWorkflowBackgroundSession Windows.Graphics.Printing.Workflow.PrintWorkflowTriggerDetails::get_PrintWorkflowSession()
     @_property
     def print_workflow_session(self) -> PrintWorkflowBackgroundSession: ...
 
 @typing.final
 class PrintWorkflowUIActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Graphics.Printing.Workflow.PrintWorkflowUIActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -524,6 +579,8 @@ class PrintWorkflowUIActivatedEventArgs(windows_applicationmodel_activation.IAct
 
 @typing.final
 class PrintWorkflowUILauncher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher::IsUILaunchEnabled()
     def is_ui_launch_enabled(self) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Printing.Workflow.PrintWorkflowUICompletionStatus> Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher::LaunchAndCompleteUIAsync()
@@ -531,6 +588,8 @@ class PrintWorkflowUILauncher(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowVirtualPrinterDataAvailableEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs::CompleteJob(Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedStatus)
     def complete_job(self, status: PrintWorkflowSubmittedStatus, /) -> None: ...
     # Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs::GetJobPrintTicket()
@@ -551,6 +610,8 @@ class PrintWorkflowVirtualPrinterDataAvailableEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowVirtualPrinterSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession::add_VirtualPrinterDataAvailable(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession,Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs>)
@@ -566,12 +627,16 @@ class PrintWorkflowVirtualPrinterSession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowVirtualPrinterTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterSession Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterTriggerDetails::get_VirtualPrinterSession()
     @_property
     def virtual_printer_session(self) -> PrintWorkflowVirtualPrinterSession: ...
 
 @typing.final
 class PrintWorkflowVirtualPrinterUIEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket Windows.Graphics.Printing.Workflow.PrintWorkflowVirtualPrinterUIEventArgs::GetJobPrintTicket()
@@ -588,6 +653,8 @@ class PrintWorkflowVirtualPrinterUIEventArgs(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowXpsDataAvailableEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Printing.Workflow.PrintWorkflowSubmittedOperation Windows.Graphics.Printing.Workflow.PrintWorkflowXpsDataAvailableEventArgs::get_Operation()

@@ -107,6 +107,8 @@ class FeedAnnouncement(winrt.system.Object):
 
 @typing.final
 class FeedAnnouncementInvokedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.Widgets.Notifications.AnnouncementActionKind Microsoft.Windows.Widgets.Notifications.FeedAnnouncementInvokedArgs::get_ActionKind()
     @_property
     def action_kind(self) -> AnnouncementActionKind: ...

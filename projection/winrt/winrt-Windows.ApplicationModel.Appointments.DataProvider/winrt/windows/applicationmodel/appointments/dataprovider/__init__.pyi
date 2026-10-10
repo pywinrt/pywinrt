@@ -30,6 +30,8 @@ __all__ = [
 
 @typing.final
 class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest::ReportFailedAsync()
@@ -55,6 +57,8 @@ class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarCancelMeetingRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs::get_Request()
@@ -63,6 +67,8 @@ class AppointmentCalendarCancelMeetingRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarCreateOrUpdateAppointmentRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest::ReportCompletedAsync(Windows.ApplicationModel.Appointments.Appointment)
     def report_completed_async(self, created_or_updated_appointment: windows_applicationmodel_appointments.Appointment, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest::ReportFailedAsync()
@@ -82,6 +88,8 @@ class AppointmentCalendarCreateOrUpdateAppointmentRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs::get_Request()
@@ -90,6 +98,8 @@ class AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(winrt.system.
 
 @typing.final
 class AppointmentCalendarForwardMeetingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest::ReportFailedAsync()
@@ -118,6 +128,8 @@ class AppointmentCalendarForwardMeetingRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarForwardMeetingRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs::get_Request()
@@ -126,6 +138,8 @@ class AppointmentCalendarForwardMeetingRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarProposeNewTimeForMeetingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest::ReportFailedAsync()
@@ -154,6 +168,8 @@ class AppointmentCalendarProposeNewTimeForMeetingRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs::get_Request()
@@ -162,6 +178,8 @@ class AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(winrt.system.O
 
 @typing.final
 class AppointmentCalendarSyncManagerSyncRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest::ReportFailedAsync()
@@ -172,6 +190,8 @@ class AppointmentCalendarSyncManagerSyncRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarSyncManagerSyncRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs::get_Request()
@@ -180,6 +200,8 @@ class AppointmentCalendarSyncManagerSyncRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarUpdateMeetingResponseRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest::ReportFailedAsync()
@@ -208,6 +230,8 @@ class AppointmentCalendarUpdateMeetingResponseRequest(winrt.system.Object):
 
 @typing.final
 class AppointmentCalendarUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs::get_Request()
@@ -216,6 +240,8 @@ class AppointmentCalendarUpdateMeetingResponseRequestEventArgs(winrt.system.Obje
 
 @typing.final
 class AppointmentDataProviderConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection::add_CancelMeetingRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection,Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs>)
@@ -245,6 +271,8 @@ class AppointmentDataProviderConnection(winrt.system.Object):
 
 @typing.final
 class AppointmentDataProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> AppointmentDataProviderConnection: ...

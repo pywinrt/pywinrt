@@ -225,6 +225,8 @@ class RevealBrush_Static(windows_ui_xaml_media.XamlCompositionBrushBase_Static):
     def target_theme_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RevealBrush(windows_ui_xaml_media.XamlCompositionBrushBase, metaclass=RevealBrush_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.ApplicationTheme Microsoft.UI.Xaml.Media.RevealBrush::get_TargetTheme()
     @_property
     def target_theme(self) -> windows_ui_xaml.ApplicationTheme: ...

@@ -87,6 +87,8 @@ class RevocationAndRenewalReasons(enum.IntFlag):
 
 @typing.final
 class ComponentLoadFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Protection.MediaProtectionServiceCompletion Windows.Media.Protection.ComponentLoadFailedEventArgs::get_Completion()
     @_property
     def completion(self) -> MediaProtectionServiceCompletion: ...
@@ -101,7 +103,8 @@ class ComponentRenewal_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HdcpSession(windows_foundation.IClosable, winrt.system.Object):
@@ -149,6 +152,8 @@ class MediaProtectionPMPServer(winrt.system.Object):
 
 @typing.final
 class MediaProtectionServiceCompletion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Protection.MediaProtectionServiceCompletion::Complete(System.Boolean)
     def complete(self, success: bool, /) -> None: ...
 
@@ -160,12 +165,16 @@ class ProtectionCapabilities(winrt.system.Object):
 
 @typing.final
 class RevocationAndRenewalInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.Media.Protection.RevocationAndRenewalItem> Windows.Media.Protection.RevocationAndRenewalInformation::get_Items()
     @_property
     def items(self) -> _cabc.MutableSequence[RevocationAndRenewalItem]: ...
 
 @typing.final
 class RevocationAndRenewalItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Protection.RevocationAndRenewalItem::get_HeaderHash()
     @_property
     def header_hash(self) -> str: ...
@@ -184,6 +193,8 @@ class RevocationAndRenewalItem(winrt.system.Object):
 
 @typing.final
 class ServiceRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Protection.MediaProtectionServiceCompletion Windows.Media.Protection.ServiceRequestedEventArgs::get_Completion()
     @_property
     def completion(self) -> MediaProtectionServiceCompletion: ...

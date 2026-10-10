@@ -26,6 +26,8 @@ class EnvironmentManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EnvironmentManager(winrt.system.Object, metaclass=EnvironmentManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.System.EnvironmentManager::AddExecutableFileExtension(System.String)
     def add_executable_file_extension(self, path_ext: str, /) -> None: ...
     # System.Void Microsoft.Windows.System.EnvironmentManager::AppendToPath(System.String)

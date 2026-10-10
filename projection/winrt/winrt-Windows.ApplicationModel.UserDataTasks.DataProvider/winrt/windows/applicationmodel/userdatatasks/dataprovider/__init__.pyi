@@ -25,6 +25,8 @@ __all__ = [
 
 @typing.final
 class UserDataTaskDataProviderConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection::add_CompleteTaskRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection,Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs>)
@@ -50,12 +52,16 @@ class UserDataTaskDataProviderConnection(winrt.system.Object):
 
 @typing.final
 class UserDataTaskDataProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderConnection Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskDataProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> UserDataTaskDataProviderConnection: ...
 
 @typing.final
 class UserDataTaskListCompleteTaskRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest::ReportCompletedAsync(System.String)
     def report_completed_async(self, completed_task_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest::ReportFailedAsync()
@@ -69,6 +75,8 @@ class UserDataTaskListCompleteTaskRequest(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListCompleteTaskRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequest Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCompleteTaskRequestEventArgs::get_Request()
@@ -77,6 +85,8 @@ class UserDataTaskListCompleteTaskRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListCreateOrUpdateTaskRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest::ReportCompletedAsync(Windows.ApplicationModel.UserDataTasks.UserDataTask)
     def report_completed_async(self, created_or_updated_user_data_task: windows_applicationmodel_userdatatasks.UserDataTask, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest::ReportFailedAsync()
@@ -90,6 +100,8 @@ class UserDataTaskListCreateOrUpdateTaskRequest(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListCreateOrUpdateTaskRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequest Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs::get_Request()
@@ -98,6 +110,8 @@ class UserDataTaskListCreateOrUpdateTaskRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListDeleteTaskRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest::ReportFailedAsync()
@@ -111,6 +125,8 @@ class UserDataTaskListDeleteTaskRequest(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListDeleteTaskRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequest Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListDeleteTaskRequestEventArgs::get_Request()
@@ -119,6 +135,8 @@ class UserDataTaskListDeleteTaskRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListSkipOccurrenceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest::ReportFailedAsync()
@@ -132,6 +150,8 @@ class UserDataTaskListSkipOccurrenceRequest(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListSkipOccurrenceRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequest Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs::get_Request()
@@ -140,6 +160,8 @@ class UserDataTaskListSkipOccurrenceRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListSyncManagerSyncRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest::ReportFailedAsync()
@@ -150,6 +172,8 @@ class UserDataTaskListSyncManagerSyncRequest(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListSyncManagerSyncRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequest Windows.ApplicationModel.UserDataTasks.DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs::get_Request()

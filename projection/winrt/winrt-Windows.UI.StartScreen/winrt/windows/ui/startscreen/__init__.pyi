@@ -83,6 +83,8 @@ class JumpList_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class JumpList(winrt.system.Object, metaclass=JumpList_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.UI.StartScreen.JumpList::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.UI.StartScreen.JumpListSystemGroupKind Windows.UI.StartScreen.JumpList::get_SystemGroupKind()
@@ -104,6 +106,8 @@ class JumpListItem_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class JumpListItem(winrt.system.Object, metaclass=JumpListItem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.UI.StartScreen.JumpListItem::get_Logo()
     @_property
     def logo(self) -> windows_foundation.Uri: ...
@@ -327,6 +331,8 @@ class SecondaryTile(winrt.system.Object, metaclass=SecondaryTile_Static):
 
 @typing.final
 class SecondaryTileVisualElements(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.UI.StartScreen.SecondaryTileVisualElements::get_Square150x150Logo()
     @_property
     def square150x150_logo(self) -> windows_foundation.Uri: ...
@@ -416,6 +422,8 @@ class StartScreenManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.StartScreenManager::ContainsAppListEntryAsync(Windows.ApplicationModel.Core.AppListEntry)
     def contains_app_list_entry_async(self, app_list_entry: windows_applicationmodel_core.AppListEntry, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.StartScreen.StartScreenManager::ContainsSecondaryTileAsync(System.String)
@@ -432,6 +440,8 @@ class StartScreenManager(winrt.system.Object, metaclass=StartScreenManager_Stati
 
 @typing.final
 class TileMixedRealityModel(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.UI.StartScreen.TileMixedRealityModel::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
@@ -453,6 +463,8 @@ class TileMixedRealityModel(winrt.system.Object):
 
 @typing.final
 class VisualElementsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.StartScreen.VisualElementsRequestDeferral Windows.UI.StartScreen.VisualElementsRequest::GetDeferral()
     def get_deferral(self) -> VisualElementsRequestDeferral: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.StartScreen.SecondaryTileVisualElements> Windows.UI.StartScreen.VisualElementsRequest::get_AlternateVisualElements()
@@ -467,11 +479,15 @@ class VisualElementsRequest(winrt.system.Object):
 
 @typing.final
 class VisualElementsRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.StartScreen.VisualElementsRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class VisualElementsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.StartScreen.VisualElementsRequest Windows.UI.StartScreen.VisualElementsRequestedEventArgs::get_Request()
     @_property
     def request(self) -> VisualElementsRequest: ...

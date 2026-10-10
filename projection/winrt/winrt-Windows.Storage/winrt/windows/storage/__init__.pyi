@@ -189,6 +189,8 @@ class AppDataPaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppDataPaths(winrt.system.Object, metaclass=AppDataPaths_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.AppDataPaths::get_Cookies()
     @_property
     def cookies(self) -> str: ...
@@ -229,6 +231,8 @@ class ApplicationData_Static(winrt._winrt.Object_Static):
 class ApplicationData(windows_foundation.IClosable, winrt.system.Object, metaclass=ApplicationData_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.Storage.ApplicationData::ClearAsync()
     def clear_async(self) -> windows_foundation.IAsyncAction: ...
@@ -316,6 +320,8 @@ class ApplicationDataCompositeValue(windows_foundation_collections.IPropertySet,
 class ApplicationDataContainer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.ApplicationDataContainer::Close()
     def close(self) -> None: ...
     # Windows.Storage.ApplicationDataContainer Windows.Storage.ApplicationDataContainer::CreateContainer(System.String,Windows.Storage.ApplicationDataCreateDisposition)
@@ -343,6 +349,8 @@ class ApplicationDataContainerSettings(windows_foundation_collections.IPropertyS
     def __getitem__(self, key: str) -> winrt.system.Object: ...
     def __setitem__(self, key: str, value: winrt.system.Object) -> None: ...
     def __delitem__(self, key: str) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.ApplicationDataContainerSettings::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.Storage.ApplicationDataContainerSettings::First()
@@ -374,7 +382,8 @@ class CachedFileManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CachedFileManager(winrt.system.Object, metaclass=CachedFileManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DownloadsFolder_Static(winrt._winrt.Object_Static):
@@ -421,7 +430,8 @@ class DownloadsFolder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DownloadsFolder(winrt.system.Object, metaclass=DownloadsFolder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class FileIO_Static(winrt._winrt.Object_Static):
@@ -494,7 +504,8 @@ class FileIO_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FileIO(winrt.system.Object, metaclass=FileIO_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownFolders_Static(winrt._winrt.Object_Static):
@@ -548,7 +559,8 @@ class KnownFolders_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownFolders(winrt.system.Object, metaclass=KnownFolders_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PathIO_Static(winrt._winrt.Object_Static):
@@ -621,15 +633,20 @@ class PathIO_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PathIO(winrt.system.Object, metaclass=PathIO_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SetVersionDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.SetVersionDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class SetVersionRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.SetVersionDeferral Windows.Storage.SetVersionRequest::GetDeferral()
     def get_deferral(self) -> SetVersionDeferral: ...
     # System.UInt32 Windows.Storage.SetVersionRequest::get_CurrentVersion()
@@ -658,6 +675,8 @@ class StorageFile_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageFile(IStorageFile2, IStorageFilePropertiesWithAvailability, IStorageItemPropertiesWithProvider, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, winrt.system.Object, metaclass=StorageFile_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     def copy_and_replace_async(self, file_to_replace: IStorageFile, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -836,6 +855,8 @@ class StorageFolder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageFolder(IStorageItemPropertiesWithProvider, IStorageFolder2, IStorageItem2, IStorageItemProperties2, IStorageItemProperties, windows_storage_search.IStorageFolderQueryOperations, IStorageFolder, IStorageItem, winrt.system.Object, metaclass=StorageFolder_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Storage.StorageFolder::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
     @typing.overload
@@ -1045,6 +1066,8 @@ class StorageLibrary_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageLibrary(winrt.system.Object, metaclass=StorageLibrary_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.StorageLibrary::AreFolderSuggestionsAvailableAsync()
     def are_folder_suggestions_available_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.StorageLibrary::RequestAddFolderAsync()
@@ -1067,6 +1090,8 @@ class StorageLibrary(winrt.system.Object, metaclass=StorageLibrary_Static):
 
 @typing.final
 class StorageLibraryChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.StorageLibraryChange::GetStorageItemAsync()
     def get_storage_item_async(self) -> windows_foundation.IAsyncOperation[IStorageItem]: ...
     # System.Boolean Windows.Storage.StorageLibraryChange::IsOfType(Windows.Storage.StorageItemTypes)
@@ -1083,6 +1108,8 @@ class StorageLibraryChange(winrt.system.Object):
 
 @typing.final
 class StorageLibraryChangeReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageLibraryChangeReader::AcceptChangesAsync()
     def accept_changes_async(self) -> windows_foundation.IAsyncAction: ...
     # System.UInt64 Windows.Storage.StorageLibraryChangeReader::GetLastChangeId()
@@ -1092,6 +1119,8 @@ class StorageLibraryChangeReader(winrt.system.Object):
 
 @typing.final
 class StorageLibraryChangeTracker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.StorageLibraryChangeTracker::Disable()
     def disable(self) -> None: ...
     @typing.overload
@@ -1127,10 +1156,13 @@ class StorageLibraryLastChangeId_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageLibraryLastChangeId(winrt.system.Object, metaclass=StorageLibraryLastChangeId_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class StorageProvider(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Storage.StorageProvider::IsPropertySupportedForPartialFileAsync(System.String)
     def is_property_supported_for_partial_file_async(self, property_canonical_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.String Windows.Storage.StorageProvider::get_DisplayName()
@@ -1144,6 +1176,8 @@ class StorageProvider(winrt.system.Object):
 class StorageStreamTransaction(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.StorageStreamTransaction::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.StorageStreamTransaction::CommitAsync()
@@ -1156,6 +1190,8 @@ class StorageStreamTransaction(windows_foundation.IClosable, winrt.system.Object
 class StreamedFileDataRequest(IStreamedFileDataRequest, windows_storage_streams.IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Storage.StreamedFileDataRequest::Close()
     def close(self) -> None: ...
     # System.Void Windows.Storage.StreamedFileDataRequest::FailAndClose(Windows.Storage.StreamedFileFailureMode)
@@ -1167,6 +1203,8 @@ class StreamedFileDataRequest(IStreamedFileDataRequest, windows_storage_streams.
 
 @typing.final
 class SystemAudioProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemAudioProperties::get_EncodingBitrate()
     @_property
     def encoding_bitrate(self) -> str: ...
@@ -1178,6 +1216,8 @@ class SystemDataPaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemDataPaths(winrt.system.Object, metaclass=SystemDataPaths_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemDataPaths::get_Fonts()
     @_property
     def fonts(self) -> str: ...
@@ -1229,6 +1269,8 @@ class SystemDataPaths(winrt.system.Object, metaclass=SystemDataPaths_Static):
 
 @typing.final
 class SystemGPSProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemGPSProperties::get_LatitudeDecimal()
     @_property
     def latitude_decimal(self) -> str: ...
@@ -1238,6 +1280,8 @@ class SystemGPSProperties(winrt.system.Object):
 
 @typing.final
 class SystemImageProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemImageProperties::get_HorizontalSize()
     @_property
     def horizontal_size(self) -> str: ...
@@ -1247,6 +1291,8 @@ class SystemImageProperties(winrt.system.Object):
 
 @typing.final
 class SystemMediaProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemMediaProperties::get_Duration()
     @_property
     def duration(self) -> str: ...
@@ -1268,6 +1314,8 @@ class SystemMediaProperties(winrt.system.Object):
 
 @typing.final
 class SystemMusicProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemMusicProperties::get_AlbumArtist()
     @_property
     def album_artist(self) -> str: ...
@@ -1295,6 +1343,8 @@ class SystemMusicProperties(winrt.system.Object):
 
 @typing.final
 class SystemPhotoProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemPhotoProperties::get_CameraManufacturer()
     @_property
     def camera_manufacturer(self) -> str: ...
@@ -1355,10 +1405,13 @@ class SystemProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemProperties(winrt.system.Object, metaclass=SystemProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SystemVideoProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.SystemVideoProperties::get_Director()
     @_property
     def director(self) -> str: ...
@@ -1384,6 +1437,8 @@ class UserDataPaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Storage.UserDataPaths::get_CameraRoll()
     @_property
     def camera_roll(self) -> str: ...
