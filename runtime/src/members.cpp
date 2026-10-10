@@ -488,7 +488,6 @@ namespace py::interp
             member.py_name = name;
             member.kind = group.kind();
             member.is_static = (group.flags() & table::group_flags::is_static) != 0;
-            member.deprecated = (group.flags() & table::group_flags::deprecated) != 0;
             member.count = static_cast<uint16_t>(count);
             member.overloads = overloads;
 

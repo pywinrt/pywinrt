@@ -191,7 +191,6 @@ namespace py::interp
         PyObject* py_name;
         table::group_kind kind;
         bool is_static;
-        bool deprecated;
         uint16_t count;
         overload_desc* overloads;
     };

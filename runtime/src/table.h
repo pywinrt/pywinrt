@@ -134,7 +134,6 @@ namespace py::table
     {
         inline constexpr uint32_t kind_mask = 0x7;
         inline constexpr uint32_t is_static = 1 << 3;
-        inline constexpr uint32_t deprecated = 1 << 4;
     } // namespace group_flags
 
     enum class member_kind : uint32_t
