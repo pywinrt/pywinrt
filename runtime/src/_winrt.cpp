@@ -1,3 +1,8 @@
+// keeps <windows.h> from defining min and max as macros
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
 // must be included before winrt to avoid compile errors
 #include <Shobjidl.h>
 #include <libloaderapi.h>

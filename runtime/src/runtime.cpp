@@ -1,3 +1,8 @@
+// keeps <windows.h> from defining min and max as macros
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
 // must be included before cppwinrt to enable FILETIME conversions
 #include <Windows.h>
 

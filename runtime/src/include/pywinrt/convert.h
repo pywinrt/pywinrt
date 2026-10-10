@@ -444,10 +444,49 @@ namespace py
                 throw python_exception();
             }
 
+            // A TimeSpan counts 100 ns ticks in an int64_t, which holds about
+            // 29,000 years either way, and a timedelta reaches 999,999,999
+            // days. The days are checked first, because the microseconds of a
+            // timedelta that far out would not fit in an int64_t either.
+            constexpr auto max_span = winrt::Windows::Foundation::TimeSpan::max();
+            constexpr auto min_span = winrt::Windows::Foundation::TimeSpan::min();
+            constexpr auto max_days
+                = std::chrono::duration_cast<std::chrono::days>(max_span).count();
+
+            auto const days = PyDateTime_DELTA_GET_DAYS(obj);
+            if (std::abs(days) > max_days + 1)
+            {
+                throw_out_of_range(obj);
+            }
+
+            auto const value
+                = std::chrono::days(days)
+                  + std::chrono::seconds(PyDateTime_DELTA_GET_SECONDS(obj))
+                  + std::chrono::microseconds(PyDateTime_DELTA_GET_MICROSECONDS(obj));
+
+            if (value > std::chrono::duration_cast<std::chrono::microseconds>(max_span))
+            {
+                throw_out_of_range(obj);
+            }
+
+            if (value < std::chrono::duration_cast<std::chrono::microseconds>(min_span))
+            {
+                throw_out_of_range(obj);
+            }
+
             return std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
-                std::chrono::days(PyDateTime_DELTA_GET_DAYS(obj))
-                + std::chrono::seconds(PyDateTime_DELTA_GET_SECONDS(obj))
-                + std::chrono::microseconds(PyDateTime_DELTA_GET_MICROSECONDS(obj)));
+                value);
+        }
+
+      private:
+        [[noreturn]] static void throw_out_of_range(PyObject* obj)
+        {
+            PyErr_Format(
+                PyExc_OverflowError,
+                "%R is out of range for a TimeSpan, which holds about 29,000 "
+                "years either way",
+                obj);
+            throw python_exception();
         }
     };
 
