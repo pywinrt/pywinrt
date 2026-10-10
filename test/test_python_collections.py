@@ -223,6 +223,8 @@ class TestSequenceAsCollection(unittest.TestCase):
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertEqual(len(exceptions), 1)
         self.assertEqual(exceptions[0].exc_type, TypeError)
+        # the type, rather than a list whose repr() could be any size
+        self.assertIs(exceptions[0].object, list)
 
     def test_something_that_is_not_a_sequence_is_refused(self) -> None:
         with self.assertRaisesRegex(TypeError, "sequence"):

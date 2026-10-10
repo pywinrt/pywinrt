@@ -246,6 +246,8 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        # the override, which the default hook names in "Exception ignored in"
+        self.assertEqual(exceptions[0].object, c._on_overridable)
 
     def test_object_round_trip(self) -> None:
         class C(tc.Composable):

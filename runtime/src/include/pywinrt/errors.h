@@ -211,10 +211,11 @@ namespace py
     /**
      * Reports the pending Python exception as unraisable and throws, for a
      * callback that WinRT called and that therefore has nowhere to raise it.
+     * @p source is the Python object WinRT was calling, which the report names.
      */
-    [[noreturn]] inline void write_unraisable_and_throw()
+    [[noreturn]] inline void write_unraisable_and_throw(PyObject* source)
     {
-        throw_unraisable(winrt::hresult{report_unraisable()});
+        throw_unraisable(winrt::hresult{report_unraisable(source)});
     }
 
     /**
