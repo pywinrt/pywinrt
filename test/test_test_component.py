@@ -978,40 +978,64 @@ class TestTestComponent(unittest.TestCase):
 
     @async_test
     async def test_async_action_cancel_with_shield(self) -> None:
-        op = tc.TestRunner.create_async_action(500)
+        errors = self._record_loop_errors()
+        source = tc.AsyncActionSource()
+        op = source.operation
 
-        with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
-                # This makes the behavior explicit and avoids the later exception.
-                await asyncio.shield(op)
+        try:
+            with self.assertRaises(asyncio.TimeoutError):
+                async with asyncio.timeout(0):
+                    await asyncio.shield(op)
 
-        # Makes sense this time because of the shield.
-        self.assertNotEqual(op.status, wf.AsyncStatus.CANCELED)
+            await self._run_callbacks()
 
-        # The operation is still running.
-        self.assertEqual(op.status, wf.AsyncStatus.STARTED)
-        await asyncio.sleep(0.5)
+            # The shield kept the cancellation from reaching the operation,
+            # which is still running.
+            self.assertEqual(source.cancel_request_count, 0)
+            self.assertEqual(op.status, wf.AsyncStatus.STARTED)
+        finally:
+            # Only the source finishes the operation, which the shielded task
+            # is still waiting for.
+            source.complete()
+
+        await self._run_callbacks()
+
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertEqual(errors, [])
 
     @async_test
     async def test_async_action_cancel_with_cancel(self) -> None:
-        op = tc.TestRunner.create_async_action(500)
+        errors = self._record_loop_errors()
+        source = tc.AsyncActionSource()
+        op = source.operation
 
-        with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
                 try:
                     await op
                 except asyncio.CancelledError:
+                    # what an app that cancels the operation itself does
                     op.cancel()
                     raise
 
-        # This works since cancel() is effectively synchronous in this particular case.
-        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        task = asyncio.create_task(wait_with_timeout())
 
-        # But apparently the completed callback doesn't come until the timer
-        # is expired?! If we leave this out, we get a unraisable `RuntimeError:
-        # Event loop is closed` later on after the test is done.
-        await asyncio.sleep(0.5)
+        try:
+            await self._run_callbacks()
+
+            # The timeout asked the operation to cancel, and the await goes on
+            # until it has.
+            self.assertEqual(source.cancel_request_count, 1)
+            self.assertFalse(task.done())
+        finally:
+            source.cancel()
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        # Cancelling an operation that has finished changes nothing.
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        self.assertEqual(errors, [])
 
     @async_test
     async def test_async_action_error(self) -> None:
