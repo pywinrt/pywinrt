@@ -106476,7 +106476,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
@@ -106513,7 +106514,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
@@ -166276,7 +166278,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
@@ -166480,7 +166483,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
@@ -204171,7 +204175,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
@@ -383147,7 +383152,8 @@
                 "kind": "in",
                 "type": {
                   "name": "Windows.Storage.Streams.IBuffer"
-                }
+                },
+                "fillBuffer": true
               }
             ]
           },
