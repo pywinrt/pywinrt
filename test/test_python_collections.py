@@ -10,6 +10,7 @@ handler that returns one and then reading, changing and emptying what it gets,
 which is what reaches the members that only a mutable collection has.
 """
 
+import ctypes
 import sys
 import unittest
 from collections.abc import Iterable, Mapping, MutableMapping, MutableSequence, Sequence
@@ -20,6 +21,8 @@ from winrt.windows.foundation.collections import IKeyValuePair
 from winrt.system.hresult import E_BOUNDS, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
 
 from ._util import catch_unraisable
+
+E_POINTER = ctypes.HRESULT(0x80004003).value
 
 
 class LoggingSequence:
@@ -226,6 +229,14 @@ class TestSequenceAsCollection(unittest.TestCase):
         # the type, rather than a list whose repr() could be any size
         self.assertIs(exceptions[0].object, list)
 
+    def test_none_is_passed_as_a_null_collection(self) -> None:
+        # Some WinRT methods take null for no collection at all, so the callee
+        # is the one to refuse it, as TestComponent does.
+        with self.assertRaises(OSError) as ctx:
+            self.tests.collection5(None)  # type: ignore[arg-type]
+
+        self.assertEqual(ctx.exception.winerror, E_POINTER)
+
     def test_something_that_is_not_a_sequence_is_refused(self) -> None:
         with self.assertRaisesRegex(TypeError, "sequence"):
             self.tests.collection5(42)  # type: ignore
@@ -353,6 +364,18 @@ class TestCollectionFromAHandler(unittest.TestCase):
         self.assertIn("setitem", log)
         self.assertIn("delitem", log)
         self.assertIn("delslice", log)
+
+    def test_a_handler_hands_back_none(self) -> None:
+        # None is handed back as a null collection, not refused as an error in
+        # the handler, so the callee is the one to refuse it.
+        with (
+            self.assertRaisesRegex(OSError, "return value") as ctx,
+            catch_unraisable() as exceptions,
+        ):
+            self.tests.collection5_call(lambda items: (None, items))  # type: ignore[arg-type,return-value]
+
+        self.assertEqual(ctx.exception.winerror, E_POINTER)
+        self.assertEqual(exceptions, [])
 
     def test_a_handler_hands_back_a_vector_view(self) -> None:
         handed: list[LoggingList] = []
