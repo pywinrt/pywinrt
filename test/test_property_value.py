@@ -92,6 +92,28 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.CHAR16)
         self.assertEqual(ipv.get_char16(), "c")
 
+    def test_create_char16_of_something_else(self) -> None:
+        with self.assertRaisesRegex(TypeError, "expected string of length 1, but int"):
+            wf.PropertyValue.create_char16(5)  # type: ignore[arg-type]
+
+    def test_create_char16_of_a_string_of_another_length(self) -> None:
+        for value in ("", "ab"):
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(TypeError, f"string of length {len(value)}"),
+            ):
+                wf.PropertyValue.create_char16(value)
+
+    def test_create_char16_outside_the_basic_multilingual_plane(self) -> None:
+        # One character to Python, but two UTF-16 code units.
+        with self.assertRaisesRegex(ValueError, r"U\+1F600 does not fit in a Char16"):
+            wf.PropertyValue.create_char16("\U0001f600")
+
+    def test_create_char16_of_a_lone_surrogate(self) -> None:
+        # A code unit of its own, which a Char16 is.
+        o = wf.PropertyValue.create_char16("\ud800")
+        self.assertEqual(o.as_(wf.IPropertyValue).get_char16(), "\ud800")
+
     def test_create_boolean(self) -> None:
         o = wf.PropertyValue.create_boolean(True)
         ipv = o.as_(wf.IPropertyValue)
@@ -103,6 +125,18 @@ class TestPropertyValue(unittest.TestCase):
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.STRING)
         self.assertEqual(ipv.get_string(), "Ni!")
+
+    def test_create_string_of_something_else(self) -> None:
+        for value, name in ((5, "int"), (b"Ni!", "bytes"), (None, "NoneType")):
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(TypeError, f"expected str, not {name}"),
+            ):
+                wf.PropertyValue.create_string(value)  # type: ignore[arg-type]
+
+    def test_create_string_outside_the_basic_multilingual_plane(self) -> None:
+        o = wf.PropertyValue.create_string("a\U0001f600b")
+        self.assertEqual(o.as_(wf.IPropertyValue).get_string(), "a\U0001f600b")
 
     # # TODO: CreateInspectable
 

@@ -15,6 +15,7 @@ repository](../CHANGELOG.md).
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 
 ### Changed
+- A character a `Char16` cannot hold, such as an emoji, raises `ValueError`.
 - A negative unsigned integer raises `ValueError`, not `OverflowError`.
 - An `async def` function given as a delegate handler now raises `TypeError`.
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.

@@ -663,6 +663,13 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
+            if (!PyUnicode_Check(obj))
+            {
+                PyErr_Format(
+                    PyExc_TypeError, "expected str, not %s", Py_TYPE(obj)->tp_name);
+                throw python_exception();
+            }
+
             Py_ssize_t py_size;
             std::unique_ptr<wchar_t, decltype(&PyMem_Free)> buffer{
                 PyUnicode_AsWideCharString(obj, &py_size), &PyMem_Free};
@@ -713,25 +720,56 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            Py_ssize_t size;
-            std::unique_ptr<wchar_t, decltype(&PyMem_Free)> buffer{
-                PyUnicode_AsWideCharString(obj, &size), &PyMem_Free};
-
-            if (!buffer)
+            // The wording is ord()'s, which takes one character too.
+            if (!PyUnicode_Check(obj))
             {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "expected string of length 1, but %s found",
+                    Py_TYPE(obj)->tp_name);
                 throw python_exception();
             }
 
-            if (size != 1)
+            auto const length = PyUnicode_GET_LENGTH(obj);
+            if (length != 1)
             {
                 PyErr_Format(
                     PyExc_TypeError,
                     "expected a character, but string of length %zd found",
-                    size);
+                    length);
                 throw python_exception();
             }
 
-            return *buffer;
+            // A Char16 is one UTF-16 code unit, which a character past the
+            // Basic Multilingual Plane takes two of.
+            auto const character = PyUnicode_READ_CHAR(obj, 0);
+            if (character > 0xFFFF)
+            {
+#if PY_VERSION_HEX >= 0x030C0000
+                PyErr_Format(
+                    PyExc_ValueError,
+                    "character U+%X does not fit in a Char16: it is outside the "
+                    "Basic Multilingual Plane",
+                    static_cast<unsigned int>(character));
+#else
+                // PyErr_Format() has no %X before Python 3.12.
+                char code_point[16];
+                PyOS_snprintf(
+                    code_point,
+                    sizeof(code_point),
+                    "U+%X",
+                    static_cast<unsigned int>(character));
+
+                PyErr_Format(
+                    PyExc_ValueError,
+                    "character %s does not fit in a Char16: it is outside the "
+                    "Basic Multilingual Plane",
+                    code_point);
+#endif
+                throw python_exception();
+            }
+
+            return static_cast<char16_t>(character);
         }
     };
 
