@@ -1036,11 +1036,30 @@ async def download(operation) -> None:
 which is an alias for [`collections.abc.Buffer`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer).
 When used as a method parameter, any Python object that implements the buffer
 protocol can be used, for example, a [`bytearray`](https://docs.python.org/3/builtins/stdtypes.html#bytearray),
-[`bytes`][bytes], or a [`memoryview`][memoryview].
-Although care must be taken to ensure that immutable types like [`bytes`][bytes]
-are not used when the WinRT API expects a writeable buffer! The WinRT type
-system does not distinguish between read-only and writeable buffers, so there
-isn't a way to enforce this at runtime.
+[`bytes`][bytes], or a [`memoryview`][memoryview], and WinRT reads or writes
+its memory directly, without a copy.
+
+Where WinRT writes into the buffer, as `read_async()` of a stream does, the
+object has to be writable, so a `bytearray` rather than `bytes`, and a read-only
+one raises [`TypeError`][TypeError]. Use the buffer the method hands back: its
+`len()` is how many bytes WinRT wrote, which can be fewer than the object holds.
+
+```python
+data = bytearray(1024)
+read = await stream.read_async(data, len(data), InputStreamOptions.NONE)
+received = bytes(read)  # the len(read) bytes the read filled
+```
+
+For a small read, copying the bytes out with `bytes()` is quickest. For a large
+one, from tens of kilobytes, a [`memoryview`][memoryview] of `read` is quicker:
+it reaches the same bytes without copying them, for as long as the view is open.
+
+WinRT's metadata does not say which methods write into a buffer, so PyWinRT
+knows those of the Windows SDK by name and takes any other method to only read
+its buffer. If such a method sets the length of a read-only one after all, it
+fails with [`PermissionError`][PermissionError] rather than passing silently.
+For the pixels of a bitmap, `SoftwareBitmap.lock_buffer()`, below, reaches the
+bitmap's own memory, where `copy_to_buffer()` copies all of it.
 
 Buffers received as a return value can likewise be used with anything that
 supports the buffer protocol. For example, [`memoryview`][memoryview] can be used to
@@ -1087,6 +1106,7 @@ with `None` to ask whether there is a buffer at all.
 
 [bytes]: https://docs.python.org/3/builtins/stdtypes.html#bytes
 [memoryview]: https://docs.python.org/3/builtins/stdtypes.html#memoryview
+[PermissionError]: https://docs.python.org/3/builtins/exceptions.html#PermissionError
 [mmap]: https://docs.python.org/3/library/mmap.html
 [IBuffer]: https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer
 [IMemoryBuffer]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.imemorybuffer

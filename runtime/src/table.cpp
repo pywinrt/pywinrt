@@ -713,6 +713,11 @@ namespace py::table
         return (word(0) & param_flags::is_by_reference) != 0;
     }
 
+    bool param_view::is_fill_buffer() const
+    {
+        return (word(0) & param_flags::is_fill_buffer) != 0;
+    }
+
     type_code param_view::code() const
     {
         return static_cast<type_code>(word(1));
@@ -870,6 +875,14 @@ namespace py::cpp::_winrt
                     result.get(),
                     "is_by_reference",
                     PyBool_FromLong(param.is_by_reference())))
+            {
+                return pyobj_handle{};
+            }
+
+            if (!set_item(
+                    result.get(),
+                    "is_fill_buffer",
+                    PyBool_FromLong(param.is_fill_buffer())))
             {
                 return pyobj_handle{};
             }

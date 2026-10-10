@@ -368,6 +368,7 @@ namespace py::interp
                 arg.is_return = param.is_return_value();
                 arg.is_implicit = param.is_implicit();
                 arg.by_reference = param.is_by_reference();
+                arg.fill_buffer = param.is_fill_buffer();
                 arg.type = param.type();
 
                 // Only a struct and a GUID are ever declared `ref`, and the
