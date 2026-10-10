@@ -1120,6 +1120,18 @@ interface TestComponent.IOverrideOverrides
 interface TestComponent.IOverrideProtected
     guid f28dc77f-e48d-5fc0-bcb2-89627d48a647
 
+interface TestComponent.IProtectedMembers
+    guid 793336b6-d6f0-5a9d-b5c2-f591a3c195c4
+
+interface TestComponent.IProtectedMembersOverrides
+    guid f5cb8d47-4ee8-5faa-a932-a887e1ca446c
+
+interface TestComponent.IProtectedMembersProtected
+    guid b85d59a6-5ba6-58de-a619-fdfb391b43b3
+
+interface TestComponent.IProtectedMembersProtectedFactory
+    guid f475da5f-d211-520a-8fa1-92dded925baf
+
 interface Windows.Foundation.IReference<System.Int64> concrete
     py winrt.windows.foundation._IReference[Int64]
     guid 4dda9e24-e69f-5c6a-a0a6-93427365af2a
@@ -2499,6 +2511,30 @@ delegate TestComponent.Param9Handler python_type
             in single name=a
             out single name=b
             out single return
+
+class TestComponent.ProtectedMembers composable python_type
+    py ProtectedMembers
+    signature rc(TestComponent.ProtectedMembers;{793336b6-d6f0-5a9d-b5c2-f591a3c195c4})
+    default TestComponent.IProtectedMembers
+    requires TestComponent.IProtectedMembers
+    requires TestComponent.IProtectedMembersProtected
+    requires TestComponent.IProtectedMembersOverrides
+    composable TestComponent.IProtectedMembersProtectedFactory
+    overridable TestComponent.IProtectedMembersOverrides
+    property _overridable_value
+        get get_OverridableValue slot=6 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembersOverrides shape=4 reverse=22 overridable
+            out int32 return
+    property _protected_value
+        get get_ProtectedValue slot=6 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembersProtected shape=4 reverse=22 protected
+            out int32 return
+        put put_ProtectedValue slot=7 inputs=1 outputs=0 declaring=TestComponent.IProtectedMembersProtected shape=4 reverse=43 protected
+            in int32 name=value
+    method _protected_method
+        method ProtectedMethod slot=8 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembersProtected shape=4 reverse=62 protected
+            out int32 return
+    method read_overridable_value
+        method ReadOverridableValue slot=6 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembers shape=4
+            out int32 return
 
 delegate TestComponent.TestHandler python_type
     py TestHandler

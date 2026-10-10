@@ -6,5 +6,5 @@ Windows Runtime (WinRT) APIs for the `TestComponent` namespace.
 
 This package provides the `test_winrt.testcomponent` module.
 
-The WinRT APIs in it are those of version 1.5.0 of the
+The WinRT APIs in it are those of version 1.6.0 of the
 `PyWinRT.TestWinRT` NuGet package.

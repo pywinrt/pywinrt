@@ -902,10 +902,10 @@
                 "f4pp": 3,
                 "f8pp": 3,
                 "i8pp": 6,
-                "p": 157,
+                "p": 162,
                 "pp": 50,
-                "ppp": 78,
-                "pppp": 25,
+                "ppp": 79,
+                "pppp": 26,
                 "ppppp": 3,
                 "pppppppp": 32,
                 "{bc2pp}pp": 2,
@@ -1092,7 +1092,7 @@
                     "System.Guid"
                 ]
             },
-            "implementable_interfaces": 53,
+            "implementable_interfaces": 55,
             "delegates": 50
         },
         "wasdk": {

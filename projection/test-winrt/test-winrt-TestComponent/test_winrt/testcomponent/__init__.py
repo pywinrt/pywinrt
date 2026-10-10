@@ -26,6 +26,7 @@ __all__ = [
     "DerivedOverride",
     "OverloadClass",
     "Override",
+    "ProtectedMembers",
     "TestRunner",
     "IRequiredFour",
     "IRequiredOne",

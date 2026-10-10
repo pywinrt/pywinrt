@@ -24,6 +24,7 @@ __all__ = [
     "DerivedOverride",
     "OverloadClass",
     "Override",
+    "ProtectedMembers",
     "TestRunner",
     "IRequiredFour",
     "IRequiredOne",
@@ -297,6 +298,31 @@ class Override(winrt.system.Object, metaclass=Override_Static):
     @typing.final
     # System.Void TestComponent.Override::remove_ProtectedCalled(Windows.Foundation.EventRegistrationToken)
     def remove_protected_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+
+class ProtectedMembers_Static(winrt._winrt.Object_Static):
+    def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ProtectedMembers_Static: ...
+
+class ProtectedMembers(winrt.system.Object, metaclass=ProtectedMembers_Static):
+    def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    @typing.final
+    # System.Int32 TestComponent.ProtectedMembers::ProtectedMethod()
+    def _protected_method(self) -> winrt.system.Int32: ...
+    @typing.final
+    # System.Int32 TestComponent.ProtectedMembers::ReadOverridableValue()
+    def read_overridable_value(self) -> winrt.system.Int32: ...
+    # System.Int32 TestComponent.ProtectedMembers::get_OverridableValue()
+    @_property
+    def _overridable_value(self) -> winrt.system.Int32: ...
+    # System.Int32 TestComponent.ProtectedMembers::get_ProtectedValue()
+    @_property
+    @typing.final
+    def _protected_value(self) -> winrt.system.Int32: ...
+    # System.Void TestComponent.ProtectedMembers::put_ProtectedValue(System.Int32)
+    @_protected_value.setter
+    @typing.final
+    def _protected_value(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
 class TestRunner_Static(winrt._winrt.Object_Static):
