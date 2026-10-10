@@ -432,8 +432,8 @@ class Brush_Static(windows_ui_xaml.DependencyObject_Static):
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Brush(windows_ui_xaml.DependencyObject, windows_ui_composition.IAnimationObject, metaclass=Brush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Brush's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Media.Brush::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
     def populate_property_info(self, property_name: str, property_info: windows_ui_composition.AnimationPropertyInfo, /) -> None: ...
     # System.Void Windows.UI.Xaml.Media.Brush::PopulatePropertyInfoOverride(System.String,Windows.UI.Composition.AnimationPropertyInfo)
@@ -510,8 +510,8 @@ class CacheMode_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class CacheMode(windows_ui_xaml.DependencyObject, metaclass=CacheMode_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """CacheMode's constructor is protected: derive a class from it and create that."""
 
 @typing.final
 class CompositeTransform_Static(Transform_Static):
@@ -720,8 +720,8 @@ class GeneralTransform_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class GeneralTransform(windows_ui_xaml.DependencyObject, metaclass=GeneralTransform_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """GeneralTransform's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.Foundation.Rect Windows.UI.Xaml.Media.GeneralTransform::TransformBounds(Windows.Foundation.Rect)
     def transform_bounds(self, rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Rect: ...
@@ -862,8 +862,8 @@ class GradientBrush_Static(Brush_Static):
     def spread_method_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class GradientBrush(Brush, metaclass=GradientBrush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """GradientBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Media.GradientSpreadMethod Windows.UI.Xaml.Media.GradientBrush::get_SpreadMethod()
     @_property
     def spread_method(self) -> GradientSpreadMethod: ...
@@ -1571,8 +1571,8 @@ class Projection_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Projection(windows_ui_xaml.DependencyObject, metaclass=Projection_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Projection's constructor is protected: derive a class from it and create that."""
 
 @typing.final
 class QuadraticBezierSegment_Static(PathSegment_Static):
@@ -1670,8 +1670,8 @@ class RevealBrush_Static(XamlCompositionBrushBase_Static):
     def target_theme_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RevealBrush(XamlCompositionBrushBase, metaclass=RevealBrush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """RevealBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.ApplicationTheme Windows.UI.Xaml.Media.RevealBrush::get_TargetTheme()
     @_property
     def target_theme(self) -> windows_ui_xaml.ApplicationTheme: ...
@@ -1865,8 +1865,8 @@ class TileBrush_Static(Brush_Static):
     def stretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TileBrush(Brush, metaclass=TileBrush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """TileBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Media.Stretch Windows.UI.Xaml.Media.TileBrush::get_Stretch()
     @_property
     def stretch(self) -> Stretch: ...
@@ -2121,8 +2121,8 @@ class XamlCompositionBrushBase_Static(Brush_Static):
     def fallback_color_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """XamlCompositionBrushBase's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::OnConnected()
     def _on_connected(self) -> None: ...
     # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::OnDisconnected()

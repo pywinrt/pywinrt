@@ -179,6 +179,11 @@ class Microsoft.UI.Xaml.Media.Brush composable python_type
     factory Microsoft.UI.Xaml.Media.IBrushStatics
     composable Microsoft.UI.Xaml.Media.IBrushFactory
     overridable Microsoft.UI.Xaml.Media.IBrushOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Brush return
     property transform
         get get_Transform slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IBrush shape=4
             out class type=Microsoft.UI.Xaml.Media.Transform return
@@ -279,6 +284,11 @@ class Microsoft.UI.Xaml.Media.CacheMode composable python_type
     default Microsoft.UI.Xaml.Media.ICacheMode
     requires Microsoft.UI.Xaml.Media.ICacheMode
     composable Microsoft.UI.Xaml.Media.ICacheModeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.ICacheModeFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.CacheMode return
 
 enum Microsoft.UI.Xaml.Media.ColorInterpolationMode python_type
     py ColorInterpolationMode
@@ -570,6 +580,11 @@ class Microsoft.UI.Xaml.Media.GeneralTransform composable python_type
     requires Microsoft.UI.Xaml.Media.IGeneralTransformOverrides
     composable Microsoft.UI.Xaml.Media.IGeneralTransformFactory
     overridable Microsoft.UI.Xaml.Media.IGeneralTransformOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGeneralTransformFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.GeneralTransform return
     property inverse
         get get_Inverse slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGeneralTransform shape=4
             out class type=Microsoft.UI.Xaml.Media.GeneralTransform return
@@ -714,6 +729,11 @@ class Microsoft.UI.Xaml.Media.GradientBrush composable python_type
     requires Microsoft.UI.Xaml.Media.IGradientBrush
     factory Microsoft.UI.Xaml.Media.IGradientBrushStatics
     composable Microsoft.UI.Xaml.Media.IGradientBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGradientBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.GradientBrush return
     property spread_method
         get get_SpreadMethod slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGradientBrush shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.GradientSpreadMethod return
@@ -3086,6 +3106,11 @@ class Microsoft.UI.Xaml.Media.Projection composable python_type
     default Microsoft.UI.Xaml.Media.IProjection
     requires Microsoft.UI.Xaml.Media.IProjection
     composable Microsoft.UI.Xaml.Media.IProjectionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IProjectionFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Projection return
 
 class Microsoft.UI.Xaml.Media.QuadraticBezierSegment activatable python_type
     py QuadraticBezierSegment
@@ -3407,6 +3432,11 @@ class Microsoft.UI.Xaml.Media.SystemBackdrop composable python_type
     requires Microsoft.UI.Xaml.Media.ISystemBackdropOverrides
     composable Microsoft.UI.Xaml.Media.ISystemBackdropFactory
     overridable Microsoft.UI.Xaml.Media.ISystemBackdropOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.ISystemBackdropFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.SystemBackdrop return
     method get_default_system_backdrop_configuration
         method GetDefaultSystemBackdropConfiguration slot=6 inputs=2 outputs=1 declaring=Microsoft.UI.Xaml.Media.ISystemBackdrop shape=117
             in interface type=Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop name=target
@@ -3448,6 +3478,11 @@ class Microsoft.UI.Xaml.Media.TileBrush composable python_type
     requires Microsoft.UI.Xaml.Media.ITileBrush
     factory Microsoft.UI.Xaml.Media.ITileBrushStatics
     composable Microsoft.UI.Xaml.Media.ITileBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.ITileBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.TileBrush return
     property stretch
         get get_Stretch slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.ITileBrush shape=4
             out enum32 type=Microsoft.UI.Xaml.Media.Stretch return
@@ -3670,6 +3705,11 @@ class Microsoft.UI.Xaml.Media.XamlCompositionBrushBase composable python_type
     factory Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseStatics
     composable Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseFactory
     overridable Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.XamlCompositionBrushBase return
     property fallback_color
         get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBase shape=4
             out struct type=Windows.UI.Color return

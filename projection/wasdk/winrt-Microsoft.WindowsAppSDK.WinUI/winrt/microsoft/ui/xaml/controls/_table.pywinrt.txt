@@ -3510,6 +3510,11 @@ class Microsoft.UI.Xaml.Controls.Control composable python_type
     factory Microsoft.UI.Xaml.Controls.IControlStatics
     composable Microsoft.UI.Xaml.Controls.IControlFactory
     overridable Microsoft.UI.Xaml.Controls.IControlOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IControlFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Controls.Control return
     property vertical_content_alignment
         get get_VerticalContentAlignment slot=38 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IControl shape=4
             out enum32 type=Microsoft.UI.Xaml.VerticalAlignment return
@@ -13879,6 +13884,11 @@ class Microsoft.UI.Xaml.Controls.ListViewBase composable python_type
     requires Microsoft.UI.Xaml.Controls.ISemanticZoomInformation
     factory Microsoft.UI.Xaml.Controls.IListViewBaseStatics
     composable Microsoft.UI.Xaml.Controls.IListViewBaseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IListViewBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Controls.ListViewBase return
     property single_selection_follows_focus
         get get_SingleSelectionFollowsFocus slot=30 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IListViewBase shape=4
             out boolean return
@@ -16013,6 +16023,11 @@ class Microsoft.UI.Xaml.Controls.Panel composable python_type
     requires Microsoft.UI.Xaml.Controls.IPanel
     factory Microsoft.UI.Xaml.Controls.IPanelStatics
     composable Microsoft.UI.Xaml.Controls.IPanelFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IPanelFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Controls.Panel return
     property children_transitions
         get get_ChildrenTransitions slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IPanel shape=4
             out class type=Microsoft.UI.Xaml.Media.Animation.TransitionCollection return

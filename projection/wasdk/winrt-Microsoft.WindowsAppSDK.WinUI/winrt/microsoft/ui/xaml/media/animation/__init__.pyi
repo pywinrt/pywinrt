@@ -318,8 +318,8 @@ class ColorKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ColorKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ColorKeyFrame_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ColorKeyFrame's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Color Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame::get_Value()
     @_property
     def value(self) -> windows_ui.Color: ...
@@ -639,8 +639,8 @@ class DoubleKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class DoubleKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=DoubleKeyFrame_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """DoubleKeyFrame's constructor is protected: derive a class from it and create that."""
     # System.Double Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame::get_Value()
     @_property
     def value(self) -> winrt.system.Double: ...
@@ -1134,8 +1134,8 @@ class NavigationTransitionInfo_Static(microsoft_ui_xaml.DependencyObject_Static)
     ...
 
 class NavigationTransitionInfo(microsoft_ui_xaml.DependencyObject, metaclass=NavigationTransitionInfo_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """NavigationTransitionInfo's constructor is protected: derive a class from it and create that."""
     # System.String Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo::GetNavigationStateCore()
     def _get_navigation_state_core(self) -> str: ...
     # System.Void Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo::SetNavigationStateCore(System.String)
@@ -1171,8 +1171,8 @@ class ObjectKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ObjectKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=ObjectKeyFrame_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ObjectKeyFrame's constructor is protected: derive a class from it and create that."""
     # System.Object Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame::get_Value()
     @_property
     def value(self) -> winrt.system.Object: ...
@@ -1332,8 +1332,8 @@ class PointKeyFrame_Static(microsoft_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PointKeyFrame(microsoft_ui_xaml.DependencyObject, metaclass=PointKeyFrame_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """PointKeyFrame's constructor is protected: derive a class from it and create that."""
     # Windows.Foundation.Point Microsoft.UI.Xaml.Media.Animation.PointKeyFrame::get_Value()
     @_property
     def value(self) -> windows_foundation.Point: ...
@@ -2035,8 +2035,8 @@ class Timeline_Static(microsoft_ui_xaml.DependencyObject_Static):
     def speed_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Timeline(microsoft_ui_xaml.DependencyObject, metaclass=Timeline_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Timeline's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Media.Animation.Timeline::add_Completed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_completed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...

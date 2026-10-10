@@ -4432,8 +4432,8 @@ class Control_Static(windows_ui_xaml.FrameworkElement_Static):
     def background_sizing_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Control(windows_ui_xaml.FrameworkElement, metaclass=Control_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Control's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.Boolean Windows.UI.Xaml.Controls.Control::ApplyTemplate()
     def apply_template(self) -> bool: ...
@@ -6480,8 +6480,8 @@ class InkToolbarCustomPen_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class InkToolbarCustomPen(windows_ui_xaml.DependencyObject, metaclass=InkToolbarCustomPen_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """InkToolbarCustomPen's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.UI.Input.Inking.InkDrawingAttributes Windows.UI.Xaml.Controls.InkToolbarCustomPen::CreateInkDrawingAttributes(Windows.UI.Xaml.Media.Brush,System.Double)
     def create_ink_drawing_attributes(self, brush: windows_ui_xaml_media.Brush, stroke_width: winrt.system.Double, /) -> windows_ui_input_inking.InkDrawingAttributes: ...
@@ -7584,8 +7584,8 @@ class ListViewBase_Static(windows_ui_xaml_controls_primitives.Selector_Static):
     def single_selection_follows_focus_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ListViewBase(windows_ui_xaml_controls_primitives.Selector, ISemanticZoomInformation, metaclass=ListViewBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ListViewBase's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Windows.UI.Xaml.Controls.SemanticZoomLocation,Windows.UI.Xaml.Controls.SemanticZoomLocation)
@@ -9585,8 +9585,8 @@ class Panel_Static(windows_ui_xaml.FrameworkElement_Static):
     def is_items_host_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Panel(windows_ui_xaml.FrameworkElement, metaclass=Panel_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Panel's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Media.Animation.TransitionCollection Windows.UI.Xaml.Controls.Panel::get_ChildrenTransitions()
     @_property
     def children_transitions(self) -> windows_ui_xaml_media_animation.TransitionCollection: ...

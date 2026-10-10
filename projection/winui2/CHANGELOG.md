@@ -15,6 +15,7 @@ releases before v4.0 are.
 ## [Unreleased]
 
 ### Added
+- Protected constructors are projected, so a class such as `Panel` is derivable.
 - Protected properties are projected, such as `Control._default_style_key`.
 
 ### Changed

@@ -76,6 +76,11 @@ class Windows.UI.Xaml.Controls.Primitives.ButtonBase composable python_type
     requires Windows.UI.Xaml.Controls.Primitives.IButtonBase
     factory Windows.UI.Xaml.Controls.Primitives.IButtonBaseStatics
     composable Windows.UI.Xaml.Controls.Primitives.IButtonBaseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IButtonBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Primitives.ButtonBase return
     property command_parameter
         get get_CommandParameter slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IButtonBase shape=4
             out object return
@@ -706,6 +711,11 @@ class Windows.UI.Xaml.Controls.Primitives.FlyoutBase composable python_type
     composable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory
     overridable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
     overridable Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides4
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Primitives.FlyoutBase return
     property placement
         get get_Placement slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IFlyoutBase shape=4
             out enum32 type=Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode return
@@ -3061,6 +3071,11 @@ class Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase composable python_typ
     factory Windows.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseStatics
     composable Windows.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseFactory
     overridable Windows.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase return
     property title_property static
         get get_TitleProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IPickerFlyoutBaseStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
@@ -3342,6 +3357,11 @@ class Windows.UI.Xaml.Controls.Primitives.RangeBase composable python_type
     factory Windows.UI.Xaml.Controls.Primitives.IRangeBaseStatics
     composable Windows.UI.Xaml.Controls.Primitives.IRangeBaseFactory
     overridable Windows.UI.Xaml.Controls.Primitives.IRangeBaseOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IRangeBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Primitives.RangeBase return
     property value
         get get_Value slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.IRangeBase shape=4
             out double return
@@ -3603,6 +3623,11 @@ class Windows.UI.Xaml.Controls.Primitives.SelectorItem composable python_type
     requires Windows.UI.Xaml.Controls.Primitives.ISelectorItem
     factory Windows.UI.Xaml.Controls.Primitives.ISelectorItemStatics
     composable Windows.UI.Xaml.Controls.Primitives.ISelectorItemFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ISelectorItemFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Primitives.SelectorItem return
     property is_selected
         get get_IsSelected slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.Primitives.ISelectorItem shape=4
             out boolean return

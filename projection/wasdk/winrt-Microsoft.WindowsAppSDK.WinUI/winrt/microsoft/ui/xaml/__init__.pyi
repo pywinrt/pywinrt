@@ -1012,8 +1012,8 @@ class DependencyObject_Static(winrt._winrt.Object_Static):
 
 class DependencyObject(winrt.system.Object, metaclass=DependencyObject_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """DependencyObject's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.Void Microsoft.UI.Xaml.DependencyObject::ClearValue(Microsoft.UI.Xaml.DependencyProperty)
     def clear_value(self, dp: DependencyProperty, /) -> None: ...
@@ -1550,8 +1550,8 @@ class FrameworkElement_Static(UIElement_Static):
     def width_property(cls) -> DependencyProperty: ...
 
 class FrameworkElement(UIElement, metaclass=FrameworkElement_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """FrameworkElement's constructor is protected: derive a class from it and create that."""
     # Windows.Foundation.Size Microsoft.UI.Xaml.FrameworkElement::ArrangeOverride(Windows.Foundation.Size)
     def _arrange_override(self, final_size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Size: ...
     @typing.final
@@ -1821,8 +1821,8 @@ class FrameworkTemplate_Static(DependencyObject_Static):
     ...
 
 class FrameworkTemplate(DependencyObject, metaclass=FrameworkTemplate_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """FrameworkTemplate's constructor is protected: derive a class from it and create that."""
 
 @typing.final
 class FrameworkView(windows_applicationmodel_core.IFrameworkView, winrt.system.Object):
@@ -2193,8 +2193,8 @@ class StateTriggerBase_Static(DependencyObject_Static):
     ...
 
 class StateTriggerBase(DependencyObject, metaclass=StateTriggerBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """StateTriggerBase's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.Void Microsoft.UI.Xaml.StateTriggerBase::SetActive(System.Boolean)
     def _set_active(self, is_active: bool, /) -> None: ...

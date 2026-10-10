@@ -666,6 +666,11 @@ class Windows.UI.Xaml.DependencyObject composable python_type
     requires Windows.UI.Xaml.IDependencyObject
     requires Windows.UI.Xaml.IDependencyObject2
     composable Windows.UI.Xaml.IDependencyObjectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IDependencyObjectFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.DependencyObject return
     property dispatcher
         get get_Dispatcher slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IDependencyObject shape=4
             out class type=Windows.UI.Core.CoreDispatcher return
@@ -1370,6 +1375,11 @@ class Windows.UI.Xaml.FrameworkElement composable python_type
     composable Windows.UI.Xaml.IFrameworkElementFactory
     overridable Windows.UI.Xaml.IFrameworkElementOverrides
     overridable Windows.UI.Xaml.IFrameworkElementOverrides2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElementFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.FrameworkElement return
     property width
         get get_Width slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IFrameworkElement shape=4
             out double return
@@ -1677,6 +1687,11 @@ class Windows.UI.Xaml.FrameworkTemplate composable python_type
     default Windows.UI.Xaml.IFrameworkTemplate
     requires Windows.UI.Xaml.IFrameworkTemplate
     composable Windows.UI.Xaml.IFrameworkTemplateFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IFrameworkTemplateFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.FrameworkTemplate return
 
 class Windows.UI.Xaml.FrameworkView activatable python_type
     py FrameworkView
@@ -4659,6 +4674,11 @@ class Windows.UI.Xaml.StateTriggerBase composable python_type
     requires Windows.UI.Xaml.IStateTriggerBase
     requires Windows.UI.Xaml.IStateTriggerBaseProtected
     composable Windows.UI.Xaml.IStateTriggerBaseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IStateTriggerBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.StateTriggerBase return
     method _set_active
         method SetActive slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IStateTriggerBaseProtected shape=4 reverse=22 protected
             in boolean name=IsActive

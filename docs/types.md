@@ -237,6 +237,30 @@ class App(Application):
         ...
 ```
 
+A class whose constructor is protected, such as `Panel` or `Control`, is
+created only through a class derived from it, as in C#, so calling the class
+itself raises [`TypeError`][TypeError]. A type checker cannot tell the two
+calls apart and accepts both.
+
+```python
+from typing_extensions import override
+
+from winrt.windows.ui.xaml.controls import Panel
+
+
+class StackingPanel(Panel):
+    @override
+    def _measure_override(self, available_size):
+        ...
+
+
+panel = StackingPanel()
+```
+
+!!! version-added "Added in version 4.0"
+
+    Deriving from a class whose constructor is protected.
+
 WinRT asks such an object for its runtime class name, which by default is the
 name of the first overridable interface its class implements, or nothing when
 the class has none. A XAML metadata provider looks types up by that name, so a

@@ -139,6 +139,11 @@ class Windows.UI.Xaml.Media.Imaging.BitmapSource composable python_type
     requires Windows.UI.Xaml.Media.Imaging.IBitmapSource
     factory Windows.UI.Xaml.Media.Imaging.IBitmapSourceStatics
     composable Windows.UI.Xaml.Media.Imaging.IBitmapSourceFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.Imaging.IBitmapSourceFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.Imaging.BitmapSource return
     property pixel_height
         get get_PixelHeight slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.Imaging.IBitmapSource shape=4
             out int32 return
@@ -551,6 +556,11 @@ class Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask composable pytho
     requires Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskOverrides
     composable Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskFactory
     overridable Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask return
     method _on_run
         method OnRun slot=6 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Media.Imaging.IXamlRenderingBackgroundTaskOverrides shape=4 reverse=22 overridable
             in interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance name=taskInstance

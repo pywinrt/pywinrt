@@ -241,6 +241,11 @@ class Microsoft.UI.Xaml.Media.Media3D.Transform3D composable python_type
     default Microsoft.UI.Xaml.Media.Media3D.ITransform3D
     requires Microsoft.UI.Xaml.Media.Media3D.ITransform3D
     composable Microsoft.UI.Xaml.Media.Media3D.ITransform3DFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Media3D.ITransform3DFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Media3D.Transform3D return
 
 class Microsoft.UI.Xaml.DependencyObject external
     py winrt.microsoft.ui.xaml.DependencyObject

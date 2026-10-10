@@ -304,8 +304,12 @@ class ProtectedMembers_Static(winrt._winrt.Object_Static):
 
 class ProtectedMembers(winrt.system.Object, metaclass=ProtectedMembers_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    @typing.overload
+    def __new__(cls) -> typing.Self:
+        """ProtectedMembers's constructor is protected: derive a class from it and create that."""
+    @typing.overload
+    def __new__(cls, initial: winrt.system.Int32, /) -> typing.Self:
+        """ProtectedMembers's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.Int32 TestComponent.ProtectedMembers::ProtectedMethod()
     def _protected_method(self) -> winrt.system.Int32: ...

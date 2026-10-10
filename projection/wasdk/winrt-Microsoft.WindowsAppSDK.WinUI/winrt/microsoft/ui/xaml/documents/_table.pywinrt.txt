@@ -10,6 +10,11 @@ class Microsoft.UI.Xaml.Documents.Block composable python_type
     requires Microsoft.UI.Xaml.Documents.IBlock
     factory Microsoft.UI.Xaml.Documents.IBlockStatics
     composable Microsoft.UI.Xaml.Documents.IBlockFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IBlockFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Documents.Block return
     property text_alignment
         get get_TextAlignment slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IBlock shape=4
             out enum32 type=Microsoft.UI.Xaml.TextAlignment return
@@ -789,6 +794,11 @@ class Microsoft.UI.Xaml.Documents.Inline composable python_type
     default Microsoft.UI.Xaml.Documents.IInline
     requires Microsoft.UI.Xaml.Documents.IInline
     composable Microsoft.UI.Xaml.Documents.IInlineFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IInlineFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Documents.Inline return
 
 class Microsoft.UI.Xaml.Documents.InlineCollection python_type iterable sequence mutable_sequence
     py InlineCollection

@@ -215,6 +215,11 @@ class Windows.UI.Xaml.Shapes.Shape composable python_type
     requires Windows.UI.Xaml.Shapes.IShape2
     factory Windows.UI.Xaml.Shapes.IShapeStatics
     composable Windows.UI.Xaml.Shapes.IShapeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Shapes.IShapeFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Shapes.Shape return
     property stroke_thickness
         get get_StrokeThickness slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Shapes.IShape shape=4
             out double return

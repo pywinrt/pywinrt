@@ -230,6 +230,64 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(called, ["base", "derived"])
 
+    def test_a_protected_constructor_does_not_create_its_class(self) -> None:
+        for args in ((), (5,)):
+            with self.subTest(args=args):
+                with self.assertRaisesRegex(
+                    TypeError,
+                    "'TestComponent.ProtectedMembers' cannot be created directly; "
+                    "its constructor is protected",
+                ):
+                    tc.ProtectedMembers(*args)
+
+    def test_a_protected_constructor_composes_a_derived_class(self) -> None:
+        class C(tc.ProtectedMembers):
+            pass
+
+        class D(tc.ProtectedMembers):
+            @override
+            def __new__(cls):
+                return super().__new__(cls, 6)
+
+        self.assertEqual(C()._protected_value, 0)
+        self.assertEqual(C(5)._protected_value, 5)
+        self.assertEqual(D()._protected_value, 6)
+        self.assertIsInstance(C(), tc.ProtectedMembers)
+
+    def test_a_protected_property_and_method(self) -> None:
+        class C(tc.ProtectedMembers):
+            pass
+
+        c = C()
+        c._protected_value = 7
+
+        self.assertEqual(c._protected_value, 7)
+        self.assertEqual(c._protected_method(), 7)
+
+    def test_overriding_a_property(self) -> None:
+        # WinRT reads the property through the overridable interface, so what
+        # it gets is the derived class's own, and the class's own otherwise.
+        class C(tc.ProtectedMembers):
+            @property
+            @override
+            def _overridable_value(self) -> int:
+                return 42
+
+        class D(tc.ProtectedMembers):
+            pass
+
+        # super() reaches the class's own, rather than coming back here
+        class E(tc.ProtectedMembers):
+            @property
+            @override
+            def _overridable_value(self) -> int:
+                return super()._overridable_value + 100
+
+        self.assertEqual(C(3).read_overridable_value(), 42)
+        self.assertEqual(D(3).read_overridable_value(), 3)
+        self.assertEqual(E(3).read_overridable_value(), 103)
+        self.assertEqual(E(3)._overridable_value, 103)
+
     def test_unhandled_exception_in_override(self) -> None:
         class C(tc.Override):
             @override
