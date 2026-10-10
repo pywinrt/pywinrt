@@ -547,8 +547,11 @@ class ProjectedType
 
     private static IEnumerable<ProjectedMethod> EnumerateConstructors(TypeDefinition type)
     {
+        // A protected constructor, which only a composable class has, composes
+        // a class derived from it, which the runtime allows and refuses
+        // for the class itself.
         return type
-            .Methods.Where(m => m.IsConstructor && m.IsPublic)
+            .Methods.Where(m => m.IsConstructor && (m.IsPublic || m.IsFamily))
             .Select(m => new ProjectedMethod(m, [type], default));
     }
 

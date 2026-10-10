@@ -74,6 +74,10 @@ class ProjectedMethod
                 .Select(m => projectionDeprecations.GetValueOrDefault(m))
                 .FirstOrDefault(m => m is not null);
 
+            // A protected constructor implements no interface member: what says
+            // it is protected is the method itself.
+            IsProtected = method.IsConstructor && method.IsFamily;
+
             foreach (var o in method.Overrides)
             {
                 if (o.DeclaringType.Resolve().IsExclusiveTo)
