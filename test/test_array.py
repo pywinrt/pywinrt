@@ -278,6 +278,21 @@ class TestWinrtArray(unittest.TestCase):
             self.assertEqual(m.format, "I")
             self.assertTrue(m.c_contiguous)
 
+    def test_enum_from_a_buffer(self) -> None:
+        a = Array(PropertyType, stdlib_array.array("i", [1, 2]))
+        self.assertEqual(list(a), [PropertyType.UINT8, PropertyType.INT16])
+
+        flags = Array(FileAttributes, stdlib_array.array("I", [1, 16]))
+        self.assertEqual(
+            list(flags), [FileAttributes.READ_ONLY, FileAttributes.DIRECTORY]
+        )
+
+        with self.assertRaisesRegex(TypeError, "format is incorrect"):
+            Array(PropertyType, stdlib_array.array("I", [1]))
+
+        with self.assertRaisesRegex(TypeError, "format is incorrect"):
+            Array(FileAttributes, stdlib_array.array("i", [1]))
+
     def test_string(self) -> None:
         a = Array(str, ["A", "B", "CDE"])
 
