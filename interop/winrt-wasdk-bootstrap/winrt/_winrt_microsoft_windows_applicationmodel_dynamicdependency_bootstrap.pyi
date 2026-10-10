@@ -24,4 +24,5 @@ def initialize(
     version_tag: str | None,
     min_version: int,
     options: InitializeOptions,
+    /,
 ) -> Shutdown: ...
