@@ -55,6 +55,15 @@ def run(path: Path, *args: str) -> list[str]:
     return result.stdout.splitlines()
 
 
+def run_unchecked(*paths: Path) -> subprocess.CompletedProcess[str]:
+    """
+    Runs the script over @p paths whatever it exits with.
+    """
+    return subprocess.run(
+        [sys.executable, SCRIPT, *paths], capture_output=True, text=True
+    )
+
+
 class Inspect(unittest.TestCase):
     def setUp(self) -> None:
         directory = tempfile.TemporaryDirectory()
@@ -130,6 +139,58 @@ class Inspect(unittest.TestCase):
                 "rename to: winrt.microsoft.ui.xaml",
             ],
         )
+
+    def test_a_bom_is_not_part_of_the_code(self) -> None:
+        self.path.write_bytes(b"\xef\xbb\xbfimport winui3.microsoft.ui.xaml\n")
+
+        self.assertEqual(
+            run(self.path),
+            [
+                f"{self.path}:1:8",
+                "possible match: winui3.microsoft.ui.xaml",
+                "rename to: winrt.microsoft.ui.xaml",
+            ],
+        )
+
+    def test_the_declared_encoding_is_read(self) -> None:
+        self.path.write_bytes(
+            b"# -*- coding: latin-1 -*-\n"
+            b'name = "caf\xe9"\n'
+            b"import winui3.microsoft.ui.xaml\n"
+        )
+
+        self.assertEqual(
+            run(self.path),
+            [
+                f"{self.path}:3:8",
+                "possible match: winui3.microsoft.ui.xaml",
+                "rename to: winrt.microsoft.ui.xaml",
+            ],
+        )
+
+    def test_a_file_that_cannot_be_read_does_not_stop_the_run(self) -> None:
+        broken = self.path.with_name("broken.py")
+        broken.write_bytes(b'print "python 2"\n')
+        undecodable = self.path.with_name("requirements.txt")
+        undecodable.write_bytes(b"winui3-Microsoft.UI.Xaml # caf\xe9\n")
+        good = self.path.with_name("good.py")
+        good.write_bytes(b"import webview2.microsoft.web.webview2.core\n")
+
+        result = run_unchecked(broken, undecodable, good)
+
+        self.assertEqual(result.returncode, 1)
+        self.assertEqual(
+            result.stdout.splitlines(),
+            [
+                f"{good}:1:8",
+                "possible match: webview2.microsoft.web.webview2.core",
+                "rename to: winrt.microsoft.web.webview2.core",
+            ],
+        )
+        errors = result.stderr.splitlines()
+        self.assertEqual(len(errors), 2)
+        self.assertTrue(errors[0].startswith(f"{broken}:1:1: cannot parse: "))
+        self.assertTrue(errors[1].startswith(f"{undecodable}: cannot read: "))
 
     def test_a_form_feed_ends_no_line(self) -> None:
         # ast numbers lines past a form feed, which a page break is, as if it
