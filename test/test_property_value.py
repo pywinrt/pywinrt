@@ -414,6 +414,12 @@ class TestUnsignedIntegers(unittest.TestCase):
             with self.subTest(name):
                 self.assertEqual(self.create(name, Index(2**bits - 1)), 2**bits - 1)
 
+    def test_the_type_hints_take_an_index_object(self) -> None:
+        # Called directly, so that the type checkers check it against the
+        # stubs, which take a typing.SupportsIndex for an integer.
+        o = wf.PropertyValue.create_uint32(Index(7))
+        self.assertEqual(o.as_(wf.IPropertyValue).get_uint32(), 7)
+
     def test_a_float(self) -> None:
         for name, _ in self.WIDTHS:
             with self.subTest(name), self.assertRaises(TypeError):

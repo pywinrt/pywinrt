@@ -26,7 +26,7 @@ class CompanionWindowRequestResultStatus(enum.IntEnum):
 @typing.final
 class CompanionWindowCoordinator_Static(winrt._winrt.Object_Static):
     # Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator::GetForWindow(Windows.UI.WindowId)
-    def get_for_window(cls, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> CompanionWindowCoordinator: ...
+    def get_for_window(cls, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> CompanionWindowCoordinator: ...
 
 @typing.final
 class CompanionWindowCoordinator(winrt.system.Object, metaclass=CompanionWindowCoordinator_Static):
@@ -54,7 +54,7 @@ class CompanionWindowRequest(winrt.system.Object, metaclass=CompanionWindowReque
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Shell.CompanionWindows.CompanionWindowCoordinator Windows.UI.Shell.CompanionWindows.CompanionWindowRequest::Accept(Windows.UI.WindowId)
-    def accept(self, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> CompanionWindowCoordinator: ...
+    def accept(self, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> CompanionWindowCoordinator: ...
     # Windows.Foundation.Deferral Windows.UI.Shell.CompanionWindows.CompanionWindowRequest::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.UI.Shell.CompanionWindows.CompanionWindowRequest::Reject()

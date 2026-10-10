@@ -105,7 +105,7 @@ class LocalLocation(winrt.system.Object):
 @typing.final
 class LocalLocationFinder_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.LocalSearch.LocalLocationFinderResult> Windows.Services.Maps.LocalSearch.LocalLocationFinder::FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)
-    def find_local_locations_async(cls, search_term: str, search_area: windows_devices_geolocation.Geocircle, local_category: str, max_results: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LocalLocationFinderResult]: ...
+    def find_local_locations_async(cls, search_term: str, search_area: windows_devices_geolocation.Geocircle, local_category: str, max_results: winrt.system.UInt32 | typing.SupportsIndex, /) -> windows_foundation.IAsyncOperation[LocalLocationFinderResult]: ...
 
 @typing.final
 class LocalLocationFinder(winrt.system.Object, metaclass=LocalLocationFinder_Static):
