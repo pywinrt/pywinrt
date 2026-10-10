@@ -117,7 +117,7 @@ class Certificate(winrt.system.Object):
     @deprecated("Use build_chain_async() instead.")
     def build_chain_with_parameters_async(self, certificates: _cabc.Iterable[Certificate], parameters: ChainBuildingParameters, /) -> windows_foundation.IAsyncOperation[CertificateChain]: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Cryptography.Certificates.Certificate::GetCertificateBlob()
-    def get_certificate_blob(self) -> winrt.system.Buffer: ...
+    def get_certificate_blob(self) -> windows_storage_streams.IBuffer: ...
     @typing.overload
     # System.Byte[] Windows.Security.Cryptography.Certificates.Certificate::GetHashValue()
     def get_hash_value(self) -> winrt.system.Array[winrt.system.UInt8]: ...
@@ -568,7 +568,7 @@ class ChainValidationParameters(winrt.system.Object):
 @typing.final
 class CmsAttachedSignature_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.Cryptography.Certificates.CmsAttachedSignature::GenerateSignatureAsync(Windows.Storage.Streams.IBuffer,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.CmsSignerInfo>,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
-    def generate_signature_async(cls, data: winrt.system.Buffer, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    def generate_signature_async(cls, data: winrt.system.Buffer, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IBuffer]: ...
 
 @typing.final
 class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_Static):
@@ -588,7 +588,7 @@ class CmsAttachedSignature(winrt.system.Object, metaclass=CmsAttachedSignature_S
 @typing.final
 class CmsDetachedSignature_Static(winrt._winrt.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Security.Cryptography.Certificates.CmsDetachedSignature::GenerateSignatureAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.CmsSignerInfo>,Windows.Foundation.Collections.IIterable`1<Windows.Security.Cryptography.Certificates.Certificate>)
-    def generate_signature_async(cls, data: windows_storage_streams.IInputStream, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[winrt.system.Buffer]: ...
+    def generate_signature_async(cls, data: windows_storage_streams.IInputStream, signers: _cabc.Iterable[CmsSignerInfo], certificates: _cabc.Iterable[Certificate], /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IBuffer]: ...
 
 @typing.final
 class CmsDetachedSignature(winrt.system.Object, metaclass=CmsDetachedSignature_Static):
