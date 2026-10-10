@@ -186,7 +186,7 @@ namespace py
     void restore_raised_exception(PyObject* exception) noexcept;
     void set_call_error(
         call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
-    int32_t report_unraisable() noexcept;
+    int32_t report_unraisable(PyObject* source) noexcept;
     int32_t async_wait(
         winrt::Windows::Foundation::IInspectable const& async,
         uint32_t timeout_ms,

@@ -38,9 +38,12 @@ namespace
      * not have the index or the key that was asked for - IndexError for a
      * sequence, KeyError for a mapping - which is the one failure WinRT has a
      * name for. Anything else is a genuine error in Python code that WinRT
-     * cannot be told about, so it goes to sys.unraisablehook instead.
+     * cannot be told about, so it goes to sys.unraisablehook instead, with
+     * the type of @p collection, the object WinRT was reading, as where it
+     * was raised: the type rather than the object, whose repr() the default
+     * hook prints and which can be any size.
      */
-    int32_t python_error(PyObject* not_found_type) noexcept
+    int32_t python_error(PyObject* collection, PyObject* not_found_type) noexcept
     {
         if (not_found_type && PyErr_ExceptionMatches(not_found_type))
         {
@@ -49,7 +52,7 @@ namespace
             return winrt::impl::error_out_of_bounds;
         }
 
-        return py::report_unraisable();
+        return py::report_unraisable(reinterpret_cast<PyObject*>(Py_TYPE(collection)));
     }
 
     /**
@@ -76,7 +79,7 @@ int32_t py::pyseq_size(PyObject* sequence, uint32_t* size) noexcept
 
     if (length < 0)
     {
-        return python_error(nullptr);
+        return python_error(sequence, nullptr);
     }
 
     *size = static_cast<uint32_t>(length);
@@ -98,7 +101,7 @@ int32_t py::pyseq_get_at(PyObject* sequence, uint32_t index, PyObject** item) no
 
     if (!value)
     {
-        return python_error(PyExc_IndexError);
+        return python_error(sequence, PyExc_IndexError);
     }
 
     *item = value;
@@ -118,7 +121,7 @@ int32_t py::pyseq_set_at(PyObject* sequence, uint32_t index, PyObject* item) noe
 
     if (PySequence_SetItem(sequence, i, item) < 0)
     {
-        return python_error(PyExc_IndexError);
+        return python_error(sequence, PyExc_IndexError);
     }
 
     return ok;
@@ -142,7 +145,7 @@ int32_t py::pyseq_insert_at(PyObject* sequence, uint32_t index, PyObject* item) 
 
     if (!result)
     {
-        return python_error(PyExc_IndexError);
+        return python_error(sequence, PyExc_IndexError);
     }
 
     return ok;
@@ -160,7 +163,7 @@ int32_t py::pyseq_remove_at(PyObject* sequence, uint32_t index) noexcept
 
     if (PySequence_DelItem(sequence, i) < 0)
     {
-        return python_error(PyExc_IndexError);
+        return python_error(sequence, PyExc_IndexError);
     }
 
     return ok;
@@ -173,7 +176,7 @@ int32_t py::pyseq_append(PyObject* sequence, PyObject* item) noexcept
 
     if (!result)
     {
-        return python_error(nullptr);
+        return python_error(sequence, nullptr);
     }
 
     return ok;
@@ -186,7 +189,7 @@ int32_t py::pyseq_remove_at_end(PyObject* sequence) noexcept
 
     if (length < 0)
     {
-        return python_error(nullptr);
+        return python_error(sequence, nullptr);
     }
 
     if (length == 0)
@@ -199,7 +202,7 @@ int32_t py::pyseq_remove_at_end(PyObject* sequence) noexcept
 
     if (PySequence_DelItem(sequence, length - 1) < 0)
     {
-        return python_error(PyExc_IndexError);
+        return python_error(sequence, PyExc_IndexError);
     }
 
     return ok;
@@ -225,7 +228,7 @@ int32_t py::pyseq_index_of(
             return ok;
         }
 
-        return python_error(nullptr);
+        return python_error(sequence, nullptr);
     }
 
     *index = static_cast<uint32_t>(i);
@@ -239,7 +242,7 @@ int32_t py::pyseq_clear(PyObject* sequence) noexcept
 {
     if (PySequence_SetSlice(sequence, 0, PY_SSIZE_T_MAX, nullptr) < 0)
     {
-        return python_error(nullptr);
+        return python_error(sequence, nullptr);
     }
 
     return ok;
@@ -252,7 +255,7 @@ int32_t py::pyiter_first(PyObject* iterable, PyObject** iterator) noexcept
 
     if (!iter)
     {
-        return python_error(nullptr);
+        return python_error(iterable, nullptr);
     }
 
     *iterator = iter;
@@ -270,7 +273,7 @@ int32_t py::pyiter_next(PyObject* iterator, PyObject** item) noexcept
     {
         if (PyErr_Occurred())
         {
-            return python_error(nullptr);
+            return python_error(iterator, nullptr);
         }
 
         // The end of the iteration, which the caller sees as a null item.
@@ -289,7 +292,7 @@ int32_t py::pymap_size(PyObject* mapping, uint32_t* size) noexcept
 
     if (length < 0)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     *size = static_cast<uint32_t>(length);
@@ -304,7 +307,7 @@ int32_t py::pymap_lookup(PyObject* mapping, PyObject* key, PyObject** value) noe
 
     if (!item)
     {
-        return python_error(PyExc_KeyError);
+        return python_error(mapping, PyExc_KeyError);
     }
 
     *value = item;
@@ -319,7 +322,7 @@ int32_t py::pymap_has_key(PyObject* mapping, PyObject* key, bool* has_key) noexc
 
     if (result < 0)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     *has_key = result != 0;
@@ -338,12 +341,12 @@ int32_t py::pymap_insert(
 
     if (had_key < 0)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     if (PyObject_SetItem(mapping, key, value) < 0)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     *replaced = had_key != 0;
@@ -356,7 +359,7 @@ int32_t py::pymap_remove(PyObject* mapping, PyObject* key) noexcept
 {
     if (PyObject_DelItem(mapping, key) < 0)
     {
-        return python_error(PyExc_KeyError);
+        return python_error(mapping, PyExc_KeyError);
     }
 
     return ok;
@@ -369,7 +372,7 @@ int32_t py::pymap_clear(PyObject* mapping) noexcept
 
     if (!result)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     return ok;
@@ -387,7 +390,7 @@ int32_t py::pymap_iter_next(
     {
         if (PyErr_Occurred())
         {
-            return python_error(nullptr);
+            return python_error(mapping, nullptr);
         }
 
         // The end of the iteration, which the caller sees as a null key.
@@ -400,7 +403,7 @@ int32_t py::pymap_iter_next(
 
     if (!next_value)
     {
-        return python_error(nullptr);
+        return python_error(mapping, nullptr);
     }
 
     *key = next_key.detach();
