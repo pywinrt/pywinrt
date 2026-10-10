@@ -130,7 +130,7 @@ interop module to raise in turn.
 ## `initialize_with_window`
 
 ```python
-initialize_with_window(obj: Object, hwnd: int) -> None
+initialize_with_window(obj: Object, hwnd: int, /) -> None
 ```
 
 Provide an owner window to a Windows Runtime (WinRT) object used in a desktop application.
