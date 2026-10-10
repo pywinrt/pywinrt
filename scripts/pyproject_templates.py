@@ -125,18 +125,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "{package_name}"
-description = "{description}"
+{static_version}description = "{description}"
 readme = "README.md"
 license = "MIT{extra_license_id}"
 license-files = ["LICENSE"{extra_license_files}]
 {classifiers}
-dynamic = ["version", "dependencies"]
+dynamic = [{dynamic}]
 requires-python = ">=3.11"
 
 {project_urls}
 [tool.setuptools.dynamic]
-version = {{ file = "version.txt" }}
-dependencies = {{ file = "requirements.txt" }}
+{dynamic_version}dependencies = {{ file = "requirements.txt" }}
 {packages_find}
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"]
