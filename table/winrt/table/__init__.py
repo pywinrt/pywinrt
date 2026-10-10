@@ -146,7 +146,12 @@ PARAM_VALUES = ("type", "name")
 #: The ``name=value`` token a struct field's line can carry.
 FIELD_VALUES = ("type",)
 
-PARAM_FLAGS = {"return": 1 << 3, "implicit": 1 << 4, "by_reference": 1 << 5}
+PARAM_FLAGS = {
+    "return": 1 << 3,
+    "implicit": 1 << 4,
+    "by_reference": 1 << 5,
+    "fill_buffer": 1 << 6,
+}
 
 #: How many bits a WinRT enum constant has, whichever sign it is read with.
 CONSTANT_MASK = 0xFFFFFFFF

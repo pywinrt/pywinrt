@@ -250,7 +250,7 @@ A member's line is its kind, the WinRT name of the method, then `slot=`,
 `inputs=`, `outputs=`, `declaring=`, `shape=`, `reverse=` and `role=` - of which
 only the first three are always written - then its flags. A parameter's line is
 its category, its type code, then `type=` and `name=` where it has them, then
-`return`, `implicit` and `by_reference`.
+`return`, `implicit`, `by_reference` and `fill_buffer`.
 
 The categories, kinds, codes, roles and flags are named in the tables of the
 next section, beside the numbers they are written as in the binary.
@@ -546,6 +546,7 @@ Parameter flags:
 | 3 | `return` | this is the return value rather than a declared parameter |
 | 4 | `implicit` | the ABI passes it, but Python neither supplies nor receives it |
 | 5 | `by_reference` | the ABI passes a pointer to the value rather than the value |
+| 6 | `fill_buffer` | an `IBuffer` whose memory the callee fills, as it fills a `fill_array`, rather than only reads |
 
 A by-reference parameter is an input the metadata declares `ref`, which the
 ABI passes as `T const*` - `T const&` in C++/WinRT's spelling. The type code

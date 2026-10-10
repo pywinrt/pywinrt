@@ -168,6 +168,12 @@ enum TableParamFlags : uint
     /// itself.
     /// </summary>
     ByReference = 1 << 5,
+
+    /// <summary>
+    /// WinRT writes into the buffer passed as this <c>IBuffer</c>, as it fills
+    /// a fill array, which only a rule in <see cref="BufferRules"/> can say.
+    /// </summary>
+    FillBuffer = 1 << 6,
 }
 
 /// <summary>
@@ -236,6 +242,7 @@ sealed class TableParam(string name, TypeCode code, TableType? type, ParamCatego
     public bool IsReturnValue { get; set; }
     public bool IsImplicit { get; set; }
     public bool IsByReference { get; set; }
+    public bool IsFillBuffer { get; set; }
 }
 
 sealed class TableField(string pyName, string winrtName, TypeCode code, TableType? type)
@@ -300,6 +307,7 @@ sealed class TableWriter
 
     private readonly QualifiedNamespace ns;
     private readonly IReadOnlyDictionary<string, string> packageMap;
+    private readonly IReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap;
     private readonly Census census;
     private readonly AbiShapeReader shapes = new();
 
@@ -315,11 +323,13 @@ sealed class TableWriter
     private TableWriter(
         QualifiedNamespace ns,
         IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         Census census
     )
     {
         this.ns = ns;
         this.packageMap = packageMap;
+        this.nullabilityMap = nullabilityMap;
         this.census = census;
     }
 
@@ -327,11 +337,12 @@ sealed class TableWriter
         DirectoryInfo nsDir,
         QualifiedNamespace ns,
         IReadOnlyDictionary<string, string> packageMap,
+        IReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         Members members,
         Census census
     )
     {
-        var writer = new TableWriter(ns, packageMap, census);
+        var writer = new TableWriter(ns, packageMap, nullabilityMap, census);
 
         writer.Build(members);
         writer.Serialize(nsDir);
@@ -929,7 +940,7 @@ sealed class TableWriter
         // runtime's business rather than the caller's.
         var implicitFrom = method.IsConstructor ? method.Method.Parameters.Count : int.MaxValue;
 
-        AddParams(member, abiMethod, map, implicitFrom);
+        AddParams(member, abiMethod, map, implicitFrom, method);
         SetShapes(
             member,
             abiMethod,
@@ -997,7 +1008,8 @@ sealed class TableWriter
         TableMember member,
         MethodDefinition method,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map,
-        int implicitFrom = int.MaxValue
+        int implicitFrom = int.MaxValue,
+        ProjectedMethod? projected = null
     )
     {
         for (var i = 0; i < method.Parameters.Count; i++)
@@ -1011,6 +1023,8 @@ sealed class TableWriter
                 {
                     IsImplicit = i >= implicitFrom,
                     IsByReference = param.IsPassedByReference(),
+                    IsFillBuffer =
+                        projected?.IsFillBuffer(param.Name ?? "", nullabilityMap) ?? false,
                 }
             );
 
@@ -1924,6 +1938,11 @@ sealed class TableWriter
         if (parameter.IsByReference)
         {
             line.Append(" by_reference");
+        }
+
+        if (parameter.IsFillBuffer)
+        {
+            line.Append(" fill_buffer");
         }
 
         sink.Line(line.ToString());
