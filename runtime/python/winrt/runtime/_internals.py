@@ -9,6 +9,7 @@ from collections.abc import (
     MutableSequence,
     Sequence,
 )
+from enum import IntEnum
 from pathlib import Path
 import sys
 from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING, cast
@@ -71,6 +72,41 @@ def load_projection(spec: ModuleSpec) -> None:
             name=spec.name,
             path=table,
         ) from error
+
+
+class WinrtIntEnum(IntEnum):
+    """
+    The base of every projected WinRT enum that is not a set of flags.
+
+    A newer version of Windows can hand back a value that the projection was
+    generated without, so a value with no member of its own makes a member
+    of its own, rather than a ``ValueError`` that fails the call it came from,
+    as ``IntFlag`` keeps a bit it has no member for. Such a member equals its
+    number, is named with it, as in ``"99"``, which no member name can be, and
+    does not appear when the enum is iterated.
+    """
+
+    @classmethod
+    def _missing_(cls, value: object) -> Self | None:
+        # A WinRT enum that is not a set of flags is a signed 32-bit integer,
+        # so a value WinRT could not hold is still refused.
+        if not isinstance(value, int) or not -(2**31) <= value < 2**31:
+            return None
+
+        # A bool, or a member of another enum, is made the plain number that
+        # every member holds.
+        number = int(value)
+
+        member = int.__new__(cls, number)
+        member._name_ = str(number)
+        member._value_ = number
+        return member
+
+    def __repr__(self) -> str:
+        if self._name_ not in type(self)._member_map_:
+            return f"<{type(self).__name__}: {self._value_!r}>"
+
+        return super().__repr__()
 
 
 class _DllCookie:

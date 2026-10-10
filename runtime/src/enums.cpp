@@ -13,22 +13,26 @@ namespace py::interp
     namespace
     {
         /**
-         * The standard library class the constants are handed to.
+         * The class the constants are handed to.
          *
          * A WinRT enum that carries FlagsAttribute is a set of bits and is
          * read unsigned, and every other one is a signed number, which is
-         * exactly the difference between the two classes here.
+         * exactly the difference between enum.IntFlag and enum.IntEnum. The
+         * second is reached through winrt.runtime._internals.WinrtIntEnum,
+         * which keeps a value the enum has no member for, as IntFlag keeps a
+         * bit, because a newer Windows can hand one back.
          */
         pyobj_handle get_enum_base(bool is_flags) noexcept
         {
-            pyobj_handle module{PyImport_ImportModule("enum")};
+            pyobj_handle module{
+                PyImport_ImportModule(is_flags ? "enum" : "winrt.runtime._internals")};
             if (!module)
             {
                 return pyobj_handle{};
             }
 
-            return pyobj_handle{
-                PyObject_GetAttrString(module.get(), is_flags ? "IntFlag" : "IntEnum")};
+            return pyobj_handle{PyObject_GetAttrString(
+                module.get(), is_flags ? "IntFlag" : "WinrtIntEnum")};
         }
 
         /**
