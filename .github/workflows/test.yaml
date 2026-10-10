@@ -20,6 +20,8 @@ on:
       - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
+      # the wheel contents check, whose tests are part of the suite
+      - scripts/check-wheel-contents.py
       # the migration script, whose tests are part of the suite
       - scripts/3to4/**
       - scripts/tests/**
@@ -70,6 +72,8 @@ on:
       - scripts/nuget.py
       # the version scheme, whose tests are part of the suite
       - scripts/versions.py
+      # the wheel contents check, whose tests are part of the suite
+      - scripts/check-wheel-contents.py
       # the migration script, whose tests are part of the suite
       - scripts/3to4/**
       - scripts/tests/**
