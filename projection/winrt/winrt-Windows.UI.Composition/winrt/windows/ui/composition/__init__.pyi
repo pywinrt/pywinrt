@@ -838,7 +838,7 @@ class CompositionEffectFactory(CompositionObject):
 
 @typing.final
 class CompositionEffectSourceParameter(windows_graphics_effects.IGraphicsEffectSource, winrt.system.Object):
-    def __new__(cls, name: str) -> typing.Self: ...
+    def __new__(cls, name: str, /) -> typing.Self: ...
     # System.String Windows.UI.Composition.CompositionEffectSourceParameter::get_Name()
     @_property
     def name(self) -> str: ...
@@ -1258,7 +1258,7 @@ class CompositionObject(IAnimationObject, windows_foundation.IClosable, winrt.sy
 
 @typing.final
 class CompositionPath(windows_graphics.IGeometrySource2D, winrt.system.Object):
-    def __new__(cls, source: windows_graphics.IGeometrySource2D) -> typing.Self: ...
+    def __new__(cls, source: windows_graphics.IGeometrySource2D, /) -> typing.Self: ...
 
 @typing.final
 class CompositionPathGeometry(CompositionGeometry):
