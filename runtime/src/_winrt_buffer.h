@@ -8,5 +8,6 @@
 
 namespace py
 {
-    winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(PyObject* obj);
+    winrt::Windows::Storage::Streams::IBuffer convert_to_ibuffer(
+        PyObject* obj, bool fill = false);
 } // namespace py

@@ -392,6 +392,21 @@ class TestTableContents(unittest.TestCase):
             [p["is_by_reference"] for p in params], [False, True, False, False]
         )
 
+    def test_a_buffer_winrt_fills_is_marked(self) -> None:
+        # The metadata cannot say that ReadAsync() writes into its buffer while
+        # WriteAsync() only reads its own; a rule in the generator does.
+        streams = defined(read("winrt", "windows", "storage", "streams"))
+        read_async = groups(streams["IInputStream"])["read_async"]["members"][0]
+        write_async = groups(streams["IOutputStream"])["write_async"]["members"][0]
+
+        self.assertEqual(
+            [p["is_fill_buffer"] for p in read_async["params"]],
+            [True, False, False, False],
+        )
+        self.assertEqual(
+            [p["is_fill_buffer"] for p in write_async["params"]], [False, False]
+        )
+
     def test_an_event_is_an_add_and_a_remove(self) -> None:
         group = groups(self.types["ITests"])["event1"]
 

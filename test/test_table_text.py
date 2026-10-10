@@ -57,7 +57,7 @@ interface Test.Sample.IThing python_type stringable
     method measure
         method Measure slot=7 inputs=2 outputs=1 declaring=Test.Sample.IThing shape=1
             in struct type=Test.Sample.Extent name=extent by_reference
-            in string name=label
+            in string name=label fill_buffer
             out class type=Test.Sample.Thing name=result return
     method get_many
         method GetMany slot=10 inputs=2 outputs=1 declaring=Test.Sample.IThing shape=1 role=get_many
@@ -305,6 +305,9 @@ class TestTextTable(unittest.TestCase):
         self.assertEqual(params[0]["type"], index["Test.Sample.Extent"])
         self.assertTrue(params[0]["is_by_reference"])
         self.assertFalse(params[1]["is_by_reference"])
+        # The compiler does not check that the flag is on an IBuffer.
+        self.assertFalse(params[0]["is_fill_buffer"])
+        self.assertTrue(params[1]["is_fill_buffer"])
         self.assertTrue(params[2]["is_return_value"])
         self.assertEqual(params[1]["type"], NO_REF)
 

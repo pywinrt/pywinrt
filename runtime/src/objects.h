@@ -42,7 +42,8 @@ namespace py::interp
 
     PyObject* wrap_activated_abi(PyTypeObject* type, void const* iid, void* abi);
 
-    void* unwrap_abi(PyObject* obj, void const* iid, type_entry* info = nullptr);
+    void* unwrap_abi(
+        PyObject* obj, void const* iid, type_entry* info = nullptr, bool fill = false);
 
     bool make_interface_type(
         projection& proj, type_entry& entry, table::type_view const& record);

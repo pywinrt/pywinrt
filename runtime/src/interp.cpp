@@ -278,6 +278,48 @@ namespace py::interp
 
             return member.declaring->protocol.completed != nullptr;
         }
+
+        /**
+         * Whether @p arg refuses @p value, a Python buffer that promises never
+         * to change, such as bytes, because WinRT writes into the buffer.
+         *
+         * A WinRT object is passed as the interface it implements, whatever
+         * buffer it also exports, so only another Python object is asked.
+         */
+        bool refuses_read_only(arg_desc const& arg, PyObject* value) noexcept
+        {
+            if (!arg.fill_buffer)
+            {
+                return false;
+            }
+
+            if (!PyObject_CheckBuffer(value))
+            {
+                return false;
+            }
+
+            auto const object_type = get_object_type();
+            if (!object_type)
+            {
+                PyErr_Clear();
+                return false;
+            }
+
+            if (PyObject_TypeCheck(value, object_type))
+            {
+                return false;
+            }
+
+            buffer_view const view{value, PyBUF_SIMPLE};
+            if (!view)
+            {
+                // The conversion asks again and says why.
+                PyErr_Clear();
+                return false;
+            }
+
+            return view.view().readonly != 0;
+        }
     } // namespace
 
     /**
@@ -602,7 +644,7 @@ namespace py::interp
                 throw python_exception();
             }
 
-            auto const abi = unwrap_abi(value, info->guid, info);
+            auto const abi = unwrap_abi(value, info->guid, info, arg.fill_buffer);
             if (abi)
             {
                 frame.add(cleanup_entry::kind::interface_, abi, nullptr);
@@ -1642,6 +1684,19 @@ namespace py::interp
                                 member.type_name);
                             throw python_exception();
                         }
+                    }
+
+                    if (refuses_read_only(arg, args[next_arg]))
+                    {
+                        // In the words CPython's own readinto() refuses one in.
+                        PyErr_Format(
+                            PyExc_TypeError,
+                            "%U() argument %zd must be read-write bytes-like object, "
+                            "not %s",
+                            member.py_name,
+                            next_arg + 1,
+                            Py_TYPE(args[next_arg])->tp_name);
+                        throw python_exception();
                     }
 
                     convert_in(*member.owner, arg, args[next_arg++], frame);
