@@ -145,6 +145,10 @@ jobs:
         run: cmake --build _build/projection --config ${{ matrix.release-type }} --parallel --verbose
       - name: install
         run: cmake --install _build/projection --prefix _install/projection
+      # Not UTC, so the tests can tell local time from UTC; a half-hour offset
+      # with no daylight saving time is the same all year.
+      - name: set a time zone other than UTC
+        run: tzutil /s "India Standard Time"
       - name: test
         env:
           PYTHONPATH: _install/projection
@@ -183,6 +187,11 @@ jobs:
         run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose
       - name: install
         run: ${MINGW_PREFIX}/bin/cmake --install _build/projection --prefix _install/projection
+      # Not UTC, so the tests can tell local time from UTC; a half-hour offset
+      # with no daylight saving time is the same all year.
+      - name: set a time zone other than UTC
+        shell: pwsh
+        run: tzutil /s "India Standard Time"
       - name: test
         env:
           PYTHONPATH: _install/projection
