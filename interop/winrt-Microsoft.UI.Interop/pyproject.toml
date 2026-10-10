@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Microsoft.UI.Interop"
+version = "4!2.5.1"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"
 license = "MIT"
@@ -21,7 +22,7 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
 ]
-dynamic = ["version", "dependencies"]
+dynamic = ["dependencies"]
 requires-python = ">=3.11"
 
 [project.urls]
@@ -30,7 +31,6 @@ Repository = "https://github.com/pywinrt/pywinrt"
 Changelog = "https://github.com/pywinrt/pywinrt/blob/main/projection/wasdk/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
-version = { file = "version.txt" }
 dependencies = { file = "requirements.txt" }
 
 [tool.setuptools.packages.find]
