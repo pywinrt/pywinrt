@@ -267,7 +267,7 @@ class Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater py
     property owner_remote_id
         get get_OwnerRemoteId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 deprecated
             out string return
-    method commit_async deprecated
+    method commit_async
         method CommitAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialDashboardItemUpdater shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
 
@@ -285,34 +285,34 @@ class Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater python_type
     property owner_remote_id
         get get_OwnerRemoteId slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 deprecated
             out string return
-    method commit_async deprecated
+    method commit_async
         method CommitAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialFeedUpdater shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
 
 class Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager static python_type
     py SocialInfoProviderManager
     factory Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics
-    method create_dashboard_item_updater_async static deprecated
+    method create_dashboard_item_updater_async static
         method CreateDashboardItemUpdaterAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 static deprecated
             in string name=ownerRemoteId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater> return
-    method create_social_feed_updater_async static deprecated
+    method create_social_feed_updater_async static
         method CreateSocialFeedUpdaterAsync slot=6 inputs=3 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=195 static deprecated
             in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedKind name=kind
             in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode name=mode
             in string name=ownerRemoteId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater> return
-    method deprovision_async static deprecated
+    method deprovision_async static
         method DeprovisionAsync slot=11 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=4 static deprecated
             out interface type=Windows.Foundation.IAsyncAction return
-    method provision_async static deprecated
+    method provision_async static
         method ProvisionAsync slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-    method report_new_content_available static deprecated
+    method report_new_content_available static
         method ReportNewContentAvailable slot=9 inputs=2 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 static deprecated
             in string name=contactRemoteId
             in enum32 type=Windows.ApplicationModel.SocialInfo.SocialFeedKind name=kind
-    method update_badge_count_value static deprecated
+    method update_badge_count_value static
         method UpdateBadgeCountValue slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.Provider.ISocialInfoProviderManagerStatics shape=51 static deprecated
             in string name=itemRemoteId
             in int32 name=newCount

@@ -794,7 +794,7 @@ class Windows.Devices.Display.Core.DisplayTaskPool python_type
     method create_task
         method CreateTask slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Display.Core.IDisplayTaskPool shape=4
             out class type=Windows.Devices.Display.Core.DisplayTask return
-    method execute_task deprecated
+    method execute_task
         method ExecuteTask slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Display.Core.IDisplayTaskPool shape=4 deprecated
             in class type=Windows.Devices.Display.Core.DisplayTask name=task
     method try_execute_task

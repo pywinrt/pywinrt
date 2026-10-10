@@ -12264,11 +12264,11 @@ class Windows.UI.Xaml.Controls.ItemContainerGenerator python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemsChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method container_from_index deprecated
+    method container_from_index
         method ContainerFromIndex slot=11 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in int32 name=index
             out class type=Windows.UI.Xaml.DependencyObject return
-    method container_from_item deprecated
+    method container_from_item
         method ContainerFromItem slot=9 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in object name=item
             out class type=Windows.UI.Xaml.DependencyObject return
@@ -12284,7 +12284,7 @@ class Windows.UI.Xaml.Controls.ItemContainerGenerator python_type
         method GetItemContainerGeneratorForPanel slot=12 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=51
             in class type=Windows.UI.Xaml.Controls.Panel name=panel
             out class type=Windows.UI.Xaml.Controls.ItemContainerGenerator return
-    method index_from_container deprecated
+    method index_from_container
         method IndexFromContainer slot=10 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in class type=Windows.UI.Xaml.DependencyObject name=container
             out int32 return
@@ -12292,7 +12292,7 @@ class Windows.UI.Xaml.Controls.ItemContainerGenerator python_type
         method IndexFromGeneratorPosition slot=20 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=85
             in struct type=Windows.UI.Xaml.Controls.Primitives.GeneratorPosition name=position
             out int32 return
-    method item_from_container deprecated
+    method item_from_container
         method ItemFromContainer slot=8 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in class type=Windows.UI.Xaml.DependencyObject name=container
             out object return
@@ -17880,10 +17880,10 @@ class Windows.UI.Xaml.Controls.ScrollViewer activatable python_type
     method register_anchor_candidate
         method RegisterAnchorCandidate slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IScrollAnchorProvider shape=4 reverse=43
             in class type=Windows.UI.Xaml.UIElement name=element
-    method scroll_to_horizontal_offset deprecated
+    method scroll_to_horizontal_offset
         method ScrollToHorizontalOffset slot=58 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IScrollViewer shape=2 deprecated
             in double name=offset
-    method scroll_to_vertical_offset deprecated
+    method scroll_to_vertical_offset
         method ScrollToVerticalOffset slot=59 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IScrollViewer shape=2 deprecated
             in double name=offset
     method set_bring_into_view_on_focus_change static
@@ -17949,7 +17949,7 @@ class Windows.UI.Xaml.Controls.ScrollViewer activatable python_type
     method unregister_anchor_candidate
         method UnregisterAnchorCandidate slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IScrollAnchorProvider shape=4 reverse=62
             in class type=Windows.UI.Xaml.UIElement name=element
-    method zoom_to_factor deprecated
+    method zoom_to_factor
         method ZoomToFactor slot=60 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IScrollViewer shape=1 deprecated
             in single name=factor
 
@@ -22986,7 +22986,7 @@ class Windows.UI.Xaml.Controls.WebView activatable python_type
         method GoBack slot=16 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView2 shape=0
     method go_forward
         method GoForward slot=15 inputs=0 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView2 shape=0
-    method invoke_script deprecated
+    method invoke_script
         method InvokeScript slot=17 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView shape=195 deprecated
             in string name=scriptName
             pass_array string name=arguments

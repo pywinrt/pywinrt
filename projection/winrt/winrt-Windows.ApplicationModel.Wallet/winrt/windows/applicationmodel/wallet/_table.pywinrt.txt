@@ -841,7 +841,7 @@ class Windows.ApplicationModel.Wallet.WalletBarcode python_type
     property value
         get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcode shape=4 deprecated
             out string return
-    method get_image_async deprecated
+    method get_image_async
         method GetImageAsync slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletBarcode shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> return
 
@@ -1078,39 +1078,39 @@ class Windows.ApplicationModel.Wallet.WalletItemStore python_type
     signature rc(Windows.ApplicationModel.Wallet.WalletItemStore;{7160484b-6d49-48f8-91a9-40a1d0f13ef4})
     default Windows.ApplicationModel.Wallet.IWalletItemStore
     requires Windows.ApplicationModel.Wallet.IWalletItemStore
-    method add_async deprecated
+    method add_async
         method AddAsync slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=117 deprecated
             in string name=id
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
             out interface type=Windows.Foundation.IAsyncAction return
-    method clear_async deprecated
+    method clear_async
         method ClearAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
-    method delete_async deprecated
+    method delete_async
         method DeleteAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in string name=id
             out interface type=Windows.Foundation.IAsyncAction return
-    method get_items_async deprecated
+    method get_items_async
         method GetItemsAsync slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
         method GetItemsAsync slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in enum32 type=Windows.ApplicationModel.Wallet.WalletItemKind name=kind
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Wallet.WalletItem>> return
-    method get_wallet_item_async deprecated
+    method get_wallet_item_async
         method GetWalletItemAsync slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in string name=id
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
-    method import_item_async deprecated
+    method import_item_async
         method ImportItemAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItem> return
-    method show_async deprecated
+    method show_async
         method ShowAsync slot=13 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
         method ShowAsync slot=14 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in string name=id
             out interface type=Windows.Foundation.IAsyncAction return
-    method update_async deprecated
+    method update_async
         method UpdateAsync slot=15 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletItemStore shape=51 deprecated
             in class type=Windows.ApplicationModel.Wallet.WalletItem name=item
             out interface type=Windows.Foundation.IAsyncAction return
@@ -1118,7 +1118,7 @@ class Windows.ApplicationModel.Wallet.WalletItemStore python_type
 class Windows.ApplicationModel.Wallet.WalletManager static python_type
     py WalletManager
     factory Windows.ApplicationModel.Wallet.IWalletManagerStatics
-    method request_store_async static deprecated
+    method request_store_async static
         method RequestStoreAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Wallet.IWalletManagerStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Wallet.WalletItemStore> return
 

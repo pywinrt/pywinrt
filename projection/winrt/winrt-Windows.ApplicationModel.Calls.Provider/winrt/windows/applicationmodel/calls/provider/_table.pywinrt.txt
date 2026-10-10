@@ -107,14 +107,14 @@ class Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager static pyth
     property is_supported static
         get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3 shape=4 static deprecated
             out boolean return
-    method request_set_as_active_call_origin_app_async static deprecated
+    method request_set_as_active_call_origin_app_async static
         method RequestSetAsActiveCallOriginAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2 shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-    method set_call_origin static deprecated
+    method set_call_origin static
         method SetCallOrigin slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=94 static deprecated
             in guid name=requestId
             in class type=Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin name=callOrigin
-    method show_phone_call_origin_settings_ui static deprecated
+    method show_phone_call_origin_settings_ui static
         method ShowPhoneCallOriginSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=0 static deprecated
 
 class System.Boolean external

@@ -12600,11 +12600,11 @@ class Microsoft.UI.Xaml.Controls.ItemContainerGenerator python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ItemsChanged slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method container_from_index deprecated
+    method container_from_index
         method ContainerFromIndex slot=11 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in int32 name=index
             out class type=Microsoft.UI.Xaml.DependencyObject return
-    method container_from_item deprecated
+    method container_from_item
         method ContainerFromItem slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in object name=item
             out class type=Microsoft.UI.Xaml.DependencyObject return
@@ -12620,7 +12620,7 @@ class Microsoft.UI.Xaml.Controls.ItemContainerGenerator python_type
         method GetItemContainerGeneratorForPanel slot=12 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=51
             in class type=Microsoft.UI.Xaml.Controls.Panel name=panel
             out class type=Microsoft.UI.Xaml.Controls.ItemContainerGenerator return
-    method index_from_container deprecated
+    method index_from_container
         method IndexFromContainer slot=10 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in class type=Microsoft.UI.Xaml.DependencyObject name=container
             out int32 return
@@ -12628,7 +12628,7 @@ class Microsoft.UI.Xaml.Controls.ItemContainerGenerator python_type
         method IndexFromGeneratorPosition slot=20 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=85
             in struct type=Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition name=position
             out int32 return
-    method item_from_container deprecated
+    method item_from_container
         method ItemFromContainer slot=8 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IItemContainerGenerator shape=51 deprecated
             in class type=Microsoft.UI.Xaml.DependencyObject name=container
             out object return
@@ -19476,10 +19476,10 @@ class Microsoft.UI.Xaml.Controls.ScrollViewer activatable python_type
     method register_anchor_candidate
         method RegisterAnchorCandidate slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IScrollAnchorProvider shape=4 reverse=43
             in class type=Microsoft.UI.Xaml.UIElement name=element
-    method scroll_to_horizontal_offset deprecated
+    method scroll_to_horizontal_offset
         method ScrollToHorizontalOffset slot=80 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IScrollViewer shape=2 deprecated
             in double name=offset
-    method scroll_to_vertical_offset deprecated
+    method scroll_to_vertical_offset
         method ScrollToVerticalOffset slot=81 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IScrollViewer shape=2 deprecated
             in double name=offset
     method set_bring_into_view_on_focus_change static
@@ -19545,7 +19545,7 @@ class Microsoft.UI.Xaml.Controls.ScrollViewer activatable python_type
     method unregister_anchor_candidate
         method UnregisterAnchorCandidate slot=8 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IScrollAnchorProvider shape=4 reverse=62
             in class type=Microsoft.UI.Xaml.UIElement name=element
-    method zoom_to_factor deprecated
+    method zoom_to_factor
         method ZoomToFactor slot=82 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IScrollViewer shape=1 deprecated
             in single name=factor
 

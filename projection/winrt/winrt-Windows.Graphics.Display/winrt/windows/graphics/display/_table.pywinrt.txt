@@ -428,7 +428,7 @@ class Windows.Graphics.Display.DisplayProperties static python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method get_color_profile_async static deprecated
+    method get_color_profile_async static
         method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
 

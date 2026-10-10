@@ -692,7 +692,7 @@ class Windows.Devices.Bluetooth.BluetoothLEDevice python_type closeable
         method GetDeviceSelectorFromPairingState slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDeviceStatics2 shape=51 static
             in boolean name=pairingState
             out string return
-    method get_gatt_service deprecated
+    method get_gatt_service
         method GetGattService slot=11 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEDevice shape=94 deprecated
             in guid name=serviceUuid
             out class type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService return

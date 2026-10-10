@@ -328,21 +328,21 @@ enum Windows.Security.EnterpriseData.FileProtectionStatus python_type
 class Windows.Security.EnterpriseData.FileRevocationManager static python_type
     py FileRevocationManager
     factory Windows.Security.EnterpriseData.IFileRevocationManagerStatics
-    method copy_protection_async static deprecated
+    method copy_protection_async static
         method CopyProtectionAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 static deprecated
             in interface type=Windows.Storage.IStorageItem name=sourceStorageItem
             in interface type=Windows.Storage.IStorageItem name=targetStorageItem
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-    method get_status_async static deprecated
+    method get_status_async static
         method GetStatusAsync slot=9 inputs=1 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=51 static deprecated
             in interface type=Windows.Storage.IStorageItem name=storageItem
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> return
-    method protect_async static deprecated
+    method protect_async static
         method ProtectAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=117 static deprecated
             in interface type=Windows.Storage.IStorageItem name=storageItem
             in string name=enterpriseIdentity
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.EnterpriseData.FileProtectionStatus> return
-    method revoke static deprecated
+    method revoke static
         method Revoke slot=8 inputs=1 outputs=0 declaring=Windows.Security.EnterpriseData.IFileRevocationManagerStatics shape=4 static deprecated
             in string name=enterpriseIdentity
 

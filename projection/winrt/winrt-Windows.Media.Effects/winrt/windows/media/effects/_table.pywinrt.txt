@@ -144,7 +144,7 @@ class Windows.Media.Effects.AudioRenderEffectsManager python_type
     method get_audio_render_effects
         method GetAudioRenderEffects slot=8 inputs=0 outputs=1 declaring=Windows.Media.Effects.IAudioRenderEffectsManager shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Effects.AudioEffect> return
-    method show_settings_ui deprecated
+    method show_settings_ui
         method ShowSettingsUI slot=8 inputs=0 outputs=0 declaring=Windows.Media.Effects.IAudioRenderEffectsManager2 shape=0 deprecated
 
 class Windows.Media.Effects.CompositeVideoFrameContext python_type

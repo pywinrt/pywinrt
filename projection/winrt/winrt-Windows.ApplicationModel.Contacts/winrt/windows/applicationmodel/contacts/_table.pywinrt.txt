@@ -5196,11 +5196,11 @@ class Windows.ApplicationModel.Contacts.KnownContactField static python_type
     property phone_number static
         get get_PhoneNumber slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=4 static deprecated
             out string return
-    method convert_name_to_type static deprecated
+    method convert_name_to_type static
         method ConvertNameToType slot=10 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=51 static deprecated
             in string name=name
             out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
-    method convert_type_to_name static deprecated
+    method convert_type_to_name static
         method ConvertTypeToName slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.IKnownContactFieldStatics shape=51 static deprecated
             in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=type
             out string return

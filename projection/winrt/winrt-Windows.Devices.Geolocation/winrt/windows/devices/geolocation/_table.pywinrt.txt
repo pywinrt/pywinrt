@@ -326,7 +326,7 @@ class Windows.Devices.Geolocation.Geolocator activatable python_type
             in timespan name=maximumAge
             in timespan name=timeout
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geoposition> return
-    method get_geoposition_history_async static deprecated
+    method get_geoposition_history_async static
         method GetGeopositionHistoryAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Geolocation.IGeolocatorStatics shape=89 static deprecated
             in datetime name=startTime
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Geolocation.Geoposition>> return

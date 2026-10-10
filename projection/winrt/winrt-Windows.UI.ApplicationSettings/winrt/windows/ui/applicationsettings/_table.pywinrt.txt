@@ -656,10 +656,10 @@ class Windows.UI.ApplicationSettings.SettingsPane python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_CommandsRequested slot=7 inputs=1 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPane shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
-    method get_for_current_view static deprecated
+    method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=4 static deprecated
             out class type=Windows.UI.ApplicationSettings.SettingsPane return
-    method show static deprecated
+    method show static
         method Show slot=7 inputs=0 outputs=0 declaring=Windows.UI.ApplicationSettings.ISettingsPaneStatics shape=0 static deprecated
 
 class Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest python_type

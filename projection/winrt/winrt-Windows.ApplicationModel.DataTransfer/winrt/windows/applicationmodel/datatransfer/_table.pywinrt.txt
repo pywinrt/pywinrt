@@ -332,7 +332,7 @@ class Windows.ApplicationModel.DataTransfer.DataPackage activatable python_type
     method set_text
         method SetText slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4
             in string name=value
-    method set_uri deprecated
+    method set_uri
         method SetUri slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.DataTransfer.IDataPackage shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     method set_web_link
@@ -571,7 +571,7 @@ class Windows.ApplicationModel.DataTransfer.DataPackageView python_type
         method GetTextAsync slot=13 inputs=1 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=51
             in string name=formatId
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_uri_async deprecated
+    method get_uri_async
         method GetUriAsync slot=14 inputs=0 outputs=1 declaring=Windows.ApplicationModel.DataTransfer.IDataPackageView shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
     method get_web_link_async

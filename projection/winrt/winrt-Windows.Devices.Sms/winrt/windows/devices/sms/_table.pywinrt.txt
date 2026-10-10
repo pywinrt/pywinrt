@@ -795,10 +795,10 @@ interface Windows.Devices.Sms.ISmsBinaryMessage python_type
     property message_class
         get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
             out enum32 type=Windows.Devices.Sms.SmsMessageClass return
-    method get_data deprecated
+    method get_data
         method GetData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=65 deprecated
             receive_array uint8 return
-    method set_data deprecated
+    method set_data
         method SetData slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=100 deprecated
             pass_array uint8 name=value
 
@@ -833,11 +833,11 @@ interface Windows.Devices.Sms.ISmsDevice python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
-    method calculate_length deprecated
+    method calculate_length
         method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
             in class type=Windows.Devices.Sms.SmsTextMessage name=message
             out struct type=Windows.Devices.Sms.SmsEncodedLength return
-    method send_message_async deprecated
+    method send_message_async
         method SendMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=24 deprecated
             in interface type=Windows.Devices.Sms.ISmsMessage name=message
             out class type=Windows.Devices.Sms.SendSmsMessageOperation return
@@ -967,7 +967,7 @@ interface Windows.Devices.Sms.ISmsTextMessage python_type
     property message_class
         get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
             out enum32 type=Windows.Devices.Sms.SmsMessageClass return
-    method to_binary_messages deprecated
+    method to_binary_messages
         method ToBinaryMessages slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=51 reverse=219 deprecated
             in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> return
@@ -1516,10 +1516,10 @@ class Windows.Devices.Sms.SmsBinaryMessage activatable python_type
     property message_class
         get get_MessageClass slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsMessage shape=4 reverse=43
             out enum32 type=Windows.Devices.Sms.SmsMessageClass return
-    method get_data deprecated
+    method get_data
         method GetData slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=65 deprecated
             receive_array uint8 return
-    method set_data deprecated
+    method set_data
         method SetData slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsBinaryMessage shape=51 reverse=100 deprecated
             pass_array uint8 name=value
 
@@ -1634,25 +1634,25 @@ class Windows.Devices.Sms.SmsDevice python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SmsMessageReceived slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Sms.ISmsDevice shape=26 reverse=181 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=eventCookie
-    method calculate_length deprecated
+    method calculate_length
         method CalculateLength slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=44 deprecated
             in class type=Windows.Devices.Sms.SmsTextMessage name=message
             out struct type=Windows.Devices.Sms.SmsEncodedLength return
-    method from_id_async static deprecated
+    method from_id_async static
         method FromIdAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=51 static deprecated
             in string name=deviceId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
-    method from_network_account_id_async static deprecated
+    method from_network_account_id_async static
         method FromNetworkAccountIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics2 shape=51 static deprecated
             in string name=networkAccountId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
-    method get_default_async static deprecated
+    method get_default_async static
         method GetDefaultAsync slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.SmsDevice> return
-    method get_device_selector static deprecated
+    method get_device_selector static
         method GetDeviceSelector slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceStatics shape=4 static deprecated
             out string return
-    method send_message_async deprecated
+    method send_message_async
         method SendMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDevice shape=51 reverse=24 deprecated
             in interface type=Windows.Devices.Sms.ISmsMessage name=message
             out class type=Windows.Devices.Sms.SendSmsMessageOperation return
@@ -1720,19 +1720,19 @@ class Windows.Devices.Sms.SmsDeviceMessageStore python_type
     property max_messages
         get get_MaxMessages slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=4 deprecated
             out uint32 return
-    method delete_message_async deprecated
+    method delete_message_async
         method DeleteMessageAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in uint32 name=messageId
             out interface type=Windows.Foundation.IAsyncAction return
-    method delete_messages_async deprecated
+    method delete_messages_async
         method DeleteMessagesAsync slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
             out interface type=Windows.Foundation.IAsyncAction return
-    method get_message_async deprecated
+    method get_message_async
         method GetMessageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in uint32 name=messageId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Sms.ISmsMessage> return
-    method get_messages_async deprecated
+    method get_messages_async
         method GetMessagesAsync slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsDeviceMessageStore shape=51 deprecated
             in enum32 type=Windows.Devices.Sms.SmsMessageFilter name=messageFilter
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsMessage>,System.Int32> return
@@ -2127,16 +2127,16 @@ class Windows.Devices.Sms.SmsTextMessage activatable python_type
     property timestamp
         get get_Timestamp slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=4 reverse=22 deprecated
             out datetime return
-    method from_binary_data static deprecated
+    method from_binary_data static
         method FromBinaryData slot=7 inputs=2 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=195 static deprecated
             in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
             pass_array uint8 name=value
             out class type=Windows.Devices.Sms.SmsTextMessage return
-    method from_binary_message static deprecated
+    method from_binary_message static
         method FromBinaryMessage slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessageStatics shape=51 static deprecated
             in class type=Windows.Devices.Sms.SmsBinaryMessage name=binaryMessage
             out class type=Windows.Devices.Sms.SmsTextMessage return
-    method to_binary_messages deprecated
+    method to_binary_messages
         method ToBinaryMessages slot=18 inputs=1 outputs=1 declaring=Windows.Devices.Sms.ISmsTextMessage shape=51 reverse=219 deprecated
             in enum32 type=Windows.Devices.Sms.SmsDataFormat name=format
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Sms.ISmsBinaryMessage> return

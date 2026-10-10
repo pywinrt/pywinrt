@@ -19,12 +19,12 @@ class Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementO
     default Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview
     requires Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview
     factory Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics
-    method get_for_current_view static deprecated
+    method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreviewStatics shape=4 static deprecated
             out class type=Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview return
-    method reset_placement_override deprecated
+    method reset_placement_override
         method ResetPlacementOverride slot=8 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview shape=0 deprecated
-    method set_placement_override deprecated
+    method set_placement_override
         method SetPlacementOverride slot=6 inputs=3 outputs=0 declaring=Windows.ApplicationModel.Preview.Holographic.IHolographicKeyboardPlacementOverridePreview shape=133 deprecated
             in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=coordinateSystem
             in struct type=Windows.Foundation.Numerics.Vector3 name=topCenterPosition

@@ -368,24 +368,24 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AuthenticationStageChanged slot=9 inputs=1 outputs=0 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method abort_authentication_async deprecated
+    method abort_authentication_async
         method AbortAuthenticationAsync slot=11 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthentication shape=51 deprecated
             in string name=errorLogMessage
             out interface type=Windows.Foundation.IAsyncAction return
-    method finish_authentication_async deprecated
+    method finish_authentication_async
         method FinishAuthenticationAsync slot=10 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthentication shape=117 deprecated
             in interface type=Windows.Storage.Streams.IBuffer name=deviceHmac
             in interface type=Windows.Storage.Streams.IBuffer name=sessionHmac
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus> return
-    method get_authentication_stage_info_async static deprecated
+    method get_authentication_stage_info_async static
         method GetAuthenticationStageInfoAsync slot=10 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo> return
-    method show_notification_message_async static deprecated
+    method show_notification_message_async static
         method ShowNotificationMessageAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=117 static deprecated
             in string name=deviceName
             in enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage name=message
             out interface type=Windows.Foundation.IAsyncAction return
-    method start_authentication_async static deprecated
+    method start_authentication_async static
         method StartAuthenticationAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics shape=117 static deprecated
             in string name=deviceId
             in interface type=Windows.Storage.Streams.IBuffer name=serviceAuthenticationNonce
@@ -557,7 +557,7 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
     property presence_monitoring_mode
         get get_PresenceMonitoringMode slot=6 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorInfo2 shape=4 deprecated
             out enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode return
-    method update_device_presence_async deprecated
+    method update_device_presence_async
         method UpdateDevicePresenceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorInfo2 shape=51 deprecated
             in enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresence name=presenceState
             out interface type=Windows.Foundation.IAsyncAction return
@@ -569,22 +569,22 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
     requires Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration
     factory Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics
     factory Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics
-    method abort_registering_device_async deprecated
+    method abort_registering_device_async
         method AbortRegisteringDeviceAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration shape=51 deprecated
             in string name=errorLogMessage
             out interface type=Windows.Foundation.IAsyncAction return
-    method find_all_registered_device_info_async static deprecated
+    method find_all_registered_device_info_async static
         method FindAllRegisteredDeviceInfoAsync slot=7 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics shape=51 static deprecated
             in enum32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope name=queryType
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo>> return
-    method finish_registering_device_async deprecated
+    method finish_registering_device_async
         method FinishRegisteringDeviceAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistration shape=51 deprecated
             in interface type=Windows.Storage.Streams.IBuffer name=deviceConfigurationData
             out interface type=Windows.Foundation.IAsyncAction return
-    method is_device_presence_monitoring_supported static deprecated
+    method is_device_presence_monitoring_supported static
         method IsDevicePresenceMonitoringSupported slot=9 inputs=0 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics shape=4 static deprecated
             out boolean return
-    method register_device_presence_monitoring_async static deprecated
+    method register_device_presence_monitoring_async static
         method RegisterDevicePresenceMonitoringAsync slot=6 inputs=3 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics shape=195 static deprecated
             in string name=deviceId
             in string name=deviceInstancePath
@@ -598,7 +598,7 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
             in string name=deviceModelNumber
             in interface type=Windows.Storage.Streams.IBuffer name=deviceConfigurationData
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus> return
-    method request_start_registering_device_async static deprecated
+    method request_start_registering_device_async static
         method RequestStartRegisteringDeviceAsync slot=6 inputs=6 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics shape=278 static deprecated
             in string name=deviceId
             in enum_u32 type=Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities name=capabilities
@@ -607,15 +607,15 @@ class Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationF
             in interface type=Windows.Storage.Streams.IBuffer name=deviceKey
             in interface type=Windows.Storage.Streams.IBuffer name=mutualAuthenticationKey
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult> return
-    method unregister_device_async static deprecated
+    method unregister_device_async static
         method UnregisterDeviceAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics shape=51 static deprecated
             in string name=deviceId
             out interface type=Windows.Foundation.IAsyncAction return
-    method unregister_device_presence_monitoring_async static deprecated
+    method unregister_device_presence_monitoring_async static
         method UnregisterDevicePresenceMonitoringAsync slot=8 inputs=1 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics shape=51 static deprecated
             in string name=deviceId
             out interface type=Windows.Foundation.IAsyncAction return
-    method update_device_configuration_data_async static deprecated
+    method update_device_configuration_data_async static
         method UpdateDeviceConfigurationDataAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics shape=117 static deprecated
             in string name=deviceId
             in interface type=Windows.Storage.Streams.IBuffer name=deviceConfigurationData

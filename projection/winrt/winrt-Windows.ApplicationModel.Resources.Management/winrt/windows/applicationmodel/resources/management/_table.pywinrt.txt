@@ -303,11 +303,11 @@ class Windows.ApplicationModel.Resources.Management.ResourceIndexer python_type
             in class type=Windows.Foundation.Uri name=projectRoot
             in class type=Windows.Foundation.Uri name=extensionDllPath
             out class type=Windows.ApplicationModel.Resources.Management.ResourceIndexer return
-    method index_file_contents_async deprecated
+    method index_file_contents_async
         method IndexFileContentsAsync slot=7 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 deprecated
             in class type=Windows.Foundation.Uri name=file
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate>> return
-    method index_file_path deprecated
+    method index_file_path
         method IndexFilePath slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Resources.Management.IResourceIndexer shape=51 deprecated
             in class type=Windows.Foundation.Uri name=filePath
             out class type=Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate return

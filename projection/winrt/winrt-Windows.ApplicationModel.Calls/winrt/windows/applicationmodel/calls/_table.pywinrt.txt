@@ -2166,7 +2166,7 @@ class Windows.ApplicationModel.Calls.PhoneLine python_type
             in string name=number
             in string name=displayName
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Calls.PhoneLineDialResult> return
-    method enable_text_reply deprecated
+    method enable_text_reply
         method EnableTextReply slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.IPhoneLine2 shape=4 deprecated
             in boolean name=value
     method from_id_async static

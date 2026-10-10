@@ -752,10 +752,10 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
     property id
         get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 deprecated
             out string return
-    method change_priority deprecated
+    method change_priority
         method ChangePriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment4 shape=4 deprecated
             in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=Priority
-    method create_async static deprecated
+    method create_async static
         method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
@@ -763,18 +763,18 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
-    method find_by_owner_id static deprecated
+    method find_by_owner_id static
         method FindByOwnerId slot=9 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
             in string name=environmentOwnerId
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> return
-    method get_by_id static deprecated
+    method get_by_id static
         method GetById slot=8 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
             in string name=environmentId
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
-    method get_user_info deprecated
+    method get_user_info
         method GetUserInfo slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=4 deprecated
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo return
-    method launch_file_with_ui_async deprecated
+    method launch_file_with_ui_async
         method LaunchFileWithUIAsync slot=11 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 deprecated
             in string name=appExePath
             in string name=argumentsTemplate
@@ -786,7 +786,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in string name=filePath
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
-    method post_message_to_receiver_async deprecated
+    method post_message_to_receiver_async
         method PostMessageToReceiverAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment2 shape=177 deprecated
             in guid name=receiverId
             in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
@@ -796,11 +796,11 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
-    method register_message_receiver deprecated
+    method register_message_receiver
         method RegisterMessageReceiver slot=15 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=94 deprecated
             in guid name=receiverId
             in delegate type=Windows.Security.Isolation.MessageReceivedCallback name=messageReceivedCallback
-    method share_file_async deprecated
+    method share_file_async
         method ShareFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=117 deprecated
             in string name=filePath
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
@@ -810,7 +810,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
-    method share_folder_async deprecated
+    method share_folder_async
         method ShareFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=117 deprecated
             in string name=hostFolder
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
@@ -820,7 +820,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
-    method start_process_silently_async deprecated
+    method start_process_silently_async
         method StartProcessSilentlyAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 deprecated
             in string name=hostExePath
             in string name=arguments
@@ -832,13 +832,13 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
             in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator name=activator
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
-    method terminate_async deprecated
+    method terminate_async
         method TerminateAsync slot=13 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
         method TerminateAsync slot=14 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=51 deprecated
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
             out interface type=Windows.Foundation.IAsyncAction return
-    method unregister_message_receiver deprecated
+    method unregister_message_receiver
         method UnregisterMessageReceiver slot=16 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=33 deprecated
             in guid name=receiverId
 
@@ -893,7 +893,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult python_t
     property status
         get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus return
-    method change_creation_priority deprecated
+    method change_creation_priority
         method ChangeCreationPriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2 shape=4 deprecated
             in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=priority
 
@@ -928,7 +928,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentFile python_type
     property is_read_only
         get get_IsReadOnly slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 shape=4 deprecated
             out boolean return
-    method close deprecated
+    method close
         method Close slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=0 deprecated
 
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentHost static python_type
@@ -1046,7 +1046,7 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions activatable p
             out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
         put put_AllowedClipboardFormatsToEnvironment slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
             in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
-    method share_host_folder_for_untrusted_items deprecated
+    method share_host_folder_for_untrusted_items
         method ShareHostFolderForUntrustedItems slot=16 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=51 deprecated
             in string name=SharedHostFolderPath
             in string name=ShareFolderNameInEnvironment
@@ -1054,12 +1054,12 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions activatable p
 class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration static python_type
     py IsolatedWindowsEnvironmentOwnerRegistration
     factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics
-    method register static deprecated
+    method register static
         method Register slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=117 static deprecated
             in string name=ownerName
             in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData name=ownerRegistrationData
             out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult return
-    method unregister static deprecated
+    method unregister static
         method Unregister slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=4 static deprecated
             in string name=ownerName
 
@@ -1135,12 +1135,12 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess python_type
     property state
         get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
             out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState return
-    method wait_for_exit deprecated
+    method wait_for_exit
         method WaitForExit slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=0 deprecated
-    method wait_for_exit_async deprecated
+    method wait_for_exit_async
         method WaitForExitAsync slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
             out interface type=Windows.Foundation.IAsyncAction return
-    method wait_for_exit_with_timeout deprecated
+    method wait_for_exit_with_timeout
         method WaitForExitWithTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
             in uint32 name=timeoutMilliseconds
 
@@ -1296,10 +1296,10 @@ class Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo python_type
     property environment_user_sid
         get get_EnvironmentUserSid slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 deprecated
             out string return
-    method try_wait_for_sign_in_async deprecated
+    method try_wait_for_sign_in_async
         method TryWaitForSignInAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-    method try_wait_for_sign_in_with_progress_async deprecated
+    method try_wait_for_sign_in_with_progress_async
         method TryWaitForSignInWithProgressAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2 shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> return
 
@@ -1307,19 +1307,19 @@ class Windows.Security.Isolation.IsolatedWindowsHostMessenger static python_type
     py IsolatedWindowsHostMessenger
     factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
     factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
-    method get_file_id static deprecated
+    method get_file_id static
         method GetFileId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=51 static deprecated
             in string name=filePath
             out guid return
-    method post_message_to_receiver static deprecated
+    method post_message_to_receiver static
         method PostMessageToReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=94 static deprecated
             in guid name=receiverId
             in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
-    method register_host_message_receiver static deprecated
+    method register_host_message_receiver static
         method RegisterHostMessageReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=94 static deprecated
             in guid name=receiverId
             in delegate type=Windows.Security.Isolation.HostMessageReceivedCallback name=hostMessageReceivedCallback
-    method unregister_host_message_receiver static deprecated
+    method unregister_host_message_receiver static
         method UnregisterHostMessageReceiver slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=33 static deprecated
             in guid name=receiverId
 

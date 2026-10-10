@@ -789,15 +789,15 @@ class Windows.Perception.Spatial.SpatialAnchorStore python_type
 class Windows.Perception.Spatial.SpatialAnchorTransferManager static python_type
     py SpatialAnchorTransferManager
     factory Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics
-    method request_access_async static deprecated
+    method request_access_async static
         method RequestAccessAsync slot=8 inputs=0 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Perception.Spatial.SpatialPerceptionAccessStatus> return
-    method try_export_anchors_async static deprecated
+    method try_export_anchors_async static
         method TryExportAnchorsAsync slot=7 inputs=2 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=117 static deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,Windows.Perception.Spatial.SpatialAnchor>> name=anchors
             in interface type=Windows.Storage.Streams.IOutputStream name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
-    method try_import_anchors_async static deprecated
+    method try_import_anchors_async static
         method TryImportAnchorsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Perception.Spatial.ISpatialAnchorTransferManagerStatics shape=51 static deprecated
             in interface type=Windows.Storage.Streams.IInputStream name=stream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IMapView<System.String,Windows.Perception.Spatial.SpatialAnchor>> return

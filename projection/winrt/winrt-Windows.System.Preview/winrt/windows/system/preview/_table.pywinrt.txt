@@ -116,10 +116,10 @@ class Windows.System.Preview.TwoPanelHingedDevicePosturePreview python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_PostureChanged slot=8 inputs=1 outputs=0 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method get_current_posture_async deprecated
+    method get_current_posture_async
         method GetCurrentPostureAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreview shape=4 deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading> return
-    method get_default_async static deprecated
+    method get_default_async static
         method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.Preview.ITwoPanelHingedDevicePosturePreviewStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.Preview.TwoPanelHingedDevicePosturePreview> return
 

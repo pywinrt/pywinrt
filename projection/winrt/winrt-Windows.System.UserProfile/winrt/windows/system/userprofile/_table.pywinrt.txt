@@ -621,43 +621,43 @@ class Windows.System.UserProfile.UserInformation static python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_AccountPictureChanged slot=14 inputs=1 outputs=0 declaring=Windows.System.UserProfile.IUserInformationStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method get_account_picture static deprecated
+    method get_account_picture static
         method GetAccountPicture slot=8 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 static deprecated
             in enum32 type=Windows.System.UserProfile.AccountPictureKind name=kind
             out interface type=Windows.Storage.IStorageFile return
-    method get_display_name_async static deprecated
+    method get_display_name_async static
         method GetDisplayNameAsync slot=15 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_domain_name_async static deprecated
+    method get_domain_name_async static
         method GetDomainNameAsync slot=20 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_first_name_async static deprecated
+    method get_first_name_async static
         method GetFirstNameAsync slot=16 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_last_name_async static deprecated
+    method get_last_name_async static
         method GetLastNameAsync slot=17 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_principal_name_async static deprecated
+    method get_principal_name_async static
         method GetPrincipalNameAsync slot=18 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<System.String> return
-    method get_session_initiation_protocol_uri_async static deprecated
+    method get_session_initiation_protocol_uri_async static
         method GetSessionInitiationProtocolUriAsync slot=19 inputs=0 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=4 static deprecated
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Uri> return
-    method set_account_picture_async static deprecated
+    method set_account_picture_async static
         method SetAccountPictureAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 static deprecated
             in interface type=Windows.Storage.IStorageFile name=image
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
-    method set_account_picture_from_stream_async static deprecated
+    method set_account_picture_from_stream_async static
         method SetAccountPictureFromStreamAsync slot=11 inputs=1 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=51 static deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=image
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
-    method set_account_pictures_async static deprecated
+    method set_account_pictures_async static
         method SetAccountPicturesAsync slot=10 inputs=3 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=195 static deprecated
             in interface type=Windows.Storage.IStorageFile name=smallImage
             in interface type=Windows.Storage.IStorageFile name=largeImage
             in interface type=Windows.Storage.IStorageFile name=video
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserProfile.SetAccountPictureResult> return
-    method set_account_pictures_from_streams_async static deprecated
+    method set_account_pictures_from_streams_async static
         method SetAccountPicturesFromStreamsAsync slot=12 inputs=3 outputs=1 declaring=Windows.System.UserProfile.IUserInformationStatics shape=195 static deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=smallImage
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=largeImage

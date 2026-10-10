@@ -237,14 +237,14 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic pytho
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_ValueChanged slot=21 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=valueChangedEventCookie
-    method convert_short_id_to_uuid static deprecated
+    method convert_short_id_to_uuid static
         method ConvertShortIdToUuid slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristicStatics shape=51 static deprecated
             in uint16 name=shortId
             out guid return
-    method get_all_descriptors deprecated
+    method get_all_descriptors
         method GetAllDescriptors slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic2 shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> return
-    method get_descriptors deprecated
+    method get_descriptors
         method GetDescriptors slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristic shape=94 deprecated
             in guid name=descriptorUuid
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> return
@@ -626,7 +626,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor python_ty
     property uuid
         get get_Uuid slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDescriptor shape=4
             out guid return
-    method convert_short_id_to_uuid static deprecated
+    method convert_short_id_to_uuid static
         method ConvertShortIdToUuid slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDescriptorStatics shape=51 static deprecated
             in uint16 name=shortId
             out guid return
@@ -718,7 +718,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
             out enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
-    method convert_short_id_to_uuid static deprecated
+    method convert_short_id_to_uuid static
         method ConvertShortIdToUuid slot=9 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics shape=51 static deprecated
             in uint16 name=shortId
             out guid return
@@ -730,13 +730,13 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
             in string name=deviceId
             in enum32 type=Windows.Devices.Bluetooth.GenericAttributeProfile.GattSharingMode name=sharingMode
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
-    method get_all_characteristics deprecated
+    method get_all_characteristics
         method GetAllCharacteristics slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2 shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> return
-    method get_all_included_services deprecated
+    method get_all_included_services
         method GetAllIncludedServices slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService2 shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return
-    method get_characteristics deprecated
+    method get_characteristics
         method GetCharacteristics slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService shape=94 deprecated
             in guid name=characteristicUuid
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> return
@@ -772,7 +772,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
             in guid name=serviceUuid
             in enum32 type=Windows.Devices.Bluetooth.BluetoothCacheMode name=cacheMode
             out string return
-    method get_device_selector_from_short_id static deprecated
+    method get_device_selector_from_short_id static
         method GetDeviceSelectorFromShortId slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics shape=51 static deprecated
             in uint16 name=serviceShortId
             out string return
@@ -780,7 +780,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService python
         method GetDeviceSelectorFromUuid slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceServiceStatics shape=94 static
             in guid name=serviceUuid
             out string return
-    method get_included_services deprecated
+    method get_included_services
         method GetIncludedServices slot=7 inputs=1 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattDeviceService shape=94 deprecated
             in guid name=serviceUuid
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService> return

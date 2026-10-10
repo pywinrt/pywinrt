@@ -308,7 +308,7 @@ class Windows.Graphics.Holographic.HolographicFramePresentationMonitor python_ty
     requires Windows.Foundation.IClosable
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
-    method read_reports deprecated
+    method read_reports
         method ReadReports slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicFramePresentationMonitor shape=4 deprecated
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport> return
 
@@ -505,7 +505,7 @@ class Windows.Graphics.Holographic.HolographicSpace python_type
         method CreateForCoreWindow slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpaceStatics shape=51 static
             in class type=Windows.UI.Core.CoreWindow name=window
             out class type=Windows.Graphics.Holographic.HolographicSpace return
-    method create_frame_presentation_monitor deprecated
+    method create_frame_presentation_monitor
         method CreateFramePresentationMonitor slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Holographic.IHolographicSpace2 shape=51 deprecated
             in uint32 name=maxQueuedReports
             out class type=Windows.Graphics.Holographic.HolographicFramePresentationMonitor return
