@@ -950,8 +950,7 @@ class ProjectedType
 
         foreach (var property in properties)
         {
-            reserved[property.IsStatic]
-                .Add(property.Name.ToPythonIdentifier(isTypeMethod: property.IsStatic));
+            reserved[property.IsStatic].Add(property.PyName);
         }
 
         foreach (var @event in events)
@@ -1032,7 +1031,13 @@ class ProjectedType
             IReadOnlyDictionary<GenericParameter, TypeReference>? map
         )
         {
-            foreach (var property in properties.Where(p => p.GetMethod?.IsPublic ?? false))
+            // A protected or overridable property is projected as a protected or
+            // overridable method is, under a name that starts with an underscore.
+            foreach (
+                var property in properties.Where(p =>
+                    p.GetMethod is { IsPublic: true } or { IsFamily: true }
+                )
+            )
             {
                 // FIXME: replace with sorted set
                 if (collectedProperties.Any(p => p.Name == property.Name))

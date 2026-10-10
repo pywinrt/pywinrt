@@ -174,7 +174,7 @@ static class WriterExtensions
         bool isAbstract = false
     )
     {
-        var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
+        var name = prop.PyName;
         var getterNullabilityInfo = prop.GetMethod.GetNullability(nullabilityMap);
         var propType = prop.Property.PropertyType.ToPyTypeName(
             ns,
@@ -205,7 +205,12 @@ static class WriterExtensions
 
         w.WriteLine($"@_property{typeIgnore}");
 
-        if (type.IsComposable && prop.SetMethod == null)
+        // A protected property is final, as a protected method is, and an
+        // overridable one is not, as an overridable method is not.
+        if (
+            type.IsComposable && prop.SetMethod == null && !prop.GetMethod.IsOverridable
+            || prop.GetMethod.IsProtected
+        )
         {
             w.WriteLine("@typing.final");
         }
@@ -236,7 +241,7 @@ static class WriterExtensions
 
             w.WriteLine($"@{name}.setter");
 
-            if (type.IsComposable)
+            if (type.IsComposable && !prop.SetMethod.IsOverridable)
             {
                 w.WriteLine("@typing.final");
             }
