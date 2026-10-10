@@ -115,6 +115,22 @@ class Inspect(unittest.TestCase):
             ],
         )
 
+    def test_a_stub_is_read_as_python(self) -> None:
+        p = self.path.with_suffix(".pyi")
+        p.write_bytes(
+            b"import winui3.microsoft.ui.xaml\n"
+            b"def show(window: winui3.microsoft.ui.xaml.Window) -> None: ...\n"
+        )
+
+        self.assertEqual(
+            run(p),
+            [
+                f"{p}:1:8",
+                "possible match: winui3.microsoft.ui.xaml",
+                "rename to: winrt.microsoft.ui.xaml",
+            ],
+        )
+
     def test_a_form_feed_ends_no_line(self) -> None:
         # ast numbers lines past a form feed, which a page break is, as if it
         # were not there
@@ -229,6 +245,29 @@ class Requirements(unittest.TestCase):
                 " see scripts/3to4/README.md",
             ],
         )
+
+    def test_a_module_path_is_not_a_distribution(self) -> None:
+        # what a page or a PyInstaller spec names with dots is a module
+        page = self.write(
+            "README.md",
+            "Run `import winui3.microsoft.ui.xaml` after\n"
+            "\n"
+            "    pip install winui3-Microsoft.UI.Xaml\n",
+        )
+        spec = self.write(
+            "app.spec.py", 'hiddenimports = ["winui3.microsoft.ui.xaml"]\n'
+        )
+        winui = "winrt-Microsoft.WindowsAppSDK.WinUI"
+
+        self.assertEqual(
+            run(page),
+            [
+                f"{page}:3:17",
+                "possible match: winui3-Microsoft.UI.Xaml",
+                f"rename to: {winui}",
+            ],
+        )
+        self.assertEqual(run(spec), [])
 
     def test_python_strings_only(self) -> None:
         p = self.write("setup.py", SETUP)

@@ -70,10 +70,13 @@ DISTRIBUTIONS = {
 
 _CLAUSE = r"(?:===|[<>=!~]=|[<>])[ \t]*[\w.*!+-]+"
 
+# A distribution is named with a hyphen or an underscore after its prefix, and
+# a module with a dot, so a module path such as winui3.microsoft.ui.xaml in a
+# Markdown page or a PyInstaller hiddenimports list is not taken for one.
 REQUIREMENT = re.compile(
     rf"""
     (?<![\w.-])
-    (?P<name>(?:winrt|winui2|winui3|webview2)[-_.][A-Za-z0-9](?:[\w.-]*[A-Za-z0-9])?)
+    (?P<name>(?:winrt|winui2|winui3|webview2)[-_][A-Za-z0-9](?:[\w.-]*[A-Za-z0-9])?)
     (?P<extras>[ \t]*\[[^\]\n]*\])?
     (?P<specifier>[ \t]*{_CLAUSE}(?:[ \t]*,[ \t]*{_CLAUSE})*)?
     """,
@@ -429,7 +432,8 @@ if __name__ == "__main__":
     for path in args.files:
         source = path.read_bytes().decode()
         lines = split_lines(source)
-        python = path.suffix == ".py"
+        # a stub is Python too, and its imports are what the report is about
+        python = path.suffix in (".py", ".pyi")
         tree = ast.parse(source, path) if python else None
         matches = list(find(tree, lines)) if tree else []
         matches += find_requirements(source, lines, python)
