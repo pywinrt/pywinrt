@@ -82,7 +82,7 @@ static class FileWriters
                     dllPackage
                 ),
             () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
-            () => TableWriter.Write(nsDir, ns, packageMap, members, census)
+            () => TableWriter.Write(nsDir, ns, packageMap, nullabilityMap, members, census)
         );
 
         // Several namespaces may be published in one distribution, so what

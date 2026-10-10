@@ -197,10 +197,15 @@ class ParameterNullabilityInfo
     }
 
     [JsonConstructor]
-    public ParameterNullabilityInfo(string name, TypeRefNullabilityInfo type)
+    public ParameterNullabilityInfo(
+        string name,
+        TypeRefNullabilityInfo type,
+        bool fillBuffer = false
+    )
     {
         Name = name;
         Type = type;
+        FillBuffer = fillBuffer;
     }
 
     public ParameterNullabilityInfo(ParameterDefinition parameter)
@@ -233,6 +238,7 @@ class ParameterNullabilityInfo
     {
         Name = parameter.Name;
         Kind = (ParameterKind)parameter.GetCategory();
+        FillBuffer = old.FillBuffer;
 
         if (parameter.ParameterType is ArrayType array)
         {
@@ -259,6 +265,13 @@ class ParameterNullabilityInfo
 
     public ParameterKind Kind { get; }
     public TypeRefNullabilityInfo Type { get; }
+
+    /// <summary>
+    /// Gets whether WinRT writes into the buffer passed as this <c>IBuffer</c>,
+    /// as it fills a fill array, which the metadata cannot say.
+    /// </summary>
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public bool FillBuffer { get; }
 }
 
 class TypeRefNullabilityInfo

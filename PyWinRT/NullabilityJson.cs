@@ -272,6 +272,12 @@ static class NullabilityJson
                     );
                     writer.WritePropertyName("type"u8);
                     WriteTypeRef(writer, parameter.Type);
+
+                    if (parameter.FillBuffer)
+                    {
+                        writer.WriteBoolean("fillBuffer"u8, true);
+                    }
+
                     writer.WriteEndObject();
                 }
 
@@ -481,6 +487,7 @@ static class NullabilityJson
     {
         var name = default(string);
         var type = default(TypeRefNullabilityInfo);
+        var fillBuffer = false;
 
         ExpectStartObject(ref reader);
 
@@ -495,6 +502,11 @@ static class NullabilityJson
                 reader.Read();
                 type = ReadTypeRef(ref reader);
             }
+            else if (reader.ValueTextEquals("fillBuffer"u8))
+            {
+                reader.Read();
+                fillBuffer = reader.GetBoolean();
+            }
             else
             {
                 // NB: this includes "kind", which is derived from the
@@ -503,7 +515,7 @@ static class NullabilityJson
             }
         }
 
-        return new ParameterNullabilityInfo(name!, type!);
+        return new ParameterNullabilityInfo(name!, type!, fillBuffer);
     }
 
     private static TypeRefNullabilityInfo ReadTypeRef(ref Utf8JsonReader reader)
