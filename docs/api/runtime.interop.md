@@ -7,19 +7,29 @@ Various functions for interoperating with Win32 and COM.
 A compiled module that wraps a COM or Win32 interop API shares no C ABI with
 `winrt-runtime` and includes none of its headers. It exchanges WinRT objects
 with the runtime as *interface pointer capsules*, the
-[`InterfaceCapsule`](#interfacecapsule) type below. The three functions below
+[`InterfaceCapsule`](#interfacecapsule) type below. The four functions below
 and that type are the whole contract, and the interop packages of PyWinRT use
-them the same way:
+them the same way. A Windows interop interface that acts for a runtime class,
+such as *IGraphicsCaptureItemInterop*, is implemented by the class's activation
+factory, which the runtime gets:
 
 ```python
+from uuid import UUID
+
 import winrt.runtime.interop as _runtime
 import my_interop._native as _native
 from winrt.windows.graphics.capture import GraphicsCaptureItem
 
+_IID_IGRAPHICSCAPTUREITEMINTEROP = UUID("3628e81b-3cac-4c60-b7f4-23ce0e0c3356")
+
 
 def create_for_window(window: int) -> GraphicsCaptureItem:
+    factory = _runtime.get_activation_factory(
+        GraphicsCaptureItem, _IID_IGRAPHICSCAPTUREITEMINTEROP
+    )
+
     return _runtime.wrap_interface(
-        _native.create_for_window(window), GraphicsCaptureItem
+        _native.create_for_window(factory, window), GraphicsCaptureItem
     )
 ```
 
@@ -55,6 +65,28 @@ Raises `OSError` if the object does not implement the interface and
 `TypeError` if `iid` is a type that is neither a projected interface nor a
 runtime class. A parameterized interface such as `IVector` has no IID of its
 own until it is given type arguments, so it is named by a `uuid.UUID`.
+
+!!! version-added "Added in version 4.0"
+
+## `get_activation_factory`
+
+```python
+get_activation_factory(cls: type[Object], iid: UUID | type[Object], /) -> InterfaceCapsule
+```
+
+An interface of the activation factory of a runtime class, as an interface
+pointer capsule. A class's static members and constructors are reached through
+its activation factory, and so are the Windows interop interfaces that act for
+it. The factory is got as the projection gets one, so a call that is the first
+WinRT call in a process works.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `cls` | `type` | A projected runtime class, a static class included. |
+| `iid` | `uuid.UUID` or `type` | The IID of the interface to query the factory for, or a projected interface. |
+
+Raises `OSError` if the class is not registered or its factory does not
+implement the interface, and `TypeError` if `cls` is not a runtime class.
 
 !!! version-added "Added in version 4.0"
 

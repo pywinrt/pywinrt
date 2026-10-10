@@ -1210,6 +1210,68 @@ namespace py::cpp::_winrt
     }
 
     /**
+     * get_activation_factory(cls, iid) - the @p iid interface of the
+     * activation factory of the runtime class @p cls, as an interface pointer
+     * capsule. @p iid is a uuid.UUID, or a projected interface.
+     *
+     * A class's statics, its constructors and the Windows interop interfaces
+     * that act for it, such as IGraphicsCaptureItemInterop, are all reached
+     * through its activation factory. It is got as the projection gets one
+     * for a static member, so a call that comes first in a process works.
+     */
+    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        PyObject* type_obj;
+        PyObject* iid_obj;
+
+        if (!PyArg_ParseTuple(
+                args, "O!O:get_activation_factory", &PyType_Type, &type_obj, &iid_obj))
+        {
+            return nullptr;
+        }
+
+        auto const type = reinterpret_cast<PyTypeObject*>(type_obj);
+
+        auto const info = py::interp::find_type_entry(type);
+        if (!info)
+        {
+            PyErr_Format(PyExc_TypeError, "'%s' is not a runtime class", type->tp_name);
+            return nullptr;
+        }
+
+        if (info->category != py::table::category::class_)
+        {
+            PyErr_Format(PyExc_TypeError, "'%s' is not a runtime class", type->tp_name);
+            return nullptr;
+        }
+
+        try
+        {
+            auto const iid = iid_named_by(iid_obj);
+
+            void* factory{};
+            int32_t hr{};
+
+            {
+                // Activation may start a server in another process.
+                auto _gil = py::release_gil();
+
+                hr = winrt::impl::get_runtime_activation_factory_impl<false>(
+                    winrt::param::hstring{info->class_name}, iid, &factory);
+            }
+
+            winrt::check_hresult(hr);
+
+            return py::interp::new_interface_capsule(factory);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+    }
+
+    /**
      * wrap_interface(capsule, type) - the WinRT object an interface pointer
      * capsule holds, as @p type, or None for None. @p type is a projected class
      * or interface, or the qualified name it is bound to. The capsule keeps its

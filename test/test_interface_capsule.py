@@ -3,8 +3,10 @@ The functions the interop packages reach the runtime through.
 
 An interop package's compiled code shares no C ABI with winrt-runtime. It
 takes a WinRT object's interface as an interface pointer capsule from
-``as_interface()``, hands one back to ``wrap_interface()`` to be made into a
-projected object, and raises what ``hresult_error()`` builds for a failed call.
+``as_interface()``, and a runtime class's activation factory from
+``get_activation_factory()``, hands one back to ``wrap_interface()`` to be made
+into a projected object, and raises what ``hresult_error()`` builds for a failed
+call.
 """
 
 import ctypes
@@ -16,12 +18,15 @@ import uuid
 import winrt._winrt
 from winrt.runtime import interop
 from winrt.windows.foundation import IStringable, Point, Uri, WwwFormUrlDecoder
+from winrt.windows.foundation.metadata import ApiInformation
 from winrt.windows.foundation.collections import IIterable
 
 IID_IINSPECTABLE = uuid.UUID("AF86E2E0-B12D-4C6A-9C5A-D7AA65101E90")
 IID_IUNKNOWN = uuid.UUID("00000000-0000-0000-C000-000000000046")
 # IStringable, which a Uri implements and a PropertyValue does not
 IID_ISTRINGABLE = uuid.UUID("96369F54-8EB6-48F0-ABCE-C1B211E627C3")
+IID_IACTIVATIONFACTORY = uuid.UUID("00000035-0000-0000-C000-000000000046")
+IID_IURIRUNTIMECLASSFACTORY = uuid.UUID("44A9796F-723E-4FDF-A218-033E75B0C084")
 
 E_FAIL = -2147467259
 E_INVALIDARG = -2147024809
@@ -189,9 +194,44 @@ class TestInterfaceCapsule(unittest.TestCase):
             )
 
 
+class TestActivationFactory(unittest.TestCase):
+    def test_factory(self) -> None:
+        capsule = interop.get_activation_factory(Uri, IID_IACTIVATIONFACTORY)
+        self.assertEqual(type(capsule).__name__, "PyCapsule")
+
+        # the interface Uri's constructors are reached through
+        interop.get_activation_factory(Uri, IID_IURIRUNTIMECLASSFACTORY)
+
+    def test_static_class(self) -> None:
+        # A static class has a factory although it has no instances, and so no
+        # default interface.
+        interop.get_activation_factory(ApiInformation, IID_IACTIVATIONFACTORY)
+
+    def test_interface_not_implemented(self) -> None:
+        with self.assertRaises(OSError):
+            interop.get_activation_factory(Uri, IID_ISTRINGABLE)
+
+    def test_not_a_runtime_class(self) -> None:
+        for cls in (IStringable, Point, int):
+            with (
+                self.subTest(cls=cls),
+                self.assertRaisesRegex(TypeError, "is not a runtime class"),
+            ):
+                interop.get_activation_factory(cls, IID_IACTIVATIONFACTORY)  # type: ignore[arg-type]
+
+        with self.assertRaises(TypeError):
+            interop.get_activation_factory(
+                Uri("https://example.com/"),  # type: ignore[arg-type]
+                IID_IACTIVATIONFACTORY,
+            )
+
+
 class TestPublicModule(unittest.TestCase):
     def test_same_functions(self) -> None:
         self.assertIs(interop.as_interface, winrt._winrt.as_interface)
+        self.assertIs(
+            interop.get_activation_factory, winrt._winrt.get_activation_factory
+        )
         self.assertIs(interop.wrap_interface, winrt._winrt.wrap_interface)
         self.assertIs(interop.hresult_error, winrt._winrt.hresult_error)
 

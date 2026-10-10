@@ -4,6 +4,7 @@ from typing_extensions import CapsuleType
 
 from winrt._winrt import (
     as_interface,
+    get_activation_factory,
     hresult_error,
     initialize_with_window,
     wrap_interface,
@@ -12,6 +13,7 @@ from winrt._winrt import (
 __all__ = [
     "InterfaceCapsule",
     "as_interface",
+    "get_activation_factory",
     "hresult_error",
     "initialize_with_window",
     "wrap_interface",

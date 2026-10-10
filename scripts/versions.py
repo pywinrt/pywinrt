@@ -38,6 +38,7 @@ INTEROP_HEADER_PATH = INTEROP_PATH / "interop.h"
 RUNTIME_FUNCTIONS = {
     "InterfaceCapsule": "4.0.0",
     "as_interface": "4.0.0",
+    "get_activation_factory": "4.0.0",
     "hresult_error": "4.0.0",
     "wrap_interface": "4.0.0",
 }
