@@ -223,17 +223,24 @@ static class TypeExtensions
                 ),
                 { FullName: "System.Void" } => "None",
                 { FullName: "System.Boolean" } => "bool",
-                { FullName: "System.SByte" } => "winrt.system.Int8",
-                { FullName: "System.Byte" } => "winrt.system.UInt8",
+                // Where a caller passes an integer, the runtime takes any
+                // object with __index__(), as a parameter of the standard
+                // library takes a typing.SupportsIndex.
+                {
+                    FullName: "System.SByte"
+                        or "System.Byte"
+                        or "System.Int16"
+                        or "System.UInt16"
+                        or "System.Int32"
+                        or "System.UInt32"
+                        or "System.Int64"
+                        or "System.UInt64"
+                } => useStructTupleUnion
+                    ? $"{ToPyIntegerName(type.FullName)} | typing.SupportsIndex"
+                    : ToPyIntegerName(type.FullName),
                 { FullName: "System.Char" } => "winrt.system.Char16",
                 { FullName: "System.Double" } => "winrt.system.Double",
-                { FullName: "System.Int16" } => "winrt.system.Int16",
-                { FullName: "System.Int32" } => "winrt.system.Int32",
-                { FullName: "System.Int64" } => "winrt.system.Int64",
                 { FullName: "System.Single" } => "winrt.system.Single",
-                { FullName: "System.UInt16" } => "winrt.system.UInt16",
-                { FullName: "System.UInt32" } => "winrt.system.UInt32",
-                { FullName: "System.UInt64" } => "winrt.system.UInt64",
                 { FullName: "System.String" } => "str",
                 { FullName: "System.Guid" } => "_uuid.UUID",
                 { FullName: "System.Object" } => "winrt.system.Object",
@@ -267,6 +274,20 @@ static class TypeExtensions
                     $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             }
         );
+
+    private static string ToPyIntegerName(string fullName) =>
+        fullName switch
+        {
+            "System.SByte" => "winrt.system.Int8",
+            "System.Byte" => "winrt.system.UInt8",
+            "System.Int16" => "winrt.system.Int16",
+            "System.UInt16" => "winrt.system.UInt16",
+            "System.Int32" => "winrt.system.Int32",
+            "System.UInt32" => "winrt.system.UInt32",
+            "System.Int64" => "winrt.system.Int64",
+            "System.UInt64" => "winrt.system.UInt64",
+            _ => throw new ArgumentException($"{fullName} is not an integer type"),
+        };
 
     public static string ToPyTupleTyping(
         this TypeReference type,
