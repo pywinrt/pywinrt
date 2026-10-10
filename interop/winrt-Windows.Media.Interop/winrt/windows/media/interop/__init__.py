@@ -1,8 +1,13 @@
+from uuid import UUID
+
 import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_media_interop as _native
 from winrt.windows.media import SystemMediaTransportControls
 
 __all__ = ["get_for_window"]
+
+# what SystemMediaTransportControls' activation factory implements for desktop apps
+_IID_ISYSTEMMEDIATRANSPORTCONTROLSINTEROP = UUID("ddb0472d-c911-4a1f-86d9-dc3d71a95f5a")
 
 
 def get_for_window(window: int) -> SystemMediaTransportControls:
@@ -18,7 +23,11 @@ def get_for_window(window: int) -> SystemMediaTransportControls:
         The ISystemMediaTransportControls that corresponds to the appWindow
         window.
     """
+    factory = _runtime.get_activation_factory(
+        SystemMediaTransportControls, _IID_ISYSTEMMEDIATRANSPORTCONTROLSINTEROP
+    )
+
     return _runtime.wrap_interface(
-        _native.get_for_window(window),
+        _native.get_for_window(factory, window),
         SystemMediaTransportControls,
     )
