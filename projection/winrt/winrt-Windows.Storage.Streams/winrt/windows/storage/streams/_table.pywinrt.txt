@@ -435,7 +435,7 @@ class Windows.Storage.Streams.FileInputStream python_type closeable
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -550,7 +550,7 @@ class Windows.Storage.Streams.FileRandomAccessStream python_type closeable
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1059,7 +1059,7 @@ interface Windows.Storage.Streams.IInputStream python_type closeable
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1139,7 +1139,7 @@ interface Windows.Storage.Streams.IRandomAccessStream python_type closeable
             out interface type=Windows.Storage.Streams.IOutputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1209,7 +1209,7 @@ interface Windows.Storage.Streams.IRandomAccessStreamWithContentType python_type
             out interface type=Windows.Storage.Streams.IOutputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1264,7 +1264,7 @@ class Windows.Storage.Streams.InMemoryRandomAccessStream activatable python_type
             out interface type=Windows.Storage.Streams.IOutputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1293,7 +1293,7 @@ class Windows.Storage.Streams.InputStreamOverStream python_type closeable
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return
@@ -1373,7 +1373,7 @@ class Windows.Storage.Streams.RandomAccessStreamOverStream python_type closeable
             out interface type=Windows.Storage.Streams.IOutputStream return
     method read_async
         method ReadAsync slot=6 inputs=3 outputs=1 declaring=Windows.Storage.Streams.IInputStream shape=195 reverse=26
-            in interface type=Windows.Storage.Streams.IBuffer name=buffer
+            in interface type=Windows.Storage.Streams.IBuffer name=buffer fill_buffer
             in uint32 name=count
             in enum_u32 type=Windows.Storage.Streams.InputStreamOptions name=options
             out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> return

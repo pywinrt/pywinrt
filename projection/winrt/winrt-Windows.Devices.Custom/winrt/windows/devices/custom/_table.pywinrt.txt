@@ -61,13 +61,13 @@ class Windows.Devices.Custom.CustomDevice python_type
         method SendIOControlAsync slot=8 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195
             in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
             in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
-            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
+            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer fill_buffer
             out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt32> return
     method try_send_io_control_async
         method TrySendIOControlAsync slot=9 inputs=3 outputs=1 declaring=Windows.Devices.Custom.ICustomDevice shape=195
             in interface type=Windows.Devices.Custom.IIOControlCode name=ioControlCode
             in interface type=Windows.Storage.Streams.IBuffer name=inputBuffer
-            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer
+            in interface type=Windows.Storage.Streams.IBuffer name=outputBuffer fill_buffer
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
 
 enum Windows.Devices.Custom.DeviceAccessMode python_type
