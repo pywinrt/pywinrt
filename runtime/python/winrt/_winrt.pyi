@@ -12,7 +12,7 @@ from typing import (
     final,
     overload,
 )
-from collections.abc import Iterator
+from collections.abc import Iterable, Iterator
 from uuid import UUID
 
 from typing_extensions import Buffer, TypeForm, deprecated
@@ -146,14 +146,7 @@ class Array(collections.abc.Sequence[_T]):
     def __init__(
         self,
         type: TypeForm[_T],
-        initializer: list[_T],
-        /,
-    ) -> None: ...
-    @overload
-    def __init__(
-        self,
-        type: TypeForm[_T],
-        initializer: tuple[_T, ...],
+        initializer: Iterable[_T],
         /,
     ) -> None: ...
     @overload
@@ -161,7 +154,7 @@ class Array(collections.abc.Sequence[_T]):
     def __init__(
         self,
         type: str,
-        initializer: int | Buffer | list[Any] | tuple[Any, ...],
+        initializer: int | Buffer | Iterable[Any],
         /,
     ) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...

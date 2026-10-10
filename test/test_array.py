@@ -532,6 +532,39 @@ class TestWinrtArray(unittest.TestCase):
         with self.assertRaises(IndexError):
             Array(Int64, items)
 
+    def test_from_any_iterable(self) -> None:
+        class List(list[int]):
+            pass
+
+        class Tuple(tuple[int, ...]):
+            pass
+
+        for values in (
+            List([1, 2, 3]),
+            Tuple((1, 2, 3)),
+            range(1, 4),
+            (i for i in (1, 2, 3)),
+            collections.deque([1, 2, 3]),
+            {1: "a", 2: "b", 3: "c"}.keys(),
+        ):
+            with self.subTest(type(values).__name__):
+                self.assertEqual(list(Array(Int32, values)), [1, 2, 3])
+
+    def test_from_a_str_is_from_its_characters(self) -> None:
+        self.assertEqual(list(Array(Char16, "abc")), ["a", "b", "c"])
+
+    def test_from_something_not_iterable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "not iterable"):
+            Array(Int32, 1.5)  # type: ignore[call-overload]
+
+    def test_from_an_iterable_that_fails(self) -> None:
+        def values() -> collections.abc.Iterator[int]:
+            yield 1
+            raise ValueError("test")
+
+        with self.assertRaisesRegex(ValueError, "test"):
+            Array(Int32, values())
+
     def test_no_copy_of_references_from_buffer(self) -> None:
         element: typing.Any
         values: list[typing.Any]
@@ -734,11 +767,10 @@ class TestWinrtArray(unittest.TestCase):
             def __eq__(self, other: object) -> bool:
                 raise ZeroDivisionError
 
-        # mypy, unlike pyright, cannot infer an interface from a list of a class
-        a = Array(IStringable, [Unequal()])  # type: ignore[misc]
+        a = Array(IStringable, [Unequal()])
 
         with self.assertRaises(ZeroDivisionError):
-            _ = a == Array(IStringable, [Unequal()])  # type: ignore[misc]
+            _ = a == Array(IStringable, [Unequal()])
 
     def test_not_hashable(self) -> None:
         with self.assertRaises(TypeError):
