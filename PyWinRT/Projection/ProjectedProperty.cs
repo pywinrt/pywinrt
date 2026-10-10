@@ -15,6 +15,15 @@ class ProjectedProperty(
     public string Name { get; } = property.Name;
 
     /// <summary>
+    /// Gets the Python name of the property, which starts with an underscore
+    /// for a protected or overridable property, as a protected or overridable
+    /// method's does.
+    /// </summary>
+    public string PyName { get; } =
+        (property.GetMethod.IsPublic ? "" : "_")
+        + property.Name.ToPythonIdentifier(isTypeMethod: property.GetMethod.IsStatic);
+
+    /// <summary>
     /// Gets a value indicating whether the property is static.
     /// </summary>
     public bool IsStatic { get; } = property.GetMethod.IsStatic;
@@ -48,7 +57,8 @@ class ProjectedProperty(
     /// Gets the set method of the property.
     /// </summary>
     public ProjectedMethod? SetMethod { get; } =
-        ModulePreloader.GetSetMethod(property) is { IsPublic: true } setMethod
+        ModulePreloader.GetSetMethod(property) is { } setMethod
+        && (setMethod.IsPublic || setMethod.IsFamily)
             ? new ProjectedMethod(setMethod, inheritance, genericArgMap)
             : default;
 }

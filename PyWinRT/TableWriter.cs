@@ -784,10 +784,7 @@ sealed class TableWriter
 
         foreach (var property in type.Properties)
         {
-            var group = new TableGroup(
-                property.Name.ToPythonIdentifier(isTypeMethod: property.IsStatic),
-                TableGroupKind.Property
-            );
+            var group = new TableGroup(property.PyName, TableGroupKind.Property);
 
             if (property.IsStatic)
             {
