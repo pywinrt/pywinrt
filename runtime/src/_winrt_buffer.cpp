@@ -1,3 +1,8 @@
+// keeps <windows.h> from defining min and max as macros
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
 #include <Python.h>
 #include <Robuffer.h>
 #include <pywinrt/base.h>
