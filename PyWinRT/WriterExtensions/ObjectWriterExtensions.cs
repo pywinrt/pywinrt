@@ -5,8 +5,9 @@ using Mono.Cecil;
 static class ObjectWriterExtensions
 {
     /// <summary>
-    /// Writes the __new__ of a class with no public constructor, which the
-    /// runtime refuses to create, as it refuses a Python class derived from one.
+    /// Writes the __new__ of a class with no constructor, public or protected,
+    /// which the runtime refuses to create, as it refuses a Python class
+    /// derived from one.
     /// </summary>
     /// <remarks>
     /// Without it, the class would have a callable __new__ from object or from
@@ -462,7 +463,23 @@ static class ObjectWriterExtensions
                 w.WriteDeprecated(ctor.DeprecatedMessage);
             }
 
-            w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
+            // A type checker cannot be told that a protected constructor is
+            // for a derived class only, so the docstring, which an editor
+            // shows for the call, says so instead.
+            if (ctor.IsProtected)
+            {
+                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self:");
+                w.Indent++;
+                w.WriteLine(
+                    $"\"\"\"{type.Name}'s constructor is protected: derive a class from it and create that.\"\"\""
+                );
+                w.Indent--;
+            }
+            else
+            {
+                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
+            }
+
             didWriteLine = true;
         }
 
