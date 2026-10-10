@@ -29,6 +29,7 @@ releases before v4.0 are.
 - Added `load()` to `winrt.microsoft.web.webview2.dll` for WinUI on App SDK 2.x.
 
 ### Changed
+- An integer parameter is typed as taking a `typing.SupportsIndex` as well.
 - Updated WebView2 to 1.0.4191.47. Twelve types are new, covering the worker
   APIs - `CoreWebView2ServiceWorker`, `CoreWebView2DedicatedWorker`,
   `CoreWebView2SharedWorker` and the managers and event arguments that go with

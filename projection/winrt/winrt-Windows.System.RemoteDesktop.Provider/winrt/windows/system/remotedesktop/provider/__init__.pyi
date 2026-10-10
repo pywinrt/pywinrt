@@ -46,7 +46,7 @@ class PerformLocalActionRequestedEventArgs(winrt.system.Object):
 @typing.final
 class RemoteDesktopConnectionInfo_Static(winrt._winrt.Object_Static):
     # Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo::GetForLaunchUri(Windows.Foundation.Uri,Windows.UI.WindowId)
-    def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], /) -> RemoteDesktopConnectionInfo: ...
+    def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, window_id: windows_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> RemoteDesktopConnectionInfo: ...
 
 @typing.final
 class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopConnectionInfo_Static):

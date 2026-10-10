@@ -15,7 +15,7 @@ __all__ = [
 @typing.final
 class ThemeSettings_Static(winrt._winrt.Object_Static):
     # Microsoft.UI.System.ThemeSettings Microsoft.UI.System.ThemeSettings::CreateForWindowId(Microsoft.UI.WindowId)
-    def create_for_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64], /) -> ThemeSettings: ...
+    def create_for_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> ThemeSettings: ...
 
 @typing.final
 class ThemeSettings(winrt.system.Object, metaclass=ThemeSettings_Static):

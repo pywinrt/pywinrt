@@ -191,7 +191,7 @@ class SocialFeedItem(winrt.system.Object):
     # System.Void Windows.ApplicationModel.SocialInfo.SocialFeedItem::put_BadgeCountValue(System.Int32)
     @badge_count_value.setter
     @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def badge_count_value(self, value: winrt.system.Int32) -> None: ...
+    def badge_count_value(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
     # Windows.ApplicationModel.SocialInfo.SocialUserInfo Windows.ApplicationModel.SocialInfo.SocialFeedItem::get_Author()
     @_property
     @deprecated("ISocialFeedItem is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -280,7 +280,7 @@ class SocialItemThumbnail(winrt.system.Object):
     # System.Void Windows.ApplicationModel.SocialInfo.SocialItemThumbnail::put_BitmapSize(Windows.Graphics.Imaging.BitmapSize)
     @bitmap_size.setter
     @deprecated("ISocialItemThumbnail is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def bitmap_size(self, value: windows_graphics_imaging.BitmapSize | tuple[winrt.system.UInt32, winrt.system.UInt32]) -> None: ...
+    def bitmap_size(self, value: windows_graphics_imaging.BitmapSize | tuple[winrt.system.UInt32 | typing.SupportsIndex, winrt.system.UInt32 | typing.SupportsIndex]) -> None: ...
 
 @typing.final
 @deprecated("SocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")

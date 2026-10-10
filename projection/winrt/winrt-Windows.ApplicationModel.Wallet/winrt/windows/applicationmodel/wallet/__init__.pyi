@@ -142,7 +142,7 @@ class WalletItem(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_BodyFontColor(Windows.UI.Color)
     @body_font_color.setter
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def body_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    def body_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex]) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_BodyColor()
     @_property
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -150,7 +150,7 @@ class WalletItem(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_BodyColor(Windows.UI.Color)
     @body_color.setter
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def body_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    def body_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex]) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_BodyBackgroundImage()
     @_property
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -190,7 +190,7 @@ class WalletItem(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_HeaderFontColor(Windows.UI.Color)
     @header_font_color.setter
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def header_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    def header_font_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex]) -> None: ...
     # Windows.UI.Color Windows.ApplicationModel.Wallet.WalletItem::get_HeaderColor()
     @_property
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -198,7 +198,7 @@ class WalletItem(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Wallet.WalletItem::put_HeaderColor(Windows.UI.Color)
     @header_color.setter
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def header_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    def header_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex]) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.Wallet.WalletItem::get_HeaderBackgroundImage()
     @_property
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")

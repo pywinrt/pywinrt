@@ -18,6 +18,7 @@ releases before v4.0 are.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
 
 ### Changed
+- An integer parameter is typed as taking a `typing.SupportsIndex` as well.
 - A method or property that returns an `IBuffer` is typed as returning one,
   not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
 - The type hints of the `completed` and `progress` getters include `None`.

@@ -91,9 +91,11 @@ buffer protocol for [arrays](#arrays) of these types. These format strings can b
 read at runtime by using [`memoryview.format`][memoryview.format].
 
 An integer type takes an `int` or any object with an `__index__()` method,
-such as a NumPy integer, as Python's own functions do. A number out of its
-range raises [`OverflowError`][OverflowError], except that a negative number
-for an unsigned type raises [`ValueError`][ValueError].
+such as a NumPy integer, as Python's own functions do, and the type hints of a
+parameter say so with `typing.SupportsIndex`, as in
+`winrt.system.UInt32 | typing.SupportsIndex`. A number out of its range raises
+[`OverflowError`][OverflowError], except that a negative number for an unsigned
+type raises [`ValueError`][ValueError].
 
 The eleven types that have no Python type of their own are named in Python by
 the aliases in [`winrt.system`](api/system.md), such as `winrt.system.Int32`. Each
@@ -629,9 +631,12 @@ declare it one so that a type checker enforces the abstract members.
 
 The type hints of a member say what a caller may pass, which is more than the
 WinRT type: a tuple for a struct, a Python collection for a collection
-interface, any buffer for an `IBuffer`. A method of an implementation can be
-called from Python as well as by WinRT, and only a call from WinRT is
-converted, so it takes the same types, as `target_type` does below.
+interface, any buffer for an `IBuffer`, any object with `__index__()` for an
+integer. A method of an implementation can be called from Python as well as by
+WinRT, and only a call from WinRT is converted, so it takes the same types, as
+`target_type` does below. [`operator.index()`][operator.index] turns such an
+integer into an `int`, and a type checker takes the parameter as an `int` after
+`count = operator.index(count)`.
 
 ```python
 from typing_extensions import override
@@ -682,6 +687,7 @@ code `PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`; see [Exceptions](#exceptions).
     parameterized interface without type arguments.
 
 [issubclass]: https://docs.python.org/3/builtins/functions.html#issubclass
+[operator.index]: https://docs.python.org/3/library/operator.html#operator.index
 [abc]: https://docs.python.org/3/library/abc.html
 [ABCMeta]: https://docs.python.org/3/library/abc.html#abc.ABCMeta
 
