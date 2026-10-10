@@ -87,6 +87,11 @@ and the [PEP 3118 additions][pep3118-additions] and are used as the format for t
 buffer protocol for [arrays](#arrays) of these types. These format strings can be
 read at runtime by using [`memoryview.format`][memoryview.format].
 
+An integer type takes an `int` or any object with an `__index__()` method,
+such as a NumPy integer, as Python's own functions do. A number out of its
+range raises [`OverflowError`][OverflowError], except that a negative number
+for an unsigned type raises [`ValueError`][ValueError].
+
 The eleven types that have no Python type of their own are named in Python by
 the aliases in [`winrt.system`](api/system.md), such as `winrt.system.Int32`. Each
 alias is annotated with what its type is called in each of the three languages
@@ -98,6 +103,7 @@ that needs one of them finds it with an [`isinstance()`][isinstance] check over
 
 [bool]: https://docs.python.org/3/builtins/functions.html#bool
 [int]: https://docs.python.org/3/builtins/functions.html#int
+[ValueError]: https://docs.python.org/3/builtins/exceptions.html#ValueError
 [float]: https://docs.python.org/3/builtins/functions.html#float
 [str]: https://docs.python.org/3/builtins/stdtypes.html#str
 [uuid.UUID]: https://docs.python.org/3/library/uuid.html#uuid.UUID

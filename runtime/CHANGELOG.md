@@ -15,6 +15,7 @@ repository](../CHANGELOG.md).
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 
 ### Changed
+- A negative unsigned integer raises `ValueError`, not `OverflowError`.
 - An `async def` function given as a delegate handler now raises `TypeError`.
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
 
@@ -22,6 +23,7 @@ repository](../CHANGELOG.md).
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
 ### Fixed
+- Fixed `UInt32` and `UInt64` refusing an object with `__index__()`.
 - Fixed an enum value newer than the projection raising `ValueError`.
 - Fixed a too long `timedelta` wrapping; it now raises `OverflowError`.
 - Fixed `Array(T, list)` reading freed memory if a conversion edits the list.

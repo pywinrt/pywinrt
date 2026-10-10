@@ -410,9 +410,23 @@ class TestMembers(unittest.TestCase):
     def test_a_flags_argument_out_of_range(self) -> None:
         info = wsp.StorageProviderSyncRootInfo()
 
-        for value in (-1, 2**32):
-            with self.subTest(value=value), self.assertRaises(OverflowError):
-                info.in_sync_policy = value  # type: ignore[assignment]
+        with self.assertRaises(ValueError):
+            info.in_sync_policy = -1  # type: ignore[assignment]
+
+        with self.assertRaises(OverflowError):
+            info.in_sync_policy = 2**32  # type: ignore[assignment]
+
+    def test_a_flags_argument_that_is_an_index_object(self) -> None:
+        class Index:
+            def __index__(self) -> int:
+                return int(wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME)
+
+        info = wsp.StorageProviderSyncRootInfo()
+
+        info.in_sync_policy = Index()  # type: ignore[assignment]
+        self.assertEqual(
+            info.in_sync_policy, wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME
+        )
 
     def test_the_wrong_number_of_arguments(self) -> None:
         with self.assertRaises(TypeError):
