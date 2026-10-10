@@ -10,6 +10,7 @@ answer got home; the values are asserted here as well, because a conversion
 that is wrong in both directions would echo just as happily.
 """
 
+import ctypes
 import gc
 import struct
 import threading
@@ -27,6 +28,8 @@ from winrt.system import Object
 from winrt.system.hresult import PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
 
 from ._util import catch_unraisable
+
+E_POINTER = ctypes.HRESULT(0x80004003).value
 
 BLITTABLE = tc.Blittable(
     1, 2, 3, 4, -5, -6, -7, 8.0, 9.0, uuid.UUID("bb28bca1-a46d-5897-a3e9-f9ec16930875")
@@ -169,6 +172,15 @@ class TestDelegate(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, TypeError)
+
+    def test_none_is_passed_as_a_null_delegate(self) -> None:
+        # The callee is the one to refuse it, as TestComponent does.
+        tests = tc.TestRunner.make_tests()
+
+        with self.assertRaisesRegex(OSError, "handler") as ctx:
+            tests.param7_call(None)  # type: ignore[arg-type]
+
+        self.assertEqual(ctx.exception.winerror, E_POINTER)
 
     def test_not_callable(self) -> None:
         with self.assertRaisesRegex(TypeError, "takes a callable"):
