@@ -392,12 +392,12 @@ namespace py::cpp::_winrt
     }
 
     /**
-     * _from_(): the object seen as IInspectable, which is what as_(Object)
-     * calls, as as_() calls _from_() of any other type it is given. Every
-     * projected type has a _from_() of its own, so this one answers for
-     * winrt.system.Object alone.
+     * _query_interface_(): the object seen as IInspectable, which is what
+     * as_(Object) calls, as as_() calls _query_interface_() of any other type
+     * it is given. Every projected type has a _query_interface_() of its own,
+     * so this one answers for winrt.system.Object alone.
      */
-    static PyObject* Object_from(PyObject* cls, PyObject* arg) noexcept
+    static PyObject* Object_query_interface(PyObject* cls, PyObject* arg) noexcept
     {
         auto const object_type = py::get_object_type();
         if (!object_type)
@@ -428,7 +428,7 @@ namespace py::cpp::_winrt
 
     static PyMethodDef Object_methods[]
         = {{"as_", py::interp::object_as, METH_O, nullptr},
-           {"_from_", Object_from, METH_O | METH_CLASS, nullptr},
+           {"_query_interface_", Object_query_interface, METH_O | METH_CLASS, nullptr},
            {"_from", py::interp::deprecated_from, METH_O | METH_CLASS, nullptr},
            {}};
 

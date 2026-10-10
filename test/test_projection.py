@@ -101,7 +101,7 @@ class TestClasses(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "keyword arguments not supported"):
             wf.Uri(uri="https://example.com/")  # type: ignore[call-overload]
 
-    def test_from_is_a_deprecated_alias_of_from_(self) -> None:
+    def test_from_is_a_deprecated_alias_of_query_interface_(self) -> None:
         uri = wf.Uri("https://example.com")
         # _from is not in the type hints
         classes: tuple[Any, ...] = (wf.IStringable, wf.Uri, Object)
@@ -111,7 +111,7 @@ class TestClasses(unittest.TestCase):
                 with self.assertWarns(DeprecationWarning):
                     seen: object = cls._from(uri)
 
-                fresh: object = cls._from_(uri)
+                fresh: object = cls._query_interface_(uri)
                 self.assertIs(type(seen), type(fresh))
                 self.assertEqual(seen, uri)
 
@@ -305,7 +305,7 @@ class TestClasses(unittest.TestCase):
                     isinstance(instance, interface),
                 )
 
-    def test_as_something_with_no_from(self) -> None:
+    def test_as_something_with_no_query_interface(self) -> None:
         uri = wf.Uri("http://example.com/")
 
         with self.assertRaisesRegex(
@@ -318,7 +318,7 @@ class TestClasses(unittest.TestCase):
         ):
             uri.as_("IStringable")  # type: ignore
 
-    def test_as_something_with_no_from_by_its_qualified_name(self) -> None:
+    def test_as_something_with_no_query_interface_by_its_qualified_name(self) -> None:
         with self.assertRaisesRegex(
             TypeError,
             r"as_\(\) takes a WinRT class or interface, "
@@ -327,7 +327,7 @@ class TestClasses(unittest.TestCase):
             wf.Uri("http://example.com/").as_(wf.AsyncStatus)  # type: ignore
 
     def test_as_an_instance(self) -> None:
-        # An instance finds its class's _from_(), but it names no type.
+        # An instance finds its class's _query_interface_(), but it names no type.
         uri = wf.Uri("http://example.com/")
 
         with self.assertRaisesRegex(

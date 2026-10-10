@@ -316,9 +316,10 @@ namespace py::interp
         }
 
         /**
-         * _from_(): the object seen as this type, which is what as_() calls.
+         * _query_interface_(): the object seen as this type, which is what as_()
+         * calls.
          */
-        PyObject* type_from(PyObject* cls, PyObject* arg) noexcept
+        PyObject* type_query_interface(PyObject* cls, PyObject* arg) noexcept
         {
             auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
             if (!info)
@@ -470,31 +471,31 @@ namespace py::interp
                 nullptr},
                {}};
 
-        PyMethodDef class_methods[]
-            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
-               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
-               {}};
+        PyMethodDef class_methods[] = {
+            {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
+            {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
+            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+            {}};
 
         // A composable class only derives from another, so the first in a
         // hierarchy takes the keywords of a Python class derived from it.
-        PyMethodDef composable_root_methods[]
-            = {{"_from_", type_from, METH_O | METH_CLASS, nullptr},
-               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
-               {"__init_subclass__",
-                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(init_subclass)),
-                METH_VARARGS | METH_KEYWORDS | METH_CLASS,
-                nullptr},
-               {}};
+        PyMethodDef composable_root_methods[] = {
+            {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
+            {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
+            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+            {"__init_subclass__",
+             reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(init_subclass)),
+             METH_VARARGS | METH_KEYWORDS | METH_CLASS,
+             nullptr},
+            {}};
 
-        PyMethodDef implements_methods[]
-            = {{"as_", object_as, METH_O, nullptr},
-               {"_from_", type_from, METH_O | METH_CLASS, nullptr},
-               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
-               {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
-               {}};
+        PyMethodDef implements_methods[] = {
+            {"as_", object_as, METH_O, nullptr},
+            {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
+            {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
+            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+            {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
+            {}};
 
         // A parameterized interface is only ever named with its type arguments
         // - IAsyncOperation[int] - so both the type the projection binds it to
@@ -507,17 +508,17 @@ namespace py::interp
                 PyDoc_STR("See PEP 585")},
                {}};
 
-        PyMethodDef generic_implements_methods[]
-            = {{"as_", object_as, METH_O, nullptr},
-               {"_from_", type_from, METH_O | METH_CLASS, nullptr},
-               {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
-               {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
-               {"__class_getitem__",
-                Py_GenericAlias,
-                METH_O | METH_CLASS,
-                PyDoc_STR("See PEP 585")},
-               {}};
+        PyMethodDef generic_implements_methods[] = {
+            {"as_", object_as, METH_O, nullptr},
+            {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
+            {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
+            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
+            {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
+            {"__class_getitem__",
+             Py_GenericAlias,
+             METH_O | METH_CLASS,
+             PyDoc_STR("See PEP 585")},
+            {}};
     } // namespace
 
     /**
@@ -754,8 +755,8 @@ namespace py::interp
 
         std::vector<PyType_Slot> slots;
 
-        // _from_() and _assign_array_() say what to do with an instance, so a
-        // static class, which has none, does not get them.
+        // _query_interface_() and _assign_array_() say what to do with an
+        // instance, so a static class, which has none, does not get them.
         if (entry.guid)
         {
             auto* const methods
@@ -811,9 +812,10 @@ namespace py::interp
     }
 
     /**
-     * _from(): what _from_() was called until 4.0, kept so that code written
-     * before as_() existed goes on working. It calls _from_() rather than
-     * doing the same thing itself, so that it cannot come to differ.
+     * _from(): what _query_interface_() was called before 4.0, kept so that
+     * code written before as_() existed goes on working. It calls
+     * _query_interface_() rather than doing the same thing itself, so that it
+     * cannot come to differ.
      */
     PyObject* deprecated_from(PyObject* cls, PyObject* arg) noexcept
     {
@@ -826,13 +828,13 @@ namespace py::interp
             return nullptr;
         }
 
-        pyobj_handle from{PyUnicode_InternFromString("_from_")};
-        if (!from)
+        pyobj_handle query_interface{PyUnicode_InternFromString("_query_interface_")};
+        if (!query_interface)
         {
             return nullptr;
         }
 
-        return PyObject_CallMethodOneArg(cls, from.get(), arg);
+        return PyObject_CallMethodOneArg(cls, query_interface.get(), arg);
     }
 
     namespace
@@ -881,8 +883,9 @@ namespace py::interp
     } // namespace
 
     /**
-     * as_(): @p self seen as @p arg, which is what arg._from_() makes of it. A
-     * wrapper answers it, and so does a Python implementation of an interface.
+     * as_(): @p self seen as @p arg, which is what arg._query_interface_()
+     * makes of it. A wrapper answers it, and so does a Python implementation of
+     * an interface.
      */
     PyObject* object_as(PyObject* self, PyObject* arg) noexcept
     {
@@ -896,14 +899,16 @@ namespace py::interp
         // the interface it parameterizes.
         if (PyObject_TypeCheck(arg, &Py_GenericAliasType))
         {
-            pyobj_handle origin_from;
+            pyobj_handle origin_query_interface;
 
-            if (PyObject_GetOptionalAttrString(arg, "_from_", origin_from.put()) < 0)
+            if (PyObject_GetOptionalAttrString(
+                    arg, "_query_interface_", origin_query_interface.put())
+                < 0)
             {
                 return nullptr;
             }
 
-            if (origin_from)
+            if (origin_query_interface)
             {
                 PyErr_SetString(
                     PyExc_TypeError, "as_() cannot take a parameterized interface");
@@ -911,8 +916,8 @@ namespace py::interp
             }
         }
 
-        // as_(type) is type._from_(self). Only a type is asked for it, since an
-        // instance would find its class's.
+        // as_(type) is type._query_interface_(self). Only a type is asked for
+        // it, since an instance would find its class's.
         if (!PyType_Check(arg))
         {
             pyobj_handle name{qualified_name_of(Py_TYPE(arg))};
@@ -929,17 +934,19 @@ namespace py::interp
         }
 
         // Every projected class with instances, projected interface and
-        // interop interface has _from_(), and a struct, an enum or a static
-        // class has none, so a type without it is refused for what it is
-        // rather than for the attribute it lacks.
-        pyobj_handle from;
+        // interop interface has _query_interface_(), and a struct, an enum or
+        // a static class has none, so a type without it is refused for what it
+        // is rather than for the attribute it lacks.
+        pyobj_handle query_interface;
 
-        if (PyObject_GetOptionalAttrString(arg, "_from_", from.put()) < 0)
+        if (PyObject_GetOptionalAttrString(
+                arg, "_query_interface_", query_interface.put())
+            < 0)
         {
             return nullptr;
         }
 
-        if (!from)
+        if (!query_interface)
         {
             pyobj_handle name{qualified_name_of(reinterpret_cast<PyTypeObject*>(arg))};
             if (!name)
@@ -954,7 +961,7 @@ namespace py::interp
             return nullptr;
         }
 
-        return PyObject_CallOneArg(from.get(), self);
+        return PyObject_CallOneArg(query_interface.get(), self);
     }
 
     /**

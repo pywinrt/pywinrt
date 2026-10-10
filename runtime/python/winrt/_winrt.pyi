@@ -90,12 +90,12 @@ _T = TypeVar("_T")
 _TObject = TypeVar("_TObject", bound=Object)
 
 # What as_() asks of the type it is given, a projected one or an interop
-# interface alike: as_(type) is type._from_(obj).
-class _SupportsFrom(Protocol):
+# interface alike: as_(type) is type._query_interface_(obj).
+class _SupportsQueryInterface(Protocol):
     @classmethod
-    def _from_(cls, obj: Object, /) -> Self: ...
+    def _query_interface_(cls, obj: Object, /) -> Self: ...
 
-_TFrom = TypeVar("_TFrom", bound=_SupportsFrom)
+_TQueryInterface = TypeVar("_TQueryInterface", bound=_SupportsQueryInterface)
 
 # Declared as an ABCMeta although at run time it derives from type: a type
 # checker requires an abstract member to be implemented only under ABCMeta, and
@@ -112,7 +112,7 @@ class Object_Static(abc.ABCMeta):
 # of the interface itself are abstract, because implementing them is what
 # deriving from it means.
 class Object(metaclass=Object_Static):
-    def as_(self, type: TypeForm[_TFrom], /) -> _TFrom: ...
+    def as_(self, type: TypeForm[_TQueryInterface], /) -> _TQueryInterface: ...
     @property
     def _iids_(self) -> Array[UUID]: ...
     @property
@@ -120,7 +120,7 @@ class Object(metaclass=Object_Static):
     # what as_() calls, which the runtime gives the projected name of an
     # interface as well as the wrapper
     @classmethod
-    def _from_(cls, obj: Object, /) -> Self: ...
+    def _query_interface_(cls, obj: Object, /) -> Self: ...
 
 @final
 class Array(collections.abc.Sequence[_T]):
