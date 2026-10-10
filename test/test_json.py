@@ -39,6 +39,84 @@ class TestJson(unittest.TestCase):
         self.assertEqual(v.value_type, wdj.JsonValueType.STRING)
         self.assertEqual(v.get_string(), "the larch")
 
+    def test_JsonArray_seq_set_item_negative(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+        a[-1] = wdj.JsonValue.create_number_value(6)
+        self.assertEqual(a.stringify(), "[1,2,3,4,6]")
+        with self.assertRaises(IndexError):
+            a[-6] = wdj.JsonValue.create_number_value(0)
+        with self.assertRaises(IndexError):
+            a[5] = wdj.JsonValue.create_number_value(0)
+        with self.assertRaisesRegex(TypeError, "integers or slices, not 'str'"):
+            a["spam"] = wdj.JsonValue.create_number_value(0)  # type: ignore[call-overload]
+
+    def test_JsonArray_seq_del_item_negative(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+        del a[-1]
+        self.assertEqual(a.stringify(), "[1,2,3,4]")
+        with self.assertRaises(IndexError):
+            del a[-5]
+
+    def test_JsonArray_seq_assign_slice(self) -> None:
+        def number(n: int) -> wdj.IJsonValue:
+            return wdj.JsonValue.create_number_value(n)
+
+        cases: list[tuple[slice, list[int]]] = [
+            (slice(1, 3), [7, 8]),  # as many
+            (slice(1, 4), [7]),  # fewer
+            (slice(1, 2), [7, 8, 9]),  # more
+            (slice(2, 2), [7, 8]),  # none, so an insertion
+            (slice(3, 1), [7]),  # stop before start, also an insertion
+            (slice(-2, None), [7]),
+            (slice(10, None), [7]),  # past the end, so an append
+            (slice(None), []),
+        ]
+
+        for key, numbers in cases:
+            with self.subTest(key=key, numbers=numbers):
+                expected = [1, 2, 3, 4, 5]
+                expected[key] = numbers
+                a = wdj.JsonArray.parse("[1,2,3,4,5]")
+                a[key] = [number(n) for n in numbers]
+                self.assertEqual([v.get_number() for v in a], expected)
+
+    def test_JsonArray_seq_assign_slice_itself(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3]")
+        a[1:1] = a
+        self.assertEqual(a.stringify(), "[1,1,2,3,2,3]")
+        a[:] = (v for v in a if v.get_number() != 2)
+        self.assertEqual(a.stringify(), "[1,1,3,3]")
+
+    def test_JsonArray_seq_assign_slice_step(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3,4,5]")
+        with self.assertRaises(NotImplementedError):
+            a[::2] = [wdj.JsonValue.create_null_value()] * 3
+        with self.assertRaises(NotImplementedError):
+            del a[::2]
+        self.assertEqual(a.stringify(), "[1,2,3,4,5]")
+
+    def test_JsonArray_seq_assign_slice_not_iterable(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3]")
+        with self.assertRaises(TypeError):
+            a[0:1] = 4  # type: ignore[call-overload]
+        self.assertEqual(a.stringify(), "[1,2,3]")
+
+    def test_JsonArray_seq_assign_slice_bad_element(self) -> None:
+        a = wdj.JsonArray.parse("[1,2,3]")
+        with self.assertRaises(TypeError):
+            a[0:2] = [wdj.JsonValue.create_number_value(7), "spam"]  # type: ignore[list-item]
+        # An element is written as it is converted.
+        self.assertEqual(a.stringify(), "[7,2,3]")
+
+    def test_JsonArray_seq_del_slice(self) -> None:
+        for key in (slice(1, 3), slice(3, 1), slice(-2, None), slice(None)):
+            with self.subTest(key=key):
+                expected = [1, 2, 3, 4, 5]
+                del expected[key]
+                a = wdj.JsonArray.parse("[1,2,3,4,5]")
+                del a[key]
+                self.assertEqual([v.get_number() for v in a], expected)
+
     def test_JsonArray_seq_enumerate(self) -> None:
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         for x, v in enumerate(a):

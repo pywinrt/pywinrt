@@ -1161,6 +1161,18 @@ cleared with `seq.clear()`. You can also reverse the sequence in place with
 (or the last item with `seq.pop()`), or add items using the `+=` operator
 like `seq += [value1, value2]`.
 
+A slice of a mutable sequence can be replaced with `seq[1:3] = [value]`, by
+as many items as it holds or by more or fewer, and deleted with
+`del seq[1:3]`. A slice with a step is not supported, here as when reading
+one, and raises [`NotImplementedError`][NotImplementedError]. The sequence is
+changed one item at a time, so an item that cannot be converted leaves the
+items before it written. To replace all of the items in one call, use
+`seq.replace_all()`.
+
+!!! version-added "Added in version 4.0"
+
+    Assigning and deleting a slice.
+
 [IVector]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.ivector-1
 [MutableSequence]: https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableSequence
 [IVectorView]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.ivectorview-1

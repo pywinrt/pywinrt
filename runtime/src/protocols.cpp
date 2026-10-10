@@ -336,6 +336,55 @@ namespace py::interp
         }
 
         /**
+         * The position that an index given to a mapping slot of a sequence
+         * names.
+         *
+         * CPython counts a negative index from the end only for the sequence
+         * slots, and the mapping slots, which also take a slice, are given the
+         * key as it was written.
+         *
+         * @returns Whether there is a position, which is still negative for an
+         * index before the first element.
+         */
+        bool sequence_position(
+            PyObject* self, PyObject* key, Py_ssize_t& position) noexcept
+        {
+            if (!PyIndex_Check(key))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "indices must be integers or slices, not '%s'",
+                    Py_TYPE(key)->tp_name);
+                return false;
+            }
+
+            pyobj_handle index{PyNumber_Index(key)};
+            if (!index)
+            {
+                return false;
+            }
+
+            position = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
+            if (position == -1 && PyErr_Occurred())
+            {
+                return false;
+            }
+
+            if (position < 0)
+            {
+                auto const size = protocol_length(self);
+                if (size == -1)
+                {
+                    return false;
+                }
+
+                position += size;
+            }
+
+            return true;
+        }
+
+        /**
          * __getitem__ of a sequence, which is an index or a slice.
          */
         PyObject* sequence_subscript(PyObject* self, PyObject* key) noexcept
@@ -351,39 +400,10 @@ namespace py::interp
                 return sequence_slice(*info, self, key);
             }
 
-            if (!PyIndex_Check(key))
-            {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "indices must be integers, not '%s'",
-                    Py_TYPE(key)->tp_name);
-                return nullptr;
-            }
-
-            pyobj_handle index{PyNumber_Index(key)};
-            if (!index)
+            Py_ssize_t position{};
+            if (!sequence_position(self, key, position))
             {
                 return nullptr;
-            }
-
-            auto position = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
-            if (position == -1 && PyErr_Occurred())
-            {
-                return nullptr;
-            }
-
-            // CPython counts a negative index from the end only for the
-            // sequence slot, and this is the mapping slot, which is given the
-            // key as it was written.
-            if (position < 0)
-            {
-                auto const size = protocol_length(self);
-                if (size == -1)
-                {
-                    return nullptr;
-                }
-
-                position += size;
             }
 
             return sequence_item(self, position);
@@ -442,6 +462,135 @@ namespace py::interp
             }
 
             return 0;
+        }
+
+        /**
+         * Replaces or deletes the elements a slice names, which a WinRT vector
+         * does one element at a time: SetAt() where the slice and the new
+         * elements overlap, then InsertAt() for the new elements left over or
+         * RemoveAt() for the old ones.
+         *
+         * As with a list, the new elements may be more or fewer than the slice
+         * names. Unlike a list, an element that fails to convert leaves the
+         * elements before it written.
+         *
+         * @param value What to assign, or @c nullptr to delete the elements.
+         */
+        int sequence_assign_slice(
+            type_entry& info, PyObject* self, PyObject* key, PyObject* value) noexcept
+        {
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return -1;
+            }
+
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+            Py_ssize_t length{};
+
+            if (PySlice_GetIndicesEx(key, size, &start, &stop, &step, &length) < 0)
+            {
+                return -1;
+            }
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return -1;
+            }
+
+            // All of it is read before any element changes, which is what
+            // makes assigning a vector, or a generator reading it, to a slice
+            // of itself work.
+            pyobj_handle items;
+            Py_ssize_t count{};
+
+            if (value)
+            {
+                items.attach(PySequence_List(value));
+                if (!items)
+                {
+                    return -1;
+                }
+
+                count = PyList_GET_SIZE(items.get());
+            }
+
+            auto const operation = value ? "slice assignment" : "slice deletion";
+
+            for (Py_ssize_t i = 0; i < count; i++)
+            {
+                pyobj_handle position{PyLong_FromSsize_t(start + i)};
+                if (!position)
+                {
+                    return -1;
+                }
+
+                PyObject* args[] = {position.get(), PyList_GET_ITEM(items.get(), i)};
+                pyobj_handle assigned{call_protocol(
+                    i < length ? info.protocol.set_at : info.protocol.insert_at,
+                    operation,
+                    self,
+                    args,
+                    2)};
+                if (!assigned)
+                {
+                    set_index_error();
+                    return -1;
+                }
+            }
+
+            // From the last, so that each removal moves fewer elements.
+            for (auto i = start + length - 1; i >= start + count; i--)
+            {
+                pyobj_handle position{PyLong_FromSsize_t(i)};
+                if (!position)
+                {
+                    return -1;
+                }
+
+                PyObject* args[] = {position.get()};
+                pyobj_handle removed{
+                    call_protocol(info.protocol.remove_at, operation, self, args, 1)};
+                if (!removed)
+                {
+                    set_index_error();
+                    return -1;
+                }
+            }
+
+            return 0;
+        }
+
+        /**
+         * __setitem__ and __delitem__ of a sequence, which take an index or a
+         * slice.
+         */
+        int sequence_assign_subscript(
+            PyObject* self, PyObject* key, PyObject* value) noexcept
+        {
+            if (PySlice_Check(key))
+            {
+                auto const info = entry_of(self);
+                if (!info)
+                {
+                    return -1;
+                }
+
+                return sequence_assign_slice(*info, self, key, value);
+            }
+
+            Py_ssize_t position{};
+            if (!sequence_position(self, key, position))
+            {
+                return -1;
+            }
+
+            return sequence_assign(self, position, value);
         }
 
         /**
@@ -1480,6 +1629,9 @@ namespace py::interp
             {
                 slots.push_back(
                     {Py_sq_ass_item, reinterpret_cast<void*>(sequence_assign)});
+                slots.push_back(
+                    {Py_mp_ass_subscript,
+                     reinterpret_cast<void*>(sequence_assign_subscript)});
             }
         }
         else if (implements(record, table::type_flags::iterator))

@@ -13,6 +13,7 @@ repository](../CHANGELOG.md).
 ### Added
 - An `IMemoryBuffer` such as a `MemoryBuffer` now supports the buffer protocol.
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
+- A vector's slices can be assigned and deleted, with a step of 1.
 
 ### Changed
 - An unraisable report names the handler, method or property WinRT called.
