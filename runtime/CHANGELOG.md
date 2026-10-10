@@ -15,6 +15,7 @@ repository](../CHANGELOG.md).
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 
 ### Changed
+- An `async def` function given as a delegate handler now raises `TypeError`.
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
 
 ### Deprecated

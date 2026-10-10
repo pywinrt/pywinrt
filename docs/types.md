@@ -454,6 +454,10 @@ async def scan() -> None:
         watcher.remove_received(token)
 ```
 
+A handler is a plain function, not an `async def` one: WinRT does not await
+what a handler returns, so the body of an `async def` handler would never run,
+and passing one raises `TypeError`.
+
 The sender carries on after the handler returns, so a property of the sender
 read later from a task on the event loop describes the object as it is then,
 not as it was when the event was raised. Where that matters, read the property
