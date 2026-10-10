@@ -27,8 +27,10 @@ on:
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
-      # except a namespace's table, which is what the tests read
+      # except a namespace's table, which is what the tests read, and a
+      # package's pyproject.toml, which the packaging tests read
       - projection/**/_table.pywinrt.txt
+      - projection/*/*/pyproject.toml
       - projection/CMakeLists.txt
       - interop/**
       - '!interop/**/*.md'
@@ -75,8 +77,10 @@ on:
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
-      # except a namespace's table, which is what the tests read
+      # except a namespace's table, which is what the tests read, and a
+      # package's pyproject.toml, which the packaging tests read
       - projection/**/_table.pywinrt.txt
+      - projection/*/*/pyproject.toml
       - projection/CMakeLists.txt
       - interop/**
       - '!interop/**/*.md'

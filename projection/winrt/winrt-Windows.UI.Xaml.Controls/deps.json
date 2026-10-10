@@ -35,6 +35,7 @@
         "winrt-Windows.UI.Xaml",
         "winrt-Windows.UI.Xaml.Automation",
         "winrt-Windows.UI.Xaml.Automation.Peers",
+        "winrt-Windows.UI.Xaml.Automation.Provider",
         "winrt-Windows.UI.Xaml.Controls.Primitives",
         "winrt-Windows.UI.Xaml.Data",
         "winrt-Windows.UI.Xaml.Documents",

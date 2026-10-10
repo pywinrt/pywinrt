@@ -9,6 +9,7 @@
     "required": [
     ],
     "referenced": [
+        "winrt-Windows.Foundation",
         "winrt-Windows.Networking.Connectivity"
     ]
 }

@@ -70,3 +70,49 @@ class RuntimeSources(unittest.TestCase):
             ),
             on_disk,
         )
+
+
+class StubImports(unittest.TestCase):
+    """
+    The distributions that the stubs of a projection package import.
+
+    A class's stub names its base class and the interfaces it implements as
+    its bases, so a distribution the stubs import that the package neither
+    depends on nor offers in its [all] extra leaves a base that a type checker
+    cannot resolve, and the whole class unknown to it.
+    """
+
+    def test_every_imported_distribution_is_a_dependency(self) -> None:
+        projection = versions.REPO_PATH / "projection"
+        packages = sorted(p.parent for p in projection.glob("*/*/pyproject.toml"))
+
+        # Each module's distribution, from where its stub is.
+        distribution_of = {
+            ".".join(stub.parent.relative_to(package).parts): package.name
+            for package in packages
+            for stub in package.rglob("__init__.pyi")
+        }
+
+        for package in packages:
+            with self.subTest(package=package.name):
+                project = tomllib.loads(
+                    (package / "pyproject.toml").read_text(encoding="utf-8")
+                )["project"]
+                offered = {
+                    Requirement(r).name
+                    for r in project["dependencies"]
+                    + project.get("optional-dependencies", {}).get("all", [])
+                }
+
+                imported = {
+                    distribution_of[module]
+                    for stub in package.rglob("__init__.pyi")
+                    for module in re.findall(
+                        r"^import ([\w.]+) as \w+$",
+                        stub.read_text(encoding="utf-8"),
+                        re.MULTILINE,
+                    )
+                    if module in distribution_of
+                }
+
+                self.assertLessEqual(imported - {package.name}, offered)
