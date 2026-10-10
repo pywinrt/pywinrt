@@ -105,5 +105,5 @@ class AppTaskInfo(winrt.system.Object, metaclass=AppTaskInfo_Static):
 
 @typing.final
 class AppTaskResultAsset(winrt.system.Object):
-    def __new__(cls, name: str, context: str, icon_uri: windows_foundation.Uri, asset_uri: windows_foundation.Uri) -> typing.Self: ...
+    def __new__(cls, name: str, context: str, icon_uri: windows_foundation.Uri, asset_uri: windows_foundation.Uri, /) -> typing.Self: ...
 

@@ -349,7 +349,7 @@ class PrintWorkflowJobUISession(winrt.system.Object):
 
 @typing.final
 class PrintWorkflowObjectModelSourceFileContent(winrt.system.Object):
-    def __new__(cls, xps_stream: windows_storage_streams.IInputStream) -> typing.Self: ...
+    def __new__(cls, xps_stream: windows_storage_streams.IInputStream, /) -> typing.Self: ...
 
 @typing.final
 class PrintWorkflowObjectModelTargetPackage(winrt.system.Object):

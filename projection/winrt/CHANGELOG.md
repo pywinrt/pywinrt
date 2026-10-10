@@ -36,6 +36,7 @@ releases before v4.0 are.
 - `create_reference()` is marked `@deprecated` in the type hints.
 
 ### Fixed
+- Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
 - Fixed the type hint of `Matrix4x4.translation()`, which said `Vector2`
   where the value is a `Vector3`.

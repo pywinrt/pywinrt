@@ -58,7 +58,7 @@ class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFra
 @typing.final
 @deprecated("PerceptionControlGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionControlGroup(winrt.system.Object):
-    def __new__(cls, ids: _cabc.Iterable[str]) -> typing.Self: ...
+    def __new__(cls, ids: _cabc.Iterable[str], /) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionControlGroup::get_FrameProviderIds()
     @_property
     @deprecated("PerceptionControlGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -67,7 +67,7 @@ class PerceptionControlGroup(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionCorrelation(winrt.system.Object):
-    def __new__(cls, target_id: str, position: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], orientation: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]) -> typing.Self: ...
+    def __new__(cls, target_id: str, position: windows_foundation_numerics.Vector3 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single], orientation: windows_foundation_numerics.Quaternion | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> typing.Self: ...
     # Windows.Foundation.Numerics.Quaternion Windows.Devices.Perception.Provider.PerceptionCorrelation::get_Orientation()
     @_property
     @deprecated("PerceptionCorrelation may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -84,7 +84,7 @@ class PerceptionCorrelation(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionCorrelationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionCorrelationGroup(winrt.system.Object):
-    def __new__(cls, relative_locations: _cabc.Iterable[PerceptionCorrelation]) -> typing.Self: ...
+    def __new__(cls, relative_locations: _cabc.Iterable[PerceptionCorrelation], /) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Perception.Provider.PerceptionCorrelation> Windows.Devices.Perception.Provider.PerceptionCorrelationGroup::get_RelativeLocations()
     @_property
     @deprecated("PerceptionCorrelationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -93,7 +93,7 @@ class PerceptionCorrelationGroup(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionFaceAuthenticationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFaceAuthenticationGroup(winrt.system.Object):
-    def __new__(cls, ids: _cabc.Iterable[str], start_handler: PerceptionStartFaceAuthenticationHandler, stop_handler: PerceptionStopFaceAuthenticationHandler) -> typing.Self: ...
+    def __new__(cls, ids: _cabc.Iterable[str], start_handler: PerceptionStartFaceAuthenticationHandler, stop_handler: PerceptionStopFaceAuthenticationHandler, /) -> typing.Self: ...
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Perception.Provider.PerceptionFaceAuthenticationGroup::get_FrameProviderIds()
     @_property
     @deprecated("PerceptionFaceAuthenticationGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -235,7 +235,7 @@ class PerceptionPropertyChangeRequest(winrt.system.Object):
 class PerceptionVideoFrameAllocator(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls, max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode) -> typing.Self: ...
+    def __new__(cls, max_outstanding_frame_count_for_write: winrt.system.UInt32, format: windows_graphics_imaging.BitmapPixelFormat, resolution: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], alpha: windows_graphics_imaging.BitmapAlphaMode, /) -> typing.Self: ...
     # Windows.Devices.Perception.Provider.PerceptionFrame Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator::AllocateFrame()
     @deprecated("PerceptionVideoFrameAllocator may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def allocate_frame(self) -> PerceptionFrame: ...

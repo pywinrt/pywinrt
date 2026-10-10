@@ -92,9 +92,9 @@ class WalletSummaryViewPosition(enum.IntEnum):
 @deprecated("WalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletBarcode(winrt.system.Object):
     @typing.overload
-    def __new__(cls, symbology: WalletBarcodeSymbology, value: str) -> typing.Self: ...
+    def __new__(cls, symbology: WalletBarcodeSymbology, value: str, /) -> typing.Self: ...
     @typing.overload
-    def __new__(cls, stream_to_barcode_image: windows_storage_streams.IRandomAccessStreamReference) -> typing.Self: ...
+    def __new__(cls, stream_to_barcode_image: windows_storage_streams.IRandomAccessStreamReference, /) -> typing.Self: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference> Windows.ApplicationModel.Wallet.WalletBarcode::GetImageAsync()
     @deprecated("IWalletBarcode is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_image_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamReference]: ...
@@ -110,7 +110,7 @@ class WalletBarcode(winrt.system.Object):
 @typing.final
 @deprecated("WalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItem(winrt.system.Object):
-    def __new__(cls, kind: WalletItemKind, display_name: str) -> typing.Self: ...
+    def __new__(cls, kind: WalletItemKind, display_name: str, /) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItem::get_DisplayName()
     @_property
     @deprecated("IWalletItem is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -323,7 +323,7 @@ class WalletItem(winrt.system.Object):
 @typing.final
 @deprecated("WalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemCustomProperty(winrt.system.Object):
-    def __new__(cls, name: str, value: str) -> typing.Self: ...
+    def __new__(cls, name: str, value: str, /) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletItemCustomProperty::get_Value()
     @_property
     @deprecated("IWalletItemCustomProperty is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -502,7 +502,7 @@ class WalletTransaction(winrt.system.Object):
 @typing.final
 @deprecated("WalletVerb is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletVerb(winrt.system.Object):
-    def __new__(cls, name: str) -> typing.Self: ...
+    def __new__(cls, name: str, /) -> typing.Self: ...
     # System.String Windows.ApplicationModel.Wallet.WalletVerb::get_Name()
     @_property
     @deprecated("IWalletVerb is deprecated and might not work on all platforms. For more info, see MSDN.")
