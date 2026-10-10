@@ -1241,6 +1241,12 @@ items with `map.clear()`. You can also remove and return a value while
 removing the key using `map.pop(key)` or `map.popitem()`. Multiple values
 can be set at the same time using `map.update(other)`.
 
+A key missing from a mapping raises [`KeyError`][KeyError], as a dictionary
+does, but a key that is not of the mapping's key type raises
+[`TypeError`][TypeError], even in `key in map` and `map.get(key)`, as it does
+for [`os.environ`][os.environ]: `5 in map` for a map with `str` keys is a
+mistake to report, not a key to look for.
+
 There is also a special handling for `IIterable<IKeyValuePair<K, V>>` when
 used as an argument to methods where a Python mapping is allowed. This means you
 can pass a Python dictionary as the argument.
@@ -1255,6 +1261,8 @@ data = NotificationData({"my_key": "my_value"})
 [MutableMapping]: https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping
 [IMapView]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections.imapview-2
 [Mapping]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping
+[KeyError]: https://docs.python.org/3/builtins/exceptions.html#KeyError
+[os.environ]: https://docs.python.org/3/library/os.html#os.environ
 
 #### Iterators
 
