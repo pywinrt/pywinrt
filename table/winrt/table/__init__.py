@@ -86,7 +86,7 @@ TYPE_FLAGS = {
 
 GROUP_KINDS = ("method", "property", "event", "constructor")
 
-GROUP_FLAGS = {"static": 1 << 3, "deprecated": 1 << 4}
+GROUP_FLAGS = {"static": 1 << 3}
 
 MEMBER_KINDS = ("method", "get", "put", "add", "remove", "ctor")
 
