@@ -13,13 +13,17 @@ The rule is that a wheel's PEP 770 bill of materials is the list of binaries
 it redistributes, and it has to agree with what is in the wheel: a wheel with
 no bill of materials carries no .dll, and a wheel with one carries exactly the
 .dlls the bill names. That needs no list of package names here, so a new
-package that redistributes something is covered the day it is built.
+package that redistributes something is covered the day it is built. The bill
+also names the distribution itself as its root component, and that has to be
+the version the wheel is, since a wheel on PyPI cannot be corrected after it
+is uploaded.
 
 No wheel carries a C or C++ header either: nothing compiles against an
 installed PyWinRT package, and each package that compiles carries the headers
 it includes in its source distribution rather than as package data.
 """
 
+import email
 import json
 import sys
 import zipfile
@@ -50,6 +54,36 @@ def get_sbom_components(wheel: zipfile.ZipFile) -> set[str]:
             components.add(component["name"])
 
     return components
+
+
+def get_sbom_versions(wheel: zipfile.ZipFile) -> set[str]:
+    """
+    The versions that a wheel's bills of materials give the distribution.
+    """
+    versions: set[str] = set()
+
+    for name in wheel.namelist():
+        if not name.endswith(".json"):
+            continue
+
+        if ".dist-info/sboms/" not in name:
+            continue
+
+        sbom = json.loads(wheel.read(name))
+        versions.add(sbom["metadata"]["component"]["version"])
+
+    return versions
+
+
+def get_version(wheel: zipfile.ZipFile) -> str:
+    """
+    The version that a wheel's core metadata says it is.
+    """
+    for name in wheel.namelist():
+        if name.endswith(".dist-info/METADATA"):
+            return email.message_from_bytes(wheel.read(name))["Version"]
+
+    raise ValueError("the wheel has no METADATA")
 
 
 def get_binaries(wheel: zipfile.ZipFile) -> set[str]:
@@ -93,6 +127,8 @@ def check_wheel(path: Path) -> list[str]:
     with zipfile.ZipFile(path) as wheel:
         binaries = get_binaries(wheel)
         components = get_sbom_components(wheel)
+        sbom_versions = get_sbom_versions(wheel)
+        version = get_version(wheel)
         headers = get_headers(wheel)
         license_files = get_license_files(wheel)
 
@@ -103,6 +139,11 @@ def check_wheel(path: Path) -> list[str]:
 
     for name in sorted(components - binaries):
         problems.append(f"names {name} in its bill of materials but does not carry it")
+
+    for sbom_version in sorted(sbom_versions - {version}):
+        problems.append(
+            f"is {version} but its bill of materials says it is {sbom_version}"
+        )
 
     for name in sorted(headers):
         problems.append(f"carries the header {name}")
