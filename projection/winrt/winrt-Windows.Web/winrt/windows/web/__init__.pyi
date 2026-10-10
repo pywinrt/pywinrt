@@ -75,7 +75,7 @@ class WebErrorStatus(enum.IntEnum):
 @typing.final
 class WebError_Static(winrt._winrt.Object_Static):
     # Windows.Web.WebErrorStatus Windows.Web.WebError::GetStatus(System.Int32)
-    def get_status(cls, hresult: winrt.system.Int32, /) -> WebErrorStatus: ...
+    def get_status(cls, hresult: winrt.system.Int32 | typing.SupportsIndex, /) -> WebErrorStatus: ...
 
 @typing.final
 class WebError(winrt.system.Object, metaclass=WebError_Static):

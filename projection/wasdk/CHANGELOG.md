@@ -18,6 +18,7 @@ releases before v4.0 are.
 - Protected properties are projected, such as `Control._default_style_key`.
 
 ### Changed
+- An integer parameter is typed as taking a `typing.SupportsIndex` as well.
 - A method or property that returns an `IBuffer` is typed as returning one,
   not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
 - Updated the Windows App SDK to 2.5.1, from 1.7.250513003, whose servicing

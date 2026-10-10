@@ -138,7 +138,7 @@ class InferencingOptionsPreview(winrt.system.Object):
     # System.Void Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::put_MaxBatchSize(System.Int32)
     @max_batch_size.setter
     @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
-    def max_batch_size(self, value: winrt.system.Int32) -> None: ...
+    def max_batch_size(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
     # System.Boolean Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_IsTracingEnabled()
     @_property
     @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")

@@ -13,7 +13,7 @@ __all__ = [
 @typing.final
 class ToastOcclusionManagerPreview_Static(winrt._winrt.Object_Static):
     # System.Void Windows.UI.Notifications.Preview.ToastOcclusionManagerPreview::SetToastWindowMargin(Windows.UI.WindowId,System.Double)
-    def set_toast_window_margin(cls, app_window_id: windows_ui.WindowId | tuple[winrt.system.UInt64], margin: winrt.system.Double, /) -> None: ...
+    def set_toast_window_margin(cls, app_window_id: windows_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], margin: winrt.system.Double, /) -> None: ...
 
 @typing.final
 class ToastOcclusionManagerPreview(winrt.system.Object, metaclass=ToastOcclusionManagerPreview_Static):
