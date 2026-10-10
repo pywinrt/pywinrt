@@ -199,9 +199,12 @@ it suggests may repeat each other.
 
 ### Caveats
 
-* The script does not search in comments, docstrings or string annotations for
-  code changes. It searches the string literals of a Python file for
-  requirements, and everything but comments in any other file.
+* The script reads a `.py` or `.pyi` file as Python and does not search in its
+  comments, docstrings or string annotations for code changes. It searches the
+  string literals of a Python file for requirements, and everything but
+  comments in any other file. It takes a name with a `-` or `_` after `winrt`,
+  `winui3` and the like for a distribution and one with a `.` for a module, so
+  a module path is not reported as a requirement.
 * A floor at the first v4 version is the least the suggested requirement can
   say. If the code uses something a later upstream release added, raise it.
 * The script doesn't do any static analysis to infer types, so it may produce
