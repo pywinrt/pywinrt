@@ -199,15 +199,60 @@ class TestImplements(unittest.TestCase):
         class Incomplete(tc.IRequiredOne):
             pass
 
+        # leaving one() out is the point of the test
+        obj = Incomplete()  # type: ignore[abstract]
+
         with (
             self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
             catch_unraisable() as exceptions,
         ):
-            # leaving one() out is the point of the test
-            tc.Composable.expect_required_one(Incomplete())  # type: ignore[abstract]
+            tc.Composable.expect_required_one(obj)
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, AttributeError)
+        # there is no method to name, so the object is named
+        self.assertIs(exceptions[0].object, obj)
+
+    def test_a_method_that_raises_is_named(self) -> None:
+        class Failing(tc.IRequiredOne):
+            def one(self) -> int:
+                raise RuntimeError("test")
+
+        obj = Failing()
+
+        with self.assertRaises(OSError), catch_unraisable() as exceptions:
+            tc.Composable.expect_required_one(obj)
+
+        self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        self.assertEqual(exceptions[0].object, obj.one)
+
+    def test_a_property_setter_that_raises_is_named(self) -> None:
+        # Awaiting an action, as async1() does, sets its completed handler.
+        # The setter is named rather than the property, whose repr() names
+        # neither the class nor the property.
+        class Action(wf.IAsyncAction):
+            @property
+            def status(self) -> wf.AsyncStatus:
+                return wf.AsyncStatus.STARTED
+
+            @property
+            def completed(self) -> Any:
+                return None
+
+            @completed.setter
+            def completed(self, value: Any) -> None:
+                raise RuntimeError("test")
+
+            def get_results(self) -> None:
+                return None
+
+        tests = tc.TestRunner.make_tests()
+
+        with catch_unraisable() as exceptions:
+            tests.async1(Action(), False)  # type: ignore[abstract]
+
+        self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        self.assertIs(exceptions[0].object, Action.__dict__["completed"].fset)
 
     def test_object_is_released(self) -> None:
         obj = One()

@@ -155,6 +155,8 @@ class TestDelegate(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        # what the default hook names in "Exception ignored in"
+        self.assertIs(exceptions[0].object, handler)
 
     def test_wrong_number_of_return_values(self) -> None:
         tests = tc.TestRunner.make_tests()

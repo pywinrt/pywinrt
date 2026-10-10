@@ -421,9 +421,16 @@ void py::set_call_error(
     }
 }
 
-int32_t py::report_unraisable() noexcept
+/**
+ * Reports the pending Python exception to sys.unraisablehook, with @p source,
+ * the Python object WinRT was calling, as the object it was raised in, which
+ * the default hook names in its "Exception ignored in" line.
+ *
+ * @returns The HRESULT that tells WinRT a Python exception was reported.
+ */
+int32_t py::report_unraisable(PyObject* source) noexcept
 {
-    PyErr_WriteUnraisable(nullptr);
+    PyErr_WriteUnraisable(source);
 
     return unraisable_python_exception.value;
 }

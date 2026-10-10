@@ -440,6 +440,50 @@ namespace py::interp
         }
     }
 
+    namespace
+    {
+        /**
+         * The getter of the property @p name of @p target's type, or with
+         * @p setter its setter, or @c nullptr if the attribute is not a
+         * property.
+         *
+         * An unraisable report names it because its repr() names the class
+         * and the property, where the property's own names neither. The
+         * pending exception is left as it was.
+         */
+        pyobj_handle property_accessor(
+            PyObject* target, PyObject* name, bool setter) noexcept
+        {
+            auto* const exception = take_raised_exception();
+
+            pyobj_handle accessor{};
+
+            pyobj_handle descriptor{
+                PyObject_GetAttr(reinterpret_cast<PyObject*>(Py_TYPE(target)), name)};
+            if (descriptor)
+            {
+                if (PyObject_TypeCheck(descriptor.get(), &PyProperty_Type))
+                {
+                    accessor.attach(PyObject_GetAttrString(
+                        descriptor.get(), setter ? "fset" : "fget"));
+                }
+            }
+
+            PyErr_Clear();
+            restore_raised_exception(exception);
+
+            if (accessor)
+            {
+                if (Py_IsNone(accessor.get()))
+                {
+                    accessor.close();
+                }
+            }
+
+            return accessor;
+        }
+    } // namespace
+
     /**
      * Runs @p op on @p target with the arguments that a reverse trampoline
      * spilled into @p args, and stores what comes back where @p overload's
@@ -455,6 +499,10 @@ namespace py::interp
         void* args) noexcept
     {
         auto* const buffer = static_cast<uint8_t*>(args);
+
+        // The bound method a call_method calls, which is also what an
+        // unraisable report names.
+        pyobj_handle method{};
 
         try
         {
@@ -473,8 +521,7 @@ namespace py::interp
                         PyObject_Vectorcall(target, in.values, in.count, nullptr));
                     break;
                 case python_op::call_method:
-                {
-                    pyobj_handle method{PyObject_GetAttr(target, member.py_name)};
+                    method.attach(PyObject_GetAttr(target, member.py_name));
                     if (!method)
                     {
                         throw python_exception();
@@ -483,7 +530,6 @@ namespace py::interp
                     result.attach(PyObject_Vectorcall(
                         method.get(), in.values, in.count, nullptr));
                     break;
-                }
                 case python_op::get_attribute:
                     result.attach(PyObject_GetAttr(target, member.py_name));
                     break;
@@ -512,7 +558,31 @@ namespace py::interp
             }
             catch (python_exception const&)
             {
-                write_unraisable_and_throw();
+                // The report names what was being called: the callable, the
+                // bound method, or a property's getter or setter, and
+                // otherwise the object.
+                pyobj_handle accessor{};
+                if (op == python_op::get_attribute)
+                {
+                    accessor = property_accessor(target, member.py_name, false);
+                }
+
+                if (op == python_op::set_attribute)
+                {
+                    accessor = property_accessor(target, member.py_name, true);
+                }
+
+                if (method)
+                {
+                    write_unraisable_and_throw(method.get());
+                }
+
+                if (accessor)
+                {
+                    write_unraisable_and_throw(accessor.get());
+                }
+
+                write_unraisable_and_throw(target);
             }
         }
         catch (...)
