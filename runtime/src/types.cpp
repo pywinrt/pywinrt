@@ -13,6 +13,10 @@
 // made it. Everything built from those bytes is a Python object, so it lives
 // in the module state.
 
+// keeps <windows.h> from defining min and max as macros
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
 #include <Windows.h>
 
 #include <Python.h>

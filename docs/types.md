@@ -1277,11 +1277,15 @@ This type is converted to a [`datetime.timedelta`](https://docs.python.org/3/lib
 object from the standard Python library.
 
 WinRT has a resolution of 100 nanoseconds while the Python type has a resolution
-of 1 microsecond, so there is a small loss of precision in the conversion. Python
-is also limited to +/-999999999 days.
+of 1 microsecond, so there is a small loss of precision in the conversion. WinRT
+also has a much smaller range, about 29,000 years either way (10,675,199 days),
+so a longer `timedelta`, such as `timedelta.max`, raises
+[`OverflowError`][OverflowError].
 
 WinRT serializes values of this type as 100s of nanoseconds.
 It uses a signed 64-bit integer for this, so the `"q"` format string is used in Python.
+
+[OverflowError]: https://docs.python.org/3/builtins/exceptions.html#OverflowError
 
 ### Numerics
 

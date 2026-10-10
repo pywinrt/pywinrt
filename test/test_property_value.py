@@ -120,6 +120,45 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.TIME_SPAN)
         self.assertEqual(ipv.get_time_span(), td)
 
+    def test_create_TimeSpan_at_its_limits(self) -> None:
+        # A TimeSpan counts 100 ns ticks in an int64, which a timedelta
+        # reaches to the microsecond.
+        largest = timedelta(microseconds=(2**63 - 1) // 10)
+        smallest = -timedelta(microseconds=2**63 // 10)
+
+        for td in (largest, smallest):
+            with self.subTest(td=td):
+                o = wf.PropertyValue.create_time_span(td)
+                self.assertEqual(o.as_(wf.IPropertyValue).get_time_span(), td)
+
+    def test_create_TimeSpan_out_of_range(self) -> None:
+        # Out of range by a microsecond, by a day, and by as far as a
+        # timedelta goes, where the microseconds would not fit in an int64.
+        largest = timedelta(microseconds=(2**63 - 1) // 10)
+        smallest = -timedelta(microseconds=2**63 // 10)
+        one_microsecond = timedelta(microseconds=1)
+        one_day = timedelta(days=1)
+
+        for td in (
+            largest + one_microsecond,
+            smallest - one_microsecond,
+            largest + one_day,
+            smallest - one_day,
+            timedelta.max,
+            timedelta.min,
+        ):
+            with (
+                self.subTest(td=td),
+                self.assertRaisesRegex(OverflowError, "out of range for a TimeSpan"),
+            ):
+                wf.PropertyValue.create_time_span(td)
+
+    def test_create_TimeSpan_array_out_of_range(self) -> None:
+        with self.assertRaisesRegex(OverflowError, "out of range for a TimeSpan"):
+            wf.PropertyValue.create_time_span_array(
+                Array(timedelta, [timedelta(0), timedelta.max])
+            )
+
     def test_create_Guid(self) -> None:
         u = UUID("01234567-89ab-cdef-0123456789abcdef")
         o = wf.PropertyValue.create_guid(u)
