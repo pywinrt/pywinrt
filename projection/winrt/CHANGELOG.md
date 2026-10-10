@@ -16,6 +16,8 @@ releases before v4.0 are.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
 
 ### Changed
+- A method or property that returns an `IBuffer` is typed as returning one,
+  not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
 - The type hints of the `completed` and `progress` getters include `None`.
 - BREAKING: `TileUpdateManagerForUser.create_tile_updater_for_application()` is
   now `create_tile_updater_for_application_for_user()`. The old name is the

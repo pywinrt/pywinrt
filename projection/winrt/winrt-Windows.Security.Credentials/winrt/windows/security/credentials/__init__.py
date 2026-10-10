@@ -38,4 +38,4 @@ winrt.runtime._internals.mixin_mutable_mapping(PasswordCredentialPropertyStore)
 winrt.runtime._internals.alias_method(KeyCredential, "retrieve_public_key_with_blob_type", "retrieve_public_key")
 winrt.runtime._internals.alias_method(KeyCredential, "retrieve_public_key_with_default_blob_type", "retrieve_public_key")
 winrt.runtime._internals.alias_method(WebAccount, "sign_out_with_client_id_async", "sign_out_async")
-AttestationChallengeHandler = typing.Callable[[winrt.system.Buffer], winrt.system.Buffer]
+AttestationChallengeHandler = typing.Callable[["windows_storage_streams.IBuffer"], "windows_storage_streams.IBuffer"]

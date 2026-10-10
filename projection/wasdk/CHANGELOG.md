@@ -14,6 +14,8 @@ releases before v4.0 are.
 ## [Unreleased]
 
 ### Changed
+- A method or property that returns an `IBuffer` is typed as returning one,
+  not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
 - Updated the Windows App SDK to 2.5.1, from 1.7.250513003, whose servicing
   ended in March. Nine namespaces are new and have a package each:
   `Microsoft.Windows.AI.Foundation`, `Microsoft.Windows.AI.MachineLearning`,
