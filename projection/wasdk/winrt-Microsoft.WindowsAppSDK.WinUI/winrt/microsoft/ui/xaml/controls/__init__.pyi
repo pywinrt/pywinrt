@@ -5156,6 +5156,14 @@ class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
     @background.setter
     @typing.final
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.Control::get_DefaultStyleKey()
+    @_property
+    @typing.final
+    def _default_style_key(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.Control::put_DefaultStyleKey(System.Object)
+    @_default_style_key.setter
+    @typing.final
+    def _default_style_key(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
 class ControlTemplate(microsoft_ui_xaml.FrameworkTemplate):
@@ -8059,6 +8067,12 @@ class LayoutContext(microsoft_ui_xaml.DependencyObject, metaclass=LayoutContext_
     @layout_state.setter
     @typing.final
     def layout_state(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.LayoutContext::get_LayoutStateCore()
+    @_property
+    def _layout_state_core(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LayoutContext::put_LayoutStateCore(System.Object)
+    @_layout_state_core.setter
+    def _layout_state_core(self, value: winrt.system.Object) -> None: ...
 
 class LinedFlowLayout_Static(VirtualizingLayout_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.LinedFlowLayout::get_ActualLineHeightProperty()
@@ -10263,6 +10277,9 @@ class NonVirtualizingLayoutContext(LayoutContext, metaclass=NonVirtualizingLayou
     @_property
     @typing.final
     def children(self) -> _cabc.Sequence[microsoft_ui_xaml.UIElement]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext::get_ChildrenCore()
+    @_property
+    def _children_core(self) -> _cabc.Sequence[microsoft_ui_xaml.UIElement]: ...
 
 class NumberBox_Static(Control_Static):
     # Microsoft.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_AcceptsExpressionProperty()
@@ -18419,6 +18436,15 @@ class VirtualizingLayoutContext(LayoutContext, metaclass=VirtualizingLayoutConte
     @_property
     @typing.final
     def visible_rect(self) -> windows_foundation.Rect: ...
+    # Windows.Foundation.Point Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_LayoutOriginCore()
+    @_property
+    def _layout_origin_core(self) -> windows_foundation.Point: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::put_LayoutOriginCore(Windows.Foundation.Point)
+    @_layout_origin_core.setter
+    def _layout_origin_core(self, value: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_RecommendedAnchorIndexCore()
+    @_property
+    def _recommended_anchor_index_core(self) -> winrt.system.Int32: ...
 
 class VirtualizingPanel_Static(Panel_Static):
     ...

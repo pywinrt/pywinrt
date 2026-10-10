@@ -3630,6 +3630,11 @@ class Microsoft.UI.Xaml.Controls.Control composable python_type
             out class type=Microsoft.UI.Xaml.Media.Brush return
         put put_Background slot=41 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IControl shape=4
             in class type=Microsoft.UI.Xaml.Media.Brush name=value
+    property _default_style_key
+        get get_DefaultStyleKey slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IControlProtected shape=4 reverse=22 protected
+            out object return
+        put put_DefaultStyleKey slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IControlProtected shape=4 reverse=43 protected
+            in object name=value
     property background_property static
         get get_BackgroundProperty slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IControlStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
@@ -13541,6 +13546,11 @@ class Microsoft.UI.Xaml.Controls.LayoutContext composable python_type
             out object return
         put put_LayoutState slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ILayoutContext shape=4
             in object name=value
+    property _layout_state_core
+        get get_LayoutStateCore slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.ILayoutContextOverrides shape=4 reverse=22 overridable
+            out object return
+        put put_LayoutStateCore slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.ILayoutContextOverrides shape=4 reverse=43 overridable
+            in object name=value
 
 enum Microsoft.UI.Xaml.Controls.LightDismissOverlayMode python_type
     py LightDismissOverlayMode
@@ -15735,6 +15745,9 @@ class Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext composable python_
             out class type=Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext return
     property children
         get get_Children slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INonVirtualizingLayoutContext shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> return
+    property _children_core
+        get get_ChildrenCore slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.INonVirtualizingLayoutContextOverrides shape=4 reverse=22 overridable
             out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> return
 
 class Microsoft.UI.Xaml.Controls.NumberBox composable python_type
@@ -25726,6 +25739,14 @@ class Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext composable python_typ
     property visible_rect
         get get_VisibleRect slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingLayoutContext2 shape=4
             out struct type=Windows.Foundation.Rect return
+    property _layout_origin_core
+        get get_LayoutOriginCore slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingLayoutContextOverrides shape=4 reverse=162 overridable
+            out struct type=Windows.Foundation.Point return
+        put put_LayoutOriginCore slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingLayoutContextOverrides shape=10 reverse=177 overridable
+            in struct type=Windows.Foundation.Point name=value
+    property _recommended_anchor_index_core
+        get get_RecommendedAnchorIndexCore slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingLayoutContextOverrides shape=4 reverse=141 overridable
+            out int32 return
     method get_item_at
         method GetItemAt slot=7 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Controls.IVirtualizingLayoutContext shape=51
             in int32 name=index

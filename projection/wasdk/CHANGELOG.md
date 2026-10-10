@@ -13,6 +13,9 @@ releases before v4.0 are.
 
 ## [Unreleased]
 
+### Added
+- Protected properties are projected, such as `Control._default_style_key`.
+
 ### Changed
 - A method or property that returns an `IBuffer` is typed as returning one,
   not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.

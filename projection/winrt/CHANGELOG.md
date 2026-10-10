@@ -13,6 +13,7 @@ releases before v4.0 are.
 ## [Unreleased]
 
 ### Added
+- Protected properties are projected, such as `Control._default_style_key`.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
 
 ### Changed

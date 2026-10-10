@@ -4741,6 +4741,14 @@ class Control(windows_ui_xaml.FrameworkElement, metaclass=Control_Static):
     @background_sizing.setter
     @typing.final
     def background_sizing(self, value: BackgroundSizing) -> None: ...
+    # System.Object Windows.UI.Xaml.Controls.Control::get_DefaultStyleKey()
+    @_property
+    @typing.final
+    def _default_style_key(self) -> winrt.system.Object: ...
+    # System.Void Windows.UI.Xaml.Controls.Control::put_DefaultStyleKey(System.Object)
+    @_default_style_key.setter
+    @typing.final
+    def _default_style_key(self, value: winrt.system.Object) -> None: ...
 
 @typing.final
 class ControlTemplate(windows_ui_xaml.FrameworkTemplate):

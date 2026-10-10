@@ -5436,6 +5436,11 @@ class Microsoft.UI.Xaml.UIElement composable python_type
     property actual_size
         get get_ActualSize slot=108 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IUIElement shape=4
             out struct type=Windows.Foundation.Numerics.Vector2 return
+    property _protected_cursor
+        get get_ProtectedCursor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IUIElementProtected shape=4 reverse=22 protected
+            out class type=Microsoft.UI.Input.InputCursor return
+        put put_ProtectedCursor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.IUIElementProtected shape=4 reverse=43 protected
+            in class type=Microsoft.UI.Input.InputCursor name=value
     property access_key_property static
         get get_AccessKeyProperty slot=63 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.IUIElementStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
@@ -6604,6 +6609,9 @@ class Microsoft.UI.Content.ContentIslandEnvironment external
 
 class Microsoft.UI.Dispatching.DispatcherQueue external
     py winrt.microsoft.ui.dispatching.DispatcherQueue
+
+class Microsoft.UI.Input.InputCursor external
+    py winrt.microsoft.ui.input.InputCursor
 
 class Microsoft.UI.Input.PointerPoint external
     py winrt.microsoft.ui.input.PointerPoint

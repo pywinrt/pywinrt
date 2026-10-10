@@ -14,6 +14,9 @@ releases before v4.0 are.
 
 ## [Unreleased]
 
+### Added
+- Protected properties are projected, such as `Control._default_style_key`.
+
 ### Changed
 - BREAKING: WinUI 2 is published as one package, `winui2-Microsoft.UI.Xaml`,
   named after the NuGet package it is generated from, instead of one package
