@@ -12,6 +12,7 @@ repository](../CHANGELOG.md).
 
 ### Added
 - An `IMemoryBuffer` such as a `MemoryBuffer` now supports the buffer protocol.
+- Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 
 ### Changed
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
