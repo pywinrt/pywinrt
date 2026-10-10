@@ -1113,6 +1113,32 @@ namespace
 
         return *static_cast<winrt::guid const*>(info->guid);
     }
+
+    /**
+     * The projected runtime class that @p obj is, or that @p obj is a Python
+     * subclass of, when that class is composable, or @c nullptr.
+     */
+    py::interp::type_entry* runtime_class_of(PyObject* obj) noexcept
+    {
+        if (!PyType_Check(obj))
+        {
+            return nullptr;
+        }
+
+        auto const info
+            = py::interp::class_entry_of(reinterpret_cast<PyTypeObject*>(obj));
+        if (!info)
+        {
+            return nullptr;
+        }
+
+        if (info->category != py::table::category::class_)
+        {
+            return nullptr;
+        }
+
+        return info;
+    }
 } // namespace
 
 /**
@@ -1201,6 +1227,92 @@ namespace py::cpp::_winrt
             }
 
             return py::interp::new_interface_capsule(abi);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return nullptr;
+        }
+    }
+
+    /**
+     * get_activation_factory(cls, iid) - the @p iid interface of the
+     * activation factory of the runtime class @p cls, as an interface pointer
+     * capsule. @p iid is a uuid.UUID, or a projected interface.
+     *
+     * A class's statics, its constructors and the Windows interop interfaces
+     * that act for it, such as IGraphicsCaptureItemInterop, are all reached
+     * through its activation factory. The runtime gets it as it does for a
+     * static member, so a call that comes first in a process works.
+     */
+    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        PyObject* type_obj;
+        PyObject* iid_obj;
+
+        if (!PyArg_ParseTuple(
+                args, "O!O:get_activation_factory", &PyType_Type, &type_obj, &iid_obj))
+        {
+            return nullptr;
+        }
+
+        auto const type = reinterpret_cast<PyTypeObject*>(type_obj);
+
+        auto const info = py::interp::find_type_entry(type);
+        if (!info)
+        {
+            PyErr_Format(PyExc_TypeError, "'%s' is not a runtime class", type->tp_name);
+            return nullptr;
+        }
+
+        if (info->category != py::table::category::class_)
+        {
+            PyErr_Format(PyExc_TypeError, "'%s' is not a runtime class", type->tp_name);
+            return nullptr;
+        }
+
+        // A class stands for its default interface, which no factory
+        // implements, and so does a Python subclass of a composable one.
+        if (auto const iid_class = runtime_class_of(iid_obj))
+        {
+            auto const iid_type = reinterpret_cast<PyTypeObject*>(iid_obj);
+            if (iid_type == iid_class->py_type)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "get_activation_factory() takes an interface or a uuid.UUID, "
+                    "not the runtime class '%s'",
+                    iid_type->tp_name);
+                return nullptr;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "get_activation_factory() takes an interface or a uuid.UUID, "
+                "not '%s', a subclass of the runtime class '%s'",
+                iid_type->tp_name,
+                iid_class->py_type->tp_name);
+            return nullptr;
+        }
+
+        try
+        {
+            auto const iid = iid_named_by(iid_obj);
+
+            void* factory{};
+            int32_t hr{};
+
+            {
+                // Activation may start a server in another process.
+                auto _gil = py::release_gil();
+
+                hr = winrt::impl::get_runtime_activation_factory_impl<false>(
+                    winrt::param::hstring{info->class_name}, iid, &factory);
+            }
+
+            winrt::check_hresult(hr);
+
+            return py::interp::new_interface_capsule(factory);
         }
         catch (...)
         {

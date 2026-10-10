@@ -947,6 +947,7 @@ namespace py::cpp::_winrt
     PyObject* unbox_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept;
     PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
     PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept;
 
@@ -1035,6 +1036,13 @@ namespace py::cpp::_winrt
              "An interface of a WinRT object, as an interface pointer capsule. "
              "This and wrap_interface() are how the interop packages hand WinRT "
              "objects to their compiled code and take them back.")},
+        {"get_activation_factory",
+         get_activation_factory,
+         METH_VARARGS,
+         PyDoc_STR(
+             "An interface of the activation factory of a runtime class, as an "
+             "interface pointer capsule, which is where the Windows interop "
+             "interfaces that act for a class are found.")},
         {"wrap_interface",
          wrap_interface,
          METH_VARARGS,
