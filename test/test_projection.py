@@ -95,6 +95,11 @@ class TestClasses(unittest.TestCase):
         ):
             wf.GuidHelper()  # type: ignore[call-arg]
 
+    def test_a_constructor_takes_no_keywords(self) -> None:
+        # The stubs refuse the call as well, which is what the ignore checks.
+        with self.assertRaisesRegex(TypeError, "keyword arguments not supported"):
+            wf.Uri(uri="https://example.com/")  # type: ignore[call-overload]
+
     def test_from_is_a_deprecated_alias_of_from_(self) -> None:
         uri = wf.Uri("https://example.com")
         # _from is not in the type hints

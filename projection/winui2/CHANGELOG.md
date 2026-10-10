@@ -25,4 +25,5 @@ releases before v4.0 are.
   family is one 0.13 MB wheel.
 
 ### Fixed
+- Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.

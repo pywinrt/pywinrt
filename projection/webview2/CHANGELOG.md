@@ -36,4 +36,5 @@ releases before v4.0 are.
   Nothing was removed.
 
 ### Fixed
+- Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.

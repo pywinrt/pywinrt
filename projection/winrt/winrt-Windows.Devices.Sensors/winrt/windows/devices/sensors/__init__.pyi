@@ -1607,7 +1607,7 @@ class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
 
 @typing.final
 class PedometerDataThreshold(ISensorDataThreshold, winrt.system.Object):
-    def __new__(cls, sensor: Pedometer, step_goal: winrt.system.Int32) -> typing.Self: ...
+    def __new__(cls, sensor: Pedometer, step_goal: winrt.system.Int32, /) -> typing.Self: ...
 
 @typing.final
 class PedometerReading(winrt.system.Object):
@@ -1667,7 +1667,7 @@ class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
 
 @typing.final
 class ProximitySensorDataThreshold(ISensorDataThreshold, winrt.system.Object):
-    def __new__(cls, sensor: ProximitySensor) -> typing.Self: ...
+    def __new__(cls, sensor: ProximitySensor, /) -> typing.Self: ...
 
 @typing.final
 class ProximitySensorDisplayOnOffController(windows_foundation.IClosable, winrt.system.Object):
