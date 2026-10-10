@@ -7,7 +7,7 @@ Functions related to preparing the WinRT runtime for use.
 ### `init_apartment`
 
 ```python
-init_apartment(apartment_type: ApartmentType) -> None
+init_apartment(apartment_type: ApartmentType, /) -> None
 ```
 
 Initializes the WinRT runtime in the specified apartment type.
