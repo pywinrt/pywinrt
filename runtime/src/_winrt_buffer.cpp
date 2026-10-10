@@ -4,6 +4,8 @@
 #include "_winrt_buffer.h"
 #include <winrt/base.h>
 
+#include <atomic>
+
 namespace py::cpp::_winrt
 {
     struct PyWinRTBuffer : winrt::implements<
@@ -13,6 +15,10 @@ namespace py::cpp::_winrt
     {
       private:
         py::buffer_view buffer;
+        /// How many of the bytes hold data: all of them at first, for a
+        /// reader, and what a writer sets after it has written, which may be
+        /// on another thread.
+        std::atomic<uint32_t> length;
 
       public:
         PyWinRTBuffer(PyObject* obj) : buffer{obj, PyBUF_SIMPLE}
@@ -21,6 +27,8 @@ namespace py::cpp::_winrt
             {
                 throw python_exception();
             }
+
+            length = Capacity();
         }
 
         static void final_release(std::unique_ptr<PyWinRTBuffer> self) noexcept
@@ -46,13 +54,17 @@ namespace py::cpp::_winrt
 
         uint32_t Length() const
         {
-            return static_cast<uint32_t>(buffer.size());
+            return length;
         }
 
-        void Length(uint32_t /*unused*/)
+        void Length(uint32_t value)
         {
-            // can't resize Python buffers.
-            throw winrt::hresult_not_implemented{};
+            if (value > Capacity())
+            {
+                throw winrt::hresult_invalid_argument{};
+            }
+
+            length = value;
         }
 
         HRESULT __stdcall Buffer(uint8_t** value)

@@ -5,6 +5,8 @@ import winrt.windows.foundation as wf
 import winrt.windows.graphics.imaging as wgi
 import winrt.windows.storage.streams as wss
 
+from ._util import async_test
+
 
 class TestBuffer(unittest.TestCase):
     def reference_of(
@@ -31,6 +33,29 @@ class TestBuffer(unittest.TestCase):
         buf.length = 5
         with memoryview(buf) as mv:
             self.assertEqual(len(mv), 5)
+
+    @async_test
+    async def test_python_buffer_takes_the_length_winrt_sets(self) -> None:
+        stream = wss.InMemoryRandomAccessStream()
+        await stream.write_async(b"hi")
+        stream.seek(0)
+
+        target = bytearray(b"xxxxx")
+        read = await stream.read_async(target, len(target), wss.InputStreamOptions.NONE)
+        assert isinstance(read, wss.IBuffer)
+
+        self.assertEqual(target, b"hixxx")
+        self.assertEqual(read.capacity, 5)
+        self.assertEqual(len(read), 2)
+        self.assertEqual(bytes(read), b"hi")
+
+        read.length = 5
+        self.assertEqual(bytes(read), b"hixxx")
+
+        with self.assertRaises(OSError):
+            read.length = 6
+
+        self.assertEqual(len(read), 5)
 
     def test_memory_buffer(self) -> None:
         data = b"ABCDE"
