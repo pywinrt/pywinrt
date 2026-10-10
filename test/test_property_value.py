@@ -18,7 +18,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.UINT8)
         self.assertTrue(ipv.get_uint8(), 250)
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(2**8))
-        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint8(-1))
+        self.assertRaises(ValueError, lambda: wf.PropertyValue.create_uint8(-1))
 
     def test_create_int16(self) -> None:
         o = wf.PropertyValue.create_int16(-32000)
@@ -36,7 +36,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.UINT16)
         self.assertTrue(ipv.get_uint16(), 65000)
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(2**16))
-        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint16(-1))
+        self.assertRaises(ValueError, lambda: wf.PropertyValue.create_uint16(-1))
 
     def test_create_int32(self) -> None:
         o = wf.PropertyValue.create_int32(-2147483640)
@@ -54,7 +54,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.UINT32)
         self.assertTrue(ipv.get_uint32(), 4294967290)
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(2**32))
-        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint32(-1))
+        self.assertRaises(ValueError, lambda: wf.PropertyValue.create_uint32(-1))
 
     def test_create_int64(self) -> None:
         o = wf.PropertyValue.create_int64(-9223372036854775800)
@@ -72,7 +72,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(ipv.type, wf.PropertyType.UINT64)
         self.assertTrue(ipv.get_uint64(), 18446744073709551610)
         self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(2**64))
-        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_uint64(-1))
+        self.assertRaises(ValueError, lambda: wf.PropertyValue.create_uint64(-1))
 
     def test_create_single(self) -> None:
         o = wf.PropertyValue.create_single(3.14)
@@ -348,3 +348,39 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x].y, actual[x].y)
             self.assertEqual(a[x].width, actual[x].width)
             self.assertEqual(a[x].height, actual[x].height)
+
+
+class Index:
+    """An integer that is not an int, as a NumPy integer is."""
+
+    def __init__(self, value: int) -> None:
+        self.value = value
+
+    def __index__(self) -> int:
+        return self.value
+
+
+class TestUnsignedIntegers(unittest.TestCase):
+    # Every unsigned width converts as PyLong_AsUInt32() and PyLong_AsUInt64()
+    # of Python 3.14 do, on every Python version; TestPropertyValue checks a
+    # negative number and one too large.
+    WIDTHS = (
+        ("uint8", 8),
+        ("uint16", 16),
+        ("uint32", 32),
+        ("uint64", 64),
+    )
+
+    def create(self, name: str, value: object) -> object:
+        o = getattr(wf.PropertyValue, f"create_{name}")(value)
+        return getattr(o.as_(wf.IPropertyValue), f"get_{name}")()
+
+    def test_an_index_object(self) -> None:
+        for name, bits in self.WIDTHS:
+            with self.subTest(name):
+                self.assertEqual(self.create(name, Index(2**bits - 1)), 2**bits - 1)
+
+    def test_a_float(self) -> None:
+        for name, _ in self.WIDTHS:
+            with self.subTest(name), self.assertRaises(TypeError):
+                self.create(name, 1.0)

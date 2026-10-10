@@ -65,6 +65,78 @@ namespace py
         return reinterpret_cast<PyObject*>(py_instance);
     }
 
+    /**
+     * PyLong_AsUInt32() as Python 3.14 has it: an object with __index__ is
+     * taken, a negative number raises ValueError and one too large
+     * OverflowError, whichever Python this is built for.
+     *
+     * @returns -1 with a Python error set.
+     */
+    inline int as_uint32(PyObject* obj, uint32_t* value) noexcept
+    {
+#if PY_VERSION_HEX >= 0x030E0000
+        return PyLong_AsUInt32(obj, value);
+#else
+        // pythoncapi_compat's PyLong_AsUInt32() for an older Python takes only
+        // an int and raises OverflowError for a negative one, so the number
+        // and its sign are dealt with here, and only the range is left to it.
+        // This goes when the oldest Python supported is 3.14.
+        pyobj_handle number{PyNumber_Index(obj)};
+        if (!number)
+        {
+            return -1;
+        }
+
+        auto const negative = PyLong_IsNegative(number.get());
+        if (negative < 0)
+        {
+            return -1;
+        }
+
+        if (negative)
+        {
+            PyErr_SetString(PyExc_ValueError, "Cannot convert negative int");
+            return -1;
+        }
+
+        return PyLong_AsUInt32(number.get(), value);
+#endif
+    }
+
+    /**
+     * PyLong_AsUInt64() as Python 3.14 has it, as as_uint32() is
+     * PyLong_AsUInt32().
+     *
+     * @returns -1 with a Python error set.
+     */
+    inline int as_uint64(PyObject* obj, uint64_t* value) noexcept
+    {
+#if PY_VERSION_HEX >= 0x030E0000
+        return PyLong_AsUInt64(obj, value);
+#else
+        // For the reason as_uint32() gives.
+        pyobj_handle number{PyNumber_Index(obj)};
+        if (!number)
+        {
+            return -1;
+        }
+
+        auto const negative = PyLong_IsNegative(number.get());
+        if (negative < 0)
+        {
+            return -1;
+        }
+
+        if (negative)
+        {
+            PyErr_SetString(PyExc_ValueError, "Cannot convert negative int");
+            return -1;
+        }
+
+        return PyLong_AsUInt64(number.get(), value);
+#endif
+    }
+
     template<typename T, typename = void>
     struct converter
     {
@@ -137,14 +209,14 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            int32_t result = PyLong_AsLong(obj);
+            uint32_t result{};
 
-            if (result == -1 && PyErr_Occurred())
+            if (as_uint32(obj, &result) == -1)
             {
                 throw python_exception();
             }
 
-            if (result < 0 || result > UINT8_MAX)
+            if (result > UINT8_MAX)
             {
                 PyErr_SetString(PyExc_OverflowError, "does not fit in uint8_t");
                 throw python_exception();
@@ -195,14 +267,14 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            int32_t result = PyLong_AsLong(obj);
+            uint32_t result{};
 
-            if (result == -1 && PyErr_Occurred())
+            if (as_uint32(obj, &result) == -1)
             {
                 throw python_exception();
             }
 
-            if (result < 0 || result > UINT16_MAX)
+            if (result > UINT16_MAX)
             {
                 PyErr_SetString(PyExc_OverflowError, "does not fit in uint16_t");
                 throw python_exception();
@@ -247,9 +319,9 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            auto result = PyLong_AsUnsignedLong(obj);
+            uint32_t result{};
 
-            if (result == static_cast<unsigned long>(-1) && PyErr_Occurred())
+            if (as_uint32(obj, &result) == -1)
             {
                 throw python_exception();
             }
@@ -293,9 +365,9 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            auto result = PyLong_AsUnsignedLongLong(obj);
+            uint64_t result{};
 
-            if (result == static_cast<unsigned long long>(-1) && PyErr_Occurred())
+            if (as_uint64(obj, &result) == -1)
             {
                 throw python_exception();
             }
