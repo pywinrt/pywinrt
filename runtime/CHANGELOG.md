@@ -22,6 +22,7 @@ repository](../CHANGELOG.md).
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
 ### Fixed
+- Fixed an enum value newer than the projection raising `ValueError`.
 - Fixed a too long `timedelta` wrapping; it now raises `OverflowError`.
 - Fixed `Array(T, list)` reading freed memory if a conversion edits the list.
 - Fixed closing an `IMemoryBufferReference` with a live `memoryview` crashing.

@@ -12,6 +12,7 @@ bytes. This checks that the runtime turns those bytes into the projection.
 """
 
 import importlib
+import pickle
 import sys
 import unittest
 import uuid
@@ -21,6 +22,7 @@ import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+import winrt.windows.storage as ws
 import winrt.windows.storage.provider as wsp
 from winrt.system import Array, Int32, Object
 from winrt.system.hresult import E_FAIL
@@ -437,6 +439,75 @@ class TestMembers(unittest.TestCase):
 
         self.assertEqual(obj.get_named_string("spam"), "eggs")
         self.assertEqual(obj.get_named_string("ham", "sausage"), "sausage")
+
+
+class TestEnums(unittest.TestCase):
+    # A newer Windows can hand back a value the projection was generated
+    # without, which is a member with no name rather than a ValueError.
+
+    def test_a_value_with_no_member(self) -> None:
+        status = wf.AsyncStatus(99)
+
+        self.assertIsInstance(status, wf.AsyncStatus)
+        self.assertEqual(status, 99)
+        self.assertEqual(status.name, "99")
+        self.assertEqual(status.value, 99)
+        self.assertEqual(repr(status), "<AsyncStatus: 99>")
+        self.assertEqual(str(status), "99")
+
+    def test_a_value_with_no_member_is_not_one_of_the_members(self) -> None:
+        # Not checked with `in`, which Python 3.11 refuses for a plain int and
+        # 3.12 answers by calling the enum.
+        members = list(wf.AsyncStatus)
+
+        status = wf.AsyncStatus(99)
+
+        self.assertNotIn(status, members)
+        self.assertEqual(list(wf.AsyncStatus), members)
+        self.assertNotIn(99, wf.AsyncStatus._value2member_map_)
+
+    def test_a_value_with_no_member_read_from_winrt(self) -> None:
+        # The runtime makes an enum value by calling the enum with the integer,
+        # wherever the value comes from.
+        a = Array(wf.AsyncStatus, 1)
+        with memoryview(a) as m:
+            m[0] = 99
+
+        self.assertEqual(repr(a[0]), "<AsyncStatus: 99>")
+
+    def test_a_value_with_no_member_pickles(self) -> None:
+        status = wf.AsyncStatus(99)
+
+        self.assertEqual(pickle.loads(pickle.dumps(status)), status)
+
+    def test_a_value_with_no_member_is_a_plain_number(self) -> None:
+        # Made from another enum's member, it holds the number rather than that
+        # member.
+        status = wf.AsyncStatus(wf.PropertyType.OTHER_TYPE_ARRAY)
+
+        self.assertIs(type(status.value), int)
+        self.assertEqual(status.name, str(int(wf.PropertyType.OTHER_TYPE_ARRAY)))
+
+    def test_a_value_with_no_member_is_not_found_by_name(self) -> None:
+        with self.assertRaises(KeyError):
+            wf.AsyncStatus["99"]
+
+    def test_a_member_is_still_the_member(self) -> None:
+        self.assertIs(wf.AsyncStatus(1), wf.AsyncStatus.COMPLETED)
+
+    def test_a_value_out_of_range_is_refused(self) -> None:
+        for value in (2**31, -(2**31) - 1):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                wf.AsyncStatus(value)
+
+        with self.assertRaises(ValueError):
+            wf.AsyncStatus("1")  # type: ignore[arg-type]
+
+    def test_a_flags_enum_keeps_a_bit_with_no_member(self) -> None:
+        attributes = ws.FileAttributes(0x10000 | ws.FileAttributes.READ_ONLY)
+
+        self.assertEqual(attributes, 0x10001)
+        self.assertIn(ws.FileAttributes.READ_ONLY, attributes)
 
 
 class TestStructs(unittest.TestCase):
