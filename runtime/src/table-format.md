@@ -402,7 +402,6 @@ Group flags:
 |---|---|---|
 | 0-2 | | kind: 0=`method`, 1=`property`, 2=`event`, 3=`constructor`, which is the first word of a group's line |
 | 3 | `static` | the attribute belongs on the metaclass |
-| 4 | `deprecated` | |
 
 A property group holds the getter and, if there is one, the setter, in that
 order. An event group holds the adder and the remover, in that order. A method
