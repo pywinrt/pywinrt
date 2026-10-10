@@ -92,3 +92,12 @@ class TestSystemBox(unittest.TestCase):
     def test_box_unbox_time_span(self) -> None:
         value = datetime.timedelta(1)
         self.assertEqual(unbox_time_span(box_time_span(value)), value)
+
+    def test_no_keywords(self) -> None:
+        # The type hints refuse these calls as well, which is what the ignores
+        # check.
+        with self.assertRaisesRegex(TypeError, "takes no keyword arguments"):
+            box_int32(value=1)  # type: ignore[call-arg]
+
+        with self.assertRaisesRegex(TypeError, "takes no keyword arguments"):
+            unbox_int32(value=box_int32(1))  # type: ignore[call-arg]

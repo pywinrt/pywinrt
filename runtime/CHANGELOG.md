@@ -26,6 +26,7 @@ repository](../CHANGELOG.md).
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
 ### Fixed
+- Fixed the `box_*()` and `unbox_*()` type hints incorrectly accepting keywords.
 - Fixed `Array()` refusing an iterable other than a `list` or a `tuple`.
 - Fixed `UInt32` and `UInt64` refusing an object with `__index__()`.
 - Fixed an enum value newer than the projection raising `ValueError`.
