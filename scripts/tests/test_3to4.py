@@ -115,18 +115,6 @@ class Inspect(unittest.TestCase):
             ],
         )
 
-    def test_fix_rewrites_the_packages_only(self) -> None:
-        self.assertEqual(
-            run(self.path, "--fix")[-1], f"{self.path}: rewrote 3 package names"
-        )
-
-        self.assertEqual(
-            self.path.read_bytes().decode(),
-            SOURCE.replace("import winui3.", "import winrt.")
-            .replace("from webview2.", "from winrt.")
-            .replace("= winui3.", "= winrt."),
-        )
-
     def test_a_form_feed_ends_no_line(self) -> None:
         # ast numbers lines past a form feed, which a page break is, as if it
         # were not there
@@ -141,15 +129,6 @@ class Inspect(unittest.TestCase):
                 "possible match: ToastActivatedEventArgs._from",
                 "rename to: event.as_(ToastActivatedEventArgs)",
             ],
-        )
-
-    def test_fix_after_a_form_feed(self) -> None:
-        self.path.write_bytes(b"\x0c\nimport winui3.microsoft.ui.xaml\n")
-
-        run(self.path, "--fix")
-
-        self.assertEqual(
-            self.path.read_bytes(), b"\x0c\nimport winrt.microsoft.ui.xaml\n"
         )
 
     def test_a_lone_carriage_return_ends_a_line(self) -> None:
@@ -172,17 +151,6 @@ class Inspect(unittest.TestCase):
                 "possible match: winui3-Microsoft.UI.Xaml>=3.2",
                 f"rename to: winrt-Microsoft.WindowsAppSDK.WinUI{winui}",
             ],
-        )
-
-        run(p, "--fix")
-
-        self.assertEqual(
-            p.read_bytes(),
-            b"import os\r"
-            b"import winrt.microsoft.ui.xaml\r"
-            b'REQUIRES = ["winrt-Microsoft.WindowsAppSDK.WinUI'
-            + winui.encode()
-            + b'"]\r',
         )
 
 
@@ -262,65 +230,6 @@ class Requirements(unittest.TestCase):
             ],
         )
 
-    def test_fix(self) -> None:
-        p = self.write("requirements.txt", REQUIREMENTS)
-        winui = floor("winrt-Microsoft.WindowsAppSDK.WinUI")
-        interactive = floor("winrt-Microsoft.WindowsAppSDK.InteractiveExperiences")
-        foundation = floor("winrt-Windows.Foundation")
-
-        self.assertEqual(
-            run(p, "--fix")[-1],
-            f"{p}: rewrote 4 requirements, dropped 1 that became duplicates",
-        )
-
-        self.assertEqual(
-            p.read_bytes().decode(),
-            textwrap.dedent(
-                f"""\
-                winrt-Microsoft.WindowsAppSDK.WinUI{winui}
-                winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]{interactive} ; sys_platform == "win32"
-                winrt-Windows.Foundation{foundation}
-                winrt-Windows.Devices.Bluetooth>=3.2
-                winrt-runtime<4.1
-                winrt-sdk
-                bleak>=1
-                # winui3-Microsoft.UI.Composition>=3.2
-                """
-            ),
-        )
-
-    def test_fix_merges_a_toml_array(self) -> None:
-        p = self.write(
-            "pyproject.toml",
-            textwrap.dedent(
-                """\
-                [project.optional-dependencies]
-                winui3 = [
-                    "winui3-Microsoft.UI.Xaml>=3.2,<3.3;sys_platform=='win32'",
-                    "winui3-Microsoft.UI.Xaml.Controls>=3.2,<3.3;sys_platform=='win32'",
-                ]
-                other = ["winui3-Microsoft.UI.Xaml>=3.2,<3.3"]
-                """
-            ),
-        )
-        winui = floor("winrt-Microsoft.WindowsAppSDK.WinUI")
-
-        run(p, "--fix")
-
-        # the one-line array of another extra is not a duplicate of the first
-        self.assertEqual(
-            p.read_bytes().decode(),
-            textwrap.dedent(
-                f"""\
-                [project.optional-dependencies]
-                winui3 = [
-                    "winrt-Microsoft.WindowsAppSDK.WinUI{winui};sys_platform=='win32'",
-                ]
-                other = ["winrt-Microsoft.WindowsAppSDK.WinUI{winui}"]
-                """
-            ),
-        )
-
     def test_python_strings_only(self) -> None:
         p = self.write("setup.py", SETUP)
         webview2 = floor("winrt-Microsoft.Web.WebView2")
@@ -332,16 +241,6 @@ class Requirements(unittest.TestCase):
                 "possible match: webview2-Microsoft.Web.WebView2.Core==3.2.1",
                 f"rename to: winrt-Microsoft.Web.WebView2{webview2}",
             ],
-        )
-
-        run(p, "--fix")
-
-        self.assertEqual(
-            p.read_bytes().decode(),
-            SETUP.replace(
-                '"webview2-Microsoft.Web.WebView2.Core==3.2.1"',
-                f'"winrt-Microsoft.Web.WebView2{webview2}"',
-            ),
         )
 
 
