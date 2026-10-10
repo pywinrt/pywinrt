@@ -64,7 +64,11 @@ static class FileWriters
 
         // Warm the caches that are shared by the writers below so that they
         // are read-only while the writers run in parallel.
-        members.GetReferencedNamespaces(packageMap, includeDelegates: true);
+        members.GetReferencedNamespaces(
+            packageMap,
+            includeDelegates: true,
+            includeInheritedInterfaces: true
+        );
         members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
 
         // The generated files are independent of each other, so write them
@@ -88,10 +92,18 @@ static class FileWriters
         // Several namespaces may be published in one distribution, so what
         // each of them depends on is handed back and written once the whole
         // run is done rather than into a file they would race for.
+        //
+        // The interfaces a class implements are bases of its stub, so their
+        // namespaces are referenced too, but only referenced: importing the
+        // module does not import them, which only a base class requires.
         return new NamespaceDependencies(
             ns.Namespace,
             members.GetRequiredNamespaces(packageMap),
-            members.GetReferencedNamespaces(packageMap, includeDelegates: true)
+            members.GetReferencedNamespaces(
+                packageMap,
+                includeDelegates: true,
+                includeInheritedInterfaces: true
+            )
         );
     }
 
