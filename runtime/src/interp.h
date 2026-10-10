@@ -160,6 +160,10 @@ namespace py::interp
         /// to be made on the inner object: making it on the object itself
         /// would arrive back in Python, where the call came from.
         bool overridable;
+        /// Only a class derived from the one that declares this member may
+        /// call it, so a protected constructor composes a Python class derived
+        /// from its class and does not create the class itself.
+        bool is_protected;
         uint16_t in_count;
         uint16_t out_count;
         uint16_t arg_count;

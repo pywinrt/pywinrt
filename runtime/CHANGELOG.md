@@ -11,6 +11,7 @@ repository](../CHANGELOG.md).
 ## [Unreleased]
 
 ### Added
+- Python classes can derive from composable classes with protected constructors.
 - An `IMemoryBuffer` such as a `MemoryBuffer` now supports the buffer protocol.
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 - A vector's slices can be assigned and deleted, with a step of 1.

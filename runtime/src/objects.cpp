@@ -284,6 +284,16 @@ namespace py::interp
                     PyTuple_GET_SIZE(args));
             }
 
+            if (overload->is_protected)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' cannot be created directly; its constructor is "
+                    "protected, so create a class derived from it",
+                    info->winrt_name);
+                return nullptr;
+            }
+
             return call_member(
                 *info->constructor,
                 *overload,
