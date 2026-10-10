@@ -711,7 +711,26 @@ BINARY_README = """\
 
 The WinRT APIs in it are those of version {nuget_version} of the
 `{nuget_package}` NuGet package.{component}
+
+```
+pip install {package_name}
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.
 """
+
+# An interop module is written by hand rather than generated from a namespace,
+# so what its README says it does is written by hand too.
+INTEROP_README = """\
+{important}{summary}
+
+This package provides the `{module_name}` module.{built_against}
+
+```
+pip install {package_name}
+```
+{requirements}"""
 
 TABLE_README = """\
 Compiles the projection tables of Windows Runtime (WinRT) APIs from the

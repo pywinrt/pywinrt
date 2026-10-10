@@ -231,6 +231,41 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
     "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
 }
 
+# What each interop package does, which is the first thing its README says,
+# since it is not a namespace the way a generated package's subject is.
+INTEROP_SUMMARIES = {
+    "winrt-Windows.Graphics.Capture.Interop": (
+        "Makes a `GraphicsCaptureItem` for a window or a monitor, from its handle."
+    ),
+    "winrt-Windows.Graphics.DirectX.Direct3D11.Interop": (
+        "Converts between DXGI devices and surfaces and the `IDirect3DDevice` and"
+        " `IDirect3DSurface` that WinRT APIs take."
+    ),
+    "winrt-Windows.Media.Interop": (
+        "Gets the `SystemMediaTransportControls` of a window, from its handle."
+    ),
+    "winrt-Windows.System.Interop": (
+        "Creates a `DispatcherQueueController` on the current thread or on a"
+        " dedicated one of its own."
+    ),
+    "winrt-Windows.UI.Composition.Interop": (
+        "Creates a `DesktopWindowTarget` that shows a composition visual tree in a"
+        " window."
+    ),
+    "winrt-Windows.UI.Xaml.Hosting.Interop": (
+        "Attaches a `DesktopWindowXamlSource` to a window and hands it the"
+        " window's messages, for XAML Islands."
+    ),
+    "winrt-Microsoft.UI.Interop": (
+        "Converts window, monitor and icon handles to and from the `WindowId`,"
+        " `DisplayId` and `IconId` that Windows App SDK APIs take."
+    ),
+    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": (
+        "Finds the Windows App Runtime for an unpackaged app and loads it, as"
+        " `MddBootstrap.h` does in C++. A packaged app does not need it."
+    ),
+}
+
 PYTHON_KEYWORDS = {
     "and",
     "as",
@@ -460,6 +495,81 @@ def write_readme(
                     + "\n"
                     + f"version {NUGET_PACKAGE_VERSIONS[component]}."
                     if component is not None and component != nuget_package
+                    else ""
+                ),
+                package_name=package_name,
+            )
+        )
+
+
+def format_names(names: list[str]) -> str:
+    """
+    Names in code spans, joined the way a sentence lists them.
+    """
+    spans = [f"`{name}`" for name in names]
+
+    if len(spans) == 1:
+        return spans[0]
+
+    return ", ".join(spans[:-1]) + " and " + spans[-1]
+
+
+def write_interop_readme(
+    package_path: Path, package_name: str, module_name: str
+) -> None:
+    """
+    Writes the README that PyPI shows for one interop package.
+
+    An App SDK interop package says which release it is built against, since
+    it is released with that family; the Windows SDK ones compile against
+    whatever Windows SDK the build has, so they name none.
+    """
+    family = package_families[package_name]
+
+    if family != "wasdk":
+        built_against = ""
+    elif is_app_sdk_bootstrap_package(package_name):
+        built_against = (
+            "\n\n"
+            + f"It is built against version {NUGET_VERSIONS[family]} of the"
+            + f" `{versions.NUGET_PACKAGES[family]}`"
+            + "\n"
+            + "NuGet package and loads that release of the Windows App SDK unless"
+            + " told otherwise."
+            + "\n"
+            + f"It carries `{BOOTSTRAP_DLL.dll_name}` from version"
+            + f" {NUGET_PACKAGE_VERSIONS[BOOTSTRAP_DLL.nuget_package]} of the"
+            + "\n"
+            + f"`{BOOTSTRAP_DLL.nuget_package}` NuGet package."
+        )
+    else:
+        built_against = (
+            "\n\n"
+            + f"It is built against version {NUGET_VERSIONS[family]} of the"
+            + f" `{versions.NUGET_PACKAGES[family]}`"
+            + "\n"
+            + "NuGet package."
+        )
+
+    with open_if_changed(package_path / "README.md") as f:
+        f.write(templates.README.format(package_name=package_name))
+        f.write(
+            templates.INTEROP_README.format(
+                important=(
+                    templates.WASDK_README_IMPORTANT
+                    if is_windows_app_package(package_name)
+                    else ""
+                ),
+                summary=INTEROP_SUMMARIES[package_name],
+                module_name=module_name,
+                built_against=built_against,
+                package_name=package_name,
+                requirements=(
+                    "\n"
+                    + "installs it with"
+                    + f" {format_names(INTEROP_DEPENDENCIES[package_name])}."
+                    + "\n"
+                    if INTEROP_DEPENDENCIES[package_name]
                     else ""
                 ),
             )
@@ -1012,11 +1122,4 @@ for package_path in INTEROP_PATH.glob("winrt-*"):
         package_name=package_name,
     )
 
-    write_readme(
-        package_path,
-        package_name,
-        [namespace],
-        [module_name],
-        versions.NUGET_PACKAGES[family],
-        NUGET_VERSIONS[family],
-    )
+    write_interop_readme(package_path, package_name, module_name)
