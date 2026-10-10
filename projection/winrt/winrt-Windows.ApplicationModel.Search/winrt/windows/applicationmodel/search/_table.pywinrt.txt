@@ -378,19 +378,19 @@ class Windows.ApplicationModel.Search.SearchPane python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_VisibilityChanged slot=16 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method get_for_current_view static deprecated
+    method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneStatics shape=4 static deprecated
             out class type=Windows.ApplicationModel.Search.SearchPane return
-    method hide_this_application static deprecated
+    method hide_this_application static
         method HideThisApplication slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication shape=0 static deprecated
-    method set_local_content_suggestion_settings deprecated
+    method set_local_content_suggestion_settings
         method SetLocalContentSuggestionSettings slot=25 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 deprecated
             in class type=Windows.ApplicationModel.Search.LocalContentSuggestionSettings name=settings
-    method show deprecated
+    method show
         method Show slot=26 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=0 deprecated
         method Show slot=27 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPane shape=4 deprecated
             in string name=query
-    method try_set_query_text deprecated
+    method try_set_query_text
         method TrySetQueryText slot=30 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPane shape=51 deprecated
             in string name=query
             out boolean return
@@ -461,7 +461,7 @@ class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest python_type
     property search_suggestion_collection
         get get_SearchSuggestionCollection slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest shape=4 deprecated
             out class type=Windows.ApplicationModel.Search.SearchSuggestionCollection return
-    method get_deferral deprecated
+    method get_deferral
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest shape=4 deprecated
             out class type=Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral return
 
@@ -470,7 +470,7 @@ class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral pytho
     signature rc(Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral;{a0d009f7-8748-4ee2-ad44-afa6be997c51})
     default Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral
     requires Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral
-    method complete deprecated
+    method complete
         method Complete slot=6 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral shape=0 deprecated
 
 class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs python_type

@@ -1861,7 +1861,7 @@ class Windows.ApplicationModel.Package python_type
     method get_thumbnail_token
         method GetThumbnailToken slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.IPackageWithMetadata shape=4
             out string return
-    method launch deprecated
+    method launch
         method Launch slot=8 inputs=1 outputs=0 declaring=Windows.ApplicationModel.IPackageWithMetadata shape=4 deprecated
             in string name=parameters
     method set_in_use_async

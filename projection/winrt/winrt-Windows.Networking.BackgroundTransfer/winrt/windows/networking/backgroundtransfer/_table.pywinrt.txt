@@ -211,7 +211,7 @@ class Windows.Networking.BackgroundTransfer.BackgroundDownloader activatable pyt
         method GetCurrentDownloadsForTransferGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderStaticMethods2 shape=51 static
             in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=group
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.DownloadOperation>> return
-    method request_unconstrained_downloads_async static deprecated
+    method request_unconstrained_downloads_async static
         method RequestUnconstrainedDownloadsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundDownloaderUserConsent shape=51 static deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.DownloadOperation> name=operations
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> return
@@ -476,7 +476,7 @@ class Windows.Networking.BackgroundTransfer.BackgroundUploader activatable pytho
         method GetCurrentUploadsForTransferGroupAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderStaticMethods2 shape=51 static
             in class type=Windows.Networking.BackgroundTransfer.BackgroundTransferGroup name=group
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.BackgroundTransfer.UploadOperation>> return
-    method request_unconstrained_uploads_async static deprecated
+    method request_unconstrained_uploads_async static
         method RequestUnconstrainedUploadsAsync slot=6 inputs=1 outputs=1 declaring=Windows.Networking.BackgroundTransfer.IBackgroundUploaderUserConsent shape=51 static deprecated
             in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Networking.BackgroundTransfer.UploadOperation> name=operations
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult> return

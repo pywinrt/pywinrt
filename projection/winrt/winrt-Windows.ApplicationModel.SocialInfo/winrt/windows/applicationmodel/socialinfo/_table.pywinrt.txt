@@ -329,7 +329,7 @@ class Windows.ApplicationModel.SocialInfo.SocialItemThumbnail activatable python
             out struct type=Windows.Graphics.Imaging.BitmapSize return
         put put_BitmapSize slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=36 deprecated
             in struct type=Windows.Graphics.Imaging.BitmapSize name=value
-    method set_image_async deprecated
+    method set_image_async
         method SetImageAsync slot=12 inputs=1 outputs=1 declaring=Windows.ApplicationModel.SocialInfo.ISocialItemThumbnail shape=51 deprecated
             in interface type=Windows.Storage.Streams.IInputStream name=image
             out interface type=Windows.Foundation.IAsyncAction return

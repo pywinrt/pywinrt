@@ -2201,7 +2201,7 @@ class Windows.Media.Devices.IsoSpeedControl python_type
     method set_auto_async
         method SetAutoAsync slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl2 shape=4
             out interface type=Windows.Foundation.IAsyncAction return
-    method set_preset_async deprecated
+    method set_preset_async
         method SetPresetAsync slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.IIsoSpeedControl shape=51 deprecated
             in enum32 type=Windows.Media.Devices.IsoSpeedPreset name=preset
             out interface type=Windows.Foundation.IAsyncAction return

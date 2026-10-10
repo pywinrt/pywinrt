@@ -474,7 +474,7 @@ class Windows.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     method _get_orientation_core
         method GetOrientationCore slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=4 reverse=232 overridable
             out enum32 type=Windows.UI.Xaml.Automation.Peers.AutomationOrientation return
-    method get_parent deprecated
+    method get_parent
         method GetParent slot=35 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=4 deprecated
             out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return
     method get_pattern
@@ -485,7 +485,7 @@ class Windows.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
         method GetPatternCore slot=6 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeerOverrides shape=51 reverse=24 overridable
             in enum32 type=Windows.UI.Xaml.Automation.Peers.PatternInterface name=patternInterface
             out object return
-    method get_peer_from_point deprecated
+    method get_peer_from_point
         method GetPeerFromPoint slot=37 inputs=1 outputs=1 declaring=Windows.UI.Xaml.Automation.Peers.IAutomationPeer shape=79 deprecated
             in struct type=Windows.Foundation.Point name=point
             out class type=Windows.UI.Xaml.Automation.Peers.AutomationPeer return

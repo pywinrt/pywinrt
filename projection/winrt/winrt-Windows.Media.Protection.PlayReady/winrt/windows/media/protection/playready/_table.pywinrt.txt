@@ -352,17 +352,17 @@ interface Windows.Media.Protection.PlayReady.INDDownloadEngine python_type
     property notifier
         get get_Notifier slot=14 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=4 reverse=186 deprecated
             out class type=Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier return
-    method close deprecated
+    method close
         method Close slot=9 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=0 reverse=93 deprecated
-    method open deprecated
+    method open
         method Open slot=6 inputs=2 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=117 reverse=25 deprecated
             in class type=Windows.Foundation.Uri name=uri
             pass_array uint8 name=sessionIDBytes
-    method pause deprecated
+    method pause
         method Pause slot=7 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=0 reverse=37 deprecated
-    method resume deprecated
+    method resume
         method Resume slot=8 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=0 reverse=55 deprecated
-    method seek deprecated
+    method seek
         method Seek slot=10 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngine shape=26 reverse=134 deprecated
             in timespan name=startPosition
 
@@ -370,21 +370,21 @@ interface Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier python_ty
     py _INDDownloadEngineNotifier
     guid d720b4d4-f4b8-4530-a809-9193a571e7fc
     signature {d720b4d4-f4b8-4530-a809-9193a571e7fc}
-    method on_content_id_received deprecated
+    method on_content_id_received
         method OnContentIDReceived slot=8 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=4 reverse=62 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
-    method on_data_received deprecated
+    method on_data_received
         method OnDataReceived slot=9 inputs=2 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=117 reverse=101 deprecated
             pass_array uint8 name=dataBytes
             in uint32 name=bytesReceived
-    method on_end_of_stream deprecated
+    method on_end_of_stream
         method OnEndOfStream slot=10 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=117 deprecated
-    method on_network_error deprecated
+    method on_network_error
         method OnNetworkError slot=11 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=137 deprecated
-    method on_play_ready_object_received deprecated
+    method on_play_ready_object_received
         method OnPlayReadyObjectReceived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=51 reverse=44 deprecated
             pass_array uint8 name=dataBytes
-    method on_stream_opened deprecated
+    method on_stream_opened
         method OnStreamOpened slot=6 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=16 deprecated
 
 interface Windows.Media.Protection.PlayReady.INDLicenseFetchCompletedEventArgs python_type
@@ -426,26 +426,26 @@ interface Windows.Media.Protection.PlayReady.INDMessenger python_type
     py _INDMessenger
     guid d42df95d-a75b-47bf-8249-bc83820da38a
     signature {d42df95d-a75b-47bf-8249-bc83820da38a}
-    method send_license_fetch_request_async deprecated
+    method send_license_fetch_request_async
         method SendLicenseFetchRequestAsync slot=9 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=239 reverse=103 deprecated
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_proximity_detection_response_async deprecated
+    method send_proximity_detection_response_async
         method SendProximityDetectionResponseAsync slot=8 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=286 reverse=71 deprecated
             in enum32 type=Windows.Media.Protection.PlayReady.NDProximityDetectionType name=pdType
             pass_array uint8 name=transmitterChannelBytes
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=responseDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_proximity_detection_start_async deprecated
+    method send_proximity_detection_start_async
         method SendProximityDetectionStartAsync slot=7 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=286 reverse=47 deprecated
             in enum32 type=Windows.Media.Protection.PlayReady.NDProximityDetectionType name=pdType
             pass_array uint8 name=transmitterChannelBytes
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_registration_request_async deprecated
+    method send_registration_request_async
         method SendRegistrationRequestAsync slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=239 reverse=27 deprecated
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
@@ -495,7 +495,7 @@ interface Windows.Media.Protection.PlayReady.INDStorageFileHelper python_type
     py _INDStorageFileHelper
     guid d8f0bef8-91d2-4d47-a3f9-eaff4edb729f
     signature {d8f0bef8-91d2-4d47-a3f9-eaff4edb729f}
-    method get_file_u_r_ls deprecated
+    method get_file_u_r_ls
         method GetFileURLs slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDStorageFileHelper shape=51 reverse=24 deprecated
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
@@ -507,16 +507,16 @@ interface Windows.Media.Protection.PlayReady.INDStreamParser python_type
     property notifier
         get get_Notifier slot=10 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDStreamParser shape=4 reverse=121 deprecated
             out class type=Windows.Media.Protection.PlayReady.NDStreamParserNotifier return
-    method begin_of_stream deprecated
+    method begin_of_stream
         method BeginOfStream slot=8 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParser shape=0 reverse=55 deprecated
-    method end_of_stream deprecated
+    method end_of_stream
         method EndOfStream slot=9 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParser shape=0 reverse=93 deprecated
-    method get_stream_information deprecated
+    method get_stream_information
         method GetStreamInformation slot=7 inputs=1 outputs=2 declaring=Windows.Media.Protection.PlayReady.INDStreamParser shape=117 reverse=45 deprecated
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
             out enum32 type=Windows.Media.Protection.PlayReady.NDMediaStreamType name=streamType
             out uint32 return
-    method parse_data deprecated
+    method parse_data
         method ParseData slot=6 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParser shape=51 reverse=24 deprecated
             pass_array uint8 name=dataBytes
 
@@ -524,19 +524,19 @@ interface Windows.Media.Protection.PlayReady.INDStreamParserNotifier python_type
     py _INDStreamParserNotifier
     guid c167acd0-2ce6-426c-ace5-5e9275fea715
     signature {c167acd0-2ce6-426c-ace5-5e9275fea715}
-    method on_begin_setup_decryptor deprecated
+    method on_begin_setup_decryptor
         method OnBeginSetupDecryptor slot=9 inputs=3 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=216 reverse=104 deprecated
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
             in guid name=keyID
             pass_array uint8 name=proBytes
-    method on_content_id_received deprecated
+    method on_content_id_received
         method OnContentIDReceived slot=6 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=4 reverse=22 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
-    method on_media_stream_descriptor_created deprecated
+    method on_media_stream_descriptor_created
         method OnMediaStreamDescriptorCreated slot=7 inputs=2 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=51 reverse=44 deprecated
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> name=audioStreamDescriptors
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> name=videoStreamDescriptors
-    method on_sample_parsed deprecated
+    method on_sample_parsed
         method OnSampleParsed slot=8 inputs=6 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=277 reverse=67 deprecated
             in uint32 name=streamID
             in enum32 type=Windows.Media.Protection.PlayReady.NDMediaStreamType name=streamType
@@ -1334,17 +1334,17 @@ class Windows.Media.Protection.PlayReady.NDClient python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_RegistrationCompleted slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method close deprecated
+    method close
         method Close slot=19 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDClient shape=0 deprecated
-    method license_fetch_async deprecated
+    method license_fetch_async
         method LicenseFetchAsync slot=17 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDLicenseFetchResult> return
-    method re_registration_async deprecated
+    method re_registration_async
         method ReRegistrationAsync slot=18 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=51 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDCustomData name=registrationCustomData
             out interface type=Windows.Foundation.IAsyncAction return
-    method start_async deprecated
+    method start_async
         method StartAsync slot=16 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDClient shape=239 deprecated
             in class type=Windows.Foundation.Uri name=contentUrl
             in uint32 name=startAsyncOptions
@@ -1392,21 +1392,21 @@ class Windows.Media.Protection.PlayReady.NDDownloadEngineNotifier activatable py
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    method on_content_id_received deprecated
+    method on_content_id_received
         method OnContentIDReceived slot=8 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=4 reverse=62 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
-    method on_data_received deprecated
+    method on_data_received
         method OnDataReceived slot=9 inputs=2 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=117 reverse=101 deprecated
             pass_array uint8 name=dataBytes
             in uint32 name=bytesReceived
-    method on_end_of_stream deprecated
+    method on_end_of_stream
         method OnEndOfStream slot=10 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=117 deprecated
-    method on_network_error deprecated
+    method on_network_error
         method OnNetworkError slot=11 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=137 deprecated
-    method on_play_ready_object_received deprecated
+    method on_play_ready_object_received
         method OnPlayReadyObjectReceived slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=51 reverse=44 deprecated
             pass_array uint8 name=dataBytes
-    method on_stream_opened deprecated
+    method on_stream_opened
         method OnStreamOpened slot=6 inputs=0 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDDownloadEngineNotifier shape=0 reverse=16 deprecated
 
 class Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor python_type
@@ -1460,7 +1460,7 @@ class Windows.Media.Protection.PlayReady.NDStorageFileHelper activatable python_
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    method get_file_u_r_ls deprecated
+    method get_file_u_r_ls
         method GetFileURLs slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDStorageFileHelper shape=51 reverse=24 deprecated
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
@@ -1473,19 +1473,19 @@ class Windows.Media.Protection.PlayReady.NDStreamParserNotifier activatable pyth
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    method on_begin_setup_decryptor deprecated
+    method on_begin_setup_decryptor
         method OnBeginSetupDecryptor slot=9 inputs=3 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=216 reverse=104 deprecated
             in interface type=Windows.Media.Core.IMediaStreamDescriptor name=descriptor
             in guid name=keyID
             pass_array uint8 name=proBytes
-    method on_content_id_received deprecated
+    method on_content_id_received
         method OnContentIDReceived slot=6 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=4 reverse=22 deprecated
             in interface type=Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor name=licenseFetchDescriptor
-    method on_media_stream_descriptor_created deprecated
+    method on_media_stream_descriptor_created
         method OnMediaStreamDescriptorCreated slot=7 inputs=2 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=51 reverse=44 deprecated
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.AudioStreamDescriptor> name=audioStreamDescriptors
             in parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Core.VideoStreamDescriptor> name=videoStreamDescriptors
-    method on_sample_parsed deprecated
+    method on_sample_parsed
         method OnSampleParsed slot=8 inputs=6 outputs=0 declaring=Windows.Media.Protection.PlayReady.INDStreamParserNotifier shape=277 reverse=67 deprecated
             in uint32 name=streamID
             in enum32 type=Windows.Media.Protection.PlayReady.NDMediaStreamType name=streamType
@@ -1505,26 +1505,26 @@ class Windows.Media.Protection.PlayReady.NDTCPMessenger python_type
             in string name=remoteHostName
             in uint32 name=remoteHostPort
             out class type=Windows.Media.Protection.PlayReady.NDTCPMessenger return
-    method send_license_fetch_request_async deprecated
+    method send_license_fetch_request_async
         method SendLicenseFetchRequestAsync slot=9 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=239 reverse=103 deprecated
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_proximity_detection_response_async deprecated
+    method send_proximity_detection_response_async
         method SendProximityDetectionResponseAsync slot=8 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=286 reverse=71 deprecated
             in enum32 type=Windows.Media.Protection.PlayReady.NDProximityDetectionType name=pdType
             pass_array uint8 name=transmitterChannelBytes
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=responseDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_proximity_detection_start_async deprecated
+    method send_proximity_detection_start_async
         method SendProximityDetectionStartAsync slot=7 inputs=4 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=286 reverse=47 deprecated
             in enum32 type=Windows.Media.Protection.PlayReady.NDProximityDetectionType name=pdType
             pass_array uint8 name=transmitterChannelBytes
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.Protection.PlayReady.INDSendResult> return
-    method send_registration_request_async deprecated
+    method send_registration_request_async
         method SendRegistrationRequestAsync slot=6 inputs=2 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDMessenger shape=239 reverse=27 deprecated
             pass_array uint8 name=sessionIDBytes
             pass_array uint8 name=challengeDataBytes
