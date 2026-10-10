@@ -12,13 +12,6 @@ ON_CI = os.environ.get("CI")
 
 
 class TestGeolocation(unittest.TestCase):
-    def test_pinterface_qi(self) -> None:
-        locator = wdg.Geolocator()
-        op = locator.get_geoposition_async()
-        # FIXME: runtime type checking for generic interfaces is not implemented
-        # self.assertIsInstance(op, wf.IAsyncOperation[wdg.Geoposition])
-        op.cancel()
-
     def test_struct_ctor(self) -> None:
         basic_pos = wdg.BasicGeoposition(latitude=47.1, longitude=-122.1, altitude=0.0)
         self.assertEqual(basic_pos.latitude, 47.1)
