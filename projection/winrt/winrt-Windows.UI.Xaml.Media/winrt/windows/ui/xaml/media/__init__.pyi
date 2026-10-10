@@ -739,6 +739,9 @@ class GeneralTransform(windows_ui_xaml.DependencyObject, metaclass=GeneralTransf
     @_property
     @typing.final
     def inverse(self) -> GeneralTransform: ...
+    # Windows.UI.Xaml.Media.GeneralTransform Windows.UI.Xaml.Media.GeneralTransform::get_InverseCore()
+    @_property
+    def _inverse_core(self) -> GeneralTransform: ...
 
 class Geometry_Static(windows_ui_xaml.DependencyObject_Static):
     # Windows.UI.Xaml.Media.Geometry Windows.UI.Xaml.Media.Geometry::get_Empty()
@@ -2131,6 +2134,14 @@ class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static)
     @fallback_color.setter
     @typing.final
     def fallback_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    # Windows.UI.Composition.CompositionBrush Windows.UI.Xaml.Media.XamlCompositionBrushBase::get_CompositionBrush()
+    @_property
+    @typing.final
+    def _composition_brush(self) -> windows_ui_composition.CompositionBrush: ...
+    # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::put_CompositionBrush(Windows.UI.Composition.CompositionBrush)
+    @_composition_brush.setter
+    @typing.final
+    def _composition_brush(self, value: windows_ui_composition.CompositionBrush) -> None: ...
 
 class XamlLight_Static(windows_ui_xaml.DependencyObject_Static):
     # System.Void Windows.UI.Xaml.Media.XamlLight::AddTargetBrush(System.String,Windows.UI.Xaml.Media.Brush)
@@ -2150,6 +2161,14 @@ class XamlLight(windows_ui_xaml.DependencyObject, metaclass=XamlLight_Static):
     def _on_connected(self, new_element: windows_ui_xaml.UIElement, /) -> None: ...
     # System.Void Windows.UI.Xaml.Media.XamlLight::OnDisconnected(Windows.UI.Xaml.UIElement)
     def _on_disconnected(self, old_element: windows_ui_xaml.UIElement, /) -> None: ...
+    # Windows.UI.Composition.CompositionLight Windows.UI.Xaml.Media.XamlLight::get_CompositionLight()
+    @_property
+    @typing.final
+    def _composition_light(self) -> windows_ui_composition.CompositionLight: ...
+    # System.Void Windows.UI.Xaml.Media.XamlLight::put_CompositionLight(Windows.UI.Composition.CompositionLight)
+    @_composition_light.setter
+    @typing.final
+    def _composition_light(self, value: windows_ui_composition.CompositionLight) -> None: ...
 
 type RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], object]
 type TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], object]

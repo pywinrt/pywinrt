@@ -1765,6 +1765,12 @@ class LayoutContext(windows_ui_xaml.DependencyObject, metaclass=LayoutContext_St
     @layout_state.setter
     @typing.final
     def layout_state(self, value: winrt.system.Object) -> None: ...
+    # System.Object Microsoft.UI.Xaml.Controls.LayoutContext::get_LayoutStateCore()
+    @_property
+    def _layout_state_core(self) -> winrt.system.Object: ...
+    # System.Void Microsoft.UI.Xaml.Controls.LayoutContext::put_LayoutStateCore(System.Object)
+    @_layout_state_core.setter
+    def _layout_state_core(self, value: winrt.system.Object) -> None: ...
 
 class MenuBar_Static(windows_ui_xaml_controls.Control_Static):
     # Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.MenuBar::get_ItemsProperty()
@@ -2592,6 +2598,9 @@ class NonVirtualizingLayoutContext(LayoutContext, metaclass=NonVirtualizingLayou
     @_property
     @typing.final
     def children(self) -> _cabc.Sequence[windows_ui_xaml.UIElement]: ...
+    # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Xaml.UIElement> Microsoft.UI.Xaml.Controls.NonVirtualizingLayoutContext::get_ChildrenCore()
+    @_property
+    def _children_core(self) -> _cabc.Sequence[windows_ui_xaml.UIElement]: ...
 
 class NumberBox_Static(windows_ui_xaml_controls.Control_Static):
     # Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.NumberBox::get_AcceptsExpressionProperty()
@@ -5719,6 +5728,15 @@ class VirtualizingLayoutContext(LayoutContext, metaclass=VirtualizingLayoutConte
     @_property
     @typing.final
     def recommended_anchor_index(self) -> winrt.system.Int32: ...
+    # Windows.Foundation.Point Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_LayoutOriginCore()
+    @_property
+    def _layout_origin_core(self) -> windows_foundation.Point: ...
+    # System.Void Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::put_LayoutOriginCore(Windows.Foundation.Point)
+    @_layout_origin_core.setter
+    def _layout_origin_core(self, value: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
+    # System.Int32 Microsoft.UI.Xaml.Controls.VirtualizingLayoutContext::get_RecommendedAnchorIndexCore()
+    @_property
+    def _recommended_anchor_index_core(self) -> winrt.system.Int32: ...
 
 class WebView2_Static(windows_ui_xaml_controls.Control_Static):
     # Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.WebView2::get_CanGoBackProperty()

@@ -69,6 +69,9 @@ GROUP_STATIC = 1 << 3
 MEMBER_PROPERTY_GET = 1
 MEMBER_CONSTRUCTOR = 5
 
+MEMBER_OVERRIDABLE = 1 << 4
+MEMBER_PROTECTED = 1 << 5
+
 NO_REF = 0xFFFFFFFF
 
 # The part a member plays in a Python protocol, in the free bits of its flags.
@@ -405,6 +408,35 @@ class TestTableContents(unittest.TestCase):
         )
         self.assertEqual(
             [p["is_fill_buffer"] for p in write_async["params"]], [False, False]
+        )
+
+    def test_a_protected_or_overridable_property_has_an_underscore(self) -> None:
+        # A templated control sets Control.DefaultStyleKey, which comes through
+        # IControlProtected, and a class derived from GeneralTransform provides
+        # InverseCore, which IGeneralTransformOverrides declares.
+        control = defined(read("winrt", "windows", "ui", "xaml", "controls"))["Control"]
+        media = defined(read("winrt", "windows", "ui", "xaml", "media"))
+        default_style_key = groups(control)["_default_style_key"]
+        inverse_core = groups(media["GeneralTransform"])["_inverse_core"]
+
+        self.assertEqual(default_style_key["kind"], GROUP_PROPERTY)
+        self.assertEqual(
+            [m["winrt_name"] for m in default_style_key["members"]],
+            ["get_DefaultStyleKey", "put_DefaultStyleKey"],
+        )
+        self.assertEqual(
+            [
+                m["flags"] & (MEMBER_PROTECTED | MEMBER_OVERRIDABLE)
+                for m in default_style_key["members"]
+            ],
+            [MEMBER_PROTECTED, MEMBER_PROTECTED],
+        )
+        self.assertEqual(
+            [
+                m["flags"] & (MEMBER_PROTECTED | MEMBER_OVERRIDABLE)
+                for m in inverse_core["members"]
+            ],
+            [MEMBER_OVERRIDABLE],
         )
 
     def test_an_event_is_an_add_and_a_remove(self) -> None:
