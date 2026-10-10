@@ -7,9 +7,15 @@ Runtime. This has to be installed manually by the end user. Read the
 [PyWinRT Windows App SDK documentation](https://pywinrt.readthedocs.io/en/latest/api/microsoft/)
 for more information.
 
-Windows Runtime (WinRT) APIs for the `Microsoft.UI.Interop` namespace.
+Converts window, monitor and icon handles to and from the `WindowId`, `DisplayId` and `IconId` that Windows App SDK APIs take.
 
 This package provides the `winrt.microsoft.ui.interop` module.
 
-The WinRT APIs in it are those of version 2.5.1 of the
-`Microsoft.WindowsAppSDK` NuGet package.
+It is built against version 2.5.1 of the `Microsoft.WindowsAppSDK`
+NuGet package.
+
+```
+pip install winrt-Microsoft.UI.Interop
+```
+
+installs it with `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`.

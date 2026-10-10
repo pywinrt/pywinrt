@@ -2,9 +2,12 @@
 
 # winrt-Windows.Graphics.DirectX.Direct3D11.Interop
 
-Windows Runtime (WinRT) APIs for the `Windows.Graphics.DirectX.Direct3D11.Interop` namespace.
+Converts between DXGI devices and surfaces and the `IDirect3DDevice` and `IDirect3DSurface` that WinRT APIs take.
 
 This package provides the `winrt.windows.graphics.directx.direct3d11.interop` module.
 
-The WinRT APIs in it are those of version 10.0.28000.2705 of the
-`Microsoft.Windows.SDK.CPP` NuGet package.
+```
+pip install winrt-Windows.Graphics.DirectX.Direct3D11.Interop
+```
+
+installs it with `winrt-Windows.Graphics.DirectX.Direct3D11`.

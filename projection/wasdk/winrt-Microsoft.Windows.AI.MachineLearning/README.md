@@ -16,3 +16,10 @@ The WinRT APIs in it are those of version 2.5.1 of the
 
 Its metadata comes from the `Microsoft.Windows.AI.MachineLearning` component,
 version 2.1.74.
+
+```
+pip install winrt-Microsoft.Windows.AI.MachineLearning
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

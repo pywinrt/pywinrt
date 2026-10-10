@@ -16,3 +16,10 @@ The WinRT APIs in it are those of version 2.5.1 of the
 
 Its metadata comes from the `Microsoft.WindowsAppSDK.Search` component,
 version 2.5.5.
+
+```
+pip install winrt-Microsoft.WindowsAppSDK.Search
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

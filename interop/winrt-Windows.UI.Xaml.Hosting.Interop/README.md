@@ -2,9 +2,10 @@
 
 # winrt-Windows.UI.Xaml.Hosting.Interop
 
-Windows Runtime (WinRT) APIs for the `Windows.UI.Xaml.Hosting.Interop` namespace.
+Attaches a `DesktopWindowXamlSource` to a window and hands it the window's messages, for XAML Islands.
 
 This package provides the `winrt.windows.ui.xaml.hosting.interop` module.
 
-The WinRT APIs in it are those of version 10.0.28000.2705 of the
-`Microsoft.Windows.SDK.CPP` NuGet package.
+```
+pip install winrt-Windows.UI.Xaml.Hosting.Interop
+```
