@@ -590,7 +590,7 @@ def write_compiled_project_files(
                         sbom_name=SBOM_NAME,
                         package_name=package_name,
                         normalized_name=normalize_package_name(package_name),
-                        version=FAMILY_VERSIONS[package_families[package_name]],
+                        version=versions.read_version(package_path / "version.txt"),
                         nuget_package=redistributes.nuget_package,
                         nuget_version=NUGET_PACKAGE_VERSIONS[
                             redistributes.nuget_package
