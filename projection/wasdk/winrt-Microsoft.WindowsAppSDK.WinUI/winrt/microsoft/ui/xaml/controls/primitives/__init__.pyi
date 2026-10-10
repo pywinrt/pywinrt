@@ -367,8 +367,8 @@ class ButtonBase_Static(microsoft_ui_xaml_controls.ContentControl_Static):
     def is_pressed_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ButtonBase(microsoft_ui_xaml_controls.ContentControl, metaclass=ButtonBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ButtonBase's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.Primitives.ButtonBase::add_Click(Microsoft.UI.Xaml.RoutedEventHandler)
     def add_click(self, handler: microsoft_ui_xaml.RoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -1099,8 +1099,8 @@ class FlyoutBase_Static(microsoft_ui_xaml.DependencyObject_Static):
     def system_backdrop_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class FlyoutBase(microsoft_ui_xaml.DependencyObject, metaclass=FlyoutBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """FlyoutBase's constructor is protected: derive a class from it and create that."""
     # Microsoft.UI.Xaml.Controls.Control Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase::CreatePresenter()
     def _create_presenter(self) -> microsoft_ui_xaml_controls.Control: ...
     @typing.final
@@ -2698,8 +2698,8 @@ class PickerFlyoutBase_Static(FlyoutBase_Static):
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class PickerFlyoutBase(FlyoutBase, metaclass=PickerFlyoutBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """PickerFlyoutBase's constructor is protected: derive a class from it and create that."""
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase::OnConfirmed()
     def _on_confirmed(self) -> None: ...
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.PickerFlyoutBase::ShouldShowConfirmationButtons()
@@ -2884,8 +2884,8 @@ class RangeBase_Static(microsoft_ui_xaml_controls.Control_Static):
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class RangeBase(microsoft_ui_xaml_controls.Control, metaclass=RangeBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """RangeBase's constructor is protected: derive a class from it and create that."""
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.RangeBase::OnMaximumChanged(System.Double,System.Double)
     def _on_maximum_changed(self, old_maximum: winrt.system.Double, new_maximum: winrt.system.Double, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.RangeBase::OnMinimumChanged(System.Double,System.Double)
@@ -3583,8 +3583,8 @@ class SelectorItem_Static(microsoft_ui_xaml_controls.ContentControl_Static):
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class SelectorItem(microsoft_ui_xaml_controls.ContentControl, metaclass=SelectorItem_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """SelectorItem's constructor is protected: derive a class from it and create that."""
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.SelectorItem::get_IsSelected()
     @_property
     def is_selected(self) -> bool: ...

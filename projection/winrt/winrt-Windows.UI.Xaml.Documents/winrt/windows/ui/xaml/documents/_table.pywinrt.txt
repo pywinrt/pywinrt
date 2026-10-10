@@ -12,6 +12,11 @@ class Windows.UI.Xaml.Documents.Block composable python_type
     factory Windows.UI.Xaml.Documents.IBlockStatics
     factory Windows.UI.Xaml.Documents.IBlockStatics2
     composable Windows.UI.Xaml.Documents.IBlockFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlockFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Documents.Block return
     property text_alignment
         get get_TextAlignment slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IBlock shape=4
             out enum32 type=Windows.UI.Xaml.TextAlignment return
@@ -293,6 +298,11 @@ class Windows.UI.Xaml.Documents.ContentLinkProvider composable python_type
     default Windows.UI.Xaml.Documents.IContentLinkProvider
     requires Windows.UI.Xaml.Documents.IContentLinkProvider
     composable Windows.UI.Xaml.Documents.IContentLinkProviderFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IContentLinkProviderFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Documents.ContentLinkProvider return
 
 class Windows.UI.Xaml.Documents.ContentLinkProviderCollection activatable python_type iterable sequence mutable_sequence
     py ContentLinkProviderCollection
@@ -1227,6 +1237,11 @@ class Windows.UI.Xaml.Documents.Inline composable python_type
     default Windows.UI.Xaml.Documents.IInline
     requires Windows.UI.Xaml.Documents.IInline
     composable Windows.UI.Xaml.Documents.IInlineFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Documents.IInlineFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Documents.Inline return
 
 class Windows.UI.Xaml.Documents.InlineCollection python_type iterable sequence mutable_sequence
     py InlineCollection

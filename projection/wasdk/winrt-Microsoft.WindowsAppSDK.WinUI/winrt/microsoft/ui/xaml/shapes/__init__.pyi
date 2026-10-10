@@ -204,8 +204,8 @@ class Shape_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def stroke_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Shape(microsoft_ui_xaml.FrameworkElement, metaclass=Shape_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Shape's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Xaml.Shapes.Shape::GetAlphaMask()
     def get_alpha_mask(self) -> microsoft_ui_composition.CompositionBrush: ...

@@ -89,8 +89,8 @@ class Block_Static(TextElement_Static):
     def horizontal_text_alignment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Block(TextElement, metaclass=Block_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Block's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.TextAlignment Windows.UI.Xaml.Documents.Block::get_TextAlignment()
     @_property
     def text_alignment(self) -> windows_ui_xaml.TextAlignment: ...
@@ -350,8 +350,8 @@ class ContentLinkProvider_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class ContentLinkProvider(windows_ui_xaml.DependencyObject, metaclass=ContentLinkProvider_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ContentLinkProvider's constructor is protected: derive a class from it and create that."""
 
 @typing.final
 class ContentLinkProviderCollection(_cabc.MutableSequence[ContentLinkProvider], winrt.system.Object):
@@ -649,8 +649,8 @@ class Inline_Static(TextElement_Static):
     ...
 
 class Inline(TextElement, metaclass=Inline_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Inline's constructor is protected: derive a class from it and create that."""
 
 @typing.final
 class InlineCollection(_cabc.MutableSequence[Inline], winrt.system.Object):

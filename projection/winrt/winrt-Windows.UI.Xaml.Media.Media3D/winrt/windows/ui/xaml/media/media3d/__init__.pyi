@@ -228,6 +228,6 @@ class Transform3D_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Transform3D(windows_ui_xaml.DependencyObject, metaclass=Transform3D_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Transform3D's constructor is protected: derive a class from it and create that."""
 
