@@ -87,7 +87,7 @@ class Build(Enum):
     # in the package is compiled either, but what it carries is one
     # architecture's binary
     REDIST = "redist"
-    # the 15-build cibuildwheel matrix
+    # a cibuildwheel build per Python and architecture
     COMPILED = "compiled"
 
 

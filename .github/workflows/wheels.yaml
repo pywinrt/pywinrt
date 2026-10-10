@@ -115,9 +115,9 @@ jobs:
           name: pure_${{ github.run_id }}
           path: wheelhouse/
   # winrt-runtime and the eight interop modules, which are what is left of the
-  # 15-build matrix now that nothing else compiles. It waits for the pure job
-  # because an interop wheel's import test installs the projection packages it
-  # depends on, and those are the other job's output.
+  # build per Python and architecture now that nothing else compiles. It waits
+  # for the pure job because an interop wheel's import test installs the
+  # projection packages it depends on, and those are the other job's output.
   bdist:
     needs: pure
     runs-on: windows-latest

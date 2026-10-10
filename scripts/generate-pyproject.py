@@ -607,8 +607,8 @@ def write_compiled_project_files(
     Writes the packaging of winrt-runtime or one of the interop packages.
 
     These are the only packages left that compile anything, so they are the
-    only ones that still need setuptools, a setup.py and the 15-build
-    cibuildwheel matrix.
+    only ones that still need setuptools, a setup.py and a cibuildwheel build
+    per Python and architecture.
     """
     # winrt-runtime lives outside of projection/, and the bootstrap package's
     # directory is shortened, so the caller says which distribution this is
