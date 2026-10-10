@@ -22,6 +22,7 @@ repository](../CHANGELOG.md).
 - A negative unsigned integer raises `ValueError`, not `OverflowError`.
 - An `async def` function given as a delegate handler now raises `TypeError`.
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
+- Adding `None` as an event handler now raises `TypeError` instead of crashing.
 
 ### Deprecated
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
