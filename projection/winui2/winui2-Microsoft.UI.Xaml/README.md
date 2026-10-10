@@ -15,3 +15,10 @@ This package provides the following modules:
 
 The WinRT APIs in it are those of version 2.8.7 of the
 `Microsoft.UI.Xaml` NuGet package.
+
+```
+pip install winui2-Microsoft.UI.Xaml
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

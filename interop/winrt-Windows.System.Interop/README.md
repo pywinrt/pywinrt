@@ -2,9 +2,12 @@
 
 # winrt-Windows.System.Interop
 
-Windows Runtime (WinRT) APIs for the `Windows.System.Interop` namespace.
+Creates a `DispatcherQueueController` on the current thread or on a dedicated one of its own.
 
 This package provides the `winrt.windows.system.interop` module.
 
-The WinRT APIs in it are those of version 10.0.28000.2705 of the
-`Microsoft.Windows.SDK.CPP` NuGet package.
+```
+pip install winrt-Windows.System.Interop
+```
+
+installs it with `winrt-Windows.System`.
