@@ -511,10 +511,6 @@ namespace py::table
 
         type_view type(uint32_t index) const;
 
-        /// Finds a type this namespace defines by its WinRT name, or returns
-        /// @c no_ref. The defined types come first and are sorted by name.
-        uint32_t find_type(std::string_view name) const;
-
         uint32_t group_count() const noexcept
         {
             return group_count_;

@@ -359,44 +359,6 @@ namespace py::table
         return type_view{this, index};
     }
 
-    uint32_t file::find_type(std::string_view name) const
-    {
-        // The types this namespace defines come first, sorted by name, so the
-        // search stops at the first external record.
-        uint32_t low = 0;
-        uint32_t high = type_count_;
-
-        while (low < high)
-        {
-            auto const middle = low + (high - low) / 2;
-            auto const candidate = type(middle);
-
-            if (candidate.is_external())
-            {
-                high = middle;
-                continue;
-            }
-
-            auto const comparison = candidate.name().compare(name);
-
-            if (comparison == 0)
-            {
-                return middle;
-            }
-
-            if (comparison < 0)
-            {
-                low = middle + 1;
-            }
-            else
-            {
-                high = middle;
-            }
-        }
-
-        return no_ref;
-    }
-
     struct_layout file::get_struct_layout(type_view type) const
     {
         struct_layout result{0, 1, {}};

@@ -343,8 +343,8 @@ tag appears at most once.
 | 22, 23 | enum constants, a first index into `CNST` and a count |
 
 The records of the types the namespace defines come first, sorted by WinRT name,
-so that a lookup by name is a binary search. The external references follow in
-the order they were first needed.
+so that their order is the namespace's and not the generator's. The external
+references follow in the order they were first needed.
 
 A **concrete parameterized type** - `IVector<String>` - carries a full set of
 member groups of its own, which are the members of the parameterized type it is
