@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 import app_sdk
+import versions
 
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 
@@ -73,14 +74,7 @@ MINIMAL_NAMESPACES = [
     "Windows.Graphics.DirectX",
     "Windows.Storage.Streams",
 ]
-WINDOWS_SDK = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.Windows.SDK.CPP")
-    / "c"
-    / "References"
-    / "10.0.28000.0"
-)
+WINDOWS_SDK = versions.windows_sdk_metadata_path()
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
 include_args: list[str] = []
