@@ -382,7 +382,8 @@ static class ObjectWriterExtensions
             var nextType = prop.Property.PropertyType.ToPyTypeName(
                 ns,
                 nullabilityInfo.Return.Type,
-                packageMap
+                packageMap,
+                useBufferProtocol: false
             );
             w.WriteLine("def __iter__(self) -> typing.Self: ...");
             w.WriteLine($"def __next__(self) -> {nextType}: ...");

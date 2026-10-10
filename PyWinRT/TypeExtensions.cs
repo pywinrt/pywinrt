@@ -128,7 +128,8 @@ static class TypeExtensions
         bool usePythonCollectionTypes = true,
         bool useStructTupleUnion = false,
         bool useKeyValuePairIterMappingUnion = false,
-        bool isUnpack = false
+        bool isUnpack = false,
+        bool useBufferProtocol = true
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
@@ -150,13 +151,14 @@ static class TypeExtensions
                             new TypeRefNullabilityInfo(map[p]),
                             packageMap,
                             default,
-                            quoteImportedTypes
+                            quoteImportedTypes,
+                            useBufferProtocol: useBufferProtocol
                         ),
                 // a nullability rule by type; the rules by member are in
                 // NullabilityRules
                 GenericInstanceType gen
                     when gen.ElementType.FullName == "Windows.Foundation.IReference`1" =>
-                    $"{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)} | None",
+                    $"{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)} | None",
                 GenericInstanceType gen
                     when useKeyValuePairIterMappingUnion
                         && usePythonCollectionTypes
@@ -164,32 +166,32 @@ static class TypeExtensions
                         && gen.GenericArguments[0] is GenericInstanceType gen2
                         && gen2.ElementType.FullName
                             == "Windows.Foundation.Collections.IKeyValuePair`2" =>
-                    $"_cabc.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes)))}] | {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}",
+                    $"_cabc.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}] | {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IIterable`1" =>
-                    $"_cabc.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1" =>
-                    $"_cabc.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IVectorView`1" =>
-                    $"_cabc.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    $"_cabc.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2" =>
-                    $"_cabc.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                    $"_cabc.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IMapView`2" =>
-                    $"_cabc.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                    $"_cabc.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}]",
                 GenericInstanceType gen =>
-                    $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
+                    $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, useBufferProtocol: useBufferProtocol)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
                 // An [in] struct that the metadata spells `T& modopt(IsConst)`,
                 // passed by reference, takes what one passed by value does.
                 ByReferenceType t => t.ElementType.ToPyTypeName(
@@ -237,8 +239,10 @@ static class TypeExtensions
                 { FullName: "System.Object" } => "winrt.system.Object",
                 { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
-                { FullName: "Windows.Storage.Streams.IBuffer" } when usePythonCollectionTypes =>
-                    "winrt.system.Buffer",
+                // Any Python buffer is taken where an IBuffer goes in, and
+                // what comes out is the projected IBuffer, which is one too.
+                { FullName: "Windows.Storage.Streams.IBuffer" }
+                    when usePythonCollectionTypes && useBufferProtocol => "winrt.system.Buffer",
                 // The integer structs are int subclasses, so neither is unpacked
                 // into a tuple or accepted as one. An HRESULT is also accepted as
                 // a plain int, which is what the winrt.system.hresult constants
@@ -335,7 +339,8 @@ static class TypeExtensions
                 nullabilityInfo,
                 packageMap,
                 map,
-                quoteImportedTypes
+                quoteImportedTypes,
+                useBufferProtocol: false
             ),
             // REVISIT: Do we need a different type hint for the winrt::array_view wrapper?
             // REVISIT: Do we want separate types for read-only arrays (PassArray)?
@@ -366,7 +371,8 @@ static class TypeExtensions
                 nullabilityInfo,
                 packageMap,
                 map,
-                quoteImportedTypes
+                quoteImportedTypes,
+                useBufferProtocol: false
             ),
             ParamCategory.ReceiveArray =>
                 $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}]",
@@ -470,7 +476,8 @@ static class TypeExtensions
                         nullabilityInfo.Return.Type,
                         packageMap,
                         map,
-                        quoteImportedTypes
+                        quoteImportedTypes,
+                        useBufferProtocol: false
                     )
                 );
             }
