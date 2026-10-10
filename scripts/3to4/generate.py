@@ -27,6 +27,7 @@ Run it from the repository root after `dotnet build PyWinRT -c Release` and
 scripts/fetch-tools.ps1, with the v3.2.1 tag fetched.
 """
 
+import argparse
 import ast
 import csv
 import io
@@ -494,4 +495,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # nothing to choose, but --help says what the script does rather than
+    # starting the whole run
+    argparse.ArgumentParser(
+        description="Writes the tables that inspect_source.py reads."
+    ).parse_args()
+
     main()

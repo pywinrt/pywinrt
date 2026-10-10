@@ -23,6 +23,7 @@ installed PyWinRT package, and each package that compiles carries the headers
 it includes in its source distribution rather than as package data.
 """
 
+import argparse
 import email
 import json
 import sys
@@ -181,6 +182,17 @@ def main(wheelhouse: Path) -> int:
 
 
 if __name__ == "__main__":
-    argument = sys.argv[1] if len(sys.argv) > 1 else PROJECT_DIR / "wheelhouse"
+    parser = argparse.ArgumentParser(
+        description="Checks that every wheel in a wheelhouse carries what it says"
+        " it carries."
+    )
+    parser.add_argument(
+        "wheelhouse",
+        nargs="?",
+        type=Path,
+        default=PROJECT_DIR / "wheelhouse",
+        help="the directory of wheels to check (default: wheelhouse/)",
+    )
+    args = parser.parse_args()
 
-    sys.exit(main(Path(argument)))
+    sys.exit(main(args.wheelhouse))
