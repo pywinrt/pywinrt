@@ -4903,8 +4903,8 @@ class Control_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Control's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.Boolean Microsoft.UI.Xaml.Controls.Control::ApplyTemplate()
     def apply_template(self) -> bool: ...
@@ -8435,8 +8435,8 @@ class ListViewBase_Static(microsoft_ui_xaml_controls_primitives.Selector_Static)
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class ListViewBase(microsoft_ui_xaml_controls_primitives.Selector, ISemanticZoomInformation, metaclass=ListViewBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """ListViewBase's constructor is protected: derive a class from it and create that."""
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChange()
     def complete_view_change(self) -> None: ...
     # System.Void Microsoft.UI.Xaml.Controls.ListViewBase::CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation,Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
@@ -10575,8 +10575,8 @@ class Panel_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def is_items_host_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 class Panel(microsoft_ui_xaml.FrameworkElement, metaclass=Panel_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """Panel's constructor is protected: derive a class from it and create that."""
     # Microsoft.UI.Xaml.Media.Animation.TransitionCollection Microsoft.UI.Xaml.Controls.Panel::get_ChildrenTransitions()
     @_property
     def children_transitions(self) -> microsoft_ui_xaml_media_animation.TransitionCollection: ...

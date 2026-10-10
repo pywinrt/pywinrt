@@ -521,6 +521,11 @@ class Microsoft.UI.Xaml.Media.RevealBrush composable python_type
     requires Microsoft.UI.Xaml.Media.IRevealBrush
     factory Microsoft.UI.Xaml.Media.IRevealBrushStatics
     composable Microsoft.UI.Xaml.Media.IRevealBrushProtectedFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrushProtectedFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.RevealBrush return
     property target_theme
         get get_TargetTheme slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IRevealBrush shape=4
             out enum32 type=Windows.UI.Xaml.ApplicationTheme return

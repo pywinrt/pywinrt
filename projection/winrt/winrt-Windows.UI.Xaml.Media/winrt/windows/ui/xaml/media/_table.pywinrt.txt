@@ -216,6 +216,11 @@ class Windows.UI.Xaml.Media.Brush composable python_type
     factory Windows.UI.Xaml.Media.IBrushStatics
     composable Windows.UI.Xaml.Media.IBrushFactory
     overridable Windows.UI.Xaml.Media.IBrushOverrides2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.Brush return
     property transform
         get get_Transform slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IBrush shape=4
             out class type=Windows.UI.Xaml.Media.Transform return
@@ -316,6 +321,11 @@ class Windows.UI.Xaml.Media.CacheMode composable python_type
     default Windows.UI.Xaml.Media.ICacheMode
     requires Windows.UI.Xaml.Media.ICacheMode
     composable Windows.UI.Xaml.Media.ICacheModeFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ICacheModeFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.CacheMode return
 
 enum Windows.UI.Xaml.Media.ColorInterpolationMode python_type
     py ColorInterpolationMode
@@ -592,6 +602,11 @@ class Windows.UI.Xaml.Media.GeneralTransform composable python_type
     requires Windows.UI.Xaml.Media.IGeneralTransformOverrides
     composable Windows.UI.Xaml.Media.IGeneralTransformFactory
     overridable Windows.UI.Xaml.Media.IGeneralTransformOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransformFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.GeneralTransform return
     property inverse
         get get_Inverse slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGeneralTransform shape=4
             out class type=Windows.UI.Xaml.Media.GeneralTransform return
@@ -736,6 +751,11 @@ class Windows.UI.Xaml.Media.GradientBrush composable python_type
     requires Windows.UI.Xaml.Media.IGradientBrush
     factory Windows.UI.Xaml.Media.IGradientBrushStatics
     composable Windows.UI.Xaml.Media.IGradientBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.GradientBrush return
     property spread_method
         get get_SpreadMethod slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IGradientBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.GradientSpreadMethod return
@@ -3185,6 +3205,11 @@ class Windows.UI.Xaml.Media.Projection composable python_type
     default Windows.UI.Xaml.Media.IProjection
     requires Windows.UI.Xaml.Media.IProjection
     composable Windows.UI.Xaml.Media.IProjectionFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IProjectionFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.Projection return
 
 class Windows.UI.Xaml.Media.QuadraticBezierSegment activatable python_type
     py QuadraticBezierSegment
@@ -3303,6 +3328,11 @@ class Windows.UI.Xaml.Media.RevealBrush composable python_type
     requires Windows.UI.Xaml.Media.IRevealBrush
     factory Windows.UI.Xaml.Media.IRevealBrushStatics
     composable Windows.UI.Xaml.Media.IRevealBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.RevealBrush return
     property target_theme
         get get_TargetTheme slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IRevealBrush shape=4
             out enum32 type=Windows.UI.Xaml.ApplicationTheme return
@@ -3557,6 +3587,11 @@ class Windows.UI.Xaml.Media.TileBrush composable python_type
     requires Windows.UI.Xaml.Media.ITileBrush
     factory Windows.UI.Xaml.Media.ITileBrushStatics
     composable Windows.UI.Xaml.Media.ITileBrushFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrushFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.TileBrush return
     property stretch
         get get_Stretch slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.ITileBrush shape=4
             out enum32 type=Windows.UI.Xaml.Media.Stretch return
@@ -3883,6 +3918,11 @@ class Windows.UI.Xaml.Media.XamlCompositionBrushBase composable python_type
     factory Windows.UI.Xaml.Media.IXamlCompositionBrushBaseStatics
     composable Windows.UI.Xaml.Media.IXamlCompositionBrushBaseFactory
     overridable Windows.UI.Xaml.Media.IXamlCompositionBrushBaseOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Media.XamlCompositionBrushBase return
     property fallback_color
         get get_FallbackColor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Media.IXamlCompositionBrushBase shape=4
             out struct type=Windows.UI.Color return

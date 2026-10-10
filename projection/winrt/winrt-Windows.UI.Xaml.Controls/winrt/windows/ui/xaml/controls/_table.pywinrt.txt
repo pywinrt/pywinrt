@@ -3282,6 +3282,11 @@ class Windows.UI.Xaml.Controls.Control composable python_type
     composable Windows.UI.Xaml.Controls.IControlFactory
     overridable Windows.UI.Xaml.Controls.IControlOverrides
     overridable Windows.UI.Xaml.Controls.IControlOverrides6
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Control return
     property padding
         get get_Padding slot=30 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControl shape=4
             out struct type=Windows.UI.Xaml.Thickness return
@@ -11736,6 +11741,11 @@ class Windows.UI.Xaml.Controls.InkToolbarCustomPen composable python_type
     requires Windows.UI.Xaml.Controls.IInkToolbarCustomPenOverrides
     composable Windows.UI.Xaml.Controls.IInkToolbarCustomPenFactory
     overridable Windows.UI.Xaml.Controls.IInkToolbarCustomPenOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IInkToolbarCustomPenFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.InkToolbarCustomPen return
     method create_ink_drawing_attributes
         method CreateInkDrawingAttributes slot=6 inputs=2 outputs=1 declaring=Windows.UI.Xaml.Controls.IInkToolbarCustomPen shape=111
             in class type=Windows.UI.Xaml.Media.Brush name=brush
@@ -12971,6 +12981,11 @@ class Windows.UI.Xaml.Controls.ListViewBase composable python_type
     factory Windows.UI.Xaml.Controls.IListViewBaseStatics4
     factory Windows.UI.Xaml.Controls.IListViewBaseStatics5
     composable Windows.UI.Xaml.Controls.IListViewBaseFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IListViewBaseFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.ListViewBase return
     property selection_mode
         get get_SelectionMode slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IListViewBase shape=4
             out enum32 type=Windows.UI.Xaml.Controls.ListViewSelectionMode return
@@ -15027,6 +15042,11 @@ class Windows.UI.Xaml.Controls.Panel composable python_type
     requires Windows.UI.Xaml.Controls.IPanel2
     factory Windows.UI.Xaml.Controls.IPanelStatics
     composable Windows.UI.Xaml.Controls.IPanelFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IPanelFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Windows.UI.Xaml.Controls.Panel return
     property children_transitions
         get get_ChildrenTransitions slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IPanel shape=4
             out class type=Windows.UI.Xaml.Media.Animation.TransitionCollection return

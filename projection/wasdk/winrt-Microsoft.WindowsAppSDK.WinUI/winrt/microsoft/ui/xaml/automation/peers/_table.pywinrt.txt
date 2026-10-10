@@ -286,6 +286,11 @@ class Microsoft.UI.Xaml.Automation.Peers.AutomationPeer composable python_type
     factory Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerStatics
     composable Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerFactory
     overridable Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Automation.Peers.AutomationPeer return
     property events_source
         get get_EventsSource slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IAutomationPeer shape=4
             out class type=Microsoft.UI.Xaml.Automation.Peers.AutomationPeer return
@@ -700,6 +705,12 @@ class Microsoft.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer composable pyt
     default Microsoft.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeer
     requires Microsoft.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeer
     composable Microsoft.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IButtonBaseAutomationPeerFactory shape=195 protected
+            in class type=Microsoft.UI.Xaml.Controls.Primitives.ButtonBase name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Automation.Peers.ButtonBaseAutomationPeer return
 
 class Microsoft.UI.Xaml.Automation.Peers.CalendarDatePickerAutomationPeer composable python_type
     py CalendarDatePickerAutomationPeer
@@ -2278,6 +2289,12 @@ class Microsoft.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer co
     default Microsoft.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeer
     requires Microsoft.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeer
     composable Microsoft.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Automation.Peers.IListViewBaseHeaderItemAutomationPeerFactory shape=195 protected
+            in class type=Microsoft.UI.Xaml.Controls.ListViewBaseHeaderItem name=owner
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Automation.Peers.ListViewBaseHeaderItemAutomationPeer return
 
 class Microsoft.UI.Xaml.Automation.Peers.ListViewHeaderItemAutomationPeer composable python_type
     py ListViewHeaderItemAutomationPeer
@@ -3635,6 +3652,9 @@ class Microsoft.UI.Xaml.Controls.ListView external
 class Microsoft.UI.Xaml.Controls.ListViewBase external
     py winrt.microsoft.ui.xaml.controls.ListViewBase
 
+class Microsoft.UI.Xaml.Controls.ListViewBaseHeaderItem external
+    py winrt.microsoft.ui.xaml.controls.ListViewBaseHeaderItem
+
 class Microsoft.UI.Xaml.Controls.ListViewHeaderItem external
     py winrt.microsoft.ui.xaml.controls.ListViewHeaderItem
 
@@ -3760,6 +3780,9 @@ class Microsoft.UI.Xaml.Controls.TreeViewList external
 
 class Microsoft.UI.Xaml.Controls.WebView2 external
     py winrt.microsoft.ui.xaml.controls.WebView2
+
+class Microsoft.UI.Xaml.Controls.Primitives.ButtonBase external
+    py winrt.microsoft.ui.xaml.controls.primitives.ButtonBase
 
 class Microsoft.UI.Xaml.Controls.Primitives.ColorPickerSlider external
     py winrt.microsoft.ui.xaml.controls.primitives.ColorPickerSlider

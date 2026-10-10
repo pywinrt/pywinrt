@@ -188,6 +188,11 @@ class Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame composable python_type
     requires Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame
     factory Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrameFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.ColorKeyFrame return
     property value
         get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IColorKeyFrame shape=4
             out struct type=Windows.UI.Color return
@@ -592,6 +597,11 @@ class Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame composable python_type
     requires Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame
     factory Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrameFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.DoubleKeyFrame return
     property value
         get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IDoubleKeyFrame shape=4
             out double return
@@ -2858,6 +2868,11 @@ class Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo composable pyth
     requires Microsoft.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides
     composable Microsoft.UI.Xaml.Media.Animation.INavigationTransitionInfoFactory
     overridable Microsoft.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationTransitionInfoFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo return
     method _get_navigation_state_core
         method GetNavigationStateCore slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.INavigationTransitionInfoOverrides shape=4 reverse=22 overridable
             out string return
@@ -2895,6 +2910,11 @@ class Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame composable python_type
     requires Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame
     factory Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrameFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.ObjectKeyFrame return
     property value
         get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IObjectKeyFrame shape=4
             out object return
@@ -3066,6 +3086,11 @@ class Microsoft.UI.Xaml.Media.Animation.PointKeyFrame composable python_type
     requires Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame
     factory Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameStatics
     composable Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrameFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.PointKeyFrame return
     property value
         get get_Value slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.IPointKeyFrame shape=4
             out struct type=Windows.Foundation.Point return
@@ -3855,6 +3880,11 @@ class Microsoft.UI.Xaml.Media.Animation.Timeline composable python_type
     requires Microsoft.UI.Xaml.Media.Animation.ITimeline
     factory Microsoft.UI.Xaml.Media.Animation.ITimelineStatics
     composable Microsoft.UI.Xaml.Media.Animation.ITimelineFactory
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimelineFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=Microsoft.UI.Xaml.Media.Animation.Timeline return
     property speed_ratio
         get get_SpeedRatio slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.Animation.ITimeline shape=4
             out double return

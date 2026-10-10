@@ -2521,6 +2521,16 @@ class TestComponent.ProtectedMembers composable python_type
     requires TestComponent.IProtectedMembersOverrides
     composable TestComponent.IProtectedMembersProtectedFactory
     overridable TestComponent.IProtectedMembersOverrides
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembersProtectedFactory shape=117 protected
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.ProtectedMembers return
+        ctor .ctor slot=7 inputs=1 outputs=1 declaring=TestComponent.IProtectedMembersProtectedFactory shape=195 protected
+            in int32 name=initial
+            in object name=baseInterface implicit
+            out object name=innerInterface implicit
+            out class type=TestComponent.ProtectedMembers return
     property _overridable_value
         get get_OverridableValue slot=6 inputs=0 outputs=1 declaring=TestComponent.IProtectedMembersOverrides shape=4 reverse=22 overridable
             out int32 return

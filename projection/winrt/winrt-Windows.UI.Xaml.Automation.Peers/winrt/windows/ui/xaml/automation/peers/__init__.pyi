@@ -391,8 +391,8 @@ class AutomationPeer_Static(windows_ui_xaml.DependencyObject_Static):
     def listener_exists(cls, event_id: AutomationEvents, /) -> bool: ...
 
 class AutomationPeer(windows_ui_xaml.DependencyObject, metaclass=AutomationPeer_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls) -> typing.Self:
+        """AutomationPeer's constructor is protected: derive a class from it and create that."""
     @typing.final
     # System.String Windows.UI.Xaml.Automation.Peers.AutomationPeer::GetAcceleratorKey()
     def get_accelerator_key(self) -> str: ...
@@ -701,8 +701,8 @@ class ButtonBaseAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     ...
 
 class ButtonBaseAutomationPeer(FrameworkElementAutomationPeer, metaclass=ButtonBaseAutomationPeer_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls, owner: windows_ui_xaml_controls_primitives.ButtonBase, /) -> typing.Self:
+        """ButtonBaseAutomationPeer's constructor is protected: derive a class from it and create that."""
 
 class CalendarDatePickerAutomationPeer_Static(FrameworkElementAutomationPeer_Static):
     ...
@@ -1007,8 +1007,8 @@ class ListViewBaseHeaderItemAutomationPeer_Static(FrameworkElementAutomationPeer
     ...
 
 class ListViewBaseHeaderItemAutomationPeer(FrameworkElementAutomationPeer, metaclass=ListViewBaseHeaderItemAutomationPeer_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    def __new__(cls, owner: windows_ui_xaml_controls.ListViewBaseHeaderItem, /) -> typing.Self:
+        """ListViewBaseHeaderItemAutomationPeer's constructor is protected: derive a class from it and create that."""
 
 class ListViewHeaderItemAutomationPeer_Static(ListViewBaseHeaderItemAutomationPeer_Static):
     ...
