@@ -27,7 +27,10 @@ select = [
 # A composable class's metaclass declares a __new__ that returns the metaclass
 # by name, since mypy and pyright refuse Self in a metaclass, and ruff does not
 # know a class deriving from winrt._winrt.Object_Static for a metaclass (PYI034).
-"projection/**/*.pyi" = ["PYI034"]
+# The generated stubs are what an editor reads about the projected types, whose
+# members have no docstrings at run time, so the ones the generator writes,
+# such as why a class cannot be created, are kept (PYI021).
+"projection/**/*.pyi" = ["PYI021", "PYI034"]
 
 [format]
 # A generated file is changed through its generator, never by a formatter run
