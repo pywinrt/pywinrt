@@ -24,3 +24,4 @@ repository](../CHANGELOG.md).
 - Fixed closing an `IMemoryBufferReference` with a live `memoryview` crashing.
 - Fixed `_measure_override()` and the like never called on a `Grid` subclass.
 - Fixed iterating over a WinRT map, or its keys or items, leaking memory.
+- Fixed WinRT failing to set, or losing, the length of a Python buffer it fills.
