@@ -28,16 +28,16 @@ class Windows.Media.Playback.BackgroundMediaPlayer static python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_MessageReceivedFromForeground slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=26 static deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method is_media_playing static deprecated
+    method is_media_playing static
         method IsMediaPlaying slot=13 inputs=0 outputs=1 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 static deprecated
             out boolean return
-    method send_message_to_background static deprecated
+    method send_message_to_background static
         method SendMessageToBackground slot=11 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 static deprecated
             in class type=Windows.Foundation.Collections.ValueSet name=value
-    method send_message_to_foreground static deprecated
+    method send_message_to_foreground static
         method SendMessageToForeground slot=12 inputs=1 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=4 static deprecated
             in class type=Windows.Foundation.Collections.ValueSet name=value
-    method shutdown static deprecated
+    method shutdown static
         method Shutdown slot=14 inputs=0 outputs=0 declaring=Windows.Media.Playback.IBackgroundMediaPlayerStatics shape=0 static deprecated
 
 class Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs python_type
@@ -324,7 +324,7 @@ interface Windows.Media.Playback.IMediaEnginePlaybackSource python_type
     property current_item
         get get_CurrentItem slot=6 inputs=0 outputs=1 declaring=Windows.Media.Playback.IMediaEnginePlaybackSource shape=4 reverse=22 deprecated
             out class type=Windows.Media.Playback.MediaPlaybackItem return
-    method set_playback_source deprecated
+    method set_playback_source
         method SetPlaybackSource slot=7 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaEnginePlaybackSource shape=4 reverse=43 deprecated
             in interface type=Windows.Media.Playback.IMediaPlaybackSource name=source
 
@@ -2340,19 +2340,19 @@ class Windows.Media.Playback.MediaPlayer activatable python_type closeable
             in interface type=Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface name=destination
             in struct type=Windows.Foundation.Rect name=targetRectangle
             out boolean return
-    method set_file_source deprecated
+    method set_file_source
         method SetFileSource slot=8 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 deprecated
             in interface type=Windows.Storage.IStorageFile name=file
-    method set_media_source deprecated
+    method set_media_source
         method SetMediaSource slot=10 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 deprecated
             in interface type=Windows.Media.Core.IMediaSource name=source
-    method set_stream_source deprecated
+    method set_stream_source
         method SetStreamSource slot=9 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayerSource shape=4 deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStream name=stream
     method set_surface_size
         method SetSurfaceSize slot=6 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer4 shape=10
             in struct type=Windows.Foundation.Size name=size
-    method set_uri_source deprecated
+    method set_uri_source
         method SetUriSource slot=47 inputs=1 outputs=0 declaring=Windows.Media.Playback.IMediaPlayer shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
     method step_backward_one_frame

@@ -503,10 +503,10 @@ class Windows.Media.PlayTo.PlayToManager python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_SourceSelected slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManager shape=26 deprecated
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    method get_for_current_view static deprecated
+    method get_for_current_view static
         method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=4 static deprecated
             out class type=Windows.Media.PlayTo.PlayToManager return
-    method show_play_to_ui static deprecated
+    method show_play_to_ui static
         method ShowPlayToUI slot=7 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToManagerStatics shape=0 static deprecated
 
 class Windows.Media.PlayTo.PlayToReceiver activatable python_type
@@ -649,7 +649,7 @@ class Windows.Media.PlayTo.PlayToSource python_type
             out class type=Windows.Foundation.Uri return
         put put_PreferredSourceUri slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceWithPreferredSourceUri shape=4 deprecated
             in class type=Windows.Foundation.Uri name=value
-    method play_next deprecated
+    method play_next
         method PlayNext slot=9 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSource shape=0 deprecated
 
 class Windows.Media.PlayTo.PlayToSourceDeferral python_type
@@ -657,7 +657,7 @@ class Windows.Media.PlayTo.PlayToSourceDeferral python_type
     signature rc(Windows.Media.PlayTo.PlayToSourceDeferral;{4100891d-278e-4f29-859b-a9e501053e7d})
     default Windows.Media.PlayTo.IPlayToSourceDeferral
     requires Windows.Media.PlayTo.IPlayToSourceDeferral
-    method complete deprecated
+    method complete
         method Complete slot=6 inputs=0 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceDeferral shape=0 deprecated
 
 class Windows.Media.PlayTo.PlayToSourceRequest python_type
@@ -668,13 +668,13 @@ class Windows.Media.PlayTo.PlayToSourceRequest python_type
     property deadline
         get get_Deadline slot=6 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             out datetime return
-    method display_error_string deprecated
+    method display_error_string
         method DisplayErrorString slot=7 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             in string name=errorString
-    method get_deferral deprecated
+    method get_deferral
         method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             out class type=Windows.Media.PlayTo.PlayToSourceDeferral return
-    method set_source deprecated
+    method set_source
         method SetSource slot=9 inputs=1 outputs=0 declaring=Windows.Media.PlayTo.IPlayToSourceRequest shape=4 deprecated
             in class type=Windows.Media.PlayTo.PlayToSource name=value
 

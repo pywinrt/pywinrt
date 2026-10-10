@@ -200,10 +200,10 @@ class Windows.UI.ViewManagement.ApplicationView python_type
         method TryResizeView slot=13 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationView3 shape=79
             in struct type=Windows.Foundation.Size name=value
             out boolean return
-    method try_unsnap static deprecated
+    method try_unsnap static
         method TryUnsnap slot=7 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewStatics shape=4 static deprecated
             out boolean return
-    method try_unsnap_to_fullscreen static deprecated
+    method try_unsnap_to_fullscreen static
         method TryUnsnapToFullscreen slot=6 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.IApplicationViewFullscreenStatics shape=4 static deprecated
             out boolean return
 

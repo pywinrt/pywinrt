@@ -4771,7 +4771,7 @@ class Windows.Media.Capture.MediaCapture activatable python_type closeable
         method AddAudioEffectAsync slot=6 inputs=1 outputs=1 declaring=Windows.Media.Capture.IMediaCapture4 shape=51
             in interface type=Windows.Media.Effects.IAudioEffectDefinition name=definition
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Media.IMediaExtension> return
-    method add_effect_async deprecated
+    method add_effect_async
         method AddEffectAsync slot=15 inputs=3 outputs=1 declaring=Windows.Media.Capture.IMediaCapture shape=195 deprecated
             in enum32 type=Windows.Media.Capture.MediaStreamType name=mediaStreamType
             in string name=effectActivationID

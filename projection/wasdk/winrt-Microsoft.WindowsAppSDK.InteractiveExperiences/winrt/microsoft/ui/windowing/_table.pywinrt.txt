@@ -308,7 +308,7 @@ class Microsoft.UI.Windowing.AppWindowTitleBar python_type
             out boolean return
     method reset_to_default
         method ResetToDefault slot=37 inputs=0 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=0
-    method set_drag_rectangles deprecated
+    method set_drag_rectangles
         method SetDragRectangles slot=38 inputs=1 outputs=0 declaring=Microsoft.UI.Windowing.IAppWindowTitleBar shape=51 deprecated
             pass_array struct type=Windows.Graphics.RectInt32 name=value
 

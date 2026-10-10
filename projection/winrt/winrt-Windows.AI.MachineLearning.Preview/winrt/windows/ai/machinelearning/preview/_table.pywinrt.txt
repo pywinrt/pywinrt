@@ -494,7 +494,7 @@ class Windows.AI.MachineLearning.Preview.LearningModelBindingPreview python_type
     property size
         get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.Object> shape=4 reverse=43 role=size
             out uint32 return
-    method bind deprecated
+    method bind
         method Bind slot=6 inputs=2 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=51 deprecated
             in string name=name
             in object name=value
@@ -502,7 +502,7 @@ class Windows.AI.MachineLearning.Preview.LearningModelBindingPreview python_type
             in string name=name
             in object name=value
             in interface type=Windows.Foundation.Collections.IPropertySet name=metadata
-    method clear deprecated
+    method clear
         method Clear slot=8 inputs=0 outputs=0 declaring=Windows.AI.MachineLearning.Preview.ILearningModelBindingPreview shape=0 deprecated
     method first
         method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.Object>> shape=4 reverse=22 role=first
@@ -595,21 +595,21 @@ class Windows.AI.MachineLearning.Preview.LearningModelPreview python_type
     property description
         get get_Description slot=8 inputs=0 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=4 deprecated
             out class type=Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview return
-    method evaluate_async deprecated
+    method evaluate_async
         method EvaluateAsync slot=6 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 deprecated
             in class type=Windows.AI.MachineLearning.Preview.LearningModelBindingPreview name=binding
             in string name=correlationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> return
-    method evaluate_features_async deprecated
+    method evaluate_features_async
         method EvaluateFeaturesAsync slot=7 inputs=2 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreview shape=117 deprecated
             in parameterized type=Windows.Foundation.Collections.IMap<System.String,System.Object> name=features
             in string name=correlationId
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> return
-    method load_model_from_storage_file_async static deprecated
+    method load_model_from_storage_file_async static
         method LoadModelFromStorageFileAsync slot=6 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 static deprecated
             in interface type=Windows.Storage.IStorageFile name=modelFile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelPreview> return
-    method load_model_from_stream_async static deprecated
+    method load_model_from_stream_async static
         method LoadModelFromStreamAsync slot=7 inputs=1 outputs=1 declaring=Windows.AI.MachineLearning.Preview.ILearningModelPreviewStatics shape=51 static deprecated
             in interface type=Windows.Storage.Streams.IRandomAccessStreamReference name=modelStream
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.AI.MachineLearning.Preview.LearningModelPreview> return
