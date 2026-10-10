@@ -193,28 +193,17 @@ and a requirement is reported with what it should become:
     possible match: winui3-Microsoft.UI.Xaml.Controls>=3.2,<3.3
     rename to: winrt-Microsoft.WindowsAppSDK.WinUI>=4!2.5.1
 
-With `--fix`, the script rewrites two kinds of thing in place, and nothing
-else, since everything else it reports needs checking by hand:
-
-* the `winui3` and `webview2` packages to `winrt`, in the import statements
-  and wherever a module that a plain `import` statement bound is used;
-* each requirement it reports, except on a distribution that v4 does not
-  have. A renamed distribution gets its new name, and a constraint that
-  refuses v4 becomes a floor at the first v4 version; extras and environment
-  markers are kept. Since many v3 distributions became one v4 distribution,
-  a rewritten requirement that repeats one on the line above, on a line of its
-  own, is dropped.
+The script only reports. It changes no file, so the edits are yours to make,
+and since several v3 distributions became one v4 distribution, the requirements
+it suggests may repeat each other.
 
 ### Caveats
 
 * The script does not search in comments, docstrings or string annotations for
   code changes. It searches the string literals of a Python file for
   requirements, and everything but comments in any other file.
-* A floor at the first v4 version is the least the rewritten requirement can
+* A floor at the first v4 version is the least the suggested requirement can
   say. If the code uses something a later upstream release added, raise it.
-* Two requirements that `--fix` renames to one distribution are only merged when
-  each is on a line of its own with no comment; check a list written on one
-  line for the duplicates left in it.
 * The script doesn't do any static analysis to infer types, so it may produce
   false positives. It matches a method by its name alone, and `.value` only on
   a property that hands back an `HResult` or on a name that has `token` in it.

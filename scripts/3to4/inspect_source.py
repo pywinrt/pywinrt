@@ -80,17 +80,6 @@ REQUIREMENT = re.compile(
     re.VERBOSE,
 )
 
-# a line that holds one requirement and nothing else, as a requirements file,
-# a TOML array or a Python list writes it
-REQUIREMENT_LINE = re.compile(
-    r"""
-    ^\s*
-    (?:"(?P<double>[^"]+)"|'(?P<single>[^']+)'|(?P<bare>[^"'\#\s][^\#]*?))
-    \s*,?\s*(?:\#.*)?$
-    """,
-    re.VERBOSE,
-)
-
 
 class Match(NamedTuple):
     line: int
@@ -99,29 +88,13 @@ class Match(NamedTuple):
     rename_to: str
 
 
-class Edit(NamedTuple):
-    line: int
-    column: int
-    old: str
-    new: str
-
-
-class Requirement(NamedTuple):
-    match: Match
-    # None for a distribution that v4 does not have, which has no fix
-    edit: Edit | None
-
-
-def split_lines(source: str, keepends: bool = False) -> list[str]:
+def split_lines(source: str) -> list[str]:
     """
     The lines of @p source as ast numbers them, which ends a line at \\n,
     \\r\\n and \\r only, where str.splitlines() ends one at a form feed and
     other separators too.
     """
     lines = io.StringIO(source, newline="").readlines()
-
-    if keepends:
-        return lines
 
     return [line.rstrip("\r\n") for line in lines]
 
@@ -393,9 +366,7 @@ def string_spans(source: str) -> list[tuple[tuple[int, int], tuple[int, int]]]:
     ]
 
 
-def find_requirements(
-    source: str, lines: list[str], python: bool
-) -> Iterator[Requirement]:
+def find_requirements(source: str, lines: list[str], python: bool) -> Iterator[Match]:
     """
     The requirements on a v3 distribution that v4 renamed or removed, or that
     a specifier keeps at v3. In Python code, only string literals are looked
@@ -422,14 +393,11 @@ def find_requirements(
             match_text = found.group().strip()
 
             if not new_name:
-                yield Requirement(
-                    Match(
-                        number,
-                        found.start(),
-                        match_text,
-                        "nothing: there is no v4 distribution, see scripts/3to4/README.md",
-                    ),
-                    None,
+                yield Match(
+                    number,
+                    found.start(),
+                    match_text,
+                    "nothing: there is no v4 distribution, see scripts/3to4/README.md",
                 )
                 continue
 
@@ -446,127 +414,7 @@ def find_requirements(
             if specifier:
                 new_text += floor if excluded or renamed else specifier
 
-            yield Requirement(
-                Match(number, found.start(), match_text, new_text),
-                Edit(number, found.start(), found.group(), new_text),
-            )
-
-
-def package_edits(source: str, tree: ast.AST, lines: list[str]) -> list[Edit]:
-    """
-    The edits that turn the winui3 and webview2 packages into winrt: the
-    first name of each module an import statement names, and each use of a
-    package that a plain import statement binds.
-    """
-    # the kind of import statement each line is part of
-    statements: dict[int, type[ast.stmt]] = {}
-    bound: set[str] = set()
-
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Import):
-            for alias in node.names:
-                package = alias.name.partition(".")[0]
-
-                if package in PACKAGES and alias.asname is None:
-                    bound.add(package)
-
-        if isinstance(node, (ast.Import, ast.ImportFrom)):
-            assert node.end_lineno is not None
-
-            for line in range(node.lineno, node.end_lineno + 1):
-                statements[line] = type(node)
-
-    edits: list[Edit] = []
-    previous = ""
-
-    for token in tokens(source):
-        if token.type in (tokenize.NL, tokenize.COMMENT):
-            continue
-
-        line, col = token.start
-        kind = statements.get(line)
-
-        if token.type == tokenize.NAME and token.string in PACKAGES:
-            # an ImportFrom names its module straight after "from", and what
-            # follows "import" there are the names imported from it
-            if (kind is ast.Import and previous in ("import", ",")) or (
-                kind is ast.ImportFrom and previous == "from"
-            ):
-                edits.append(Edit(line, col, token.string, "winrt"))
-
-        previous = token.string
-
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Name) and node.id in bound:
-            edits.append(
-                Edit(
-                    node.lineno,
-                    column(lines, node.lineno, node.col_offset),
-                    node.id,
-                    "winrt",
-                )
-            )
-
-    return edits
-
-
-def requirement_of(line: str) -> str | None:
-    """
-    The requirement on @p line, if that is all the line holds.
-    """
-    found = REQUIREMENT_LINE.match(line)
-
-    if found is None:
-        return None
-
-    requirement = found["double"] or found["single"] or found["bare"]
-    return " ".join(requirement.split())
-
-
-def fix(
-    path: pathlib.Path, source: str, edits: list[Edit], requirement_lines: set[int]
-) -> int:
-    """
-    Applies @p edits to @p source and writes it to @p path. Of the lines in
-    @p requirement_lines, one with no comment that now repeats a requirement
-    listed above it, in the same run of lines that each hold one requirement,
-    is dropped; several v3 names often became one v4 distribution. Returns how
-    many were dropped.
-    """
-    lines = split_lines(source, keepends=True)
-
-    for edit in sorted(edits, reverse=True):
-        text = lines[edit.line - 1]
-        assert text[edit.column : edit.column + len(edit.old)] == edit.old
-        lines[edit.line - 1] = (
-            text[: edit.column] + edit.new + text[edit.column + len(edit.old) :]
-        )
-
-    dropped: set[int] = set()
-
-    for number in sorted(requirement_lines):
-        requirement = requirement_of(lines[number - 1])
-
-        if requirement is None:
-            continue
-
-        # dropping the line would drop what the comment on it says
-        if "#" in lines[number - 1]:
-            continue
-
-        above = number - 1
-
-        while above >= 1 and (earlier := requirement_of(lines[above - 1])) is not None:
-            if above not in dropped and earlier == requirement:
-                dropped.add(number)
-                break
-
-            above -= 1
-
-    kept = [line for number, line in enumerate(lines, 1) if number not in dropped]
-    path.write_bytes("".join(kept).encode())
-
-    return len(dropped)
+            yield Match(number, found.start(), match_text, new_text)
 
 
 if __name__ == "__main__":
@@ -576,12 +424,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "files", help="Files to inspect", nargs="+", type=pathlib.Path, metavar="file"
     )
-    parser.add_argument(
-        "--fix",
-        help="Rewrite the winui3 and webview2 packages to winrt, and the "
-        "requirements on v3 distributions to v4 ones, in place",
-        action="store_true",
-    )
     args = parser.parse_args()
 
     for path in args.files:
@@ -589,32 +431,10 @@ if __name__ == "__main__":
         lines = split_lines(source)
         python = path.suffix == ".py"
         tree = ast.parse(source, path) if python else None
-        requirements = list(find_requirements(source, lines, python))
         matches = list(find(tree, lines)) if tree else []
-        matches += [requirement.match for requirement in requirements]
+        matches += find_requirements(source, lines, python)
 
         for match in sorted(matches):
             print(f"{path}:{match.line}:{match.column + 1}")
             print("possible match:", match.name)
             print("rename to:", match.rename_to)
-
-        if args.fix:
-            edits = package_edits(source, tree, lines) if tree else []
-            requirement_edits = [r.edit for r in requirements if r.edit is not None]
-
-            if edits or requirement_edits:
-                dropped = fix(
-                    path,
-                    source,
-                    edits + requirement_edits,
-                    {edit.line for edit in requirement_edits},
-                )
-
-                if edits:
-                    print(f"{path}: rewrote {len(edits)} package names")
-
-                if requirement_edits:
-                    print(
-                        f"{path}: rewrote {len(requirement_edits)} requirements, "
-                        f"dropped {dropped} that became duplicates"
-                    )
