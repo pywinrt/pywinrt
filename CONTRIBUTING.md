@@ -247,20 +247,37 @@ after the directory its sources are in. There are two kinds.
 A family of generated packages — `winrt`, `winui2`, `wasdk` and `webview2`,
 the directories under `projection/` — is released on its upstream's schedule
 and takes its version from the NuGet package its metadata came from, which
-`.config/_tools.json` pins. Moving a pin is a change of its own, made the way
-the sections above describe.
+`.config/_tools.json` pins. A package that goes with a family is released with
+it and has its version too: the package under `redist/` that redistributes a
+family's `.dll`, such as `winrt-Microsoft.Web.WebView2.Dll` with `webview2`,
+and an interop module that compiles against a family other than the Windows
+SDK (below). Moving a pin is a change of its own, made the way the sections
+above describe.
 
 A package written by hand has no upstream release to follow, so it keeps its
 own `version.txt` and is released on its own: `runtime`, `table` and each
-directory under `interop/`. Bump one when that package changes, in semver,
-keeping the major — it is the compatibility generation, and the build refuses
-a tree whose hand-written versions disagree about it. Moving a pin does *not*
-bump these: a new Windows SDK leaves an interop module alone unless something
-it compiles against actually changed, which the diff shows because those
-packages carry the headers they compile. The exception is
-`interop/winrt-wasdk-bootstrap`, whose wheel carries
-`Microsoft.WindowsAppRuntime.Bootstrap.dll` out of the App SDK pin, so moving
-that pin does change it.
+directory under `interop/` that compiles against the Windows SDK alone. Bump
+one when that package changes, in semver, keeping the major — it is the
+compatibility generation, and the build refuses a tree whose hand-written
+versions disagree about it. Moving a pin does *not* bump these: a new Windows
+SDK leaves an interop module alone unless something it compiles against
+actually changed, which the diff shows because those packages carry the
+headers they compile.
+
+An interop module that compiles against any other family is released with
+that family and has its version, since that family's release is what its users
+choose: today `interop/winrt-Microsoft.UI.Interop` and
+`interop/winrt-wasdk-bootstrap`, with `wasdk`. The bootstrap would have to be
+anyway, because its wheel carries `Microsoft.WindowsAppRuntime.Bootstrap.dll`
+out of the pin and loads that release by default, so moving the pin changes
+it. `FAMILY_RELEASED_INTEROP` in `scripts/versions.py` lists each such module
+with its family, and the build refuses one that is not listed. They have no
+`version.txt`. To release a fix to one between two pins, add one holding the
+family's version with a fourth number on the end, such as `4!2.5.1.1`: that
+makes it a unit of its own, with a tag of its own. When the pin next moves,
+`generate-pyproject.py` refuses the file until it is deleted, and the package
+goes back to being released with the family. A fix cannot follow a preview of
+the family, since a fourth number would sort above the final release.
 
 An interop package requires the newest `winrt-runtime` that one of the
 `winrt.runtime.interop` functions it calls first shipped in, not the runtime of

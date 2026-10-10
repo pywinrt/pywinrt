@@ -25,7 +25,9 @@ winrt-Microsoft.Web.WebView2          4!1.0.4191.47       WebView2
 
 Reading one of these tells you exactly which upstream release the API surface
 came from, which is otherwise invisible from Python. Packages generated from
-one upstream release are published together and carry the same version.
+one upstream release are published together and carry the same version, and so
+does the package that redistributes that upstream's `.dll`, such as
+`winrt-Microsoft.Web.WebView2.Dll` with the WebView2 packages.
 
 A **package written by hand** has no upstream release to follow, so it uses
 semantic versioning and is released on its own when it changes:
@@ -39,6 +41,17 @@ winrt-Windows.System.Interop          4.0.0
 These all start at `4.0.0`, and from there each moves only when that
 package changes: a fix to `winrt-runtime` does not renumber the interop
 modules, and moving the Windows SDK pin does not renumber any of them.
+
+The exception is an interop module built against an upstream other than the
+Windows SDK, which is released with that upstream's packages and carries their
+version, since that release is the one you choose. Today that is the two of
+the Windows App SDK, `winrt-Microsoft.UI.Interop` and
+`winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`, so the
+interop modules for `winrt-Microsoft.WindowsAppSDK.WinUI` `4!2.5.1` are
+`4!2.5.1` too. The bootstrap module would have to be anyway: its wheel carries
+the bootstrapper `.dll` of the Windows App SDK release it was built against
+and loads that release by default. A fix to one of them released between two
+upstream releases adds a fourth number, such as `4!2.5.1.1`.
 
 The `4!` on the first group is a [PEP 440](https://peps.python.org/pep-0440/)
 *epoch*, and the leading `4` on the second is the major. They are the same number.
