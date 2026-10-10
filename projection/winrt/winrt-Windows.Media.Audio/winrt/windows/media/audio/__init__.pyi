@@ -171,6 +171,8 @@ class SpatialAudioModel(enum.IntEnum):
 class AudioDeviceInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Media.Audio.AudioDeviceInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     def add_outgoing_connection(self, destination: IAudioNode, /) -> None: ...
@@ -227,6 +229,8 @@ class AudioDeviceInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, window
 class AudioDeviceOutputNode(IAudioNodeWithListener, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioDeviceOutputNode::Close()
     def close(self) -> None: ...
     # System.Void Windows.Media.Audio.AudioDeviceOutputNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
@@ -276,6 +280,8 @@ class AudioEffectsPackConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AudioEffectsPackConfiguration(winrt.system.Object, metaclass=AudioEffectsPackConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Audio.AudioEffectsPackConfiguration::add_StatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Audio.AudioEffectsPackConfiguration,System.Object>)
     def add_status_changed(self, handler: windows_foundation.TypedEventHandler[AudioEffectsPackConfiguration, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Audio.AudioEffectsPackConfiguration::remove_StatusChanged(Windows.Foundation.EventRegistrationToken)
@@ -294,6 +300,8 @@ class AudioEffectsPackConfiguration(winrt.system.Object, metaclass=AudioEffectsP
 class AudioFileInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Media.Audio.AudioFileInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     def add_outgoing_connection(self, destination: IAudioNode, /) -> None: ...
@@ -386,6 +394,8 @@ class AudioFileInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_
 class AudioFileOutputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioFileOutputNode::Close()
     def close(self) -> None: ...
     # System.Void Windows.Media.Audio.AudioFileOutputNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
@@ -427,6 +437,8 @@ class AudioFileOutputNode(IAudioNode, windows_foundation.IClosable, winrt.system
 
 @typing.final
 class AudioFrameCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.AudioFrame Windows.Media.Audio.AudioFrameCompletedEventArgs::get_Frame()
     @_property
     def frame(self) -> windows_media.AudioFrame: ...
@@ -435,6 +447,8 @@ class AudioFrameCompletedEventArgs(winrt.system.Object):
 class AudioFrameInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioFrameInputNode::AddFrame(Windows.Media.AudioFrame)
     def add_frame(self, frame: windows_media.AudioFrame, /) -> None: ...
     @typing.overload
@@ -509,6 +523,8 @@ class AudioFrameInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows
 class AudioFrameOutputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioFrameOutputNode::Close()
     def close(self) -> None: ...
     # System.Void Windows.Media.Audio.AudioFrameOutputNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
@@ -551,6 +567,8 @@ class AudioGraph_Static(winrt._winrt.Object_Static):
 class AudioGraph(windows_foundation.IClosable, winrt.system.Object, metaclass=AudioGraph_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioGraph::Close()
     def close(self) -> None: ...
     # Windows.Media.Audio.AudioGraphBatchUpdater Windows.Media.Audio.AudioGraph::CreateBatchUpdater()
@@ -696,11 +714,15 @@ class AudioGraph(windows_foundation.IClosable, winrt.system.Object, metaclass=Au
 class AudioGraphBatchUpdater(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioGraphBatchUpdater::Close()
     def close(self) -> None: ...
 
 @typing.final
 class AudioGraphConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Audio.AudioGraphConnection::get_Gain()
     @_property
     def gain(self) -> winrt.system.Double: ...
@@ -759,6 +781,8 @@ class AudioGraphSettings(winrt.system.Object):
 
 @typing.final
 class AudioGraphUnrecoverableErrorOccurredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioGraphUnrecoverableError Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs::get_Error()
     @_property
     def error(self) -> AudioGraphUnrecoverableError: ...
@@ -823,6 +847,8 @@ class AudioNodeEmitter(winrt.system.Object):
 
 @typing.final
 class AudioNodeEmitterConeProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Audio.AudioNodeEmitterConeProperties::get_InnerAngle()
     @_property
     def inner_angle(self) -> winrt.system.Double: ...
@@ -842,6 +868,8 @@ class AudioNodeEmitterDecayModel_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AudioNodeEmitterDecayModel(winrt.system.Object, metaclass=AudioNodeEmitterDecayModel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioNodeEmitterDecayKind Windows.Media.Audio.AudioNodeEmitterDecayModel::get_Kind()
     @_property
     def kind(self) -> AudioNodeEmitterDecayKind: ...
@@ -857,6 +885,8 @@ class AudioNodeEmitterDecayModel(winrt.system.Object, metaclass=AudioNodeEmitter
 
 @typing.final
 class AudioNodeEmitterNaturalDecayModelProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties::get_CutoffDistance()
     @_property
     def cutoff_distance(self) -> winrt.system.Double: ...
@@ -873,6 +903,8 @@ class AudioNodeEmitterShape_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AudioNodeEmitterShape(winrt.system.Object, metaclass=AudioNodeEmitterShape_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioNodeEmitterConeProperties Windows.Media.Audio.AudioNodeEmitterShape::get_ConeProperties()
     @_property
     def cone_properties(self) -> AudioNodeEmitterConeProperties: ...
@@ -919,6 +951,8 @@ class AudioPlaybackConnection_Static(winrt._winrt.Object_Static):
 class AudioPlaybackConnection(windows_foundation.IClosable, winrt.system.Object, metaclass=AudioPlaybackConnection_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Audio.AudioPlaybackConnection::Close()
     def close(self) -> None: ...
     # Windows.Media.Audio.AudioPlaybackConnectionOpenResult Windows.Media.Audio.AudioPlaybackConnection::Open()
@@ -942,6 +976,8 @@ class AudioPlaybackConnection(windows_foundation.IClosable, winrt.system.Object,
 
 @typing.final
 class AudioPlaybackConnectionOpenResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Audio.AudioPlaybackConnectionOpenResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -992,6 +1028,8 @@ class AudioStateMonitor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AudioStateMonitor(winrt.system.Object, metaclass=AudioStateMonitor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Audio.AudioStateMonitor::add_SoundLevelChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Audio.AudioStateMonitor,System.Object>)
     def add_sound_level_changed(self, handler: windows_foundation.TypedEventHandler[AudioStateMonitor, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Audio.AudioStateMonitor::remove_SoundLevelChanged(Windows.Foundation.EventRegistrationToken)
@@ -1004,6 +1042,8 @@ class AudioStateMonitor(winrt.system.Object, metaclass=AudioStateMonitor_Static)
 class AudioSubmixNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Media.Audio.AudioSubmixNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     def add_outgoing_connection(self, destination: IAudioNode, /) -> None: ...
@@ -1055,6 +1095,8 @@ class AudioSubmixNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_fou
 
 @typing.final
 class CreateAudioDeviceInputNodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioDeviceInputNode Windows.Media.Audio.CreateAudioDeviceInputNodeResult::get_DeviceInputNode()
     @_property
     def device_input_node(self) -> AudioDeviceInputNode: ...
@@ -1067,6 +1109,8 @@ class CreateAudioDeviceInputNodeResult(winrt.system.Object):
 
 @typing.final
 class CreateAudioDeviceOutputNodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioDeviceOutputNode Windows.Media.Audio.CreateAudioDeviceOutputNodeResult::get_DeviceOutputNode()
     @_property
     def device_output_node(self) -> AudioDeviceOutputNode: ...
@@ -1079,6 +1123,8 @@ class CreateAudioDeviceOutputNodeResult(winrt.system.Object):
 
 @typing.final
 class CreateAudioFileInputNodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioFileInputNode Windows.Media.Audio.CreateAudioFileInputNodeResult::get_FileInputNode()
     @_property
     def file_input_node(self) -> AudioFileInputNode: ...
@@ -1091,6 +1137,8 @@ class CreateAudioFileInputNodeResult(winrt.system.Object):
 
 @typing.final
 class CreateAudioFileOutputNodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioFileOutputNode Windows.Media.Audio.CreateAudioFileOutputNodeResult::get_FileOutputNode()
     @_property
     def file_output_node(self) -> AudioFileOutputNode: ...
@@ -1103,6 +1151,8 @@ class CreateAudioFileOutputNodeResult(winrt.system.Object):
 
 @typing.final
 class CreateAudioGraphResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.AudioGraph Windows.Media.Audio.CreateAudioGraphResult::get_Graph()
     @_property
     def graph(self) -> AudioGraph: ...
@@ -1115,6 +1165,8 @@ class CreateAudioGraphResult(winrt.system.Object):
 
 @typing.final
 class CreateMediaSourceAudioInputNodeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.MediaSourceAudioInputNode Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult::get_Node()
     @_property
     def node(self) -> MediaSourceAudioInputNode: ...
@@ -1155,6 +1207,8 @@ class EchoEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt.s
 
 @typing.final
 class EqualizerBand(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Audio.EqualizerBand::get_Gain()
     @_property
     def gain(self) -> winrt.system.Double: ...
@@ -1189,6 +1243,8 @@ class EqualizerEffectDefinition(windows_media_effects.IAudioEffectDefinition, wi
 
 @typing.final
 class FrameInputNodeQuantumStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs::get_RequiredSamples()
     @_property
     def required_samples(self) -> winrt.system.Int32: ...
@@ -1219,6 +1275,8 @@ class LimiterEffectDefinition(windows_media_effects.IAudioEffectDefinition, winr
 class MediaSourceAudioInputNode(IAudioInputNode2, IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Media.Audio.MediaSourceAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
     def add_outgoing_connection(self, destination: IAudioNode, /) -> None: ...
@@ -1457,6 +1515,8 @@ class ReverbEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt
 
 @typing.final
 class SetDefaultSpatialAudioFormatResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Audio.SetDefaultSpatialAudioFormatStatus Windows.Media.Audio.SetDefaultSpatialAudioFormatResult::get_Status()
     @_property
     def status(self) -> SetDefaultSpatialAudioFormatStatus: ...
@@ -1468,6 +1528,8 @@ class SpatialAudioDeviceConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAudioDeviceConfiguration(winrt.system.Object, metaclass=SpatialAudioDeviceConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Audio.SpatialAudioDeviceConfiguration::IsSpatialAudioFormatSupported(System.String)
     def is_spatial_audio_format_supported(self, subtype: str, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult> Windows.Media.Audio.SpatialAudioDeviceConfiguration::SetDefaultSpatialAudioFormatAsync(System.String)
@@ -1496,6 +1558,8 @@ class SpatialAudioFormatConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAudioFormatConfiguration(winrt.system.Object, metaclass=SpatialAudioFormatConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Audio.SpatialAudioFormatConfiguration::ReportConfigurationChangedAsync(System.String)
     def report_configuration_changed_async(self, subtype: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Audio.SpatialAudioFormatConfiguration::ReportLicenseChangedAsync(System.String)
@@ -1533,7 +1597,8 @@ class SpatialAudioFormatSubtype_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioFormatSubtype_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IAudioInputNode: ...

@@ -49,6 +49,8 @@ __all__ = [
 
 @typing.final
 class EmailDataProviderConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection::Start()
     def start(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection::add_CreateFolderRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection,Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs>)
@@ -114,12 +116,16 @@ class EmailDataProviderConnection(winrt.system.Object):
 
 @typing.final
 class EmailDataProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> EmailDataProviderConnection: ...
 
 @typing.final
 class EmailMailboxCreateFolderRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest::ReportCompletedAsync(Windows.ApplicationModel.Email.EmailFolder)
     def report_completed_async(self, folder: windows_applicationmodel_email.EmailFolder, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest::ReportFailedAsync(Windows.ApplicationModel.Email.EmailMailboxCreateFolderStatus)
@@ -136,6 +142,8 @@ class EmailMailboxCreateFolderRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxCreateFolderRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs::get_Request()
@@ -144,6 +152,8 @@ class EmailMailboxCreateFolderRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDeleteFolderRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest::ReportFailedAsync(Windows.ApplicationModel.Email.EmailMailboxDeleteFolderStatus)
@@ -157,6 +167,8 @@ class EmailMailboxDeleteFolderRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDeleteFolderRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs::get_Request()
@@ -165,6 +177,8 @@ class EmailMailboxDeleteFolderRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDownloadAttachmentRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest::ReportFailedAsync()
@@ -181,6 +195,8 @@ class EmailMailboxDownloadAttachmentRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDownloadAttachmentRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs::get_Request()
@@ -189,6 +205,8 @@ class EmailMailboxDownloadAttachmentRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDownloadMessageRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest::ReportFailedAsync()
@@ -202,6 +220,8 @@ class EmailMailboxDownloadMessageRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxDownloadMessageRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs::get_Request()
@@ -210,6 +230,8 @@ class EmailMailboxDownloadMessageRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxEmptyFolderRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest::ReportFailedAsync(Windows.ApplicationModel.Email.EmailMailboxEmptyFolderStatus)
@@ -223,6 +245,8 @@ class EmailMailboxEmptyFolderRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxEmptyFolderRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs::get_Request()
@@ -231,6 +255,8 @@ class EmailMailboxEmptyFolderRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxForwardMeetingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest::ReportFailedAsync()
@@ -259,6 +285,8 @@ class EmailMailboxForwardMeetingRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxForwardMeetingRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs::get_Request()
@@ -267,6 +295,8 @@ class EmailMailboxForwardMeetingRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxGetAutoReplySettingsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest::ReportCompletedAsync(Windows.ApplicationModel.Email.EmailMailboxAutoReplySettings)
     def report_completed_async(self, auto_reply_settings: windows_applicationmodel_email.EmailMailboxAutoReplySettings, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest::ReportFailedAsync()
@@ -280,6 +310,8 @@ class EmailMailboxGetAutoReplySettingsRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxGetAutoReplySettingsRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs::get_Request()
@@ -288,6 +320,8 @@ class EmailMailboxGetAutoReplySettingsRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxMoveFolderRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest::ReportFailedAsync()
@@ -307,6 +341,8 @@ class EmailMailboxMoveFolderRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxMoveFolderRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs::get_Request()
@@ -315,6 +351,8 @@ class EmailMailboxMoveFolderRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxProposeNewTimeForMeetingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest::ReportFailedAsync()
@@ -340,6 +378,8 @@ class EmailMailboxProposeNewTimeForMeetingRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs::get_Request()
@@ -348,6 +388,8 @@ class EmailMailboxProposeNewTimeForMeetingRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxResolveRecipientsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest::ReportCompletedAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Email.EmailRecipientResolutionResult>)
     def report_completed_async(self, resolution_results: _cabc.Iterable[windows_applicationmodel_email.EmailRecipientResolutionResult], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest::ReportFailedAsync()
@@ -361,6 +403,8 @@ class EmailMailboxResolveRecipientsRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxResolveRecipientsRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs::get_Request()
@@ -369,6 +413,8 @@ class EmailMailboxResolveRecipientsRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxServerSearchReadBatchRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest::ReportFailedAsync(Windows.ApplicationModel.Email.EmailBatchStatus)
@@ -393,6 +439,8 @@ class EmailMailboxServerSearchReadBatchRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxServerSearchReadBatchRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs::get_Request()
@@ -401,6 +449,8 @@ class EmailMailboxServerSearchReadBatchRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSetAutoReplySettingsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest::ReportFailedAsync()
@@ -414,6 +464,8 @@ class EmailMailboxSetAutoReplySettingsRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSetAutoReplySettingsRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs::get_Request()
@@ -422,6 +474,8 @@ class EmailMailboxSetAutoReplySettingsRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSyncManagerSyncRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest::ReportFailedAsync()
@@ -432,6 +486,8 @@ class EmailMailboxSyncManagerSyncRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSyncManagerSyncRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs::get_Request()
@@ -440,6 +496,8 @@ class EmailMailboxSyncManagerSyncRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxUpdateMeetingResponseRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest::ReportFailedAsync()
@@ -465,6 +523,8 @@ class EmailMailboxUpdateMeetingResponseRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs::get_Request()
@@ -473,6 +533,8 @@ class EmailMailboxUpdateMeetingResponseRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class EmailMailboxValidateCertificatesRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest::ReportCompletedAsync(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Email.EmailCertificateValidationStatus>)
     def report_completed_async(self, validation_statuses: _cabc.Iterable[windows_applicationmodel_email.EmailCertificateValidationStatus], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest::ReportFailedAsync()
@@ -486,6 +548,8 @@ class EmailMailboxValidateCertificatesRequest(winrt.system.Object):
 
 @typing.final
 class EmailMailboxValidateCertificatesRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs::get_Request()

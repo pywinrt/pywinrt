@@ -71,10 +71,13 @@ class PlatformDiagnosticActions_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlatformDiagnosticActions(winrt.system.Object, metaclass=PlatformDiagnosticActions_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceInfo::get_IsAutoLogger()
     @_property
     def is_auto_logger(self) -> bool: ...
@@ -96,6 +99,8 @@ class PlatformDiagnosticTraceInfo(winrt.system.Object):
 
 @typing.final
 class PlatformDiagnosticTraceRuntimeInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int64 Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticTraceRuntimeInfo::get_EtwRuntimeFileTime()
     @_property
     def etw_runtime_file_time(self) -> winrt.system.Int64: ...

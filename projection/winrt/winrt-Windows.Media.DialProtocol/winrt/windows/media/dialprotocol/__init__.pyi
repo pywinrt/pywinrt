@@ -57,6 +57,8 @@ class DialDeviceDisplayStatus(enum.IntEnum):
 
 @typing.final
 class DialApp(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialAppStateDetails> Windows.Media.DialProtocol.DialApp::GetAppStateAsync()
     def get_app_state_async(self) -> windows_foundation.IAsyncOperation[DialAppStateDetails]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialAppLaunchResult> Windows.Media.DialProtocol.DialApp::RequestLaunchAsync(System.String)
@@ -69,6 +71,8 @@ class DialApp(winrt.system.Object):
 
 @typing.final
 class DialAppStateDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.DialProtocol.DialAppStateDetails::get_FullXml()
     @_property
     def full_xml(self) -> str: ...
@@ -87,6 +91,8 @@ class DialDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DialDevice(winrt.system.Object, metaclass=DialDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.DialProtocol.DialApp Windows.Media.DialProtocol.DialDevice::GetDialApp(System.String)
     def get_dial_app(self, app_name: str, /) -> DialApp: ...
     # System.String Windows.Media.DialProtocol.DialDevice::get_Id()
@@ -147,18 +153,24 @@ class DialDevicePicker(winrt.system.Object):
 
 @typing.final
 class DialDevicePickerFilter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.DialProtocol.DialDevicePickerFilter::get_SupportedAppNames()
     @_property
     def supported_app_names(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
 class DialDeviceSelectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.DialProtocol.DialDevice Windows.Media.DialProtocol.DialDeviceSelectedEventArgs::get_SelectedDialDevice()
     @_property
     def selected_dial_device(self) -> DialDevice: ...
 
 @typing.final
 class DialDisconnectButtonClickedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.DialProtocol.DialDevice Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs::get_Device()
     @_property
     def device(self) -> DialDevice: ...
@@ -171,6 +183,8 @@ class DialReceiverApp_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DialReceiverApp(winrt.system.Object, metaclass=DialReceiverApp_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.String>> Windows.Media.DialProtocol.DialReceiverApp::GetAdditionalDataAsync()
     def get_additional_data_async(self) -> windows_foundation.IAsyncOperation[_cabc.MutableMapping[str, str]]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Media.DialProtocol.DialReceiverApp::GetUniqueDeviceNameAsync()

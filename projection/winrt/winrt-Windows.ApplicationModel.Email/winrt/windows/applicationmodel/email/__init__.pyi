@@ -346,6 +346,8 @@ class EmailAttachment(winrt.system.Object):
 
 @typing.final
 class EmailConversation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Email.EmailMessage>> Windows.ApplicationModel.Email.EmailConversation::FindMessagesAsync()
     def find_messages_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[EmailMessage]]: ...
@@ -398,6 +400,8 @@ class EmailConversation(winrt.system.Object):
 
 @typing.final
 class EmailConversationBatch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Email.EmailConversation> Windows.ApplicationModel.Email.EmailConversationBatch::get_Conversations()
     @_property
     def conversations(self) -> _cabc.Sequence[EmailConversation]: ...
@@ -407,11 +411,15 @@ class EmailConversationBatch(winrt.system.Object):
 
 @typing.final
 class EmailConversationReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailConversationBatch> Windows.ApplicationModel.Email.EmailConversationReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[EmailConversationBatch]: ...
 
 @typing.final
 class EmailFolder(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailFolder> Windows.ApplicationModel.Email.EmailFolder::CreateFolderAsync(System.String)
     def create_folder_async(self, name: str, /) -> windows_foundation.IAsyncOperation[EmailFolder]: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.EmailFolder::DeleteAsync()
@@ -599,6 +607,8 @@ class EmailIrmTemplate(winrt.system.Object):
 
 @typing.final
 class EmailItemCounts(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.ApplicationModel.Email.EmailItemCounts::get_Flagged()
     @_property
     def flagged(self) -> winrt.system.UInt32: ...
@@ -614,6 +624,8 @@ class EmailItemCounts(winrt.system.Object):
 
 @typing.final
 class EmailMailbox(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.EmailMailbox::ChangeMessageFlagStateAsync(System.String,Windows.ApplicationModel.Email.EmailFlagState)
     def change_message_flag_state_async(self, message_id: str, flag_state: EmailFlagState, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailMessage> Windows.ApplicationModel.Email.EmailMailbox::CreateResponseMessageAsync(System.String,Windows.ApplicationModel.Email.EmailMessageResponseKind,System.String,Windows.ApplicationModel.Email.EmailMessageBodyKind,System.String)
@@ -782,6 +794,8 @@ class EmailMailbox(winrt.system.Object):
 
 @typing.final
 class EmailMailboxAction(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.ApplicationModel.Email.EmailMailboxAction::get_ChangeNumber()
     @_property
     def change_number(self) -> winrt.system.UInt64: ...
@@ -791,6 +805,8 @@ class EmailMailboxAction(winrt.system.Object):
 
 @typing.final
 class EmailMailboxAutoReply(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Email.EmailMailboxAutoReply::get_Response()
     @_property
     def response(self) -> str: ...
@@ -843,6 +859,8 @@ class EmailMailboxAutoReplySettings(winrt.system.Object):
 
 @typing.final
 class EmailMailboxCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Email.EmailMailboxCapabilities::get_CanSmartSend()
     @_property
     def can_smart_send(self) -> bool: ...
@@ -930,6 +948,8 @@ class EmailMailboxCapabilities(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Email.EmailMailboxChangeType Windows.ApplicationModel.Email.EmailMailboxChange::get_ChangeType()
     @_property
     def change_type(self) -> EmailMailboxChangeType: ...
@@ -945,6 +965,8 @@ class EmailMailboxChange(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChangeReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Email.EmailMailboxChangeReader::AcceptChanges()
     def accept_changes(self) -> None: ...
     # System.Void Windows.ApplicationModel.Email.EmailMailboxChangeReader::AcceptChangesThrough(Windows.ApplicationModel.Email.EmailMailboxChange)
@@ -954,6 +976,8 @@ class EmailMailboxChangeReader(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChangeTracker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Email.EmailMailboxChangeTracker::Enable()
     def enable(self) -> None: ...
     # Windows.ApplicationModel.Email.EmailMailboxChangeReader Windows.ApplicationModel.Email.EmailMailboxChangeTracker::GetChangeReader()
@@ -966,16 +990,22 @@ class EmailMailboxChangeTracker(winrt.system.Object):
 
 @typing.final
 class EmailMailboxChangedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Email.EmailMailboxChangedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class EmailMailboxChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Email.EmailMailboxChangedDeferral Windows.ApplicationModel.Email.EmailMailboxChangedEventArgs::GetDeferral()
     def get_deferral(self) -> EmailMailboxChangedDeferral: ...
 
 @typing.final
 class EmailMailboxCreateFolderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Email.EmailFolder Windows.ApplicationModel.Email.EmailMailboxCreateFolderResult::get_Folder()
     @_property
     def folder(self) -> EmailFolder: ...
@@ -985,6 +1015,8 @@ class EmailMailboxCreateFolderResult(winrt.system.Object):
 
 @typing.final
 class EmailMailboxPolicies(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm> Windows.ApplicationModel.Email.EmailMailboxPolicies::get_RequiredSmimeSigningAlgorithm()
     @_property
     def required_smime_signing_algorithm(self) -> EmailMailboxSmimeSigningAlgorithm | None: ...
@@ -1024,6 +1056,8 @@ class EmailMailboxPolicies(winrt.system.Object):
 
 @typing.final
 class EmailMailboxSyncManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Email.EmailMailboxSyncManager::SyncAsync()
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Email.EmailMailboxSyncManager::add_SyncStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Email.EmailMailboxSyncManager,System.Object>)
@@ -1060,10 +1094,13 @@ class EmailManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EmailManager(winrt.system.Object, metaclass=EmailManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class EmailManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailStore> Windows.ApplicationModel.Email.EmailManagerForUser::RequestStoreAsync(Windows.ApplicationModel.Email.EmailStoreAccessType)
     def request_store_async(self, access_type: EmailStoreAccessType, /) -> windows_foundation.IAsyncOperation[EmailStore]: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Email.EmailManagerForUser::ShowComposeNewEmailAsync(Windows.ApplicationModel.Email.EmailMessage)
@@ -1341,6 +1378,8 @@ class EmailMessage(winrt.system.Object):
 
 @typing.final
 class EmailMessageBatch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Email.EmailMessage> Windows.ApplicationModel.Email.EmailMessageBatch::get_Messages()
     @_property
     def messages(self) -> _cabc.Sequence[EmailMessage]: ...
@@ -1350,6 +1389,8 @@ class EmailMessageBatch(winrt.system.Object):
 
 @typing.final
 class EmailMessageReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailMessageBatch> Windows.ApplicationModel.Email.EmailMessageReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[EmailMessageBatch]: ...
 
@@ -1388,6 +1429,8 @@ class EmailQueryOptions(winrt.system.Object):
 
 @typing.final
 class EmailQueryTextSearch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Email.EmailQueryTextSearch::get_Text()
     @_property
     def text(self) -> str: ...
@@ -1445,6 +1488,8 @@ class EmailRecipientResolutionResult(winrt.system.Object):
 
 @typing.final
 class EmailStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Email.EmailMailbox> Windows.ApplicationModel.Email.EmailStore::CreateMailboxAsync(System.String,System.String)
     def create_mailbox_async(self, account_name: str, account_address: str, /) -> windows_foundation.IAsyncOperation[EmailMailbox]: ...
@@ -1488,5 +1533,6 @@ class EmailStore(winrt.system.Object):
 
 @typing.final
 class EmailStoreNotificationTriggerDetails(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

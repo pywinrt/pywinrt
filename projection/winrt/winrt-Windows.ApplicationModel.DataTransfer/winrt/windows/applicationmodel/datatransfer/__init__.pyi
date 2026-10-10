@@ -122,7 +122,8 @@ class Clipboard_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Clipboard(winrt.system.Object, metaclass=Clipboard_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ClipboardContentOptions(winrt.system.Object):
@@ -148,10 +149,13 @@ class ClipboardContentOptions(winrt.system.Object):
 
 @typing.final
 class ClipboardHistoryChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ClipboardHistoryItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem::get_Content()
     @_property
     def content(self) -> DataPackageView: ...
@@ -164,6 +168,8 @@ class ClipboardHistoryItem(winrt.system.Object):
 
 @typing.final
 class ClipboardHistoryItemsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.DataTransfer.ClipboardHistoryItem> Windows.ApplicationModel.DataTransfer.ClipboardHistoryItemsResult::get_Items()
     @_property
     def items(self) -> _cabc.Sequence[ClipboardHistoryItem]: ...
@@ -242,6 +248,8 @@ class DataPackagePropertySet(_cabc.MutableMapping[str, winrt.system.Object], win
     def __getitem__(self, key: str) -> winrt.system.Object: ...
     def __setitem__(self, key: str, value: winrt.system.Object) -> None: ...
     def __delitem__(self, key: str) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DataPackagePropertySet::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.ApplicationModel.DataTransfer.DataPackagePropertySet::First()
@@ -341,6 +349,8 @@ class DataPackagePropertySetView(_cabc.Mapping[str, winrt.system.Object], winrt.
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> winrt.system.Object: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.Object>> Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, winrt.system.Object]]: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView::HasKey(System.String)
@@ -397,6 +407,8 @@ class DataPackagePropertySetView(_cabc.Mapping[str, winrt.system.Object], winrt.
 
 @typing.final
 class DataPackageView(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.DataTransfer.DataPackageView::Contains(System.String)
     def contains(self, format_id: str, /) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri> Windows.ApplicationModel.DataTransfer.DataPackageView::GetApplicationLinkAsync()
@@ -456,11 +468,15 @@ class DataPackageView(winrt.system.Object):
 
 @typing.final
 class DataProviderDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DataProviderDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class DataProviderRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataProviderDeferral Windows.ApplicationModel.DataTransfer.DataProviderRequest::GetDeferral()
     def get_deferral(self) -> DataProviderDeferral: ...
     # System.Void Windows.ApplicationModel.DataTransfer.DataProviderRequest::SetData(System.Object)
@@ -474,6 +490,8 @@ class DataProviderRequest(winrt.system.Object):
 
 @typing.final
 class DataRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DataRequest::FailWithDisplayText(System.String)
     def fail_with_display_text(self, value: str, /) -> None: ...
     # Windows.ApplicationModel.DataTransfer.DataRequestDeferral Windows.ApplicationModel.DataTransfer.DataRequest::GetDeferral()
@@ -490,11 +508,15 @@ class DataRequest(winrt.system.Object):
 
 @typing.final
 class DataRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DataRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class DataRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataRequest Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs::get_Request()
     @_property
     def request(self) -> DataRequest: ...
@@ -518,6 +540,8 @@ class DataTransferManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DataTransferManager(winrt.system.Object, metaclass=DataTransferManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.DataTransferManager::add_DataRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.DataTransferManager,Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs>)
     def add_data_requested(self, handler: windows_foundation.TypedEventHandler[DataTransferManager, DataRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.DataTransfer.DataTransferManager::remove_DataRequested(Windows.Foundation.EventRegistrationToken)
@@ -540,10 +564,13 @@ class HtmlFormatHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HtmlFormatHelper(winrt.system.Object, metaclass=HtmlFormatHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class OperationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs::get_Operation()
     @_property
     def operation(self) -> DataPackageOperation: ...
@@ -553,6 +580,8 @@ class OperationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class ShareCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.ShareTargetInfo Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs::get_ShareTarget()
     @_property
     def share_target(self) -> ShareTargetInfo: ...
@@ -578,6 +607,8 @@ class ShareProvider(winrt.system.Object):
 
 @typing.final
 class ShareProviderOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.ShareProviderOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.ShareProviderOperation::get_Data()
@@ -589,6 +620,8 @@ class ShareProviderOperation(winrt.system.Object):
 
 @typing.final
 class ShareProvidersRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.ShareProvidersRequestedEventArgs::get_Data()
@@ -600,6 +633,8 @@ class ShareProvidersRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class ShareTargetInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.DataTransfer.ShareTargetInfo::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
@@ -634,7 +669,8 @@ class SharedStorageAccessManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAccessManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StandardDataFormats_Static(winrt._winrt.Object_Static):
@@ -669,10 +705,13 @@ class StandardDataFormats_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StandardDataFormats(winrt.system.Object, metaclass=StandardDataFormats_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TargetApplicationChosenEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.DataTransfer.TargetApplicationChosenEventArgs::get_ApplicationName()
     @_property
     def application_name(self) -> str: ...
@@ -684,6 +723,8 @@ class TransferTarget_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TransferTarget(winrt.system.Object, metaclass=TransferTarget_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.ApplicationModel.DataTransfer.TransferTarget::get_DisplayIcon()
     @_property
     def display_icon(self) -> windows_storage_streams.IRandomAccessStreamReference: ...
@@ -699,6 +740,8 @@ class TransferTarget(winrt.system.Object, metaclass=TransferTarget_Static):
 
 @typing.final
 class TransferTargetChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.TransferTarget Windows.ApplicationModel.DataTransfer.TransferTargetChangedEventArgs::get_Target()
     @_property
     def target(self) -> TransferTarget: ...
@@ -724,6 +767,8 @@ class TransferTargetDiscoveryOptions(winrt.system.Object):
 
 @typing.final
 class TransferTargetInvokeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.DataTransfer.TransferTargetInvokeResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -738,6 +783,8 @@ class TransferTargetWatcher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TransferTargetWatcher(winrt.system.Object, metaclass=TransferTargetWatcher_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::Stop()

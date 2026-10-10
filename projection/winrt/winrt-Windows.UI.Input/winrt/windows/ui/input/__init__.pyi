@@ -237,11 +237,15 @@ class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object, m
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.AttachableInputObject::Close()
     def close(self) -> None: ...
 
 @typing.final
 class CrossSlidingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.CrossSlidingState Windows.UI.Input.CrossSlidingEventArgs::get_CrossSlidingState()
     @_property
     def cross_sliding_state(self) -> CrossSlidingState: ...
@@ -257,6 +261,8 @@ class CrossSlidingEventArgs(winrt.system.Object):
 
 @typing.final
 class DraggingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.DraggingState Windows.UI.Input.DraggingEventArgs::get_DraggingState()
     @_property
     def dragging_state(self) -> DraggingState: ...
@@ -277,6 +283,8 @@ class EdgeGesture_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class EdgeGesture(winrt.system.Object, metaclass=EdgeGesture_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.EdgeGesture::add_Canceled(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.EdgeGesture,Windows.UI.Input.EdgeGestureEventArgs>)
     def add_canceled(self, handler: windows_foundation.TypedEventHandler[EdgeGesture, EdgeGestureEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.EdgeGesture::remove_Canceled(Windows.Foundation.EventRegistrationToken)
@@ -292,6 +300,8 @@ class EdgeGesture(winrt.system.Object, metaclass=EdgeGesture_Static):
 
 @typing.final
 class EdgeGestureEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.EdgeGestureKind Windows.UI.Input.EdgeGestureEventArgs::get_Kind()
     @_property
     def kind(self) -> EdgeGestureKind: ...
@@ -306,6 +316,8 @@ class GamepadNavigationConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GamepadNavigationConfiguration(winrt.system.Object, metaclass=GamepadNavigationConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::TrySetNavigationEnabled(System.Boolean)
     def try_set_navigation_enabled(self, enabled: bool, /) -> bool: ...
     # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_NavigationEnabled()
@@ -515,6 +527,8 @@ class GestureRecognizer(winrt.system.Object):
 
 @typing.final
 class HoldingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.HoldingState Windows.UI.Input.HoldingEventArgs::get_HoldingState()
     @_property
     def holding_state(self) -> HoldingState: ...
@@ -533,6 +547,8 @@ class HoldingEventArgs(winrt.system.Object):
 
 @typing.final
 class InputActivationListener(AttachableInputObject):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.InputActivationListener::add_InputActivationChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.InputActivationListener,Windows.UI.Input.InputActivationListenerActivationChangedEventArgs>)
     def add_input_activation_changed(self, handler: windows_foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.InputActivationListener::remove_InputActivationChanged(Windows.Foundation.EventRegistrationToken)
@@ -543,6 +559,8 @@ class InputActivationListener(AttachableInputObject):
 
 @typing.final
 class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.InputActivationState Windows.UI.Input.InputActivationListenerActivationChangedEventArgs::get_State()
     @_property
     def state(self) -> InputActivationState: ...
@@ -554,6 +572,8 @@ class KeyboardDeliveryInterceptor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyboardDeliveryInterceptor(winrt.system.Object, metaclass=KeyboardDeliveryInterceptor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.KeyboardDeliveryInterceptor::add_KeyDown(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.KeyboardDeliveryInterceptor,Windows.UI.Core.KeyEventArgs>)
     def add_key_down(self, handler: windows_foundation.TypedEventHandler[KeyboardDeliveryInterceptor, windows_ui_core.KeyEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.KeyboardDeliveryInterceptor::remove_KeyDown(Windows.Foundation.EventRegistrationToken)
@@ -571,6 +591,8 @@ class KeyboardDeliveryInterceptor(winrt.system.Object, metaclass=KeyboardDeliver
 
 @typing.final
 class ManipulationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.ManipulationDelta Windows.UI.Input.ManipulationCompletedEventArgs::get_Cumulative()
     @_property
     def cumulative(self) -> ManipulationDelta: ...
@@ -592,6 +614,8 @@ class ManipulationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationInertiaStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.ManipulationDelta Windows.UI.Input.ManipulationInertiaStartingEventArgs::get_Cumulative()
     @_property
     def cumulative(self) -> ManipulationDelta: ...
@@ -613,6 +637,8 @@ class ManipulationInertiaStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.ManipulationDelta Windows.UI.Input.ManipulationStartedEventArgs::get_Cumulative()
     @_property
     def cumulative(self) -> ManipulationDelta: ...
@@ -628,6 +654,8 @@ class ManipulationStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class ManipulationUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.ManipulationDelta Windows.UI.Input.ManipulationUpdatedEventArgs::get_Cumulative()
     @_property
     def cumulative(self) -> ManipulationDelta: ...
@@ -652,6 +680,8 @@ class ManipulationUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class MouseWheelParameters(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Input.MouseWheelParameters::get_PageTranslation()
     @_property
     def page_translation(self) -> windows_foundation.Point: ...
@@ -791,6 +821,8 @@ class PointerPoint_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.UI.Input.PointerPoint::get_FrameId()
     @_property
     def frame_id(self) -> winrt.system.UInt32: ...
@@ -824,6 +856,8 @@ class PointerPoint(winrt.system.Object, metaclass=PointerPoint_Static):
 
 @typing.final
 class PointerPointProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Input.PointerPointProperties::GetUsageValue(System.UInt32,System.UInt32)
     def get_usage_value(self, usage_page: winrt.system.UInt32, usage_id: winrt.system.UInt32, /) -> winrt.system.Int32: ...
     # System.Boolean Windows.UI.Input.PointerPointProperties::HasUsage(System.UInt32,System.UInt32)
@@ -905,6 +939,8 @@ class PointerVisualizationSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PointerVisualizationSettings(winrt.system.Object, metaclass=PointerVisualizationSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.PointerVisualizationSettings::get_IsContactFeedbackEnabled()
     @_property
     def is_contact_feedback_enabled(self) -> bool: ...
@@ -927,6 +963,8 @@ class RadialController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RadialController(winrt.system.Object, metaclass=RadialController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.RadialController::add_ButtonClicked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.RadialController,Windows.UI.Input.RadialControllerButtonClickedEventArgs>)
     def add_button_clicked(self, handler: windows_foundation.TypedEventHandler[RadialController, RadialControllerButtonClickedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.RadialController::remove_ButtonClicked(Windows.Foundation.EventRegistrationToken)
@@ -985,6 +1023,8 @@ class RadialController(winrt.system.Object, metaclass=RadialController_Static):
 
 @typing.final
 class RadialControllerButtonClickedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerButtonClickedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -994,6 +1034,8 @@ class RadialControllerButtonClickedEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerButtonHoldingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerButtonHoldingEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1003,6 +1045,8 @@ class RadialControllerButtonHoldingEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerButtonPressedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerButtonPressedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1012,6 +1056,8 @@ class RadialControllerButtonPressedEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerButtonReleasedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerButtonReleasedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1038,6 +1084,8 @@ class RadialControllerConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RadialControllerConfiguration(winrt.system.Object, metaclass=RadialControllerConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.RadialControllerConfiguration::ResetToDefaultMenuItems()
     def reset_to_default_menu_items(self) -> None: ...
     # System.Void Windows.UI.Input.RadialControllerConfiguration::SetDefaultMenuItems(Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.RadialControllerSystemMenuItemKind>)
@@ -1059,6 +1107,8 @@ class RadialControllerConfiguration(winrt.system.Object, metaclass=RadialControl
 
 @typing.final
 class RadialControllerControlAcquiredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerControlAcquiredEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1071,6 +1121,8 @@ class RadialControllerControlAcquiredEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerMenu(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerMenuItem Windows.UI.Input.RadialControllerMenu::GetSelectedMenuItem()
     def get_selected_menu_item(self) -> RadialControllerMenuItem: ...
     # System.Void Windows.UI.Input.RadialControllerMenu::SelectMenuItem(Windows.UI.Input.RadialControllerMenuItem)
@@ -1106,6 +1158,8 @@ class RadialControllerMenuItem_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RadialControllerMenuItem(winrt.system.Object, metaclass=RadialControllerMenuItem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.RadialControllerMenuItem::add_Invoked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.RadialControllerMenuItem,System.Object>)
     def add_invoked(self, handler: windows_foundation.TypedEventHandler[RadialControllerMenuItem, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.RadialControllerMenuItem::remove_Invoked(Windows.Foundation.EventRegistrationToken)
@@ -1122,6 +1176,8 @@ class RadialControllerMenuItem(winrt.system.Object, metaclass=RadialControllerMe
 
 @typing.final
 class RadialControllerRotationChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerRotationChangedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1137,6 +1193,8 @@ class RadialControllerRotationChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerScreenContact(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.Input.RadialControllerScreenContact::get_Bounds()
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
@@ -1146,6 +1204,8 @@ class RadialControllerScreenContact(winrt.system.Object):
 
 @typing.final
 class RadialControllerScreenContactContinuedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1158,6 +1218,8 @@ class RadialControllerScreenContactContinuedEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerScreenContactEndedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.RadialControllerScreenContactEndedEventArgs::get_IsButtonPressed()
     @_property
     def is_button_pressed(self) -> bool: ...
@@ -1167,6 +1229,8 @@ class RadialControllerScreenContactEndedEventArgs(winrt.system.Object):
 
 @typing.final
 class RadialControllerScreenContactStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialControllerScreenContact Windows.UI.Input.RadialControllerScreenContactStartedEventArgs::get_Contact()
     @_property
     def contact(self) -> RadialControllerScreenContact: ...
@@ -1179,6 +1243,8 @@ class RadialControllerScreenContactStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class RightTappedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.PointerDeviceType Windows.UI.Input.RightTappedEventArgs::get_PointerDeviceType()
     @_property
     def pointer_device_type(self) -> windows_devices_input.PointerDeviceType: ...
@@ -1196,6 +1262,8 @@ class SystemButtonEventController_Static(AttachableInputObject_Static):
 
 @typing.final
 class SystemButtonEventController(AttachableInputObject, metaclass=SystemButtonEventController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.SystemButtonEventController::add_SystemFunctionButtonPressed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs>)
     def add_system_function_button_pressed(self, handler: windows_foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionButtonEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.SystemButtonEventController::remove_SystemFunctionButtonPressed(Windows.Foundation.EventRegistrationToken)
@@ -1215,6 +1283,8 @@ class SystemButtonEventController(AttachableInputObject, metaclass=SystemButtonE
 
 @typing.final
 class SystemFunctionButtonEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.SystemFunctionButtonEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -1227,6 +1297,8 @@ class SystemFunctionButtonEventArgs(winrt.system.Object):
 
 @typing.final
 class SystemFunctionLockChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.SystemFunctionLockChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -1242,6 +1314,8 @@ class SystemFunctionLockChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class SystemFunctionLockIndicatorChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -1257,6 +1331,8 @@ class SystemFunctionLockIndicatorChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class TappedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Input.PointerDeviceType Windows.UI.Input.TappedEventArgs::get_PointerDeviceType()
     @_property
     def pointer_device_type(self) -> windows_devices_input.PointerDeviceType: ...
@@ -1279,6 +1355,8 @@ class TouchpadGesturesController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TouchpadGesturesController(winrt.system.Object, metaclass=TouchpadGesturesController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.TouchpadGesturesController::add_GlobalActionPerformed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.TouchpadGesturesController,Windows.UI.Input.TouchpadGlobalActionEventArgs>)
     def add_global_action_performed(self, handler: windows_foundation.TypedEventHandler[TouchpadGesturesController, TouchpadGlobalActionEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.TouchpadGesturesController::remove_GlobalActionPerformed(Windows.Foundation.EventRegistrationToken)
@@ -1310,6 +1388,8 @@ class TouchpadGesturesController(winrt.system.Object, metaclass=TouchpadGestures
 
 @typing.final
 class TouchpadGlobalActionEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.TouchpadGlobalAction Windows.UI.Input.TouchpadGlobalActionEventArgs::get_Action()
     @_property
     def action(self) -> TouchpadGlobalAction: ...

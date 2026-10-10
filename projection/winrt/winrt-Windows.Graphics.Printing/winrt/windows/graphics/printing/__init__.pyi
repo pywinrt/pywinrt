@@ -386,6 +386,8 @@ class PrintManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PrintManager(winrt.system.Object, metaclass=PrintManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.PrintManager::add_PrintTaskRequested(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintManager,Windows.Graphics.Printing.PrintTaskRequestedEventArgs>)
     def add_print_task_requested(self, event_handler: windows_foundation.TypedEventHandler[PrintManager, PrintTaskRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Printing.PrintManager::remove_PrintTaskRequested(Windows.Foundation.EventRegistrationToken)
@@ -440,6 +442,8 @@ class PrintPageRange(winrt.system.Object):
 
 @typing.final
 class PrintPageRangeOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Graphics.Printing.PrintPageRangeOptions::get_AllowCustomSetOfPages()
     @_property
     def allow_custom_set_of_pages(self) -> bool: ...
@@ -461,6 +465,8 @@ class PrintPageRangeOptions(winrt.system.Object):
 
 @typing.final
 class PrintTask(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Printing.PrintTask::add_Completed(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask,Windows.Graphics.Printing.PrintTaskCompletedEventArgs>)
     def add_completed(self, event_handler: windows_foundation.TypedEventHandler[PrintTask, PrintTaskCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Printing.PrintTask::remove_Completed(Windows.Foundation.EventRegistrationToken)
@@ -507,12 +513,16 @@ class PrintTask(winrt.system.Object):
 
 @typing.final
 class PrintTaskCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTaskCompletion Windows.Graphics.Printing.PrintTaskCompletedEventArgs::get_Completion()
     @_property
     def completion(self) -> PrintTaskCompletion: ...
 
 @typing.final
 class PrintTaskOptions(IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCoreProperties, IPrintTaskOptionsCore, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintPageDescription Windows.Graphics.Printing.PrintTaskOptions::GetPageDescription(System.UInt32)
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Graphics.Printing.PrintTaskOptions::GetPagePrintTicket(Windows.Graphics.Printing.PrintPageInfo)
@@ -607,12 +617,16 @@ class PrintTaskOptions(IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCo
 
 @typing.final
 class PrintTaskProgressingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Graphics.Printing.PrintTaskProgressingEventArgs::get_DocumentPageCount()
     @_property
     def document_page_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class PrintTaskRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTask Windows.Graphics.Printing.PrintTaskRequest::CreatePrintTask(System.String,Windows.Graphics.Printing.PrintTaskSourceRequestedHandler)
     def create_print_task(self, title: str, handler: PrintTaskSourceRequestedHandler, /) -> PrintTask: ...
     # Windows.Graphics.Printing.PrintTaskRequestedDeferral Windows.Graphics.Printing.PrintTaskRequest::GetDeferral()
@@ -623,17 +637,23 @@ class PrintTaskRequest(winrt.system.Object):
 
 @typing.final
 class PrintTaskRequestedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.PrintTaskRequestedDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class PrintTaskRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTaskRequest Windows.Graphics.Printing.PrintTaskRequestedEventArgs::get_Request()
     @_property
     def request(self) -> PrintTaskRequest: ...
 
 @typing.final
 class PrintTaskSourceRequestedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral Windows.Graphics.Printing.PrintTaskSourceRequestedArgs::GetDeferral()
     def get_deferral(self) -> PrintTaskSourceRequestedDeferral: ...
     # System.Void Windows.Graphics.Printing.PrintTaskSourceRequestedArgs::SetSource(Windows.Graphics.Printing.IPrintDocumentSource)
@@ -644,6 +664,8 @@ class PrintTaskSourceRequestedArgs(winrt.system.Object):
 
 @typing.final
 class PrintTaskSourceRequestedDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral::Complete()
     def complete(self) -> None: ...
 
@@ -697,7 +719,8 @@ class StandardPrintTaskOptions_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IPrintDocumentSource: ...

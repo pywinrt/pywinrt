@@ -14,6 +14,8 @@ __all__ = [
 
 @typing.final
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Accessibility.ScreenReaderPositionChangedEventArgs::get_IsReadingText()
     @_property
     def is_reading_text(self) -> bool: ...

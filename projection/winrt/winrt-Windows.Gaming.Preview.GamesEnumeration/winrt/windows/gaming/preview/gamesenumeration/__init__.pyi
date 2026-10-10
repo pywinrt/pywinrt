@@ -68,10 +68,13 @@ class GameList_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameList(winrt.system.Object, metaclass=GameList_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GameListEntry(IGameListEntry, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.GameListEntry::LaunchAsync()
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameListEntry::SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)
@@ -115,6 +118,8 @@ class GameListEntry(IGameListEntry, winrt.system.Object):
 
 @typing.final
 class GameModeConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IReference`1<System.Int32> Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration::get_PercentGpuTimeAllocatedToGame()
@@ -176,6 +181,8 @@ class GameModeUserConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfiguration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration::SaveAsync()
     def save_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration::get_GamingRelatedProcessNames()

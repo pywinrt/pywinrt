@@ -225,12 +225,16 @@ class SmartCardUnlockPromptingBehavior(enum.IntEnum):
 
 @typing.final
 class CardAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SmartCards.SmartCard Windows.Devices.SmartCards.CardAddedEventArgs::get_SmartCard()
     @_property
     def smart_card(self) -> SmartCard: ...
 
 @typing.final
 class CardRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SmartCards.SmartCard Windows.Devices.SmartCards.CardRemovedEventArgs::get_SmartCard()
     @_property
     def smart_card(self) -> SmartCard: ...
@@ -246,10 +250,13 @@ class KnownSmartCardAppletIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownSmartCardAppletIds(winrt.system.Object, metaclass=KnownSmartCardAppletIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class SmartCard(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardConnection> Windows.Devices.SmartCards.SmartCard::ConnectAsync()
     def connect_async(self) -> windows_foundation.IAsyncOperation[SmartCardConnection]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Devices.SmartCards.SmartCard::GetAnswerToResetAsync()
@@ -323,6 +330,8 @@ class SmartCardAppletIdGroup(winrt.system.Object, metaclass=SmartCardAppletIdGro
 
 @typing.final
 class SmartCardAppletIdGroupRegistration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardActivationPolicyChangeResult> Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration::RequestActivationPolicyChangeAsync(Windows.Devices.SmartCards.SmartCardAppletIdGroupActivationPolicy)
     def request_activation_policy_change_async(self, policy: SmartCardAppletIdGroupActivationPolicy, /) -> windows_foundation.IAsyncOperation[SmartCardActivationPolicyChangeResult]: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.SmartCards.SmartCardAppletIdGroupRegistration::SetAutomaticResponseApdusAsync(Windows.Foundation.Collections.IIterable`1<Windows.Devices.SmartCards.SmartCardAutomaticResponseApdu>)
@@ -398,6 +407,8 @@ class SmartCardAutomaticResponseApdu(winrt.system.Object):
 class SmartCardChallengeContext(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.SmartCards.SmartCardChallengeContext::ChangeAdministrativeKeyAsync(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def change_administrative_key_async(self, response: winrt.system.Buffer, new_administrative_key: winrt.system.Buffer, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Devices.SmartCards.SmartCardChallengeContext::Close()
@@ -422,6 +433,8 @@ class SmartCardChallengeContext(windows_foundation.IClosable, winrt.system.Objec
 class SmartCardConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.SmartCards.SmartCardConnection::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IBuffer> Windows.Devices.SmartCards.SmartCardConnection::TransmitAsync(Windows.Storage.Streams.IBuffer)
@@ -436,6 +449,8 @@ class SmartCardCryptogramGenerator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmartCardCryptogramGenerator(winrt.system.Object, metaclass=SmartCardCryptogramGenerator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::CreateCryptogramMaterialStorageKeyAsync(Windows.Devices.SmartCards.SmartCardUnlockPromptingBehavior,System.String,Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyAlgorithm,Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyCapabilities)
     def create_cryptogram_material_storage_key_async(self, prompting_behavior: SmartCardUnlockPromptingBehavior, storage_key_name: str, algorithm: SmartCardCryptogramStorageKeyAlgorithm, capabilities: SmartCardCryptogramStorageKeyCapabilities, /) -> windows_foundation.IAsyncOperation[SmartCardCryptogramGeneratorOperationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus> Windows.Devices.SmartCards.SmartCardCryptogramGenerator::DeleteCryptogramMaterialPackageAsync(System.String)
@@ -558,6 +573,8 @@ class SmartCardCryptogramMaterialPackageCharacteristics(winrt.system.Object):
 
 @typing.final
 class SmartCardCryptogramMaterialPossessionProof(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SmartCards.SmartCardCryptogramGeneratorOperationStatus Windows.Devices.SmartCards.SmartCardCryptogramMaterialPossessionProof::get_OperationStatus()
     @_property
     def operation_status(self) -> SmartCardCryptogramGeneratorOperationStatus: ...
@@ -641,6 +658,8 @@ class SmartCardCryptogramStorageKeyCharacteristics(winrt.system.Object):
 
 @typing.final
 class SmartCardCryptogramStorageKeyInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.SmartCards.SmartCardCryptogramStorageKeyInfo::get_Attestation()
     @_property
     def attestation(self) -> windows_storage_streams.IBuffer: ...
@@ -684,6 +703,8 @@ class SmartCardEmulator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmartCardEmulator(winrt.system.Object, metaclass=SmartCardEmulator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.SmartCards.SmartCardEmulator::IsHostCardEmulationSupported()
     def is_host_card_emulation_supported(self) -> bool: ...
     # System.Void Windows.Devices.SmartCards.SmartCardEmulator::Start()
@@ -702,6 +723,8 @@ class SmartCardEmulator(winrt.system.Object, metaclass=SmartCardEmulator_Static)
 
 @typing.final
 class SmartCardEmulatorApduReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs::TryRespondAsync(Windows.Storage.Streams.IBuffer)
     def try_respond_async(self, response_apdu: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -737,6 +760,8 @@ class SmartCardEmulatorApduReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class SmartCardEmulatorConnectionDeactivatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties Windows.Devices.SmartCards.SmartCardEmulatorConnectionDeactivatedEventArgs::get_ConnectionProperties()
     @_property
     def connection_properties(self) -> SmartCardEmulatorConnectionProperties: ...
@@ -746,6 +771,8 @@ class SmartCardEmulatorConnectionDeactivatedEventArgs(winrt.system.Object):
 
 @typing.final
 class SmartCardEmulatorConnectionProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Devices.SmartCards.SmartCardEmulatorConnectionProperties::get_Id()
     @_property
     def id(self) -> _uuid.UUID: ...
@@ -795,11 +822,15 @@ class SmartCardPinPolicy(winrt.system.Object):
 
 @typing.final
 class SmartCardPinResetDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.SmartCards.SmartCardPinResetDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class SmartCardPinResetRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SmartCards.SmartCardPinResetDeferral Windows.Devices.SmartCards.SmartCardPinResetRequest::GetDeferral()
     def get_deferral(self) -> SmartCardPinResetDeferral: ...
     # System.Void Windows.Devices.SmartCards.SmartCardPinResetRequest::SetResponse(Windows.Storage.Streams.IBuffer)
@@ -840,6 +871,8 @@ class SmartCardProvisioning_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmartCardProvisioning(winrt.system.Object, metaclass=SmartCardProvisioning_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.Devices.SmartCards.SmartCardProvisioning::GetAuthorityKeyContainerNameAsync()
     def get_authority_key_container_name_async(self) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardChallengeContext> Windows.Devices.SmartCards.SmartCardProvisioning::GetChallengeContextAsync()
@@ -873,6 +906,8 @@ class SmartCardReader_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmartCardReader(winrt.system.Object, metaclass=SmartCardReader_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.SmartCards.SmartCard>> Windows.Devices.SmartCards.SmartCardReader::FindAllCardsAsync()
     def find_all_cards_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[SmartCard]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SmartCards.SmartCardReaderStatus> Windows.Devices.SmartCards.SmartCardReader::GetStatusAsync()
@@ -897,6 +932,8 @@ class SmartCardReader(winrt.system.Object, metaclass=SmartCardReader_Static):
 
 @typing.final
 class SmartCardTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.SmartCards.SmartCardTriggerDetails::TryLaunchCurrentAppAsync(System.String)
     def try_launch_current_app_async(self, arguments: str, /) -> windows_foundation.IAsyncOperation[bool]: ...

@@ -19,6 +19,8 @@ __all__ = [
 
 @typing.final
 class PaymentAppCanMakePaymentTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails::ReportCanMakePaymentResult(Windows.ApplicationModel.Payments.PaymentCanMakePaymentResult)
     def report_can_make_payment_result(self, value: windows_applicationmodel_payments.PaymentCanMakePaymentResult, /) -> None: ...
     # Windows.ApplicationModel.Payments.PaymentRequest Windows.ApplicationModel.Payments.Provider.PaymentAppCanMakePaymentTriggerDetails::get_Request()
@@ -33,6 +35,8 @@ class PaymentAppManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PaymentAppManager(winrt.system.Object, metaclass=PaymentAppManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Payments.Provider.PaymentAppManager::RegisterAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def register_async(self, supported_payment_method_ids: _cabc.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Payments.Provider.PaymentAppManager::UnregisterAsync()
@@ -45,6 +49,8 @@ class PaymentTransaction_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PaymentTransaction(winrt.system.Object, metaclass=PaymentTransaction_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult> Windows.ApplicationModel.Payments.Provider.PaymentTransaction::AcceptAsync(Windows.ApplicationModel.Payments.PaymentToken)
     def accept_async(self, payment_token: windows_applicationmodel_payments.PaymentToken, /) -> windows_foundation.IAsyncOperation[PaymentTransactionAcceptResult]: ...
     # System.Void Windows.ApplicationModel.Payments.Provider.PaymentTransaction::Reject()
@@ -77,6 +83,8 @@ class PaymentTransaction(winrt.system.Object, metaclass=PaymentTransaction_Stati
 
 @typing.final
 class PaymentTransactionAcceptResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus Windows.ApplicationModel.Payments.Provider.PaymentTransactionAcceptResult::get_Status()
     @_property
     def status(self) -> windows_applicationmodel_payments.PaymentRequestCompletionStatus: ...

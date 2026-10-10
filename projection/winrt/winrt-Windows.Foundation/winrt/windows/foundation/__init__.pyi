@@ -174,7 +174,8 @@ class GuidHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GuidHelper(winrt.system.Object, metaclass=GuidHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MemoryBuffer(IMemoryBuffer, IClosable, winrt.system.Object):
@@ -272,7 +273,8 @@ class PropertyValue_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PropertyValue(winrt.system.Object, metaclass=PropertyValue_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class Uri_Static(winrt._winrt.Object_Static):
@@ -370,6 +372,8 @@ class WwwFormUrlDecoder(_cabc.Sequence[IWwwFormUrlDecoderEntry], winrt.system.Ob
 
 @typing.final
 class WwwFormUrlDecoderEntry(IWwwFormUrlDecoderEntry, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Foundation.WwwFormUrlDecoderEntry::get_Name()
     @_property
     def name(self) -> str: ...

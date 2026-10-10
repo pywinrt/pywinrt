@@ -44,6 +44,8 @@ class UserDataAccountStoreAccessType(enum.IntEnum):
 
 @typing.final
 class UserDataAccount(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataAccounts.UserDataAccount::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Appointments.AppointmentCalendar>> Windows.ApplicationModel.UserDataAccounts.UserDataAccount::FindAppointmentCalendarsAsync()
@@ -132,10 +134,13 @@ class UserDataAccountManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserDataAccountManager(winrt.system.Object, metaclass=UserDataAccountManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UserDataAccountManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore> Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser::RequestStoreAsync(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType)
     def request_store_async(self, store_access_type: UserDataAccountStoreAccessType, /) -> windows_foundation.IAsyncOperation[UserDataAccountStore]: ...
     # Windows.System.User Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser::get_User()
@@ -144,6 +149,8 @@ class UserDataAccountManagerForUser(winrt.system.Object):
 
 @typing.final
 class UserDataAccountStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccount> Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore::CreateAccountAsync(System.String)
     def create_account_async(self, user_display_name: str, /) -> windows_foundation.IAsyncOperation[UserDataAccount]: ...
@@ -172,6 +179,8 @@ class UserDataAccountStore(winrt.system.Object):
 
 @typing.final
 class UserDataAccountStoreChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 

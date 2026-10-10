@@ -2093,6 +2093,8 @@ class XamlDirect_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlDirect(winrt.system.Object, metaclass=XamlDirect_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Xaml.Core.Direct.XamlDirect::AddEventHandler(Windows.UI.Xaml.Core.Direct.IXamlDirectObject,Windows.UI.Xaml.Core.Direct.XamlEventIndex,System.Object)
     def add_event_handler(self, xaml_direct_object: IXamlDirectObject, event_index: XamlEventIndex, handler: winrt.system.Object, /) -> None: ...

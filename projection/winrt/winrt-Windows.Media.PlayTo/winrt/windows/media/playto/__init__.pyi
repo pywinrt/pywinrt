@@ -50,12 +50,16 @@ class PlayToConnectionState(enum.IntEnum):
 
 @typing.final
 class CurrentTimeChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs::get_Time()
     @_property
     def time(self) -> datetime.timedelta: ...
 
 @typing.final
 class MuteChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.PlayTo.MuteChangeRequestedEventArgs::get_Mute()
     @_property
     def mute(self) -> bool: ...
@@ -63,6 +67,8 @@ class MuteChangeRequestedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
 class PlayToConnection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToConnection::add_Error(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToConnection,Windows.Media.PlayTo.PlayToConnectionErrorEventArgs>)
     @deprecated("PlayToConnection may be altered or unavailable for releases after Windows 10. Instead, use CastingConnection.")
     def add_error(self, handler: windows_foundation.TypedEventHandler[PlayToConnection, PlayToConnectionErrorEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -89,6 +95,8 @@ class PlayToConnection(winrt.system.Object):
 @typing.final
 @deprecated("PlayToConnectionErrorEventArgs may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorOccurredEventArgs.")
 class PlayToConnectionErrorEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.PlayTo.PlayToConnectionError Windows.Media.PlayTo.PlayToConnectionErrorEventArgs::get_Code()
     @_property
     @deprecated("PlayToConnectionErrorEventArgs may be altered or unavailable for releases after Windows 10. Instead, use CastingConnectionErrorOccurredEventArgs.")
@@ -101,6 +109,8 @@ class PlayToConnectionErrorEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PlayToConnectionStateChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.PlayTo.PlayToConnectionState Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs::get_CurrentState()
     @_property
     @deprecated("PlayToConnectionStateChangedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -113,6 +123,8 @@ class PlayToConnectionStateChangedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PlayToConnectionTransferredEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToConnectionTransferredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.PlayTo.PlayToSource Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs::get_CurrentSource()
     @_property
     @deprecated("PlayToConnectionTransferredEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -134,6 +146,8 @@ class PlayToManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
 class PlayToManager(winrt.system.Object, metaclass=PlayToManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.PlayTo.PlayToManager::add_SourceRequested(Windows.Foundation.TypedEventHandler`2<Windows.Media.PlayTo.PlayToManager,Windows.Media.PlayTo.PlayToSourceRequestedEventArgs>)
     @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def add_source_requested(self, handler: windows_foundation.TypedEventHandler[PlayToManager, PlayToSourceRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -253,6 +267,8 @@ class PlayToReceiver(winrt.system.Object):
 @typing.final
 @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
 class PlayToSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.PlayTo.PlayToSource::PlayNext()
     @deprecated("PlayToSource may be altered or unavailable for releases after Windows 10. Instead, use CastingSource.")
     def play_next(self) -> None: ...
@@ -280,6 +296,8 @@ class PlayToSource(winrt.system.Object):
 @typing.final
 @deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.PlayTo.PlayToSourceDeferral::Complete()
     @deprecated("PlayToSourceDeferral may be altered or unavailable for releases after Windows 10.")
     def complete(self) -> None: ...
@@ -287,6 +305,8 @@ class PlayToSourceDeferral(winrt.system.Object):
 @typing.final
 @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.PlayTo.PlayToSourceRequest::DisplayErrorString(System.String)
     @deprecated("PlayToSourceRequest may be altered or unavailable for releases after Windows 10.")
     def display_error_string(self, error_string: str, /) -> None: ...
@@ -304,6 +324,8 @@ class PlayToSourceRequest(winrt.system.Object):
 @typing.final
 @deprecated("PlayToSourceRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.PlayTo.PlayToSourceRequest Windows.Media.PlayTo.PlayToSourceRequestedEventArgs::get_SourceRequest()
     @_property
     @deprecated("PlayToSourceRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -312,6 +334,8 @@ class PlayToSourceRequestedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
 class PlayToSourceSelectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.PlayTo.PlayToSourceSelectedEventArgs::get_FriendlyName()
     @_property
     @deprecated("PlayToSourceSelectedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -335,12 +359,16 @@ class PlayToSourceSelectedEventArgs(winrt.system.Object):
 
 @typing.final
 class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs::get_Rate()
     @_property
     def rate(self) -> winrt.system.Double: ...
 
 @typing.final
 class SourceChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.PlayTo.SourceChangeRequestedEventArgs::get_Album()
     @_property
     def album(self) -> str: ...
@@ -374,6 +402,8 @@ class SourceChangeRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class VolumeChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.PlayTo.VolumeChangeRequestedEventArgs::get_Volume()
     @_property
     def volume(self) -> winrt.system.Double: ...

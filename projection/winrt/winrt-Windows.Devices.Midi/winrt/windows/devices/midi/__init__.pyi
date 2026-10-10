@@ -142,6 +142,8 @@ class MidiInPort_Static(winrt._winrt.Object_Static):
 class MidiInPort(windows_foundation.IClosable, winrt.system.Object, metaclass=MidiInPort_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Midi.MidiInPort::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Midi.MidiInPort::add_MessageReceived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Midi.MidiInPort,Windows.Devices.Midi.MidiMessageReceivedEventArgs>)
@@ -154,6 +156,8 @@ class MidiInPort(windows_foundation.IClosable, winrt.system.Object, metaclass=Mi
 
 @typing.final
 class MidiMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Midi.IMidiMessage Windows.Devices.Midi.MidiMessageReceivedEventArgs::get_Message()
     @_property
     def message(self) -> IMidiMessage: ...
@@ -213,6 +217,8 @@ class MidiOutPort_Static(winrt._winrt.Object_Static):
 class MidiOutPort(IMidiOutPort, windows_foundation.IClosable, winrt.system.Object, metaclass=MidiOutPort_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Midi.MidiOutPort::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.Midi.MidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)
@@ -360,6 +366,8 @@ class MidiSynthesizer_Static(winrt._winrt.Object_Static):
 class MidiSynthesizer(IMidiOutPort, windows_foundation.IClosable, winrt.system.Object, metaclass=MidiSynthesizer_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Midi.MidiSynthesizer::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.Midi.MidiSynthesizer::SendBuffer(Windows.Storage.Streams.IBuffer)

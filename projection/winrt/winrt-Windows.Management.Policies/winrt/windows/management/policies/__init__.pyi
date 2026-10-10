@@ -33,10 +33,13 @@ class NamedPolicy_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class NamedPolicy(winrt.system.Object, metaclass=NamedPolicy_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class NamedPolicyData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Management.Policies.NamedPolicyData::GetBinary()
     def get_binary(self) -> windows_storage_streams.IBuffer: ...
     # System.Boolean Windows.Management.Policies.NamedPolicyData::GetBoolean()

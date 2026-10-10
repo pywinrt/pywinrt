@@ -124,7 +124,8 @@ class JsonError_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class JsonError(winrt.system.Object, metaclass=JsonError_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class JsonObject_Static(winrt._winrt.Object_Static):
@@ -256,6 +257,8 @@ class JsonValue_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class JsonValue(windows_foundation.IStringable, IJsonValue, winrt.system.Object, metaclass=JsonValue_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Json.JsonArray Windows.Data.Json.JsonValue::GetArray()
     def get_array(self) -> JsonArray: ...
     # System.Boolean Windows.Data.Json.JsonValue::GetBoolean()

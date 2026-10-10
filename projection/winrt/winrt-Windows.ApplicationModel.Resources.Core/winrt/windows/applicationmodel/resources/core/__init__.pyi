@@ -62,6 +62,8 @@ class ResourceLayoutInfo:
 
 @typing.final
 class NamedResource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.NamedResource::Resolve()
     def resolve(self) -> ResourceCandidate: ...
@@ -91,6 +93,8 @@ class NamedResource(winrt.system.Object):
 
 @typing.final
 class ResourceCandidate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Resources.Core.ResourceCandidate::GetQualifierValue(System.String)
     def get_qualifier_value(self, qualifier_name: str, /) -> str: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.ApplicationModel.Resources.Core.ResourceCandidate::GetValueAsFileAsync()
@@ -124,6 +128,8 @@ class ResourceCandidateVectorView(_cabc.Sequence[ResourceCandidate], winrt.syste
     def __getitem__(self, index: typing.SupportsIndex) -> ResourceCandidate: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[ResourceCandidate]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Resources.Core.ResourceCandidate> Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView::First()
     def first(self) -> windows_foundation_collections.IIterator[ResourceCandidate]: ...
     # Windows.ApplicationModel.Resources.Core.ResourceCandidate Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView::GetAt(System.UInt32)
@@ -202,6 +208,8 @@ class ResourceContextLanguagesVectorView(_cabc.Sequence[str], winrt.system.Objec
     def __getitem__(self, index: typing.SupportsIndex) -> str: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[str]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<System.String> Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView::First()
     def first(self) -> windows_foundation_collections.IIterator[str]: ...
     # System.String Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView::GetAt(System.UInt32)
@@ -224,6 +232,8 @@ class ResourceManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ResourceManager(winrt.system.Object, metaclass=ResourceManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.NamedResource> Windows.ApplicationModel.Resources.Core.ResourceManager::GetAllNamedResourcesForPackage(System.String,Windows.ApplicationModel.Resources.Core.ResourceLayoutInfo)
     def get_all_named_resources_for_package(self, package_name: str, resource_layout_info: ResourceLayoutInfo | tuple[winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.UInt32, winrt.system.Int32], /) -> _cabc.Sequence[NamedResource]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Resources.Core.ResourceMap> Windows.ApplicationModel.Resources.Core.ResourceManager::GetAllSubtreesForPackage(System.String,Windows.ApplicationModel.Resources.Core.ResourceLayoutInfo)
@@ -248,6 +258,8 @@ class ResourceMap(_cabc.Mapping[str, NamedResource], winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> NamedResource: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.ApplicationModel.Resources.Core.NamedResource>> Windows.ApplicationModel.Resources.Core.ResourceMap::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, NamedResource]]: ...
     # Windows.ApplicationModel.Resources.Core.ResourceMap Windows.ApplicationModel.Resources.Core.ResourceMap::GetSubtree(System.String)
@@ -279,6 +291,8 @@ class ResourceMap(_cabc.Mapping[str, NamedResource], winrt.system.Object):
 class ResourceMapIterator(windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, NamedResource]], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> windows_foundation_collections.IKeyValuePair[str, NamedResource]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.ApplicationModel.Resources.Core.ResourceMapIterator::GetMany(Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.ApplicationModel.Resources.Core.NamedResource>[])
     def get_many(self, items: winrt.system.Array[windows_foundation_collections.IKeyValuePair[str, NamedResource]] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceMapIterator::MoveNext()
@@ -296,6 +310,8 @@ class ResourceMapMapView(_cabc.Mapping[str, ResourceMap], winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> ResourceMap: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.ApplicationModel.Resources.Core.ResourceMap>> Windows.ApplicationModel.Resources.Core.ResourceMapMapView::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, ResourceMap]]: ...
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceMapMapView::HasKey(System.String)
@@ -312,6 +328,8 @@ class ResourceMapMapView(_cabc.Mapping[str, ResourceMap], winrt.system.Object):
 class ResourceMapMapViewIterator(windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, ResourceMap]], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> windows_foundation_collections.IKeyValuePair[str, ResourceMap]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator::GetMany(Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.ApplicationModel.Resources.Core.ResourceMap>[])
     def get_many(self, items: winrt.system.Array[windows_foundation_collections.IKeyValuePair[str, ResourceMap]] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceMapMapViewIterator::MoveNext()
@@ -325,6 +343,8 @@ class ResourceMapMapViewIterator(windows_foundation_collections.IIterator[window
 
 @typing.final
 class ResourceQualifier(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceQualifier::get_IsDefault()
     @_property
     def is_default(self) -> bool: ...
@@ -347,6 +367,8 @@ class ResourceQualifierMapView(_cabc.Mapping[str, str], winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
     def __getitem__(self, key: str) -> str: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, str]]: ...
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceQualifierMapView::HasKey(System.String)
@@ -367,6 +389,8 @@ class ResourceQualifierObservableMap(windows_foundation_collections.IObservableM
     def __getitem__(self, key: str) -> str: ...
     def __setitem__(self, key: str, value: str) -> None: ...
     def __delitem__(self, key: str) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> Windows.ApplicationModel.Resources.Core.ResourceQualifierObservableMap::First()
@@ -397,6 +421,8 @@ class ResourceQualifierVectorView(_cabc.Sequence[ResourceQualifier], winrt.syste
     def __getitem__(self, index: typing.SupportsIndex) -> ResourceQualifier: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[ResourceQualifier]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Resources.Core.ResourceQualifier> Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView::First()
     def first(self) -> windows_foundation_collections.IIterator[ResourceQualifier]: ...
     # Windows.ApplicationModel.Resources.Core.ResourceQualifier Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView::GetAt(System.UInt32)

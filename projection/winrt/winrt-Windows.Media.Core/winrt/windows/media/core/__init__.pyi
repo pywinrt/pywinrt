@@ -446,6 +446,8 @@ class AudioStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, win
 
 @typing.final
 class AudioTrack(IMediaTrack, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.AudioEncodingProperties Windows.Media.Core.AudioTrack::GetEncodingProperties()
     def get_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.AudioTrack::add_OpenFailed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.AudioTrack,Windows.Media.Core.AudioTrackOpenFailedEventArgs>)
@@ -479,12 +481,16 @@ class AudioTrack(IMediaTrack, winrt.system.Object):
 
 @typing.final
 class AudioTrackOpenFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Core.AudioTrackOpenFailedEventArgs::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class AudioTrackSupportInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaDecoderStatus Windows.Media.Core.AudioTrackSupportInfo::get_DecoderStatus()
     @_property
     def decoder_status(self) -> MediaDecoderStatus: ...
@@ -528,6 +534,8 @@ class ChapterCue(IMediaCue, winrt.system.Object):
 
 @typing.final
 class CodecInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.CodecCategory Windows.Media.Core.CodecInfo::get_Category()
     @_property
     def category(self) -> CodecCategory: ...
@@ -711,7 +719,8 @@ class CodecSubtypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CodecSubtypes(winrt.system.Object, metaclass=CodecSubtypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DataCue(IMediaCue, winrt.system.Object):
@@ -746,12 +755,16 @@ class DataCue(IMediaCue, winrt.system.Object):
 
 @typing.final
 class FaceDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.FaceDetectionEffectFrame Windows.Media.Core.FaceDetectedEventArgs::get_ResultFrame()
     @_property
     def result_frame(self) -> FaceDetectionEffectFrame: ...
 
 @typing.final
 class FaceDetectionEffect(windows_media.IMediaExtension, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.FaceDetectionEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.FaceDetectionEffect::add_FaceDetected(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.FaceDetectionEffect,Windows.Media.Core.FaceDetectedEventArgs>)
@@ -797,6 +810,8 @@ class FaceDetectionEffectDefinition(windows_media_effects.IVideoEffectDefinition
 class FaceDetectionEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.FaceDetectionEffectFrame::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.FaceAnalysis.DetectedFace> Windows.Media.Core.FaceDetectionEffectFrame::get_DetectedFaces()
@@ -838,6 +853,8 @@ class FaceDetectionEffectFrame(windows_media.IMediaFrame, windows_foundation.ICl
 
 @typing.final
 class HighDynamicRangeControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Core.HighDynamicRangeControl::get_Enabled()
     @_property
     def enabled(self) -> bool: ...
@@ -847,6 +864,8 @@ class HighDynamicRangeControl(winrt.system.Object):
 
 @typing.final
 class HighDynamicRangeOutput(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Core.HighDynamicRangeOutput::get_Certainty()
     @_property
     def certainty(self) -> winrt.system.Double: ...
@@ -896,6 +915,8 @@ class ImageCue(IMediaCue, winrt.system.Object):
 
 @typing.final
 class InitializeMediaStreamSourceRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Storage.Streams.IRandomAccessStream Windows.Media.Core.InitializeMediaStreamSourceRequestedEventArgs::get_RandomAccessStream()
@@ -918,12 +939,15 @@ class LowLightFusion_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LowLightFusion(winrt.system.Object, metaclass=LowLightFusion_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LowLightFusionResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.LowLightFusionResult::Close()
     def close(self) -> None: ...
     # Windows.Graphics.Imaging.SoftwareBitmap Windows.Media.Core.LowLightFusionResult::get_Frame()
@@ -949,6 +973,8 @@ class MediaBinder(winrt.system.Object):
 
 @typing.final
 class MediaBindingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Core.MediaBindingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.Media.Core.MediaBindingEventArgs::SetAdaptiveMediaSource(Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)
@@ -973,6 +999,8 @@ class MediaBindingEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaCueEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.IMediaCue Windows.Media.Core.MediaCueEventArgs::get_Cue()
     @_property
     def cue(self) -> IMediaCue: ...
@@ -1006,6 +1034,8 @@ class MediaSource_Static(winrt._winrt.Object_Static):
 class MediaSource(windows_foundation.IClosable, windows_media_playback.IMediaPlaybackSource, winrt.system.Object, metaclass=MediaSource_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaSource::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Core.MediaSource::OpenAsync()
@@ -1066,18 +1096,24 @@ class MediaSourceAppServiceConnection(winrt.system.Object):
 
 @typing.final
 class MediaSourceError(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Core.MediaSourceError::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class MediaSourceOpenOperationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaSourceError Windows.Media.Core.MediaSourceOpenOperationCompletedEventArgs::get_Error()
     @_property
     def error(self) -> MediaSourceError: ...
 
 @typing.final
 class MediaSourceStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaSourceState Windows.Media.Core.MediaSourceStateChangedEventArgs::get_NewState()
     @_property
     def new_state(self) -> MediaSourceState: ...
@@ -1096,6 +1132,8 @@ class MediaStreamSample_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaStreamSample(winrt.system.Object, metaclass=MediaStreamSample_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.MediaStreamSample::add_Processed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.MediaStreamSample,System.Object>)
     def add_processed(self, handler: windows_foundation.TypedEventHandler[MediaStreamSample, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Core.MediaStreamSample::remove_Processed(Windows.Foundation.EventRegistrationToken)
@@ -1148,6 +1186,8 @@ class MediaStreamSamplePropertySet(_cabc.MutableMapping[_uuid.UUID, winrt.system
     def __getitem__(self, key: _uuid.UUID) -> winrt.system.Object: ...
     def __setitem__(self, key: _uuid.UUID, value: winrt.system.Object) -> None: ...
     def __delitem__(self, key: _uuid.UUID) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaStreamSamplePropertySet::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>> Windows.Media.Core.MediaStreamSamplePropertySet::First()
@@ -1168,6 +1208,8 @@ class MediaStreamSamplePropertySet(_cabc.MutableMapping[_uuid.UUID, winrt.system
 
 @typing.final
 class MediaStreamSampleProtectionProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaStreamSampleProtectionProperties::GetInitializationVector(System.Byte[]&)
     def get_initialization_vector(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Void Windows.Media.Core.MediaStreamSampleProtectionProperties::GetKeyIdentifier(System.Byte[]&)
@@ -1270,24 +1312,32 @@ class MediaStreamSource(IMediaSource, winrt.system.Object):
 
 @typing.final
 class MediaStreamSourceClosedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceClosedRequest Windows.Media.Core.MediaStreamSourceClosedEventArgs::get_Request()
     @_property
     def request(self) -> MediaStreamSourceClosedRequest: ...
 
 @typing.final
 class MediaStreamSourceClosedRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceClosedReason Windows.Media.Core.MediaStreamSourceClosedRequest::get_Reason()
     @_property
     def reason(self) -> MediaStreamSourceClosedReason: ...
 
 @typing.final
 class MediaStreamSourceSampleRenderedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs::get_SampleLag()
     @_property
     def sample_lag(self) -> datetime.timedelta: ...
 
 @typing.final
 class MediaStreamSourceSampleRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceSampleRequestDeferral Windows.Media.Core.MediaStreamSourceSampleRequest::GetDeferral()
     def get_deferral(self) -> MediaStreamSourceSampleRequestDeferral: ...
     # System.Void Windows.Media.Core.MediaStreamSourceSampleRequest::ReportSampleProgress(System.UInt32)
@@ -1304,23 +1354,31 @@ class MediaStreamSourceSampleRequest(winrt.system.Object):
 
 @typing.final
 class MediaStreamSourceSampleRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaStreamSourceSampleRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class MediaStreamSourceSampleRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceSampleRequest Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs::get_Request()
     @_property
     def request(self) -> MediaStreamSourceSampleRequest: ...
 
 @typing.final
 class MediaStreamSourceStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceStartingRequest Windows.Media.Core.MediaStreamSourceStartingEventArgs::get_Request()
     @_property
     def request(self) -> MediaStreamSourceStartingRequest: ...
 
 @typing.final
 class MediaStreamSourceStartingRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceStartingRequestDeferral Windows.Media.Core.MediaStreamSourceStartingRequest::GetDeferral()
     def get_deferral(self) -> MediaStreamSourceStartingRequestDeferral: ...
     # System.Void Windows.Media.Core.MediaStreamSourceStartingRequest::SetActualStartPosition(Windows.Foundation.TimeSpan)
@@ -1331,11 +1389,15 @@ class MediaStreamSourceStartingRequest(winrt.system.Object):
 
 @typing.final
 class MediaStreamSourceStartingRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaStreamSourceStartingRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class MediaStreamSourceSwitchStreamsRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest::GetDeferral()
     def get_deferral(self) -> MediaStreamSourceSwitchStreamsRequestDeferral: ...
     # Windows.Media.Core.IMediaStreamDescriptor Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest::get_NewStreamDescriptor()
@@ -1347,17 +1409,23 @@ class MediaStreamSourceSwitchStreamsRequest(winrt.system.Object):
 
 @typing.final
 class MediaStreamSourceSwitchStreamsRequestDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class MediaStreamSourceSwitchStreamsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaStreamSourceSwitchStreamsRequest Windows.Media.Core.MediaStreamSourceSwitchStreamsRequestedEventArgs::get_Request()
     @_property
     def request(self) -> MediaStreamSourceSwitchStreamsRequest: ...
 
 @typing.final
 class MseSourceBuffer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.MseSourceBuffer::Abort()
     def abort(self) -> None: ...
     # System.Void Windows.Media.Core.MseSourceBuffer::AppendBuffer(Windows.Storage.Streams.IBuffer)
@@ -1427,6 +1495,8 @@ class MseSourceBuffer(winrt.system.Object):
 
 @typing.final
 class MseSourceBufferList(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.MseSourceBufferList::add_SourceBufferAdded(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.MseSourceBufferList,System.Object>)
     def add_source_buffer_added(self, handler: windows_foundation.TypedEventHandler[MseSourceBufferList, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Core.MseSourceBufferList::remove_SourceBufferAdded(Windows.Foundation.EventRegistrationToken)
@@ -1489,6 +1559,8 @@ class MseStreamSource(IMediaSource, winrt.system.Object, metaclass=MseStreamSour
 
 @typing.final
 class SceneAnalysisEffect(windows_media.IMediaExtension, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.SceneAnalysisEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.SceneAnalysisEffect::add_SceneAnalyzed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.SceneAnalysisEffect,Windows.Media.Core.SceneAnalyzedEventArgs>)
@@ -1519,6 +1591,8 @@ class SceneAnalysisEffectDefinition(windows_media_effects.IVideoEffectDefinition
 class SceneAnalysisEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Core.SceneAnalysisEffectFrame::Close()
     def close(self) -> None: ...
     # Windows.Media.Capture.CapturedFrameControlValues Windows.Media.Core.SceneAnalysisEffectFrame::get_FrameControlValues()
@@ -1566,6 +1640,8 @@ class SceneAnalysisEffectFrame(windows_media.IMediaFrame, windows_foundation.ICl
 
 @typing.final
 class SceneAnalyzedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.SceneAnalysisEffectFrame Windows.Media.Core.SceneAnalyzedEventArgs::get_ResultFrame()
     @_property
     def result_frame(self) -> SceneAnalysisEffectFrame: ...
@@ -1695,6 +1771,8 @@ class TimedMetadataTrack(IMediaTrack, winrt.system.Object):
 
 @typing.final
 class TimedMetadataTrackError(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.TimedMetadataTrackErrorCode Windows.Media.Core.TimedMetadataTrackError::get_ErrorCode()
     @_property
     def error_code(self) -> TimedMetadataTrackErrorCode: ...
@@ -1704,12 +1782,16 @@ class TimedMetadataTrackError(winrt.system.Object):
 
 @typing.final
 class TimedMetadataTrackFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.TimedMetadataTrackError Windows.Media.Core.TimedMetadataTrackFailedEventArgs::get_Error()
     @_property
     def error(self) -> TimedMetadataTrackError: ...
 
 @typing.final
 class TimedTextBouten(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.TimedTextBoutenType Windows.Media.Core.TimedTextBouten::get_Type()
     @_property
     def type(self) -> TimedTextBoutenType: ...
@@ -1857,6 +1939,8 @@ class TimedTextRegion(winrt.system.Object):
 
 @typing.final
 class TimedTextRuby(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Core.TimedTextRuby::get_Text()
     @_property
     def text(self) -> str: ...
@@ -1927,6 +2011,8 @@ class TimedTextSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TimedTextSource(winrt.system.Object, metaclass=TimedTextSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.TimedTextSource::add_Resolved(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.TimedTextSource,Windows.Media.Core.TimedTextSourceResolveResultEventArgs>)
     def add_resolved(self, handler: windows_foundation.TypedEventHandler[TimedTextSource, TimedTextSourceResolveResultEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Core.TimedTextSource::remove_Resolved(Windows.Foundation.EventRegistrationToken)
@@ -1934,6 +2020,8 @@ class TimedTextSource(winrt.system.Object, metaclass=TimedTextSource_Static):
 
 @typing.final
 class TimedTextSourceResolveResultEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.TimedMetadataTrackError Windows.Media.Core.TimedTextSourceResolveResultEventArgs::get_Error()
     @_property
     def error(self) -> TimedMetadataTrackError: ...
@@ -2083,6 +2171,8 @@ class TimedTextSubformat(winrt.system.Object):
 
 @typing.final
 class VideoStabilizationEffect(windows_media.IMediaExtension, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.VideoStreamConfiguration Windows.Media.Core.VideoStabilizationEffect::GetRecommendedStreamConfiguration(Windows.Media.Devices.VideoDeviceController,Windows.Media.MediaProperties.VideoEncodingProperties)
     def get_recommended_stream_configuration(self, controller: windows_media_devices.VideoDeviceController, desired_properties: windows_media_mediaproperties.VideoEncodingProperties, /) -> windows_media_capture.VideoStreamConfiguration: ...
     # System.Void Windows.Media.Core.VideoStabilizationEffect::SetProperties(Windows.Foundation.Collections.IPropertySet)
@@ -2110,6 +2200,8 @@ class VideoStabilizationEffectDefinition(windows_media_effects.IVideoEffectDefin
 
 @typing.final
 class VideoStabilizationEffectEnabledChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.VideoStabilizationEffectEnabledChangedReason Windows.Media.Core.VideoStabilizationEffectEnabledChangedEventArgs::get_Reason()
     @_property
     def reason(self) -> VideoStabilizationEffectEnabledChangedReason: ...
@@ -2146,6 +2238,8 @@ class VideoStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, win
 
 @typing.final
 class VideoTrack(IMediaTrack, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.Core.VideoTrack::GetEncodingProperties()
     def get_encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.VideoTrack::add_OpenFailed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.VideoTrack,Windows.Media.Core.VideoTrackOpenFailedEventArgs>)
@@ -2179,12 +2273,16 @@ class VideoTrack(IMediaTrack, winrt.system.Object):
 
 @typing.final
 class VideoTrackOpenFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.Core.VideoTrackOpenFailedEventArgs::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class VideoTrackSupportInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Core.MediaDecoderStatus Windows.Media.Core.VideoTrackSupportInfo::get_DecoderStatus()
     @_property
     def decoder_status(self) -> MediaDecoderStatus: ...

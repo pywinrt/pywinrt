@@ -28,6 +28,8 @@ class AppBroadcastingMonitor(winrt.system.Object):
 
 @typing.final
 class AppBroadcastingStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatus::get_CanStartBroadcast()
     @_property
     def can_start_broadcast(self) -> bool: ...
@@ -37,6 +39,8 @@ class AppBroadcastingStatus(winrt.system.Object):
 
 @typing.final
 class AppBroadcastingStatusDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails::get_IsAnyAppBroadcasting()
     @_property
     def is_any_app_broadcasting(self) -> bool: ...
@@ -71,6 +75,8 @@ class AppBroadcastingUI_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppBroadcastingUI(winrt.system.Object, metaclass=AppBroadcastingUI_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.AppBroadcasting.AppBroadcastingStatus Windows.Media.AppBroadcasting.AppBroadcastingUI::GetStatus()
     def get_status(self) -> AppBroadcastingStatus: ...
     # System.Void Windows.Media.AppBroadcasting.AppBroadcastingUI::ShowBroadcastUI()

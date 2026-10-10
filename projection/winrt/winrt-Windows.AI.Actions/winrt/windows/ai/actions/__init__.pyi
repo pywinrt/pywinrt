@@ -97,6 +97,8 @@ class ActionEntity(windows_foundation.IClosable, winrt.system.Object, metaclass=
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionEntity::Close()
     def close(self) -> None: ...
     # Windows.AI.Actions.ActionEntityDisplayInfo Windows.AI.Actions.ActionEntity::get_DisplayInfo()
@@ -116,6 +118,8 @@ class ActionEntity(windows_foundation.IClosable, winrt.system.Object, metaclass=
 class ActionEntityDisplayInfo(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionEntityDisplayInfo::Close()
     def close(self) -> None: ...
     # System.String Windows.AI.Actions.ActionEntityDisplayInfo::get_Title()
@@ -129,6 +133,8 @@ class ActionEntityFactory(windows_foundation.IClosable, winrt.system.Object, met
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionEntityFactory::Close()
     def close(self) -> None: ...
     @typing.final
@@ -187,6 +193,8 @@ class ActionEntityFactory(windows_foundation.IClosable, winrt.system.Object, met
 class ActionFeedback(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionFeedback::Close()
     def close(self) -> None: ...
     # Windows.AI.Actions.ActionFeedbackKind Windows.AI.Actions.ActionFeedback::get_FeedbackKind()
@@ -197,6 +205,8 @@ class ActionFeedback(windows_foundation.IClosable, winrt.system.Object):
 class ActionInvocationContext(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionInvocationContext::Close()
     def close(self) -> None: ...
     # Windows.AI.Actions.NamedActionEntity[] Windows.AI.Actions.ActionInvocationContext::GetInputEntities()
@@ -239,6 +249,8 @@ class ActionInvocationContext(windows_foundation.IClosable, winrt.system.Object)
 class ActionInvocationHelpDetails(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionInvocationHelpDetails::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.AI.Actions.ActionInvocationHelpDetails::add_Changed(Windows.Foundation.TypedEventHandler`2<Windows.AI.Actions.ActionInvocationHelpDetails,System.Object>)
@@ -285,6 +297,8 @@ class ActionRuntime(windows_foundation.IClosable, winrt.system.Object, metaclass
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.ActionRuntime::Close()
     def close(self) -> None: ...
     @typing.final
@@ -327,6 +341,8 @@ class ActionRuntime(windows_foundation.IClosable, winrt.system.Object, metaclass
 
 @typing.final
 class AppointmentActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.AI.Actions.ContactActionEntity[] Windows.AI.Actions.AppointmentActionEntity::GetAttendees()
     def get_attendees(self) -> winrt.system.Array[ContactActionEntity]: ...
     # Windows.AI.Actions.RemoteFileActionEntity[] Windows.AI.Actions.AppointmentActionEntity::GetPresentedFiles()
@@ -346,6 +362,8 @@ class AppointmentActionEntity(ActionEntity):
 
 @typing.final
 class ArrayActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.AI.Actions.ActionEntity[] Windows.AI.Actions.ArrayActionEntity::GetAll()
     def get_all(self) -> winrt.system.Array[ActionEntity]: ...
     # Windows.AI.Actions.ActionEntityKind Windows.AI.Actions.ArrayActionEntity::get_ElementKind()
@@ -357,6 +375,8 @@ class ArrayActionEntity(ActionEntity):
 
 @typing.final
 class ContactActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Contacts.Contact Windows.AI.Actions.ContactActionEntity::get_Contact()
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
@@ -368,6 +388,8 @@ class CustomActionEntityStore(windows_foundation.IClosable, winrt.system.Object,
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.CustomActionEntityStore::Close()
     def close(self) -> None: ...
     @typing.final
@@ -385,6 +407,8 @@ class CustomActionEntityStore(windows_foundation.IClosable, winrt.system.Object,
 
 @typing.final
 class CustomTextActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.CustomTextActionEntity::get_CustomTextKind()
     @_property
     def custom_text_kind(self) -> str: ...
@@ -397,18 +421,24 @@ class CustomTextActionEntity(ActionEntity):
 
 @typing.final
 class DateTimeActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.AI.Actions.DateTimeActionEntity::get_DateTime()
     @_property
     def date_time(self) -> datetime.datetime: ...
 
 @typing.final
 class DocumentActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.DocumentActionEntity::get_FullPath()
     @_property
     def full_path(self) -> str: ...
 
 @typing.final
 class FileActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.FileActionEntity::get_FullPath()
     @_property
     def full_path(self) -> str: ...
@@ -417,6 +447,8 @@ class FileActionEntity(ActionEntity):
 class NamedActionEntity(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.NamedActionEntity::Close()
     def close(self) -> None: ...
     # System.String Windows.AI.Actions.NamedActionEntity::get_Name()
@@ -434,12 +466,16 @@ class NamedActionEntity(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class PhotoActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.PhotoActionEntity::get_FullPath()
     @_property
     def full_path(self) -> str: ...
 
 @typing.final
 class RemoteFileActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.AI.Actions.ContactActionEntity[] Windows.AI.Actions.RemoteFileActionEntity::GetContributors()
     def get_contributors(self) -> winrt.system.Array[ContactActionEntity]: ...
     # System.Void Windows.AI.Actions.RemoteFileActionEntity::SetContributors(Windows.AI.Actions.ContactActionEntity[])
@@ -489,6 +525,8 @@ class RemoteFileActionEntity(ActionEntity):
 
 @typing.final
 class StreamingTextActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.StreamingTextActionEntity::GetText()
     def get_text(self) -> str: ...
     # Windows.Foundation.EventRegistrationToken Windows.AI.Actions.StreamingTextActionEntity::add_TextChanged(Windows.Foundation.TypedEventHandler`2<Windows.AI.Actions.StreamingTextActionEntity,Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs>)
@@ -504,6 +542,8 @@ class StreamingTextActionEntity(ActionEntity):
 
 @typing.final
 class StreamingTextActionEntityTextChangedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.AI.Actions.StreamingTextActionEntityTextChangedArgs::get_IsComplete()
     @_property
     def is_complete(self) -> bool: ...
@@ -515,6 +555,8 @@ class StreamingTextActionEntityTextChangedArgs(winrt.system.Object):
 class StreamingTextActionEntityWriter(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.StreamingTextActionEntityWriter::Close()
     def close(self) -> None: ...
     # System.Void Windows.AI.Actions.StreamingTextActionEntityWriter::SetText(System.String)
@@ -528,6 +570,8 @@ class StreamingTextActionEntityWriter(windows_foundation.IClosable, winrt.system
 
 @typing.final
 class TableActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String[] Windows.AI.Actions.TableActionEntity::GetTextContent()
     def get_text_content(self) -> winrt.system.Array[str]: ...
     # System.UInt32 Windows.AI.Actions.TableActionEntity::get_ColumnCount()
@@ -539,6 +583,8 @@ class TableActionEntity(ActionEntity):
 
 @typing.final
 class TextActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.TextActionEntity::get_Text()
     @_property
     def text(self) -> str: ...
@@ -548,6 +594,8 @@ class TextActionEntity(ActionEntity):
 
 @typing.final
 class UriActionEntity(ActionEntity):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.AI.Actions.UriActionEntity::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...

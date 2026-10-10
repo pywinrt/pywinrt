@@ -168,6 +168,8 @@ class GpioController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GpioController(winrt.system.Object, metaclass=GpioController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Devices.Gpio.GpioPin Windows.Devices.Gpio.GpioController::OpenPin(System.Int32)
     def open_pin(self, pin_number: winrt.system.Int32, /) -> GpioPin: ...
@@ -188,6 +190,8 @@ class GpioController(winrt.system.Object, metaclass=GpioController_Static):
 class GpioPin(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Gpio.GpioPin::Close()
     def close(self) -> None: ...
     # Windows.Devices.Gpio.GpioPinDriveMode Windows.Devices.Gpio.GpioPin::GetDriveMode()
@@ -219,6 +223,8 @@ class GpioPin(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class GpioPinValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Gpio.GpioPinEdge Windows.Devices.Gpio.GpioPinValueChangedEventArgs::get_Edge()
     @_property
     def edge(self) -> GpioPinEdge: ...

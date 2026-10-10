@@ -37,6 +37,8 @@ class AppCapability_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppCapability(winrt.system.Object, metaclass=AppCapability_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus Windows.Security.Authorization.AppCapabilityAccess.AppCapability::CheckAccess()
     def check_access(self) -> AppCapabilityAccessStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> Windows.Security.Authorization.AppCapabilityAccess.AppCapability::RequestAccessAsync()
@@ -60,5 +62,6 @@ class AppCapability(winrt.system.Object, metaclass=AppCapability_Static):
 
 @typing.final
 class AppCapabilityAccessChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

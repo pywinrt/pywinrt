@@ -99,6 +99,8 @@ class DeliveryOptimizationSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DeliveryOptimizationSettings(winrt.system.Object, metaclass=DeliveryOptimizationSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadMode Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings::get_DownloadMode()
     @_property
     def download_mode(self) -> DeliveryOptimizationDownloadMode: ...
@@ -170,10 +172,13 @@ class StoreConfiguration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StoreConfiguration(winrt.system.Object, metaclass=StoreConfiguration_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StoreHardwareManufacturerInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo::get_HardwareManufacturerId()
     @_property
     def hardware_manufacturer_id(self) -> str: ...
@@ -196,10 +201,13 @@ class StorePreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorePreview(winrt.system.Object, metaclass=StorePreview_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StorePreviewProductInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo::get_Description()
     @_property
     def description(self) -> str: ...
@@ -218,12 +226,16 @@ class StorePreviewProductInfo(winrt.system.Object):
 
 @typing.final
 class StorePreviewPurchaseResults(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults::get_ProductPurchaseStatus()
     @_property
     def product_purchase_status(self) -> StorePreviewProductPurchaseStatus: ...
 
 @typing.final
 class StorePreviewSkuInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo::get_CurrencyCode()
     @_property
     def currency_code(self) -> str: ...
@@ -267,5 +279,6 @@ class WebAuthenticationCoreManagerHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebAuthenticationCoreManagerHelper(winrt.system.Object, metaclass=WebAuthenticationCoreManagerHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

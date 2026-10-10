@@ -42,6 +42,8 @@ class PrintTicketValueType(enum.IntEnum):
 
 @typing.final
 class PrintTicketCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTicket.PrintTicketFeature Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities::GetFeature(System.String,System.String)
     def get_feature(self, name: str, xml_namespace: str, /) -> PrintTicketFeature: ...
     # Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities::GetParameterDefinition(System.String,System.String)
@@ -103,6 +105,8 @@ class PrintTicketCapabilities(winrt.system.Object):
 
 @typing.final
 class PrintTicketFeature(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTicket.PrintTicketOption Windows.Graphics.Printing.PrintTicket.PrintTicketFeature::GetOption(System.String,System.String)
     def get_option(self, name: str, xml_namespace: str, /) -> PrintTicketOption: ...
     # Windows.Graphics.Printing.PrintTicket.PrintTicketOption Windows.Graphics.Printing.PrintTicket.PrintTicketFeature::GetSelectedOption()
@@ -130,6 +134,8 @@ class PrintTicketFeature(winrt.system.Object):
 
 @typing.final
 class PrintTicketOption(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Graphics.Printing.PrintTicket.PrintTicketOption::GetPropertyNode(System.String,System.String)
     def get_property_node(self, name: str, xml_namespace: str, /) -> windows_data_xml_dom.IXmlNode: ...
     # Windows.Graphics.Printing.PrintTicket.PrintTicketValue Windows.Graphics.Printing.PrintTicket.PrintTicketOption::GetPropertyValue(System.String,System.String)
@@ -153,6 +159,8 @@ class PrintTicketOption(winrt.system.Object):
 
 @typing.final
 class PrintTicketParameterDefinition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDataType Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition::get_DataType()
     @_property
     def data_type(self) -> PrintTicketParameterDataType: ...
@@ -177,6 +185,8 @@ class PrintTicketParameterDefinition(winrt.system.Object):
 
 @typing.final
 class PrintTicketParameterInitializer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Printing.PrintTicket.PrintTicketValue Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer::get_Value()
     @_property
     def value(self) -> PrintTicketValue: ...
@@ -195,6 +205,8 @@ class PrintTicketParameterInitializer(winrt.system.Object):
 
 @typing.final
 class PrintTicketValue(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Graphics.Printing.PrintTicket.PrintTicketValue::GetValueAsInteger()
     def get_value_as_integer(self) -> winrt.system.Int32: ...
     # System.String Windows.Graphics.Printing.PrintTicket.PrintTicketValue::GetValueAsString()
@@ -279,6 +291,8 @@ class WorkflowPrintTicket(winrt.system.Object):
 
 @typing.final
 class WorkflowPrintTicketValidationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...

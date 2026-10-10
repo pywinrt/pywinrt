@@ -219,12 +219,16 @@ class FolderPicker(winrt.system.Object):
 
 @typing.final
 class PickFileResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Storage.Pickers.PickFileResult::get_Path()
     @_property
     def path(self) -> str: ...
 
 @typing.final
 class PickFolderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Storage.Pickers.PickFolderResult::get_Path()
     @_property
     def path(self) -> str: ...

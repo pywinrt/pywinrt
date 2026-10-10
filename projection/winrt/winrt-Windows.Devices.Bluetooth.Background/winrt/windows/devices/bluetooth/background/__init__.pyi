@@ -35,6 +35,8 @@ class BluetoothEventTriggeringMode(enum.IntEnum):
 
 @typing.final
 class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -47,6 +49,8 @@ class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs> Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementWatcherTriggerDetails::get_Advertisements()
     @_property
     def advertisements(self) -> _cabc.Sequence[windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs]: ...
@@ -59,6 +63,8 @@ class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
 
 @typing.final
 class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic Windows.Devices.Bluetooth.Background.GattCharacteristicNotificationTriggerDetails::get_Characteristic()
     @_property
     def characteristic(self) -> windows_devices_bluetooth_genericattributeprofile.GattCharacteristic: ...
@@ -83,6 +89,8 @@ class GattServiceProviderConnection_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::Start()
     def start(self) -> None: ...
     # System.Void Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::UpdateAdvertisingParameters(Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters)
@@ -96,12 +104,16 @@ class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServicePr
 
 @typing.final
 class GattServiceProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.Background.GattServiceProviderConnection Windows.Devices.Bluetooth.Background.GattServiceProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> GattServiceProviderConnection: ...
 
 @typing.final
 class RfcommConnectionTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Bluetooth.Background.RfcommConnectionTriggerDetails::get_Incoming()
     @_property
     def incoming(self) -> bool: ...
@@ -114,6 +126,8 @@ class RfcommConnectionTriggerDetails(winrt.system.Object):
 
 @typing.final
 class RfcommInboundConnectionInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothServiceCapabilities Windows.Devices.Bluetooth.Background.RfcommInboundConnectionInformation::get_ServiceCapabilities()
     @_property
     def service_capabilities(self) -> windows_devices_bluetooth.BluetoothServiceCapabilities: ...
@@ -135,6 +149,8 @@ class RfcommInboundConnectionInformation(winrt.system.Object):
 
 @typing.final
 class RfcommOutboundConnectionInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId Windows.Devices.Bluetooth.Background.RfcommOutboundConnectionInformation::get_RemoteServiceId()
     @_property
     def remote_service_id(self) -> windows_devices_bluetooth_rfcomm.RfcommServiceId: ...

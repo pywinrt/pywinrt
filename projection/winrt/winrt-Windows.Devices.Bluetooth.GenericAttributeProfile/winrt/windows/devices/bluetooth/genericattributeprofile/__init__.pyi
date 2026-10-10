@@ -139,6 +139,8 @@ class GattCharacteristic_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattCharacteristic(winrt.system.Object, metaclass=GattCharacteristic_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic::GetAllDescriptors()
     @deprecated("Use GetDescriptorsAsync instead of GetAllDescriptors.  For more information, see MSDN.")
     def get_all_descriptors(self) -> _cabc.Sequence[GattDescriptor]: ...
@@ -478,10 +480,13 @@ class GattCharacteristicUuids_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattCharacteristicUuids(winrt.system.Object, metaclass=GattCharacteristicUuids_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GattCharacteristicsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicsResult::get_Characteristics()
     @_property
     def characteristics(self) -> _cabc.Sequence[GattCharacteristic]: ...
@@ -494,6 +499,8 @@ class GattCharacteristicsResult(winrt.system.Object):
 
 @typing.final
 class GattClientNotificationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Byte> Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientNotificationResult::get_ProtocolError()
     @_property
     def protocol_error(self) -> winrt.system.UInt8 | None: ...
@@ -515,6 +522,8 @@ class GattDescriptor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattDescriptor(winrt.system.Object, metaclass=GattDescriptor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor::ReadValueAsync()
     def read_value_async(self) -> windows_foundation.IAsyncOperation[GattReadResult]: ...
@@ -565,10 +574,13 @@ class GattDescriptorUuids_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattDescriptorUuids(winrt.system.Object, metaclass=GattDescriptorUuids_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GattDescriptorsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptor> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDescriptorsResult::get_Descriptors()
     @_property
     def descriptors(self) -> _cabc.Sequence[GattDescriptor]: ...
@@ -624,6 +636,8 @@ class GattDeviceService_Static(winrt._winrt.Object_Static):
 class GattDeviceService(windows_foundation.IClosable, winrt.system.Object, metaclass=GattDeviceService_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService::GetAllCharacteristics()
@@ -711,6 +725,8 @@ class GattDeviceService(windows_foundation.IClosable, winrt.system.Object, metac
 
 @typing.final
 class GattDeviceServicesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Byte> Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceServicesResult::get_ProtocolError()
     @_property
     def protocol_error(self) -> winrt.system.UInt8 | None: ...
@@ -723,6 +739,8 @@ class GattDeviceServicesResult(winrt.system.Object):
 
 @typing.final
 class GattLocalCharacteristic(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic::CreateDescriptorAsync(System.Guid,Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorParameters)
     def create_descriptor_async(self, descriptor_uuid: _uuid.UUID, parameters: GattLocalDescriptorParameters, /) -> windows_foundation.IAsyncOperation[GattLocalDescriptorResult]: ...
     @typing.overload
@@ -814,6 +832,8 @@ class GattLocalCharacteristicParameters(winrt.system.Object):
 
 @typing.final
 class GattLocalCharacteristicResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult::get_Characteristic()
     @_property
     def characteristic(self) -> GattLocalCharacteristic: ...
@@ -823,6 +843,8 @@ class GattLocalCharacteristicResult(winrt.system.Object):
 
 @typing.final
 class GattLocalDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor::add_ReadRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor,Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs>)
     def add_read_requested(self, handler: windows_foundation.TypedEventHandler[GattLocalDescriptor, GattReadRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor::remove_ReadRequested(Windows.Foundation.EventRegistrationToken)
@@ -868,6 +890,8 @@ class GattLocalDescriptorParameters(winrt.system.Object):
 
 @typing.final
 class GattLocalDescriptorResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptor Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalDescriptorResult::get_Descriptor()
     @_property
     def descriptor(self) -> GattLocalDescriptor: ...
@@ -877,6 +901,8 @@ class GattLocalDescriptorResult(winrt.system.Object):
 
 @typing.final
 class GattLocalService(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicResult> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService::CreateCharacteristicAsync(System.Guid,Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristicParameters)
     def create_characteristic_async(self, characteristic_uuid: _uuid.UUID, parameters: GattLocalCharacteristicParameters, /) -> windows_foundation.IAsyncOperation[GattLocalCharacteristicResult]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalCharacteristic> Windows.Devices.Bluetooth.GenericAttributeProfile.GattLocalService::get_Characteristics()
@@ -896,6 +922,8 @@ class GattPresentationFormat_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattPresentationFormat(winrt.system.Object, metaclass=GattPresentationFormat_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Devices.Bluetooth.GenericAttributeProfile.GattPresentationFormat::get_Description()
     @_property
     def description(self) -> winrt.system.UInt16: ...
@@ -998,7 +1026,8 @@ class GattPresentationFormatTypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattPresentationFormatTypes(winrt.system.Object, metaclass=GattPresentationFormatTypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GattProtocolError_Static(winrt._winrt.Object_Static):
@@ -1056,10 +1085,13 @@ class GattProtocolError_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattProtocolError(winrt.system.Object, metaclass=GattProtocolError_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattClientCharacteristicConfigurationDescriptorValue Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult::get_ClientCharacteristicConfigurationDescriptor()
     @_property
     def client_characteristic_configuration_descriptor(self) -> GattClientCharacteristicConfigurationDescriptorValue: ...
@@ -1072,6 +1104,8 @@ class GattReadClientCharacteristicConfigurationDescriptorResult(winrt.system.Obj
 
 @typing.final
 class GattReadRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest::RespondWithProtocolError(System.Byte)
     def respond_with_protocol_error(self, protocol_error: winrt.system.UInt8, /) -> None: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest::RespondWithValue(Windows.Storage.Streams.IBuffer)
@@ -1092,6 +1126,8 @@ class GattReadRequest(winrt.system.Object):
 
 @typing.final
 class GattReadRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequest> Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadRequestedEventArgs::GetRequestAsync()
@@ -1102,6 +1138,8 @@ class GattReadRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class GattReadResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.GenericAttributeProfile.GattCommunicationStatus Windows.Devices.Bluetooth.GenericAttributeProfile.GattReadResult::get_Status()
     @_property
     def status(self) -> GattCommunicationStatus: ...
@@ -1124,6 +1162,8 @@ class GattReliableWriteTransaction(winrt.system.Object):
 
 @typing.final
 class GattRequestStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.GenericAttributeProfile.GattRequestStateChangedEventArgs::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -1138,6 +1178,8 @@ class GattServiceProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattServiceProvider(winrt.system.Object, metaclass=GattServiceProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProvider::StartAdvertising()
     def start_advertising(self) -> None: ...
@@ -1165,6 +1207,8 @@ class GattServiceProvider(winrt.system.Object, metaclass=GattServiceProvider_Sta
 
 @typing.final
 class GattServiceProviderAdvertisementStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -1208,6 +1252,8 @@ class GattServiceProviderAdvertisingParameters(winrt.system.Object):
 
 @typing.final
 class GattServiceProviderResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderResult::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -1286,7 +1332,8 @@ class GattServiceUuids_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GattServiceUuids(winrt.system.Object, metaclass=GattServiceUuids_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GattSession_Static(winrt._winrt.Object_Static):
@@ -1297,6 +1344,8 @@ class GattSession_Static(winrt._winrt.Object_Static):
 class GattSession(windows_foundation.IClosable, winrt.system.Object, metaclass=GattSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession::add_MaxPduSizeChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSession,System.Object>)
@@ -1328,6 +1377,8 @@ class GattSession(windows_foundation.IClosable, winrt.system.Object, metaclass=G
 
 @typing.final
 class GattSessionStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.GenericAttributeProfile.GattSessionStatusChangedEventArgs::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -1337,6 +1388,8 @@ class GattSessionStatusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class GattSubscribedClient(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient::add_MaxNotificationSizeChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient,System.Object>)
     def add_max_notification_size_changed(self, handler: windows_foundation.TypedEventHandler[GattSubscribedClient, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattSubscribedClient::remove_MaxNotificationSizeChanged(Windows.Foundation.EventRegistrationToken)
@@ -1350,6 +1403,8 @@ class GattSubscribedClient(winrt.system.Object):
 
 @typing.final
 class GattValueChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs::get_CharacteristicValue()
     @_property
     def characteristic_value(self) -> windows_storage_streams.IBuffer: ...
@@ -1359,6 +1414,8 @@ class GattValueChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class GattWriteRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest::Respond()
     def respond(self) -> None: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest::RespondWithProtocolError(System.Byte)
@@ -1382,6 +1439,8 @@ class GattWriteRequest(winrt.system.Object):
 
 @typing.final
 class GattWriteRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequest> Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteRequestedEventArgs::GetRequestAsync()
@@ -1392,6 +1451,8 @@ class GattWriteRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class GattWriteResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Byte> Windows.Devices.Bluetooth.GenericAttributeProfile.GattWriteResult::get_ProtocolError()
     @_property
     def protocol_error(self) -> winrt.system.UInt8 | None: ...

@@ -358,6 +358,8 @@ class PaymentRequest(winrt.system.Object):
 
 @typing.final
 class PaymentRequestChangedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Payments.PaymentRequestChangedArgs::Acknowledge(Windows.ApplicationModel.Payments.PaymentRequestChangedResult)
     def acknowledge(self, change_result: PaymentRequestChangedResult, /) -> None: ...
     # Windows.ApplicationModel.Payments.PaymentRequestChangeKind Windows.ApplicationModel.Payments.PaymentRequestChangedArgs::get_ChangeKind()
@@ -397,6 +399,8 @@ class PaymentRequestChangedResult(winrt.system.Object):
 
 @typing.final
 class PaymentRequestSubmitResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Payments.PaymentResponse Windows.ApplicationModel.Payments.PaymentRequestSubmitResult::get_Response()
     @_property
     def response(self) -> PaymentResponse: ...
@@ -406,6 +410,8 @@ class PaymentRequestSubmitResult(winrt.system.Object):
 
 @typing.final
 class PaymentResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Payments.PaymentResponse::CompleteAsync(Windows.ApplicationModel.Payments.PaymentRequestCompletionStatus)
     def complete_async(self, status: PaymentRequestCompletionStatus, /) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.ApplicationModel.Payments.PaymentResponse::get_PayerEmail()

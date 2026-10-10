@@ -68,6 +68,8 @@ class OnlineIdAuthenticator(winrt.system.Object):
 
 @typing.final
 class OnlineIdServiceTicket(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.Int32: ...
@@ -101,10 +103,13 @@ class OnlineIdSystemAuthenticator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class OnlineIdSystemAuthenticator(winrt.system.Object, metaclass=OnlineIdSystemAuthenticator_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult> Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser::GetTicketAsync(Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest)
     def get_ticket_async(self, request: OnlineIdServiceTicketRequest, /) -> windows_foundation.IAsyncOperation[OnlineIdSystemTicketResult]: ...
     # System.Guid Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser::get_ApplicationId()
@@ -119,6 +124,8 @@ class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
 
 @typing.final
 class OnlineIdSystemIdentity(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity::get_Id()
     @_property
     def id(self) -> str: ...
@@ -128,6 +135,8 @@ class OnlineIdSystemIdentity(winrt.system.Object):
 
 @typing.final
 class OnlineIdSystemTicketResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -140,6 +149,8 @@ class OnlineIdSystemTicketResult(winrt.system.Object):
 
 @typing.final
 class SignOutUserOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.OnlineId.SignOutUserOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Security.Authentication.OnlineId.SignOutUserOperation::Close()
@@ -164,6 +175,8 @@ class SignOutUserOperation(windows_foundation.IAsyncAction, windows_foundation.I
 
 @typing.final
 class UserAuthenticationOperation(windows_foundation.IAsyncOperation[UserIdentity], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.OnlineId.UserAuthenticationOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Security.Authentication.OnlineId.UserAuthenticationOperation::Close()
@@ -188,6 +201,8 @@ class UserAuthenticationOperation(windows_foundation.IAsyncOperation[UserIdentit
 
 @typing.final
 class UserIdentity(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.OnlineId.UserIdentity::get_FirstName()
     @_property
     def first_name(self) -> str: ...

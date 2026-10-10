@@ -220,10 +220,13 @@ class BackgroundMediaPlayer_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
 class BackgroundMediaPlayer(winrt.system.Object, metaclass=BackgroundMediaPlayer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CurrentMediaPlaybackItemChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.CurrentMediaPlaybackItemChangedEventArgs::get_NewItem()
     @_property
     def new_item(self) -> MediaPlaybackItem: ...
@@ -261,12 +264,16 @@ class MediaBreak(winrt.system.Object):
 
 @typing.final
 class MediaBreakEndedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaBreak Windows.Media.Playback.MediaBreakEndedEventArgs::get_MediaBreak()
     @_property
     def media_break(self) -> MediaBreak: ...
 
 @typing.final
 class MediaBreakManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Playback.MediaBreakManager::PlayBreak(Windows.Media.Playback.MediaBreak)
     def play_break(self, value: MediaBreak, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaBreakManager::SkipCurrentBreak()
@@ -296,6 +303,8 @@ class MediaBreakManager(winrt.system.Object):
 
 @typing.final
 class MediaBreakSchedule(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Playback.MediaBreakSchedule::InsertMidrollBreak(Windows.Media.Playback.MediaBreak)
     def insert_midroll_break(self, media_break: MediaBreak, /) -> None: ...
     # System.Void Windows.Media.Playback.MediaBreakSchedule::RemoveMidrollBreak(Windows.Media.Playback.MediaBreak)
@@ -325,6 +334,8 @@ class MediaBreakSchedule(winrt.system.Object):
 
 @typing.final
 class MediaBreakSeekedOverEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Playback.MediaBreakSeekedOverEventArgs::get_NewPosition()
     @_property
     def new_position(self) -> datetime.timedelta: ...
@@ -337,18 +348,24 @@ class MediaBreakSeekedOverEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaBreakSkippedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaBreak Windows.Media.Playback.MediaBreakSkippedEventArgs::get_MediaBreak()
     @_property
     def media_break(self) -> MediaBreak: ...
 
 @typing.final
 class MediaBreakStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaBreak Windows.Media.Playback.MediaBreakStartedEventArgs::get_MediaBreak()
     @_property
     def media_break(self) -> MediaBreak: ...
 
 @typing.final
 class MediaItemDisplayProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Playback.MediaItemDisplayProperties::ClearAll()
     def clear_all(self) -> None: ...
     # Windows.Media.MediaPlaybackType Windows.Media.Playback.MediaItemDisplayProperties::get_Type()
@@ -378,6 +395,8 @@ class MediaPlaybackAudioTrackList(windows_media_core.ISingleSelectMediaTrackList
     def __getitem__(self, index: typing.SupportsIndex) -> windows_media_core.AudioTrack: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[windows_media_core.AudioTrack]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Media.Core.AudioTrack> Windows.Media.Playback.MediaPlaybackAudioTrackList::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_media_core.AudioTrack]: ...
     # Windows.Media.Core.AudioTrack Windows.Media.Playback.MediaPlaybackAudioTrackList::GetAt(System.UInt32)
@@ -402,6 +421,8 @@ class MediaPlaybackAudioTrackList(windows_media_core.ISingleSelectMediaTrackList
 
 @typing.final
 class MediaPlaybackCommandManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlaybackCommandManager::add_AutoRepeatModeReceived(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlaybackCommandManager,Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>)
     def add_auto_repeat_mode_received(self, handler: windows_foundation.TypedEventHandler[MediaPlaybackCommandManager, MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlaybackCommandManager::remove_AutoRepeatModeReceived(Windows.Foundation.EventRegistrationToken)
@@ -484,6 +505,8 @@ class MediaPlaybackCommandManager(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs::get_Handled()
@@ -498,6 +521,8 @@ class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Ob
 
 @typing.final
 class MediaPlaybackCommandManagerCommandBehavior(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior::add_IsEnabledChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior,System.Object>)
     def add_is_enabled_changed(self, handler: windows_foundation.TypedEventHandler[MediaPlaybackCommandManagerCommandBehavior, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior::remove_IsEnabledChanged(Windows.Foundation.EventRegistrationToken)
@@ -517,6 +542,8 @@ class MediaPlaybackCommandManagerCommandBehavior(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerFastForwardReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs::get_Handled()
@@ -528,6 +555,8 @@ class MediaPlaybackCommandManagerFastForwardReceivedEventArgs(winrt.system.Objec
 
 @typing.final
 class MediaPlaybackCommandManagerNextReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs::get_Handled()
@@ -539,6 +568,8 @@ class MediaPlaybackCommandManagerNextReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerPauseReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs::get_Handled()
@@ -550,6 +581,8 @@ class MediaPlaybackCommandManagerPauseReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerPlayReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs::get_Handled()
@@ -561,6 +594,8 @@ class MediaPlaybackCommandManagerPlayReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerPositionReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs::get_Handled()
@@ -575,6 +610,8 @@ class MediaPlaybackCommandManagerPositionReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerPreviousReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs::get_Handled()
@@ -586,6 +623,8 @@ class MediaPlaybackCommandManagerPreviousReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerRateReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs::get_Handled()
@@ -600,6 +639,8 @@ class MediaPlaybackCommandManagerRateReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerRewindReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs::get_Handled()
@@ -611,6 +652,8 @@ class MediaPlaybackCommandManagerRewindReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs::get_Handled()
@@ -697,6 +740,8 @@ class MediaPlaybackItem(IMediaPlaybackSource, winrt.system.Object, metaclass=Med
 
 @typing.final
 class MediaPlaybackItemError(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlaybackItemErrorCode Windows.Media.Playback.MediaPlaybackItemError::get_ErrorCode()
     @_property
     def error_code(self) -> MediaPlaybackItemErrorCode: ...
@@ -706,6 +751,8 @@ class MediaPlaybackItemError(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackItemFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlaybackItemError Windows.Media.Playback.MediaPlaybackItemFailedEventArgs::get_Error()
     @_property
     def error(self) -> MediaPlaybackItemError: ...
@@ -715,6 +762,8 @@ class MediaPlaybackItemFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackItemOpenedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.MediaPlaybackItemOpenedEventArgs::get_Item()
     @_property
     def item(self) -> MediaPlaybackItem: ...
@@ -787,6 +836,8 @@ class MediaPlaybackList(IMediaPlaybackSource, winrt.system.Object):
 
 @typing.final
 class MediaPlaybackSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaTimeRange> Windows.Media.Playback.MediaPlaybackSession::GetBufferedRanges()
     def get_buffered_ranges(self) -> _cabc.Sequence[windows_media.MediaTimeRange]: ...
     # Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState Windows.Media.Playback.MediaPlaybackSession::GetOutputDegradationPolicyState()
@@ -925,18 +976,24 @@ class MediaPlaybackSession(winrt.system.Object):
 
 @typing.final
 class MediaPlaybackSessionBufferingStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Playback.MediaPlaybackSessionBufferingStartedEventArgs::get_IsPlaybackInterruption()
     @_property
     def is_playback_interruption(self) -> bool: ...
 
 @typing.final
 class MediaPlaybackSessionOutputDegradationPolicyState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlaybackSessionVideoConstrictionReason Windows.Media.Playback.MediaPlaybackSessionOutputDegradationPolicyState::get_VideoConstrictionReason()
     @_property
     def video_constriction_reason(self) -> MediaPlaybackSessionVideoConstrictionReason: ...
 
 @typing.final
 class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Quaternion Windows.Media.Playback.MediaPlaybackSphericalVideoProjection::get_ViewOrientation()
     @_property
     def view_orientation(self) -> windows_foundation_numerics.Quaternion: ...
@@ -976,6 +1033,8 @@ class MediaPlaybackTimedMetadataTrackList(_cabc.Sequence[windows_media_core.Time
     def __getitem__(self, index: typing.SupportsIndex) -> windows_media_core.TimedMetadataTrack: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[windows_media_core.TimedMetadataTrack]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Media.Core.TimedMetadataTrack> Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_media_core.TimedMetadataTrack]: ...
     # Windows.Media.Core.TimedMetadataTrack Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList::GetAt(System.UInt32)
@@ -1004,6 +1063,8 @@ class MediaPlaybackVideoTrackList(windows_media_core.ISingleSelectMediaTrackList
     def __getitem__(self, index: typing.SupportsIndex) -> windows_media_core.VideoTrack: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[windows_media_core.VideoTrack]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Media.Core.VideoTrack> Windows.Media.Playback.MediaPlaybackVideoTrackList::First()
     def first(self) -> windows_foundation_collections.IIterator[windows_media_core.VideoTrack]: ...
     # Windows.Media.Core.VideoTrack Windows.Media.Playback.MediaPlaybackVideoTrackList::GetAt(System.UInt32)
@@ -1307,12 +1368,16 @@ class MediaPlayer(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class MediaPlayerDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.Media.Playback.MediaPlayerDataReceivedEventArgs::get_Data()
     @_property
     def data(self) -> windows_foundation_collections.ValueSet: ...
 
 @typing.final
 class MediaPlayerFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.MediaPlayerError Windows.Media.Playback.MediaPlayerFailedEventArgs::get_Error()
     @_property
     def error(self) -> MediaPlayerError: ...
@@ -1325,6 +1390,8 @@ class MediaPlayerFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaPlayerRateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Playback.MediaPlayerRateChangedEventArgs::get_NewRate()
     @_property
     def new_rate(self) -> winrt.system.Double: ...
@@ -1333,6 +1400,8 @@ class MediaPlayerRateChangedEventArgs(winrt.system.Object):
 class MediaPlayerSurface(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Playback.MediaPlayerSurface::Close()
     def close(self) -> None: ...
     # Windows.UI.Composition.ICompositionSurface Windows.Media.Playback.MediaPlayerSurface::get_CompositionSurface()
@@ -1363,6 +1432,8 @@ class PlaybackMediaMarker(winrt.system.Object):
 
 @typing.final
 class PlaybackMediaMarkerReachedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.PlaybackMediaMarker Windows.Media.Playback.PlaybackMediaMarkerReachedEventArgs::get_PlaybackMediaMarker()
     @_property
     def playback_media_marker(self) -> PlaybackMediaMarker: ...
@@ -1370,6 +1441,8 @@ class PlaybackMediaMarkerReachedEventArgs(winrt.system.Object):
 @typing.final
 class PlaybackMediaMarkerSequence(winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[PlaybackMediaMarker]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Playback.PlaybackMediaMarkerSequence::Clear()
     def clear(self) -> None: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Media.Playback.PlaybackMediaMarker> Windows.Media.Playback.PlaybackMediaMarkerSequence::First()
@@ -1382,6 +1455,8 @@ class PlaybackMediaMarkerSequence(winrt.system.Object):
 
 @typing.final
 class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Playback.TimedMetadataTrackPresentationMode Windows.Media.Playback.TimedMetadataPresentationModeChangedEventArgs::get_NewPresentationMode()
     @_property
     def new_presentation_mode(self) -> TimedMetadataTrackPresentationMode: ...

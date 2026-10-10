@@ -53,6 +53,8 @@ class PdfDocument_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PdfDocument(winrt.system.Object, metaclass=PdfDocument_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Pdf.PdfPage Windows.Data.Pdf.PdfDocument::GetPage(System.UInt32)
     def get_page(self, page_index: winrt.system.UInt32, /) -> PdfPage: ...
     # System.Boolean Windows.Data.Pdf.PdfDocument::get_IsPasswordProtected()
@@ -66,6 +68,8 @@ class PdfDocument(winrt.system.Object, metaclass=PdfDocument_Static):
 class PdfPage(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Data.Pdf.PdfPage::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Data.Pdf.PdfPage::PreparePageAsync()
@@ -98,6 +102,8 @@ class PdfPage(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class PdfPageDimensions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.Data.Pdf.PdfPageDimensions::get_ArtBox()
     @_property
     def art_box(self) -> windows_foundation.Rect: ...

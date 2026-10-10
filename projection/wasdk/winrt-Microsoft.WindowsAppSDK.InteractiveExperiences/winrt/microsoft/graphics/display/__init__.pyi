@@ -30,6 +30,8 @@ class DisplayHdrMetadataFormat(enum.IntEnum):
 
 @typing.final
 class DisplayAdvancedColorInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Graphics.Display.DisplayAdvancedColorInfo::IsAdvancedColorKindAvailable(Microsoft.Graphics.Display.DisplayAdvancedColorKind)
     def is_advanced_color_kind_available(self, kind: DisplayAdvancedColorKind, /) -> bool: ...
     # System.Boolean Microsoft.Graphics.Display.DisplayAdvancedColorInfo::IsHdrMetadataFormatCurrentlySupported(Microsoft.Graphics.Display.DisplayHdrMetadataFormat)
@@ -73,6 +75,8 @@ class DisplayInformation_Static(winrt._winrt.Object_Static):
 class DisplayInformation(windows_foundation.IClosable, winrt.system.Object, metaclass=DisplayInformation_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Graphics.Display.DisplayInformation::Close()
     def close(self) -> None: ...
     # Microsoft.Graphics.Display.DisplayAdvancedColorInfo Microsoft.Graphics.Display.DisplayInformation::GetAdvancedColorInfo()

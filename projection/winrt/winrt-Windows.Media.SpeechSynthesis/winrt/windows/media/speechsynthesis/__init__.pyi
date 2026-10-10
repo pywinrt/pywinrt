@@ -40,6 +40,8 @@ class VoiceGender(enum.IntEnum):
 class SpeechSynthesisStream(windows_media_core.ITimedMetadataTrackProvider, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Media.SpeechSynthesis.SpeechSynthesisStream::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
     # System.Void Windows.Media.SpeechSynthesis.SpeechSynthesisStream::Close()
@@ -115,6 +117,8 @@ class SpeechSynthesizer(windows_foundation.IClosable, winrt.system.Object, metac
 
 @typing.final
 class SpeechSynthesizerOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions::get_IncludeWordBoundaryMetadata()
     @_property
     def include_word_boundary_metadata(self) -> bool: ...
@@ -160,6 +164,8 @@ class SpeechSynthesizerOptions(winrt.system.Object):
 
 @typing.final
 class VoiceInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.SpeechSynthesis.VoiceInformation::get_Description()
     @_property
     def description(self) -> str: ...

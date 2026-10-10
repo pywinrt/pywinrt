@@ -23,6 +23,8 @@ __all__ = [
 
 @typing.final
 class AppExtension(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IPropertySet Windows.ApplicationModel.AppExtensions.AppExtension::GetExtensionProperties()
     def get_extension_properties(self) -> windows_foundation_collections.IPropertySet: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IPropertySet> Windows.ApplicationModel.AppExtensions.AppExtension::GetExtensionPropertiesAsync()
@@ -59,6 +61,8 @@ class AppExtensionCatalog_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppExtensions.AppExtension> Windows.ApplicationModel.AppExtensions.AppExtensionCatalog::FindAll()
     def find_all(self) -> _cabc.Sequence[AppExtension]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.AppExtensions.AppExtension>> Windows.ApplicationModel.AppExtensions.AppExtensionCatalog::FindAllAsync()
@@ -88,6 +92,8 @@ class AppExtensionCatalog(winrt.system.Object, metaclass=AppExtensionCatalog_Sta
 
 @typing.final
 class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs::get_AppExtensionName()
     @_property
     def app_extension_name(self) -> str: ...
@@ -100,6 +106,8 @@ class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs::get_AppExtensionName()
     @_property
     def app_extension_name(self) -> str: ...
@@ -109,6 +117,8 @@ class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs::get_AppExtensionName()
     @_property
     def app_extension_name(self) -> str: ...
@@ -118,6 +128,8 @@ class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs::get_AppExtensionName()
     @_property
     def app_extension_name(self) -> str: ...
@@ -130,6 +142,8 @@ class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppExtensionPackageUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs::get_AppExtensionName()
     @_property
     def app_extension_name(self) -> str: ...

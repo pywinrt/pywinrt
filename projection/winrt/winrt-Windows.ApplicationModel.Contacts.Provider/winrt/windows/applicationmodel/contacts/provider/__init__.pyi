@@ -27,6 +27,8 @@ class AddContactResult(enum.IntEnum):
 
 @typing.final
 class ContactPickerUI(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.ApplicationModel.Contacts.Provider.AddContactResult Windows.ApplicationModel.Contacts.Provider.ContactPickerUI::AddContact(Windows.ApplicationModel.Contacts.Contact)
     def add_contact(self, contact: windows_applicationmodel_contacts.Contact, /) -> AddContactResult: ...
@@ -55,6 +57,8 @@ class ContactPickerUI(winrt.system.Object):
 
 @typing.final
 class ContactRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...

@@ -52,6 +52,8 @@ class PowerThermalChannelId:
 
 @typing.final
 class PowerThermalChannelConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32[] Windows.System.Power.Thermal.PowerThermalChannelConfiguration::GetConfigurationNumericParameters()
     def get_configuration_numeric_parameters(self) -> winrt.system.Array[winrt.system.Int32]: ...
     # System.String Windows.System.Power.Thermal.PowerThermalChannelConfiguration::get_ConfigurationString()
@@ -117,6 +119,8 @@ class PowerThermalChannelDataProducer(windows_foundation.IClosable, winrt.system
 
 @typing.final
 class PowerThermalChannelDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Power.Thermal.PowerThermalChannelData[] Windows.System.Power.Thermal.PowerThermalChannelDataReceivedEventArgs::GetData()
     def get_data(self) -> winrt.system.Array[PowerThermalChannelData]: ...
 
@@ -130,7 +134,8 @@ class PowerThermalChannelDiagnostics_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PowerThermalChannelDiagnostics(winrt.system.Object, metaclass=PowerThermalChannelDiagnostics_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class PowerThermalChannelFinder_Static(winrt._winrt.Object_Static):
@@ -139,5 +144,6 @@ class PowerThermalChannelFinder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PowerThermalChannelFinder(winrt.system.Object, metaclass=PowerThermalChannelFinder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

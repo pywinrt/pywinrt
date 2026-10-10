@@ -18,5 +18,6 @@ class WindowManagementPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowManagementPreview(winrt.system.Object, metaclass=WindowManagementPreview_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

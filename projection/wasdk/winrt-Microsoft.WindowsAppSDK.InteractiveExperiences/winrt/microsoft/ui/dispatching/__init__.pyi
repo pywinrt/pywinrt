@@ -43,6 +43,8 @@ class DispatcherQueue_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Dispatching.DispatcherQueueTimer Microsoft.UI.Dispatching.DispatcherQueue::CreateTimer()
     def create_timer(self) -> DispatcherQueueTimer: ...
     # System.Void Microsoft.UI.Dispatching.DispatcherQueue::EnqueueEventLoopExit()
@@ -90,6 +92,8 @@ class DispatcherQueueController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Dispatching.DispatcherQueueController::ShutdownQueue()
     def shutdown_queue(self) -> None: ...
     # Windows.Foundation.IAsyncAction Microsoft.UI.Dispatching.DispatcherQueueController::ShutdownQueueAsync()
@@ -100,11 +104,15 @@ class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueCo
 
 @typing.final
 class DispatcherQueueShutdownStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.UI.Dispatching.DispatcherQueueShutdownStartingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class DispatcherQueueTimer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Dispatching.DispatcherQueueTimer::Start()
     def start(self) -> None: ...
     # System.Void Microsoft.UI.Dispatching.DispatcherQueueTimer::Stop()

@@ -54,7 +54,8 @@ __all__ = [
 
 @typing.final
 class IRawElementProviderSimple(windows_ui_xaml.DependencyObject):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class _IAnnotationProvider: ...

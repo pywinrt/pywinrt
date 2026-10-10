@@ -111,5 +111,6 @@ class ApiInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ApiInformation(winrt.system.Object, metaclass=ApiInformation_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

@@ -160,6 +160,8 @@ class SecondaryAuthenticationFactorAuthentication_Static(winrt._winrt.Object_Sta
 @typing.final
 @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorAuthentication(winrt.system.Object, metaclass=SecondaryAuthenticationFactorAuthentication_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication::AbortAuthenticationAsync(System.String)
     @deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_authentication_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
@@ -186,6 +188,8 @@ class SecondaryAuthenticationFactorAuthentication(winrt.system.Object, metaclass
 @typing.final
 @deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult::get_Authentication()
     @_property
     @deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -198,6 +202,8 @@ class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
 @typing.final
 @deprecated("SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs::get_StageInfo()
     @_property
     @deprecated("SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -206,6 +212,8 @@ class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(winrt.sys
 @typing.final
 @deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo::get_DeviceId()
     @_property
     @deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -222,6 +230,8 @@ class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
 @typing.final
 @deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo::UpdateDevicePresenceAsync(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDevicePresence)
     @deprecated("UpdateDevicePresenceAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
     def update_device_presence_async(self, presence_state: SecondaryAuthenticationFactorDevicePresence, /) -> windows_foundation.IAsyncAction: ...
@@ -286,6 +296,8 @@ class SecondaryAuthenticationFactorRegistration_Static(winrt._winrt.Object_Stati
 @typing.final
 @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorRegistration(winrt.system.Object, metaclass=SecondaryAuthenticationFactorRegistration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration::AbortRegisteringDeviceAsync(System.String)
     @deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.")
     def abort_registering_device_async(self, error_log_message: str, /) -> windows_foundation.IAsyncAction: ...
@@ -296,6 +308,8 @@ class SecondaryAuthenticationFactorRegistration(winrt.system.Object, metaclass=S
 @typing.final
 @deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SecondaryAuthenticationFactorRegistrationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult::get_Registration()
     @_property
     @deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.")

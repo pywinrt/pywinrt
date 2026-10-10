@@ -15,6 +15,8 @@ __all__ = [
 
 @typing.final
 class DeviceServicingDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Background.DeviceServicingDetails::get_Arguments()
     @_property
     def arguments(self) -> str: ...
@@ -27,6 +29,8 @@ class DeviceServicingDetails(winrt.system.Object):
 
 @typing.final
 class DeviceUseDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Background.DeviceUseDetails::get_Arguments()
     @_property
     def arguments(self) -> str: ...

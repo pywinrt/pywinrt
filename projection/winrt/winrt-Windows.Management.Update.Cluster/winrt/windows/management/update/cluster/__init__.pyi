@@ -95,6 +95,8 @@ class AreRebootsPendingResult(winrt.system.Object):
 
 @typing.final
 class ClusterUpdateServices(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.Cluster.UpdateCredential Windows.Management.Update.Cluster.ClusterUpdateServices::GetPluginCredential(System.String)
     def get_plugin_credential(self, credential_id: str, /) -> UpdateCredential: ...
     # System.String Windows.Management.Update.Cluster.ClusterUpdateServices::GetRunIndependentInformation()

@@ -51,6 +51,8 @@ class VoiceCommandContentTileType(enum.IntEnum):
 
 @typing.final
 class VoiceCommand(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommand::get_CommandName()
     @_property
     def command_name(self) -> str: ...
@@ -63,12 +65,16 @@ class VoiceCommand(winrt.system.Object):
 
 @typing.final
 class VoiceCommandCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletionReason Windows.ApplicationModel.VoiceCommands.VoiceCommandCompletedEventArgs::get_Reason()
     @_property
     def reason(self) -> VoiceCommandCompletionReason: ...
 
 @typing.final
 class VoiceCommandConfirmationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.VoiceCommands.VoiceCommandConfirmationResult::get_Confirmed()
     @_property
     def confirmed(self) -> bool: ...
@@ -127,6 +133,8 @@ class VoiceCommandContentTile(winrt.system.Object):
 
 @typing.final
 class VoiceCommandDefinition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition::SetPhraseListAsync(System.String,Windows.Foundation.Collections.IIterable`1<System.String>)
     def set_phrase_list_async(self, phrase_list_name: str, phrase_list: _cabc.Iterable[str], /) -> windows_foundation.IAsyncAction: ...
     # System.String Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinition::get_Language()
@@ -146,10 +154,13 @@ class VoiceCommandDefinitionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VoiceCommandDefinitionManager(winrt.system.Object, metaclass=VoiceCommandDefinitionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class VoiceCommandDisambiguationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandContentTile Windows.ApplicationModel.VoiceCommands.VoiceCommandDisambiguationResult::get_SelectedItem()
     @_property
     def selected_item(self) -> VoiceCommandContentTile: ...
@@ -182,6 +193,8 @@ class VoiceCommandResponse_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VoiceCommandResponse(winrt.system.Object, metaclass=VoiceCommandResponse_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.VoiceCommands.VoiceCommandUserMessage Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse::get_RepeatMessage()
     @_property
     def repeat_message(self) -> VoiceCommandUserMessage: ...
@@ -211,6 +224,8 @@ class VoiceCommandServiceConnection_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VoiceCommandServiceConnection(winrt.system.Object, metaclass=VoiceCommandServiceConnection_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.VoiceCommands.VoiceCommand> Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::GetVoiceCommandAsync()
     def get_voice_command_async(self) -> windows_foundation.IAsyncOperation[VoiceCommand]: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection::ReportFailureAsync(Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse)

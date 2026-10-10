@@ -77,7 +77,8 @@ class CredentialPicker_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CredentialPicker(winrt.system.Object, metaclass=CredentialPicker_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CredentialPickerOptions(winrt.system.Object):
@@ -145,6 +146,8 @@ class CredentialPickerOptions(winrt.system.Object):
 
 @typing.final
 class CredentialPickerResults(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.UI.CredentialPickerResults::get_Credential()
     @_property
     def credential(self) -> windows_storage_streams.IBuffer: ...
@@ -176,5 +179,6 @@ class UserConsentVerifier_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserConsentVerifier(winrt.system.Object, metaclass=UserConsentVerifier_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

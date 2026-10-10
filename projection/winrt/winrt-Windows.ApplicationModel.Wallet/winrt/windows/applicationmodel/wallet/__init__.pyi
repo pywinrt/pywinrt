@@ -368,6 +368,8 @@ class WalletItemCustomProperty(winrt.system.Object):
 @typing.final
 @deprecated("WalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletItemStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Wallet.WalletItemStore::AddAsync(System.String,Windows.ApplicationModel.Wallet.WalletItem)
     @deprecated("IWalletItemStore is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_async(self, id: str, item: WalletItem, /) -> windows_foundation.IAsyncAction: ...
@@ -420,7 +422,8 @@ class WalletManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("WalletManager is deprecated and might not work on all platforms. For more info, see MSDN.")
 class WalletManager(winrt.system.Object, metaclass=WalletManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("WalletRelevantLocation is deprecated and might not work on all platforms. For more info, see MSDN.")

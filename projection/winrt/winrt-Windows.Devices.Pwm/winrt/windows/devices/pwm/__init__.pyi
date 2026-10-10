@@ -44,6 +44,8 @@ class PwmController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PwmController(winrt.system.Object, metaclass=PwmController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Pwm.PwmPin Windows.Devices.Pwm.PwmController::OpenPin(System.Int32)
     def open_pin(self, pin_number: winrt.system.Int32, /) -> PwmPin: ...
     # System.Double Windows.Devices.Pwm.PwmController::SetDesiredFrequency(System.Double)
@@ -65,6 +67,8 @@ class PwmController(winrt.system.Object, metaclass=PwmController_Static):
 class PwmPin(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Pwm.PwmPin::Close()
     def close(self) -> None: ...
     # System.Double Windows.Devices.Pwm.PwmPin::GetActiveDutyCyclePercentage()

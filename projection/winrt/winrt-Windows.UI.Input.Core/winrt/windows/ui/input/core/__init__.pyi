@@ -21,6 +21,8 @@ class RadialControllerIndependentInputSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RadialControllerIndependentInputSource(winrt.system.Object, metaclass=RadialControllerIndependentInputSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.RadialController Windows.UI.Input.Core.RadialControllerIndependentInputSource::get_Controller()
     @_property
     def controller(self) -> windows_ui_input.RadialController: ...

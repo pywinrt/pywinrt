@@ -314,6 +314,8 @@ class HttpCookieCollection(_cabc.Sequence[HttpCookie], winrt.system.Object):
     def __getitem__(self, index: typing.SupportsIndex) -> HttpCookie: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[HttpCookie]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Web.Http.HttpCookie> Windows.Web.Http.HttpCookieCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[HttpCookie]: ...
     # Windows.Web.Http.HttpCookie Windows.Web.Http.HttpCookieCollection::GetAt(System.UInt32)
@@ -328,6 +330,8 @@ class HttpCookieCollection(_cabc.Sequence[HttpCookie], winrt.system.Object):
 
 @typing.final
 class HttpCookieManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.HttpCookieManager::DeleteCookie(Windows.Web.Http.HttpCookie)
     def delete_cookie(self, cookie: HttpCookie, /) -> None: ...
     # Windows.Web.Http.HttpCookieCollection Windows.Web.Http.HttpCookieManager::GetCookies(Windows.Foundation.Uri)
@@ -372,6 +376,8 @@ class HttpFormUrlEncodedContent(windows_foundation.IStringable, IHttpContent, wi
 class HttpGetBufferResult(windows_foundation.IStringable, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.HttpGetBufferResult::Close()
     def close(self) -> None: ...
     # System.String Windows.Web.Http.HttpGetBufferResult::ToString()
@@ -396,6 +402,8 @@ class HttpGetBufferResult(windows_foundation.IStringable, windows_foundation.ICl
 class HttpGetInputStreamResult(windows_foundation.IStringable, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.HttpGetInputStreamResult::Close()
     def close(self) -> None: ...
     # System.String Windows.Web.Http.HttpGetInputStreamResult::ToString()
@@ -420,6 +428,8 @@ class HttpGetInputStreamResult(windows_foundation.IStringable, windows_foundatio
 class HttpGetStringResult(windows_foundation.IStringable, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.HttpGetStringResult::Close()
     def close(self) -> None: ...
     # System.String Windows.Web.Http.HttpGetStringResult::ToString()
@@ -606,6 +616,8 @@ class HttpRequestMessage(windows_foundation.IStringable, windows_foundation.IClo
 class HttpRequestResult(windows_foundation.IStringable, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Web.Http.HttpRequestResult::Close()
     def close(self) -> None: ...
     # System.String Windows.Web.Http.HttpRequestResult::ToString()
@@ -737,6 +749,8 @@ class HttpStringContent(windows_foundation.IStringable, IHttpContent, windows_fo
 
 @typing.final
 class HttpTransportInformation(windows_foundation.IStringable, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Web.Http.HttpTransportInformation::ToString()
     def to_string(self) -> str: ...
     # Windows.Security.Cryptography.Certificates.Certificate Windows.Web.Http.HttpTransportInformation::get_ServerCertificate()

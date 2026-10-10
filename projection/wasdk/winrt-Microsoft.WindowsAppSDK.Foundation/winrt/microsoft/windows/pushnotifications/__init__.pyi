@@ -41,6 +41,8 @@ class PushNotificationCreateChannelStatus:
 
 @typing.final
 class PushNotificationChannel(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.PushNotifications.PushNotificationChannel::Close()
     def close(self) -> None: ...
     # Windows.Foundation.DateTime Microsoft.Windows.PushNotifications.PushNotificationChannel::get_ExpirationTime()
@@ -52,6 +54,8 @@ class PushNotificationChannel(winrt.system.Object):
 
 @typing.final
 class PushNotificationCreateChannelResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.PushNotifications.PushNotificationChannel Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult::get_Channel()
     @_property
     def channel(self) -> PushNotificationChannel: ...
@@ -72,6 +76,8 @@ class PushNotificationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PushNotificationManager(winrt.system.Object, metaclass=PushNotificationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult,Microsoft.Windows.PushNotifications.PushNotificationCreateChannelStatus> Microsoft.Windows.PushNotifications.PushNotificationManager::CreateChannelAsync(System.Guid)
     def create_channel_async(self, remote_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperationWithProgress[PushNotificationCreateChannelResult, PushNotificationCreateChannelStatus]: ...
     # System.Void Microsoft.Windows.PushNotifications.PushNotificationManager::Register()
@@ -87,6 +93,8 @@ class PushNotificationManager(winrt.system.Object, metaclass=PushNotificationMan
 
 @typing.final
 class PushNotificationReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Background.BackgroundTaskDeferral Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_applicationmodel_background.BackgroundTaskDeferral: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs::add_Canceled(Windows.ApplicationModel.Background.BackgroundTaskCanceledEventHandler)

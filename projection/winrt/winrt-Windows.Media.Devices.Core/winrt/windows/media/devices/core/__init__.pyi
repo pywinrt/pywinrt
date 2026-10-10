@@ -84,6 +84,8 @@ class CameraIntrinsics(winrt.system.Object):
 class DepthCorrelatedCoordinateMapper(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Point Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper::MapPoint(Windows.Foundation.Point,Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Media.Devices.Core.CameraIntrinsics)
@@ -97,6 +99,8 @@ class DepthCorrelatedCoordinateMapper(windows_foundation.IClosable, winrt.system
 
 @typing.final
 class FrameControlCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.Core.FrameExposureCapabilities Windows.Media.Devices.Core.FrameControlCapabilities::get_Exposure()
     @_property
     def exposure(self) -> FrameExposureCapabilities: ...
@@ -143,6 +147,8 @@ class FrameController(winrt.system.Object):
 
 @typing.final
 class FrameExposureCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Devices.Core.FrameExposureCapabilities::get_Max()
     @_property
     def max(self) -> datetime.timedelta: ...
@@ -158,6 +164,8 @@ class FrameExposureCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameExposureCompensationCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Media.Devices.Core.FrameExposureCompensationCapabilities::get_Max()
     @_property
     def max(self) -> winrt.system.Single: ...
@@ -173,6 +181,8 @@ class FrameExposureCompensationCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameExposureCompensationControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Single> Windows.Media.Devices.Core.FrameExposureCompensationControl::get_Value()
     @_property
     def value(self) -> winrt.system.Single | None: ...
@@ -182,6 +192,8 @@ class FrameExposureCompensationControl(winrt.system.Object):
 
 @typing.final
 class FrameExposureControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.Devices.Core.FrameExposureControl::get_Value()
     @_property
     def value(self) -> datetime.timedelta | None: ...
@@ -197,6 +209,8 @@ class FrameExposureControl(winrt.system.Object):
 
 @typing.final
 class FrameFlashCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.Core.FrameFlashCapabilities::get_PowerSupported()
     @_property
     def power_supported(self) -> bool: ...
@@ -209,6 +223,8 @@ class FrameFlashCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameFlashControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.Core.FrameFlashControl::get_RedEyeReduction()
     @_property
     def red_eye_reduction(self) -> bool: ...
@@ -236,6 +252,8 @@ class FrameFlashControl(winrt.system.Object):
 
 @typing.final
 class FrameFocusCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Devices.Core.FrameFocusCapabilities::get_Max()
     @_property
     def max(self) -> winrt.system.UInt32: ...
@@ -251,6 +269,8 @@ class FrameFocusCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameFocusControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Media.Devices.Core.FrameFocusControl::get_Value()
     @_property
     def value(self) -> winrt.system.UInt32 | None: ...
@@ -260,6 +280,8 @@ class FrameFocusControl(winrt.system.Object):
 
 @typing.final
 class FrameIsoSpeedCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Devices.Core.FrameIsoSpeedCapabilities::get_Max()
     @_property
     def max(self) -> winrt.system.UInt32: ...
@@ -275,6 +297,8 @@ class FrameIsoSpeedCapabilities(winrt.system.Object):
 
 @typing.final
 class FrameIsoSpeedControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Media.Devices.Core.FrameIsoSpeedControl::get_Value()
     @_property
     def value(self) -> winrt.system.UInt32 | None: ...
@@ -290,6 +314,8 @@ class FrameIsoSpeedControl(winrt.system.Object):
 
 @typing.final
 class VariablePhotoSequenceController(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.Core.VariablePhotoSequenceController::GetCurrentFrameRate()
     def get_current_frame_rate(self) -> windows_media_mediaproperties.MediaRatio: ...
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.Core.VariablePhotoSequenceController::GetHighestConcurrentFrameRate(Windows.Media.MediaProperties.IMediaEncodingProperties)

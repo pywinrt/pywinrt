@@ -93,6 +93,8 @@ class WiFiDirectService_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync()
     def connect_async(self) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
@@ -214,6 +216,8 @@ class WiFiDirectServiceAdvertiser(winrt.system.Object):
 
 @typing.final
 class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs::get_Session()
     @_property
     def session(self) -> WiFiDirectServiceSession: ...
@@ -223,6 +227,8 @@ class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
 
 @typing.final
 class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo::get_IsGroupFormationNeeded()
     @_property
     def is_group_formation_needed(self) -> bool: ...
@@ -232,6 +238,8 @@ class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
 
 @typing.final
 class WiFiDirectServiceRemotePortAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs::get_EndpointPairs()
     @_property
     def endpoint_pairs(self) -> _cabc.Sequence[windows_networking.EndpointPair]: ...
@@ -243,6 +251,8 @@ class WiFiDirectServiceRemotePortAddedEventArgs(winrt.system.Object):
 class WiFiDirectServiceSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::AddDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
     def add_datagram_socket_async(self, value: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::AddStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener)
@@ -283,6 +293,8 @@ class WiFiDirectServiceSession(windows_foundation.IClosable, winrt.system.Object
 
 @typing.final
 class WiFiDirectServiceSessionDeferredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs::get_DeferredSessionInfo()
     @_property
     def deferred_session_info(self) -> windows_storage_streams.IBuffer: ...
@@ -291,6 +303,8 @@ class WiFiDirectServiceSessionDeferredEventArgs(winrt.system.Object):
 class WiFiDirectServiceSessionRequest(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest::Close()
     def close(self) -> None: ...
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest::get_DeviceInformation()
@@ -305,6 +319,8 @@ class WiFiDirectServiceSessionRequest(windows_foundation.IClosable, winrt.system
 
 @typing.final
 class WiFiDirectServiceSessionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs::GetSessionRequest()
     def get_session_request(self) -> WiFiDirectServiceSessionRequest: ...
 

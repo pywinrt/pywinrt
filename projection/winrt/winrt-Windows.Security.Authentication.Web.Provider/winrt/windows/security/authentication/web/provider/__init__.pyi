@@ -158,10 +158,13 @@ class WebAccountManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebAccountManager(winrt.system.Object, metaclass=WebAccountManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebAccountProviderAddAccountOperation(IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.Security.Authentication.Web.Provider.WebAccountProviderOperationKind Windows.Security.Authentication.Web.Provider.WebAccountProviderAddAccountOperation::get_Kind()
@@ -170,6 +173,8 @@ class WebAccountProviderAddAccountOperation(IWebAccountProviderOperation, winrt.
 
 @typing.final
 class WebAccountProviderDeleteAccountOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderDeleteAccountOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
@@ -183,6 +188,8 @@ class WebAccountProviderDeleteAccountOperation(IWebAccountProviderBaseReportOper
 
 @typing.final
 class WebAccountProviderGetTokenSilentOperation(IWebAccountProviderSilentReportOperation, IWebAccountProviderBaseReportOperation, IWebAccountProviderTokenOperation, IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
@@ -215,6 +222,8 @@ class WebAccountProviderGetTokenSilentOperation(IWebAccountProviderSilentReportO
 
 @typing.final
 class WebAccountProviderManageAccountOperation(IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # Windows.Security.Credentials.WebAccount Windows.Security.Authentication.Web.Provider.WebAccountProviderManageAccountOperation::get_WebAccount()
@@ -226,6 +235,8 @@ class WebAccountProviderManageAccountOperation(IWebAccountProviderOperation, win
 
 @typing.final
 class WebAccountProviderRequestTokenOperation(IWebAccountProviderUIReportOperation, IWebAccountProviderBaseReportOperation, IWebAccountProviderTokenOperation, IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderRequestTokenOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
@@ -250,6 +261,8 @@ class WebAccountProviderRequestTokenOperation(IWebAccountProviderUIReportOperati
 
 @typing.final
 class WebAccountProviderRetrieveCookiesOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderRetrieveCookiesOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
@@ -275,6 +288,8 @@ class WebAccountProviderRetrieveCookiesOperation(IWebAccountProviderBaseReportOp
 
 @typing.final
 class WebAccountProviderSignOutAccountOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation::ReportCompleted()
     def report_completed(self) -> None: ...
     # System.Void Windows.Security.Authentication.Web.Provider.WebAccountProviderSignOutAccountOperation::ReportError(Windows.Security.Authentication.Web.Core.WebProviderError)
@@ -294,6 +309,8 @@ class WebAccountProviderSignOutAccountOperation(IWebAccountProviderBaseReportOpe
 
 @typing.final
 class WebAccountProviderTriggerDetails(IWebAccountProviderTokenObjects2, IWebAccountProviderTokenObjects, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Web.Provider.IWebAccountProviderOperation Windows.Security.Authentication.Web.Provider.WebAccountProviderTriggerDetails::get_Operation()
     @_property
     def operation(self) -> IWebAccountProviderOperation: ...
@@ -303,6 +320,8 @@ class WebAccountProviderTriggerDetails(IWebAccountProviderTokenObjects2, IWebAcc
 
 @typing.final
 class WebProviderTokenRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest::CheckApplicationForCapabilityAsync(System.String)
     def check_application_for_capability_async(self, capability_name: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Cryptography.Core.CryptographicKey> Windows.Security.Authentication.Web.Provider.WebProviderTokenRequest::GetApplicationTokenBindingKeyAsync(Windows.Security.Authentication.Web.TokenBindingKeyType,Windows.Foundation.Uri)

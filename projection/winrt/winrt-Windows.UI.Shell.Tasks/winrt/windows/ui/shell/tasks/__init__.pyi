@@ -39,6 +39,8 @@ class AppTaskContent_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppTaskContent(winrt.system.Object, metaclass=AppTaskContent_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.Tasks.AppTaskContent::AddButton(System.String,Windows.Foundation.Uri)
     def add_button(self, text: str, action_uri: windows_foundation.Uri, /) -> None: ...
     # System.Void Windows.UI.Shell.Tasks.AppTaskContent::SetQuestion(System.String)
@@ -57,6 +59,8 @@ class AppTaskInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppTaskInfo(winrt.system.Object, metaclass=AppTaskInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String[] Windows.UI.Shell.Tasks.AppTaskInfo::GetCompletedSteps()
     def get_completed_steps(self) -> winrt.system.Array[str]: ...
     # System.String Windows.UI.Shell.Tasks.AppTaskInfo::GetExecutingStep()

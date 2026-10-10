@@ -18,6 +18,8 @@ __all__ = [
 
 @typing.final
 class AddAppointmentOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation::DismissUI()
     def dismiss_ui(self) -> None: ...
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation::ReportCanceled()
@@ -53,10 +55,13 @@ class AppointmentsProviderLaunchActionVerbs_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppointmentsProviderLaunchActionVerbs(winrt.system.Object, metaclass=AppointmentsProviderLaunchActionVerbs_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RemoveAppointmentOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation::DismissUI()
     def dismiss_ui(self) -> None: ...
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation::ReportCanceled()
@@ -77,6 +82,8 @@ class RemoveAppointmentOperation(winrt.system.Object):
 
 @typing.final
 class ReplaceAppointmentOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation::DismissUI()
     def dismiss_ui(self) -> None: ...
     # System.Void Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation::ReportCanceled()

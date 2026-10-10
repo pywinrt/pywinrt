@@ -88,11 +88,15 @@ class MediaMemoryTypes(enum.IntEnum):
 
 @typing.final
 class AcousticEchoCancellationConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Effects.AcousticEchoCancellationConfiguration::SetEchoCancellationRenderEndpoint(System.String)
     def set_echo_cancellation_render_endpoint(self, device_id: str, /) -> None: ...
 
 @typing.final
 class AudioCaptureEffectsManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Effects.AudioEffect> Windows.Media.Effects.AudioCaptureEffectsManager::GetAudioCaptureEffects()
     def get_audio_capture_effects(self) -> _cabc.Sequence[AudioEffect]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Effects.AudioCaptureEffectsManager::add_AudioCaptureEffectsChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Effects.AudioCaptureEffectsManager,System.Object>)
@@ -102,6 +106,8 @@ class AudioCaptureEffectsManager(winrt.system.Object):
 
 @typing.final
 class AudioEffect(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Effects.AudioEffect::SetState(Windows.Media.Effects.AudioEffectState)
     def set_state(self, new_state: AudioEffectState, /) -> None: ...
     # Windows.Media.Effects.AudioEffectType Windows.Media.Effects.AudioEffect::get_AudioEffectType()
@@ -155,10 +161,13 @@ class AudioEffectsManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AudioEffectsManager(winrt.system.Object, metaclass=AudioEffectsManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AudioRenderEffectsManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Effects.AudioEffect> Windows.Media.Effects.AudioRenderEffectsManager::GetAudioRenderEffects()
     def get_audio_render_effects(self) -> _cabc.Sequence[AudioEffect]: ...
     # System.Void Windows.Media.Effects.AudioRenderEffectsManager::ShowSettingsUI()
@@ -179,6 +188,8 @@ class AudioRenderEffectsManager(winrt.system.Object):
 
 @typing.final
 class CompositeVideoFrameContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Editing.MediaOverlay Windows.Media.Effects.CompositeVideoFrameContext::GetOverlayForSurface(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def get_overlay_for_surface(self, surface_to_overlay: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> windows_media_editing.MediaOverlay: ...
     # Windows.Media.VideoFrame Windows.Media.Effects.CompositeVideoFrameContext::get_BackgroundFrame()
@@ -193,6 +204,8 @@ class CompositeVideoFrameContext(winrt.system.Object):
 
 @typing.final
 class ProcessAudioFrameContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.AudioFrame Windows.Media.Effects.ProcessAudioFrameContext::get_InputFrame()
     @_property
     def input_frame(self) -> windows_media.AudioFrame: ...
@@ -202,6 +215,8 @@ class ProcessAudioFrameContext(winrt.system.Object):
 
 @typing.final
 class ProcessVideoFrameContext(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.VideoFrame Windows.Media.Effects.ProcessVideoFrameContext::get_InputFrame()
     @_property
     def input_frame(self) -> windows_media.VideoFrame: ...
@@ -286,6 +301,8 @@ class VideoTransformEffectDefinition(IVideoEffectDefinition, winrt.system.Object
 
 @typing.final
 class VideoTransformSphericalProjection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Quaternion Windows.Media.Effects.VideoTransformSphericalProjection::get_ViewOrientation()
     @_property
     def view_orientation(self) -> windows_foundation_numerics.Quaternion: ...

@@ -433,6 +433,8 @@ class WhiteBalanceGain:
 
 @typing.final
 class AdvancedCapturedPhoto(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.Media.Capture.AdvancedCapturedPhoto::get_Context()
     @_property
     def context(self) -> winrt.system.Object: ...
@@ -448,6 +450,8 @@ class AdvancedCapturedPhoto(winrt.system.Object):
 
 @typing.final
 class AdvancedPhotoCapture(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.AdvancedCapturedPhoto> Windows.Media.Capture.AdvancedPhotoCapture::CaptureAsync()
     def capture_async(self) -> windows_foundation.IAsyncOperation[AdvancedCapturedPhoto]: ...
@@ -471,6 +475,8 @@ class AdvancedPhotoCapture(winrt.system.Object):
 
 @typing.final
 class AppBroadcastBackgroundService(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppBroadcastBackgroundService::TerminateBroadcast(Windows.Media.Capture.AppBroadcastTerminationReason,System.UInt32)
     def terminate_broadcast(self, reason: AppBroadcastTerminationReason, provider_specific_reason: winrt.system.UInt32, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppBroadcastBackgroundService::add_HeartbeatRequested(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppBroadcastBackgroundService,Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs>)
@@ -540,6 +546,8 @@ class AppBroadcastBackgroundService(winrt.system.Object):
 
 @typing.final
 class AppBroadcastBackgroundServiceSignInInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo::add_SignInStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo,Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs>)
     def add_sign_in_state_changed(self, handler: windows_foundation.TypedEventHandler[AppBroadcastBackgroundServiceSignInInfo, AppBroadcastSignInStateChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Capture.AppBroadcastBackgroundServiceSignInInfo::remove_SignInStateChanged(Windows.Foundation.EventRegistrationToken)
@@ -575,6 +583,8 @@ class AppBroadcastBackgroundServiceSignInInfo(winrt.system.Object):
 
 @typing.final
 class AppBroadcastBackgroundServiceStreamInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo::ReportProblemWithStream()
     def report_problem_with_stream(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo::add_StreamStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppBroadcastBackgroundServiceStreamInfo,Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs>)
@@ -616,6 +626,8 @@ class AppBroadcastBackgroundServiceStreamInfo(winrt.system.Object):
 
 @typing.final
 class AppBroadcastCameraCaptureStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppBroadcastCameraCaptureStateChangedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -625,6 +637,8 @@ class AppBroadcastCameraCaptureStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppBroadcastGlobalSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Capture.AppBroadcastGlobalSettings::get_SystemAudioGain()
     @_property
     def system_audio_gain(self) -> winrt.system.Double: ...
@@ -700,6 +714,8 @@ class AppBroadcastGlobalSettings(winrt.system.Object):
 
 @typing.final
 class AppBroadcastHeartbeatRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Capture.AppBroadcastHeartbeatRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -720,10 +736,13 @@ class AppBroadcastManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppBroadcastManager(winrt.system.Object, metaclass=AppBroadcastManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppBroadcastMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -733,6 +752,8 @@ class AppBroadcastMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppBroadcastPlugIn(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Capture.AppBroadcastPlugIn::get_AppId()
     @_property
     def app_id(self) -> str: ...
@@ -755,6 +776,8 @@ class AppBroadcastPlugInManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppBroadcastPlugInManager(winrt.system.Object, metaclass=AppBroadcastPlugInManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastPlugIn Windows.Media.Capture.AppBroadcastPlugInManager::get_DefaultPlugIn()
     @_property
     def default_plug_in(self) -> AppBroadcastPlugIn: ...
@@ -770,12 +793,16 @@ class AppBroadcastPlugInManager(winrt.system.Object, metaclass=AppBroadcastPlugI
 
 @typing.final
 class AppBroadcastPlugInStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastPlugInState Windows.Media.Capture.AppBroadcastPlugInStateChangedEventArgs::get_PlugInState()
     @_property
     def plug_in_state(self) -> AppBroadcastPlugInState: ...
 
 @typing.final
 class AppBroadcastPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppBroadcastPreview::StopPreview()
     def stop_preview(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppBroadcastPreview::add_PreviewStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppBroadcastPreview,Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs>)
@@ -794,6 +821,8 @@ class AppBroadcastPreview(winrt.system.Object):
 
 @typing.final
 class AppBroadcastPreviewStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppBroadcastPreviewStateChangedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -803,6 +832,8 @@ class AppBroadcastPreviewStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppBroadcastPreviewStreamReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame Windows.Media.Capture.AppBroadcastPreviewStreamReader::TryGetNextVideoFrame()
     def try_get_next_video_frame(self) -> AppBroadcastPreviewStreamVideoFrame | None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppBroadcastPreviewStreamReader::add_VideoFrameArrived(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppBroadcastPreviewStreamReader,System.Object>)
@@ -827,6 +858,8 @@ class AppBroadcastPreviewStreamReader(winrt.system.Object):
 
 @typing.final
 class AppBroadcastPreviewStreamVideoFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Media.Capture.AppBroadcastPreviewStreamVideoFrame::get_VideoBuffer()
     @_property
     def video_buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -836,6 +869,8 @@ class AppBroadcastPreviewStreamVideoFrame(winrt.system.Object):
 
 @typing.final
 class AppBroadcastPreviewStreamVideoHeader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Media.Capture.AppBroadcastPreviewStreamVideoHeader::get_AbsoluteTimestamp()
     @_property
     def absolute_timestamp(self) -> datetime.datetime: ...
@@ -851,6 +886,8 @@ class AppBroadcastPreviewStreamVideoHeader(winrt.system.Object):
 
 @typing.final
 class AppBroadcastProviderSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastVideoEncodingResolutionMode Windows.Media.Capture.AppBroadcastProviderSettings::get_VideoEncodingResolutionMode()
     @_property
     def video_encoding_resolution_mode(self) -> AppBroadcastVideoEncodingResolutionMode: ...
@@ -896,6 +933,8 @@ class AppBroadcastProviderSettings(winrt.system.Object):
 
 @typing.final
 class AppBroadcastServices(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Media.Capture.AppBroadcastServices::EnterBroadcastModeAsync(Windows.Media.Capture.AppBroadcastPlugIn)
     def enter_broadcast_mode_async(self, plug_in: AppBroadcastPlugIn, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
     # System.Void Windows.Media.Capture.AppBroadcastServices::ExitBroadcastMode(Windows.Media.Capture.AppBroadcastExitBroadcastModeReason)
@@ -938,6 +977,8 @@ class AppBroadcastServices(winrt.system.Object):
 
 @typing.final
 class AppBroadcastSignInStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastSignInResult Windows.Media.Capture.AppBroadcastSignInStateChangedEventArgs::get_Result()
     @_property
     def result(self) -> AppBroadcastSignInResult: ...
@@ -947,6 +988,8 @@ class AppBroadcastSignInStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppBroadcastState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppBroadcastState::RestartCameraCapture()
     def restart_camera_capture(self) -> None: ...
     # System.Void Windows.Media.Capture.AppBroadcastState::RestartMicrophoneCapture()
@@ -1041,6 +1084,8 @@ class AppBroadcastState(winrt.system.Object):
 
 @typing.final
 class AppBroadcastStreamAudioFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Media.Capture.AppBroadcastStreamAudioFrame::get_AudioBuffer()
     @_property
     def audio_buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -1050,6 +1095,8 @@ class AppBroadcastStreamAudioFrame(winrt.system.Object):
 
 @typing.final
 class AppBroadcastStreamAudioHeader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Media.Capture.AppBroadcastStreamAudioHeader::get_AbsoluteTimestamp()
     @_property
     def absolute_timestamp(self) -> datetime.datetime: ...
@@ -1068,6 +1115,8 @@ class AppBroadcastStreamAudioHeader(winrt.system.Object):
 
 @typing.final
 class AppBroadcastStreamReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastStreamAudioFrame Windows.Media.Capture.AppBroadcastStreamReader::TryGetNextAudioFrame()
     def try_get_next_audio_frame(self) -> AppBroadcastStreamAudioFrame | None: ...
     # Windows.Media.Capture.AppBroadcastStreamVideoFrame Windows.Media.Capture.AppBroadcastStreamReader::TryGetNextVideoFrame()
@@ -1104,12 +1153,16 @@ class AppBroadcastStreamReader(winrt.system.Object):
 
 @typing.final
 class AppBroadcastStreamStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastStreamState Windows.Media.Capture.AppBroadcastStreamStateChangedEventArgs::get_StreamState()
     @_property
     def stream_state(self) -> AppBroadcastStreamState: ...
 
 @typing.final
 class AppBroadcastStreamVideoFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Media.Capture.AppBroadcastStreamVideoFrame::get_VideoBuffer()
     @_property
     def video_buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -1119,6 +1172,8 @@ class AppBroadcastStreamVideoFrame(winrt.system.Object):
 
 @typing.final
 class AppBroadcastStreamVideoHeader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Media.Capture.AppBroadcastStreamVideoHeader::get_AbsoluteTimestamp()
     @_property
     def absolute_timestamp(self) -> datetime.datetime: ...
@@ -1140,12 +1195,16 @@ class AppBroadcastStreamVideoHeader(winrt.system.Object):
 
 @typing.final
 class AppBroadcastTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppBroadcastBackgroundService Windows.Media.Capture.AppBroadcastTriggerDetails::get_BackgroundService()
     @_property
     def background_service(self) -> AppBroadcastBackgroundService: ...
 
 @typing.final
 class AppBroadcastViewerCountChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppBroadcastViewerCountChangedEventArgs::get_ViewerCount()
     @_property
     def viewer_count(self) -> winrt.system.UInt32: ...
@@ -1159,6 +1218,8 @@ class AppCapture_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppCapture(winrt.system.Object, metaclass=AppCapture_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppCapture::add_CapturingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppCapture,System.Object>)
     def add_capturing_changed(self, handler: windows_foundation.TypedEventHandler[AppCapture, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Capture.AppCapture::remove_CapturingChanged(Windows.Foundation.EventRegistrationToken)
@@ -1172,6 +1233,8 @@ class AppCapture(winrt.system.Object, metaclass=AppCapture_Static):
 
 @typing.final
 class AppCaptureAlternateShortcutKeys(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.VirtualKeyModifiers Windows.Media.Capture.AppCaptureAlternateShortcutKeys::get_ToggleRecordingKeyModifiers()
     @_property
     def toggle_recording_key_modifiers(self) -> windows_system.VirtualKeyModifiers: ...
@@ -1271,12 +1334,16 @@ class AppCaptureAlternateShortcutKeys(winrt.system.Object):
 
 @typing.final
 class AppCaptureDurationGeneratedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs::get_Duration()
     @_property
     def duration(self) -> datetime.timedelta: ...
 
 @typing.final
 class AppCaptureFileGeneratedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Media.Capture.AppCaptureFileGeneratedEventArgs::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -1290,7 +1357,8 @@ class AppCaptureManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppCaptureManager(winrt.system.Object, metaclass=AppCaptureManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class AppCaptureMetadataWriter(windows_foundation.IClosable, winrt.system.Object):
@@ -1325,6 +1393,8 @@ class AppCaptureMetadataWriter(windows_foundation.IClosable, winrt.system.Object
 
 @typing.final
 class AppCaptureMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -1334,6 +1404,8 @@ class AppCaptureMicrophoneCaptureStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppCaptureRecordOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppCaptureRecordOperation::StopRecording()
     def stop_recording(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppCaptureRecordOperation::add_DurationGenerated(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppCaptureRecordOperation,Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs>)
@@ -1366,6 +1438,8 @@ class AppCaptureRecordOperation(winrt.system.Object):
 
 @typing.final
 class AppCaptureRecordingStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> winrt.system.UInt32: ...
@@ -1375,6 +1449,8 @@ class AppCaptureRecordingStateChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class AppCaptureServices(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.AppCaptureRecordOperation Windows.Media.Capture.AppCaptureServices::Record()
     def record(self) -> AppCaptureRecordOperation: ...
     # Windows.Media.Capture.AppCaptureRecordOperation Windows.Media.Capture.AppCaptureServices::RecordTimeSpan(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)
@@ -1388,6 +1464,8 @@ class AppCaptureServices(winrt.system.Object):
 
 @typing.final
 class AppCaptureSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Capture.AppCaptureSettings::get_IsHistoricalCaptureOnWirelessDisplayAllowed()
     @_property
     def is_historical_capture_on_wireless_display_allowed(self) -> bool: ...
@@ -1547,6 +1625,8 @@ class AppCaptureSettings(winrt.system.Object):
 
 @typing.final
 class AppCaptureState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.AppCaptureState::RestartMicrophoneCapture()
     def restart_microphone_capture(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.AppCaptureState::add_CaptureTargetClosed(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.AppCaptureState,System.Object>)
@@ -1590,6 +1670,8 @@ class CameraCaptureUI(winrt.system.Object):
 
 @typing.final
 class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution Windows.Media.Capture.CameraCaptureUIPhotoCaptureSettings::get_MaxResolution()
     @_property
     def max_resolution(self) -> CameraCaptureUIMaxPhotoResolution: ...
@@ -1623,6 +1705,8 @@ class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
 
 @typing.final
 class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.CameraCaptureUIMaxVideoResolution Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings::get_MaxResolution()
     @_property
     def max_resolution(self) -> CameraCaptureUIMaxVideoResolution: ...
@@ -1655,12 +1739,15 @@ class CameraOptionsUI_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CameraOptionsUI(winrt.system.Object, metaclass=CameraOptionsUI_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class CapturedFrame(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IRandomAccessStream Windows.Media.Capture.CapturedFrame::CloneStream()
     def clone_stream(self) -> windows_storage_streams.IRandomAccessStream: ...
     # System.Void Windows.Media.Capture.CapturedFrame::Close()
@@ -1713,6 +1800,8 @@ class CapturedFrame(windows_storage_streams.IRandomAccessStreamWithContentType, 
 
 @typing.final
 class CapturedFrameControlValues(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.Capture.CapturedFrameControlValues::get_Exposure()
     @_property
     def exposure(self) -> datetime.timedelta | None: ...
@@ -1758,6 +1847,8 @@ class CapturedFrameControlValues(winrt.system.Object):
 
 @typing.final
 class CapturedPhoto(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.CapturedFrame Windows.Media.Capture.CapturedPhoto::get_Frame()
     @_property
     def frame(self) -> CapturedFrame: ...
@@ -1767,6 +1858,8 @@ class CapturedPhoto(winrt.system.Object):
 
 @typing.final
 class GameBarServices(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.GameBarServices::DisableCapture()
     def disable_capture(self) -> None: ...
     # System.Void Windows.Media.Capture.GameBarServices::EnableCapture()
@@ -1793,6 +1886,8 @@ class GameBarServices(winrt.system.Object):
 
 @typing.final
 class GameBarServicesCommandEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.GameBarCommand Windows.Media.Capture.GameBarServicesCommandEventArgs::get_Command()
     @_property
     def command(self) -> GameBarCommand: ...
@@ -1807,6 +1902,8 @@ class GameBarServicesManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameBarServicesManager(winrt.system.Object, metaclass=GameBarServicesManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Media.Capture.GameBarServicesManager::add_GameBarServicesCreated(Windows.Foundation.TypedEventHandler`2<Windows.Media.Capture.GameBarServicesManager,Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs>)
     def add_game_bar_services_created(self, value: windows_foundation.TypedEventHandler[GameBarServicesManager, GameBarServicesManagerGameBarServicesCreatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Capture.GameBarServicesManager::remove_GameBarServicesCreated(Windows.Foundation.EventRegistrationToken)
@@ -1814,12 +1911,16 @@ class GameBarServicesManager(winrt.system.Object, metaclass=GameBarServicesManag
 
 @typing.final
 class GameBarServicesManagerGameBarServicesCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Capture.GameBarServices Windows.Media.Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs::get_GameBarServices()
     @_property
     def game_bar_services(self) -> GameBarServices: ...
 
 @typing.final
 class GameBarServicesTargetInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Capture.GameBarServicesTargetInfo::get_AppId()
     @_property
     def app_id(self) -> str: ...
@@ -1835,6 +1936,8 @@ class GameBarServicesTargetInfo(winrt.system.Object):
 
 @typing.final
 class LowLagMediaRecording(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.LowLagMediaRecording::FinishAsync()
     def finish_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.LowLagMediaRecording::PauseAsync(Windows.Media.Devices.MediaCapturePauseBehavior)
@@ -1852,6 +1955,8 @@ class LowLagMediaRecording(winrt.system.Object):
 
 @typing.final
 class LowLagPhotoCapture(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.CapturedPhoto> Windows.Media.Capture.LowLagPhotoCapture::CaptureAsync()
     def capture_async(self) -> windows_foundation.IAsyncOperation[CapturedPhoto]: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.LowLagPhotoCapture::FinishAsync()
@@ -1859,6 +1964,8 @@ class LowLagPhotoCapture(winrt.system.Object):
 
 @typing.final
 class LowLagPhotoSequenceCapture(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.LowLagPhotoSequenceCapture::FinishAsync()
     def finish_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.LowLagPhotoSequenceCapture::StartAsync()
@@ -2071,6 +2178,8 @@ class MediaCapture(windows_foundation.IClosable, winrt.system.Object, metaclass=
 
 @typing.final
 class MediaCaptureDeviceExclusiveControlStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -2080,6 +2189,8 @@ class MediaCaptureDeviceExclusiveControlStatusChangedEventArgs(winrt.system.Obje
 
 @typing.final
 class MediaCaptureFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Capture.MediaCaptureFailedEventArgs::get_Code()
     @_property
     def code(self) -> winrt.system.UInt32: ...
@@ -2089,6 +2200,8 @@ class MediaCaptureFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class MediaCaptureFocusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.MediaCaptureFocusState Windows.Media.Capture.MediaCaptureFocusChangedEventArgs::get_FocusState()
     @_property
     def focus_state(self) -> windows_media_devices.MediaCaptureFocusState: ...
@@ -2209,6 +2322,8 @@ class MediaCaptureInitializationSettings(winrt.system.Object):
 class MediaCapturePauseResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.MediaCapturePauseResult::Close()
     def close(self) -> None: ...
     # Windows.Media.VideoFrame Windows.Media.Capture.MediaCapturePauseResult::get_LastFrame()
@@ -2222,6 +2337,8 @@ class MediaCapturePauseResult(windows_foundation.IClosable, winrt.system.Object)
 class MediaCaptureRelativePanelWatcher(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.MediaCaptureRelativePanelWatcher::Close()
     def close(self) -> None: ...
     # System.Void Windows.Media.Capture.MediaCaptureRelativePanelWatcher::Start()
@@ -2238,6 +2355,8 @@ class MediaCaptureRelativePanelWatcher(windows_foundation.IClosable, winrt.syste
 
 @typing.final
 class MediaCaptureSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Capture.MediaCaptureSettings::get_AudioDeviceId()
     @_property
     def audio_device_id(self) -> str: ...
@@ -2285,6 +2404,8 @@ class MediaCaptureSettings(winrt.system.Object):
 class MediaCaptureStopResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Capture.MediaCaptureStopResult::Close()
     def close(self) -> None: ...
     # Windows.Media.VideoFrame Windows.Media.Capture.MediaCaptureStopResult::get_LastFrame()
@@ -2296,6 +2417,8 @@ class MediaCaptureStopResult(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class MediaCaptureVideoProfile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Capture.MediaCaptureVideoProfile> Windows.Media.Capture.MediaCaptureVideoProfile::GetConcurrency()
     def get_concurrency(self) -> _cabc.Sequence[MediaCaptureVideoProfile]: ...
     # System.String Windows.Media.Capture.MediaCaptureVideoProfile::get_Id()
@@ -2322,6 +2445,8 @@ class MediaCaptureVideoProfile(winrt.system.Object):
 
 @typing.final
 class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription::get_FrameRate()
     @_property
     def frame_rate(self) -> winrt.system.Double: ...
@@ -2348,6 +2473,8 @@ class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
 
 @typing.final
 class OptionalReferencePhotoCapturedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs::get_Context()
     @_property
     def context(self) -> winrt.system.Object: ...
@@ -2357,6 +2484,8 @@ class OptionalReferencePhotoCapturedEventArgs(winrt.system.Object):
 
 @typing.final
 class PhotoCapturedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Capture.PhotoCapturedEventArgs::get_CaptureTimeOffset()
     @_property
     def capture_time_offset(self) -> datetime.timedelta: ...
@@ -2369,6 +2498,8 @@ class PhotoCapturedEventArgs(winrt.system.Object):
 
 @typing.final
 class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.Capture.PhotoConfirmationCapturedEventArgs::get_CaptureTimeOffset()
     @_property
     def capture_time_offset(self) -> datetime.timedelta: ...
@@ -2378,6 +2509,8 @@ class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
 
 @typing.final
 class VideoStreamConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.VideoEncodingProperties Windows.Media.Capture.VideoStreamConfiguration::get_InputProperties()
     @_property
     def input_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...

@@ -23,7 +23,8 @@ class HolographicApplicationPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicApplicationPreview_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HolographicKeyboardPlacementOverridePreview_Static(winrt._winrt.Object_Static):
@@ -34,6 +35,8 @@ class HolographicKeyboardPlacementOverridePreview_Static(winrt._winrt.Object_Sta
 @typing.final
 @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
 class HolographicKeyboardPlacementOverridePreview(winrt.system.Object, metaclass=HolographicKeyboardPlacementOverridePreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::ResetPlacementOverride()
     @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def reset_placement_override(self) -> None: ...

@@ -424,6 +424,8 @@ class VirtualKeyModifiers(enum.IntFlag):
 
 @typing.final
 class AppActivationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppResourceGroupInfo Windows.System.AppActivationResult::get_AppResourceGroupInfo()
     @_property
     def app_resource_group_info(self) -> AppResourceGroupInfo: ...
@@ -454,6 +456,8 @@ class AppDiagnosticInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppDiagnosticInfo(winrt.system.Object, metaclass=AppDiagnosticInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppResourceGroupInfoWatcher Windows.System.AppDiagnosticInfo::CreateResourceGroupWatcher()
     def create_resource_group_watcher(self) -> AppResourceGroupInfoWatcher: ...
     # Windows.Foundation.Collections.IVector`1<Windows.System.AppResourceGroupInfo> Windows.System.AppDiagnosticInfo::GetResourceGroups()
@@ -466,6 +470,8 @@ class AppDiagnosticInfo(winrt.system.Object, metaclass=AppDiagnosticInfo_Static)
 
 @typing.final
 class AppDiagnosticInfoWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.AppDiagnosticInfoWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.AppDiagnosticInfoWatcher::Stop()
@@ -492,18 +498,24 @@ class AppDiagnosticInfoWatcher(winrt.system.Object):
 
 @typing.final
 class AppDiagnosticInfoWatcherEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppDiagnosticInfo Windows.System.AppDiagnosticInfoWatcherEventArgs::get_AppDiagnosticInfo()
     @_property
     def app_diagnostic_info(self) -> AppDiagnosticInfo: ...
 
 @typing.final
 class AppExecutionStateChangeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.System.AppExecutionStateChangeResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class AppMemoryReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.System.AppMemoryReport::get_PeakPrivateCommitUsage()
     @_property
     def peak_private_commit_usage(self) -> winrt.system.UInt64: ...
@@ -522,6 +534,8 @@ class AppMemoryReport(winrt.system.Object):
 
 @typing.final
 class AppMemoryUsageLimitChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.System.AppMemoryUsageLimitChangingEventArgs::get_NewLimit()
     @_property
     def new_limit(self) -> winrt.system.UInt64: ...
@@ -531,6 +545,8 @@ class AppMemoryUsageLimitChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupBackgroundTaskReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.AppResourceGroupBackgroundTaskReport::get_EntryPoint()
     @_property
     def entry_point(self) -> str: ...
@@ -546,6 +562,8 @@ class AppResourceGroupBackgroundTaskReport(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.System.AppResourceGroupBackgroundTaskReport> Windows.System.AppResourceGroupInfo::GetBackgroundTaskReports()
     def get_background_task_reports(self) -> _cabc.MutableSequence[AppResourceGroupBackgroundTaskReport]: ...
     # Windows.System.AppResourceGroupMemoryReport Windows.System.AppResourceGroupInfo::GetMemoryReport()
@@ -569,6 +587,8 @@ class AppResourceGroupInfo(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupInfoWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.AppResourceGroupInfoWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.AppResourceGroupInfoWatcher::Stop()
@@ -599,6 +619,8 @@ class AppResourceGroupInfoWatcher(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupInfoWatcherEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.System.AppDiagnosticInfo> Windows.System.AppResourceGroupInfoWatcherEventArgs::get_AppDiagnosticInfos()
     @_property
     def app_diagnostic_infos(self) -> _cabc.Sequence[AppDiagnosticInfo]: ...
@@ -608,6 +630,8 @@ class AppResourceGroupInfoWatcherEventArgs(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.System.AppDiagnosticInfo> Windows.System.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs::get_AppDiagnosticInfos()
     @_property
     def app_diagnostic_infos(self) -> _cabc.Sequence[AppDiagnosticInfo]: ...
@@ -617,6 +641,8 @@ class AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(winrt.system.Obj
 
 @typing.final
 class AppResourceGroupMemoryReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppMemoryUsageLevel Windows.System.AppResourceGroupMemoryReport::get_CommitUsageLevel()
     @_property
     def commit_usage_level(self) -> AppMemoryUsageLevel: ...
@@ -632,6 +658,8 @@ class AppResourceGroupMemoryReport(winrt.system.Object):
 
 @typing.final
 class AppResourceGroupStateReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppResourceGroupEnergyQuotaState Windows.System.AppResourceGroupStateReport::get_EnergyQuotaState()
     @_property
     def energy_quota_state(self) -> AppResourceGroupEnergyQuotaState: ...
@@ -660,6 +688,8 @@ class AppUriHandlerHost(winrt.system.Object):
 
 @typing.final
 class AppUriHandlerRegistration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<Windows.System.AppUriHandlerHost> Windows.System.AppUriHandlerRegistration::GetAllHosts()
     def get_all_hosts(self) -> _cabc.MutableSequence[AppUriHandlerHost]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.System.AppUriHandlerHost>> Windows.System.AppUriHandlerRegistration::GetAppAddedHostsAsync()
@@ -691,6 +721,8 @@ class AppUriHandlerRegistrationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppUriHandlerRegistrationManager(winrt.system.Object, metaclass=AppUriHandlerRegistrationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.AppUriHandlerRegistration Windows.System.AppUriHandlerRegistrationManager::TryGetRegistration(System.String)
     def try_get_registration(self, name: str, /) -> AppUriHandlerRegistration | None: ...
     # Windows.System.User Windows.System.AppUriHandlerRegistrationManager::get_User()
@@ -707,7 +739,8 @@ class DateTimeSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DateTimeSettings(winrt.system.Object, metaclass=DateTimeSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DispatcherQueue_Static(winrt._winrt.Object_Static):
@@ -716,6 +749,8 @@ class DispatcherQueue_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.DispatcherQueueTimer Windows.System.DispatcherQueue::CreateTimer()
     def create_timer(self) -> DispatcherQueueTimer: ...
     @typing.overload
@@ -747,6 +782,8 @@ class DispatcherQueueController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.System.DispatcherQueueController::ShutdownQueueAsync()
     def shutdown_queue_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.System.DispatcherQueue Windows.System.DispatcherQueueController::get_DispatcherQueue()
@@ -755,11 +792,15 @@ class DispatcherQueueController(winrt.system.Object, metaclass=DispatcherQueueCo
 
 @typing.final
 class DispatcherQueueShutdownStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.System.DispatcherQueueShutdownStartingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class DispatcherQueueTimer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.DispatcherQueueTimer::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.DispatcherQueueTimer::Stop()
@@ -832,10 +873,13 @@ class KnownUserProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownUserProperties(winrt.system.Object, metaclass=KnownUserProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LaunchUriResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.System.LaunchUriResult::get_Result()
     @_property
     def result(self) -> windows_foundation_collections.ValueSet: ...
@@ -986,7 +1030,8 @@ class Launcher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Launcher(winrt.system.Object, metaclass=Launcher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LauncherOptions(ILauncherViewOptions, winrt.system.Object):
@@ -1063,6 +1108,8 @@ class LauncherOptions(ILauncherViewOptions, winrt.system.Object):
 
 @typing.final
 class LauncherUIOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Rect> Windows.System.LauncherUIOptions::get_SelectionRect()
     @_property
     def selection_rect(self) -> windows_foundation.Rect | None: ...
@@ -1117,7 +1164,8 @@ class MemoryManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MemoryManager(winrt.system.Object, metaclass=MemoryManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ProcessLauncher_Static(winrt._winrt.Object_Static):
@@ -1134,7 +1182,8 @@ class ProcessLauncher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProcessLauncher(winrt.system.Object, metaclass=ProcessLauncher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ProcessLauncherOptions(winrt.system.Object):
@@ -1166,12 +1215,16 @@ class ProcessLauncherOptions(winrt.system.Object):
 
 @typing.final
 class ProcessLauncherResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.System.ProcessLauncherResult::get_ExitCode()
     @_property
     def exit_code(self) -> winrt.system.UInt32: ...
 
 @typing.final
 class ProcessMemoryReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.System.ProcessMemoryReport::get_PrivateWorkingSetUsage()
     @_property
     def private_working_set_usage(self) -> winrt.system.UInt64: ...
@@ -1181,6 +1234,8 @@ class ProcessMemoryReport(winrt.system.Object):
 
 @typing.final
 class ProtocolForResultsOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.ProtocolForResultsOperation::ReportCompleted(Windows.Foundation.Collections.ValueSet)
     def report_completed(self, data: windows_foundation_collections.ValueSet, /) -> None: ...
 
@@ -1206,7 +1261,8 @@ class RemoteLauncher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RemoteLauncher(winrt.system.Object, metaclass=RemoteLauncher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class RemoteLauncherOptions(winrt.system.Object):
@@ -1242,7 +1298,8 @@ class ShutdownManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ShutdownManager(winrt.system.Object, metaclass=ShutdownManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TimeZoneSettings_Static(winrt._winrt.Object_Static):
@@ -1262,7 +1319,8 @@ class TimeZoneSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TimeZoneSettings(winrt.system.Object, metaclass=TimeZoneSettings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class User_Static(winrt._winrt.Object_Static):
@@ -1294,6 +1352,8 @@ class User_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class User(winrt.system.Object, metaclass=User_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeConsentResult> Windows.System.User::CheckUserAgeConsentGroupAsync(Windows.System.UserAgeConsentGroup)
     def check_user_age_consent_group_async(self, consent_group: UserAgeConsentGroup, /) -> windows_foundation.IAsyncOperation[UserAgeConsentResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference> Windows.System.User::GetPictureAsync(Windows.System.UserPictureSize)
@@ -1314,11 +1374,15 @@ class User(winrt.system.Object, metaclass=User_Static):
 
 @typing.final
 class UserAuthenticationStatusChangeDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.UserAuthenticationStatusChangeDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class UserAuthenticationStatusChangingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.UserAuthenticationStatusChangeDeferral Windows.System.UserAuthenticationStatusChangingEventArgs::GetDeferral()
     def get_deferral(self) -> UserAuthenticationStatusChangeDeferral: ...
     # Windows.System.UserAuthenticationStatus Windows.System.UserAuthenticationStatusChangingEventArgs::get_CurrentStatus()
@@ -1333,6 +1397,8 @@ class UserAuthenticationStatusChangingEventArgs(winrt.system.Object):
 
 @typing.final
 class UserChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.User Windows.System.UserChangedEventArgs::get_User()
     @_property
     def user(self) -> User: ...
@@ -1351,10 +1417,13 @@ class UserDeviceAssociation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserDeviceAssociation(winrt.system.Object, metaclass=UserDeviceAssociation_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UserDeviceAssociationChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.System.UserDeviceAssociationChangedEventArgs::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1390,6 +1459,8 @@ class UserPicker(winrt.system.Object, metaclass=UserPicker_Static):
 
 @typing.final
 class UserWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.System.UserWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.System.UserWatcher::Stop()

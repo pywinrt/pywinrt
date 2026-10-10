@@ -319,6 +319,8 @@ class ColorKeyFrame_Static(windows_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ColorKeyFrame(windows_ui_xaml.DependencyObject, metaclass=ColorKeyFrame_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Windows.UI.Xaml.Media.Animation.ColorKeyFrame::get_Value()
     @_property
     def value(self) -> windows_ui.Color: ...
@@ -405,6 +407,8 @@ class CommonNavigationTransitionInfo(NavigationTransitionInfo, metaclass=CommonN
 
 @typing.final
 class ConnectedAnimation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Media.Animation.ConnectedAnimation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.UI.Xaml.Media.Animation.ConnectedAnimation::SetAnimationComponent(Windows.UI.Xaml.Media.Animation.ConnectedAnimationComponent,Windows.UI.Composition.ICompositionAnimationBase)
@@ -441,6 +445,8 @@ class ConnectedAnimationConfiguration_Static(winrt._winrt.Object_Static):
 
 class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAnimationConfiguration_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ConnectedAnimationService_Static(winrt._winrt.Object_Static):
@@ -449,6 +455,8 @@ class ConnectedAnimationService_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ConnectedAnimationService(winrt.system.Object, metaclass=ConnectedAnimationService_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Animation.ConnectedAnimation Windows.UI.Xaml.Media.Animation.ConnectedAnimationService::GetAnimation(System.String)
     def get_animation(self, key: str, /) -> ConnectedAnimation: ...
     # Windows.UI.Xaml.Media.Animation.ConnectedAnimation Windows.UI.Xaml.Media.Animation.ConnectedAnimationService::PrepareToAnimate(System.String,Windows.UI.Xaml.UIElement)
@@ -636,6 +644,8 @@ class DoubleKeyFrame_Static(windows_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class DoubleKeyFrame(windows_ui_xaml.DependencyObject, metaclass=DoubleKeyFrame_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Media.Animation.DoubleKeyFrame::get_Value()
     @_property
     def value(self) -> winrt.system.Double: ...
@@ -892,6 +902,8 @@ class EasingFunctionBase_Static(windows_ui_xaml.DependencyObject_Static):
     def easing_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class EasingFunctionBase(windows_ui_xaml.DependencyObject, metaclass=EasingFunctionBase_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Double Windows.UI.Xaml.Media.Animation.EasingFunctionBase::Ease(System.Double)
     def ease(self, normalized_time: winrt.system.Double, /) -> winrt.system.Double: ...
@@ -1092,7 +1104,8 @@ class KeyTimeHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyTimeHelper(winrt.system.Object, metaclass=KeyTimeHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class LinearColorKeyFrame(ColorKeyFrame):
@@ -1126,6 +1139,8 @@ class NavigationTransitionInfo_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class NavigationTransitionInfo(windows_ui_xaml.DependencyObject, metaclass=NavigationTransitionInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo::GetNavigationStateCore()
     def _get_navigation_state_core(self) -> str: ...
     # System.Void Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo::SetNavigationStateCore(System.String)
@@ -1161,6 +1176,8 @@ class ObjectKeyFrame_Static(windows_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ObjectKeyFrame(windows_ui_xaml.DependencyObject, metaclass=ObjectKeyFrame_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.UI.Xaml.Media.Animation.ObjectKeyFrame::get_Value()
     @_property
     def value(self) -> winrt.system.Object: ...
@@ -1320,6 +1337,8 @@ class PointKeyFrame_Static(windows_ui_xaml.DependencyObject_Static):
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class PointKeyFrame(windows_ui_xaml.DependencyObject, metaclass=PointKeyFrame_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Xaml.Media.Animation.PointKeyFrame::get_Value()
     @_property
     def value(self) -> windows_foundation.Point: ...
@@ -1538,7 +1557,8 @@ class RepeatBehaviorHelper_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RepeatBehaviorHelper(winrt.system.Object, metaclass=RepeatBehaviorHelper_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class RepositionThemeAnimation_Static(Timeline_Static):
@@ -2020,6 +2040,8 @@ class Timeline_Static(windows_ui_xaml.DependencyObject_Static):
     def speed_ratio_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Timeline(windows_ui_xaml.DependencyObject, metaclass=Timeline_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Media.Animation.Timeline::add_Completed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_completed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -2119,7 +2141,8 @@ class Transition_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Transition(windows_ui_xaml.DependencyObject, metaclass=Transition_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TransitionCollection(_cabc.MutableSequence[Transition], winrt.system.Object):

@@ -92,7 +92,8 @@ class BackgroundEnergyManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
 class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ForegroundEnergyManager_Static(winrt._winrt.Object_Static):
@@ -136,7 +137,8 @@ class ForegroundEnergyManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
 class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PowerManager_Static(winrt._winrt.Object_Static):
@@ -188,5 +190,6 @@ class PowerManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PowerManager(winrt.system.Object, metaclass=PowerManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

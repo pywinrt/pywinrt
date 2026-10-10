@@ -52,6 +52,8 @@ class CustomDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.UInt32> Windows.Devices.Custom.CustomDevice::SendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def send_io_control_async(self, io_control_code: IIOControlCode, input_buffer: winrt.system.Buffer, output_buffer: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[winrt.system.UInt32]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.Custom.CustomDevice::TrySendIOControlAsync(Windows.Devices.Custom.IIOControlCode,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
@@ -90,7 +92,8 @@ class KnownDeviceTypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IIOControlCode: ...

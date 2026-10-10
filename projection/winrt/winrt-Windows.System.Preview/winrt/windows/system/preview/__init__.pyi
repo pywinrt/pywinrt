@@ -36,6 +36,8 @@ class TwoPanelHingedDevicePosturePreview_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanelHingedDevicePosturePreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading> Windows.System.Preview.TwoPanelHingedDevicePosturePreview::GetCurrentPostureAsync()
     @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_current_posture_async(self) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreviewReading]: ...
@@ -49,6 +51,8 @@ class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanel
 @typing.final
 @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Preview.HingeState Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading::get_HingeState()
     @_property
     @deprecated("TwoPanelHingedDevicePosturePreviewReading is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -77,6 +81,8 @@ class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
 @typing.final
 @deprecated("TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs::get_Reading()
     @_property
     @deprecated("TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
