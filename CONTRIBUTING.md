@@ -99,25 +99,34 @@ If the pythoncapi compat headers are updated, run:
 
 In a Visual Studio command prompt, run:
 
-    cmake -S . -B _build/test-projection -G Ninja
-    cmake --build _build/test-projection
-    cmake --install _build/test-projection --prefix _install/test
+    cmake -S . -B _build/projection -G Ninja -DPython3_EXECUTABLE=C:\path\to\python_d.exe
+    cmake --build _build/projection
+    cmake --install _build/projection --prefix _install/projection
 
-Note: if using MINGW, add the following to the first command:
+Name the interpreter the tests will run under, as CI does: without
+`Python3_EXECUTABLE`, CMake builds against the first Python it finds, which may
+be another version, or one installed without the debug libraries that a debug
+build links against. `python_d.exe` comes from the installer on python.org
+with "Download debug binaries" selected (Modify adds them to an existing
+install); the Python install manager's runtimes have no debug build. `py -0p`,
+or `py list` with the install manager, lists the installed Pythons and their
+paths.
+
+Note: if using MINGW, put the following in place of `-DPython3_EXECUTABLE`
+in the first command:
 
     -DPython3_ROOT_DIR=${MINGW_PREFIX} -DCMAKE_BUILD_TYPE=Release
 
 Once the projection has been built (see above), tests can be run. The default
 build uses the debug configuration, so that means we _must_ use `python_d.exe`
-instead of `python.exe`. You can use `py -0p` to find the Python installation
-path if Python is not in `PATH` already.
+instead of `python.exe`.
 
-    $env:PYTHONPATH="_install/test"
+    $env:PYTHONPATH="_install/projection"
     python_d.exe -X dev -m unittest
 
 If using MSYS2 shell for MINGW, this can be simplified to:
 
-    PYTHONPATH=_install/test python -X dev -m unittest
+    PYTHONPATH=_install/projection python -X dev -m unittest
 
 The free-threaded build of Python needs a tree of its own, because its
 extension modules are built against a different ABI. Adding the following to
@@ -135,7 +144,7 @@ The rules and the files they apply to are in `ruff.toml` and `mypy.ini`, so an
 editor checks the same thing as the `lint` job in `.github/workflows/lint.yaml`
 does:
 
-    pipx run ruff check
+    uvx ruff check
 
 mypy reads the packages from one directory, `_typing`, and they are generated
 into several, so `scripts/merge-packages.py` copies them together as they would
@@ -143,7 +152,7 @@ be installed. Every CMake build runs it, and so does the lint job; to refresh
 `_typing` without a build, run it yourself:
 
     py .\scripts\merge-packages.py
-    pipx run mypy
+    uvx mypy
 
 The mypy extension of VS Code bundles a mypy and a `typing_extensions` of its
 own, which can be too old for the stubs: as of October 2026, version 2026.6.0
@@ -169,8 +178,8 @@ what the stubs import from it:
     _install\pyright-venv\Scripts\python -m pip install -r samples\requirements-dev.txt hatchling setuptools
     Set-Content _install\pyright-venv\Lib\site-packages\_typing.pth "$PWD\_typing"
     _install\pyright-venv\Scripts\python -c "import sys; assert r'$PWD\_typing' in sys.path, sys.path"
-    pipx run pyright --pythonpath _install\pyright-venv\Scripts\python.exe
-    pipx run pyright -p pyrightconfig.lint.json --pythonpath _install\pyright-venv\Scripts\python.exe
+    uvx pyright --pythonpath _install\pyright-venv\Scripts\python.exe
+    uvx pyright -p pyrightconfig.lint.json --pythonpath _install\pyright-venv\Scripts\python.exe
 
 That environment is for analysis only: with `_typing` on its path, `import
 winrt` finds stubs and pure-Python modules with no extension module behind
