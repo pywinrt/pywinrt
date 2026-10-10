@@ -5448,6 +5448,97 @@
         ]
       },
       {
+        "name": "ProtectedMembers",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.ProtectedMembers::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.ProtectedMembers::.ctor(System.Int32)",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "initial",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Int32 TestComponent.ProtectedMembers::ProtectedMethod()",
+            "name": "ProtectedMethod",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.ProtectedMembers::ReadOverridableValue()",
+            "name": "ReadOverridableValue",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.ProtectedMembers::get_OverridableValue()",
+            "name": "get_OverridableValue",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 TestComponent.ProtectedMembers::get_ProtectedValue()",
+            "name": "get_ProtectedValue",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.ProtectedMembers::put_ProtectedValue(System.Int32)",
+            "name": "put_ProtectedValue",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int32"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "name": "TestHandler",
         "methods": [
           {
