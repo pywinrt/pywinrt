@@ -17,11 +17,13 @@ import time
 import unittest
 import uuid
 import weakref
+from collections.abc import AsyncIterator
 from typing import Any
 
 import test_winrt.testcomponent as tc
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+from winrt.system import Object
 from winrt.system.hresult import PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
 
 from ._util import catch_unraisable
@@ -169,6 +171,43 @@ class TestDelegate(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "takes a callable"):
             wf.Deferral(42)  # type: ignore
 
+    def test_async_def_function_is_refused(self) -> None:
+        # Calling it would only make a coroutine, which WinRT never awaits, so
+        # its body would never run.
+        async def handler() -> None:
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"handler\(\), an async def function"):
+            wf.Deferral(handler)
+
+    def test_async_def_method_is_refused(self) -> None:
+        class Saver:
+            async def save(self) -> None:
+                pass
+
+        with self.assertRaisesRegex(TypeError, r"Saver\.save\(\), an async def"):
+            wf.Deferral(Saver().save)
+
+    def test_async_generator_function_is_refused(self) -> None:
+        async def handler() -> AsyncIterator[None]:
+            yield
+
+        with self.assertRaisesRegex(TypeError, "an async def function"):
+            wf.Deferral(handler)
+
+    def test_async_def_completed_handler_is_refused(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        async def handler(sender: wf.IAsyncAction, status: wf.AsyncStatus) -> None:
+            pass
+
+        with self.assertRaisesRegex(TypeError, "an async def function"):
+            op.completed = handler
+
+        self.assertFalse(source.has_completed_handler)
+        source.complete()
+
     def test_a_delegate_read_back_is_a_wrapper(self) -> None:
         # What WinRT hands back is the delegate it holds, which calls the
         # callable that was set but is not that callable.
@@ -231,6 +270,22 @@ class TestEvent(unittest.TestCase):
         m.remove_map_changed(token)
 
         self.assertEqual(seen, ["hello"])
+
+    def test_async_def_handler_is_refused(self) -> None:
+        # Refused where it is added, so the traceback points at that line
+        # rather than at nothing when the event is raised.
+        calls: list[object] = []
+
+        async def handler(sender: Object, args: Object) -> None:
+            calls.append(sender)
+
+        obj = tc.Override()
+
+        with self.assertRaisesRegex(TypeError, "an async def function"):
+            obj.add_overridable_called(handler)
+
+        obj.call_overridable()
+        self.assertEqual(calls, [])
 
     def test_handler_is_agile(self) -> None:
         """
