@@ -41,15 +41,16 @@ namespace
     constexpr IID IID_IGraphicsCaptureItem{
         0x79C3F95B, 0x31F7, 0x4EC2, {0xA4, 0x64, 0x63, 0x2E, 0xF5, 0xD3, 0x07, 0x60}};
 
-    /// The interop factory of GraphicsCaptureItem.
-    HRESULT get_interop_factory(IGraphicsCaptureItemInterop** factory) noexcept
+    PyObject* create_for_monitor(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        return interop::get_activation_factory(
-            L"Windows.Graphics.Capture.GraphicsCaptureItem", factory);
-    }
+        PyObject* factory_capsule;
+        PyObject* monitor_obj;
 
-    PyObject* create_for_monitor(PyObject* /*unused*/, PyObject* monitor_obj) noexcept
-    {
+        if (!PyArg_ParseTuple(args, "OO", &factory_capsule, &monitor_obj))
+        {
+            return nullptr;
+        }
+
         auto const hmonitor = PyLong_AsVoidPtr(monitor_obj);
         if (!hmonitor && PyErr_Occurred())
         {
@@ -57,16 +58,14 @@ namespace
         }
 
         IGraphicsCaptureItemInterop* factory{};
-
-        auto hr = get_interop_factory(&factory);
-        if (FAILED(hr))
+        if (!interop::query_capsule(factory_capsule, &factory))
         {
-            return interop::set_hresult_error(hr);
+            return nullptr;
         }
 
         IUnknown* item{};
 
-        hr = factory->CreateForMonitor(
+        auto const hr = factory->CreateForMonitor(
             static_cast<HMONITOR>(hmonitor),
             IID_IGraphicsCaptureItem,
             reinterpret_cast<void**>(&item));
@@ -79,8 +78,16 @@ namespace
         return interop::new_interface_capsule(item);
     }
 
-    PyObject* create_for_window(PyObject* /*unused*/, PyObject* window_obj) noexcept
+    PyObject* create_for_window(PyObject* /*unused*/, PyObject* args) noexcept
     {
+        PyObject* factory_capsule;
+        PyObject* window_obj;
+
+        if (!PyArg_ParseTuple(args, "OO", &factory_capsule, &window_obj))
+        {
+            return nullptr;
+        }
+
         auto const hwnd = PyLong_AsVoidPtr(window_obj);
         if (!hwnd && PyErr_Occurred())
         {
@@ -89,16 +96,14 @@ namespace
 
         // https://github.com/microsoft/Windows.UI.Composition-Win32-Samples/blob/a59e7586c0bd1a967e1e25f6ca0363e20151afe5/cpp/ScreenCaptureforHWND/ScreenCaptureforHWND/capture.interop.h#L11
         IGraphicsCaptureItemInterop* factory{};
-
-        auto hr = get_interop_factory(&factory);
-        if (FAILED(hr))
+        if (!interop::query_capsule(factory_capsule, &factory))
         {
-            return interop::set_hresult_error(hr);
+            return nullptr;
         }
 
         IUnknown* item{};
 
-        hr = factory->CreateForWindow(
+        auto const hr = factory->CreateForWindow(
             static_cast<HWND>(hwnd),
             IID_IGraphicsCaptureItem,
             reinterpret_cast<void**>(&item));
@@ -112,8 +117,8 @@ namespace
     }
 
     PyMethodDef module_methods[]{
-        {"create_for_monitor", create_for_monitor, METH_O, nullptr},
-        {"create_for_window", create_for_window, METH_O, nullptr},
+        {"create_for_monitor", create_for_monitor, METH_VARARGS, nullptr},
+        {"create_for_window", create_for_window, METH_VARARGS, nullptr},
         {}};
 
     PyDoc_STRVAR(

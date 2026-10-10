@@ -22,8 +22,6 @@
 #include <windows.h>
 
 #include <oleauto.h>
-#include <roapi.h>
-#include <winstring.h>
 
 #include <cstddef>
 
@@ -160,24 +158,6 @@ namespace interop
         }
 
         return true;
-    }
-
-    /// The activation factory of the runtime class @p class_name, as its @p I
-    /// interface.
-    template<typename I, std::size_t N>
-    HRESULT get_activation_factory(wchar_t const (&class_name)[N], I** factory) noexcept
-    {
-        HSTRING_HEADER header;
-        HSTRING name;
-
-        auto const hr = WindowsCreateStringReference(class_name, N - 1, &header, &name);
-        if (FAILED(hr))
-        {
-            return hr;
-        }
-
-        return RoGetActivationFactory(
-            name, __uuidof(I), reinterpret_cast<void**>(factory));
     }
 
     /// The slots of an interop module that has nothing to set up when it is
