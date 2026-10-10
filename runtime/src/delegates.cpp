@@ -168,6 +168,35 @@ namespace py::interp
             return call_python(
                 *entry.member, *entry.overload, callable, python_op::invoke, args);
         }
+
+        /**
+         * The async def function that @p callable is, or is a method of, or
+         * @c nullptr if it is anything else.
+         *
+         * Calling one makes a coroutine or an async generator without running
+         * any of its body, and WinRT never awaits what it gets back.
+         */
+        PyObject* async_function_of(PyObject* callable) noexcept
+        {
+            if (PyMethod_Check(callable))
+            {
+                callable = PyMethod_GET_FUNCTION(callable);
+            }
+
+            if (!PyFunction_Check(callable))
+            {
+                return nullptr;
+            }
+
+            auto const code
+                = reinterpret_cast<PyCodeObject*>(PyFunction_GET_CODE(callable));
+            if (!(code->co_flags & (CO_COROUTINE | CO_ASYNC_GENERATOR)))
+            {
+                return nullptr;
+            }
+
+            return callable;
+        }
     } // namespace
 
     /**
@@ -285,6 +314,18 @@ namespace py::interp
                 "'%s' takes a callable, not a '%s'",
                 info.winrt_name,
                 Py_TYPE(callable)->tp_name);
+            return nullptr;
+        }
+
+        if (auto const function = async_function_of(callable))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' cannot take %U(), an async def function, because WinRT "
+                "does not await what it returns; pass a plain function that "
+                "hands the work to the event loop",
+                info.winrt_name,
+                reinterpret_cast<PyFunctionObject*>(function)->func_qualname);
             return nullptr;
         }
 
