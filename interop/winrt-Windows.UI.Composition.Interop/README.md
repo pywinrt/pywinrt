@@ -2,9 +2,12 @@
 
 # winrt-Windows.UI.Composition.Interop
 
-Windows Runtime (WinRT) APIs for the `Windows.UI.Composition.Interop` namespace.
+Creates a `DesktopWindowTarget` that shows a composition visual tree in a window.
 
 This package provides the `winrt.windows.ui.composition.interop` module.
 
-The WinRT APIs in it are those of version 10.0.28000.2705 of the
-`Microsoft.Windows.SDK.CPP` NuGet package.
+```
+pip install winrt-Windows.UI.Composition.Interop
+```
+
+installs it with `winrt-Windows.UI.Composition` and `winrt-Windows.UI.Composition.Desktop`.

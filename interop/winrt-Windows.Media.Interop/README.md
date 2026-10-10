@@ -2,9 +2,12 @@
 
 # winrt-Windows.Media.Interop
 
-Windows Runtime (WinRT) APIs for the `Windows.Media.Interop` namespace.
+Gets the `SystemMediaTransportControls` of a window, from its handle.
 
 This package provides the `winrt.windows.media.interop` module.
 
-The WinRT APIs in it are those of version 10.0.28000.2705 of the
-`Microsoft.Windows.SDK.CPP` NuGet package.
+```
+pip install winrt-Windows.Media.Interop
+```
+
+installs it with `winrt-Windows.Media`.
