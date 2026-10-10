@@ -162,11 +162,12 @@ class TestDelegate(unittest.TestCase):
         tests = tc.TestRunner.make_tests()
 
         with (
-            self.assertRaises(OSError),
+            self.assertRaises(OSError) as ctx,
             catch_unraisable() as exceptions,
         ):
             tests.param7_call(lambda value: value)  # type: ignore[arg-type,return-value]
 
+        self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, TypeError)
 
     def test_not_callable(self) -> None:
@@ -260,6 +261,31 @@ class TestEvent(unittest.TestCase):
 
         obj.call_overridable()
         self.assertEqual(len(calls), 1, "the handler was not removed")
+
+    def test_remove_does_not_wait_for_a_running_handler(self) -> None:
+        entered = threading.Event()
+        release = threading.Event()
+        finished = threading.Event()
+
+        def handler(sender: Object, args: Object) -> None:
+            entered.set()
+            release.wait(5)
+            finished.set()
+
+        obj = tc.Override()
+        token = obj.add_overridable_called(handler)
+        worker = threading.Thread(target=obj.call_overridable)
+        worker.start()
+
+        try:
+            self.assertTrue(entered.wait(5))
+            obj.remove_overridable_called(token)
+            self.assertFalse(finished.is_set(), "remove waited for the handler")
+        finally:
+            release.set()
+            worker.join()
+
+        self.assertTrue(finished.is_set())
 
     def test_parameterized_handler(self) -> None:
         # MapChangedEventHandler<K, V> is an instance of a parameterized
