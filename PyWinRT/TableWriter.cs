@@ -79,7 +79,6 @@ enum TableGroupFlags : uint
 {
     KindMask = 0x7,
     Static = 1 << 3,
-    Deprecated = 1 << 4,
 }
 
 enum TableMemberKind : uint
@@ -841,11 +840,6 @@ sealed class TableWriter
                 group.Members.Add(MakeMember(type, overload, TableMemberKind.Method, context));
             }
 
-            if (group.Members.All(m => m.Flags.HasFlag(TableMemberFlags.Deprecated)))
-            {
-                group.Flags |= TableGroupFlags.Deprecated;
-            }
-
             record.Groups.Add(group);
         }
     }
@@ -1571,7 +1565,6 @@ sealed class TableWriter
     private static readonly (uint Flag, string Name)[] groupFlagNames =
     [
         ((uint)TableGroupFlags.Static, "static"),
-        ((uint)TableGroupFlags.Deprecated, "deprecated"),
     ];
 
     private static readonly string[] memberKindNames =
