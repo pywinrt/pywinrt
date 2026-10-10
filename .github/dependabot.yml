@@ -13,3 +13,18 @@ updates:
       actions:
         patterns:
           - "*"
+  # The build tools that the release workflows and Read the Docs install are
+  # pinned too, so that a release is built with what was tested, and a monthly
+  # pull request of their own unfreezes them. Only these two directories are
+  # read, so the requirements.txt that each package's packaging is generated
+  # with is left to scripts/generate-pyproject.py.
+  - package-ecosystem: pip
+    directories:
+      - /
+      - /docs
+    schedule:
+      interval: monthly
+    groups:
+      build-tools:
+        patterns:
+          - "*"
