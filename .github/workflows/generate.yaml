@@ -61,5 +61,12 @@ jobs:
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py
-      # fail if there are changes
+      # fail if a generator changed a committed file
       - run: git diff --exit-code
+      # or wrote one that is not committed, which git diff does not see
+      - run: |
+          $untracked = git ls-files --others --exclude-standard
+          if ($untracked) {
+            $untracked
+            throw "the generators wrote files that are not committed"
+          }
