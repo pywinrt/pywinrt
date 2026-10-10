@@ -264,16 +264,23 @@ namespace py::interp
          * Whether @p arg of @p member refuses None, which WinRT would be given as a
          * null delegate.
          *
-         * The only delegates an async operation takes are its Completed and
-         * Progress handlers, and the operations C++/WinRT implements with a
-         * coroutine dereference a null one, which takes the process down. None
-         * means nothing there anyway, since a handler can be set only once.
+         * A null event handler means nothing, since there is nothing to call,
+         * and neither does a null Completed or Progress handler of an async
+         * operation, which can be set only once. C++/WinRT dereferences a null
+         * one of either, which takes the process down: its events and the
+         * operations it implements with a coroutine pass the handler to
+         * make_agile_delegate().
          */
         bool refuses_none(member_desc const& member, arg_desc const& arg) noexcept
         {
             if (arg.code != table::type_code::delegate)
             {
                 return false;
+            }
+
+            if (member.kind == table::group_kind::event)
+            {
+                return true;
             }
 
             return member.declaring->protocol.completed != nullptr;

@@ -315,6 +315,13 @@ class TestEvent(unittest.TestCase):
         obj.call_overridable()
         self.assertEqual(calls, [])
 
+    def test_none_handler_is_refused(self) -> None:
+        # C++/WinRT's events dereference a null handler as it is added.
+        obj = tc.Override()
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            obj.add_overridable_called(None)  # type: ignore[arg-type]
+
     def test_handler_is_agile(self) -> None:
         """
         An upper bound on what one raise costs, measured against raising the
