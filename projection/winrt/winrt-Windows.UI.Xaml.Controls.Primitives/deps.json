@@ -17,6 +17,7 @@
         "winrt-Windows.UI",
         "winrt-Windows.UI.Xaml",
         "winrt-Windows.UI.Xaml.Controls",
+        "winrt-Windows.UI.Xaml.Data",
         "winrt-Windows.UI.Xaml.Input",
         "winrt-Windows.UI.Xaml.Interop",
         "winrt-Windows.UI.Xaml.Media",
