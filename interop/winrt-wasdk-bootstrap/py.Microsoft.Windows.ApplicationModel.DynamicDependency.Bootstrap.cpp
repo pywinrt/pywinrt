@@ -2,6 +2,9 @@
 
 #include <windows.h>
 
+// MddBootstrap.h calls std::abort() without including <cstdlib>.
+#include <cstdlib>
+
 #include <WindowsAppSDK-VersionInfo.h>
 #include <MddBootstrap.h>
 
