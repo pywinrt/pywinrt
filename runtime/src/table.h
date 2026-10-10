@@ -220,6 +220,7 @@ namespace py::table
         inline constexpr uint32_t is_return_value = 1 << 3;
         inline constexpr uint32_t is_implicit = 1 << 4;
         inline constexpr uint32_t is_by_reference = 1 << 5;
+        inline constexpr uint32_t is_fill_buffer = 1 << 6;
     } // namespace param_flags
 
     /**
@@ -278,6 +279,7 @@ namespace py::table
         bool is_return_value() const;
         bool is_implicit() const;
         bool is_by_reference() const;
+        bool is_fill_buffer() const;
         type_code code() const;
         uint32_t type() const;
         std::string_view name() const;

@@ -1,8 +1,10 @@
+import datetime
 import sys
 import unittest
 
 import winrt.windows.foundation as wf
 import winrt.windows.graphics.imaging as wgi
+import winrt.windows.media.core as wmc
 import winrt.windows.storage.streams as wss
 
 from ._util import async_test
@@ -57,12 +59,75 @@ class TestBuffer(unittest.TestCase):
 
         self.assertEqual(len(read), 5)
 
+    @async_test
+    async def test_buffer_winrt_fills_refuses_read_only(self) -> None:
+        stream = wss.InMemoryRandomAccessStream()
+        await stream.write_async(b"hi")
+        stream.seek(0)
+
+        target = bytes(5)
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^read_async\(\) argument 1 must be read-write bytes-like object, "
+            r"not bytes$",
+        ):
+            await stream.read_async(target, 5, wss.InputStreamOptions.NONE)
+
+        with self.assertRaises(TypeError):
+            await stream.read_async(
+                memoryview(bytearray(5)).toreadonly(), 5, wss.InputStreamOptions.NONE
+            )
+
+        self.assertEqual(target, bytes(5))
+
+    def test_read_only_buffer_refuses_a_length(self) -> None:
+        # MediaStreamSample hands back the IBuffer it was made from, which is
+        # how a writer that no rule names would find it.
+        sample = wmc.MediaStreamSample.create_from_buffer(b"abc", datetime.timedelta())
+        buffer = sample.buffer
+        assert isinstance(buffer, wss.IBuffer)
+
+        with self.assertRaises(PermissionError):
+            buffer.length = 1
+
+        self.assertEqual(len(buffer), 3)
+
+        sample = wmc.MediaStreamSample.create_from_buffer(
+            bytearray(b"abc"), datetime.timedelta()
+        )
+        buffer = sample.buffer
+        assert isinstance(buffer, wss.IBuffer)
+
+        buffer.length = 1
+        self.assertEqual(bytes(buffer), b"a")
+
     def test_memory_buffer(self) -> None:
-        data = b"ABCDE"
+        data = bytearray(b"ABCDE")
 
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
         with self.reference_of(mb) as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
+
+            mv[0] = ord("a")
+
+        self.assertEqual(data, b"aBCDE")
+
+    def test_memory_buffer_over_ibuffer_refuses_read_only(self) -> None:
+        # the memory buffer would let anyone write into the bytes
+        target = b"ABCDE"
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^create_memory_buffer_over_ibuffer\(\) argument 1 must be read-write "
+            r"bytes-like object, not bytes$",
+        ):
+            wss.Buffer.create_memory_buffer_over_ibuffer(target)
+
+        with self.assertRaises(TypeError):
+            wss.Buffer.create_memory_buffer_over_ibuffer(
+                memoryview(bytearray(5)).toreadonly()
+            )
 
     def test_len(self) -> None:
         buf = wss.Buffer(16)
@@ -75,7 +140,7 @@ class TestBuffer(unittest.TestCase):
             self.assertEqual(len(mv), len(buf))
 
     def test_memory_buffer_len(self) -> None:
-        mb = wss.Buffer.create_memory_buffer_over_ibuffer(b"ABCDE")
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(bytearray(b"ABCDE"))
         with self.reference_of(mb) as mbr:
             self.assertEqual(len(mbr), mbr.capacity)
 
@@ -83,7 +148,7 @@ class TestBuffer(unittest.TestCase):
                 self.assertEqual(len(mv), len(mbr))
 
     def test_memory_buffer_len_closed(self) -> None:
-        mb = wss.Buffer.create_memory_buffer_over_ibuffer(b"ABCDE")
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(bytearray(b"ABCDE"))
         mbr = self.reference_of(mb)
         mbr.close()
 

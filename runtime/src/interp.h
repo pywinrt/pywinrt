@@ -110,6 +110,9 @@ namespace py::interp
         /// The ABI passes a pointer to the value rather than the value, which
         /// is what metadata spells @c ref on an input.
         bool by_reference;
+        /// WinRT writes into the buffer passed as this IBuffer, so a Python
+        /// buffer passed to it has to be writable.
+        bool fill_buffer;
         /// Where the value - or, for an output or a by-reference input, the
         /// pointer to it - goes in the buffer the trampoline reads. An array
         /// is two arguments, and this is the first of them: the count.

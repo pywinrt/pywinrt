@@ -25,3 +25,4 @@ repository](../CHANGELOG.md).
 - Fixed `_measure_override()` and the like never called on a `Grid` subclass.
 - Fixed iterating over a WinRT map, or its keys or items, leaking memory.
 - Fixed WinRT failing to set, or losing, the length of a Python buffer it fills.
+- Fixed WinRT writing into `bytes`; a buffer WinRT fills must be writable.

@@ -70,12 +70,14 @@ namespace py::interp
      * is what a Python object that is no WinRT object at all is measured
      * against: a list is an IVector<T> and a dict is an IMap<K, V>, and only
      * the type record says which of those the caller is asking for.
+     * @param fill WinRT writes into the IBuffer @p obj is passed as, so a
+     * Python buffer has to be writable.
      * @returns A pointer the caller owns a reference to, or @c nullptr when
      * @p obj is None.
      * @throws python_exception if @p obj is not a wrapped WinRT object or does
      * not implement @p iid.
      */
-    void* unwrap_abi(PyObject* obj, void const* iid, type_entry* info)
+    void* unwrap_abi(PyObject* obj, void const* iid, type_entry* info, bool fill)
     {
         throw_if_pyobj_null(obj);
 
@@ -118,7 +120,7 @@ namespace py::interp
                 // IBuffer, which is what DataWriter.write_buffer(b"...")
                 // passes. The IBuffer holds the buffer for as long as WinRT
                 // holds the IBuffer.
-                auto buffer = convert_to_ibuffer(obj);
+                auto buffer = convert_to_ibuffer(obj, fill);
                 return winrt::detach_abi(buffer);
             }
 
