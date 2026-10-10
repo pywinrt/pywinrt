@@ -4,6 +4,31 @@ using Mono.Cecil;
 
 static class ObjectWriterExtensions
 {
+    /// <summary>
+    /// Writes the __new__ of a class with no public constructor, which the
+    /// runtime refuses to create, as it refuses a Python class derived from one.
+    /// </summary>
+    /// <remarks>
+    /// Without it, the class would have a callable __new__ from object or from
+    /// its base class, though a WinRT constructor is not inherited. A parameter
+    /// that no argument can be given for is what both mypy and pyright refuse a
+    /// call for: neither refuses the call for a NoReturn return, and mypy does
+    /// not refuse it for typeshed's <c>__new__: None</c>. Self rather than
+    /// NoReturn keeps the code after a refused call checked. The docstring is
+    /// what an editor shows for the call.
+    /// </remarks>
+    static void WriteNoConstructor(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine("def __new__(cls, _: typing.Never, /) -> typing.Self:");
+        w.Indent++;
+        w.WriteLine(
+            type.IsStatic
+                ? "\"\"\"A class of static members only, so there is nothing to create.\"\"\""
+                : "\"\"\"WinRT gives this class no constructor; an instance comes from a method or property that returns one.\"\"\""
+        );
+        w.Indent--;
+    }
+
     public static void WritePythonClassTyping(
         this IndentedTextWriter w,
         ProjectedType type,
@@ -280,7 +305,7 @@ static class ObjectWriterExtensions
 
         if (type.IsStatic)
         {
-            w.WriteLine("...");
+            w.WriteNoConstructor(type);
             w.Indent--;
             w.WriteBlankLine();
             return;
@@ -437,6 +462,12 @@ static class ObjectWriterExtensions
             }
 
             w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
+            didWriteLine = true;
+        }
+
+        if (type.Constructors.Count == 0)
+        {
+            w.WriteNoConstructor(type);
             didWriteLine = true;
         }
 
