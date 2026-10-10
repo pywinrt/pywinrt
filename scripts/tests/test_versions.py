@@ -354,6 +354,40 @@ class FamilyReleasedInterop(unittest.TestCase):
         self.enterContext(mock.patch.object(versions, "INTEROP_PATH", root))
 
 
+class WindowsSdkMetadataPath(unittest.TestCase):
+    """
+    Where the Windows SDK .winmd files are in the unpacked NuGet package,
+    which follows the pin.
+    """
+
+    def setUp(self) -> None:
+        self.tools = Path(self.enterContext(tempfile.TemporaryDirectory()))
+        self.enterContext(mock.patch.object(versions, "TOOLS_PATH", self.tools))
+        self.enterContext(
+            mock.patch.object(
+                versions,
+                "nuget_package_versions",
+                lambda: {"Microsoft.Windows.SDK.CPP": "10.0.28000.2705"},
+            )
+        )
+
+    def test_the_directory_is_the_sdk_version_with_the_last_number_0(self) -> None:
+        expected = (
+            self.tools
+            / "Microsoft.Windows.SDK.CPP.10.0.28000.2705"
+            / "c"
+            / "References"
+            / "10.0.28000.0"
+        )
+        expected.mkdir(parents=True)
+
+        self.assertEqual(versions.windows_sdk_metadata_path(), expected)
+
+    def test_a_package_without_it_is_refused(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "fetch-tools"):
+            versions.windows_sdk_metadata_path()
+
+
 class InteropRuntimeRequirement(unittest.TestCase):
     """
     What an interop package requires of the runtime: the newest runtime that a

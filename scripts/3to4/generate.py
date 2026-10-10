@@ -48,6 +48,7 @@ REPO_PATH = SCRIPT_PATH.parent.parent
 sys.path.insert(0, str(REPO_PATH / "scripts"))
 
 import app_sdk  # type: ignore[import-not-found]  # noqa: E402
+import versions  # type: ignore[import-not-found]  # noqa: E402
 
 V3_TAG = "v3.2.1"
 
@@ -63,9 +64,7 @@ def tool_path(package: str) -> Path:
     return REPO_PATH / "_tools" / f"{package}.{TOOLS[package]}"
 
 
-WINDOWS_SDK = (
-    tool_path("Microsoft.Windows.SDK.CPP") / "c" / "References" / "10.0.28000.0"
-)
+WINDOWS_SDK = versions.windows_sdk_metadata_path()
 WEBVIEW2 = (
     tool_path("Microsoft.Web.WebView2") / "lib" / "Microsoft.Web.WebView2.Core.winmd"
 )

@@ -32,6 +32,7 @@ from collections import deque
 from collections.abc import Iterable
 
 import app_sdk
+import versions
 
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 
@@ -63,13 +64,7 @@ RUNTIME_OUTPUT_PATH = REPO_ROOT_PATH / "runtime" / "src" / "include" / "cppwinrt
 INTEROP_PATH = REPO_ROOT_PATH / "interop"
 INTEROP_OUTPUT_DIR = "cppwinrt"
 
-WINDOWS_SDK_METADATA = (
-    TOOLS_PATH
-    / versioned_package("Microsoft.Windows.SDK.CPP")
-    / "c"
-    / "References"
-    / "10.0.28000.0"
-)
+WINDOWS_SDK_METADATA = versions.windows_sdk_metadata_path()
 
 WEBVIEW2_METADATA = (
     TOOLS_PATH

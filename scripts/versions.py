@@ -331,6 +331,27 @@ def unpacked_nuget_path(package: str) -> Path:
     return TOOLS_PATH / f"{package}.{nuget_package_versions()[package]}"
 
 
+def windows_sdk_metadata_path() -> Path:
+    """
+    The directory of Windows SDK .winmd files in the unpacked
+    Microsoft.Windows.SDK.CPP package, which is named after the SDK with the
+    package's last number as 0: c/References/10.0.28000.0 in 10.0.28000.2705.
+    """
+    package = "Microsoft.Windows.SDK.CPP"
+    major, minor, build, _ = nuget_package_versions()[package].split(".")
+    path = (
+        unpacked_nuget_path(package) / "c" / "References" / f"{major}.{minor}.{build}.0"
+    )
+
+    if not path.is_dir():
+        raise RuntimeError(
+            f"{path} is not a directory; run scripts/fetch-tools.ps1, or check how"
+            " the package lays out its References if the pin moved"
+        )
+
+    return path
+
+
 def nuget_versions() -> dict[str, str]:
     """
     The upstream version of each family's NuGet package, keyed the way
