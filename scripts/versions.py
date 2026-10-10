@@ -63,6 +63,30 @@ NUGET_PACKAGES = {
 RUNTIME_FAMILY = "runtime"
 
 
+# The packages written by hand that are released with a family rather than on
+# their own, keyed by directory under interop/: every interop module that
+# compiles against a family other than the Windows SDK, which
+# packages.generated() holds to the family it builds each one against. Such a
+# family's release is what its users choose a version of, so each package of
+# it carries that version, and the interop modules that go with a set of its
+# packages are the ones with their version. The Windows App SDK bootstrap
+# module has to besides: its wheel carries
+# Microsoft.WindowsAppRuntime.Bootstrap.dll out of the pin and loads that
+# release of the App SDK unless told otherwise, so what it carries changes
+# whenever the pin moves, even where its source does not. None of them has a
+# version.txt. A fix to one between two pins adds one, which makes that
+# package a unit of its own until the pin moves (see interop_version()).
+FAMILY_RELEASED_INTEROP = {
+    "winrt-Microsoft.UI.Interop": "wasdk",
+    "winrt-wasdk-bootstrap": "wasdk",
+}
+
+# A family version that a fix to one of those packages can follow: a final
+# release of three numbers, to which the fix adds a fourth. A prerelease
+# cannot take one, since a fourth number goes before the phase and would sort
+# above the final release, and no upstream this applies to uses four numbers.
+FIXABLE_FAMILY_VERSION = re.compile(r"\d+!\d+\.\d+\.\d+")
+
 # The test component is projected into this tree for the test suite and is
 # never uploaded anywhere, so it is versioned like a family without being one
 # that is released.
@@ -77,7 +101,9 @@ TAG_PREFIX = "wheels"
 # NuGet spells a prerelease as a label on the end of the version and PyWinRT
 # publishes it as the PEP 440 phase of the same name, in the order upstream
 # uses them. Nothing maps onto .devN or .postN, which are left for PyWinRT's
-# own use: a re-release of one upstream version is a .postN of it.
+# own use: a re-release of one upstream version is a .postN of it. A fix to
+# one package that is released with a family is a fourth number instead (see
+# interop_version()), since it changes what the package does.
 PRERELEASE_PHASES = {
     "experimental": "a",
     "preview": "b",
@@ -151,11 +177,19 @@ def version_files() -> list[Path]:
     compatibility generation as the major, bumped by hand, and released on
     its own rather than with anything else. The directory a file sits in is
     the unit its version releases.
+
+    A package that is released with a family is not one of these, even while
+    a fix to it has a version.txt: that version is the family's with a number
+    on the end (see interop_version()).
     """
     return [
         RUNTIME_VERSION_PATH,
         TABLE_VERSION_PATH,
-        *sorted(INTEROP_PATH.glob("winrt-*/version.txt")),
+        *sorted(
+            path
+            for path in INTEROP_PATH.glob("winrt-*/version.txt")
+            if path.parent.name not in FAMILY_RELEASED_INTEROP
+        ),
     ]
 
 
@@ -164,6 +198,72 @@ def read_version(path: Path) -> str:
     Reads a hand-maintained version.txt.
     """
     return path.read_text(encoding="utf-8").strip()
+
+
+def check_fix_version(version: str, family_version: str) -> None:
+    """
+    Checks the version of a fix to a package that is released with a family,
+    which is the family's version with a fourth number on the end.
+
+    A version that does not follow the family's current version is what a
+    fix left behind when the pin moved, and the error says to delete it, so
+    the package goes back to being released with the family.
+    """
+    if not FIXABLE_FAMILY_VERSION.fullmatch(family_version):
+        raise ValueError(
+            f"a fix is released only after a final release of three numbers,"
+            f" and the family is {family_version}"
+        )
+
+    if not re.fullmatch(rf"{re.escape(family_version)}\.[1-9]\d*", version):
+        raise ValueError(
+            f"a fix is {family_version}.N while the family is {family_version},"
+            f" and this one is {version}"
+        )
+
+
+def interop_release(name: str) -> str:
+    """
+    The unit that releases an interop package, keyed by its directory.
+
+    That is the package itself, unless it is released with a family and has
+    no fix of its own waiting to be released.
+    """
+    if name in FAMILY_RELEASED_INTEROP:
+        if not (INTEROP_PATH / name / "version.txt").exists():
+            return FAMILY_RELEASED_INTEROP[name]
+
+    return name
+
+
+def interop_version(name: str) -> str:
+    """
+    The version an interop package is published with, keyed by its directory.
+
+    One that is released with a family takes the family's version, or the
+    version of a fix to it while its version.txt says there is one.
+    """
+    path = INTEROP_PATH / name / "version.txt"
+
+    if name not in FAMILY_RELEASED_INTEROP:
+        return read_version(path)
+
+    family_version = family_versions()[FAMILY_RELEASED_INTEROP[name]]
+
+    if not path.exists():
+        return family_version
+
+    version = read_version(path)
+
+    try:
+        check_fix_version(version, family_version)
+    except ValueError as error:
+        raise RuntimeError(
+            f"{path.relative_to(INTEROP_PATH.parent).as_posix()} is the version of a fix to"
+            f" {name}, but {error}; delete it to release {name} with the family"
+        ) from error
+
+    return version
 
 
 def runtime_version() -> str:
@@ -278,6 +378,11 @@ def published_versions() -> dict[str, str]:
             if family not in UNPUBLISHED_FAMILIES
         }
         | {path.parent.name: read_version(path) for path in interop}
+        | {
+            name: interop_version(name)
+            for name in sorted(FAMILY_RELEASED_INTEROP)
+            if interop_release(name) == name
+        }
     )
 
 

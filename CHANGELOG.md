@@ -200,7 +200,10 @@
   versioning, since there is no upstream release for them to be numbered after,
   and each is released on its own when it changes. So moving the Windows SDK
   pin no longer republishes the interop modules that were built against it,
-  and a fix to `winrt-runtime` does not renumber anything else.
+  and a fix to `winrt-runtime` does not renumber anything else. The exception
+  is the two Windows App SDK interop modules, which are released with the App
+  SDK packages and numbered like them, since the App SDK release is what you
+  choose and the bootstrap module carries a `.dll` and its defaults out of it.
 - BREAKING: The `4!` in front of those versions is a PEP 440 epoch and says
   which generation of PyWinRT the package was built for. It is the same number
   as `winrt-runtime`'s major version and it changes only when every projection

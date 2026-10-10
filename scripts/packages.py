@@ -105,7 +105,8 @@ class Package(NamedTuple):
     family: str
     # what a tag releases it as, named after the directory its sources are
     # in: the family for a generated package, and the package itself for one
-    # that is written by hand and so carries a version of its own
+    # that is written by hand and so carries a version of its own, unless
+    # versions.FAMILY_RELEASED_INTEROP releases it with a family
     release: str
     build: Build
 
@@ -152,7 +153,16 @@ def generated() -> Iterator[Package]:
         distribution = interop_distribution(path)
         family = "wasdk" if distribution in APP_SDK_INTEROP_COMPONENTS else "winrt"
 
-        yield Package(path, distribution, family, path.name, Build.COMPILED)
+        if versions.FAMILY_RELEASED_INTEROP.get(path.name, "winrt") != family:
+            raise RuntimeError(
+                f"{path.name} is built against the {family} family, so"
+                f" versions.FAMILY_RELEASED_INTEROP has to say whether it is"
+                f" released with it"
+            )
+
+        release = versions.interop_release(path.name)
+
+        yield Package(path, distribution, family, release, Build.COMPILED)
 
 
 def published() -> Iterator[Package]:

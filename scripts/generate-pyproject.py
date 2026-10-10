@@ -516,6 +516,14 @@ def write_compiled_project_files(
     needs_app_sdk = is_app_sdk_interop_package(package_name)
     own_headers = not is_runtime and any((package_path / "cppwinrt").glob("**/*.h"))
 
+    # A package released with a family has no version.txt to read its version
+    # from unless a fix to it is waiting, so the version is written into its
+    # packaging instead.
+    version = (
+        RUNTIME_VERSION if is_runtime else versions.interop_version(package_path.name)
+    )
+    static_version = package_path.name in versions.FAMILY_RELEASED_INTEROP
+
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
             templates.COMPILED_PYPROJECT_TOML.format(
@@ -524,6 +532,13 @@ def write_compiled_project_files(
                     None if is_runtime else package_families[package_name]
                 ),
                 package_name=package_name,
+                static_version=f'version = "{version}"\n' if static_version else "",
+                dynamic=(
+                    '"dependencies"' if static_version else '"version", "dependencies"'
+                ),
+                dynamic_version=(
+                    "" if static_version else 'version = { file = "version.txt" }\n'
+                ),
                 description="Python projection of Windows Runtime (WinRT) APIs",
                 packages_find=(
                     templates.RUNTIME_PACKAGE_FIND
@@ -590,7 +605,7 @@ def write_compiled_project_files(
                         sbom_name=SBOM_NAME,
                         package_name=package_name,
                         normalized_name=normalize_package_name(package_name),
-                        version=versions.read_version(package_path / "version.txt"),
+                        version=version,
                         nuget_package=redistributes.nuget_package,
                         nuget_version=NUGET_PACKAGE_VERSIONS[
                             redistributes.nuget_package

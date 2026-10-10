@@ -284,6 +284,76 @@ class ReleaseTags(unittest.TestCase):
             versions.unit_of_tag("wheels/v3.2.1")
 
 
+class FamilyReleasedInterop(unittest.TestCase):
+    """
+    The version of an interop package that is released with a family, and of
+    a fix to it released between two pins.
+    """
+
+    name = "winrt-wasdk-bootstrap"
+
+    def test_the_app_sdk_interop_modules_are_released_with_it(self) -> None:
+        for name in ("winrt-Microsoft.UI.Interop", "winrt-wasdk-bootstrap"):
+            with self.subTest(name=name):
+                self.assertEqual(versions.interop_release(name), "wasdk")
+                self.assertEqual(
+                    versions.interop_version(name), versions.family_versions()["wasdk"]
+                )
+                self.assertNotIn(name, versions.published_versions())
+
+    def test_a_fix_is_a_unit_of_its_own_until_the_pin_moves(self) -> None:
+        fix = f"{versions.family_versions()['wasdk']}.1"
+        self.add_fix(fix)
+
+        self.assertEqual(versions.interop_release(self.name), self.name)
+        self.assertEqual(versions.interop_version(self.name), fix)
+        self.assertEqual(versions.published_versions()[self.name], fix)
+
+    def test_a_fix_left_behind_by_the_pin_is_refused(self) -> None:
+        self.add_fix("4!1.0.0.1")
+
+        with self.assertRaisesRegex(RuntimeError, "delete it"):
+            versions.interop_version(self.name)
+
+    def test_a_fix_sorts_between_the_release_it_fixes_and_the_next(self) -> None:
+        self.assertLess(Version("4!2.5.1"), Version("4!2.5.1.1"))
+        self.assertLess(Version("4!2.5.1.1"), Version("4!2.5.1.2"))
+        self.assertLess(Version("4!2.5.1.2"), Version("4!2.5.2"))
+
+    def test_a_fix_is_a_fourth_number(self) -> None:
+        versions.check_fix_version("4!2.5.1.1", "4!2.5.1")
+        versions.check_fix_version("4!2.5.1.12", "4!2.5.1")
+
+        for version in ("4!2.5.1", "4!2.5.1.0", "4!2.5.1.post1", "4!2.5.0.1"):
+            with self.subTest(version=version):
+                with self.assertRaises(ValueError):
+                    versions.check_fix_version(version, "4!2.5.1")
+
+    def test_a_prerelease_takes_no_fix(self) -> None:
+        # a fourth number goes before the phase, so 4!2.6.0.1b1 would sort
+        # above the final 4!2.6.0, and 4!2.6.0b1.1 is not a version at all
+        self.assertGreater(Version("4!2.6.0.1b1"), Version("4!2.6.0"))
+
+        with self.assertRaises(ValueError):
+            versions.check_fix_version("4!2.6.0.1b1", "4!2.6.0b1")
+
+    def test_a_family_of_four_numbers_takes_no_fix(self) -> None:
+        # the fourth number would be upstream's own
+        with self.assertRaises(ValueError):
+            versions.check_fix_version("4!1.0.4191.47.1", "4!1.0.4191.47")
+
+    def add_fix(self, fix: str) -> None:
+        """
+        Puts the interop directory, for the rest of the test, in one that holds
+        the bootstrap with a version.txt for a fix.
+        """
+        root = Path(self.enterContext(tempfile.TemporaryDirectory())) / "interop"
+        (root / self.name).mkdir(parents=True)
+        (root / self.name / "version.txt").write_text(fix, encoding="utf-8")
+
+        self.enterContext(mock.patch.object(versions, "INTEROP_PATH", root))
+
+
 class InteropRuntimeRequirement(unittest.TestCase):
     """
     What an interop package requires of the runtime: the newest runtime that a
