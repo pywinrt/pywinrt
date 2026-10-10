@@ -7,8 +7,9 @@
 /// without, since importing a class's module imports its base class.
 /// </param>
 /// <param name="Referenced">
-/// Every namespace whose types this one hands back, which is what the <c>[all]</c> extra of
-/// a package offers.
+/// Every namespace whose types this one names: in a struct's fields, as a base class or an
+/// interface a type implements or inherits, and in the signature of a member or a delegate,
+/// type arguments included. It is what the <c>[all]</c> extra of a package offers.
 /// </param>
 /// <remarks>
 /// Several namespaces may be published in one distribution, so this is handed back rather
