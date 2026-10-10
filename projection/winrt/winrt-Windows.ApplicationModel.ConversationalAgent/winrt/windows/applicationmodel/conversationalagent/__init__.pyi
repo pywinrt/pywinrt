@@ -171,6 +171,8 @@ class SignalDetectorResourceKind(enum.IntEnum):
 class ActivationSignalDetectionConfiguration(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration::ApplyTrainingData(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat,Windows.Storage.Streams.IInputStream)
     def apply_training_data(self, training_data_format: ActivationSignalDetectionTrainingDataFormat, training_data: windows_storage_streams.IInputStream, /) -> DetectionConfigurationTrainingStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus> Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration::ApplyTrainingDataAsync(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat,Windows.Storage.Streams.IInputStream)
@@ -243,6 +245,8 @@ class ActivationSignalDetectionConfiguration(windows_foundation.IClosable, winrt
 
 @typing.final
 class ActivationSignalDetectionConfigurationCreationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfigurationCreationResult::get_Configuration()
     @_property
     def configuration(self) -> ActivationSignalDetectionConfiguration: ...
@@ -252,6 +256,8 @@ class ActivationSignalDetectionConfigurationCreationResult(winrt.system.Object):
 
 @typing.final
 class ActivationSignalDetector(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector::CreateConfiguration(System.String,System.String,System.String)
     def create_configuration(self, signal_id: str, model_id: str, display_name: str, /) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector::CreateConfigurationAsync(System.String,System.String,System.String)
@@ -314,6 +320,8 @@ class ConversationalAgentDetectorManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ConversationalAgentDetectorManager(winrt.system.Object, metaclass=ConversationalAgentDetectorManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager::GetActivationSignalDetectorFromId(System.String)
     def get_activation_signal_detector_from_id(self, detector_id: str, /) -> ActivationSignalDetector: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector> Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager::GetActivationSignalDetectorFromIdAsync(System.String)
@@ -338,6 +346,8 @@ class ConversationalAgentSession_Static(winrt._winrt.Object_Static):
 class ConversationalAgentSession(windows_foundation.IClosable, winrt.system.Object, metaclass=ConversationalAgentSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::Close()
     def close(self) -> None: ...
     # Windows.Media.Audio.AudioDeviceInputNode Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession::CreateAudioDeviceInputNode(Windows.Media.Audio.AudioGraph)
@@ -431,10 +441,13 @@ class ConversationalAgentSession(windows_foundation.IClosable, winrt.system.Obje
 
 @typing.final
 class ConversationalAgentSessionInterruptedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ConversationalAgentSignal(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSignal::get_SignalStart()
     @_property
     def signal_start(self) -> datetime.timedelta: ...
@@ -480,22 +493,29 @@ class ConversationalAgentSignal(winrt.system.Object):
 
 @typing.final
 class ConversationalAgentSignalDetectedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ConversationalAgentSystemStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangedEventArgs::get_SystemStateChangeType()
     @_property
     def system_state_change_type(self) -> ConversationalAgentSystemStateChangeType: ...
 
 @typing.final
 class DetectionConfigurationAvailabilityChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs::get_Kind()
     @_property
     def kind(self) -> DetectionConfigurationAvailabilityChangeKind: ...
 
 @typing.final
 class DetectionConfigurationAvailabilityInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo::get_HasLockScreenPermission()
     @_property
     def has_lock_screen_permission(self) -> bool: ...

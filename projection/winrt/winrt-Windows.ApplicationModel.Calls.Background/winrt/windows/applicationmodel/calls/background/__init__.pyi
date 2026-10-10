@@ -68,6 +68,8 @@ class PhoneTriggerType(enum.IntEnum):
 
 @typing.final
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails::get_CallBlockedReason()
     @_property
     def call_blocked_reason(self) -> PhoneCallBlockedReason: ...
@@ -81,6 +83,8 @@ class PhoneCallBlockedTriggerDetails(winrt.system.Object):
 @typing.final
 @deprecated("PhoneCallOriginDataRequestTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails::get_PhoneNumber()
     @_property
     @deprecated("PhoneCallOriginDataRequestTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
@@ -93,6 +97,8 @@ class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
 @typing.final
 @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails::get_DismissalTime()
     @_property
     @deprecated("PhoneIncomingCallDismissedTriggerDetails is deprecated and might not work for all platforms. For more info, see MSDN.")
@@ -120,6 +126,8 @@ class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails::get_CallId()
     @_property
     def call_id(self) -> str: ...
@@ -129,6 +137,8 @@ class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails::HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)
     def has_line_property_changed(self, line_property: PhoneLineProperties, /) -> bool: ...
     # Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails::get_ChangeType()
@@ -140,6 +150,8 @@ class PhoneLineChangedTriggerDetails(winrt.system.Object):
 
 @typing.final
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails::get_LineId()
     @_property
     def line_id(self) -> _uuid.UUID: ...

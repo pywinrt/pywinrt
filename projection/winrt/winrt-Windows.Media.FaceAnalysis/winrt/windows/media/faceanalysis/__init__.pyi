@@ -20,6 +20,8 @@ __all__ = [
 
 @typing.final
 class DetectedFace(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Imaging.BitmapBounds Windows.Media.FaceAnalysis.DetectedFace::get_FaceBox()
     @_property
     def face_box(self) -> windows_graphics_imaging.BitmapBounds: ...
@@ -38,6 +40,8 @@ class FaceDetector_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FaceDetector(winrt.system.Object, metaclass=FaceDetector_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceDetector::DetectFacesAsync(Windows.Graphics.Imaging.SoftwareBitmap)
     def detect_faces_async(self, image: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncOperation[_cabc.MutableSequence[DetectedFace]]: ...
@@ -75,6 +79,8 @@ class FaceTracker_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FaceTracker(winrt.system.Object, metaclass=FaceTracker_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>> Windows.Media.FaceAnalysis.FaceTracker::ProcessNextFrameAsync(Windows.Media.VideoFrame)
     def process_next_frame_async(self, video_frame: windows_media.VideoFrame, /) -> windows_foundation.IAsyncOperation[_cabc.MutableSequence[DetectedFace]]: ...
     # Windows.Graphics.Imaging.BitmapSize Windows.Media.FaceAnalysis.FaceTracker::get_MinDetectableFaceSize()

@@ -145,24 +145,32 @@ class TextStyle:
 
 @typing.final
 class ConversionModeChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextConversionMode Windows.UI.Input.Preview.Text.ConversionModeChangedEventArgs::get_NewConversionMode()
     @_property
     def new_conversion_mode(self) -> TextConversionMode: ...
 
 @typing.final
 class FocusEnteredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextBoxInfo Windows.UI.Input.Preview.Text.FocusEnteredEventArgs::get_FocusedTextBoxInfo()
     @_property
     def focused_text_box_info(self) -> TextBoxInfo: ...
 
 @typing.final
 class InputDelegationModeChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Preview.Text.InputDelegationModeChangedEventArgs::get_DelegationOn()
     @_property
     def delegation_on(self) -> bool: ...
 
 @typing.final
 class KeyEventReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs::IsKeyPressed(Windows.System.VirtualKey)
     def is_key_pressed(self, vkey: windows_system.VirtualKey, /) -> bool: ...
     # System.Boolean Windows.UI.Input.Preview.Text.KeyEventReceivedEventArgs::IsToggleKeyOn(Windows.System.VirtualKey)
@@ -191,6 +199,8 @@ class KeyEventReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class KeyboardInputProcessor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextEditSession Windows.UI.Input.Preview.Text.KeyboardInputProcessor::CreateEditSession()
     def create_edit_session(self) -> TextEditSession: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Preview.Text.KeyboardInputProcessor::add_Activated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Preview.Text.KeyboardInputProcessor,System.Object>)
@@ -263,12 +273,16 @@ class KeyboardInputProcessor(winrt.system.Object):
 
 @typing.final
 class ReconversionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextRange Windows.UI.Input.Preview.Text.ReconversionRequestedEventArgs::get_Range()
     @_property
     def range(self) -> windows_ui_text_core.CoreTextRange: ...
 
 @typing.final
 class TextBoxContentChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs::IsContentAttributeChanged(Windows.UI.Input.Preview.Text.TextBoxContentAttribute)
     def is_content_attribute_changed(self, value: TextBoxContentAttribute, /) -> bool: ...
     # Windows.Foundation.Rect Windows.UI.Input.Preview.Text.TextBoxContentChangedEventArgs::get_SelectionBounds()
@@ -283,6 +297,8 @@ class TextBoxContentChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class TextBoxInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Input.Preview.Text.TextBoxInfo::get_AppName()
     @_property
     def app_name(self) -> str: ...
@@ -304,12 +320,16 @@ class TextBoxInfo(winrt.system.Object):
 
 @typing.final
 class TextBoxInfoChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextBoxInfo Windows.UI.Input.Preview.Text.TextBoxInfoChangedEventArgs::get_TextBoxInfo()
     @_property
     def text_box_info(self) -> TextBoxInfo: ...
 
 @typing.final
 class TextComposition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.Preview.Text.TextComposition::Complete()
     def complete(self) -> None: ...
     # System.Void Windows.UI.Input.Preview.Text.TextComposition::CompleteFirstSegment()
@@ -336,6 +356,8 @@ class TextComposition(winrt.system.Object):
 
 @typing.final
 class TextCompositionSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextStyle Windows.UI.Input.Preview.Text.TextCompositionSegment::GetTextStyle()
     def get_text_style(self) -> TextStyle: ...
     # System.Void Windows.UI.Input.Preview.Text.TextCompositionSegment::SetTextStyle(Windows.UI.Input.Preview.Text.TextStyle)
@@ -376,6 +398,8 @@ class TextCompositionSegment(winrt.system.Object):
 
 @typing.final
 class TextEditSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Text.Core.CoreTextRange Windows.UI.Input.Preview.Text.TextEditSession::GetSelectedRange()
     def get_selected_range(self) -> windows_ui_text_core.CoreTextRange: ...
     # System.String Windows.UI.Input.Preview.Text.TextEditSession::GetText(Windows.UI.Text.Core.CoreTextRange)
@@ -409,6 +433,8 @@ class TextEditSession(winrt.system.Object):
 
 @typing.final
 class TextInputProvider(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.TextEditSession Windows.UI.Input.Preview.Text.TextInputProvider::CreateEditSession()
     def create_edit_session(self) -> TextEditSession: ...
     # Windows.UI.Input.Preview.Text.TextInputServiceSubscription Windows.UI.Input.Preview.Text.TextInputProvider::GetSubscription()
@@ -470,6 +496,8 @@ class TextInputService_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TextInputService(winrt.system.Object, metaclass=TextInputService_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Preview.Text.KeyboardInputProcessor Windows.UI.Input.Preview.Text.TextInputService::CreateKeyboardInputProcessor(System.String)
     def create_keyboard_input_processor(self, input_profile: str, /) -> KeyboardInputProcessor: ...
     # Windows.UI.Input.Preview.Text.TextInputProvider Windows.UI.Input.Preview.Text.TextInputService::CreateTextInputProvider(System.String)

@@ -196,7 +196,8 @@ class Av1ProfileIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Av1ProfileIds(winrt.system.Object, metaclass=Av1ProfileIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ContainerEncodingProperties(IMediaEncodingProperties, winrt.system.Object):
@@ -251,7 +252,8 @@ class H264ProfileIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class H264ProfileIds(winrt.system.Object, metaclass=H264ProfileIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class HevcProfileIds_Static(winrt._winrt.Object_Static):
@@ -324,7 +326,8 @@ class HevcProfileIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HevcProfileIds(winrt.system.Object, metaclass=HevcProfileIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ImageEncodingProperties_Static(winrt._winrt.Object_Static):
@@ -600,7 +603,8 @@ class MediaEncodingSubtypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaEncodingSubtypes(winrt.system.Object, metaclass=MediaEncodingSubtypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MediaPropertySet(_cabc.MutableMapping[_uuid.UUID, winrt.system.Object], winrt.system.Object):
@@ -631,6 +635,8 @@ class MediaPropertySet(_cabc.MutableMapping[_uuid.UUID, winrt.system.Object], wi
 
 @typing.final
 class MediaRatio(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.MediaProperties.MediaRatio::get_Numerator()
     @_property
     def numerator(self) -> winrt.system.UInt32: ...
@@ -664,7 +670,8 @@ class Mpeg2ProfileIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Mpeg2ProfileIds(winrt.system.Object, metaclass=Mpeg2ProfileIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TimedMetadataEncodingProperties_Static(winrt._winrt.Object_Static):
@@ -786,7 +793,8 @@ class Vp9ProfileIds_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _IMediaEncodingProperties: ...

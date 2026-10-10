@@ -136,6 +136,8 @@ class HttpBaseProtocolFilter(IHttpFilter, windows_foundation.IClosable, winrt.sy
 
 @typing.final
 class HttpCacheControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Web.Http.Filters.HttpCacheWriteBehavior Windows.Web.Http.Filters.HttpCacheControl::get_WriteBehavior()
     @_property
     def write_behavior(self) -> HttpCacheWriteBehavior: ...
@@ -151,6 +153,8 @@ class HttpCacheControl(winrt.system.Object):
 
 @typing.final
 class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Void Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs::Reject()

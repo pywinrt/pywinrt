@@ -130,6 +130,8 @@ class AudioBuffer(windows_foundation.IMemoryBuffer, windows_foundation.IClosable
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __buffer__(self, flags: int, /) -> memoryview: ...
     def __release_buffer__(self, view: memoryview, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.AudioBuffer::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IMemoryBufferReference Windows.Media.AudioBuffer::CreateReference()
@@ -190,12 +192,16 @@ class AudioFrame(IMediaFrame, windows_foundation.IClosable, winrt.system.Object)
 
 @typing.final
 class AutoRepeatModeChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaPlaybackAutoRepeatMode Windows.Media.AutoRepeatModeChangeRequestedEventArgs::get_RequestedAutoRepeatMode()
     @_property
     def requested_auto_repeat_mode(self) -> MediaPlaybackAutoRepeatMode: ...
 
 @typing.final
 class ImageDisplayProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.ImageDisplayProperties::get_Title()
     @_property
     def title(self) -> str: ...
@@ -323,7 +329,8 @@ class MediaControl_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
 class MediaControl(winrt.system.Object, metaclass=MediaControl_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MediaExtensionManager(winrt.system.Object):
@@ -399,10 +406,13 @@ class MediaMarkerTypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaMarkerTypes(winrt.system.Object, metaclass=MediaMarkerTypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MediaProcessingTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.Media.MediaProcessingTriggerDetails::get_Arguments()
     @_property
     def arguments(self) -> windows_foundation_collections.ValueSet: ...
@@ -462,12 +472,16 @@ class MediaTimelineController(winrt.system.Object):
 
 @typing.final
 class MediaTimelineControllerFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Media.MediaTimelineControllerFailedEventArgs::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
 
 @typing.final
 class MusicDisplayProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.MusicDisplayProperties::get_Title()
     @_property
     def title(self) -> str: ...
@@ -510,18 +524,24 @@ class MusicDisplayProperties(winrt.system.Object):
 
 @typing.final
 class PlaybackPositionChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Media.PlaybackPositionChangeRequestedEventArgs::get_RequestedPlaybackPosition()
     @_property
     def requested_playback_position(self) -> datetime.timedelta: ...
 
 @typing.final
 class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Media.PlaybackRateChangeRequestedEventArgs::get_RequestedPlaybackRate()
     @_property
     def requested_playback_rate(self) -> winrt.system.Double: ...
 
 @typing.final
 class ShuffleEnabledChangeRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.ShuffleEnabledChangeRequestedEventArgs::get_RequestedShuffleEnabled()
     @_property
     def requested_shuffle_enabled(self) -> bool: ...
@@ -533,6 +553,8 @@ class SystemMediaTransportControls_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemMediaTransportControls(winrt.system.Object, metaclass=SystemMediaTransportControls_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.SystemMediaTransportControls::UpdateTimelineProperties(Windows.Media.SystemMediaTransportControlsTimelineProperties)
     def update_timeline_properties(self, timeline_properties: SystemMediaTransportControlsTimelineProperties, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Media.SystemMediaTransportControls::add_ButtonPressed(Windows.Foundation.TypedEventHandler`2<Windows.Media.SystemMediaTransportControls,Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs>)
@@ -658,12 +680,16 @@ class SystemMediaTransportControls(winrt.system.Object, metaclass=SystemMediaTra
 
 @typing.final
 class SystemMediaTransportControlsButtonPressedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SystemMediaTransportControlsButton Windows.Media.SystemMediaTransportControlsButtonPressedEventArgs::get_Button()
     @_property
     def button(self) -> SystemMediaTransportControlsButton: ...
 
 @typing.final
 class SystemMediaTransportControlsDisplayUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.SystemMediaTransportControlsDisplayUpdater::ClearAll()
     def clear_all(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SystemMediaTransportControlsDisplayUpdater::CopyFromFileAsync(Windows.Media.MediaPlaybackType,Windows.Storage.StorageFile)
@@ -700,6 +726,8 @@ class SystemMediaTransportControlsDisplayUpdater(winrt.system.Object):
 
 @typing.final
 class SystemMediaTransportControlsPropertyChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.SystemMediaTransportControlsProperty Windows.Media.SystemMediaTransportControlsPropertyChangedEventArgs::get_Property()
     @_property
     def property(self) -> SystemMediaTransportControlsProperty: ...
@@ -740,6 +768,8 @@ class SystemMediaTransportControlsTimelineProperties(winrt.system.Object):
 
 @typing.final
 class VideoDisplayProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.VideoDisplayProperties::get_Title()
     @_property
     def title(self) -> str: ...
@@ -764,7 +794,8 @@ class VideoEffects_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VideoEffects(winrt.system.Object, metaclass=VideoEffects_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class VideoFrame_Static(winrt._winrt.Object_Static):

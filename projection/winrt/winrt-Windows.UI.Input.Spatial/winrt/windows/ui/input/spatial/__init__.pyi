@@ -160,18 +160,24 @@ class SpatialGestureRecognizer(winrt.system.Object):
 
 @typing.final
 class SpatialHoldCanceledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialHoldCanceledEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
 @typing.final
 class SpatialHoldCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialHoldCompletedEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
 @typing.final
 class SpatialHoldStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_pointer_pose(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialPointerPose | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialHoldStartedEventArgs::get_InteractionSourceKind()
@@ -180,12 +186,16 @@ class SpatialHoldStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialInteraction(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceState Windows.UI.Input.Spatial.SpatialInteraction::get_SourceState()
     @_property
     def source_state(self) -> SpatialInteractionSourceState: ...
 
 @typing.final
 class SpatialInteractionController(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Power.BatteryReport Windows.UI.Input.Spatial.SpatialInteractionController::TryGetBatteryReport()
     def try_get_battery_report(self) -> windows_devices_power.BatteryReport | None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.UI.Input.Spatial.SpatialInteractionController::TryGetRenderableModelAsync()
@@ -211,6 +221,8 @@ class SpatialInteractionController(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionControllerProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Spatial.SpatialInteractionControllerProperties::get_IsThumbstickPressed()
     @_property
     def is_thumbstick_pressed(self) -> bool: ...
@@ -235,6 +247,8 @@ class SpatialInteractionControllerProperties(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_pointer_pose(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialPointerPose | None: ...
     # Windows.UI.Input.Spatial.SpatialInteraction Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs::get_Interaction()
@@ -256,6 +270,8 @@ class SpatialInteractionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialInteractionManager(winrt.system.Object, metaclass=SpatialInteractionManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Spatial.SpatialInteractionSourceState> Windows.UI.Input.Spatial.SpatialInteractionManager::GetDetectedSourcesAtTimestamp(Windows.Perception.PerceptionTimestamp)
     def get_detected_sources_at_timestamp(self, time_stamp: windows_perception.PerceptionTimestamp, /) -> _cabc.Sequence[SpatialInteractionSourceState]: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Spatial.SpatialInteractionManager::add_InteractionDetected(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Spatial.SpatialInteractionManager,Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs>)
@@ -285,6 +301,8 @@ class SpatialInteractionManager(winrt.system.Object, metaclass=SpatialInteractio
 
 @typing.final
 class SpatialInteractionSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.People.HandMeshObserver Windows.UI.Input.Spatial.SpatialInteractionSource::TryCreateHandMeshObserver()
     def try_create_hand_mesh_observer(self) -> windows_perception_people.HandMeshObserver | None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Perception.People.HandMeshObserver> Windows.UI.Input.Spatial.SpatialInteractionSource::TryCreateHandMeshObserverAsync()
@@ -315,6 +333,8 @@ class SpatialInteractionSource(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionSourceEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceState Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs::get_State()
     @_property
     def state(self) -> SpatialInteractionSourceState: ...
@@ -324,6 +344,8 @@ class SpatialInteractionSourceEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionSourceLocation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector3> Windows.UI.Input.Spatial.SpatialInteractionSourceLocation::get_Position()
     @_property
     def position(self) -> windows_foundation_numerics.Vector3 | None: ...
@@ -345,6 +367,8 @@ class SpatialInteractionSourceLocation(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionSourceProperties(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceLocation Windows.UI.Input.Spatial.SpatialInteractionSourceProperties::TryGetLocation(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_location(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialInteractionSourceLocation | None: ...
     # Windows.Foundation.IReference`1<Windows.Foundation.Numerics.Vector3> Windows.UI.Input.Spatial.SpatialInteractionSourceProperties::TryGetSourceLossMitigationDirection(Windows.Perception.Spatial.SpatialCoordinateSystem)
@@ -355,6 +379,8 @@ class SpatialInteractionSourceProperties(winrt.system.Object):
 
 @typing.final
 class SpatialInteractionSourceState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Perception.People.HandPose Windows.UI.Input.Spatial.SpatialInteractionSourceState::TryGetHandPose()
     def try_get_hand_pose(self) -> windows_perception_people.HandPose | None: ...
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialInteractionSourceState::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
@@ -389,12 +415,16 @@ class SpatialInteractionSourceState(winrt.system.Object):
 
 @typing.final
 class SpatialManipulationCanceledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
 @typing.final
 class SpatialManipulationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialManipulationDelta Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs::TryGetCumulativeDelta(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_cumulative_delta(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialManipulationDelta | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialManipulationCompletedEventArgs::get_InteractionSourceKind()
@@ -403,12 +433,16 @@ class SpatialManipulationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialManipulationDelta(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Windows.UI.Input.Spatial.SpatialManipulationDelta::get_Translation()
     @_property
     def translation(self) -> windows_foundation_numerics.Vector3: ...
 
 @typing.final
 class SpatialManipulationStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_pointer_pose(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialPointerPose | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialManipulationStartedEventArgs::get_InteractionSourceKind()
@@ -417,6 +451,8 @@ class SpatialManipulationStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialManipulationUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialManipulationDelta Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs::TryGetCumulativeDelta(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_cumulative_delta(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialManipulationDelta | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialManipulationUpdatedEventArgs::get_InteractionSourceKind()
@@ -425,12 +461,16 @@ class SpatialManipulationUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialNavigationCanceledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialNavigationCanceledEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
 @typing.final
 class SpatialNavigationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialNavigationCompletedEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
@@ -440,6 +480,8 @@ class SpatialNavigationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialNavigationStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_pointer_pose(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialPointerPose | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialNavigationStartedEventArgs::get_InteractionSourceKind()
@@ -457,6 +499,8 @@ class SpatialNavigationStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialNavigationUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialNavigationUpdatedEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
@@ -466,6 +510,8 @@ class SpatialNavigationUpdatedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialPointerInteractionSourcePose(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose::get_ForwardDirection()
     @_property
     def forward_direction(self) -> windows_foundation_numerics.Vector3: ...
@@ -489,6 +535,8 @@ class SpatialPointerPose_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpatialPointerPose(winrt.system.Object, metaclass=SpatialPointerPose_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerInteractionSourcePose Windows.UI.Input.Spatial.SpatialPointerPose::TryGetInteractionSourcePose(Windows.UI.Input.Spatial.SpatialInteractionSource)
     def try_get_interaction_source_pose(self, source: SpatialInteractionSource, /) -> SpatialPointerInteractionSourcePose | None: ...
     # Windows.Perception.People.HeadPose Windows.UI.Input.Spatial.SpatialPointerPose::get_Head()
@@ -506,12 +554,16 @@ class SpatialPointerPose(winrt.system.Object, metaclass=SpatialPointerPose_Stati
 
 @typing.final
 class SpatialRecognitionEndedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialRecognitionEndedEventArgs::get_InteractionSourceKind()
     @_property
     def interaction_source_kind(self) -> SpatialInteractionSourceKind: ...
 
 @typing.final
 class SpatialRecognitionStartedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs::IsGesturePossible(Windows.UI.Input.Spatial.SpatialGestureSettings)
     def is_gesture_possible(self, gesture: SpatialGestureSettings, /) -> bool: ...
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialRecognitionStartedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
@@ -522,6 +574,8 @@ class SpatialRecognitionStartedEventArgs(winrt.system.Object):
 
 @typing.final
 class SpatialTappedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialTappedEventArgs::TryGetPointerPose(Windows.Perception.Spatial.SpatialCoordinateSystem)
     def try_get_pointer_pose(self, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, /) -> SpatialPointerPose | None: ...
     # Windows.UI.Input.Spatial.SpatialInteractionSourceKind Windows.UI.Input.Spatial.SpatialTappedEventArgs::get_InteractionSourceKind()

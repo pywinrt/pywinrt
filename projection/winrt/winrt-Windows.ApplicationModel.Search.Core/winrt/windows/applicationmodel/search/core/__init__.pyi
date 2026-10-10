@@ -27,10 +27,13 @@ class SearchSuggestionKind(enum.IntEnum):
 
 @typing.final
 class RequestingFocusOnKeyboardInputEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SearchSuggestion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.Core.SearchSuggestion::get_DetailText()
     @_property
     def detail_text(self) -> str: ...
@@ -110,6 +113,8 @@ class SearchSuggestionManager(winrt.system.Object):
 
 @typing.final
 class SearchSuggestionsRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs::get_Language()
     @_property
     def language(self) -> str: ...

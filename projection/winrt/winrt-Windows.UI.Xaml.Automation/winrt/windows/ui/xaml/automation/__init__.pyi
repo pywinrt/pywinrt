@@ -258,7 +258,8 @@ class AnnotationPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AnnotationPatternIdentifiers(winrt.system.Object, metaclass=AnnotationPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class AutomationAnnotation_Static(windows_ui_xaml.DependencyObject_Static):
@@ -412,7 +413,8 @@ class AutomationElementIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AutomationElementIdentifiers(winrt.system.Object, metaclass=AutomationElementIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class AutomationProperties_Static(winrt._winrt.Object_Static):
@@ -612,11 +614,13 @@ class AutomationProperties_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AutomationProperties(winrt.system.Object, metaclass=AutomationProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class AutomationProperty(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DockPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -626,7 +630,8 @@ class DockPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DockPatternIdentifiers(winrt.system.Object, metaclass=DockPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DragPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -645,7 +650,8 @@ class DragPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DragPatternIdentifiers(winrt.system.Object, metaclass=DragPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DropTargetPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -658,7 +664,8 @@ class DropTargetPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DropTargetPatternIdentifiers(winrt.system.Object, metaclass=DropTargetPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -668,7 +675,8 @@ class ExpandCollapsePatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ExpandCollapsePatternIdentifiers(winrt.system.Object, metaclass=ExpandCollapsePatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class GridItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -690,7 +698,8 @@ class GridItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GridItemPatternIdentifiers(winrt.system.Object, metaclass=GridItemPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class GridPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -703,7 +712,8 @@ class GridPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GridPatternIdentifiers(winrt.system.Object, metaclass=GridPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class MultipleViewPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -716,7 +726,8 @@ class MultipleViewPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MultipleViewPatternIdentifiers(winrt.system.Object, metaclass=MultipleViewPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class RangeValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -741,7 +752,8 @@ class RangeValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class RangeValuePatternIdentifiers(winrt.system.Object, metaclass=RangeValuePatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ScrollPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -769,7 +781,8 @@ class ScrollPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ScrollPatternIdentifiers(winrt.system.Object, metaclass=ScrollPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SelectionItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -782,7 +795,8 @@ class SelectionItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SelectionItemPatternIdentifiers(winrt.system.Object, metaclass=SelectionItemPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SelectionPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -798,7 +812,8 @@ class SelectionPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SelectionPatternIdentifiers(winrt.system.Object, metaclass=SelectionPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -808,7 +823,8 @@ class SpreadsheetItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpreadsheetItemPatternIdentifiers(winrt.system.Object, metaclass=SpreadsheetItemPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class StylesPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -836,7 +852,8 @@ class StylesPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StylesPatternIdentifiers(winrt.system.Object, metaclass=StylesPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TableItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -849,7 +866,8 @@ class TableItemPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TableItemPatternIdentifiers(winrt.system.Object, metaclass=TableItemPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TablePatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -865,7 +883,8 @@ class TablePatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TablePatternIdentifiers(winrt.system.Object, metaclass=TablePatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TogglePatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -875,7 +894,8 @@ class TogglePatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TogglePatternIdentifiers(winrt.system.Object, metaclass=TogglePatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TransformPattern2Identifiers_Static(winrt._winrt.Object_Static):
@@ -894,7 +914,8 @@ class TransformPattern2Identifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TransformPattern2Identifiers(winrt.system.Object, metaclass=TransformPattern2Identifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class TransformPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -910,7 +931,8 @@ class TransformPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TransformPatternIdentifiers(winrt.system.Object, metaclass=TransformPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -923,7 +945,8 @@ class ValuePatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ValuePatternIdentifiers(winrt.system.Object, metaclass=ValuePatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class WindowPatternIdentifiers_Static(winrt._winrt.Object_Static):
@@ -948,5 +971,6 @@ class WindowPatternIdentifiers_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowPatternIdentifiers(winrt.system.Object, metaclass=WindowPatternIdentifiers_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

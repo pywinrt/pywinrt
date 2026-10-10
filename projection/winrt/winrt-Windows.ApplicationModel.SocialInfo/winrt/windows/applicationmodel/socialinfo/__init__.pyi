@@ -97,6 +97,8 @@ class SocialFeedChildItem(winrt.system.Object):
 @typing.final
 @deprecated("SocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialFeedContent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.SocialInfo.SocialFeedContent::get_Title()
     @_property
     @deprecated("ISocialFeedContent is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -283,6 +285,8 @@ class SocialItemThumbnail(winrt.system.Object):
 @typing.final
 @deprecated("SocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")
 class SocialUserInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.SocialInfo.SocialUserInfo::get_UserName()
     @_property
     @deprecated("ISocialUserInfo is deprecated and might not work on all platforms. For more info, see MSDN.")

@@ -36,6 +36,8 @@ class SpiSharingMode(enum.IntEnum):
 
 @typing.final
 class SpiBusInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Devices.Spi.SpiBusInfo::get_ChipSelectLineCount()
     @_property
     def chip_select_line_count(self) -> winrt.system.Int32: ...
@@ -92,6 +94,8 @@ class SpiController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SpiController(winrt.system.Object, metaclass=SpiController_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Spi.SpiDevice Windows.Devices.Spi.SpiController::GetDevice(Windows.Devices.Spi.SpiConnectionSettings)
     def get_device(self, settings: SpiConnectionSettings, /) -> SpiDevice: ...
 
@@ -116,6 +120,8 @@ class SpiDevice_Static(winrt._winrt.Object_Static):
 class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=SpiDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Spi.SpiDevice::Close()
     def close(self) -> None: ...
     # System.Void Windows.Devices.Spi.SpiDevice::Read(System.Byte[])

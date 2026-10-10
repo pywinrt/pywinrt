@@ -25,6 +25,8 @@ class IndexedResourceType(enum.IntEnum):
 
 @typing.final
 class IndexedResourceCandidate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::GetQualifierValue(System.String)
     def get_qualifier_value(self, qualifier_name: str, /) -> str: ...
     # Windows.Foundation.Collections.IMapView`2<System.String,System.String> Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate::get_Metadata()
@@ -45,6 +47,8 @@ class IndexedResourceCandidate(winrt.system.Object):
 
 @typing.final
 class IndexedResourceQualifier(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier::get_QualifierName()
     @_property
     def qualifier_name(self) -> str: ...

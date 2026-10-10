@@ -82,6 +82,8 @@ class UsbWriteOptions(enum.IntFlag):
 
 @typing.final
 class UsbBulkInEndpointDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbBulkInEndpointDescriptor::get_EndpointNumber()
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
@@ -94,6 +96,8 @@ class UsbBulkInEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbBulkInPipe(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Usb.UsbBulkInPipe::ClearStallAsync()
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Devices.Usb.UsbBulkInPipe::FlushBuffer()
@@ -116,6 +120,8 @@ class UsbBulkInPipe(winrt.system.Object):
 
 @typing.final
 class UsbBulkOutEndpointDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbBulkOutEndpointDescriptor::get_EndpointNumber()
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
@@ -128,6 +134,8 @@ class UsbBulkOutEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbBulkOutPipe(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Usb.UsbBulkOutPipe::ClearStallAsync()
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Devices.Usb.UsbWriteOptions Windows.Devices.Usb.UsbBulkOutPipe::get_WriteOptions()
@@ -145,6 +153,8 @@ class UsbBulkOutPipe(winrt.system.Object):
 
 @typing.final
 class UsbConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Usb.UsbConfigurationDescriptor Windows.Devices.Usb.UsbConfiguration::get_ConfigurationDescriptor()
     @_property
     def configuration_descriptor(self) -> UsbConfigurationDescriptor: ...
@@ -164,6 +174,8 @@ class UsbConfigurationDescriptor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UsbConfigurationDescriptor(winrt.system.Object, metaclass=UsbConfigurationDescriptor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbConfigurationDescriptor::get_ConfigurationValue()
     @_property
     def configuration_value(self) -> winrt.system.UInt8: ...
@@ -207,6 +219,8 @@ class UsbControlRequestType(winrt.system.Object):
 
 @typing.final
 class UsbDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Usb.UsbDescriptor::ReadDescriptorBuffer(Windows.Storage.Streams.IBuffer)
     def read_descriptor_buffer(self, buffer: winrt.system.Buffer, /) -> None: ...
     # System.Byte Windows.Devices.Usb.UsbDescriptor::get_DescriptorType()
@@ -244,6 +258,8 @@ class UsbDevice_Static(winrt._winrt.Object_Static):
 class UsbDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=UsbDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Usb.UsbDevice::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -330,10 +346,13 @@ class UsbDeviceClasses_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UsbDeviceClasses(winrt.system.Object, metaclass=UsbDeviceClasses_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class UsbDeviceDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.Usb.UsbDeviceDescriptor::get_BcdDeviceRevision()
     @_property
     def bcd_device_revision(self) -> winrt.system.UInt32: ...
@@ -362,6 +381,8 @@ class UsbEndpointDescriptor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Usb.UsbBulkInEndpointDescriptor Windows.Devices.Usb.UsbEndpointDescriptor::get_AsBulkInEndpointDescriptor()
     @_property
     def as_bulk_in_endpoint_descriptor(self) -> UsbBulkInEndpointDescriptor: ...
@@ -386,6 +407,8 @@ class UsbEndpointDescriptor(winrt.system.Object, metaclass=UsbEndpointDescriptor
 
 @typing.final
 class UsbInterface(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Usb.UsbBulkInPipe> Windows.Devices.Usb.UsbInterface::get_BulkInPipes()
     @_property
     def bulk_in_pipes(self) -> _cabc.Sequence[UsbBulkInPipe]: ...
@@ -417,6 +440,8 @@ class UsbInterfaceDescriptor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescriptor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbInterfaceDescriptor::get_AlternateSettingNumber()
     @_property
     def alternate_setting_number(self) -> winrt.system.UInt8: ...
@@ -435,6 +460,8 @@ class UsbInterfaceDescriptor(winrt.system.Object, metaclass=UsbInterfaceDescript
 
 @typing.final
 class UsbInterfaceSetting(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Usb.UsbInterfaceSetting::SelectSettingAsync()
     def select_setting_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Usb.UsbBulkInEndpointDescriptor> Windows.Devices.Usb.UsbInterfaceSetting::get_BulkInEndpoints()
@@ -461,6 +488,8 @@ class UsbInterfaceSetting(winrt.system.Object):
 
 @typing.final
 class UsbInterruptInEndpointDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbInterruptInEndpointDescriptor::get_EndpointNumber()
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
@@ -476,12 +505,16 @@ class UsbInterruptInEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbInterruptInEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.Usb.UsbInterruptInEventArgs::get_InterruptData()
     @_property
     def interrupt_data(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
 class UsbInterruptInPipe(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Usb.UsbInterruptInPipe::ClearStallAsync()
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Usb.UsbInterruptInPipe::add_DataReceived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Usb.UsbInterruptInPipe,Windows.Devices.Usb.UsbInterruptInEventArgs>)
@@ -494,6 +527,8 @@ class UsbInterruptInPipe(winrt.system.Object):
 
 @typing.final
 class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte Windows.Devices.Usb.UsbInterruptOutEndpointDescriptor::get_EndpointNumber()
     @_property
     def endpoint_number(self) -> winrt.system.UInt8: ...
@@ -509,6 +544,8 @@ class UsbInterruptOutEndpointDescriptor(winrt.system.Object):
 
 @typing.final
 class UsbInterruptOutPipe(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Usb.UsbInterruptOutPipe::ClearStallAsync()
     def clear_stall_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Devices.Usb.UsbWriteOptions Windows.Devices.Usb.UsbInterruptOutPipe::get_WriteOptions()

@@ -294,6 +294,8 @@ class AdvancedPhotoCaptureSettings(winrt.system.Object):
 
 @typing.final
 class AdvancedPhotoControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.AdvancedPhotoControl::Configure(Windows.Media.Devices.AdvancedPhotoCaptureSettings)
     def configure(self, settings: AdvancedPhotoCaptureSettings, /) -> None: ...
     # Windows.Media.Devices.AdvancedPhotoMode Windows.Media.Devices.AdvancedPhotoControl::get_Mode()
@@ -308,6 +310,8 @@ class AdvancedPhotoControl(winrt.system.Object):
 
 @typing.final
 class AudioDeviceController(IMediaDeviceController, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.AudioDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> _cabc.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
     # Windows.Media.MediaProperties.IMediaEncodingProperties Windows.Media.Devices.AudioDeviceController::GetMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
@@ -332,6 +336,8 @@ class AudioDeviceController(IMediaDeviceController, winrt.system.Object):
 
 @typing.final
 class AudioDeviceModule(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Devices.ModuleCommandResult> Windows.Media.Devices.AudioDeviceModule::SendCommandAsync(Windows.Storage.Streams.IBuffer)
     def send_command_async(self, command: winrt.system.Buffer, /) -> windows_foundation.IAsyncOperation[ModuleCommandResult]: ...
     # System.String Windows.Media.Devices.AudioDeviceModule::get_ClassId()
@@ -352,6 +358,8 @@ class AudioDeviceModule(winrt.system.Object):
 
 @typing.final
 class AudioDeviceModuleNotificationEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.AudioDeviceModule Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs::get_Module()
     @_property
     def module(self) -> AudioDeviceModule: ...
@@ -380,6 +388,8 @@ class CallControl_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CallControl(winrt.system.Object, metaclass=CallControl_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.CallControl::EndCall(System.UInt64)
     def end_call(self, call_token: winrt.system.UInt64, /) -> None: ...
     # System.Void Windows.Media.Devices.CallControl::IndicateActiveCall(System.UInt64)
@@ -418,6 +428,8 @@ class CallControl(winrt.system.Object, metaclass=CallControl_Static):
 
 @typing.final
 class CameraOcclusionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.CameraOcclusionState Windows.Media.Devices.CameraOcclusionInfo::GetState()
     def get_state(self) -> CameraOcclusionState: ...
     # System.Boolean Windows.Media.Devices.CameraOcclusionInfo::IsOcclusionKindSupported(Windows.Media.Devices.CameraOcclusionKind)
@@ -429,6 +441,8 @@ class CameraOcclusionInfo(winrt.system.Object):
 
 @typing.final
 class CameraOcclusionState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.CameraOcclusionState::IsOcclusionKind(Windows.Media.Devices.CameraOcclusionKind)
     def is_occlusion_kind(self, occlusion_kind: CameraOcclusionKind, /) -> bool: ...
     # System.Boolean Windows.Media.Devices.CameraOcclusionState::get_IsOccluded()
@@ -437,12 +451,16 @@ class CameraOcclusionState(winrt.system.Object):
 
 @typing.final
 class CameraOcclusionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.CameraOcclusionState Windows.Media.Devices.CameraOcclusionStateChangedEventArgs::get_State()
     @_property
     def state(self) -> CameraOcclusionState: ...
 
 @typing.final
 class DefaultAudioCaptureDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
@@ -452,6 +470,8 @@ class DefaultAudioCaptureDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventA
 
 @typing.final
 class DefaultAudioRenderDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs::get_Id()
     @_property
     def id(self) -> str: ...
@@ -461,6 +481,8 @@ class DefaultAudioRenderDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventAr
 
 @typing.final
 class DialRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.DialRequestedEventArgs::Handled()
     def handled(self) -> None: ...
     # System.Object Windows.Media.Devices.DialRequestedEventArgs::get_Contact()
@@ -491,6 +513,8 @@ class DigitalWindowBounds(winrt.system.Object):
 
 @typing.final
 class DigitalWindowCapability(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Media.Devices.DigitalWindowCapability::get_Height()
     @_property
     def height(self) -> winrt.system.Int32: ...
@@ -512,6 +536,8 @@ class DigitalWindowCapability(winrt.system.Object):
 
 @typing.final
 class DigitalWindowControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.Media.Devices.DigitalWindowControl::Configure(Windows.Media.Devices.DigitalWindowMode)
     def configure(self, digital_window_mode: DigitalWindowMode, /) -> None: ...
@@ -541,6 +567,8 @@ class DigitalWindowControl(winrt.system.Object):
 
 @typing.final
 class ExposureCompensationControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.ExposureCompensationControl::SetValueAsync(System.Single)
     def set_value_async(self, value: winrt.system.Single, /) -> windows_foundation.IAsyncAction: ...
     # System.Single Windows.Media.Devices.ExposureCompensationControl::get_Max()
@@ -561,6 +589,8 @@ class ExposureCompensationControl(winrt.system.Object):
 
 @typing.final
 class ExposureControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.ExposureControl::SetAutoAsync(System.Boolean)
     def set_auto_async(self, value: bool, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.ExposureControl::SetValueAsync(Windows.Foundation.TimeSpan)
@@ -586,6 +616,8 @@ class ExposureControl(winrt.system.Object):
 
 @typing.final
 class ExposurePriorityVideoControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.ExposurePriorityVideoControl::get_Enabled()
     @_property
     def enabled(self) -> bool: ...
@@ -598,6 +630,8 @@ class ExposurePriorityVideoControl(winrt.system.Object):
 
 @typing.final
 class FlashControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.FlashControl::get_RedEyeReduction()
     @_property
     def red_eye_reduction(self) -> bool: ...
@@ -643,6 +677,8 @@ class FlashControl(winrt.system.Object):
 
 @typing.final
 class FocusControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.FocusControl::Configure(Windows.Media.Devices.FocusSettings)
     def configure(self, settings: FocusSettings, /) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.FocusControl::FocusAsync()
@@ -748,6 +784,8 @@ class FocusSettings(winrt.system.Object):
 
 @typing.final
 class HdrVideoControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.HdrVideoMode Windows.Media.Devices.HdrVideoControl::get_Mode()
     @_property
     def mode(self) -> HdrVideoMode: ...
@@ -763,6 +801,8 @@ class HdrVideoControl(winrt.system.Object):
 
 @typing.final
 class InfraredTorchControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Media.Devices.InfraredTorchControl::get_Power()
     @_property
     def power(self) -> winrt.system.Int32: ...
@@ -793,6 +833,8 @@ class InfraredTorchControl(winrt.system.Object):
 
 @typing.final
 class IsoSpeedControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.IsoSpeedControl::SetAutoAsync()
     def set_auto_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.IsoSpeedControl::SetPresetAsync(Windows.Media.Devices.IsoSpeedPreset)
@@ -829,12 +871,16 @@ class IsoSpeedControl(winrt.system.Object):
 
 @typing.final
 class KeypadPressedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.TelephonyKey Windows.Media.Devices.KeypadPressedEventArgs::get_TelephonyKey()
     @_property
     def telephony_key(self) -> TelephonyKey: ...
 
 @typing.final
 class LowLagPhotoControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.LowLagPhotoControl::GetCurrentFrameRate()
     def get_current_frame_rate(self) -> windows_media_mediaproperties.MediaRatio: ...
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.LowLagPhotoControl::GetHighestConcurrentFrameRate(Windows.Media.MediaProperties.IMediaEncodingProperties)
@@ -863,6 +909,8 @@ class LowLagPhotoControl(winrt.system.Object):
 
 @typing.final
 class LowLagPhotoSequenceControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.LowLagPhotoSequenceControl::GetCurrentFrameRate()
     def get_current_frame_rate(self) -> windows_media_mediaproperties.MediaRatio: ...
     # Windows.Media.MediaProperties.MediaRatio Windows.Media.Devices.LowLagPhotoSequenceControl::GetHighestConcurrentFrameRate(Windows.Media.MediaProperties.IMediaEncodingProperties)
@@ -933,10 +981,13 @@ class MediaDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MediaDevice(winrt.system.Object, metaclass=MediaDevice_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MediaDeviceControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.MediaDeviceControl::TryGetAuto(System.Boolean&)
     def try_get_auto(self) -> tuple[bool, bool]: ...
     # System.Boolean Windows.Media.Devices.MediaDeviceControl::TryGetValue(System.Double&)
@@ -951,6 +1002,8 @@ class MediaDeviceControl(winrt.system.Object):
 
 @typing.final
 class MediaDeviceControlCapabilities(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Media.Devices.MediaDeviceControlCapabilities::get_AutoModeSupported()
     @_property
     def auto_mode_supported(self) -> bool: ...
@@ -972,6 +1025,8 @@ class MediaDeviceControlCapabilities(winrt.system.Object):
 
 @typing.final
 class ModuleCommandResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Media.Devices.ModuleCommandResult::get_Result()
     @_property
     def result(self) -> windows_storage_streams.IBuffer: ...
@@ -981,6 +1036,8 @@ class ModuleCommandResult(winrt.system.Object):
 
 @typing.final
 class OpticalImageStabilizationControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.OpticalImageStabilizationMode Windows.Media.Devices.OpticalImageStabilizationControl::get_Mode()
     @_property
     def mode(self) -> OpticalImageStabilizationMode: ...
@@ -996,6 +1053,8 @@ class OpticalImageStabilizationControl(winrt.system.Object):
 
 @typing.final
 class PanelBasedOptimizationControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Enumeration.Panel Windows.Media.Devices.PanelBasedOptimizationControl::get_Panel()
     @_property
     def panel(self) -> windows_devices_enumeration.Panel: ...
@@ -1008,6 +1067,8 @@ class PanelBasedOptimizationControl(winrt.system.Object):
 
 @typing.final
 class PhotoConfirmationControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.MediaProperties.MediaPixelFormat Windows.Media.Devices.PhotoConfirmationControl::get_PixelFormat()
     @_property
     def pixel_format(self) -> windows_media_mediaproperties.MediaPixelFormat: ...
@@ -1026,6 +1087,8 @@ class PhotoConfirmationControl(winrt.system.Object):
 
 @typing.final
 class RedialRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.RedialRequestedEventArgs::Handled()
     def handled(self) -> None: ...
 
@@ -1077,6 +1140,8 @@ class RegionOfInterest(winrt.system.Object):
 
 @typing.final
 class RegionsOfInterestControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.RegionsOfInterestControl::ClearRegionsAsync()
     def clear_regions_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -1104,6 +1169,8 @@ class RegionsOfInterestControl(winrt.system.Object):
 
 @typing.final
 class SceneModeControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.SceneModeControl::SetValueAsync(Windows.Media.Devices.CaptureSceneMode)
     def set_value_async(self, scene_mode: CaptureSceneMode, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Devices.CaptureSceneMode> Windows.Media.Devices.SceneModeControl::get_SupportedModes()
@@ -1115,6 +1182,8 @@ class SceneModeControl(winrt.system.Object):
 
 @typing.final
 class TorchControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Media.Devices.TorchControl::get_PowerPercent()
     @_property
     def power_percent(self) -> winrt.system.Single: ...
@@ -1136,6 +1205,8 @@ class TorchControl(winrt.system.Object):
 
 @typing.final
 class VideoDeviceController(IMediaDeviceController, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.MediaProperties.IMediaEncodingProperties> Windows.Media.Devices.VideoDeviceController::GetAvailableMediaStreamProperties(Windows.Media.Capture.MediaStreamType)
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> _cabc.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
     # System.Object Windows.Media.Devices.VideoDeviceController::GetDeviceProperty(System.String)
@@ -1280,6 +1351,8 @@ class VideoDeviceController(IMediaDeviceController, winrt.system.Object):
 
 @typing.final
 class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyStatus Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult::get_Status()
     @_property
     def status(self) -> VideoDeviceControllerGetDevicePropertyStatus: ...
@@ -1289,6 +1362,8 @@ class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
 
 @typing.final
 class VideoTemporalDenoisingControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Media.Devices.VideoTemporalDenoisingMode Windows.Media.Devices.VideoTemporalDenoisingControl::get_Mode()
     @_property
     def mode(self) -> VideoTemporalDenoisingMode: ...
@@ -1304,6 +1379,8 @@ class VideoTemporalDenoisingControl(winrt.system.Object):
 
 @typing.final
 class WhiteBalanceControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.WhiteBalanceControl::SetPresetAsync(Windows.Media.Devices.ColorTemperaturePreset)
     def set_preset_async(self, preset: ColorTemperaturePreset, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Devices.WhiteBalanceControl::SetValueAsync(System.UInt32)
@@ -1329,6 +1406,8 @@ class WhiteBalanceControl(winrt.system.Object):
 
 @typing.final
 class ZoomControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Media.Devices.ZoomControl::Configure(Windows.Media.Devices.ZoomSettings)
     def configure(self, settings: ZoomSettings, /) -> None: ...
     # System.Single Windows.Media.Devices.ZoomControl::get_Value()

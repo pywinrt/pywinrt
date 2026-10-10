@@ -208,6 +208,8 @@ class DisplayAdapter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayAdapter(winrt.system.Object, metaclass=DisplayAdapter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Display.Core.DisplayAdapter::get_DeviceInterfacePath()
     @_property
     def device_interface_path(self) -> str: ...
@@ -241,6 +243,8 @@ class DisplayAdapter(winrt.system.Object, metaclass=DisplayAdapter_Static):
 
 @typing.final
 class DisplayDevice(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Display.Core.DisplayFence Windows.Devices.Display.Core.DisplayDevice::CreatePeriodicFence(Windows.Devices.Display.Core.DisplayTarget,Windows.Foundation.TimeSpan)
     def create_periodic_fence(self, target: DisplayTarget, offset_from_v_blank: datetime.timedelta, /) -> DisplayFence: ...
     # Windows.Devices.Display.Core.DisplaySurface Windows.Devices.Display.Core.DisplayDevice::CreatePrimary(Windows.Devices.Display.Core.DisplayTarget,Windows.Devices.Display.Core.DisplayPrimaryDescription)
@@ -263,7 +267,8 @@ class DisplayDevice(winrt.system.Object):
 
 @typing.final
 class DisplayFence(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DisplayManager_Static(winrt._winrt.Object_Static):
@@ -274,6 +279,8 @@ class DisplayManager_Static(winrt._winrt.Object_Static):
 class DisplayManager(windows_foundation.IClosable, winrt.system.Object, metaclass=DisplayManager_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Display.Core.DisplayManager::Close()
     def close(self) -> None: ...
     # Windows.Devices.Display.Core.DisplayDevice Windows.Devices.Display.Core.DisplayManager::CreateDisplayDevice(Windows.Devices.Display.Core.DisplayAdapter)
@@ -321,6 +328,8 @@ class DisplayManager(windows_foundation.IClosable, winrt.system.Object, metaclas
 
 @typing.final
 class DisplayManagerChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Display.Core.DisplayManagerChangedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayManagerChangedEventArgs::get_Handled()
@@ -332,6 +341,8 @@ class DisplayManagerChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class DisplayManagerDisabledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs::get_Handled()
@@ -343,6 +354,8 @@ class DisplayManagerDisabledEventArgs(winrt.system.Object):
 
 @typing.final
 class DisplayManagerEnabledEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs::get_Handled()
@@ -354,6 +367,8 @@ class DisplayManagerEnabledEventArgs(winrt.system.Object):
 
 @typing.final
 class DisplayManagerPathsFailedOrInvalidatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs::get_Handled()
@@ -365,6 +380,8 @@ class DisplayManagerPathsFailedOrInvalidatedEventArgs(winrt.system.Object):
 
 @typing.final
 class DisplayManagerResultWithState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Display.Core.DisplayManagerResult Windows.Devices.Display.Core.DisplayManagerResultWithState::get_ErrorCode()
     @_property
     def error_code(self) -> DisplayManagerResult: ...
@@ -377,6 +394,8 @@ class DisplayManagerResultWithState(winrt.system.Object):
 
 @typing.final
 class DisplayModeInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Display.Core.DisplayBitsPerChannel Windows.Devices.Display.Core.DisplayModeInfo::GetWireFormatSupportedBitsPerChannel(Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding)
     def get_wire_format_supported_bits_per_channel(self, encoding: DisplayWireFormatPixelEncoding, /) -> DisplayBitsPerChannel: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayModeInfo::IsWireFormatSupported(Windows.Devices.Display.Core.DisplayWireFormat)
@@ -417,6 +436,8 @@ class DisplayMuxDevice_Static(winrt._winrt.Object_Static):
 class DisplayMuxDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=DisplayMuxDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Display.Core.DisplayMuxDevice::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Display.Core.DisplayTarget> Windows.Devices.Display.Core.DisplayMuxDevice::GetAvailableMuxTargets()
@@ -447,6 +468,8 @@ class DisplayMuxDevice(windows_foundation.IClosable, winrt.system.Object, metacl
 
 @typing.final
 class DisplayPath(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Display.Core.DisplayPath::ApplyPropertiesFromMode(Windows.Devices.Display.Core.DisplayModeInfo)
     def apply_properties_from_mode(self, mode_result: DisplayModeInfo, /) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Display.Core.DisplayModeInfo> Windows.Devices.Display.Core.DisplayPath::FindModes(Windows.Devices.Display.Core.DisplayModeQueryOptions)
@@ -556,10 +579,13 @@ class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDes
 
 @typing.final
 class DisplayScanout(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DisplaySource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.Display.Core.DisplaySource::GetMetadata(System.Guid)
     def get_metadata(self, key: _uuid.UUID, /) -> windows_storage_streams.IBuffer: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Display.Core.DisplaySource::add_StatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Display.Core.DisplaySource,System.Object>)
@@ -578,6 +604,8 @@ class DisplaySource(winrt.system.Object):
 
 @typing.final
 class DisplayState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Display.Core.DisplayState::CanConnectTargetToView(Windows.Devices.Display.Core.DisplayTarget,Windows.Devices.Display.Core.DisplayView)
     def can_connect_target_to_view(self, target: DisplayTarget, view: DisplayView, /) -> bool: ...
     # Windows.Devices.Display.Core.DisplayState Windows.Devices.Display.Core.DisplayState::Clone()
@@ -620,6 +648,8 @@ class DisplayState(winrt.system.Object):
 
 @typing.final
 class DisplayStateOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Devices.Display.Core.DisplayStateOperationResult::get_ExtendedErrorCode()
     @_property
     def extended_error_code(self) -> windows_foundation.HResult: ...
@@ -629,10 +659,13 @@ class DisplayStateOperationResult(winrt.system.Object):
 
 @typing.final
 class DisplaySurface(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class DisplayTarget(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Display.Core.DisplayTarget::IsEqual(Windows.Devices.Display.Core.DisplayTarget)
     def is_equal(self, other_target: DisplayTarget, /) -> bool: ...
     # System.Boolean Windows.Devices.Display.Core.DisplayTarget::IsSame(Windows.Devices.Display.Core.DisplayTarget)
@@ -675,6 +708,8 @@ class DisplayTarget(winrt.system.Object):
 
 @typing.final
 class DisplayTask(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Display.Core.DisplayTask::SetScanout(Windows.Devices.Display.Core.DisplayScanout)
     def set_scanout(self, scanout: DisplayScanout, /) -> None: ...
     # System.Void Windows.Devices.Display.Core.DisplayTask::SetSignal(Windows.Devices.Display.Core.DisplayTaskSignalKind,Windows.Devices.Display.Core.DisplayFence)
@@ -684,6 +719,8 @@ class DisplayTask(winrt.system.Object):
 
 @typing.final
 class DisplayTaskPool(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Display.Core.DisplayTask Windows.Devices.Display.Core.DisplayTaskPool::CreateTask()
     def create_task(self) -> DisplayTask: ...
     # System.Void Windows.Devices.Display.Core.DisplayTaskPool::ExecuteTask(Windows.Devices.Display.Core.DisplayTask)
@@ -694,6 +731,8 @@ class DisplayTaskPool(winrt.system.Object):
 
 @typing.final
 class DisplayTaskResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Devices.Display.Core.DisplayTaskResult::get_PresentId()
     @_property
     def present_id(self) -> winrt.system.UInt64: ...
@@ -706,6 +745,8 @@ class DisplayTaskResult(winrt.system.Object):
 
 @typing.final
 class DisplayView(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Display.Core.DisplayView::SetPrimaryPath(Windows.Devices.Display.Core.DisplayPath)
     def set_primary_path(self, path: DisplayPath, /) -> None: ...
     # Windows.Foundation.IReference`1<Windows.Graphics.SizeInt32> Windows.Devices.Display.Core.DisplayView::get_ContentResolution()

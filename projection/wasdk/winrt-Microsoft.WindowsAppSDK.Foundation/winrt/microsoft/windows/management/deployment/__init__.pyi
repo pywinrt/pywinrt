@@ -240,6 +240,8 @@ class PackageDeploymentManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageDeploymentManager(winrt.system.Object, metaclass=PackageDeploymentManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> Microsoft.Windows.Management.Deployment.PackageDeploymentManager::AddPackageAsync(System.String,Microsoft.Windows.Management.Deployment.AddPackageOptions)
     def add_package_async(self, package: str, options: AddPackageOptions, /) -> windows_foundation.IAsyncOperationWithProgress[PackageDeploymentResult, PackageDeploymentProgress]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.Management.Deployment.PackageDeploymentResult,Microsoft.Windows.Management.Deployment.PackageDeploymentProgress> Microsoft.Windows.Management.Deployment.PackageDeploymentManager::AddPackageByUriAsync(Windows.Foundation.Uri,Microsoft.Windows.Management.Deployment.AddPackageOptions)
@@ -323,6 +325,8 @@ class PackageDeploymentManager(winrt.system.Object, metaclass=PackageDeploymentM
 
 @typing.final
 class PackageDeploymentResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Microsoft.Windows.Management.Deployment.PackageDeploymentResult::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -358,6 +362,8 @@ class PackageRuntimeManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageRuntimeManager(winrt.system.Object, metaclass=PackageRuntimeManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Microsoft.Windows.Management.Deployment.PackageSetRuntimeDisposition Microsoft.Windows.Management.Deployment.PackageRuntimeManager::AddPackageSet(Microsoft.Windows.Management.Deployment.PackageSet)
     def add_package_set(self, package_set: PackageSet, /) -> PackageSetRuntimeDisposition: ...
@@ -451,6 +457,8 @@ class PackageSetRuntimeDisposition(winrt.system.Object):
 
 @typing.final
 class PackageValidationEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageValidationEventArgs::get_Cancel()
@@ -468,6 +476,8 @@ class PackageValidationEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageValidationEventSource(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Windows.Management.Deployment.PackageValidationEventSource::add_ValidationRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.Windows.Management.Deployment.PackageValidationEventSource,Microsoft.Windows.Management.Deployment.PackageValidationEventArgs>)
     def add_validation_requested(self, handler: windows_foundation.TypedEventHandler[PackageValidationEventSource, PackageValidationEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Windows.Management.Deployment.PackageValidationEventSource::remove_ValidationRequested(Windows.Foundation.EventRegistrationToken)
@@ -501,6 +511,8 @@ class PackageVolume_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageVolume(winrt.system.Object, metaclass=PackageVolume_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.UInt64> Microsoft.Windows.Management.Deployment.PackageVolume::GetAvailableSpaceAsync()
     def get_available_space_async(self) -> windows_foundation.IAsyncOperation[winrt.system.UInt64]: ...
     # System.Boolean Microsoft.Windows.Management.Deployment.PackageVolume::IsOffline()

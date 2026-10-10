@@ -194,6 +194,8 @@ class PreviewBuildsManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.PreviewBuildsState Windows.Management.Update.PreviewBuildsManager::GetCurrentState()
     def get_current_state(self) -> PreviewBuildsState: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Management.Update.PreviewBuildsManager::SyncAsync()
@@ -207,6 +209,8 @@ class PreviewBuildsManager(winrt.system.Object, metaclass=PreviewBuildsManager_S
 
 @typing.final
 class PreviewBuildsState(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.Management.Update.PreviewBuildsState::get_Properties()
     @_property
     def properties(self) -> windows_foundation_collections.ValueSet: ...
@@ -308,6 +312,8 @@ class WindowsSoftwareUpdateActionInfo(winrt.system.Object):
 
 @typing.final
 class WindowsSoftwareUpdateActionProgress(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsSoftwareUpdateActionProgress::get_Action()
     @_property
     def action(self) -> str: ...
@@ -320,6 +326,8 @@ class WindowsSoftwareUpdateActionProgress(winrt.system.Object):
 
 @typing.final
 class WindowsSoftwareUpdateActionResultInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsSoftwareUpdateActionResultInfo::get_Action()
     @_property
     def action(self) -> str: ...
@@ -505,6 +513,8 @@ class WindowsSoftwareUpdateProviderActionResult(winrt.system.Object):
 
 @typing.final
 class WindowsSoftwareUpdateProviderPayloadFileInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo::get_CatalogFile()
     @_property
     def catalog_file(self) -> str: ...
@@ -590,6 +600,8 @@ class WindowsSoftwareUpdateVersion(winrt.system.Object):
 
 @typing.final
 class WindowsUpdate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Management.Update.WindowsUpdate::AcceptEula()
     def accept_eula(self) -> None: ...
     # System.Object Windows.Management.Update.WindowsUpdate::GetPropertyValue(System.String)
@@ -663,6 +675,8 @@ class WindowsUpdate(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsUpdateActionCompletedEventArgs::get_Action()
     @_property
     def action(self) -> str: ...
@@ -678,6 +692,8 @@ class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionProgress(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsUpdateActionProgress::get_Action()
     @_property
     def action(self) -> str: ...
@@ -687,6 +703,8 @@ class WindowsUpdateActionProgress(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateActionResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsUpdateActionResult::get_Action()
     @_property
     def action(self) -> str: ...
@@ -717,6 +735,8 @@ class WindowsUpdateAdministrator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowsUpdateAdministrator(winrt.system.Object, metaclass=WindowsUpdateAdministrator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Management.Update.WindowsUpdateAdministrator::ApproveWindowsUpdate(System.String,Windows.Management.Update.WindowsUpdateApprovalData)
     def approve_windows_update(self, update_id: str, approval_data: WindowsUpdateApprovalData, /) -> None: ...
     # System.Void Windows.Management.Update.WindowsUpdateAdministrator::ApproveWindowsUpdateAction(System.String,System.String)
@@ -766,6 +786,8 @@ class WindowsUpdateApprovalData(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.WindowsUpdateAttentionRequiredReason Windows.Management.Update.WindowsUpdateAttentionRequiredInfo::get_Reason()
     @_property
     def reason(self) -> WindowsUpdateAttentionRequiredReason: ...
@@ -775,6 +797,8 @@ class WindowsUpdateAttentionRequiredInfo(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.WindowsUpdateAttentionRequiredReason Windows.Management.Update.WindowsUpdateAttentionRequiredReasonChangedEventArgs::get_Reason()
     @_property
     def reason(self) -> WindowsUpdateAttentionRequiredReason: ...
@@ -784,6 +808,8 @@ class WindowsUpdateAttentionRequiredReasonChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateGetAdministratorResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.WindowsUpdateAdministrator Windows.Management.Update.WindowsUpdateGetAdministratorResult::get_Administrator()
     @_property
     def administrator(self) -> WindowsUpdateAdministrator: ...
@@ -793,6 +819,8 @@ class WindowsUpdateGetAdministratorResult(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Management.Update.WindowsUpdateItem::get_Category()
     @_property
     def category(self) -> str: ...
@@ -877,6 +905,8 @@ class WindowsUpdateManager(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Management.Update.WindowsUpdateActionProgress Windows.Management.Update.WindowsUpdateProgressChangedEventArgs::get_ActionProgress()
     @_property
     def action_progress(self) -> WindowsUpdateActionProgress: ...
@@ -935,6 +965,8 @@ class WindowsUpdateRestartRequestOptions(winrt.system.Object):
 
 @typing.final
 class WindowsUpdateScanCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Management.Update.WindowsUpdateScanCompletedEventArgs::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...

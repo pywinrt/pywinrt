@@ -46,6 +46,8 @@ class HidReportType(enum.IntEnum):
 
 @typing.final
 class HidBooleanControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.HumanInterfaceDevice.HidBooleanControl::get_IsActive()
     @_property
     def is_active(self) -> bool: ...
@@ -67,6 +69,8 @@ class HidBooleanControl(winrt.system.Object):
 
 @typing.final
 class HidBooleanControlDescription(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription::get_Id()
     @_property
     def id(self) -> winrt.system.UInt32: ...
@@ -91,6 +95,8 @@ class HidBooleanControlDescription(winrt.system.Object):
 
 @typing.final
 class HidCollection(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Devices.HumanInterfaceDevice.HidCollection::get_Id()
     @_property
     def id(self) -> winrt.system.UInt32: ...
@@ -123,6 +129,8 @@ class HidDevice_Static(winrt._winrt.Object_Static):
 class HidDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=HidDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.HumanInterfaceDevice.HidDevice::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -195,6 +203,8 @@ class HidDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=Hid
 
 @typing.final
 class HidFeatureReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidFeatureReport::GetBooleanControl(System.UInt16,System.UInt16)
     def get_boolean_control(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> HidBooleanControl: ...
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidFeatureReport::GetBooleanControlByDescription(Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription)
@@ -215,6 +225,8 @@ class HidFeatureReport(winrt.system.Object):
 
 @typing.final
 class HidInputReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidInputReport::GetBooleanControl(System.UInt16,System.UInt16)
     def get_boolean_control(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> HidBooleanControl: ...
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidInputReport::GetBooleanControlByDescription(Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription)
@@ -238,12 +250,16 @@ class HidInputReport(winrt.system.Object):
 
 @typing.final
 class HidInputReportReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.HumanInterfaceDevice.HidInputReport Windows.Devices.HumanInterfaceDevice.HidInputReportReceivedEventArgs::get_Report()
     @_property
     def report(self) -> HidInputReport: ...
 
 @typing.final
 class HidNumericControl(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int64 Windows.Devices.HumanInterfaceDevice.HidNumericControl::get_Value()
     @_property
     def value(self) -> winrt.system.Int64: ...
@@ -274,6 +290,8 @@ class HidNumericControl(winrt.system.Object):
 
 @typing.final
 class HidNumericControlDescription(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.HumanInterfaceDevice.HidNumericControlDescription::get_HasNull()
     @_property
     def has_null(self) -> bool: ...
@@ -325,6 +343,8 @@ class HidNumericControlDescription(winrt.system.Object):
 
 @typing.final
 class HidOutputReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidOutputReport::GetBooleanControl(System.UInt16,System.UInt16)
     def get_boolean_control(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> HidBooleanControl: ...
     # Windows.Devices.HumanInterfaceDevice.HidBooleanControl Windows.Devices.HumanInterfaceDevice.HidOutputReport::GetBooleanControlByDescription(Windows.Devices.HumanInterfaceDevice.HidBooleanControlDescription)

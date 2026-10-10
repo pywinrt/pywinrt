@@ -183,6 +183,8 @@ class SmsEncodedLength:
 @typing.final
 @deprecated("DeleteSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class DeleteSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessageOperation::Close()
@@ -208,6 +210,8 @@ class DeleteSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundat
 @typing.final
 @deprecated("DeleteSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
 class DeleteSmsMessagesOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.DeleteSmsMessagesOperation::Close()
@@ -233,6 +237,8 @@ class DeleteSmsMessagesOperation(windows_foundation.IAsyncAction, windows_founda
 @typing.final
 @deprecated("GetSmsDeviceOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsDeviceOperation(windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsDeviceOperation::Close()
@@ -258,6 +264,8 @@ class GetSmsDeviceOperation(windows_foundation.IAsyncOperation[SmsDevice], windo
 @typing.final
 @deprecated("GetSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsMessageOperation(windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessageOperation::Close()
@@ -283,6 +291,8 @@ class GetSmsMessageOperation(windows_foundation.IAsyncOperation[ISmsMessage], wi
 @typing.final
 @deprecated("GetSmsMessagesOperation may be altered or unavailable for releases after Windows 10.")
 class GetSmsMessagesOperation(windows_foundation.IAsyncOperationWithProgress[_cabc.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.GetSmsMessagesOperation::Close()
@@ -314,6 +324,8 @@ class GetSmsMessagesOperation(windows_foundation.IAsyncOperationWithProgress[_ca
 @typing.final
 @deprecated("SendSmsMessageOperation may be altered or unavailable for releases after Windows 10.")
 class SendSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Windows.Devices.Sms.SendSmsMessageOperation::Close()
@@ -448,6 +460,8 @@ class SmsBinaryMessage(ISmsBinaryMessage, ISmsMessage, winrt.system.Object):
 
 @typing.final
 class SmsBroadcastMessage(ISmsMessageBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Sms.SmsBroadcastMessage::get_Body()
     @_property
     def body(self) -> str: ...
@@ -512,6 +526,8 @@ class SmsDevice_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
 class SmsDevice(ISmsDevice, winrt.system.Object, metaclass=SmsDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.SmsDevice::CalculateLength(Windows.Devices.Sms.SmsTextMessage)
     @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
@@ -560,6 +576,8 @@ class SmsDevice2_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.SmsEncodedLength Windows.Devices.Sms.SmsDevice2::CalculateLength(Windows.Devices.Sms.ISmsMessageBase)
     def calculate_length(self, message: ISmsMessageBase, /) -> SmsEncodedLength: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.SmsSendMessageResult> Windows.Devices.Sms.SmsDevice2::SendMessageAndGetResultAsync(Windows.Devices.Sms.ISmsMessageBase)
@@ -593,6 +611,8 @@ class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
 @typing.final
 @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
 class SmsDeviceMessageStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Sms.SmsDeviceMessageStore::DeleteMessageAsync(System.UInt32)
     @deprecated("SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.")
     def delete_message_async(self, message_id: winrt.system.UInt32, /) -> windows_foundation.IAsyncAction: ...
@@ -669,6 +689,8 @@ class SmsFilterRules(winrt.system.Object):
 @typing.final
 @deprecated("SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.")
 class SmsMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.SmsBinaryMessage Windows.Devices.Sms.SmsMessageReceivedEventArgs::get_BinaryMessage()
     @_property
     @deprecated("SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.")
@@ -680,6 +702,8 @@ class SmsMessageReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class SmsMessageReceivedTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.SmsMessageReceivedTriggerDetails::Accept()
     def accept(self) -> None: ...
     # System.Void Windows.Devices.Sms.SmsMessageReceivedTriggerDetails::Drop()
@@ -716,6 +740,8 @@ class SmsMessageRegistration_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SmsMessageRegistration(winrt.system.Object, metaclass=SmsMessageRegistration_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sms.SmsMessageRegistration::Unregister()
     def unregister(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sms.SmsMessageRegistration::add_MessageReceived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sms.SmsMessageRegistration,Windows.Devices.Sms.SmsMessageReceivedTriggerDetails>)
@@ -729,6 +755,8 @@ class SmsMessageRegistration(winrt.system.Object, metaclass=SmsMessageRegistrati
 @typing.final
 @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
 class SmsReceivedEventDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Sms.SmsReceivedEventDetails::get_DeviceId()
     @_property
     @deprecated("SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.")
@@ -748,6 +776,8 @@ class SmsReceivedEventDetails(winrt.system.Object):
 
 @typing.final
 class SmsSendMessageResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsSendMessageResult::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -772,6 +802,8 @@ class SmsSendMessageResult(winrt.system.Object):
 
 @typing.final
 class SmsStatusMessage(ISmsMessageBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsStatusMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -949,6 +981,8 @@ class SmsTextMessage2(ISmsMessageBase, winrt.system.Object):
 
 @typing.final
 class SmsVoicemailMessage(ISmsMessageBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsVoicemailMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...
@@ -979,6 +1013,8 @@ class SmsVoicemailMessage(ISmsMessageBase, winrt.system.Object):
 
 @typing.final
 class SmsWapMessage(ISmsMessageBase, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.CellularClass Windows.Devices.Sms.SmsWapMessage::get_CellularClass()
     @_property
     def cellular_class(self) -> CellularClass: ...

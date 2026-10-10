@@ -33,5 +33,6 @@ class XamlOptionalChanges_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class XamlOptionalChanges(winrt.system.Object, metaclass=XamlOptionalChanges_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 

@@ -47,6 +47,8 @@ class BarcodeScannerTriggerState(enum.IntEnum):
 
 @typing.final
 class BarcodeScannerDisableScannerRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -69,6 +71,8 @@ class BarcodeScannerDisableScannerRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerDisableScannerRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequest Windows.Devices.PointOfService.Provider.BarcodeScannerDisableScannerRequestEventArgs::get_Request()
@@ -77,6 +81,8 @@ class BarcodeScannerDisableScannerRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerEnableScannerRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -99,6 +105,8 @@ class BarcodeScannerEnableScannerRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerEnableScannerRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequest Windows.Devices.PointOfService.Provider.BarcodeScannerEnableScannerRequestEventArgs::get_Request()
@@ -109,6 +117,8 @@ class BarcodeScannerEnableScannerRequestEventArgs(winrt.system.Object):
 class BarcodeScannerFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReader::StartAsync()
@@ -127,11 +137,15 @@ class BarcodeScannerFrameReader(windows_foundation.IClosable, winrt.system.Objec
 
 @typing.final
 class BarcodeScannerFrameReaderFrameArrivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerFrameReaderFrameArrivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class BarcodeScannerGetSymbologyAttributesRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest::ReportCompletedAsync(Windows.Devices.PointOfService.BarcodeSymbologyAttributes)
     def report_completed_async(self, attributes: windows_devices_pointofservice.BarcodeSymbologyAttributes, /) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -157,6 +171,8 @@ class BarcodeScannerGetSymbologyAttributesRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerGetSymbologyAttributesRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequest Windows.Devices.PointOfService.Provider.BarcodeScannerGetSymbologyAttributesRequestEventArgs::get_Request()
@@ -165,6 +181,8 @@ class BarcodeScannerGetSymbologyAttributesRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerHideVideoPreviewRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -187,6 +205,8 @@ class BarcodeScannerHideVideoPreviewRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerHideVideoPreviewRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequest Windows.Devices.PointOfService.Provider.BarcodeScannerHideVideoPreviewRequestEventArgs::get_Request()
@@ -197,6 +217,8 @@ class BarcodeScannerHideVideoPreviewRequestEventArgs(winrt.system.Object):
 class BarcodeScannerProviderConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -294,12 +316,16 @@ class BarcodeScannerProviderConnection(windows_foundation.IClosable, winrt.syste
 
 @typing.final
 class BarcodeScannerProviderTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.PointOfService.Provider.BarcodeScannerProviderConnection Windows.Devices.PointOfService.Provider.BarcodeScannerProviderTriggerDetails::get_Connection()
     @_property
     def connection(self) -> BarcodeScannerProviderConnection: ...
 
 @typing.final
 class BarcodeScannerSetActiveSymbologiesRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -325,6 +351,8 @@ class BarcodeScannerSetActiveSymbologiesRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerSetActiveSymbologiesRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequest Windows.Devices.PointOfService.Provider.BarcodeScannerSetActiveSymbologiesRequestEventArgs::get_Request()
@@ -333,6 +361,8 @@ class BarcodeScannerSetActiveSymbologiesRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerSetSymbologyAttributesRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -361,6 +391,8 @@ class BarcodeScannerSetSymbologyAttributesRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerSetSymbologyAttributesRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequest Windows.Devices.PointOfService.Provider.BarcodeScannerSetSymbologyAttributesRequestEventArgs::get_Request()
@@ -369,6 +401,8 @@ class BarcodeScannerSetSymbologyAttributesRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerStartSoftwareTriggerRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -391,6 +425,8 @@ class BarcodeScannerStartSoftwareTriggerRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerStartSoftwareTriggerRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequest Windows.Devices.PointOfService.Provider.BarcodeScannerStartSoftwareTriggerRequestEventArgs::get_Request()
@@ -399,6 +435,8 @@ class BarcodeScannerStartSoftwareTriggerRequestEventArgs(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerStopSoftwareTriggerRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest::ReportCompletedAsync()
     def report_completed_async(self) -> windows_foundation.IAsyncAction: ...
     @typing.overload
@@ -421,6 +459,8 @@ class BarcodeScannerStopSoftwareTriggerRequest(winrt.system.Object):
 
 @typing.final
 class BarcodeScannerStopSoftwareTriggerRequestEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequest Windows.Devices.PointOfService.Provider.BarcodeScannerStopSoftwareTriggerRequestEventArgs::get_Request()
@@ -431,6 +471,8 @@ class BarcodeScannerStopSoftwareTriggerRequestEventArgs(winrt.system.Object):
 class BarcodeScannerVideoFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame::Close()
     def close(self) -> None: ...
     # Windows.Graphics.Imaging.BitmapPixelFormat Windows.Devices.PointOfService.Provider.BarcodeScannerVideoFrame::get_Format()

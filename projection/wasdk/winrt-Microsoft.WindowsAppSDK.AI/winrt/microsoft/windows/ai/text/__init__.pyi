@@ -122,6 +122,8 @@ class ConversationSummaryOptions(winrt.system.Object):
 
 @typing.final
 class GenerateStructuredJsonResponseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.Windows.AI.Text.GenerateStructuredJsonResponseResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -145,6 +147,8 @@ class LanguageModel_Static(winrt._winrt.Object_Static):
 class LanguageModel(windows_foundation.IClosable, winrt.system.Object, metaclass=LanguageModel_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Text.LanguageModel::Close()
     def close(self) -> None: ...
     @typing.overload
@@ -199,11 +203,15 @@ class LanguageModel(windows_foundation.IClosable, winrt.system.Object, metaclass
 class LanguageModelContext(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Text.LanguageModelContext::Close()
     def close(self) -> None: ...
 
 @typing.final
 class LanguageModelEmbeddingVectorResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.AI.Foundation.EmbeddingVector> Microsoft.Windows.AI.Text.LanguageModelEmbeddingVectorResult::get_EmbeddingVectors()
     @_property
     def embedding_vectors(self) -> _cabc.Sequence[microsoft_windows_ai_foundation.EmbeddingVector]: ...
@@ -223,11 +231,15 @@ class LanguageModelLowRankAdapter_Static(winrt._winrt.Object_Static):
 class LanguageModelLowRankAdapter(windows_foundation.IClosable, winrt.system.Object, metaclass=LanguageModelLowRankAdapter_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.AI.Text.LanguageModelLowRankAdapter::Close()
     def close(self) -> None: ...
 
 @typing.final
 class LanguageModelLowRankAdapterResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -271,6 +283,8 @@ class LanguageModelOptions(winrt.system.Object):
 
 @typing.final
 class LanguageModelResponseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Microsoft.Windows.AI.Text.LanguageModelResponseResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -317,6 +331,8 @@ class TextToTableConverter(winrt.system.Object):
 
 @typing.final
 class TextToTableResponseResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.AI.Text.TextToTableRow[] Microsoft.Windows.AI.Text.TextToTableResponseResult::GetRows()
     def get_rows(self) -> winrt.system.Array[TextToTableRow]: ...
     # Windows.Foundation.HResult Microsoft.Windows.AI.Text.TextToTableResponseResult::get_ExtendedError()
@@ -328,6 +344,8 @@ class TextToTableResponseResult(winrt.system.Object):
 
 @typing.final
 class TextToTableRow(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String[] Microsoft.Windows.AI.Text.TextToTableRow::GetColumns()
     def get_columns(self) -> winrt.system.Array[str]: ...
 

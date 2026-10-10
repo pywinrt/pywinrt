@@ -151,6 +151,8 @@ class BitmapSource_Static(windows_ui_xaml_media.ImageSource_Static):
     def pixel_width_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class BitmapSource(windows_ui_xaml_media.ImageSource, metaclass=BitmapSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Windows.UI.Xaml.Media.Imaging.BitmapSource::SetSource(Windows.Storage.Streams.IRandomAccessStream)
     def set_source(self, stream_source: windows_storage_streams.IRandomAccessStream, /) -> None: ...
@@ -168,6 +170,8 @@ class BitmapSource(windows_ui_xaml_media.ImageSource, metaclass=BitmapSource_Sta
 
 @typing.final
 class DownloadProgressEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs::get_Progress()
     @_property
     def progress(self) -> winrt.system.Int32: ...
@@ -283,13 +287,16 @@ class SvgImageSource(windows_ui_xaml_media.ImageSource, metaclass=SvgImageSource
 
 @typing.final
 class SvgImageSourceFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Imaging.SvgImageSourceLoadStatus Windows.UI.Xaml.Media.Imaging.SvgImageSourceFailedEventArgs::get_Status()
     @_property
     def status(self) -> SvgImageSourceLoadStatus: ...
 
 @typing.final
 class SvgImageSourceOpenedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class VirtualSurfaceImageSource(SurfaceImageSource):
@@ -312,6 +319,8 @@ class XamlRenderingBackgroundTask_Static(winrt._winrt.Object_Static):
 
 class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBackgroundTask_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Media.Imaging.XamlRenderingBackgroundTask::OnRun(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     def _on_run(self, task_instance: windows_applicationmodel_background.IBackgroundTaskInstance, /) -> None: ...
 

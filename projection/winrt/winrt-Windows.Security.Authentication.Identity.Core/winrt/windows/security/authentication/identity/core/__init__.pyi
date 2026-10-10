@@ -69,6 +69,8 @@ class MicrosoftAccountMultiFactorAuthenticationManager_Static(winrt._winrt.Objec
 
 @typing.final
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, metaclass=MicrosoftAccountMultiFactorAuthenticationManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse> Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::AddDeviceAsync(System.String,System.String,System.String)
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> windows_foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     @typing.overload
@@ -104,6 +106,8 @@ class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object, meta
 
 @typing.final
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult::get_ServiceResponse()
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
@@ -113,6 +117,8 @@ class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo::get_Code()
     @_property
     def code(self) -> str: ...
@@ -128,6 +134,8 @@ class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo::get_ApprovalStatus()
     @_property
     def approval_status(self) -> MicrosoftAccountMultiFactorSessionApprovalStatus: ...
@@ -152,6 +160,8 @@ class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
 
 @typing.final
 class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo::get_ServiceResponse()
     @_property
     def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...

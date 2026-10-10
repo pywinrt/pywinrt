@@ -572,6 +572,8 @@ class CoreWebView2PhysicalKeyStatus:
 
 @typing.final
 class CoreWebView2(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2::AddHostObjectToScript(System.String,System.Object)
     def add_host_object_to_script(self, name: str, raw_object: winrt.system.Object, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Microsoft.Web.WebView2.Core.CoreWebView2::AddScriptToExecuteOnDocumentCreatedAsync(System.String)
@@ -876,6 +878,8 @@ class CoreWebView2(winrt.system.Object):
 
 @typing.final
 class CoreWebView2AcceleratorKeyPressedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2AcceleratorKeyPressedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -903,6 +907,8 @@ class CoreWebView2AcceleratorKeyPressedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2BasicAuthenticationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs::get_Cancel()
@@ -923,6 +929,8 @@ class CoreWebView2BasicAuthenticationRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2BasicAuthenticationResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse::get_UserName()
     @_property
     def user_name(self) -> str: ...
@@ -938,6 +946,8 @@ class CoreWebView2BasicAuthenticationResponse(winrt.system.Object):
 
 @typing.final
 class CoreWebView2BrowserExtension(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension::EnableAsync(System.Boolean)
     def enable_async(self, is_enabled: bool, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension::RemoveAsync()
@@ -954,6 +964,8 @@ class CoreWebView2BrowserExtension(winrt.system.Object):
 
 @typing.final
 class CoreWebView2BrowserProcessExitedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitKind Microsoft.Web.WebView2.Core.CoreWebView2BrowserProcessExitedEventArgs::get_BrowserProcessExitKind()
     @_property
     def browser_process_exit_kind(self) -> CoreWebView2BrowserProcessExitKind: ...
@@ -963,6 +975,8 @@ class CoreWebView2BrowserProcessExitedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2Certificate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Certificates.Certificate Microsoft.Web.WebView2.Core.CoreWebView2Certificate::ToCertificate()
     def to_certificate(self) -> windows_security_cryptography_certificates.Certificate: ...
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2Certificate::ToPemEncoding()
@@ -991,6 +1005,8 @@ class CoreWebView2Certificate(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ClientCertificate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Cryptography.Certificates.Certificate Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate::ToCertificate()
     def to_certificate(self) -> windows_security_cryptography_certificates.Certificate: ...
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate::ToPemEncoding()
@@ -1022,6 +1038,8 @@ class CoreWebView2ClientCertificate(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ClientCertificateRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificate Microsoft.Web.WebView2.Core.CoreWebView2ClientCertificateRequestedEventArgs::get_SelectedCertificate()
@@ -1060,6 +1078,8 @@ class CoreWebView2ClientCertificateRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2CompositionController(CoreWebView2Controller):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.Web.WebView2.Core.CoreWebView2CompositionController::DragEnter(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride)
     def drag_enter(self, drag_info: windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo, drag_ui_override: windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride, /) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2CompositionController::DragLeave()
@@ -1096,6 +1116,8 @@ class CoreWebView2CompositionController(CoreWebView2Controller):
 
 @typing.final
 class CoreWebView2ContentLoadingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs::get_IsErrorPage()
     @_property
     def is_error_page(self) -> bool: ...
@@ -1105,6 +1127,8 @@ class CoreWebView2ContentLoadingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ContextMenuItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem::add_CustomItemSelected(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem,System.Object>)
     def add_custom_item_selected(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ContextMenuItem, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem::remove_CustomItemSelected(Windows.Foundation.EventRegistrationToken)
@@ -1145,6 +1169,8 @@ class CoreWebView2ContextMenuItem(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ContextMenuRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs::get_SelectedCommandId()
@@ -1171,6 +1197,8 @@ class CoreWebView2ContextMenuRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ContextMenuTarget(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget::get_FrameUri()
     @_property
     def frame_uri(self) -> str: ...
@@ -1216,6 +1244,8 @@ class CoreWebView2Controller_Static(winrt._winrt.Object_Static):
 
 class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controller_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Controller::Close()
     def close(self) -> None: ...
@@ -1338,6 +1368,8 @@ class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controll
 
 @typing.final
 class CoreWebView2ControllerOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2ControllerOptions::get_ProfileName()
     @_property
     def profile_name(self) -> str: ...
@@ -1378,6 +1410,8 @@ class CoreWebView2ControllerWindowReference_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreWebView2ControllerWindowReference(winrt.system.Object, metaclass=CoreWebView2ControllerWindowReference_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Core.CoreWindow Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference::get_CoreWindow()
     @_property
     def core_window(self) -> windows_ui_core.CoreWindow: ...
@@ -1387,6 +1421,8 @@ class CoreWebView2ControllerWindowReference(winrt.system.Object, metaclass=CoreW
 
 @typing.final
 class CoreWebView2Cookie(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2Cookie::get_Value()
     @_property
     def value(self) -> str: ...
@@ -1432,6 +1468,8 @@ class CoreWebView2Cookie(winrt.system.Object):
 
 @typing.final
 class CoreWebView2CookieManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2CookieManager::AddOrUpdateCookie(Microsoft.Web.WebView2.Core.CoreWebView2Cookie)
     def add_or_update_cookie(self, cookie: CoreWebView2Cookie, /) -> None: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2Cookie Microsoft.Web.WebView2.Core.CoreWebView2CookieManager::CopyCookie(Microsoft.Web.WebView2.Core.CoreWebView2Cookie)
@@ -1473,12 +1511,16 @@ class CoreWebView2CustomSchemeRegistration(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DOMContentLoadedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2DOMContentLoadedEventArgs::get_NavigationId()
     @_property
     def navigation_id(self) -> winrt.system.UInt64: ...
 
 @typing.final
 class CoreWebView2DedicatedWorker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsJson(System.String)
     def post_web_message_as_json(self, web_message_as_json: str, /) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorker::PostWebMessageAsString(System.String)
@@ -1501,6 +1543,8 @@ class CoreWebView2DedicatedWorker(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DedicatedWorkerCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo Microsoft.Web.WebView2.Core.CoreWebView2DedicatedWorkerCreatedEventArgs::get_OriginalSourceFrameInfo()
     @_property
     def original_source_frame_info(self) -> CoreWebView2FrameInfo: ...
@@ -1510,6 +1554,8 @@ class CoreWebView2DedicatedWorkerCreatedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DevToolsProtocolEventReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs::get_ParameterObjectAsJson()
     @_property
     def parameter_object_as_json(self) -> str: ...
@@ -1519,6 +1565,8 @@ class CoreWebView2DevToolsProtocolEventReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DevToolsProtocolEventReceiver(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver::add_DevToolsProtocolEventReceived(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2,Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceivedEventArgs>)
     def add_dev_tools_protocol_event_received(self, handler: windows_foundation.TypedEventHandler[CoreWebView2, CoreWebView2DevToolsProtocolEventReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DevToolsProtocolEventReceiver::remove_DevToolsProtocolEventReceived(Windows.Foundation.EventRegistrationToken)
@@ -1526,6 +1574,8 @@ class CoreWebView2DevToolsProtocolEventReceiver(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DownloadOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation::Cancel()
     def cancel(self) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2DownloadOperation::Pause()
@@ -1577,6 +1627,8 @@ class CoreWebView2DownloadOperation(winrt.system.Object):
 
 @typing.final
 class CoreWebView2DownloadStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2DownloadStartingEventArgs::get_ResultFilePath()
@@ -1621,6 +1673,8 @@ class CoreWebView2Environment_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreWebView2Environment(winrt.system.Object, metaclass=CoreWebView2Environment_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateContextMenuItem(System.String,Windows.Storage.Streams.IRandomAccessStream,Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItemKind)
     def create_context_menu_item(self, label: str, icon_stream: windows_storage_streams.IRandomAccessStream, kind: CoreWebView2ContextMenuItemKind, /) -> CoreWebView2ContextMenuItem: ...
     @typing.overload
@@ -1757,6 +1811,8 @@ class CoreWebView2EnvironmentOptions(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ExecuteScriptResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2ExecuteScriptResult::TryGetResultAsString(System.String&)
     def try_get_result_as_string(self) -> tuple[winrt.system.Int32, str]: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2ScriptException Microsoft.Web.WebView2.Core.CoreWebView2ExecuteScriptResult::get_Exception()
@@ -1771,12 +1827,16 @@ class CoreWebView2ExecuteScriptResult(winrt.system.Object):
 
 @typing.final
 class CoreWebView2File(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2File::get_Path()
     @_property
     def path(self) -> str: ...
 
 @typing.final
 class CoreWebView2FileSystemHandle(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandleKind Microsoft.Web.WebView2.Core.CoreWebView2FileSystemHandle::get_Kind()
     @_property
     def kind(self) -> CoreWebView2FileSystemHandleKind: ...
@@ -1789,6 +1849,8 @@ class CoreWebView2FileSystemHandle(winrt.system.Object):
 
 @typing.final
 class CoreWebView2Find(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindNext()
     def find_next(self) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Find::FindPrevious()
@@ -1814,6 +1876,8 @@ class CoreWebView2Find(winrt.system.Object):
 
 @typing.final
 class CoreWebView2FindOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2FindOptions::get_SuppressDefaultFindDialog()
     @_property
     def suppress_default_find_dialog(self) -> bool: ...
@@ -1847,6 +1911,8 @@ class CoreWebView2FindOptions(winrt.system.Object):
 
 @typing.final
 class CoreWebView2Frame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Microsoft.Web.WebView2.Core.CoreWebView2Frame::ExecuteScriptAsync(System.String)
     def execute_script_async(self, java_script: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Frame::IsDestroyed()
@@ -1912,12 +1978,16 @@ class CoreWebView2Frame(winrt.system.Object):
 
 @typing.final
 class CoreWebView2FrameCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2Frame Microsoft.Web.WebView2.Core.CoreWebView2FrameCreatedEventArgs::get_Frame()
     @_property
     def frame(self) -> CoreWebView2Frame: ...
 
 @typing.final
 class CoreWebView2FrameInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo::get_Name()
     @_property
     def name(self) -> str: ...
@@ -1938,6 +2008,8 @@ class CoreWebView2FrameInfo(winrt.system.Object):
 class CoreWebView2HttpHeadersCollectionIterator(windows_foundation_collections.IIterator[windows_foundation_collections.IKeyValuePair[str, str]], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> windows_foundation_collections.IKeyValuePair[str, str]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator::GetMany(Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>[])
     def get_many(self, items: winrt.system.Array[windows_foundation_collections.IKeyValuePair[str, str]] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2HttpHeadersCollectionIterator::MoveNext()
@@ -1952,6 +2024,8 @@ class CoreWebView2HttpHeadersCollectionIterator(windows_foundation_collections.I
 @typing.final
 class CoreWebView2HttpRequestHeaders(winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[windows_foundation_collections.IKeyValuePair[str, str]]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders::Contains(System.String)
     def contains(self, name: str, /) -> bool: ...
     # Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,System.String>> Microsoft.Web.WebView2.Core.CoreWebView2HttpRequestHeaders::First()
@@ -1968,6 +2042,8 @@ class CoreWebView2HttpRequestHeaders(winrt.system.Object):
 @typing.final
 class CoreWebView2HttpResponseHeaders(winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[windows_foundation_collections.IKeyValuePair[str, str]]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders::AppendHeader(System.String,System.String)
     def append_header(self, name: str, value: str, /) -> None: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders::Contains(System.String)
@@ -1981,6 +2057,8 @@ class CoreWebView2HttpResponseHeaders(winrt.system.Object):
 
 @typing.final
 class CoreWebView2LaunchingExternalUriSchemeEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2LaunchingExternalUriSchemeEventArgs::get_Cancel()
@@ -2001,6 +2079,8 @@ class CoreWebView2LaunchingExternalUriSchemeEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2MoveFocusRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2MoveFocusRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -2013,6 +2093,8 @@ class CoreWebView2MoveFocusRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2NavigationCompletedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs::get_IsSuccess()
     @_property
     def is_success(self) -> bool: ...
@@ -2028,6 +2110,8 @@ class CoreWebView2NavigationCompletedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2NavigationStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -2061,6 +2145,8 @@ class CoreWebView2NavigationStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2NewWindowRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2 Microsoft.Web.WebView2.Core.CoreWebView2NewWindowRequestedEventArgs::get_NewWindow()
@@ -2093,12 +2179,16 @@ class CoreWebView2NewWindowRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2NonClientRegionChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionKind Microsoft.Web.WebView2.Core.CoreWebView2NonClientRegionChangedEventArgs::get_RegionKind()
     @_property
     def region_kind(self) -> CoreWebView2NonClientRegionKind: ...
 
 @typing.final
 class CoreWebView2Notification(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Notification::ReportClicked()
     def report_clicked(self) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Notification::ReportClosed()
@@ -2151,6 +2241,8 @@ class CoreWebView2Notification(winrt.system.Object):
 
 @typing.final
 class CoreWebView2NotificationReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2NotificationReceivedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2NotificationReceivedEventArgs::get_Handled()
@@ -2168,6 +2260,8 @@ class CoreWebView2NotificationReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2PermissionRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2PermissionState Microsoft.Web.WebView2.Core.CoreWebView2PermissionRequestedEventArgs::get_State()
@@ -2200,6 +2294,8 @@ class CoreWebView2PermissionRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2PermissionSetting(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2PermissionKind Microsoft.Web.WebView2.Core.CoreWebView2PermissionSetting::get_PermissionKind()
     @_property
     def permission_kind(self) -> CoreWebView2PermissionKind: ...
@@ -2212,6 +2308,8 @@ class CoreWebView2PermissionSetting(winrt.system.Object):
 
 @typing.final
 class CoreWebView2PointerInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2PointerInfo::get_TouchPressure()
     @_property
     def touch_pressure(self) -> winrt.system.UInt32: ...
@@ -2383,6 +2481,8 @@ class CoreWebView2PointerInfo(winrt.system.Object):
 
 @typing.final
 class CoreWebView2PrintSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2PrintSettings::get_ShouldPrintSelectionOnly()
     @_property
     def should_print_selection_only(self) -> bool: ...
@@ -2512,6 +2612,8 @@ class CoreWebView2PrintSettings(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ProcessExtendedInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2FrameInfo> Microsoft.Web.WebView2.Core.CoreWebView2ProcessExtendedInfo::get_AssociatedFrameInfos()
     @_property
     def associated_frame_infos(self) -> _cabc.Sequence[CoreWebView2FrameInfo]: ...
@@ -2521,6 +2623,8 @@ class CoreWebView2ProcessExtendedInfo(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ProcessFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs::get_ProcessFailedKind()
     @_property
     def process_failed_kind(self) -> CoreWebView2ProcessFailedKind: ...
@@ -2542,6 +2646,8 @@ class CoreWebView2ProcessFailedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ProcessInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2ProcessKind Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo::get_Kind()
     @_property
     def kind(self) -> CoreWebView2ProcessKind: ...
@@ -2551,6 +2657,8 @@ class CoreWebView2ProcessInfo(winrt.system.Object):
 
 @typing.final
 class CoreWebView2Profile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Web.WebView2.Core.CoreWebView2BrowserExtension> Microsoft.Web.WebView2.Core.CoreWebView2Profile::AddBrowserExtensionAsync(System.String)
     def add_browser_extension_async(self, extension_folder_path: str, /) -> windows_foundation.IAsyncOperation[CoreWebView2BrowserExtension]: ...
     @typing.overload
@@ -2631,6 +2739,8 @@ class CoreWebView2Profile(winrt.system.Object):
 
 @typing.final
 class CoreWebView2SaveAsUIShowingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2SaveAsUIShowingEventArgs::get_SuppressDefaultDialog()
@@ -2669,6 +2779,8 @@ class CoreWebView2SaveAsUIShowingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2SaveFileSecurityCheckStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2SaveFileSecurityCheckStartingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2SaveFileSecurityCheckStartingEventArgs::get_SuppressDefaultPolicy()
@@ -2695,6 +2807,8 @@ class CoreWebView2SaveFileSecurityCheckStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ScreenCaptureStartingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2ScreenCaptureStartingEventArgs::get_Handled()
@@ -2715,6 +2829,8 @@ class CoreWebView2ScreenCaptureStartingEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ScriptDialogOpeningEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs::Accept()
     def accept(self) -> None: ...
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2ScriptDialogOpeningEventArgs::GetDeferral()
@@ -2740,6 +2856,8 @@ class CoreWebView2ScriptDialogOpeningEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ScriptException(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2ScriptException::get_ColumnNumber()
     @_property
     def column_number(self) -> winrt.system.UInt32: ...
@@ -2758,6 +2876,8 @@ class CoreWebView2ScriptException(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ServerCertificateErrorDetectedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorAction Microsoft.Web.WebView2.Core.CoreWebView2ServerCertificateErrorDetectedEventArgs::get_Action()
@@ -2778,6 +2898,8 @@ class CoreWebView2ServerCertificateErrorDetectedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ServiceWorker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsJson(System.String)
     def post_web_message_as_json(self, web_message_as_json: str, /) -> None: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker::PostWebMessageAsString(System.String)
@@ -2796,12 +2918,16 @@ class CoreWebView2ServiceWorker(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ServiceWorkerActivatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorker Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs::get_ActiveServiceWorker()
     @_property
     def active_service_worker(self) -> CoreWebView2ServiceWorker: ...
 
 @typing.final
 class CoreWebView2ServiceWorkerManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration>> Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerManager::GetServiceWorkerRegistrationsAsync()
     def get_service_worker_registrations_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2ServiceWorkerRegistration]]: ...
@@ -2815,12 +2941,16 @@ class CoreWebView2ServiceWorkerManager(winrt.system.Object):
 
 @typing.final
 class CoreWebView2ServiceWorkerRegisteredEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegisteredEventArgs::get_ServiceWorkerRegistration()
     @_property
     def service_worker_registration(self) -> CoreWebView2ServiceWorkerRegistration: ...
 
 @typing.final
 class CoreWebView2ServiceWorkerRegistration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::add_ServiceWorkerActivated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration,Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerActivatedEventArgs>)
     def add_service_worker_activated(self, handler: windows_foundation.TypedEventHandler[CoreWebView2ServiceWorkerRegistration, CoreWebView2ServiceWorkerActivatedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2ServiceWorkerRegistration::remove_ServiceWorkerActivated(Windows.Foundation.EventRegistrationToken)
@@ -2844,6 +2974,8 @@ class CoreWebView2ServiceWorkerRegistration(winrt.system.Object):
 
 @typing.final
 class CoreWebView2Settings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2Settings::get_IsZoomControlEnabled()
     @_property
     def is_zoom_control_enabled(self) -> bool: ...
@@ -2963,6 +3095,8 @@ class CoreWebView2Settings(winrt.system.Object):
 class CoreWebView2SharedBuffer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer::Close()
     def close(self) -> None: ...
     # Windows.Storage.Streams.IRandomAccessStream Microsoft.Web.WebView2.Core.CoreWebView2SharedBuffer::OpenStream()
@@ -2976,6 +3110,8 @@ class CoreWebView2SharedBuffer(windows_foundation.IClosable, winrt.system.Object
 
 @typing.final
 class CoreWebView2SharedWorker(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::add_Destroying(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker,System.Object>)
     def add_destroying(self, handler: windows_foundation.TypedEventHandler[CoreWebView2SharedWorker, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker::remove_Destroying(Windows.Foundation.EventRegistrationToken)
@@ -2992,12 +3128,16 @@ class CoreWebView2SharedWorker(winrt.system.Object):
 
 @typing.final
 class CoreWebView2SharedWorkerCreatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs::get_Worker()
     @_property
     def worker(self) -> CoreWebView2SharedWorker: ...
 
 @typing.final
 class CoreWebView2SharedWorkerManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorker>> Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::GetSharedWorkersAsync()
     def get_shared_workers_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2SharedWorker]]: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager::add_SharedWorkerCreated(Windows.Foundation.TypedEventHandler`2<Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerManager,Microsoft.Web.WebView2.Core.CoreWebView2SharedWorkerCreatedEventArgs>)
@@ -3007,12 +3147,16 @@ class CoreWebView2SharedWorkerManager(winrt.system.Object):
 
 @typing.final
 class CoreWebView2SourceChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs::get_IsNewDocument()
     @_property
     def is_new_document(self) -> bool: ...
 
 @typing.final
 class CoreWebView2WebMessageReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs::TryGetWebMessageAsString()
     def try_get_web_message_as_string(self) -> str: ...
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2WebMessageReceivedEventArgs::get_Source()
@@ -3027,6 +3171,8 @@ class CoreWebView2WebMessageReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WebResourceRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest::get_Uri()
     @_property
     def uri(self) -> str: ...
@@ -3051,6 +3197,8 @@ class CoreWebView2WebResourceRequest(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WebResourceRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequestedEventArgs::get_Response()
@@ -3071,6 +3219,8 @@ class CoreWebView2WebResourceRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WebResourceResponse(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponse::get_StatusCode()
     @_property
     def status_code(self) -> winrt.system.Int32: ...
@@ -3095,6 +3245,8 @@ class CoreWebView2WebResourceResponse(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WebResourceResponseReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Web.WebView2.Core.CoreWebView2WebResourceRequest Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseReceivedEventArgs::get_Request()
     @_property
     def request(self) -> CoreWebView2WebResourceRequest: ...
@@ -3104,6 +3256,8 @@ class CoreWebView2WebResourceResponseReceivedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WebResourceResponseView(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView::GetContentAsync()
     def get_content_async(self) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStream]: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2HttpResponseHeaders Microsoft.Web.WebView2.Core.CoreWebView2WebResourceResponseView::get_Headers()
@@ -3118,6 +3272,8 @@ class CoreWebView2WebResourceResponseView(winrt.system.Object):
 
 @typing.final
 class CoreWebView2WindowFeatures(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.Web.WebView2.Core.CoreWebView2WindowFeatures::get_HasPosition()
     @_property
     def has_position(self) -> bool: ...

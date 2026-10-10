@@ -221,7 +221,8 @@ class BluetoothLEAdvertisementDataTypes_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothLEAdvertisementDataTypes(winrt.system.Object, metaclass=BluetoothLEAdvertisementDataTypes_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BluetoothLEAdvertisementFilter(winrt.system.Object):
@@ -295,6 +296,8 @@ class BluetoothLEAdvertisementPublisher(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...
@@ -307,6 +310,8 @@ class BluetoothLEAdvertisementPublisherStatusChangedEventArgs(winrt.system.Objec
 
 @typing.final
 class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementReceivedEventArgs::get_Advertisement()
     @_property
     def advertisement(self) -> BluetoothLEAdvertisement: ...
@@ -359,6 +364,8 @@ class BluetoothLEAdvertisementScanParameters_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BluetoothLEAdvertisementScanParameters(winrt.system.Object, metaclass=BluetoothLEAdvertisementScanParameters_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt16 Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::get_ScanInterval()
     @_property
     def scan_interval(self) -> winrt.system.UInt16: ...
@@ -450,6 +457,8 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
 
 @typing.final
 class BluetoothLEAdvertisementWatcherStoppedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Bluetooth.BluetoothError Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs::get_Error()
     @_property
     def error(self) -> windows_devices_bluetooth.BluetoothError: ...

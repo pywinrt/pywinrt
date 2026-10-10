@@ -19,12 +19,16 @@ __all__ = [
 
 @typing.final
 class NotePlacementChangedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.ApplicationModel.Preview.Notes.NotePlacementChangedPreviewEventArgs::get_ViewId()
     @_property
     def view_id(self) -> winrt.system.Int32: ...
 
 @typing.final
 class NoteVisibilityChangedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.Preview.Notes.NoteVisibilityChangedPreviewEventArgs::get_IsVisible()
     @_property
     def is_visible(self) -> bool: ...
@@ -39,6 +43,8 @@ class NotesWindowManagerPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class NotesWindowManagerPreview(winrt.system.Object, metaclass=NotesWindowManagerPreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::GetNotePlacement(System.Int32)
     def get_note_placement(self, note_view_id: winrt.system.Int32, /) -> windows_storage_streams.IBuffer: ...
     # System.Void Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::HideNote(System.Int32)

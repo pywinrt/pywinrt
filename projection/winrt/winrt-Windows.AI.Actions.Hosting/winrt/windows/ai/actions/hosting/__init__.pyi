@@ -25,6 +25,8 @@ __all__ = [
 class ActionCatalog(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.Hosting.ActionCatalog::Close()
     def close(self) -> None: ...
     # Windows.AI.Actions.Hosting.ActionDefinition[] Windows.AI.Actions.Hosting.ActionCatalog::GetActionsForCurrentApp()
@@ -50,6 +52,8 @@ class ActionCatalog(windows_foundation.IClosable, winrt.system.Object):
 class ActionDefinition(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.Hosting.ActionDefinition::Close()
     def close(self) -> None: ...
     # System.String Windows.AI.Actions.Hosting.ActionDefinition::GetIconFullPath(Windows.Foundation.Collections.PropertySet)
@@ -92,6 +96,8 @@ class ActionDefinition(windows_foundation.IClosable, winrt.system.Object):
 class ActionEntityRegistrationInfo(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo::Close()
     def close(self) -> None: ...
     # System.String Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo::get_Name()
@@ -109,6 +115,8 @@ class ActionEntityRegistrationInfo(windows_foundation.IClosable, winrt.system.Ob
 
 @typing.final
 class ActionInstance(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.AI.Actions.Hosting.ActionInstance::InvokeAsync()
     def invoke_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.AI.Actions.ActionInvocationContext Windows.AI.Actions.Hosting.ActionInstance::get_Context()
@@ -123,6 +131,8 @@ class ActionInstance(winrt.system.Object):
 
 @typing.final
 class ActionInstanceDisplayInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.Actions.Hosting.ActionInstanceDisplayInfo::get_Description()
     @_property
     def description(self) -> str: ...
@@ -131,6 +141,8 @@ class ActionInstanceDisplayInfo(winrt.system.Object):
 class ActionOverload(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.AI.Actions.Hosting.ActionOverload::Close()
     def close(self) -> None: ...
     # Windows.AI.Actions.Hosting.ActionEntityRegistrationInfo[] Windows.AI.Actions.Hosting.ActionOverload::GetInputs()

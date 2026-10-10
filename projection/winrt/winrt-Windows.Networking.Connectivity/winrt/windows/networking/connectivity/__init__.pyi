@@ -195,6 +195,8 @@ class NetworkUsageStates:
 
 @typing.final
 class AttributedNetworkUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Connectivity.AttributedNetworkUsage::get_AttributionId()
     @_property
     def attribution_id(self) -> str: ...
@@ -259,6 +261,8 @@ class CellularApnContext(winrt.system.Object):
 
 @typing.final
 class ConnectionCost(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.Connectivity.ConnectionCost::get_ApproachingDataLimit()
     @_property
     def approaching_data_limit(self) -> bool: ...
@@ -277,6 +281,8 @@ class ConnectionCost(winrt.system.Object):
 
 @typing.final
 class ConnectionProfile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Connectivity.AttributedNetworkUsage>> Windows.Networking.Connectivity.ConnectionProfile::GetAttributedNetworkUsageAsync(Windows.Foundation.DateTime,Windows.Foundation.DateTime,Windows.Networking.Connectivity.NetworkUsageStates)
     def get_attributed_network_usage_async(self, start_time: datetime.datetime, end_time: datetime.datetime, states: NetworkUsageStates | tuple[TriStates, TriStates], /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[AttributedNetworkUsage]]: ...
     # Windows.Networking.Connectivity.ConnectionCost Windows.Networking.Connectivity.ConnectionProfile::GetConnectionCost()
@@ -406,6 +412,8 @@ class ConnectionProfileFilter(winrt.system.Object):
 class ConnectionSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.Connectivity.ConnectionSession::Close()
     def close(self) -> None: ...
     # Windows.Networking.Connectivity.ConnectionProfile Windows.Networking.Connectivity.ConnectionSession::get_ConnectionProfile()
@@ -414,6 +422,8 @@ class ConnectionSession(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class ConnectivityInterval(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Networking.Connectivity.ConnectivityInterval::get_ConnectionDuration()
     @_property
     def connection_duration(self) -> datetime.timedelta: ...
@@ -432,10 +442,13 @@ class ConnectivityManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ConnectivityManager(winrt.system.Object, metaclass=ConnectivityManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class DataPlanStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Networking.Connectivity.DataPlanStatus::get_DataLimitInMegabytes()
     @_property
     def data_limit_in_megabytes(self) -> winrt.system.UInt32 | None: ...
@@ -457,6 +470,8 @@ class DataPlanStatus(winrt.system.Object):
 
 @typing.final
 class DataPlanUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Networking.Connectivity.DataPlanUsage::get_LastSyncTime()
     @_property
     def last_sync_time(self) -> datetime.datetime: ...
@@ -467,6 +482,8 @@ class DataPlanUsage(winrt.system.Object):
 @typing.final
 @deprecated("DataUsage may be altered or unavailable for releases after Windows 8.1. Instead, use NetworkUsage.")
 class DataUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Networking.Connectivity.DataUsage::get_BytesReceived()
     @_property
     @deprecated("IDataUsage may be altered or unavailable for releases after Windows 8.1. Instead, use INetworkUsage.")
@@ -478,6 +495,8 @@ class DataUsage(winrt.system.Object):
 
 @typing.final
 class IPInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Connectivity.NetworkAdapter Windows.Networking.Connectivity.IPInformation::get_NetworkAdapter()
     @_property
     def network_adapter(self) -> NetworkAdapter: ...
@@ -487,6 +506,8 @@ class IPInformation(winrt.system.Object):
 
 @typing.final
 class LanIdentifier(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Connectivity.LanIdentifierData Windows.Networking.Connectivity.LanIdentifier::get_InfrastructureId()
     @_property
     def infrastructure_id(self) -> LanIdentifierData: ...
@@ -499,6 +520,8 @@ class LanIdentifier(winrt.system.Object):
 
 @typing.final
 class LanIdentifierData(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Networking.Connectivity.LanIdentifierData::get_Type()
     @_property
     def type(self) -> winrt.system.UInt32: ...
@@ -508,6 +531,8 @@ class LanIdentifierData(winrt.system.Object):
 
 @typing.final
 class NetworkAdapter(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Connectivity.ConnectionProfile> Windows.Networking.Connectivity.NetworkAdapter::GetConnectedProfileAsync()
     def get_connected_profile_async(self) -> windows_foundation.IAsyncOperation[ConnectionProfile]: ...
     # System.UInt32 Windows.Networking.Connectivity.NetworkAdapter::get_IanaInterfaceType()
@@ -549,10 +574,13 @@ class NetworkInformation_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class NetworkInformation(winrt.system.Object, metaclass=NetworkInformation_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class NetworkItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Connectivity.NetworkTypes Windows.Networking.Connectivity.NetworkItem::GetNetworkTypes()
     def get_network_types(self) -> NetworkTypes: ...
     # System.Guid Windows.Networking.Connectivity.NetworkItem::get_NetworkId()
@@ -561,6 +589,8 @@ class NetworkItem(winrt.system.Object):
 
 @typing.final
 class NetworkSecuritySettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Connectivity.NetworkAuthenticationType Windows.Networking.Connectivity.NetworkSecuritySettings::get_NetworkAuthenticationType()
     @_property
     def network_authentication_type(self) -> NetworkAuthenticationType: ...
@@ -570,6 +600,8 @@ class NetworkSecuritySettings(winrt.system.Object):
 
 @typing.final
 class NetworkStateChangeEventDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.Connectivity.NetworkStateChangeEventDetails::get_HasNewConnectionCost()
     @_property
     def has_new_connection_cost(self) -> bool: ...
@@ -597,6 +629,8 @@ class NetworkStateChangeEventDetails(winrt.system.Object):
 
 @typing.final
 class NetworkUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Networking.Connectivity.NetworkUsage::get_BytesReceived()
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
@@ -609,6 +643,8 @@ class NetworkUsage(winrt.system.Object):
 
 @typing.final
 class ProviderNetworkUsage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt64 Windows.Networking.Connectivity.ProviderNetworkUsage::get_BytesReceived()
     @_property
     def bytes_received(self) -> winrt.system.UInt64: ...
@@ -621,6 +657,8 @@ class ProviderNetworkUsage(winrt.system.Object):
 
 @typing.final
 class ProxyConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.Connectivity.ProxyConfiguration::get_CanConnectDirectly()
     @_property
     def can_connect_directly(self) -> bool: ...
@@ -643,11 +681,15 @@ class RoutePolicy(winrt.system.Object):
 
 @typing.final
 class WlanConnectionProfileDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Connectivity.WlanConnectionProfileDetails::GetConnectedSsid()
     def get_connected_ssid(self) -> str: ...
 
 @typing.final
 class WwanConnectionProfileDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Connectivity.WwanDataClass Windows.Networking.Connectivity.WwanConnectionProfileDetails::GetCurrentDataClass()
     def get_current_data_class(self) -> WwanDataClass: ...
     # Windows.Networking.Connectivity.WwanNetworkRegistrationState Windows.Networking.Connectivity.WwanConnectionProfileDetails::GetNetworkRegistrationState()

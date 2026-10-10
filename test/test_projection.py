@@ -84,8 +84,16 @@ class TestClasses(unittest.TestCase):
         self.assertIsInstance(tc.Class(), tc.Class)
 
     def test_a_class_that_cannot_be_activated(self) -> None:
-        with self.assertRaises(TypeError):
-            tc.TestRunner()
+        # The stubs refuse these calls as well, which is what the ignores check.
+        with self.assertRaisesRegex(
+            TypeError, "cannot create 'TestComponent.TestRunner' instances"
+        ):
+            tc.TestRunner()  # type: ignore[call-arg]
+
+        with self.assertRaisesRegex(
+            TypeError, "cannot create 'Windows.Foundation.GuidHelper' instances"
+        ):
+            wf.GuidHelper()  # type: ignore[call-arg]
 
     def test_from_is_a_deprecated_alias_of_from_(self) -> None:
         uri = wf.Uri("https://example.com")

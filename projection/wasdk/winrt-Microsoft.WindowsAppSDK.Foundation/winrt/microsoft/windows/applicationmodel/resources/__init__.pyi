@@ -62,7 +62,8 @@ class KnownResourceQualifierName_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownResourceQualifierName(winrt.system.Object, metaclass=KnownResourceQualifierName_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ResourceCandidate(winrt.system.Object):
@@ -85,6 +86,8 @@ class ResourceCandidate(winrt.system.Object):
 
 @typing.final
 class ResourceContext(IResourceContext, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMap`2<System.String,System.String> Microsoft.Windows.ApplicationModel.Resources.ResourceContext::get_QualifierValues()
     @_property
     def qualifier_values(self) -> _cabc.MutableMapping[str, str]: ...
@@ -125,6 +128,8 @@ class ResourceManager(IResourceManager, winrt.system.Object):
 
 @typing.final
 class ResourceMap(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.Windows.ApplicationModel.Resources.ResourceMap Microsoft.Windows.ApplicationModel.Resources.ResourceMap::GetSubtree(System.String)
     def get_subtree(self, reference: str, /) -> ResourceMap: ...
     @typing.overload
@@ -153,6 +158,8 @@ class ResourceMap(winrt.system.Object):
 
 @typing.final
 class ResourceNotFoundEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs::SetResolvedCandidate(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate)
     def set_resolved_candidate(self, candidate: ResourceCandidate, /) -> None: ...
     # Microsoft.Windows.ApplicationModel.Resources.ResourceContext Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs::get_Context()

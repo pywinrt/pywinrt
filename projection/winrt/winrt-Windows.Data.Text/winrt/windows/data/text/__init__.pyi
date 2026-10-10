@@ -96,6 +96,8 @@ class TextSegment:
 
 @typing.final
 class AlternateWordForm(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Data.Text.AlternateWordForm::get_AlternateText()
     @_property
     def alternate_text(self) -> str: ...
@@ -108,6 +110,8 @@ class AlternateWordForm(winrt.system.Object):
 
 @typing.final
 class SelectableWordSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Text.TextSegment Windows.Data.Text.SelectableWordSegment::get_SourceTextSegment()
     @_property
     def source_text_segment(self) -> TextSegment: ...
@@ -161,6 +165,8 @@ class TextConversionGenerator(winrt.system.Object):
 
 @typing.final
 class TextPhoneme(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Data.Text.TextPhoneme::get_DisplayText()
     @_property
     def display_text(self) -> str: ...
@@ -256,10 +262,13 @@ class UnicodeCharacters_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UnicodeCharacters(winrt.system.Object, metaclass=UnicodeCharacters_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WordSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Data.Text.AlternateWordForm> Windows.Data.Text.WordSegment::get_AlternateForms()
     @_property
     def alternate_forms(self) -> _cabc.Sequence[AlternateWordForm]: ...

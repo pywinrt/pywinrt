@@ -26,6 +26,8 @@ class CustomSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.Custom.CustomSensorReading Windows.Devices.Sensors.Custom.CustomSensor::GetCurrentReading()
     def get_current_reading(self) -> CustomSensorReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Custom.CustomSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Custom.CustomSensor,Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs>)
@@ -56,6 +58,8 @@ class CustomSensor(winrt.system.Object, metaclass=CustomSensor_Static):
 
 @typing.final
 class CustomSensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Devices.Sensors.Custom.CustomSensorReading::get_Properties()
     @_property
     def properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
@@ -68,6 +72,8 @@ class CustomSensorReading(winrt.system.Object):
 
 @typing.final
 class CustomSensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.Custom.CustomSensorReading Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> CustomSensorReading: ...

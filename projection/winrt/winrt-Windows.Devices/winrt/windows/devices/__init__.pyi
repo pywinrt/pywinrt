@@ -48,7 +48,8 @@ class LowLevelDevicesController_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesController_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class _ILowLevelDevicesAggregateProvider: ...

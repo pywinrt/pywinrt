@@ -98,12 +98,16 @@ class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object,
 
 @typing.final
 class DesktopWindowXamlSourceGotFocusEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceGotFocusEventArgs::get_Request()
     @_property
     def request(self) -> XamlSourceFocusNavigationRequest: ...
 
 @typing.final
 class DesktopWindowXamlSourceTakeFocusRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest Microsoft.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs::get_Request()
     @_property
     def request(self) -> XamlSourceFocusNavigationRequest: ...
@@ -129,7 +133,8 @@ class ElementCompositionPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ElementCompositionPreview(winrt.system.Object, metaclass=ElementCompositionPreview_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class WindowsXamlManager_Static(winrt._winrt.Object_Static):
@@ -142,6 +147,8 @@ class WindowsXamlManager_Static(winrt._winrt.Object_Static):
 class WindowsXamlManager(windows_foundation.IClosable, winrt.system.Object, metaclass=WindowsXamlManager_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Xaml.Hosting.WindowsXamlManager::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Hosting.WindowsXamlManager::add_XamlShutdownCompletedOnThread(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Hosting.WindowsXamlManager,Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs>)
@@ -151,6 +158,8 @@ class WindowsXamlManager(windows_foundation.IClosable, winrt.system.Object, meta
 
 @typing.final
 class XamlShutdownCompletedOnThreadEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Microsoft.UI.Xaml.Hosting.XamlShutdownCompletedOnThreadEventArgs::GetDispatcherQueueDeferral()
     def get_dispatcher_queue_deferral(self) -> windows_foundation.Deferral: ...
 

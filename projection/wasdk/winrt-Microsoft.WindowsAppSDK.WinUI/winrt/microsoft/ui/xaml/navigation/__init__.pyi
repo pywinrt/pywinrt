@@ -59,6 +59,8 @@ class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptio
 
 @typing.final
 class NavigatingCancelEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Navigation.NavigatingCancelEventArgs::get_Cancel()
     @_property
     def cancel(self) -> bool: ...
@@ -80,6 +82,8 @@ class NavigatingCancelEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Microsoft.UI.Xaml.Navigation.NavigationEventArgs::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
@@ -104,6 +108,8 @@ class NavigationEventArgs(winrt.system.Object):
 
 @typing.final
 class NavigationFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Xaml.Navigation.NavigationFailedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...

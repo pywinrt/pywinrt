@@ -373,10 +373,13 @@ class PlayReadyContentResolver_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlayReadyContentResolver(winrt.system.Object, metaclass=PlayReadyContentResolver_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlayReadyDomain(IPlayReadyDomain, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadyDomain::get_AccountId()
     @_property
     def account_id(self) -> _uuid.UUID: ...
@@ -404,6 +407,8 @@ class PlayReadyDomainIterable(winrt.system.Object):
 class PlayReadyDomainIterator(windows_foundation_collections.IIterator[IPlayReadyDomain], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> IPlayReadyDomain: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyDomainIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadyDomain[])
     def get_many(self, items: winrt.system.Array[IPlayReadyDomain] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.Media.Protection.PlayReady.PlayReadyDomainIterator::MoveNext()
@@ -552,6 +557,8 @@ class PlayReadyIndividualizationServiceRequest(IPlayReadyServiceRequest, windows
 
 @typing.final
 class PlayReadyLicense(IPlayReadyLicense, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
     def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyLicense::get_ChainDepth()
@@ -649,6 +656,8 @@ class PlayReadyLicenseIterable(winrt.system.Object):
 class PlayReadyLicenseIterator(windows_foundation_collections.IIterator[IPlayReadyLicense], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> IPlayReadyLicense: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadyLicense[])
     def get_many(self, items: winrt.system.Array[IPlayReadyLicense] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.Media.Protection.PlayReady.PlayReadyLicenseIterator::MoveNext()
@@ -667,7 +676,8 @@ class PlayReadyLicenseManagement_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlayReadyLicenseManagement(winrt.system.Object, metaclass=PlayReadyLicenseManagement_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlayReadyLicenseSession(IPlayReadyLicenseSession2, IPlayReadyLicenseSession, winrt.system.Object):
@@ -762,6 +772,8 @@ class PlayReadySecureStopIterable(winrt.system.Object):
 class PlayReadySecureStopIterator(windows_foundation_collections.IIterator[IPlayReadySecureStopServiceRequest], winrt.system.Object):
     def __iter__(self) -> typing.Self: ...
     def __next__(self) -> IPlayReadySecureStopServiceRequest: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator::GetMany(Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest[])
     def get_many(self, items: winrt.system.Array[IPlayReadySecureStopServiceRequest] | winrt.system.WriteableBuffer, /) -> winrt.system.UInt32: ...
     # System.Boolean Windows.Media.Protection.PlayReady.PlayReadySecureStopIterator::MoveNext()
@@ -826,6 +838,8 @@ class PlayReadySecureStopServiceRequest(IPlayReadySecureStopServiceRequest, IPla
 
 @typing.final
 class PlayReadySoapMessage(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte[] Windows.Media.Protection.PlayReady.PlayReadySoapMessage::GetMessageBody()
     def get_message_body(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Foundation.Collections.IPropertySet Windows.Media.Protection.PlayReady.PlayReadySoapMessage::get_MessageHeaders()
@@ -886,7 +900,8 @@ class PlayReadyStatics_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlayReadyStatics(winrt.system.Object, metaclass=PlayReadyStatics_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class _INDClosedCaptionDataReceivedEventArgs: ...

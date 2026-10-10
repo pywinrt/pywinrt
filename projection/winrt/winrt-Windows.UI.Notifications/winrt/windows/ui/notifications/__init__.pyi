@@ -373,10 +373,13 @@ class BadgeUpdateManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BadgeUpdateManager(winrt.system.Object, metaclass=BadgeUpdateManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class BadgeUpdateManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManagerForUser::CreateBadgeUpdaterForApplication()
     def create_badge_updater_for_application(self) -> BadgeUpdater: ...
@@ -395,6 +398,8 @@ class BadgeUpdateManagerForUser(winrt.system.Object):
 
 @typing.final
 class BadgeUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Notifications.BadgeUpdater::Clear()
     def clear(self) -> None: ...
     @typing.overload
@@ -435,7 +440,8 @@ class KnownAdaptiveNotificationHints_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiveNotificationHints_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.Object_Static):
@@ -499,7 +505,8 @@ class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAdaptiveNotificationTextStyles_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownNotificationBindings_Static(winrt._winrt.Object_Static):
@@ -509,7 +516,8 @@ class KnownNotificationBindings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownNotificationBindings(winrt.system.Object, metaclass=KnownNotificationBindings_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class Notification(winrt.system.Object):
@@ -529,6 +537,8 @@ class Notification(winrt.system.Object):
 
 @typing.final
 class NotificationBinding(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.AdaptiveNotificationText> Windows.UI.Notifications.NotificationBinding::GetTextElements()
     def get_text_elements(self) -> _cabc.Sequence[AdaptiveNotificationText]: ...
     # System.String Windows.UI.Notifications.NotificationBinding::get_Template()
@@ -567,6 +577,8 @@ class NotificationData(winrt.system.Object):
 
 @typing.final
 class NotificationVisual(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Notifications.NotificationBinding Windows.UI.Notifications.NotificationVisual::GetBinding(System.String)
     def get_binding(self, template_name: str, /) -> NotificationBinding | None: ...
     # System.String Windows.UI.Notifications.NotificationVisual::get_Language()
@@ -670,6 +682,8 @@ class ScheduledToastNotification(winrt.system.Object):
 
 @typing.final
 class ScheduledToastNotificationShowingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs::get_Cancel()
@@ -684,6 +698,8 @@ class ScheduledToastNotificationShowingEventArgs(winrt.system.Object):
 
 @typing.final
 class ShownTileNotification(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Notifications.ShownTileNotification::get_Arguments()
     @_property
     def arguments(self) -> str: ...
@@ -720,10 +736,13 @@ class TileFlyoutUpdateManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TileFlyoutUpdateManager(winrt.system.Object, metaclass=TileFlyoutUpdateManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TileFlyoutUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Notifications.TileFlyoutUpdater::Clear()
     def clear(self) -> None: ...
     @typing.overload
@@ -784,10 +803,13 @@ class TileUpdateManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TileUpdateManager(winrt.system.Object, metaclass=TileUpdateManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class TileUpdateManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManagerForUser::CreateTileUpdaterForApplication(System.String)
     def create_tile_updater_for_application(self, application_id: str, /) -> TileUpdater: ...
     # Deprecated alias of create_tile_updater_for_application() for pywinrt v3.x compatibility.
@@ -804,6 +826,8 @@ class TileUpdateManagerForUser(winrt.system.Object):
 
 @typing.final
 class TileUpdater(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Notifications.TileUpdater::AddToSchedule(Windows.UI.Notifications.ScheduledTileNotification)
     def add_to_schedule(self, scheduled_tile: ScheduledTileNotification, /) -> None: ...
     # System.Void Windows.UI.Notifications.TileUpdater::Clear()
@@ -850,6 +874,8 @@ class TileUpdater(winrt.system.Object):
 
 @typing.final
 class ToastActivatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Notifications.ToastActivatedEventArgs::get_Arguments()
     @_property
     def arguments(self) -> str: ...
@@ -884,6 +910,8 @@ class ToastCollection(winrt.system.Object):
 
 @typing.final
 class ToastCollectionManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ToastCollection>> Windows.UI.Notifications.ToastCollectionManager::FindAllToastCollectionsAsync()
     def find_all_toast_collections_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[ToastCollection]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Notifications.ToastCollection> Windows.UI.Notifications.ToastCollectionManager::GetToastCollectionAsync(System.String)
@@ -903,12 +931,16 @@ class ToastCollectionManager(winrt.system.Object):
 
 @typing.final
 class ToastDismissedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Notifications.ToastDismissalReason Windows.UI.Notifications.ToastDismissedEventArgs::get_Reason()
     @_property
     def reason(self) -> ToastDismissalReason: ...
 
 @typing.final
 class ToastFailedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.UI.Notifications.ToastFailedEventArgs::get_ErrorCode()
     @_property
     def error_code(self) -> windows_foundation.HResult: ...
@@ -994,6 +1026,8 @@ class ToastNotification(winrt.system.Object, metaclass=ToastNotification_Static)
 
 @typing.final
 class ToastNotificationActionTriggerDetail(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Notifications.ToastNotificationActionTriggerDetail::get_Argument()
     @_property
     def argument(self) -> str: ...
@@ -1003,6 +1037,8 @@ class ToastNotificationActionTriggerDetail(winrt.system.Object):
 
 @typing.final
 class ToastNotificationHistory(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Notifications.ToastNotificationHistory::Clear()
     def clear(self) -> None: ...
@@ -1053,6 +1089,8 @@ class ToastNotificationHistory(winrt.system.Object):
 
 @typing.final
 class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Notifications.ToastHistoryChangedType Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail::get_ChangeType()
     @_property
     def change_type(self) -> ToastHistoryChangedType: ...
@@ -1086,10 +1124,13 @@ class ToastNotificationManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ToastNotificationManager(winrt.system.Object, metaclass=ToastNotificationManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ToastNotificationManagerForUser(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.UI.Notifications.ToastNotifier Windows.UI.Notifications.ToastNotificationManagerForUser::CreateToastNotifier()
     def create_toast_notifier(self) -> ToastNotifier: ...
@@ -1130,6 +1171,8 @@ class ToastNotificationManagerForUser(winrt.system.Object):
 
 @typing.final
 class ToastNotifier(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Notifications.ToastNotifier::AddToSchedule(Windows.UI.Notifications.ScheduledToastNotification)
     def add_to_schedule(self, scheduled_toast: ScheduledToastNotification, /) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.Notifications.ScheduledToastNotification> Windows.UI.Notifications.ToastNotifier::GetScheduledToastNotifications()
@@ -1164,6 +1207,8 @@ class ToastNotifier(winrt.system.Object):
 
 @typing.final
 class UserNotification(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.AppInfo Windows.UI.Notifications.UserNotification::get_AppInfo()
     @_property
     def app_info(self) -> windows_applicationmodel.AppInfo: ...
@@ -1179,6 +1224,8 @@ class UserNotification(winrt.system.Object):
 
 @typing.final
 class UserNotificationChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Notifications.UserNotificationChangedKind Windows.UI.Notifications.UserNotificationChangedEventArgs::get_ChangeKind()
     @_property
     def change_kind(self) -> UserNotificationChangedKind: ...

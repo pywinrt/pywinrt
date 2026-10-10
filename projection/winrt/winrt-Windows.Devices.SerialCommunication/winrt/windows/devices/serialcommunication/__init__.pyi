@@ -57,12 +57,16 @@ class SerialStopBitCount(enum.IntEnum):
 
 @typing.final
 class ErrorReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SerialCommunication.SerialError Windows.Devices.SerialCommunication.ErrorReceivedEventArgs::get_Error()
     @_property
     def error(self) -> SerialError: ...
 
 @typing.final
 class PinChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.SerialCommunication.SerialPinChange Windows.Devices.SerialCommunication.PinChangedEventArgs::get_PinChange()
     @_property
     def pin_change(self) -> SerialPinChange: ...
@@ -88,6 +92,8 @@ class SerialDevice_Static(winrt._winrt.Object_Static):
 class SerialDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=SerialDevice_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.SerialCommunication.SerialDevice::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.SerialCommunication.SerialDevice::add_ErrorReceived(Windows.Foundation.TypedEventHandler`2<Windows.Devices.SerialCommunication.SerialDevice,Windows.Devices.SerialCommunication.ErrorReceivedEventArgs>)

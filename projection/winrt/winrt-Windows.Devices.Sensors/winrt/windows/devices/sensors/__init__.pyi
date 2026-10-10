@@ -217,6 +217,8 @@ class Accelerometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Accelerometer(winrt.system.Object, metaclass=Accelerometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.AccelerometerReading Windows.Devices.Sensors.Accelerometer::GetCurrentReading()
     def get_current_reading(self) -> AccelerometerReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Accelerometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Accelerometer,Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs>)
@@ -263,6 +265,8 @@ class Accelerometer(winrt.system.Object, metaclass=Accelerometer_Static):
 
 @typing.final
 class AccelerometerDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.AccelerometerDataThreshold::get_ZAxisInGForce()
     @_property
     def z_axis_in_g_force(self) -> winrt.system.Double: ...
@@ -284,6 +288,8 @@ class AccelerometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class AccelerometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.AccelerometerReading::get_AccelerationX()
     @_property
     def acceleration_x(self) -> winrt.system.Double: ...
@@ -305,12 +311,16 @@ class AccelerometerReading(winrt.system.Object):
 
 @typing.final
 class AccelerometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.AccelerometerReading Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> AccelerometerReading: ...
 
 @typing.final
 class AccelerometerShakenEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.DateTime Windows.Devices.Sensors.AccelerometerShakenEventArgs::get_Timestamp()
     @_property
     def timestamp(self) -> datetime.datetime: ...
@@ -336,6 +346,8 @@ class ActivitySensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ActivitySensor(winrt.system.Object, metaclass=ActivitySensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.ActivitySensorReading> Windows.Devices.Sensors.ActivitySensor::GetCurrentReadingAsync()
     def get_current_reading_async(self) -> windows_foundation.IAsyncOperation[ActivitySensorReading]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.ActivitySensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.ActivitySensor,Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs>)
@@ -360,6 +372,8 @@ class ActivitySensor(winrt.system.Object, metaclass=ActivitySensor_Static):
 
 @typing.final
 class ActivitySensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.ActivityType Windows.Devices.Sensors.ActivitySensorReading::get_Activity()
     @_property
     def activity(self) -> ActivityType: ...
@@ -372,23 +386,31 @@ class ActivitySensorReading(winrt.system.Object):
 
 @typing.final
 class ActivitySensorReadingChangeReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.ActivitySensorReading Windows.Devices.Sensors.ActivitySensorReadingChangeReport::get_Reading()
     @_property
     def reading(self) -> ActivitySensorReading: ...
 
 @typing.final
 class ActivitySensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.ActivitySensorReading Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> ActivitySensorReading: ...
 
 @typing.final
 class ActivitySensorTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sensors.ActivitySensorReadingChangeReport> Windows.Devices.Sensors.ActivitySensorTriggerDetails::ReadReports()
     def read_reports(self) -> _cabc.Sequence[ActivitySensorReadingChangeReport]: ...
 
 @typing.final
 class AdaptiveDimmingOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Sensors.AdaptiveDimmingOptions::get_AllowWhenExternalDisplayConnected()
     @_property
     def allow_when_external_display_connected(self) -> bool: ...
@@ -403,6 +425,8 @@ class Altimeter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Altimeter(winrt.system.Object, metaclass=Altimeter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.AltimeterReading Windows.Devices.Sensors.Altimeter::GetCurrentReading()
     def get_current_reading(self) -> AltimeterReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Altimeter::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Altimeter,Windows.Devices.Sensors.AltimeterReadingChangedEventArgs>)
@@ -433,6 +457,8 @@ class Altimeter(winrt.system.Object, metaclass=Altimeter_Static):
 
 @typing.final
 class AltimeterReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.AltimeterReading::get_AltitudeChangeInMeters()
     @_property
     def altitude_change_in_meters(self) -> winrt.system.Double: ...
@@ -448,6 +474,8 @@ class AltimeterReading(winrt.system.Object):
 
 @typing.final
 class AltimeterReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.AltimeterReading Windows.Devices.Sensors.AltimeterReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> AltimeterReading: ...
@@ -463,6 +491,8 @@ class Barometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Barometer(winrt.system.Object, metaclass=Barometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.BarometerReading Windows.Devices.Sensors.Barometer::GetCurrentReading()
     def get_current_reading(self) -> BarometerReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Barometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Barometer,Windows.Devices.Sensors.BarometerReadingChangedEventArgs>)
@@ -496,6 +526,8 @@ class Barometer(winrt.system.Object, metaclass=Barometer_Static):
 
 @typing.final
 class BarometerDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.BarometerDataThreshold::get_Hectopascals()
     @_property
     def hectopascals(self) -> winrt.system.Double: ...
@@ -505,6 +537,8 @@ class BarometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class BarometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.BarometerReading::get_StationPressureInHectopascals()
     @_property
     def station_pressure_in_hectopascals(self) -> winrt.system.Double: ...
@@ -520,6 +554,8 @@ class BarometerReading(winrt.system.Object):
 
 @typing.final
 class BarometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.BarometerReading Windows.Devices.Sensors.BarometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> BarometerReading: ...
@@ -535,6 +571,8 @@ class Compass_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Compass(winrt.system.Object, metaclass=Compass_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.CompassReading Windows.Devices.Sensors.Compass::GetCurrentReading()
     def get_current_reading(self) -> CompassReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Compass::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Compass,Windows.Devices.Sensors.CompassReadingChangedEventArgs>)
@@ -574,6 +612,8 @@ class Compass(winrt.system.Object, metaclass=Compass_Static):
 
 @typing.final
 class CompassDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.CompassDataThreshold::get_Degrees()
     @_property
     def degrees(self) -> winrt.system.Double: ...
@@ -583,6 +623,8 @@ class CompassDataThreshold(winrt.system.Object):
 
 @typing.final
 class CompassReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.CompassReading::get_HeadingMagneticNorth()
     @_property
     def heading_magnetic_north(self) -> winrt.system.Double: ...
@@ -604,12 +646,16 @@ class CompassReading(winrt.system.Object):
 
 @typing.final
 class CompassReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.CompassReading Windows.Devices.Sensors.CompassReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> CompassReading: ...
 
 @typing.final
 class DetectedPerson(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Devices.Sensors.DetectedPerson::get_DistanceInMillimeters()
     @_property
     def distance_in_millimeters(self) -> winrt.system.UInt32 | None: ...
@@ -637,6 +683,8 @@ class Gyrometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Gyrometer(winrt.system.Object, metaclass=Gyrometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.GyrometerReading Windows.Devices.Sensors.Gyrometer::GetCurrentReading()
     def get_current_reading(self) -> GyrometerReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Gyrometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Gyrometer,Windows.Devices.Sensors.GyrometerReadingChangedEventArgs>)
@@ -676,6 +724,8 @@ class Gyrometer(winrt.system.Object, metaclass=Gyrometer_Static):
 
 @typing.final
 class GyrometerDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.GyrometerDataThreshold::get_ZAxisInDegreesPerSecond()
     @_property
     def z_axis_in_degrees_per_second(self) -> winrt.system.Double: ...
@@ -697,6 +747,8 @@ class GyrometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class GyrometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.GyrometerReading::get_AngularVelocityX()
     @_property
     def angular_velocity_x(self) -> winrt.system.Double: ...
@@ -718,12 +770,16 @@ class GyrometerReading(winrt.system.Object):
 
 @typing.final
 class GyrometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.GyrometerReading Windows.Devices.Sensors.GyrometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> GyrometerReading: ...
 
 @typing.final
 class HeadOrientation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Double> Windows.Devices.Sensors.HeadOrientation::get_PitchInDegrees()
     @_property
     def pitch_in_degrees(self) -> winrt.system.Double | None: ...
@@ -736,6 +792,8 @@ class HeadOrientation(winrt.system.Object):
 
 @typing.final
 class HeadPosition(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Double> Windows.Devices.Sensors.HeadPosition::get_AltitudeInDegrees()
     @_property
     def altitude_in_degrees(self) -> winrt.system.Double | None: ...
@@ -745,6 +803,8 @@ class HeadPosition(winrt.system.Object):
 
 @typing.final
 class HingeAngleReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Devices.Sensors.HingeAngleReading::get_AngleInDegrees()
     @_property
     def angle_in_degrees(self) -> winrt.system.Double: ...
@@ -768,6 +828,8 @@ class HingeAngleSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HingeAngleSensor(winrt.system.Object, metaclass=HingeAngleSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.HingeAngleReading> Windows.Devices.Sensors.HingeAngleSensor::GetCurrentReadingAsync()
     def get_current_reading_async(self) -> windows_foundation.IAsyncOperation[HingeAngleReading]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.HingeAngleSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.HingeAngleSensor,Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs>)
@@ -789,12 +851,16 @@ class HingeAngleSensor(winrt.system.Object, metaclass=HingeAngleSensor_Static):
 
 @typing.final
 class HingeAngleSensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.HingeAngleReading Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> HingeAngleReading: ...
 
 @typing.final
 class HumanPresenceFeatures(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Sensors.HumanPresenceFeatures::get_IsAttentionAwareDimmingSupported()
     @_property
     @deprecated("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.")
@@ -833,6 +899,8 @@ class HumanPresenceSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HumanPresenceSensor(winrt.system.Object, metaclass=HumanPresenceSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.HumanPresenceSensorReading Windows.Devices.Sensors.HumanPresenceSensor::GetCurrentReading()
     def get_current_reading(self) -> HumanPresenceSensorReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.HumanPresenceSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.HumanPresenceSensor,Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs>)
@@ -872,6 +940,8 @@ class HumanPresenceSensor(winrt.system.Object, metaclass=HumanPresenceSensor_Sta
 
 @typing.final
 class HumanPresenceSensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Devices.Sensors.HumanPresenceSensorReading::get_DistanceInMillimeters()
     @_property
     def distance_in_millimeters(self) -> winrt.system.UInt32 | None: ...
@@ -896,6 +966,8 @@ class HumanPresenceSensorReading(winrt.system.Object):
 
 @typing.final
 class HumanPresenceSensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.HumanPresenceSensorReading Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> HumanPresenceSensorReading: ...
@@ -957,6 +1029,8 @@ class HumanPresenceSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HumanPresenceSettings(winrt.system.Object, metaclass=HumanPresenceSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Devices.Sensors.HumanPresenceSettings::get_WakeOnApproachDistanceInMillimeters()
     @_property
     def wake_on_approach_distance_in_millimeters(self) -> winrt.system.UInt32 | None: ...
@@ -1047,6 +1121,8 @@ class Inclinometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Inclinometer(winrt.system.Object, metaclass=Inclinometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.InclinometerReading Windows.Devices.Sensors.Inclinometer::GetCurrentReading()
     def get_current_reading(self) -> InclinometerReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Inclinometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Inclinometer,Windows.Devices.Sensors.InclinometerReadingChangedEventArgs>)
@@ -1089,6 +1165,8 @@ class Inclinometer(winrt.system.Object, metaclass=Inclinometer_Static):
 
 @typing.final
 class InclinometerDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.InclinometerDataThreshold::get_YawInDegrees()
     @_property
     def yaw_in_degrees(self) -> winrt.system.Single: ...
@@ -1110,6 +1188,8 @@ class InclinometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class InclinometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.InclinometerReading::get_PitchDegrees()
     @_property
     def pitch_degrees(self) -> winrt.system.Single: ...
@@ -1134,6 +1214,8 @@ class InclinometerReading(winrt.system.Object):
 
 @typing.final
 class InclinometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.InclinometerReading Windows.Devices.Sensors.InclinometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> InclinometerReading: ...
@@ -1149,6 +1231,8 @@ class LightSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LightSensor(winrt.system.Object, metaclass=LightSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.LightSensorReading Windows.Devices.Sensors.LightSensor::GetCurrentReading()
     def get_current_reading(self) -> LightSensorReading: ...
     # System.Boolean Windows.Devices.Sensors.LightSensor::IsChromaticitySupported()
@@ -1184,6 +1268,8 @@ class LightSensor(winrt.system.Object, metaclass=LightSensor_Static):
 
 @typing.final
 class LightSensorDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.LightSensorDataThreshold::get_LuxPercentage()
     @_property
     def lux_percentage(self) -> winrt.system.Single: ...
@@ -1205,6 +1291,8 @@ class LightSensorDataThreshold(winrt.system.Object):
 
 @typing.final
 class LightSensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.LightSensorReading::get_IlluminanceInLux()
     @_property
     def illuminance_in_lux(self) -> winrt.system.Single: ...
@@ -1223,12 +1311,16 @@ class LightSensorReading(winrt.system.Object):
 
 @typing.final
 class LightSensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.LightSensorReading Windows.Devices.Sensors.LightSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> LightSensorReading: ...
 
 @typing.final
 class LockOnLeaveOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Sensors.LockOnLeaveOptions::get_AllowWhenExternalDisplayConnected()
     @_property
     def allow_when_external_display_connected(self) -> bool: ...
@@ -1247,6 +1339,8 @@ class Magnetometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Magnetometer(winrt.system.Object, metaclass=Magnetometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.MagnetometerReading Windows.Devices.Sensors.Magnetometer::GetCurrentReading()
     def get_current_reading(self) -> MagnetometerReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Magnetometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Magnetometer,Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs>)
@@ -1286,6 +1380,8 @@ class Magnetometer(winrt.system.Object, metaclass=Magnetometer_Static):
 
 @typing.final
 class MagnetometerDataThreshold(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.MagnetometerDataThreshold::get_ZAxisMicroteslas()
     @_property
     def z_axis_microteslas(self) -> winrt.system.Single: ...
@@ -1307,6 +1403,8 @@ class MagnetometerDataThreshold(winrt.system.Object):
 
 @typing.final
 class MagnetometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.MagnetometerAccuracy Windows.Devices.Sensors.MagnetometerReading::get_DirectionalAccuracy()
     @_property
     def directional_accuracy(self) -> MagnetometerAccuracy: ...
@@ -1331,12 +1429,16 @@ class MagnetometerReading(winrt.system.Object):
 
 @typing.final
 class MagnetometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.MagnetometerReading Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> MagnetometerReading: ...
 
 @typing.final
 class OnlookerDetectionOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.OnlookerDetectionBackOnMode Windows.Devices.Sensors.OnlookerDetectionOptions::get_BackOnMode()
     @_property
     def back_on_mode(self) -> OnlookerDetectionBackOnMode: ...
@@ -1386,6 +1488,8 @@ class OrientationSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class OrientationSensor(winrt.system.Object, metaclass=OrientationSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.OrientationSensorReading Windows.Devices.Sensors.OrientationSensor::GetCurrentReading()
     def get_current_reading(self) -> OrientationSensorReading: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.OrientationSensor::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.OrientationSensor,Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs>)
@@ -1425,6 +1529,8 @@ class OrientationSensor(winrt.system.Object, metaclass=OrientationSensor_Static)
 
 @typing.final
 class OrientationSensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.SensorQuaternion Windows.Devices.Sensors.OrientationSensorReading::get_Quaternion()
     @_property
     def quaternion(self) -> SensorQuaternion: ...
@@ -1446,6 +1552,8 @@ class OrientationSensorReading(winrt.system.Object):
 
 @typing.final
 class OrientationSensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.OrientationSensorReading Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> OrientationSensorReading: ...
@@ -1473,6 +1581,8 @@ class Pedometer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Pedometer(winrt.system.Object, metaclass=Pedometer_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<Windows.Devices.Sensors.PedometerStepKind,Windows.Devices.Sensors.PedometerReading> Windows.Devices.Sensors.Pedometer::GetCurrentReadings()
     def get_current_readings(self) -> _cabc.Mapping[PedometerStepKind, PedometerReading]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.Pedometer::add_ReadingChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Pedometer,Windows.Devices.Sensors.PedometerReadingChangedEventArgs>)
@@ -1501,6 +1611,8 @@ class PedometerDataThreshold(ISensorDataThreshold, winrt.system.Object):
 
 @typing.final
 class PedometerReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Devices.Sensors.PedometerReading::get_CumulativeSteps()
     @_property
     def cumulative_steps(self) -> winrt.system.Int32: ...
@@ -1516,6 +1628,8 @@ class PedometerReading(winrt.system.Object):
 
 @typing.final
 class PedometerReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.PedometerReading Windows.Devices.Sensors.PedometerReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> PedometerReading: ...
@@ -1531,6 +1645,8 @@ class ProximitySensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProximitySensor(winrt.system.Object, metaclass=ProximitySensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.ProximitySensorDisplayOnOffController Windows.Devices.Sensors.ProximitySensor::CreateDisplayOnOffController()
     def create_display_on_off_controller(self) -> ProximitySensorDisplayOnOffController: ...
     # Windows.Devices.Sensors.ProximitySensorReading Windows.Devices.Sensors.ProximitySensor::GetCurrentReading()
@@ -1557,11 +1673,15 @@ class ProximitySensorDataThreshold(ISensorDataThreshold, winrt.system.Object):
 class ProximitySensorDisplayOnOffController(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Sensors.ProximitySensorDisplayOnOffController::Close()
     def close(self) -> None: ...
 
 @typing.final
 class ProximitySensorReading(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Devices.Sensors.ProximitySensorReading::get_DistanceInMillimeters()
     @_property
     def distance_in_millimeters(self) -> winrt.system.UInt32 | None: ...
@@ -1574,12 +1694,16 @@ class ProximitySensorReading(winrt.system.Object):
 
 @typing.final
 class ProximitySensorReadingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.ProximitySensorReading Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs::get_Reading()
     @_property
     def reading(self) -> ProximitySensorReading: ...
 
 @typing.final
 class SensorDataThresholdTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Sensors.SensorDataThresholdTriggerDetails::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1589,6 +1713,8 @@ class SensorDataThresholdTriggerDetails(winrt.system.Object):
 
 @typing.final
 class SensorQuaternion(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.SensorQuaternion::get_W()
     @_property
     def w(self) -> winrt.system.Single: ...
@@ -1604,6 +1730,8 @@ class SensorQuaternion(winrt.system.Object):
 
 @typing.final
 class SensorRotationMatrix(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.Devices.Sensors.SensorRotationMatrix::get_M11()
     @_property
     def m11(self) -> winrt.system.Single: ...
@@ -1643,6 +1771,8 @@ class SimpleOrientationSensor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SimpleOrientationSensor(winrt.system.Object, metaclass=SimpleOrientationSensor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.SimpleOrientation Windows.Devices.Sensors.SimpleOrientationSensor::GetCurrentOrientation()
     def get_current_orientation(self) -> SimpleOrientation: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Sensors.SimpleOrientationSensor::add_OrientationChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.SimpleOrientationSensor,Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs>)
@@ -1661,6 +1791,8 @@ class SimpleOrientationSensor(winrt.system.Object, metaclass=SimpleOrientationSe
 
 @typing.final
 class SimpleOrientationSensorOrientationChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sensors.SimpleOrientation Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs::get_Orientation()
     @_property
     def orientation(self) -> SimpleOrientation: ...
@@ -1670,6 +1802,8 @@ class SimpleOrientationSensorOrientationChangedEventArgs(winrt.system.Object):
 
 @typing.final
 class WakeOnApproachOptions(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Sensors.WakeOnApproachOptions::get_DisableWhenBatterySaverOn()
     @_property
     def disable_when_battery_saver_on(self) -> bool: ...

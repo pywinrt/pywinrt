@@ -71,6 +71,8 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
 @typing.final
 @deprecated("Use ImageFeatureDescriptor instead of ImageVariableDescriptorPreview. For more info, see MSDN.")
 class ImageVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Imaging.BitmapPixelFormat Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview::get_BitmapPixelFormat()
     @_property
     @deprecated("Use IImageFeatureDescriptor instead of IImageVariableDescriptorPreview. For more info, see MSDN.")
@@ -103,6 +105,8 @@ class ImageVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, wi
 @typing.final
 @deprecated("Use LearningModelSession instead of InferencingOptionsPreview. For more info, see MSDN.")
 class InferencingOptionsPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.AI.MachineLearning.Preview.InferencingOptionsPreview::get_ReclaimMemoryAfterEvaluation()
     @_property
     @deprecated("Use LearningModel instead of IInferencingOptionsPreview. For more info, see MSDN.")
@@ -182,6 +186,8 @@ class LearningModelBindingPreview(_cabc.Mapping[str, winrt.system.Object], winrt
 @typing.final
 @deprecated("Use LearningModel instead of LearningModelDescriptionPreview. For more info, see MSDN.")
 class LearningModelDescriptionPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview::get_Author()
     @_property
     @deprecated("Use ILearningModel instead of ILearningModelDescriptionPreview. For more info, see MSDN.")
@@ -218,6 +224,8 @@ class LearningModelDescriptionPreview(winrt.system.Object):
 @typing.final
 @deprecated("Use LearningModelEvaluationResult instead of LearningModelEvaluationResultPreview. For more info, see MSDN.")
 class LearningModelEvaluationResultPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview::get_CorrelationId()
     @_property
     @deprecated("Use ILearningModelEvaluationResult instead of ILearningModelEvaluationResultPreview. For more info, see MSDN.")
@@ -239,6 +247,8 @@ class LearningModelPreview_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("Use LearningModel instead of LearningModelPreview. For more info, see MSDN.")
 class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview> Windows.AI.MachineLearning.Preview.LearningModelPreview::EvaluateAsync(Windows.AI.MachineLearning.Preview.LearningModelBindingPreview,System.String)
     @deprecated("Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.")
     def evaluate_async(self, binding: LearningModelBindingPreview, correlation_id: str, /) -> windows_foundation.IAsyncOperation[LearningModelEvaluationResultPreview]: ...
@@ -261,6 +271,8 @@ class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_S
 @typing.final
 @deprecated("Use ILearningModelFeatureDescriptor instead of LearningModelVariableDescriptorPreview. For more info, see MSDN.")
 class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -281,6 +293,8 @@ class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPre
 @typing.final
 @deprecated("Use MapFeatureDescriptor instead of MapVariableDescriptorPreview. For more info, see MSDN.")
 class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -317,6 +331,8 @@ class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winr
 @typing.final
 @deprecated("Use SequenceFeatureDescriptor instead of SequenceVariableDescriptorPreview. For more info, see MSDN.")
 class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
@@ -341,6 +357,8 @@ class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview,
 @typing.final
 @deprecated("Use TensorFeatureDescriptor instead of TensorVariableDescriptorPreview. For more info, see MSDN.")
 class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview::get_Description()
     @_property
     @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")

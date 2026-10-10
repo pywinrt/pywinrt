@@ -47,6 +47,8 @@ class QuickLink(winrt.system.Object):
 
 @typing.final
 class ShareOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::DismissUI()
     def dismiss_ui(self) -> None: ...
     # System.Void Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation::RemoveThisQuickLink()

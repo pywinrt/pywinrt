@@ -59,6 +59,8 @@ class PnpObject_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PnpObject(winrt.system.Object, metaclass=PnpObject_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Enumeration.Pnp.PnpObject::Update(Windows.Devices.Enumeration.Pnp.PnpObjectUpdate)
     def update(self, update_info: PnpObjectUpdate, /) -> None: ...
     # System.String Windows.Devices.Enumeration.Pnp.PnpObject::get_Id()
@@ -79,6 +81,8 @@ class PnpObjectCollection(_cabc.Sequence[PnpObject], winrt.system.Object):
     def __getitem__(self, index: typing.SupportsIndex) -> PnpObject: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[PnpObject]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Devices.Enumeration.Pnp.PnpObject> Windows.Devices.Enumeration.Pnp.PnpObjectCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[PnpObject]: ...
     # Windows.Devices.Enumeration.Pnp.PnpObject Windows.Devices.Enumeration.Pnp.PnpObjectCollection::GetAt(System.UInt32)
@@ -93,6 +97,8 @@ class PnpObjectCollection(_cabc.Sequence[PnpObject], winrt.system.Object):
 
 @typing.final
 class PnpObjectUpdate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Devices.Enumeration.Pnp.PnpObjectUpdate::get_Id()
     @_property
     def id(self) -> str: ...
@@ -105,6 +111,8 @@ class PnpObjectUpdate(winrt.system.Object):
 
 @typing.final
 class PnpObjectWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Enumeration.Pnp.PnpObjectWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Devices.Enumeration.Pnp.PnpObjectWatcher::Stop()

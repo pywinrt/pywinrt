@@ -35,10 +35,13 @@ class PlatformTelemetryClient_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryClient_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class PlatformTelemetryRegistrationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationStatus Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult::get_Status()
     @_property
     def status(self) -> PlatformTelemetryRegistrationStatus: ...

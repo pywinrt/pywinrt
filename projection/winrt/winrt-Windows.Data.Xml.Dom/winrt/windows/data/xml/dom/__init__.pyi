@@ -56,6 +56,8 @@ class NodeType(enum.IntEnum):
 
 @typing.final
 class DtdEntity(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdEntity::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdEntity::CloneNode(System.Boolean)
@@ -146,6 +148,8 @@ class DtdEntity(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Obj
 
 @typing.final
 class DtdNotation(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdNotation::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.DtdNotation::CloneNode(System.Boolean)
@@ -233,6 +237,8 @@ class DtdNotation(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.O
 
 @typing.final
 class XmlAttribute(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlAttribute::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlAttribute::CloneNode(System.Boolean)
@@ -326,6 +332,8 @@ class XmlAttribute(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.
 
 @typing.final
 class XmlCDataSection(IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlCDataSection::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlCDataSection::AppendData(System.String)
@@ -428,6 +436,8 @@ class XmlCDataSection(IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer,
 
 @typing.final
 class XmlComment(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlComment::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlComment::AppendData(System.String)
@@ -693,6 +703,8 @@ class XmlDocument(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.O
 
 @typing.final
 class XmlDocumentFragment(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentFragment::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentFragment::CloneNode(System.Boolean)
@@ -774,6 +786,8 @@ class XmlDocumentFragment(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.
 
 @typing.final
 class XmlDocumentType(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentType::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlDocumentType::CloneNode(System.Boolean)
@@ -864,11 +878,15 @@ class XmlDocumentType(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.syst
 
 @typing.final
 class XmlDomImplementation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Data.Xml.Dom.XmlDomImplementation::HasFeature(System.String,System.Object)
     def has_feature(self, feature: str, version: winrt.system.Object, /) -> bool: ...
 
 @typing.final
 class XmlElement(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlElement::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlElement::CloneNode(System.Boolean)
@@ -977,6 +995,8 @@ class XmlElement(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Ob
 
 @typing.final
 class XmlEntityReference(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlEntityReference::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlEntityReference::CloneNode(System.Boolean)
@@ -1098,6 +1118,8 @@ class XmlNamedNodeMap(_cabc.Sequence[IXmlNode], winrt.system.Object):
     def __getitem__(self, index: typing.SupportsIndex) -> IXmlNode: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[IXmlNode]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Data.Xml.Dom.IXmlNode> Windows.Data.Xml.Dom.XmlNamedNodeMap::First()
     def first(self) -> windows_foundation_collections.IIterator[IXmlNode]: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlNamedNodeMap::GetAt(System.UInt32)
@@ -1135,6 +1157,8 @@ class XmlNodeList(_cabc.Sequence[IXmlNode], winrt.system.Object):
     def __getitem__(self, index: typing.SupportsIndex) -> IXmlNode: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[IXmlNode]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Data.Xml.Dom.IXmlNode> Windows.Data.Xml.Dom.XmlNodeList::First()
     def first(self) -> windows_foundation_collections.IIterator[IXmlNode]: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlNodeList::GetAt(System.UInt32)
@@ -1154,6 +1178,8 @@ class XmlNodeList(_cabc.Sequence[IXmlNode], winrt.system.Object):
 
 @typing.final
 class XmlProcessingInstruction(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlProcessingInstruction::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlProcessingInstruction::CloneNode(System.Boolean)
@@ -1244,6 +1270,8 @@ class XmlProcessingInstruction(IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, w
 
 @typing.final
 class XmlText(IXmlText, IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelector, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.IXmlNode Windows.Data.Xml.Dom.XmlText::AppendChild(Windows.Data.Xml.Dom.IXmlNode)
     def append_child(self, new_child: IXmlNode, /) -> IXmlNode: ...
     # System.Void Windows.Data.Xml.Dom.XmlText::AppendData(System.String)

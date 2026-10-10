@@ -49,6 +49,8 @@ class Radio_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Radio(winrt.system.Object, metaclass=Radio_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Radios.RadioAccessStatus> Windows.Devices.Radios.Radio::SetStateAsync(Windows.Devices.Radios.RadioState)
     def set_state_async(self, value: RadioState, /) -> windows_foundation.IAsyncOperation[RadioAccessStatus]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Radios.Radio::add_StateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Radios.Radio,System.Object>)

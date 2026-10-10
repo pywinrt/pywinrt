@@ -161,6 +161,8 @@ class AccessibilitySettings(winrt.system.Object):
 
 @typing.final
 class ActivationViewSwitcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.ActivationViewSwitcher::IsViewPresentedOnActivationVirtualDesktop(System.Int32)
     def is_view_presented_on_activation_virtual_desktop(self, view_id: winrt.system.Int32, /) -> bool: ...
     @typing.overload
@@ -215,6 +217,8 @@ class ApplicationView_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.ViewManagement.ApplicationView::ExitFullScreenMode()
     def exit_full_screen_mode(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.DisplayRegion> Windows.UI.ViewManagement.ApplicationView::GetDisplayRegions()
@@ -326,6 +330,8 @@ class ApplicationView(winrt.system.Object, metaclass=ApplicationView_Static):
 
 @typing.final
 class ApplicationViewConsolidatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs::get_IsUserInitiated()
     @_property
     def is_user_initiated(self) -> bool: ...
@@ -343,7 +349,8 @@ class ApplicationViewScaling_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ApplicationViewScaling(winrt.system.Object, metaclass=ApplicationViewScaling_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class ApplicationViewSwitcher_Static(winrt._winrt.Object_Static):
@@ -400,10 +407,13 @@ class ApplicationViewSwitcher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ApplicationViewSwitcher(winrt.system.Object, metaclass=ApplicationViewSwitcher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ApplicationViewTitleBar(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.UI.Color> Windows.UI.ViewManagement.ApplicationViewTitleBar::get_InactiveForegroundColor()
     @_property
     def inactive_foreground_color(self) -> windows_ui.Color | None: ...
@@ -502,6 +512,8 @@ class InputPane_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class InputPane(winrt.system.Object, metaclass=InputPane_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.InputPane::TryHide()
     def try_hide(self) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.InputPane::TryShow()
@@ -526,6 +538,8 @@ class InputPane(winrt.system.Object, metaclass=InputPane_Static):
 
 @typing.final
 class InputPaneVisibilityEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.ViewManagement.InputPaneVisibilityEventArgs::get_EnsuredFocusedElementInView()
     @_property
     def ensured_focused_element_in_view(self) -> bool: ...
@@ -574,7 +588,8 @@ class ProjectionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ProjectionManager(winrt.system.Object, metaclass=ProjectionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class UISettings(winrt.system.Object):
@@ -655,15 +670,18 @@ class UISettings(winrt.system.Object):
 
 @typing.final
 class UISettingsAnimationsEnabledChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class UISettingsAutoHideScrollBarsChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class UISettingsMessageDurationChangedEventArgs(winrt.system.Object):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class UIViewSettings_Static(winrt._winrt.Object_Static):
@@ -672,6 +690,8 @@ class UIViewSettings_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UIViewSettings(winrt.system.Object, metaclass=UIViewSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.ViewManagement.UserInteractionMode Windows.UI.ViewManagement.UIViewSettings::GetPreferredInteractionMode(Windows.UI.ViewManagement.UserInteractionMode[])
     def get_preferred_interaction_mode(self, supported_modes: winrt.system.Array[UserInteractionMode] | winrt.system.ReadableBuffer, /) -> UserInteractionMode: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.ViewManagement.UIViewSettings::add_PreferredInteractionModeChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.ViewManagement.UIViewSettings,System.Object>)
@@ -689,6 +709,8 @@ class ViewModePreferences_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ViewModePreferences(winrt.system.Object, metaclass=ViewModePreferences_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.ViewManagement.ViewSizePreference Windows.UI.ViewManagement.ViewModePreferences::get_ViewSizePreference()
     @_property
     def view_size_preference(self) -> ViewSizePreference: ...

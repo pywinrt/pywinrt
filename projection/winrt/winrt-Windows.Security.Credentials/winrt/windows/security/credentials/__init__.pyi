@@ -81,6 +81,8 @@ class WebAccountState(enum.IntEnum):
 
 @typing.final
 class KeyCredential(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.KeyCredentialAttestationResult> Windows.Security.Credentials.KeyCredential::GetAttestationAsync()
     def get_attestation_async(self) -> windows_foundation.IAsyncOperation[KeyCredentialAttestationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.KeyCredentialOperationResult> Windows.Security.Credentials.KeyCredential::RequestDeriveSharedSecretAsync(Windows.UI.WindowId,System.String,Windows.Storage.Streams.IBuffer)
@@ -111,6 +113,8 @@ class KeyCredential(winrt.system.Object):
 
 @typing.final
 class KeyCredentialAttestationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredentialAttestationResult::get_AttestationBuffer()
     @_property
     def attestation_buffer(self) -> windows_storage_streams.IBuffer: ...
@@ -161,10 +165,13 @@ class KeyCredentialManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KeyCredentialManager(winrt.system.Object, metaclass=KeyCredentialManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KeyCredentialOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredentialOperationResult::get_Result()
     @_property
     def result(self) -> windows_storage_streams.IBuffer: ...
@@ -174,6 +181,8 @@ class KeyCredentialOperationResult(winrt.system.Object):
 
 @typing.final
 class KeyCredentialRetrievalResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Security.Credentials.KeyCredential Windows.Security.Credentials.KeyCredentialRetrievalResult::get_Credential()
     @_property
     def credential(self) -> KeyCredential: ...

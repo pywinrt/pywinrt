@@ -190,6 +190,8 @@ class VpnChannel_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.Networking.Vpn.VpnChannel::ActivateForeground(System.String,Windows.Foundation.Collections.ValueSet)
     def activate_foreground(self, package_relative_app_id: str, shared_context: windows_foundation_collections.ValueSet, /) -> windows_foundation_collections.ValueSet: ...
     # System.Void Windows.Networking.Vpn.VpnChannel::AddAndAssociateTransport(System.Object,System.Object)
@@ -298,18 +300,24 @@ class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
 
 @typing.final
 class VpnChannelActivityEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Vpn.VpnChannelActivityEventType Windows.Networking.Vpn.VpnChannelActivityEventArgs::get_Type()
     @_property
     def type(self) -> VpnChannelActivityEventType: ...
 
 @typing.final
 class VpnChannelActivityStateChangedArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.Vpn.VpnChannelActivityEventType Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs::get_ActivityState()
     @_property
     def activity_state(self) -> VpnChannelActivityEventType: ...
 
 @typing.final
 class VpnChannelConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Vpn.VpnChannelConfiguration::get_CustomField()
     @_property
     def custom_field(self) -> str: ...
@@ -325,6 +333,8 @@ class VpnChannelConfiguration(winrt.system.Object):
 
 @typing.final
 class VpnCredential(IVpnCredential, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Vpn.VpnCredential::get_AdditionalPin()
     @_property
     def additional_pin(self) -> str: ...
@@ -651,6 +661,8 @@ class VpnDomainNameInfo(winrt.system.Object):
 
 @typing.final
 class VpnForegroundActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Activation.ActivationKind Windows.Networking.Vpn.VpnForegroundActivatedEventArgs::get_Kind()
     @_property
     def kind(self) -> windows_applicationmodel_activation.ActivationKind: ...
@@ -675,6 +687,8 @@ class VpnForegroundActivatedEventArgs(windows_applicationmodel_activation.IActiv
 
 @typing.final
 class VpnForegroundActivationOperation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.Vpn.VpnForegroundActivationOperation::Complete(Windows.Foundation.Collections.ValueSet)
     def complete(self, result: windows_foundation_collections.ValueSet, /) -> None: ...
 
@@ -851,6 +865,8 @@ class VpnPacketBuffer(winrt.system.Object):
 @typing.final
 class VpnPacketBufferList(winrt.system.Object):
     def __iter__(self) -> _cabc.Iterator[VpnPacketBuffer]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.Vpn.VpnPacketBufferList::AddAtBegin(Windows.Networking.Vpn.VpnPacketBuffer)
     def add_at_begin(self, next_vpn_packet_buffer: VpnPacketBuffer, /) -> None: ...
     # System.Void Windows.Networking.Vpn.VpnPacketBufferList::Append(Windows.Networking.Vpn.VpnPacketBuffer)
@@ -875,6 +891,8 @@ class VpnPacketBufferList(winrt.system.Object):
 
 @typing.final
 class VpnPickedCredential(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.Vpn.VpnPickedCredential::get_AdditionalPin()
     @_property
     def additional_pin(self) -> str: ...
@@ -995,6 +1013,8 @@ class VpnRouteAssignment(winrt.system.Object):
 
 @typing.final
 class VpnSystemHealth(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.Buffer Windows.Networking.Vpn.VpnSystemHealth::get_StatementOfHealth()
     @_property
     def statement_of_health(self) -> windows_storage_streams.Buffer: ...

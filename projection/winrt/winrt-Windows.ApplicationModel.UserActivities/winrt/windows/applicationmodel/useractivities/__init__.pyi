@@ -138,6 +138,8 @@ class UserActivityChannel_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserActivityChannel(winrt.system.Object, metaclass=UserActivityChannel_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserActivities.UserActivityChannel::DeleteActivityAsync(System.String)
     def delete_activity_async(self, activity_id: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserActivities.UserActivityChannel::DeleteAllActivitiesAsync()
@@ -156,11 +158,15 @@ class UserActivityContentInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserActivityContentInfo(IUserActivityContentInfo, winrt.system.Object, metaclass=UserActivityContentInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.UserActivities.UserActivityContentInfo::ToJson()
     def to_json(self) -> str: ...
 
 @typing.final
 class UserActivityRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserActivities.UserActivityRequest::SetUserActivity(Windows.ApplicationModel.UserActivities.UserActivity)
     def set_user_activity(self, activity: UserActivity, /) -> None: ...
 
@@ -171,6 +177,8 @@ class UserActivityRequestManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserActivityRequestManager(winrt.system.Object, metaclass=UserActivityRequestManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.UserActivities.UserActivityRequestManager::add_UserActivityRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.UserActivities.UserActivityRequestManager,Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs>)
     def add_user_activity_requested(self, handler: windows_foundation.TypedEventHandler[UserActivityRequestManager, UserActivityRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.UserActivities.UserActivityRequestManager::remove_UserActivityRequested(Windows.Foundation.EventRegistrationToken)
@@ -178,6 +186,8 @@ class UserActivityRequestManager(winrt.system.Object, metaclass=UserActivityRequ
 
 @typing.final
 class UserActivityRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.ApplicationModel.UserActivities.UserActivityRequest Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs::get_Request()
@@ -188,6 +198,8 @@ class UserActivityRequestedEventArgs(winrt.system.Object):
 class UserActivitySession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.UserActivities.UserActivitySession::Close()
     def close(self) -> None: ...
     # System.String Windows.ApplicationModel.UserActivities.UserActivitySession::get_ActivityId()
@@ -196,6 +208,8 @@ class UserActivitySession(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class UserActivitySessionHistoryItem(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem::get_EndTime()
     @_property
     def end_time(self) -> datetime.datetime | None: ...
@@ -208,6 +222,8 @@ class UserActivitySessionHistoryItem(winrt.system.Object):
 
 @typing.final
 class UserActivityVisualElements(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.UserActivities.UserActivityVisualElements::get_DisplayText()
     @_property
     def display_text(self) -> str: ...

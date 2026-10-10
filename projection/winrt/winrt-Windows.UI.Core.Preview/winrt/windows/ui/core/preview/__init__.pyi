@@ -21,10 +21,13 @@ class CoreAppWindowPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.Boolean Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs::get_Handled()
@@ -41,6 +44,8 @@ class SystemNavigationManagerPreview_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class SystemNavigationManagerPreview(winrt.system.Object, metaclass=SystemNavigationManagerPreview_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.Preview.SystemNavigationManagerPreview::add_CloseRequested(Windows.Foundation.EventHandler`1<Windows.UI.Core.Preview.SystemNavigationCloseRequestedPreviewEventArgs>)
     def add_close_requested(self, handler: windows_foundation.EventHandler[SystemNavigationCloseRequestedPreviewEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Core.Preview.SystemNavigationManagerPreview::remove_CloseRequested(Windows.Foundation.EventRegistrationToken)

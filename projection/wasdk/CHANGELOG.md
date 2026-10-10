@@ -52,3 +52,6 @@ releases before v4.0 are.
   Windows App SDK license text beside PyWinRT's own and a CycloneDX bill of
   materials naming the redistributed `.dll`, its version and Microsoft as its
   supplier.
+
+### Fixed
+- Fixed type hints incorrectly accepting a call to a class with no constructor.

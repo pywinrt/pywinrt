@@ -450,6 +450,8 @@ class ProfileUsage:
 
 @typing.final
 class ESim(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimOperationResult> Windows.Networking.NetworkOperators.ESim::DeleteProfileAsync(System.String)
     def delete_profile_async(self, profile_id: str, /) -> windows_foundation.IAsyncOperation[ESimOperationResult]: ...
     @typing.overload
@@ -506,12 +508,16 @@ class ESim(winrt.system.Object):
 
 @typing.final
 class ESimAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESim Windows.Networking.NetworkOperators.ESimAddedEventArgs::get_ESim()
     @_property
     def e_sim(self) -> ESim: ...
 
 @typing.final
 class ESimDiscoverEvent(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.ESimDiscoverEvent::get_MatchingId()
     @_property
     def matching_id(self) -> str: ...
@@ -521,6 +527,8 @@ class ESimDiscoverEvent(winrt.system.Object):
 
 @typing.final
 class ESimDiscoverResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.ESimDiscoverEvent> Windows.Networking.NetworkOperators.ESimDiscoverResult::get_Events()
     @_property
     def events(self) -> _cabc.Sequence[ESimDiscoverEvent]: ...
@@ -536,6 +544,8 @@ class ESimDiscoverResult(winrt.system.Object):
 
 @typing.final
 class ESimDownloadProfileMetadataResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESimProfileMetadata Windows.Networking.NetworkOperators.ESimDownloadProfileMetadataResult::get_ProfileMetadata()
     @_property
     def profile_metadata(self) -> ESimProfileMetadata: ...
@@ -557,22 +567,29 @@ class ESimManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ESimManager(winrt.system.Object, metaclass=ESimManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ESimOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESimOperationStatus Windows.Networking.NetworkOperators.ESimOperationResult::get_Status()
     @_property
     def status(self) -> ESimOperationStatus: ...
 
 @typing.final
 class ESimPolicy(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.NetworkOperators.ESimPolicy::get_ShouldEnableManagingUi()
     @_property
     def should_enable_managing_ui(self) -> bool: ...
 
 @typing.final
 class ESimProfile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimOperationResult> Windows.Networking.NetworkOperators.ESimProfile::DisableAsync()
     def disable_async(self) -> windows_foundation.IAsyncOperation[ESimOperationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.ESimOperationResult> Windows.Networking.NetworkOperators.ESimProfile::EnableAsync()
@@ -606,6 +623,8 @@ class ESimProfile(winrt.system.Object):
 
 @typing.final
 class ESimProfileMetadata(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Networking.NetworkOperators.ESimOperationResult,Windows.Networking.NetworkOperators.ESimProfileInstallProgress> Windows.Networking.NetworkOperators.ESimProfileMetadata::ConfirmInstallAsync()
     def confirm_install_async(self) -> windows_foundation.IAsyncOperationWithProgress[ESimOperationResult, ESimProfileInstallProgress]: ...
@@ -648,6 +667,8 @@ class ESimProfileMetadata(winrt.system.Object):
 
 @typing.final
 class ESimProfilePolicy(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.NetworkOperators.ESimProfilePolicy::get_CanDelete()
     @_property
     def can_delete(self) -> bool: ...
@@ -660,12 +681,16 @@ class ESimProfilePolicy(winrt.system.Object):
 
 @typing.final
 class ESimRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESim Windows.Networking.NetworkOperators.ESimRemovedEventArgs::get_ESim()
     @_property
     def e_sim(self) -> ESim: ...
 
 @typing.final
 class ESimServiceInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESimAuthenticationPreference Windows.Networking.NetworkOperators.ESimServiceInfo::get_AuthenticationPreference()
     @_property
     def authentication_preference(self) -> ESimAuthenticationPreference: ...
@@ -675,12 +700,16 @@ class ESimServiceInfo(winrt.system.Object):
 
 @typing.final
 class ESimUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.ESim Windows.Networking.NetworkOperators.ESimUpdatedEventArgs::get_ESim()
     @_property
     def e_sim(self) -> ESim: ...
 
 @typing.final
 class ESimWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.ESimWatcher::Start()
     def start(self) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.ESimWatcher::Stop()
@@ -716,6 +745,8 @@ class HotspotAuthenticationContext_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HotspotAuthenticationContext(winrt.system.Object, metaclass=HotspotAuthenticationContext_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.HotspotAuthenticationContext::AbortAuthentication(System.Boolean)
     def abort_authentication(self, mark_as_manual: bool, /) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.HotspotAuthenticationContext::IssueCredentials(System.String,System.String,System.String,System.Boolean)
@@ -744,12 +775,16 @@ class HotspotAuthenticationContext(winrt.system.Object, metaclass=HotspotAuthent
 
 @typing.final
 class HotspotAuthenticationEventDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails::get_EventToken()
     @_property
     def event_token(self) -> str: ...
 
 @typing.final
 class HotspotCredentialsAuthenticationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Data.Xml.Dom.XmlDocument Windows.Networking.NetworkOperators.HotspotCredentialsAuthenticationResult::get_AuthenticationReplyXml()
     @_property
     def authentication_reply_xml(self) -> windows_data_xml_dom.XmlDocument: ...
@@ -777,7 +812,8 @@ class KnownCSimFilePaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownRuimFilePaths_Static(winrt._winrt.Object_Static):
@@ -793,7 +829,8 @@ class KnownRuimFilePaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownSimFilePaths_Static(winrt._winrt.Object_Static):
@@ -812,7 +849,8 @@ class KnownSimFilePaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownUSimFilePaths_Static(winrt._winrt.Object_Static):
@@ -834,7 +872,8 @@ class KnownUSimFilePaths_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class KnownUSimFilePaths(winrt.system.Object, metaclass=KnownUSimFilePaths_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class MobileBroadbandAccount_Static(winrt._winrt.Object_Static):
@@ -846,6 +885,8 @@ class MobileBroadbandAccount_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MobileBroadbandAccount(winrt.system.Object, metaclass=MobileBroadbandAccount_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Connectivity.ConnectionProfile> Windows.Networking.NetworkOperators.MobileBroadbandAccount::GetConnectionProfiles()
     def get_connection_profiles(self) -> _cabc.Sequence[windows_networking_connectivity.ConnectionProfile]: ...
     # Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation Windows.Networking.NetworkOperators.MobileBroadbandAccount::get_CurrentDeviceInformation()
@@ -869,12 +910,16 @@ class MobileBroadbandAccount(winrt.system.Object, metaclass=MobileBroadbandAccou
 
 @typing.final
 class MobileBroadbandAccountEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs::get_NetworkAccountId()
     @_property
     def network_account_id(self) -> str: ...
 
 @typing.final
 class MobileBroadbandAccountUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs::get_HasDeviceInformationChanged()
     @_property
     def has_device_information_changed(self) -> bool: ...
@@ -928,6 +973,8 @@ class MobileBroadbandAntennaSar(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellCdma(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellCdma::get_BaseStationId()
     @_property
     def base_station_id(self) -> winrt.system.Int32 | None: ...
@@ -955,6 +1002,8 @@ class MobileBroadbandCellCdma(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellGsm(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellGsm::get_BaseStationId()
     @_property
     def base_station_id(self) -> winrt.system.Int32 | None: ...
@@ -979,6 +1028,8 @@ class MobileBroadbandCellGsm(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellLte(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellLte::get_CellId()
     @_property
     def cell_id(self) -> winrt.system.Int32 | None: ...
@@ -1006,6 +1057,8 @@ class MobileBroadbandCellLte(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellNR(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int64> Windows.Networking.NetworkOperators.MobileBroadbandCellNR::get_CellId()
     @_property
     def cell_id(self) -> winrt.system.Int64 | None: ...
@@ -1036,6 +1089,8 @@ class MobileBroadbandCellNR(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellTdscdma(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellTdscdma::get_CellId()
     @_property
     def cell_id(self) -> winrt.system.Int32 | None: ...
@@ -1063,6 +1118,8 @@ class MobileBroadbandCellTdscdma(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellUmts(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellUmts::get_CellId()
     @_property
     def cell_id(self) -> winrt.system.Int32 | None: ...
@@ -1090,6 +1147,8 @@ class MobileBroadbandCellUmts(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCellsInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandCellCdma> Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo::get_NeighboringCellsCdma()
     @_property
     def neighboring_cells_cdma(self) -> _cabc.Sequence[MobileBroadbandCellCdma]: ...
@@ -1129,12 +1188,16 @@ class MobileBroadbandCellsInfo(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandCurrentSlotIndexChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs::get_CurrentSlotIndex()
     @_property
     def current_slot_index(self) -> winrt.system.Int32: ...
 
 @typing.final
 class MobileBroadbandDeviceInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Sms.CellularClass Windows.Networking.NetworkOperators.MobileBroadbandDeviceInformation::get_CellularClass()
     @_property
     def cellular_class(self) -> windows_devices_sms.CellularClass: ...
@@ -1201,6 +1264,8 @@ class MobileBroadbandDeviceInformation(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceService(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession Windows.Networking.NetworkOperators.MobileBroadbandDeviceService::OpenCommandSession()
     def open_command_session(self) -> MobileBroadbandDeviceServiceCommandSession: ...
     # Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession Windows.Networking.NetworkOperators.MobileBroadbandDeviceService::OpenDataSession()
@@ -1214,6 +1279,8 @@ class MobileBroadbandDeviceService(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceCommandEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1229,6 +1296,8 @@ class MobileBroadbandDeviceServiceCommandEventArgs(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceCommandResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult::get_ResponseData()
     @_property
     def response_data(self) -> windows_storage_streams.IBuffer: ...
@@ -1238,6 +1307,8 @@ class MobileBroadbandDeviceServiceCommandResult(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceCommandSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession::CloseSession()
     def close_session(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandResult> Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession::SendQueryCommandAsync(System.UInt32,Windows.Storage.Streams.IBuffer)
@@ -1251,12 +1322,16 @@ class MobileBroadbandDeviceServiceCommandSession(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceDataReceivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs::get_ReceivedData()
     @_property
     def received_data(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
 class MobileBroadbandDeviceServiceDataSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession::CloseSession()
     def close_session(self) -> None: ...
     # Windows.Foundation.IAsyncAction Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession::WriteDataAsync(Windows.Storage.Streams.IBuffer)
@@ -1268,6 +1343,8 @@ class MobileBroadbandDeviceServiceDataSession(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceInformation::get_DeviceServiceId()
     @_property
     def device_service_id(self) -> _uuid.UUID: ...
@@ -1280,6 +1357,8 @@ class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandDeviceServiceTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceTriggerDetails::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1304,6 +1383,8 @@ class MobileBroadbandModem_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MobileBroadbandModem(winrt.system.Object, metaclass=MobileBroadbandModem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration> Windows.Networking.NetworkOperators.MobileBroadbandModem::GetCurrentConfigurationAsync()
     def get_current_configuration_async(self) -> windows_foundation.IAsyncOperation[MobileBroadbandModemConfiguration]: ...
     # Windows.Networking.NetworkOperators.MobileBroadbandDeviceService Windows.Networking.NetworkOperators.MobileBroadbandModem::GetDeviceService(System.Guid)
@@ -1375,6 +1456,8 @@ class MobileBroadbandModem(winrt.system.Object, metaclass=MobileBroadbandModem_S
 
 @typing.final
 class MobileBroadbandModemConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandModemConfiguration::get_HomeProviderId()
     @_property
     def home_provider_id(self) -> str: ...
@@ -1402,6 +1485,8 @@ class MobileBroadbandModemIsolation(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandNetwork(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo> Windows.Networking.NetworkOperators.MobileBroadbandNetwork::GetCellsInfoAsync()
     def get_cells_info_async(self) -> windows_foundation.IAsyncOperation[MobileBroadbandCellsInfo]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Networking.NetworkOperators.MobileBroadbandNetwork::GetVoiceCallSupportAsync()
@@ -1441,6 +1526,8 @@ class MobileBroadbandNetwork(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandNetworkRegistrationStateChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1450,12 +1537,16 @@ class MobileBroadbandNetworkRegistrationStateChange(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandNetworkRegistrationStateChangeTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChange> Windows.Networking.NetworkOperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails::get_NetworkRegistrationStateChanges()
     @_property
     def network_registration_state_changes(self) -> _cabc.Sequence[MobileBroadbandNetworkRegistrationStateChange]: ...
 
 @typing.final
 class MobileBroadbandPco(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Networking.NetworkOperators.MobileBroadbandPco::get_Data()
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...
@@ -1468,12 +1559,16 @@ class MobileBroadbandPco(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandPcoDataChangeTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandPco Windows.Networking.NetworkOperators.MobileBroadbandPcoDataChangeTriggerDetails::get_UpdatedData()
     @_property
     def updated_data(self) -> MobileBroadbandPco: ...
 
 @typing.final
 class MobileBroadbandPin(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult> Windows.Networking.NetworkOperators.MobileBroadbandPin::ChangeAsync(System.String,System.String)
     def change_async(self, current_pin: str, new_pin: str, /) -> windows_foundation.IAsyncOperation[MobileBroadbandPinOperationResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult> Windows.Networking.NetworkOperators.MobileBroadbandPin::DisableAsync(System.String)
@@ -1508,6 +1603,8 @@ class MobileBroadbandPin(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandPinLockStateChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1520,12 +1617,16 @@ class MobileBroadbandPinLockStateChange(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandPinLockStateChangeTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChange> Windows.Networking.NetworkOperators.MobileBroadbandPinLockStateChangeTriggerDetails::get_PinLockStateChanges()
     @_property
     def pin_lock_state_changes(self) -> _cabc.Sequence[MobileBroadbandPinLockStateChange]: ...
 
 @typing.final
 class MobileBroadbandPinManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandPin Windows.Networking.NetworkOperators.MobileBroadbandPinManager::GetPin(Windows.Networking.NetworkOperators.MobileBroadbandPinType)
     def get_pin(self, pin_type: MobileBroadbandPinType, /) -> MobileBroadbandPin: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandPinType> Windows.Networking.NetworkOperators.MobileBroadbandPinManager::get_SupportedPins()
@@ -1534,6 +1635,8 @@ class MobileBroadbandPinManager(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandPinOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Networking.NetworkOperators.MobileBroadbandPinOperationResult::get_AttemptsRemaining()
     @_property
     def attempts_remaining(self) -> winrt.system.UInt32: ...
@@ -1543,6 +1646,8 @@ class MobileBroadbandPinOperationResult(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandRadioStateChange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange::get_DeviceId()
     @_property
     def device_id(self) -> str: ...
@@ -1552,12 +1657,16 @@ class MobileBroadbandRadioStateChange(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandRadioStateChangeTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChange> Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails::get_RadioStateChanges()
     @_property
     def radio_state_changes(self) -> _cabc.Sequence[MobileBroadbandRadioStateChange]: ...
 
 @typing.final
 class MobileBroadbandSarManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Networking.NetworkOperators.MobileBroadbandSarManager::DisableBackoffAsync()
     def disable_backoff_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Networking.NetworkOperators.MobileBroadbandSarManager::EnableBackoffAsync()
@@ -1596,6 +1705,8 @@ class MobileBroadbandSarManager(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandSlotInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo::get_Index()
     @_property
     def index(self) -> winrt.system.Int32: ...
@@ -1608,12 +1719,16 @@ class MobileBroadbandSlotInfo(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandSlotInfoChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandSlotInfo Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs::get_SlotInfo()
     @_property
     def slot_info(self) -> MobileBroadbandSlotInfo: ...
 
 @typing.final
 class MobileBroadbandSlotManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandModemStatus Windows.Networking.NetworkOperators.MobileBroadbandSlotManager::SetCurrentSlot(System.Int32)
     def set_current_slot(self, slot_index: winrt.system.Int32, /) -> MobileBroadbandModemStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandModemStatus> Windows.Networking.NetworkOperators.MobileBroadbandSlotManager::SetCurrentSlotAsync(System.Int32)
@@ -1635,12 +1750,16 @@ class MobileBroadbandSlotManager(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandTransmissionStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs::get_IsTransmitting()
     @_property
     def is_transmitting(self) -> bool: ...
 
 @typing.final
 class MobileBroadbandUicc(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult> Windows.Networking.NetworkOperators.MobileBroadbandUicc::GetUiccAppsAsync()
     def get_uicc_apps_async(self) -> windows_foundation.IAsyncOperation[MobileBroadbandUiccAppsResult]: ...
     # System.String Windows.Networking.NetworkOperators.MobileBroadbandUicc::get_SimIccId()
@@ -1649,6 +1768,8 @@ class MobileBroadbandUicc(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandUiccApp(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult> Windows.Networking.NetworkOperators.MobileBroadbandUiccApp::GetRecordDetailsAsync(Windows.Foundation.Collections.IIterable`1<System.UInt32>)
     def get_record_details_async(self, uicc_file_path: _cabc.Iterable[winrt.system.UInt32], /) -> windows_foundation.IAsyncOperation[MobileBroadbandUiccAppRecordDetailsResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult> Windows.Networking.NetworkOperators.MobileBroadbandUiccApp::ReadRecordAsync(Windows.Foundation.Collections.IIterable`1<System.UInt32>,System.Int32)
@@ -1662,6 +1783,8 @@ class MobileBroadbandUiccApp(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandUiccAppReadRecordResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Networking.NetworkOperators.MobileBroadbandUiccAppReadRecordResult::get_Data()
     @_property
     def data(self) -> windows_storage_streams.IBuffer: ...
@@ -1671,6 +1794,8 @@ class MobileBroadbandUiccAppReadRecordResult(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandUiccAppRecordDetailsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.UiccAppRecordKind Windows.Networking.NetworkOperators.MobileBroadbandUiccAppRecordDetailsResult::get_Kind()
     @_property
     def kind(self) -> UiccAppRecordKind: ...
@@ -1692,6 +1817,8 @@ class MobileBroadbandUiccAppRecordDetailsResult(winrt.system.Object):
 
 @typing.final
 class MobileBroadbandUiccAppsResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.MobileBroadbandUiccAppOperationStatus Windows.Networking.NetworkOperators.MobileBroadbandUiccAppsResult::get_Status()
     @_property
     def status(self) -> MobileBroadbandUiccAppOperationStatus: ...
@@ -1701,12 +1828,16 @@ class MobileBroadbandUiccAppsResult(winrt.system.Object):
 
 @typing.final
 class NetworkOperatorDataUsageTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.NetworkOperatorDataUsageNotificationKind Windows.Networking.NetworkOperators.NetworkOperatorDataUsageTriggerDetails::get_NotificationKind()
     @_property
     def notification_kind(self) -> NetworkOperatorDataUsageNotificationKind: ...
 
 @typing.final
 class NetworkOperatorNotificationEventDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails::AuthorizeTethering(System.Boolean,System.String)
     def authorize_tethering(self, allow: bool, entitlement_failure_reason: str, /) -> None: ...
     # System.Byte Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails::get_EncodingType()
@@ -1766,6 +1897,8 @@ class NetworkOperatorTetheringAccessPointConfiguration(winrt.system.Object):
 
 @typing.final
 class NetworkOperatorTetheringClient(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName> Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient::get_HostNames()
     @_property
     def host_names(self) -> _cabc.Sequence[windows_networking.HostName]: ...
@@ -1804,6 +1937,8 @@ class NetworkOperatorTetheringManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class NetworkOperatorTetheringManager(winrt.system.Object, metaclass=NetworkOperatorTetheringManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::ConfigureAccessPointAsync(Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration)
     def configure_access_point_async(self, configuration: NetworkOperatorTetheringAccessPointConfiguration, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager::GetCurrentAccessPointConfiguration()
@@ -1830,6 +1965,8 @@ class NetworkOperatorTetheringManager(winrt.system.Object, metaclass=NetworkOper
 
 @typing.final
 class NetworkOperatorTetheringOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Networking.NetworkOperators.NetworkOperatorTetheringOperationResult::get_AdditionalErrorMessage()
     @_property
     def additional_error_message(self) -> str: ...
@@ -1881,6 +2018,8 @@ class NetworkOperatorTetheringSessionAccessPointConfiguration(winrt.system.Objec
 
 @typing.final
 class ProvisionFromXmlDocumentResults(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Networking.NetworkOperators.ProvisionFromXmlDocumentResults::get_AllElementsProvisioned()
     @_property
     def all_elements_provisioned(self) -> bool: ...
@@ -1890,6 +2029,8 @@ class ProvisionFromXmlDocumentResults(winrt.system.Object):
 
 @typing.final
 class ProvisionedProfile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.ProvisionedProfile::UpdateCost(Windows.Networking.Connectivity.NetworkCostType)
     def update_cost(self, value: windows_networking_connectivity.NetworkCostType, /) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.ProvisionedProfile::UpdateUsage(Windows.Networking.NetworkOperators.ProfileUsage)
@@ -1910,6 +2051,8 @@ class ProvisioningAgent(winrt.system.Object, metaclass=ProvisioningAgent_Static)
 
 @typing.final
 class TetheringEntitlementCheckTriggerDetails(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails::AllowTethering()
     def allow_tethering(self) -> None: ...
     # System.Void Windows.Networking.NetworkOperators.TetheringEntitlementCheckTriggerDetails::DenyTethering(System.String)
@@ -1940,6 +2083,8 @@ class UssdMessage(winrt.system.Object):
 
 @typing.final
 class UssdReply(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Networking.NetworkOperators.UssdMessage Windows.Networking.NetworkOperators.UssdReply::get_Message()
     @_property
     def message(self) -> UssdMessage: ...
@@ -1956,6 +2101,8 @@ class UssdSession_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UssdSession(winrt.system.Object, metaclass=UssdSession_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Networking.NetworkOperators.UssdSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.NetworkOperators.UssdReply> Windows.Networking.NetworkOperators.UssdSession::SendMessageAndGetReplyAsync(Windows.Networking.NetworkOperators.UssdMessage)

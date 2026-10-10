@@ -108,6 +108,8 @@ class PackageDependency_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageDependency(winrt.system.Object, metaclass=PackageDependency_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Add()
     def add(self) -> PackageDependencyContext: ...
@@ -143,5 +145,6 @@ class PackageDependencyRank_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageDependencyRank(winrt.system.Object, metaclass=PackageDependencyRank_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

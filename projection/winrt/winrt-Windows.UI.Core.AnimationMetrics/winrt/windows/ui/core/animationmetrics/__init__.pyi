@@ -110,6 +110,8 @@ class AnimationDescription(winrt.system.Object):
 
 @typing.final
 class OpacityAnimation(IPropertyAnimation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Core.AnimationMetrics.OpacityAnimation::get_FinalOpacity()
     @_property
     def final_opacity(self) -> winrt.system.Single: ...
@@ -134,6 +136,8 @@ class OpacityAnimation(IPropertyAnimation, winrt.system.Object):
 
 @typing.final
 class PropertyAnimation(IPropertyAnimation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.PropertyAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -152,6 +156,8 @@ class PropertyAnimation(IPropertyAnimation, winrt.system.Object):
 
 @typing.final
 class ScaleAnimation(IPropertyAnimation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.ScaleAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...
@@ -185,6 +191,8 @@ class ScaleAnimation(IPropertyAnimation, winrt.system.Object):
 
 @typing.final
 class TranslationAnimation(IPropertyAnimation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.TranslationAnimation::get_Control1()
     @_property
     def control1(self) -> windows_foundation.Point: ...

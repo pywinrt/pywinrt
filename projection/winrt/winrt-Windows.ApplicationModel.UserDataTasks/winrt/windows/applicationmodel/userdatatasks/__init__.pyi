@@ -206,12 +206,16 @@ class UserDataTask(winrt.system.Object):
 
 @typing.final
 class UserDataTaskBatch(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.UserDataTasks.UserDataTask> Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch::get_Tasks()
     @_property
     def tasks(self) -> _cabc.Sequence[UserDataTask]: ...
 
 @typing.final
 class UserDataTaskList(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.UserDataTaskList::DeleteAsync()
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.UserDataTasks.UserDataTaskList::DeleteTaskAsync(System.String)
@@ -270,6 +274,8 @@ class UserDataTaskList(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListLimitedWriteOperations(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations::TryCompleteTaskAsync(System.String)
     def try_complete_task_async(self, user_data_task_id: str, /) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations::TryCreateOrUpdateTaskAsync(Windows.ApplicationModel.UserDataTasks.UserDataTask)
@@ -281,6 +287,8 @@ class UserDataTaskListLimitedWriteOperations(winrt.system.Object):
 
 @typing.final
 class UserDataTaskListSyncManager(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager::SyncAsync()
     def sync_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager::add_SyncStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager,System.Object>)
@@ -315,6 +323,8 @@ class UserDataTaskManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class UserDataTaskManager(winrt.system.Object, metaclass=UserDataTaskManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskStore> Windows.ApplicationModel.UserDataTasks.UserDataTaskManager::RequestStoreAsync(Windows.ApplicationModel.UserDataTasks.UserDataTaskStoreAccessType)
     def request_store_async(self, access_type: UserDataTaskStoreAccessType, /) -> windows_foundation.IAsyncOperation[UserDataTaskStore]: ...
     # Windows.System.User Windows.ApplicationModel.UserDataTasks.UserDataTaskManager::get_User()
@@ -339,6 +349,8 @@ class UserDataTaskQueryOptions(winrt.system.Object):
 
 @typing.final
 class UserDataTaskReader(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch> Windows.ApplicationModel.UserDataTasks.UserDataTaskReader::ReadBatchAsync()
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[UserDataTaskBatch]: ...
 
@@ -424,6 +436,8 @@ class UserDataTaskRegenerationProperties(winrt.system.Object):
 
 @typing.final
 class UserDataTaskStore(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataTasks.UserDataTaskList> Windows.ApplicationModel.UserDataTasks.UserDataTaskStore::CreateListAsync(System.String)
     def create_list_async(self, name: str, /) -> windows_foundation.IAsyncOperation[UserDataTaskList]: ...

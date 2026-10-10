@@ -155,6 +155,8 @@ class PackageVersion:
 
 @typing.final
 class AppDisplayInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.RandomAccessStreamReference Windows.ApplicationModel.AppDisplayInfo::GetLogo(Windows.Foundation.Size)
     def get_logo(self, size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_storage_streams.RandomAccessStreamReference: ...
     # System.String Windows.ApplicationModel.AppDisplayInfo::get_Description()
@@ -176,6 +178,8 @@ class AppInfo_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppInfo(winrt.system.Object, metaclass=AppInfo_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.ApplicationModel.AppInfo::get_AppUserModelId()
     @_property
     def app_user_model_id(self) -> str: ...
@@ -200,6 +204,8 @@ class AppInfo(winrt.system.Object, metaclass=AppInfo_Static):
 
 @typing.final
 class AppInstallerInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Uri Windows.ApplicationModel.AppInstallerInfo::get_Uri()
     @_property
     def uri(self) -> windows_foundation.Uri: ...
@@ -265,6 +271,8 @@ class AppInstance_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.AppInstance::RedirectActivationTo()
     def redirect_activation_to(self) -> None: ...
     # System.Boolean Windows.ApplicationModel.AppInstance::get_IsCurrentInstance()
@@ -285,10 +293,13 @@ class DesignMode_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class EnteredBackgroundEventArgs(IEnteredBackgroundEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.EnteredBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
@@ -328,6 +339,8 @@ class FindRelatedPackagesOptions(winrt.system.Object):
 
 @typing.final
 class FullTrustProcessLaunchResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.FullTrustProcessLaunchResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -364,15 +377,20 @@ class FullTrustProcessLauncher_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLauncher_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class LeavingBackgroundEventArgs(ILeavingBackgroundEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.ApplicationModel.LeavingBackgroundEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
 @typing.final
 class LimitedAccessFeatureRequestResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.DateTime> Windows.ApplicationModel.LimitedAccessFeatureRequestResult::get_EstimatedRemovalDate()
     @_property
     def estimated_removal_date(self) -> datetime.datetime | None: ...
@@ -390,7 +408,8 @@ class LimitedAccessFeatures_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LimitedAccessFeatures(winrt.system.Object, metaclass=LimitedAccessFeatures_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class Package_Static(winrt._winrt.Object_Static):
@@ -400,6 +419,8 @@ class Package_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Package(winrt.system.Object, metaclass=Package_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageUpdateAvailabilityResult> Windows.ApplicationModel.Package::CheckUpdateAvailabilityAsync()
     def check_update_availability_async(self) -> windows_foundation.IAsyncOperation[PackageUpdateAvailabilityResult]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.ApplicationModel.Package> Windows.ApplicationModel.Package::FindRelatedPackages(Windows.ApplicationModel.FindRelatedPackagesOptions)
@@ -534,6 +555,8 @@ class PackageCatalog_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageCatalog(winrt.system.Object, metaclass=PackageCatalog_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult> Windows.ApplicationModel.PackageCatalog::AddOptionalPackageAsync(System.String)
     def add_optional_package_async(self, optional_package_family_name: str, /) -> windows_foundation.IAsyncOperation[PackageCatalogAddOptionalPackageResult]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.ApplicationModel.PackageCatalogAddResourcePackageResult,Windows.ApplicationModel.PackageInstallProgress> Windows.ApplicationModel.PackageCatalog::AddResourcePackageAsync(System.String,System.String,Windows.ApplicationModel.AddResourcePackageOptions)
@@ -569,6 +592,8 @@ class PackageCatalog(winrt.system.Object, metaclass=PackageCatalog_Static):
 
 @typing.final
 class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogAddOptionalPackageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -578,6 +603,8 @@ class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
 
 @typing.final
 class PackageCatalogAddResourcePackageResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogAddResourcePackageResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -590,6 +617,8 @@ class PackageCatalogAddResourcePackageResult(winrt.system.Object):
 
 @typing.final
 class PackageCatalogRemoveOptionalPackagesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogRemoveOptionalPackagesResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -599,6 +628,8 @@ class PackageCatalogRemoveOptionalPackagesResult(winrt.system.Object):
 
 @typing.final
 class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.ApplicationModel.PackageCatalogRemoveResourcePackagesResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -614,6 +645,8 @@ class PackageContentGroup_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class PackageContentGroup(winrt.system.Object, metaclass=PackageContentGroup_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.PackageContentGroup::get_IsRequired()
     @_property
     def is_required(self) -> bool: ...
@@ -629,6 +662,8 @@ class PackageContentGroup(winrt.system.Object, metaclass=PackageContentGroup_Sta
 
 @typing.final
 class PackageContentGroupStagingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.PackageContentGroupStagingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -653,6 +688,8 @@ class PackageContentGroupStagingEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageId(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.System.ProcessorArchitecture Windows.ApplicationModel.PackageId::get_Architecture()
     @_property
     def architecture(self) -> windows_system.ProcessorArchitecture: ...
@@ -686,6 +723,8 @@ class PackageId(winrt.system.Object):
 
 @typing.final
 class PackageInstallingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.PackageInstallingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -704,6 +743,8 @@ class PackageInstallingEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageStagingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.PackageStagingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -722,6 +763,8 @@ class PackageStagingEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageStatus(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.ApplicationModel.PackageStatus::VerifyIsOK()
     def verify_is_ok(self) -> bool: ...
     # System.Boolean Windows.ApplicationModel.PackageStatus::get_DataOffline()
@@ -763,12 +806,16 @@ class PackageStatus(winrt.system.Object):
 
 @typing.final
 class PackageStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.Package Windows.ApplicationModel.PackageStatusChangedEventArgs::get_Package()
     @_property
     def package(self) -> Package: ...
 
 @typing.final
 class PackageUninstallingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.PackageUninstallingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -787,6 +834,8 @@ class PackageUninstallingEventArgs(winrt.system.Object):
 
 @typing.final
 class PackageUpdateAvailabilityResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.PackageUpdateAvailability Windows.ApplicationModel.PackageUpdateAvailabilityResult::get_Availability()
     @_property
     def availability(self) -> PackageUpdateAvailability: ...
@@ -796,6 +845,8 @@ class PackageUpdateAvailabilityResult(winrt.system.Object):
 
 @typing.final
 class PackageUpdatingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.ApplicationModel.PackageUpdatingEventArgs::get_ActivityId()
     @_property
     def activity_id(self) -> _uuid.UUID: ...
@@ -824,6 +875,8 @@ class StartupTask_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.StartupTask::Disable()
     def disable(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.StartupTaskState> Windows.ApplicationModel.StartupTask::RequestEnableAsync()
@@ -837,17 +890,23 @@ class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
 
 @typing.final
 class SuspendingDeferral(ISuspendingDeferral, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.SuspendingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class SuspendingEventArgs(ISuspendingEventArgs, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.SuspendingOperation Windows.ApplicationModel.SuspendingEventArgs::get_SuspendingOperation()
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
 @typing.final
 class SuspendingOperation(ISuspendingOperation, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.SuspendingDeferral Windows.ApplicationModel.SuspendingOperation::GetDeferral()
     def get_deferral(self) -> SuspendingDeferral: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.SuspendingOperation::get_Deadline()

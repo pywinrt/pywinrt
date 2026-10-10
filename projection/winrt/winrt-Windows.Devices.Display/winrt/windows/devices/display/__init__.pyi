@@ -53,6 +53,8 @@ class DisplayMonitor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class DisplayMonitor(winrt.system.Object, metaclass=DisplayMonitor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Byte[] Windows.Devices.Display.DisplayMonitor::GetDescriptor(Windows.Devices.Display.DisplayMonitorDescriptorKind)
     def get_descriptor(self, descriptor_kind: DisplayMonitorDescriptorKind, /) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Foundation.Point Windows.Devices.Display.DisplayMonitor::get_BluePrimary()

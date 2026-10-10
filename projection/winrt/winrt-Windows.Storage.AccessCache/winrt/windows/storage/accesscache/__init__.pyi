@@ -56,6 +56,8 @@ class AccessListEntryView(_cabc.Sequence[AccessListEntry], winrt.system.Object):
     def __getitem__(self, index: typing.SupportsIndex) -> AccessListEntry: ...
     @typing.overload
     def __getitem__(self, index: slice) -> winrt.system.Array[AccessListEntry]: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.Storage.AccessCache.AccessListEntry> Windows.Storage.AccessCache.AccessListEntryView::First()
     def first(self) -> windows_foundation_collections.IIterator[AccessListEntry]: ...
     # Windows.Storage.AccessCache.AccessListEntry Windows.Storage.AccessCache.AccessListEntryView::GetAt(System.UInt32)
@@ -70,6 +72,8 @@ class AccessListEntryView(_cabc.Sequence[AccessListEntry], winrt.system.Object):
 
 @typing.final
 class ItemRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.AccessCache.AccessListEntry Windows.Storage.AccessCache.ItemRemovedEventArgs::get_RemovedEntry()
     @_property
     def removed_entry(self) -> AccessListEntry: ...
@@ -89,10 +93,13 @@ class StorageApplicationPermissions_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplicationPermissions_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StorageItemAccessList(IStorageItemAccessList, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemAccessList::Add(Windows.Storage.IStorageItem)
     def add(self, file: windows_storage.IStorageItem, /) -> str: ...
@@ -160,6 +167,8 @@ class StorageItemAccessList(IStorageItemAccessList, winrt.system.Object):
 
 @typing.final
 class StorageItemMostRecentlyUsedList(IStorageItemAccessList, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.String Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList::Add(Windows.Storage.IStorageItem)
     def add(self, file: windows_storage.IStorageItem, /) -> str: ...

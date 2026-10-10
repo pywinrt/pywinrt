@@ -87,6 +87,8 @@ class MdmAlert(winrt.system.Object):
 
 @typing.final
 class MdmSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Management.MdmSession::AttachAsync()
     def attach_async(self) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Management.MdmSession::Delete()
@@ -128,5 +130,6 @@ class MdmSessionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class MdmSessionManager(winrt.system.Object, metaclass=MdmSessionManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

@@ -107,6 +107,8 @@ class HolographicStereoTransform:
 
 @typing.final
 class HolographicCamera(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Holographic.HolographicCamera::SetFarPlaneDistance(System.Double)
     def set_far_plane_distance(self, value: winrt.system.Double, /) -> None: ...
     # System.Void Windows.Graphics.Holographic.HolographicCamera::SetNearPlaneDistance(System.Double)
@@ -165,6 +167,8 @@ class HolographicCamera(winrt.system.Object):
 
 @typing.final
 class HolographicCameraPose(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Holographic.HolographicCameraPose::OverrideProjectionTransform(Windows.Graphics.Holographic.HolographicStereoTransform)
     def override_projection_transform(self, projection_transform: HolographicStereoTransform | tuple[windows_foundation_numerics.Matrix4x4 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], windows_foundation_numerics.Matrix4x4 | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single]], /) -> None: ...
     # System.Void Windows.Graphics.Holographic.HolographicCameraPose::OverrideViewTransform(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Graphics.Holographic.HolographicStereoTransform)
@@ -195,6 +199,8 @@ class HolographicCameraPose(winrt.system.Object):
 
 @typing.final
 class HolographicCameraRenderingParameters(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Holographic.HolographicCameraRenderingParameters::CommitDirect3D11DepthBuffer(Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface)
     def commit_direct3d11_depth_buffer(self, value: windows_graphics_directx_direct3d11.IDirect3DSurface, /) -> None: ...
     @typing.overload
@@ -241,6 +247,8 @@ class HolographicCameraRenderingParameters(winrt.system.Object):
 
 @typing.final
 class HolographicCameraViewportParameters(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2[] Windows.Graphics.Holographic.HolographicCameraViewportParameters::get_HiddenAreaMesh()
     @_property
     def hidden_area_mesh(self) -> windows_foundation_numerics.Vector2: ...
@@ -255,6 +263,8 @@ class HolographicDisplay_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HolographicDisplay(winrt.system.Object, metaclass=HolographicDisplay_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Holographic.HolographicViewConfiguration Windows.Graphics.Holographic.HolographicDisplay::TryGetViewConfiguration(Windows.Graphics.Holographic.HolographicViewConfigurationKind)
     def try_get_view_configuration(self, kind: HolographicViewConfigurationKind, /) -> HolographicViewConfiguration | None: ...
     # Windows.Graphics.Holographic.HolographicAdapterId Windows.Graphics.Holographic.HolographicDisplay::get_AdapterId()
@@ -281,6 +291,8 @@ class HolographicDisplay(winrt.system.Object, metaclass=HolographicDisplay_Stati
 
 @typing.final
 class HolographicFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters Windows.Graphics.Holographic.HolographicFrame::GetQuadLayerUpdateParameters(Windows.Graphics.Holographic.HolographicQuadLayer)
     def get_quad_layer_update_parameters(self, layer: HolographicQuadLayer, /) -> HolographicQuadLayerUpdateParameters: ...
     # Windows.Graphics.Holographic.HolographicCameraRenderingParameters Windows.Graphics.Holographic.HolographicFrame::GetRenderingParameters(Windows.Graphics.Holographic.HolographicCameraPose)
@@ -317,6 +329,8 @@ class HolographicFrame(winrt.system.Object):
 
 @typing.final
 class HolographicFramePrediction(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Holographic.HolographicCameraPose> Windows.Graphics.Holographic.HolographicFramePrediction::get_CameraPoses()
     @_property
     def camera_poses(self) -> _cabc.Sequence[HolographicCameraPose]: ...
@@ -329,6 +343,8 @@ class HolographicFramePrediction(winrt.system.Object):
 class HolographicFramePresentationMonitor(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Holographic.HolographicFramePresentationMonitor::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Holographic.HolographicFramePresentationReport> Windows.Graphics.Holographic.HolographicFramePresentationMonitor::ReadReports()
@@ -338,6 +354,8 @@ class HolographicFramePresentationMonitor(windows_foundation.IClosable, winrt.sy
 @typing.final
 @deprecated("Use HolographicFrameScanoutReport instead of HolographicFramePresentationReport. For more info, see MSDN.")
 class HolographicFramePresentationReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Graphics.Holographic.HolographicFramePresentationReport::get_AppGpuDuration()
     @_property
     @deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.")
@@ -361,6 +379,8 @@ class HolographicFramePresentationReport(winrt.system.Object):
 
 @typing.final
 class HolographicFrameRenderingReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Holographic.HolographicFrameId Windows.Graphics.Holographic.HolographicFrameRenderingReport::get_FrameId()
     @_property
     def frame_id(self) -> HolographicFrameId: ...
@@ -381,6 +401,8 @@ class HolographicFrameRenderingReport(winrt.system.Object):
 class HolographicFrameScanoutMonitor(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Holographic.HolographicFrameScanoutMonitor::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Graphics.Holographic.HolographicFrameScanoutReport> Windows.Graphics.Holographic.HolographicFrameScanoutMonitor::ReadReports()
@@ -388,6 +410,8 @@ class HolographicFrameScanoutMonitor(windows_foundation.IClosable, winrt.system.
 
 @typing.final
 class HolographicFrameScanoutReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Graphics.Holographic.HolographicFrameScanoutReport::get_MissedScanoutCount()
     @_property
     def missed_scanout_count(self) -> winrt.system.UInt32: ...
@@ -423,6 +447,8 @@ class HolographicQuadLayer(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class HolographicQuadLayerUpdateParameters(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters::AcquireBufferToUpdateContent()
     def acquire_buffer_to_update_content(self) -> windows_graphics_directx_direct3d11.IDirect3DSurface: ...
     # Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters::AcquireBufferToUpdateContentWithHardwareProtection()
@@ -461,6 +487,8 @@ class HolographicSpace_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class HolographicSpace(winrt.system.Object, metaclass=HolographicSpace_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Holographic.HolographicFramePresentationMonitor Windows.Graphics.Holographic.HolographicSpace::CreateFramePresentationMonitor(System.UInt32)
     @deprecated("Use CreateFrameScanoutMonitor instead of CreateFramePresentationMonitor. For more info, see MSDN.")
     def create_frame_presentation_monitor(self, max_queued_reports: winrt.system.UInt32, /) -> HolographicFramePresentationMonitor: ...
@@ -495,6 +523,8 @@ class HolographicSpace(winrt.system.Object, metaclass=HolographicSpace_Static):
 
 @typing.final
 class HolographicSpaceCameraAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Graphics.Holographic.HolographicCamera Windows.Graphics.Holographic.HolographicSpaceCameraAddedEventArgs::get_Camera()
@@ -503,12 +533,16 @@ class HolographicSpaceCameraAddedEventArgs(winrt.system.Object):
 
 @typing.final
 class HolographicSpaceCameraRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.Holographic.HolographicCamera Windows.Graphics.Holographic.HolographicSpaceCameraRemovedEventArgs::get_Camera()
     @_property
     def camera(self) -> HolographicCamera: ...
 
 @typing.final
 class HolographicViewConfiguration(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Size Windows.Graphics.Holographic.HolographicViewConfiguration::RequestRenderTargetSize(Windows.Foundation.Size)
     def request_render_target_size(self, size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> windows_foundation.Size: ...
     # Windows.Graphics.DirectX.DirectXPixelFormat Windows.Graphics.Holographic.HolographicViewConfiguration::get_PixelFormat()

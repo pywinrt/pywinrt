@@ -52,6 +52,8 @@ class CoreInkIndependentInputSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreInkIndependentInputSource(winrt.system.Object, metaclass=CoreInkIndependentInputSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource::add_PointerEntering(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource,Windows.UI.Core.PointerEventArgs>)
     def add_pointer_entering(self, handler: windows_foundation.TypedEventHandler[CoreInkIndependentInputSource, windows_ui_core.PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.Inking.Core.CoreInkIndependentInputSource::remove_PointerEntering(Windows.Foundation.EventRegistrationToken)
@@ -105,6 +107,8 @@ class CoreInkPresenterHost(winrt.system.Object):
 
 @typing.final
 class CoreWetStrokeUpdateEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs::get_Disposition()
     @_property
     def disposition(self) -> CoreWetStrokeDisposition: ...
@@ -125,6 +129,8 @@ class CoreWetStrokeUpdateSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreWetStrokeUpdateSource(winrt.system.Object, metaclass=CoreWetStrokeUpdateSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource::add_WetStrokeCanceled(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource,Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs>)
     def add_wet_stroke_canceled(self, handler: windows_foundation.TypedEventHandler[CoreWetStrokeUpdateSource, CoreWetStrokeUpdateEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource::remove_WetStrokeCanceled(Windows.Foundation.EventRegistrationToken)

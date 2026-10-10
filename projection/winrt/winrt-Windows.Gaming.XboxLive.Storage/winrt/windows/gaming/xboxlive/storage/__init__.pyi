@@ -48,6 +48,8 @@ class GameSaveErrorStatus(enum.IntEnum):
 
 @typing.final
 class GameSaveBlobGetResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
@@ -57,6 +59,8 @@ class GameSaveBlobGetResult(winrt.system.Object):
 
 @typing.final
 class GameSaveBlobInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo::get_Name()
     @_property
     def name(self) -> str: ...
@@ -66,6 +70,8 @@ class GameSaveBlobInfo(winrt.system.Object):
 
 @typing.final
 class GameSaveBlobInfoGetResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
@@ -75,6 +81,8 @@ class GameSaveBlobInfoGetResult(winrt.system.Object):
 
 @typing.final
 class GameSaveBlobInfoQuery(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery::GetBlobInfoAsync()
     def get_blob_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveBlobInfoGetResult]: ...
@@ -90,6 +98,8 @@ class GameSaveBlobInfoQuery(winrt.system.Object):
 
 @typing.final
 class GameSaveContainer(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery Windows.Gaming.XboxLive.Storage.GameSaveContainer::CreateBlobInfoQuery(System.String)
     def create_blob_info_query(self, blob_name_prefix: str, /) -> GameSaveBlobInfoQuery: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainer::GetAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -109,6 +119,8 @@ class GameSaveContainer(winrt.system.Object):
 
 @typing.final
 class GameSaveContainerInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo::get_DisplayName()
     @_property
     def display_name(self) -> str: ...
@@ -127,6 +139,8 @@ class GameSaveContainerInfo(winrt.system.Object):
 
 @typing.final
 class GameSaveContainerInfoGetResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
@@ -136,6 +150,8 @@ class GameSaveContainerInfoGetResult(winrt.system.Object):
 
 @typing.final
 class GameSaveContainerInfoQuery(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult> Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery::GetContainerInfoAsync()
     def get_container_info_async(self) -> windows_foundation.IAsyncOperation[GameSaveContainerInfoGetResult]: ...
@@ -151,6 +167,8 @@ class GameSaveContainerInfoQuery(winrt.system.Object):
 
 @typing.final
 class GameSaveOperationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveOperationResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...
@@ -164,6 +182,8 @@ class GameSaveProvider_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveContainer Windows.Gaming.XboxLive.Storage.GameSaveProvider::CreateContainer(System.String)
     def create_container(self, name: str, /) -> GameSaveContainer: ...
     @typing.overload
@@ -189,6 +209,8 @@ class GameSaveProvider(winrt.system.Object, metaclass=GameSaveProvider_Static):
 
 @typing.final
 class GameSaveProviderGetResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Gaming.XboxLive.Storage.GameSaveErrorStatus Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult::get_Status()
     @_property
     def status(self) -> GameSaveErrorStatus: ...

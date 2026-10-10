@@ -52,7 +52,8 @@ class KnownPerceptionFrameKind_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class KnownPerceptionFrameKind(winrt.system.Object, metaclass=KnownPerceptionFrameKind_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("PerceptionControlGroup may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -101,6 +102,8 @@ class PerceptionFaceAuthenticationGroup(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFrame(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.Devices.Perception.Provider.PerceptionFrame::get_RelativeTime()
     @_property
     @deprecated("PerceptionFrame may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -199,11 +202,14 @@ class PerceptionFrameProviderManagerService_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionFrameProviderManagerService(winrt.system.Object, metaclass=PerceptionFrameProviderManagerService_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
 class PerceptionPropertyChangeRequest(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest::GetDeferral()
     @deprecated("PerceptionPropertyChangeRequest may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def get_deferral(self) -> windows_foundation.Deferral: ...

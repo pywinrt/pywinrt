@@ -26,6 +26,8 @@ class LockApplicationHost_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class LockApplicationHost(winrt.system.Object, metaclass=LockApplicationHost_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.LockScreen.LockApplicationHost::RequestUnlock()
     def request_unlock(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.LockScreen.LockApplicationHost::add_Unlocking(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.LockScreen.LockApplicationHost,Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs>)
@@ -35,6 +37,8 @@ class LockApplicationHost(winrt.system.Object, metaclass=LockApplicationHost_Sta
 
 @typing.final
 class LockScreenBadge(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.LockScreen.LockScreenBadge::LaunchApp()
     def launch_app(self) -> None: ...
     # System.String Windows.ApplicationModel.LockScreen.LockScreenBadge::get_AutomationName()
@@ -52,6 +56,8 @@ class LockScreenBadge(winrt.system.Object):
 
 @typing.final
 class LockScreenInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.LockScreen.LockScreenInfo::add_AlarmIconChanged(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.LockScreen.LockScreenInfo,System.Object>)
     def add_alarm_icon_changed(self, handler: windows_foundation.TypedEventHandler[LockScreenInfo, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.LockScreen.LockScreenInfo::remove_AlarmIconChanged(Windows.Foundation.EventRegistrationToken)
@@ -83,11 +89,15 @@ class LockScreenInfo(winrt.system.Object):
 
 @typing.final
 class LockScreenUnlockingDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class LockScreenUnlockingEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs::GetDeferral()
     def get_deferral(self) -> LockScreenUnlockingDeferral: ...
     # Windows.Foundation.DateTime Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs::get_Deadline()

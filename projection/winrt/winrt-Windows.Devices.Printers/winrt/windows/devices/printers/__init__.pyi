@@ -129,10 +129,13 @@ class IppAttributeConverter_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class IppAttributeConverter(winrt.system.Object, metaclass=IppAttributeConverter_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class IppAttributeError(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Printers.IppAttributeValue> Windows.Devices.Printers.IppAttributeError::GetUnsupportedValues()
     def get_unsupported_values(self) -> _cabc.Sequence[IppAttributeValue]: ...
     # Windows.Foundation.HResult Windows.Devices.Printers.IppAttributeError::get_ExtendedError()
@@ -225,6 +228,8 @@ class IppAttributeValue_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class IppAttributeValue(winrt.system.Object, metaclass=IppAttributeValue_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVector`1<System.Boolean> Windows.Devices.Printers.IppAttributeValue::GetBooleanArray()
     def get_boolean_array(self) -> _cabc.MutableSequence[bool]: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Devices.Printers.IppAttributeValue::GetCharsetArray()
@@ -288,6 +293,8 @@ class IppPrintDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.ValueSet Windows.Devices.Printers.IppPrintDevice::GetDeviceProperties()
     def get_device_properties(self) -> windows_foundation_collections.ValueSet: ...
     # System.UInt64 Windows.Devices.Printers.IppPrintDevice::GetMaxSupportedPdfSize()
@@ -336,6 +343,8 @@ class IppPrintDevice(winrt.system.Object, metaclass=IppPrintDevice_Static):
 
 @typing.final
 class IppPrintDeviceInstallationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Devices.Printers.IppPrintDeviceInstallationResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -355,7 +364,8 @@ class IppPrintDeviceManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class IppPrintDeviceManager(winrt.system.Object, metaclass=IppPrintDeviceManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class IppResolution(winrt.system.Object):
@@ -372,6 +382,8 @@ class IppResolution(winrt.system.Object):
 
 @typing.final
 class IppSetAttributesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Devices.Printers.IppAttributeError> Windows.Devices.Printers.IppSetAttributesResult::get_AttributeErrors()
     @_property
     def attribute_errors(self) -> _cabc.Mapping[str, IppAttributeError]: ...
@@ -407,6 +419,8 @@ class PageConfigurationSettings(winrt.system.Object):
 
 @typing.final
 class PdlPassthroughProvider(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Printers.PdlPassthroughTarget Windows.Devices.Printers.PdlPassthroughProvider::StartPrintJobWithIppJobAttributes(System.String,System.String,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def start_print_job_with_ipp_job_attributes(self, job_name: str, pdl_content_type: str, job_attributes: winrt.system.Buffer, operation_attributes: winrt.system.Buffer, /) -> PdlPassthroughTarget: ...
     # Windows.Devices.Printers.PdlPassthroughTarget Windows.Devices.Printers.PdlPassthroughProvider::StartPrintJobWithPrintTicket(System.String,System.String,Windows.Storage.Streams.IInputStream,Windows.Devices.Printers.PageConfigurationSettings)
@@ -424,6 +438,8 @@ class PdlPassthroughProvider(winrt.system.Object):
 class PdlPassthroughTarget(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Printers.PdlPassthroughTarget::Close()
     def close(self) -> None: ...
     # Windows.Storage.Streams.IOutputStream Windows.Devices.Printers.PdlPassthroughTarget::GetOutputStream()
@@ -443,12 +459,16 @@ class Print3DDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class Print3DDevice(winrt.system.Object, metaclass=Print3DDevice_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Printers.PrintSchema Windows.Devices.Printers.Print3DDevice::get_PrintSchema()
     @_property
     def print_schema(self) -> PrintSchema: ...
 
 @typing.final
 class PrintSchema(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Devices.Printers.PrintSchema::GetCapabilitiesAsync(Windows.Storage.Streams.IRandomAccessStreamWithContentType)
     def get_capabilities_async(self, constrain_ticket: windows_storage_streams.IRandomAccessStreamWithContentType, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamWithContentType]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamWithContentType> Windows.Devices.Printers.PrintSchema::GetDefaultPrintTicketAsync()
@@ -458,6 +478,8 @@ class PrintSchema(winrt.system.Object):
 
 @typing.final
 class ReplaceDevicePropertiesResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Devices.Printers.ReplaceDevicePropertiesResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -513,6 +535,8 @@ class VirtualPrinterInstallationParameters(winrt.system.Object):
 
 @typing.final
 class VirtualPrinterInstallationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.HResult Windows.Devices.Printers.VirtualPrinterInstallationResult::get_ExtendedError()
     @_property
     def extended_error(self) -> windows_foundation.HResult: ...
@@ -559,7 +583,8 @@ class VirtualPrinterManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class VirtualPrinterManager(winrt.system.Object, metaclass=VirtualPrinterManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class VirtualPrinterSupportedFormat(winrt.system.Object):

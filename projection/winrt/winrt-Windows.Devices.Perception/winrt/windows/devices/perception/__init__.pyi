@@ -95,7 +95,8 @@ class KnownCameraIntrinsicsProperties_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("KnownCameraIntrinsicsProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCameraIntrinsicsProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.Object_Static):
@@ -115,7 +116,8 @@ class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.Object_Stati
 @typing.final
 @deprecated("KnownPerceptionColorFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionColorFrameSourceProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.Object_Static):
@@ -131,7 +133,8 @@ class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.Object_Stati
 @typing.final
 @deprecated("KnownPerceptionDepthFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionDepthFrameSourceProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.Object_Static):
@@ -163,7 +166,8 @@ class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("KnownPerceptionFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionFrameSourceProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.Object_Static):
@@ -199,7 +203,8 @@ class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.Object_St
 @typing.final
 @deprecated("KnownPerceptionInfraredFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionInfraredFrameSourceProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.Object_Static):
@@ -227,7 +232,8 @@ class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.Object_Stati
 @typing.final
 @deprecated("KnownPerceptionVideoFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=KnownPerceptionVideoFrameSourceProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.Object_Static):
@@ -255,13 +261,16 @@ class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("KnownPerceptionVideoProfileProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class KnownPerceptionVideoProfileProperties(winrt.system.Object, metaclass=KnownPerceptionVideoProfileProperties_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 @deprecated("PerceptionColorFrame may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.VideoMediaFrame instead.")
 class PerceptionColorFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionColorFrame::Close()
     def close(self) -> None: ...
     # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionColorFrame::get_VideoFrame()
@@ -272,6 +281,8 @@ class PerceptionColorFrame(windows_foundation.IClosable, winrt.system.Object):
 @typing.final
 @deprecated("PerceptionColorFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
 class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionColorFrame Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs::TryOpenFrame()
     @deprecated("PerceptionColorFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionColorFrame: ...
@@ -285,6 +296,8 @@ class PerceptionColorFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionColorFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionColorFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Devices.Perception.PerceptionColorFrame Windows.Devices.Perception.PerceptionColorFrameReader::TryReadLatestFrame()
@@ -327,6 +340,8 @@ class PerceptionColorFrameSource_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Frames.MediaFrameSource instead.")
 class PerceptionColorFrameSource(winrt.system.Object, metaclass=PerceptionColorFrameSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionColorFrameSource::AcquireControlSession()
     @deprecated("PerceptionColorFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
@@ -433,6 +448,8 @@ class PerceptionColorFrameSource(winrt.system.Object, metaclass=PerceptionColorF
 @typing.final
 @deprecated("PerceptionColorFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionColorFrameSourceAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionColorFrameSource Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionColorFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -441,6 +458,8 @@ class PerceptionColorFrameSourceAddedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionColorFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionColorFrameSourceRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionColorFrameSource Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionColorFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -449,6 +468,8 @@ class PerceptionColorFrameSourceRemovedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
 class PerceptionColorFrameSourceWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionColorFrameSourceWatcher::Start()
     @deprecated("PerceptionColorFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
@@ -489,6 +510,8 @@ class PerceptionColorFrameSourceWatcher(winrt.system.Object):
 class PerceptionControlSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionControlSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult> Windows.Devices.Perception.PerceptionControlSession::TrySetPropertyAsync(System.String,System.Object)
@@ -504,6 +527,8 @@ class PerceptionControlSession(windows_foundation.IClosable, winrt.system.Object
 @typing.final
 @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
 class PerceptionDepthCorrelatedCameraIntrinsics(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics::UnprojectAllPixelsAtCorrelatedDepthAsync(Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Numerics.Vector3[])
     @deprecated("PerceptionDepthCorrelatedCameraIntrinsics may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def unproject_all_pixels_at_correlated_depth_async(self, depth_frame: PerceptionDepthFrame, results: winrt.system.Array[windows_foundation_numerics.Vector3] | winrt.system.WriteableBuffer, /) -> windows_foundation.IAsyncAction: ...
@@ -520,6 +545,8 @@ class PerceptionDepthCorrelatedCameraIntrinsics(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
 class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper::MapAllPixelsToTargetAsync(Windows.Devices.Perception.PerceptionDepthFrame,Windows.Foundation.Point[])
     @deprecated("PerceptionDepthCorrelatedCoordinateMapper may be unavailable after Windows Creator Update.  Use Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper instead.")
     def map_all_pixels_to_target_async(self, depth_frame: PerceptionDepthFrame, target_coordinates: winrt.system.Array[windows_foundation.Point] | winrt.system.WriteableBuffer, /) -> windows_foundation.IAsyncAction: ...
@@ -538,6 +565,8 @@ class PerceptionDepthCorrelatedCoordinateMapper(winrt.system.Object):
 class PerceptionDepthFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionDepthFrame::Close()
     def close(self) -> None: ...
     # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionDepthFrame::get_VideoFrame()
@@ -548,6 +577,8 @@ class PerceptionDepthFrame(windows_foundation.IClosable, winrt.system.Object):
 @typing.final
 @deprecated("PerceptionDepthFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
 class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionDepthFrame Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs::TryOpenFrame()
     @deprecated("PerceptionDepthFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionDepthFrame: ...
@@ -561,6 +592,8 @@ class PerceptionDepthFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionDepthFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionDepthFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Devices.Perception.PerceptionDepthFrame Windows.Devices.Perception.PerceptionDepthFrameReader::TryReadLatestFrame()
@@ -603,6 +636,8 @@ class PerceptionDepthFrameSource_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Frames.MediaFrameSource instead.")
 class PerceptionDepthFrameSource(winrt.system.Object, metaclass=PerceptionDepthFrameSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionDepthFrameSource::AcquireControlSession()
     @deprecated("PerceptionDepthFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
@@ -709,6 +744,8 @@ class PerceptionDepthFrameSource(winrt.system.Object, metaclass=PerceptionDepthF
 @typing.final
 @deprecated("PerceptionDepthFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionDepthFrameSourceAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionDepthFrameSource Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionDepthFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -717,6 +754,8 @@ class PerceptionDepthFrameSourceAddedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionDepthFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionDepthFrameSourceRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionDepthFrameSource Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionDepthFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -725,6 +764,8 @@ class PerceptionDepthFrameSourceRemovedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
 class PerceptionDepthFrameSourceWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher::Start()
     @deprecated("PerceptionDepthFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
@@ -763,6 +804,8 @@ class PerceptionDepthFrameSourceWatcher(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionFrameSourcePropertiesChangedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionFrameSourcePropertiesChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.CollectionChange Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs::get_CollectionChange()
     @_property
     @deprecated("PerceptionFrameSourcePropertiesChangedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -775,6 +818,8 @@ class PerceptionFrameSourcePropertiesChangedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionFrameSourcePropertyChangeResult may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Object Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult::get_NewValue()
     @_property
     @deprecated("PerceptionFrameSourcePropertyChangeResult may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -789,6 +834,8 @@ class PerceptionFrameSourcePropertyChangeResult(winrt.system.Object):
 class PerceptionInfraredFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrame::Close()
     def close(self) -> None: ...
     # Windows.Media.VideoFrame Windows.Devices.Perception.PerceptionInfraredFrame::get_VideoFrame()
@@ -799,6 +846,8 @@ class PerceptionInfraredFrame(windows_foundation.IClosable, winrt.system.Object)
 @typing.final
 @deprecated("PerceptionInfraredFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
 class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionInfraredFrame Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs::TryOpenFrame()
     @deprecated("PerceptionInfraredFrameArrivedEventArgs may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs instead.")
     def try_open_frame(self) -> PerceptionInfraredFrame: ...
@@ -812,6 +861,8 @@ class PerceptionInfraredFrameArrivedEventArgs(winrt.system.Object):
 class PerceptionInfraredFrameReader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrameReader::Close()
     def close(self) -> None: ...
     # Windows.Devices.Perception.PerceptionInfraredFrame Windows.Devices.Perception.PerceptionInfraredFrameReader::TryReadLatestFrame()
@@ -854,6 +905,8 @@ class PerceptionInfraredFrameSource_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Frames.MediaFrameSource instead.")
 class PerceptionInfraredFrameSource(winrt.system.Object, metaclass=PerceptionInfraredFrameSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionControlSession Windows.Devices.Perception.PerceptionInfraredFrameSource::AcquireControlSession()
     @deprecated("PerceptionInfraredFrameSource may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameSource instead.")
     def acquire_control_session(self) -> PerceptionControlSession: ...
@@ -960,6 +1013,8 @@ class PerceptionInfraredFrameSource(winrt.system.Object, metaclass=PerceptionInf
 @typing.final
 @deprecated("PerceptionInfraredFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionInfraredFrameSourceAddedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionInfraredFrameSource Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionInfraredFrameSourceAddedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -968,6 +1023,8 @@ class PerceptionInfraredFrameSourceAddedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionInfraredFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
 class PerceptionInfraredFrameSourceRemovedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Perception.PerceptionInfraredFrameSource Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs::get_FrameSource()
     @_property
     @deprecated("PerceptionInfraredFrameSourceRemovedEventArgs may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -976,6 +1033,8 @@ class PerceptionInfraredFrameSourceRemovedEventArgs(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
 class PerceptionInfraredFrameSourceWatcher(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher::Start()
     @deprecated("PerceptionInfraredFrameSourceWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceWatcher instead.")
     def start(self) -> None: ...
@@ -1014,6 +1073,8 @@ class PerceptionInfraredFrameSourceWatcher(winrt.system.Object):
 @typing.final
 @deprecated("PerceptionVideoProfile may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameFormat instead.")
 class PerceptionVideoProfile(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.Perception.PerceptionVideoProfile::IsEqual(Windows.Devices.Perception.PerceptionVideoProfile)
     @deprecated("PerceptionVideoProfile may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.MediaFrameFormat instead.")
     def is_equal(self, other: PerceptionVideoProfile, /) -> bool: ...

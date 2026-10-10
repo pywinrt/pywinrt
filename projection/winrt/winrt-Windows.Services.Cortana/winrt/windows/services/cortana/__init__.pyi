@@ -55,6 +55,8 @@ class CortanaActionableInsights_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
 class CortanaActionableInsights(winrt.system.Object, metaclass=CortanaActionableInsights_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Cortana.CortanaActionableInsights::IsAvailableAsync()
     @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def is_available_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -129,6 +131,8 @@ class CortanaPermissionsManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("CortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
 class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermissionsManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Services.Cortana.CortanaPermissionsManager::ArePermissionsGrantedAsync(Windows.Foundation.Collections.IIterable`1<Windows.Services.Cortana.CortanaPermission>)
     @deprecated("ICortanaPermissionsManager is deprecated and might not work on all platforms. For more info, see MSDN.")
     def are_permissions_granted_async(self, permissions: _cabc.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -154,6 +158,8 @@ class CortanaSettings_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("CortanaSettings is deprecated and might not work on all platforms. For more info, see MSDN.")
 class CortanaSettings(winrt.system.Object, metaclass=CortanaSettings_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Services.Cortana.CortanaSettings::get_IsVoiceActivationEnabled()
     @_property
     @deprecated("ICortanaSettings is deprecated and might not work on all platforms. For more info, see MSDN.")

@@ -47,6 +47,8 @@ class DragDropManager_Static(winrt._winrt.Object_Static):
 class DragDropManager(windows_foundation.IClosable, winrt.system.Object, metaclass=DragDropManager_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Input.DragDrop.DragDropManager::Close()
     def close(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.DragDrop.DragDropManager::add_TargetRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.DragDrop.DragDropManager,Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs>)
@@ -62,6 +64,8 @@ class DragDropManager(windows_foundation.IClosable, winrt.system.Object, metacla
 
 @typing.final
 class DragInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.UI.Input.DragDrop.DragInfo::get_AllowedOperations()
     @_property
     def allowed_operations(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
@@ -108,6 +112,8 @@ class DragOperation(windows_foundation.IClosable, winrt.system.Object):
 
 @typing.final
 class DragUIOverride(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Input.DragDrop.DragUIOverride::Clear()
     def clear(self) -> None: ...
     @typing.overload
@@ -143,6 +149,8 @@ class DragUIOverride(winrt.system.Object):
 
 @typing.final
 class DropOperationTargetRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs::SetTarget(Microsoft.UI.Input.DragDrop.IDropOperationTarget)
     def set_target(self, target: IDropOperationTarget, /) -> None: ...
 

@@ -85,6 +85,8 @@ class ChildSiteLink_Static(winrt._winrt.Object_Static):
 class ChildSiteLink(IContentSiteLink, IContentSiteInput, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ChildSiteLink_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.ChildSiteLink::Close()
     def close(self) -> None: ...
     # System.Void Microsoft.UI.Content.ChildSiteLink::Connect(Microsoft.UI.Content.ContentIsland)
@@ -166,6 +168,8 @@ class ContentCoordinateConverter_Static(winrt._winrt.Object_Static):
 
 class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinateConverter_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     @typing.final
     # Windows.Graphics.PointInt32 Microsoft.UI.Content.ContentCoordinateConverter::ConvertLocalToScreen(Windows.Foundation.Point)
@@ -191,17 +195,23 @@ class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinat
 
 @typing.final
 class ContentDeferral(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.ContentDeferral::Complete()
     def complete(self) -> None: ...
 
 @typing.final
 class ContentEnvironmentSettingChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs::get_SettingName()
     @_property
     def setting_name(self) -> str: ...
 
 @typing.final
 class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs::get_DidAppWindowIdChange()
     @_property
     def did_app_window_id_change(self) -> bool: ...
@@ -235,6 +245,8 @@ class ContentIsland(microsoft_ui_composition.ICompositionSupportsSystemBackdrop,
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.ContentIsland::Close()
     def close(self) -> None: ...
     @typing.final
@@ -400,6 +412,8 @@ class ContentIsland(microsoft_ui_composition.ICompositionSupportsSystemBackdrop,
 
 @typing.final
 class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -418,6 +432,8 @@ class ContentIslandEnvironment_Static(winrt._winrt.Object_Static):
 
 class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvironment_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.ContentIslandEnvironment::add_SettingChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.ContentIslandEnvironment,Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs>)
     def add_setting_changed(self, handler: windows_foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentSettingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -445,6 +461,8 @@ class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvir
 
 @typing.final
 class ContentIslandStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Content.ContentIslandStateChangedEventArgs::get_DidActualSizeChange()
     @_property
     def did_actual_size_change(self) -> bool: ...
@@ -474,6 +492,8 @@ class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, 
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.ContentSite::Close()
     def close(self) -> None: ...
     @typing.final
@@ -613,6 +633,8 @@ class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, 
 
 @typing.final
 class ContentSiteAutomationProviderRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -631,6 +653,8 @@ class ContentSiteEnvironment_Static(winrt._winrt.Object_Static):
 
 class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironment_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Microsoft.UI.Content.ContentSiteEnvironment::NotifySettingChanged(System.String)
     def notify_setting_changed(self, setting: str, /) -> None: ...
@@ -665,6 +689,8 @@ class ContentSiteEnvironmentView_Static(winrt._winrt.Object_Static):
 
 class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvironmentView_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.WindowId Microsoft.UI.Content.ContentSiteEnvironmentView::get_AppWindowId()
     @_property
     @typing.final
@@ -680,6 +706,8 @@ class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvir
 
 @typing.final
 class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs::get_DidRequestedSizeChange()
     @_property
     def did_requested_size_change(self) -> bool: ...
@@ -689,6 +717,8 @@ class ContentSiteView_Static(winrt._winrt.Object_Static):
 
 class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Microsoft.UI.Content.ContentSiteView::get_ActualSize()
     @_property
     @typing.final
@@ -775,6 +805,8 @@ class DesktopAttachedSiteBridge_Static(winrt._winrt.Object_Static):
 class DesktopAttachedSiteBridge(IContentSiteInput, IContentSiteBridge, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopAttachedSiteBridge_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.DesktopAttachedSiteBridge::Close()
     def close(self) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopAttachedSiteBridge::Connect(Microsoft.UI.Content.ContentIsland)
@@ -833,6 +865,8 @@ class DesktopChildSiteBridge_Static(DesktopSiteBridge_Static):
 
 @typing.final
 class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Content.ContentSizePolicy Microsoft.UI.Content.DesktopChildSiteBridge::get_ResizePolicy()
     @_property
     def resize_policy(self) -> ContentSizePolicy: ...
@@ -852,6 +886,8 @@ class DesktopPopupSiteBridge_Static(winrt._winrt.Object_Static):
 class DesktopPopupSiteBridge(IContentSiteLink, IContentSiteBridge, IContentSiteAutomation, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopPopupSiteBridge_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.DesktopPopupSiteBridge::Close()
     def close(self) -> None: ...
     # System.Void Microsoft.UI.Content.DesktopPopupSiteBridge::Connect(Microsoft.UI.Content.ContentIsland)
@@ -960,6 +996,8 @@ class DesktopSiteBridge(IContentSiteBridge, windows_foundation.IClosable, micros
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Content.DesktopSiteBridge::Close()
     def close(self) -> None: ...
     @typing.final

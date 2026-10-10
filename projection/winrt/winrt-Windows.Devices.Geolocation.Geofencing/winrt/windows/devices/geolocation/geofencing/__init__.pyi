@@ -86,6 +86,8 @@ class GeofenceMonitor_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport> Windows.Devices.Geolocation.Geofencing.GeofenceMonitor::ReadReports()
     def read_reports(self) -> _cabc.Sequence[GeofenceStateChangeReport]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Geolocation.Geofencing.GeofenceMonitor::add_GeofenceStateChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.Geolocation.Geofencing.GeofenceMonitor,System.Object>)
@@ -108,6 +110,8 @@ class GeofenceMonitor(winrt.system.Object, metaclass=GeofenceMonitor_Static):
 
 @typing.final
 class GeofenceStateChangeReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.Geolocation.Geofencing.Geofence Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport::get_Geofence()
     @_property
     def geofence(self) -> Geofence: ...

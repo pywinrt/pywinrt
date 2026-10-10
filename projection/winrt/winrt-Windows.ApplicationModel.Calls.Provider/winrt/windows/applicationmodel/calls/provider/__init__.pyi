@@ -83,5 +83,6 @@ class PhoneCallOriginManager_Static(winrt._winrt.Object_Static):
 @typing.final
 @deprecated("PhoneCallOriginManager is deprecated and might not work for all platforms. For more info, see MSDN.")
 class PhoneCallOriginManager(winrt.system.Object, metaclass=PhoneCallOriginManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 

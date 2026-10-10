@@ -98,10 +98,13 @@ class GameControllerFactoryManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GameControllerFactoryManager(winrt.system.Object, metaclass=GameControllerFactoryManager_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GipFirmwareUpdateResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.Gaming.Input.Custom.GipFirmwareUpdateResult::get_ExtendedErrorCode()
     @_property
     def extended_error_code(self) -> winrt.system.UInt32: ...
@@ -114,6 +117,8 @@ class GipFirmwareUpdateResult(winrt.system.Object):
 
 @typing.final
 class GipGameControllerProvider(IGameControllerProvider, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.Input.Custom.GipGameControllerProvider::SendMessage(Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte[])
     def send_message(self, message_class: GipMessageClass, message_id: winrt.system.UInt8, message_buffer: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> None: ...
     # System.Void Windows.Gaming.Input.Custom.GipGameControllerProvider::SendReceiveMessage(Windows.Gaming.Input.Custom.GipMessageClass,System.Byte,System.Byte[],System.Byte[])
@@ -138,6 +143,8 @@ class GipGameControllerProvider(IGameControllerProvider, winrt.system.Object):
 
 @typing.final
 class HidGameControllerProvider(IGameControllerProvider, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.Input.Custom.HidGameControllerProvider::GetFeatureReport(System.Byte,System.Byte[])
     def get_feature_report(self, report_id: winrt.system.UInt8, report_buffer: winrt.system.Array[winrt.system.UInt8] | winrt.system.WriteableBuffer, /) -> None: ...
     # System.Void Windows.Gaming.Input.Custom.HidGameControllerProvider::SendFeatureReport(System.Byte,System.Byte[])
@@ -168,6 +175,8 @@ class HidGameControllerProvider(IGameControllerProvider, winrt.system.Object):
 
 @typing.final
 class XusbGameControllerProvider(IGameControllerProvider, winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Gaming.Input.Custom.XusbGameControllerProvider::SetVibration(System.Double,System.Double)
     def set_vibration(self, low_frequency_motor_speed: winrt.system.Double, high_frequency_motor_speed: winrt.system.Double, /) -> None: ...
     # Windows.Gaming.Input.Custom.GameControllerVersionInfo Windows.Gaming.Input.Custom.XusbGameControllerProvider::get_FirmwareVersionInfo()

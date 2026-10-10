@@ -127,7 +127,8 @@ class AsyncCausalityTracer_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AsyncCausalityTracer(winrt.system.Object, metaclass=AsyncCausalityTracer_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class ErrorDetails_Static(winrt._winrt.Object_Static):
@@ -136,6 +137,8 @@ class ErrorDetails_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ErrorDetails(winrt.system.Object, metaclass=ErrorDetails_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Foundation.Diagnostics.ErrorDetails::get_Description()
     @_property
     def description(self) -> str: ...
@@ -177,6 +180,8 @@ class FileLoggingSession(IFileLoggingSession, windows_foundation.IClosable, winr
 
 @typing.final
 class LogFileGeneratedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.StorageFile Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs::get_File()
     @_property
     def file(self) -> windows_storage.StorageFile: ...
@@ -1136,6 +1141,8 @@ class RuntimeBrokerErrorSettings(IErrorReportingSettings, winrt.system.Object):
 
 @typing.final
 class TracingStatusChangedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs::get_Enabled()
     @_property
     def enabled(self) -> bool: ...

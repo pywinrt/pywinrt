@@ -128,6 +128,8 @@ class GuidanceMode(enum.IntEnum):
 
 @typing.final
 class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs::get_AudioFilePaths()
     @_property
     def audio_file_paths(self) -> _cabc.Sequence[str]: ...
@@ -140,6 +142,8 @@ class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class GuidanceLaneInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Services.Maps.Guidance.GuidanceLaneInfo::get_IsOnRoute()
     @_property
     def is_on_route(self) -> bool: ...
@@ -149,6 +153,8 @@ class GuidanceLaneInfo(winrt.system.Object):
 
 @typing.final
 class GuidanceManeuver(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Maps.Guidance.GuidanceManeuver::get_DepartureRoadName()
     @_property
     def departure_road_name(self) -> str: ...
@@ -188,6 +194,8 @@ class GuidanceManeuver(winrt.system.Object):
 
 @typing.final
 class GuidanceMapMatchedCoordinate(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate::get_CurrentHeading()
     @_property
     def current_heading(self) -> winrt.system.Double: ...
@@ -214,6 +222,8 @@ class GuidanceNavigator_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::Pause()
     def pause(self) -> None: ...
     # System.Void Windows.Services.Maps.Guidance.GuidanceNavigator::RepeatLastAudioNotification()
@@ -293,12 +303,16 @@ class GuidanceNavigator(winrt.system.Object, metaclass=GuidanceNavigator_Static)
 
 @typing.final
 class GuidanceReroutedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.Guidance.GuidanceRoute Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs::get_Route()
     @_property
     def route(self) -> GuidanceRoute: ...
 
 @typing.final
 class GuidanceRoadSegment(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Services.Maps.Guidance.GuidanceRoadSegment::get_Id()
     @_property
     def id(self) -> str: ...
@@ -332,6 +346,8 @@ class GuidanceRoadSegment(winrt.system.Object):
 
 @typing.final
 class GuidanceRoadSignpost(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Windows.Services.Maps.Guidance.GuidanceRoadSignpost::get_BackgroundColor()
     @_property
     def background_color(self) -> windows_ui.Color: ...
@@ -357,6 +373,8 @@ class GuidanceRoute_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GuidanceRoute(winrt.system.Object, metaclass=GuidanceRoute_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.MapRoute Windows.Services.Maps.Guidance.GuidanceRoute::ConvertToMapRoute()
     def convert_to_map_route(self) -> windows_services_maps.MapRoute: ...
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Services.Maps.Guidance.GuidanceRoute::get_BoundingBox()
@@ -385,6 +403,8 @@ class GuidanceTelemetryCollector_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetryCollector_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Services.Maps.Guidance.GuidanceTelemetryCollector::ClearLocalData()
     def clear_local_data(self) -> None: ...
     # System.Int32 Windows.Services.Maps.Guidance.GuidanceTelemetryCollector::get_UploadFrequency()
@@ -408,6 +428,8 @@ class GuidanceTelemetryCollector(winrt.system.Object, metaclass=GuidanceTelemetr
 
 @typing.final
 class GuidanceUpdatedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Services.Maps.Guidance.GuidanceManeuver Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs::get_AfterNextManeuver()
     @_property
     def after_next_maneuver(self) -> GuidanceManeuver: ...

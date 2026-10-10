@@ -83,10 +83,13 @@ class WebAuthenticationBroker_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WebAuthenticationBroker(winrt.system.Object, metaclass=WebAuthenticationBroker_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class WebAuthenticationResult(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.Security.Authentication.Web.WebAuthenticationResult::get_ResponseData()
     @_property
     def response_data(self) -> str: ...

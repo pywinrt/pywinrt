@@ -69,10 +69,13 @@ class AdaptiveCardBuilder_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class AdaptiveCardBuilder(winrt.system.Object, metaclass=AdaptiveCardBuilder_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class FocusSession(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.FocusSession::End()
     def end(self) -> None: ...
     # System.String Windows.UI.Shell.FocusSession::get_Id()
@@ -89,6 +92,8 @@ class FocusSessionManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class FocusSessionManager(winrt.system.Object, metaclass=FocusSessionManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.FocusSessionManager::DeactivateFocus()
     def deactivate_focus(self) -> None: ...
     # Windows.UI.Shell.FocusSession Windows.UI.Shell.FocusSessionManager::GetSession(System.String)
@@ -123,6 +128,8 @@ class SecurityAppManager(winrt.system.Object):
 
 @typing.final
 class ShareWindowCommandEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Shell.ShareWindowCommand Windows.UI.Shell.ShareWindowCommandEventArgs::get_Command()
     @_property
     def command(self) -> ShareWindowCommand: ...
@@ -140,6 +147,8 @@ class ShareWindowCommandSource_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ShareWindowCommandSource(winrt.system.Object, metaclass=ShareWindowCommandSource_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.ShareWindowCommandSource::ReportCommandChanged()
     def report_command_changed(self) -> None: ...
     # System.Void Windows.UI.Shell.ShareWindowCommandSource::Start()
@@ -162,6 +171,8 @@ class TaskbarManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class TaskbarManager(winrt.system.Object, metaclass=TaskbarManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Shell.TaskbarManager::IsAppListEntryPinnedAsync(Windows.ApplicationModel.Core.AppListEntry)
     def is_app_list_entry_pinned_async(self, app_list_entry: windows_applicationmodel_core.AppListEntry, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.UI.Shell.TaskbarManager::IsCurrentAppPinnedAsync()
@@ -221,6 +232,8 @@ class WindowTab(winrt.system.Object):
 
 @typing.final
 class WindowTabCloseRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Shell.WindowTab Windows.UI.Shell.WindowTabCloseRequestedEventArgs::get_Tab()
     @_property
     def tab(self) -> WindowTab: ...
@@ -242,6 +255,8 @@ class WindowTabCollection(_cabc.MutableSequence[WindowTab], winrt.system.Object)
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[WindowTab]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: WindowTab, /) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.WindowTabCollection::Append(Windows.UI.Shell.WindowTab)
     def append(self, value: WindowTab, /) -> None: ...
     # System.Void Windows.UI.Shell.WindowTabCollection::Clear()
@@ -305,7 +320,8 @@ class WindowTabIcon_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class WindowTabManager_Static(winrt._winrt.Object_Static):
@@ -318,6 +334,8 @@ class WindowTabManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class WindowTabManager(winrt.system.Object, metaclass=WindowTabManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Shell.WindowTabManager::SetActiveTab(Windows.UI.Shell.WindowTab)
     def set_active_tab(self, tab: WindowTab, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Shell.WindowTabManager::add_TabCloseRequested(Windows.Foundation.TypedEventHandler`2<Windows.UI.Shell.WindowTabManager,Windows.UI.Shell.WindowTabCloseRequestedEventArgs>)
@@ -342,12 +360,16 @@ class WindowTabManager(winrt.system.Object, metaclass=WindowTabManager_Static):
 
 @typing.final
 class WindowTabSwitchRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Shell.WindowTab Windows.UI.Shell.WindowTabSwitchRequestedEventArgs::get_Tab()
     @_property
     def tab(self) -> WindowTab: ...
 
 @typing.final
 class WindowTabTearOutRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Shell.WindowTabTearOutRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # System.UInt64 Windows.UI.Shell.WindowTabTearOutRequestedEventArgs::get_WindowId()
@@ -362,6 +384,8 @@ class WindowTabTearOutRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Deferral Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs::GetDeferral()
     def get_deferral(self) -> windows_foundation.Deferral: ...
     # Windows.Storage.Streams.IRandomAccessStreamReference Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs::get_Image()

@@ -48,6 +48,8 @@ class ProviderI2cTransferResult:
 
 @typing.final
 class ProviderI2cConnectionSettings(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings::get_SlaveAddress()
     @_property
     def slave_address(self) -> winrt.system.Int32: ...

@@ -34,6 +34,8 @@ class CoreDragDropManager_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class CoreDragDropManager(winrt.system.Object, metaclass=CoreDragDropManager_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager::add_TargetRequested(Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs>)
     def add_target_requested(self, value: windows_foundation.TypedEventHandler[CoreDragDropManager, CoreDropOperationTargetRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager::remove_TargetRequested(Windows.Foundation.EventRegistrationToken)
@@ -47,6 +49,8 @@ class CoreDragDropManager(winrt.system.Object, metaclass=CoreDragDropManager_Sta
 
 @typing.final
 class CoreDragInfo(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageView Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo::get_Data()
     @_property
     def data(self) -> windows_applicationmodel_datatransfer.DataPackageView: ...
@@ -95,6 +99,8 @@ class CoreDragOperation(winrt.system.Object):
 
 @typing.final
 class CoreDragUIOverride(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride::Clear()
     def clear(self) -> None: ...
     @typing.overload
@@ -134,6 +140,8 @@ class CoreDragUIOverride(winrt.system.Object):
 
 @typing.final
 class CoreDropOperationTargetRequestedEventArgs(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs::SetTarget(Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget)
     def set_target(self, target: ICoreDropOperationTarget, /) -> None: ...
 

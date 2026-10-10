@@ -44,6 +44,8 @@ class GraphicsCaptureDirtyRegionMode(enum.IntEnum):
 class Direct3D11CaptureFrame(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Capture.Direct3D11CaptureFrame::Close()
     def close(self) -> None: ...
     # Windows.Graphics.SizeInt32 Windows.Graphics.Capture.Direct3D11CaptureFrame::get_ContentSize()
@@ -76,6 +78,8 @@ class Direct3D11CaptureFramePool_Static(winrt._winrt.Object_Static):
 class Direct3D11CaptureFramePool(windows_foundation.IClosable, winrt.system.Object, metaclass=Direct3D11CaptureFramePool_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Capture.Direct3D11CaptureFramePool::Close()
     def close(self) -> None: ...
     # Windows.Graphics.Capture.GraphicsCaptureSession Windows.Graphics.Capture.Direct3D11CaptureFramePool::CreateCaptureSession(Windows.Graphics.Capture.GraphicsCaptureItem)
@@ -99,7 +103,8 @@ class GraphicsCaptureAccess_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GraphicsCaptureAccess(winrt.system.Object, metaclass=GraphicsCaptureAccess_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GraphicsCaptureItem_Static(winrt._winrt.Object_Static):
@@ -112,6 +117,8 @@ class GraphicsCaptureItem_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class GraphicsCaptureItem(winrt.system.Object, metaclass=GraphicsCaptureItem_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.Graphics.Capture.GraphicsCaptureItem::add_Closed(Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Capture.GraphicsCaptureItem,System.Object>)
     def add_closed(self, handler: windows_foundation.TypedEventHandler[GraphicsCaptureItem, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Graphics.Capture.GraphicsCaptureItem::remove_Closed(Windows.Foundation.EventRegistrationToken)
@@ -138,6 +145,8 @@ class GraphicsCaptureSession_Static(winrt._winrt.Object_Static):
 class GraphicsCaptureSession(windows_foundation.IClosable, winrt.system.Object, metaclass=GraphicsCaptureSession_Static):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.Graphics.Capture.GraphicsCaptureSession::Close()
     def close(self) -> None: ...
     # System.Void Windows.Graphics.Capture.GraphicsCaptureSession::StartCapture()

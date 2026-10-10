@@ -159,6 +159,8 @@ class BindingExpression_Static(BindingExpressionBase_Static):
     ...
 
 class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Windows.UI.Xaml.Data.BindingExpression::UpdateSource()
     def update_source(self) -> None: ...
@@ -176,6 +178,8 @@ class BindingExpressionBase_Static(winrt._winrt.Object_Static):
 
 class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class BindingOperations_Static(winrt._winrt.Object_Static):
@@ -184,7 +188,8 @@ class BindingOperations_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class BindingOperations(winrt.system.Object, metaclass=BindingOperations_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CollectionViewSource_Static(windows_ui_xaml.DependencyObject_Static):

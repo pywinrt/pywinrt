@@ -32,7 +32,8 @@ class ServiceDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class StorageDevice_Static(winrt._winrt.Object_Static):
@@ -43,5 +44,6 @@ class StorageDevice_Static(winrt._winrt.Object_Static):
 
 @typing.final
 class StorageDevice(winrt.system.Object, metaclass=StorageDevice_Static):
-    ...
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
