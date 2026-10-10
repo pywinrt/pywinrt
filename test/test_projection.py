@@ -21,6 +21,7 @@ import test_winrt.testcomponent as tc
 import winrt.windows.data.json as wdj
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
+import winrt.windows.storage.provider as wsp
 from winrt.system import Array, Int32, Object
 from winrt.system.hresult import E_FAIL
 
@@ -391,6 +392,25 @@ class TestMembers(unittest.TestCase):
 
     def test_a_string_argument(self) -> None:
         self.assertEqual(self.tests.param12("hello"), ("hello", "hello"))
+
+    def test_a_flags_argument_with_bit_31_set(self) -> None:
+        # A flags enum is an unsigned 32 bit integer, so its top bit is a flag
+        # like any other.
+        info = wsp.StorageProviderSyncRootInfo()
+        policy = (
+            wsp.StorageProviderInSyncPolicy.PRESERVE_INSYNC_FOR_SYNC_ENGINE
+            | wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME
+        )
+
+        info.in_sync_policy = policy
+        self.assertEqual(info.in_sync_policy, policy)
+
+    def test_a_flags_argument_out_of_range(self) -> None:
+        info = wsp.StorageProviderSyncRootInfo()
+
+        for value in (-1, 2**32):
+            with self.subTest(value=value), self.assertRaises(OverflowError):
+                info.in_sync_policy = value  # type: ignore[assignment]
 
     def test_the_wrong_number_of_arguments(self) -> None:
         with self.assertRaises(TypeError):

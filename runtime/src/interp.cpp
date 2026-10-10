@@ -595,8 +595,10 @@ namespace py::interp
             return;
         }
         case table::type_code::enum32:
-        case table::type_code::enum_u32:
             store_widened(frame.args, arg.offset, widen(convert_to<int32_t>(value)));
+            return;
+        case table::type_code::enum_u32:
+            store_widened(frame.args, arg.offset, convert_to<uint32_t>(value));
             return;
         case table::type_code::string:
         {
