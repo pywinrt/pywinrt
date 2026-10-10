@@ -669,6 +669,9 @@ class GeneralTransform(microsoft_ui_xaml.DependencyObject, metaclass=GeneralTran
     @_property
     @typing.final
     def inverse(self) -> GeneralTransform: ...
+    # Microsoft.UI.Xaml.Media.GeneralTransform Microsoft.UI.Xaml.Media.GeneralTransform::get_InverseCore()
+    @_property
+    def _inverse_core(self) -> GeneralTransform: ...
 
 class Geometry_Static(microsoft_ui_xaml.DependencyObject_Static):
     # Microsoft.UI.Xaml.Media.Geometry Microsoft.UI.Xaml.Media.Geometry::get_Empty()
@@ -2000,6 +2003,14 @@ class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static)
     @fallback_color.setter
     @typing.final
     def fallback_color(self, value: windows_ui.Color | tuple[winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt8]) -> None: ...
+    # Microsoft.UI.Composition.CompositionBrush Microsoft.UI.Xaml.Media.XamlCompositionBrushBase::get_CompositionBrush()
+    @_property
+    @typing.final
+    def _composition_brush(self) -> microsoft_ui_composition.CompositionBrush: ...
+    # System.Void Microsoft.UI.Xaml.Media.XamlCompositionBrushBase::put_CompositionBrush(Microsoft.UI.Composition.CompositionBrush)
+    @_composition_brush.setter
+    @typing.final
+    def _composition_brush(self, value: microsoft_ui_composition.CompositionBrush) -> None: ...
 
 class XamlLight_Static(microsoft_ui_xaml.DependencyObject_Static):
     # System.Void Microsoft.UI.Xaml.Media.XamlLight::AddTargetBrush(System.String,Microsoft.UI.Xaml.Media.Brush)
@@ -2019,4 +2030,12 @@ class XamlLight(microsoft_ui_xaml.DependencyObject, metaclass=XamlLight_Static):
     def _on_connected(self, new_element: microsoft_ui_xaml.UIElement, /) -> None: ...
     # System.Void Microsoft.UI.Xaml.Media.XamlLight::OnDisconnected(Microsoft.UI.Xaml.UIElement)
     def _on_disconnected(self, old_element: microsoft_ui_xaml.UIElement, /) -> None: ...
+    # Microsoft.UI.Composition.CompositionLight Microsoft.UI.Xaml.Media.XamlLight::get_CompositionLight()
+    @_property
+    @typing.final
+    def _composition_light(self) -> microsoft_ui_composition.CompositionLight: ...
+    # System.Void Microsoft.UI.Xaml.Media.XamlLight::put_CompositionLight(Microsoft.UI.Composition.CompositionLight)
+    @_composition_light.setter
+    @typing.final
+    def _composition_light(self, value: microsoft_ui_composition.CompositionLight) -> None: ...
 

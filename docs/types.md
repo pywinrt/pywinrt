@@ -17,6 +17,9 @@ In the Python projection, names are adapted to fit [PEP8 naming conventions][pep
 - All other identifiers are converted to `lower_case_with_underscores`
   (fields, properties, methods, events, etc.).
 - If an identifier is a Python keyword, an underscore is appended to the name.
+- A protected or overridable member, which WinRT means for a class derived
+  from its class, starts with an underscore, as in `_get_template_child()` and
+  `_default_style_key`.
 
 [pep8-naming]: https://peps.python.org/pep-0008/#naming-conventions
 

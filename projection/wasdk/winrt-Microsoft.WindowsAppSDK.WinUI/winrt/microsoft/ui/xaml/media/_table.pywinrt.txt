@@ -573,6 +573,9 @@ class Microsoft.UI.Xaml.Media.GeneralTransform composable python_type
     property inverse
         get get_Inverse slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGeneralTransform shape=4
             out class type=Microsoft.UI.Xaml.Media.GeneralTransform return
+    property _inverse_core
+        get get_InverseCore slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGeneralTransformOverrides shape=4 reverse=22 overridable
+            out class type=Microsoft.UI.Xaml.Media.GeneralTransform return
     method transform_bounds
         method TransformBounds slot=9 inputs=1 outputs=1 declaring=Microsoft.UI.Xaml.Media.IGeneralTransform shape=74
             in struct type=Windows.Foundation.Rect name=rect
@@ -3672,6 +3675,11 @@ class Microsoft.UI.Xaml.Media.XamlCompositionBrushBase composable python_type
             out struct type=Windows.UI.Color return
         put put_FallbackColor slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBase shape=29
             in struct type=Windows.UI.Color name=value
+    property _composition_brush
+        get get_CompositionBrush slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseProtected shape=4 reverse=22 protected
+            out class type=Microsoft.UI.Composition.CompositionBrush return
+        put put_CompositionBrush slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseProtected shape=4 reverse=43 protected
+            in class type=Microsoft.UI.Composition.CompositionBrush name=value
     property fallback_color_property static
         get get_FallbackColorProperty slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlCompositionBrushBaseStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
@@ -3696,6 +3704,11 @@ class Microsoft.UI.Xaml.Media.XamlLight composable python_type
             in object name=baseInterface implicit
             out object name=innerInterface implicit
             out class type=Microsoft.UI.Xaml.Media.XamlLight return
+    property _composition_light
+        get get_CompositionLight slot=6 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Media.IXamlLightProtected shape=4 reverse=22 protected
+            out class type=Microsoft.UI.Composition.CompositionLight return
+        put put_CompositionLight slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Media.IXamlLightProtected shape=4 reverse=43 protected
+            in class type=Microsoft.UI.Composition.CompositionLight name=value
     method add_target_brush static
         method AddTargetBrush slot=8 inputs=2 outputs=0 declaring=Microsoft.UI.Xaml.Media.IXamlLightStatics shape=51 static
             in string name=lightId
@@ -3725,8 +3738,14 @@ class Microsoft.UI.Xaml.Media.XamlLight composable python_type
 class Microsoft.UI.Composition.AnimationPropertyInfo external
     py winrt.microsoft.ui.composition.AnimationPropertyInfo
 
+class Microsoft.UI.Composition.CompositionBrush external
+    py winrt.microsoft.ui.composition.CompositionBrush
+
 enum Microsoft.UI.Composition.CompositionColorSpace external
     py winrt.microsoft.ui.composition.CompositionColorSpace
+
+class Microsoft.UI.Composition.CompositionLight external
+    py winrt.microsoft.ui.composition.CompositionLight
 
 class Microsoft.UI.Composition.Compositor external
     py winrt.microsoft.ui.composition.Compositor

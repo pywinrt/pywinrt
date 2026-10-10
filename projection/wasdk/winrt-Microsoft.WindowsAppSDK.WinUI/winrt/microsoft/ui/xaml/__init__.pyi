@@ -3449,6 +3449,14 @@ class UIElement(DependencyObject, microsoft_ui_composition.IVisualElement2, micr
     @_property
     @typing.final
     def actual_size(self) -> windows_foundation_numerics.Vector2: ...
+    # Microsoft.UI.Input.InputCursor Microsoft.UI.Xaml.UIElement::get_ProtectedCursor()
+    @_property
+    @typing.final
+    def _protected_cursor(self) -> microsoft_ui_input.InputCursor: ...
+    # System.Void Microsoft.UI.Xaml.UIElement::put_ProtectedCursor(Microsoft.UI.Input.InputCursor)
+    @_protected_cursor.setter
+    @typing.final
+    def _protected_cursor(self, value: microsoft_ui_input.InputCursor) -> None: ...
 
 class UIElementWeakCollection_Static(winrt._winrt.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> UIElementWeakCollection_Static: ...

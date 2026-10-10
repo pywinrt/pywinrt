@@ -3440,6 +3440,11 @@ class Windows.UI.Xaml.Controls.Control composable python_type
             out enum32 type=Windows.UI.Xaml.Controls.BackgroundSizing return
         put put_BackgroundSizing slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl7 shape=4
             in enum32 type=Windows.UI.Xaml.Controls.BackgroundSizing name=value
+    property _default_style_key
+        get get_DefaultStyleKey slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlProtected shape=4 reverse=22 protected
+            out object return
+        put put_DefaultStyleKey slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControlProtected shape=4 reverse=43 protected
+            in object name=value
     property border_thickness_property static
         get get_BorderThicknessProperty slot=22 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
