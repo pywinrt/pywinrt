@@ -582,51 +582,52 @@ namespace py::cpp::_winrt
             return self_handle.detach();
         }
 
-        if (PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1))
+        // Any iterable, as list() takes: a list or a tuple as it is, and
+        // anything else made into a list first, which is also what says how
+        // many elements there are.
+        pyobj_handle items{
+            PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1)
+                ? Py_NewRef(arg1)
+                : PySequence_List(arg1)};
+        if (!items)
         {
-            auto count = PySequence_Fast_GET_SIZE(arg1);
-
-            auto size = static_cast<uint32_t>(count);
-
-            if (static_cast<Py_ssize_t>(size) != count)
-            {
-                PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
-                return nullptr;
-            }
-
-            if (!self->array->Alloc(size))
-            {
-                return nullptr;
-            }
-
-            // Converting an element can run Python code that changes the
-            // list, so each item is taken as it is reached rather than
-            // borrowed from the list's storage. As array.array does, the
-            // length is the one the list had to begin with, and a list that
-            // shrank raises IndexError.
-            for (uint32_t i = 0; i < self->array->Size(); i++)
-            {
-                pyobj_handle item{PySequence_GetItem(arg1, i)};
-                if (!item)
-                {
-                    return nullptr;
-                }
-
-                if (!self->array->Set(i, item.get()))
-                {
-                    return nullptr;
-                }
-            }
-
-            return self_handle.detach();
+            return nullptr;
         }
 
-        PyErr_Format(
-            PyExc_TypeError,
-            "cannot convert '%.200s' object to Array",
-            Py_TYPE(arg1)->tp_name);
+        auto py_size = PySequence_Fast_GET_SIZE(items.get());
 
-        return nullptr;
+        auto size = static_cast<uint32_t>(py_size);
+
+        if (static_cast<Py_ssize_t>(size) != py_size)
+        {
+            PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
+            return nullptr;
+        }
+
+        if (!self->array->Alloc(size))
+        {
+            return nullptr;
+        }
+
+        // Converting an element can run Python code that changes the list,
+        // so each item is taken as it is reached rather than borrowed from
+        // the list's storage. As array.array does, the length is the one the
+        // list had to begin with, and a list that shrank raises IndexError.
+        for (uint32_t i = 0; i < self->array->Size(); i++)
+        {
+            pyobj_handle item{PySequence_GetItem(items.get(), i)};
+            if (!item)
+            {
+                return nullptr;
+            }
+
+            if (!self->array->Set(i, item.get()))
+            {
+                return nullptr;
+            }
+        }
+
+        return self_handle.detach();
     }
 
     static void Array_tp_dealloc(Array* self) noexcept

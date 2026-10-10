@@ -78,8 +78,7 @@ class TestJson(unittest.TestCase):
     def test_JsonArray_replace_all(self) -> None:
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual(a.size, 5)
-        # mypy, unlike pyright, cannot infer an interface from a list of a class
-        a.replace_all(Array(wdj.IJsonValue, [wdj.JsonValue.parse("7")]))  # type: ignore[misc]
+        a.replace_all(Array(wdj.IJsonValue, [wdj.JsonValue.parse("7")]))
         self.assertEqual(a.size, 1)
         self.assertEqual(a.get_number_at(0), 7)
 
