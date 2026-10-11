@@ -29,14 +29,9 @@ namespace py::cpp::Windows::Devices::Radios
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
+                static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"FromIdAsync", 1);
 
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"FromIdAsync", 1);
-                }
-
-                if (!is_overload_present.value())
+                if (!is_overload_present)
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -71,14 +66,9 @@ namespace py::cpp::Windows::Devices::Radios
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
+                static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"GetDeviceSelector", 0);
 
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"GetDeviceSelector", 0);
-                }
-
-                if (!is_overload_present.value())
+                if (!is_overload_present)
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -111,14 +101,9 @@ namespace py::cpp::Windows::Devices::Radios
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
+                static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"GetRadiosAsync", 0);
 
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"GetRadiosAsync", 0);
-                }
-
-                if (!is_overload_present.value())
+                if (!is_overload_present)
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -151,14 +136,9 @@ namespace py::cpp::Windows::Devices::Radios
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
+                static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"RequestAccessAsync", 0);
 
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"RequestAccessAsync", 0);
-                }
-
-                if (!is_overload_present.value())
+                if (!is_overload_present)
                 {
                     py::set_arg_count_version_error(0);
                     return nullptr;
@@ -191,14 +171,9 @@ namespace py::cpp::Windows::Devices::Radios
         {
             try
             {
-                static std::optional<bool> is_overload_present{};
+                static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"SetStateAsync", 1);
 
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Radios.Radio", L"SetStateAsync", 1);
-                }
-
-                if (!is_overload_present.value())
+                if (!is_overload_present)
                 {
                     py::set_arg_count_version_error(1);
                     return nullptr;
@@ -229,14 +204,9 @@ namespace py::cpp::Windows::Devices::Radios
     {
         try
         {
-            static std::optional<bool> is_property_present{};
+            static const bool is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"Kind");
 
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"Kind");
-            }
-
-            if (!is_property_present.value())
+            if (!is_property_present)
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -259,14 +229,9 @@ namespace py::cpp::Windows::Devices::Radios
     {
         try
         {
-            static std::optional<bool> is_property_present{};
+            static const bool is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"Name");
 
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"Name");
-            }
-
-            if (!is_property_present.value())
+            if (!is_property_present)
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -289,14 +254,9 @@ namespace py::cpp::Windows::Devices::Radios
     {
         try
         {
-            static std::optional<bool> is_property_present{};
+            static const bool is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"State");
 
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Radios.Radio", L"State");
-            }
-
-            if (!is_property_present.value())
+            if (!is_property_present)
             {
                 PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
                 return nullptr;
@@ -319,14 +279,9 @@ namespace py::cpp::Windows::Devices::Radios
     {
         try
         {
-            static std::optional<bool> is_event_present{};
+            static const bool is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Radios.Radio", L"StateChanged");
 
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Radios.Radio", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
+            if (!is_event_present)
             {
                 PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
                 return nullptr;
@@ -351,14 +306,9 @@ namespace py::cpp::Windows::Devices::Radios
     {
         try
         {
-            static std::optional<bool> is_event_present{};
+            static const bool is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Radios.Radio", L"StateChanged");
 
-            if (!is_event_present.has_value())
-            {
-                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Radios.Radio", L"StateChanged");
-            }
-
-            if (!is_event_present.value())
+            if (!is_event_present)
             {
                 PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
                 return nullptr;
@@ -488,6 +438,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_radios(void) noexcept
     {
         return nullptr;
     }
+
+#ifdef Py_GIL_DISABLED
+    if (PyUnstable_Module_SetGIL(module.get(), Py_MOD_GIL_NOT_USED) < 0)
+    {
+        return nullptr;
+    }
+#endif
 
     auto inspectable_meta_type = py::get_inspectable_meta_type();
     if (!inspectable_meta_type)

@@ -610,6 +610,10 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->type_cache);
 
         std::destroy_at(&state->struct_from_tuple_cache);
+#ifdef Py_GIL_DISABLED
+        std::destroy_at(&state->struct_from_tuple_cache_mutex);
+        std::destroy_at(&state->type_cache_mutex);
+#endif
     }
 
     // Not using a header file for thes because setuptools doesn't have a nice
@@ -739,7 +743,18 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+#ifdef Py_GIL_DISABLED
+        if (PyUnstable_Module_SetGIL(module.get(), Py_MOD_GIL_NOT_USED) < 0)
+        {
+            return nullptr;
+        }
+#endif
+
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
+#ifdef Py_GIL_DISABLED
+        std::construct_at(&state->type_cache_mutex);
+        std::construct_at(&state->struct_from_tuple_cache_mutex);
+#endif
         std::construct_at(&state->type_cache);
         std::construct_at(&state->struct_from_tuple_cache);
 

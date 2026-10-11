@@ -739,17 +739,11 @@ static class WriterExtensions
                 {
                     if (!componentDlls)
                     {
-                        w.WriteLine("static std::optional<bool> is_event_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_event_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
-                                )
+                        w.WriteLine(
+                            $"static const bool is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{evtName}\");"
                         );
                         w.WriteBlankLine();
-                        w.WriteLine("if (!is_event_present.value())");
+                        w.WriteLine("if (!is_event_present)");
                         w.WriteBlock(() =>
                         {
                             w.WriteLine(
@@ -791,17 +785,11 @@ static class WriterExtensions
                 {
                     if (!componentDlls)
                     {
-                        w.WriteLine("static std::optional<bool> is_property_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
-                                )
+                        w.WriteLine(
+                            $"static const bool is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
                         );
                         w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.value())");
+                        w.WriteLine("if (!is_property_present)");
                         w.WriteBlock(() =>
                         {
                             w.WriteLine(
@@ -857,17 +845,11 @@ static class WriterExtensions
                 {
                     if (!componentDlls)
                     {
-                        w.WriteLine("static std::optional<bool> is_property_present{};");
+                        w.WriteLine(
+                            $"static const bool is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
+                        );
                         w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.has_value())");
-                        w.WriteBlock(() =>
-                        {
-                            w.WriteLine(
-                                $"is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"{prop.Property.DeclaringType.Namespace}.{prop.Property.DeclaringType.Name}\", L\"{prop.Name}\");"
-                            );
-                        });
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_property_present.value())");
+                        w.WriteLine("if (!is_property_present)");
                         w.WriteBlock(() =>
                         {
                             w.WriteLine(
@@ -938,17 +920,11 @@ static class WriterExtensions
                 {
                     if (!componentDlls)
                     {
-                        w.WriteLine("static std::optional<bool> is_overload_present{};");
-                        w.WriteBlankLine();
-                        w.WriteLine("if (!is_overload_present.has_value())");
-                        w.WriteBlock(
-                            () =>
-                                w.WriteLine(
-                                    $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
-                                )
+                        w.WriteLine(
+                            $"static const bool is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
                         );
                         w.WriteBlankLine();
-                        w.WriteLine("if (!is_overload_present.value())");
+                        w.WriteLine("if (!is_overload_present)");
                         w.WriteBlock(() =>
                         {
                             w.WriteLine($"py::set_arg_count_version_error({inParamCount});");
@@ -1345,6 +1321,12 @@ static class WriterExtensions
 
             w.WriteLine("if (!module)");
             w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteBlankLine();
+
+            w.WriteLine("#ifdef Py_GIL_DISABLED");
+            w.WriteLine("if (PyUnstable_Module_SetGIL(module.get(), Py_MOD_GIL_NOT_USED) < 0)");
+            w.WriteBlock(() => w.WriteLine("return nullptr;"));
+            w.WriteLine("#endif");
             w.WriteBlankLine();
 
             if (members.Classes.Count != 0 || members.Interfaces.Count != 0)

@@ -8,6 +8,31 @@
 #include "pybase.h"
 #include "pyruntime.h"
 
+#ifdef Py_GIL_DISABLED
+namespace
+{
+    class mutex_guard
+    {
+      public:
+        explicit mutex_guard(PyMutex* mutex) noexcept : mutex{mutex}
+        {
+            PyMutex_Lock(mutex);
+        }
+
+        mutex_guard(const mutex_guard&) = delete;
+        mutex_guard& operator=(const mutex_guard&) = delete;
+
+        ~mutex_guard()
+        {
+            PyMutex_Unlock(mutex);
+        }
+
+      private:
+        PyMutex* mutex;
+    };
+} // namespace
+#endif
+
 // "backport" of Python 3.12 function.
 #if PY_VERSION_HEX < 0x030C0000
 static PyObject* PyType_FromMetaclass(
@@ -202,11 +227,22 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
+#ifdef Py_GIL_DISABLED
+    {
+        mutex_guard guard{&state->type_cache_mutex};
+        auto it = state->type_cache.find(qualified_name);
+        if (it != state->type_cache.end())
+        {
+            return it->second;
+        }
+    }
+#else
     auto it = state->type_cache.find(qualified_name);
     if (it != state->type_cache.end())
     {
         return it->second;
     }
+#endif
 
     auto pos = qualified_name.find_last_of('.');
     if (pos == std::string_view::npos)
@@ -244,10 +280,23 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
     // TODO: verify that the Python type is compatible with the winrt
     // runtime module version and that it actually matches the C++ type
 
+    auto result = reinterpret_cast<PyTypeObject*>(type.get());
+
     try
     {
+#ifdef Py_GIL_DISABLED
+        pyobj_handle cache_ref{Py_NewRef(type.get())};
+        mutex_guard guard{&state->type_cache_mutex};
+        auto [it, inserted] = state->type_cache.emplace(qualified_name, result);
+        if (inserted)
+        {
+            cache_ref.detach();
+        }
+        result = it->second;
+#else
         state->type_cache[qualified_name]
             = reinterpret_cast<PyTypeObject*>(Py_NewRef(type.get()));
+#endif
     }
     catch (...)
     {
@@ -255,7 +304,7 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    return reinterpret_cast<PyTypeObject*>(type.get());
+    return result;
 }
 
 void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
@@ -266,11 +315,22 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
         return nullptr;
     }
 
+#ifdef Py_GIL_DISABLED
+    {
+        mutex_guard guard{&state->struct_from_tuple_cache_mutex};
+        auto it = state->struct_from_tuple_cache.find(capsule_name);
+        if (it != state->struct_from_tuple_cache.end())
+        {
+            return it->second;
+        }
+    }
+#else
     auto it = state->struct_from_tuple_cache.find(capsule_name);
     if (it != state->struct_from_tuple_cache.end())
     {
         return it->second;
     }
+#endif
 
     // PyCapsule_Import() doesn't work if the module hasn't been imported yet,
     // so we need to do it this way instead.
@@ -300,9 +360,17 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
     // REVISIT: might want to validate that the returned pointer is actually
     // comapible with the current runtime
 
+    auto result = func;
+
     try
     {
+#ifdef Py_GIL_DISABLED
+        mutex_guard guard{&state->struct_from_tuple_cache_mutex};
+        auto [it, inserted] = state->struct_from_tuple_cache.emplace(capsule_name, func);
+        result = it->second;
+#else
         state->struct_from_tuple_cache[capsule_name] = func;
+#endif
     }
     catch (...)
     {
@@ -310,7 +378,7 @@ void* py::get_struct_from_tuple_func(std::string_view capsule_name) noexcept
         return nullptr;
     }
 
-    return func;
+    return result;
 }
 
 /**
