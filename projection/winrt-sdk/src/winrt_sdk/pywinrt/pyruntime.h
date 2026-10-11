@@ -12,6 +12,10 @@ namespace py::cpp::_winrt
         PyTypeObject* object_type;
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;
+#ifdef Py_GIL_DISABLED
+        PyMutex type_cache_mutex;
+        PyMutex struct_from_tuple_cache_mutex;
+#endif
         std::unordered_map<std::string_view, PyTypeObject*> type_cache;
         std::unordered_map<std::string_view, void*> struct_from_tuple_cache;
         PyObject* to_uuid_func;

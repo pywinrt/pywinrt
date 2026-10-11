@@ -369,7 +369,13 @@ namespace py::cpp::_winrt
 
         if (PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1))
         {
-            auto count = PySequence_Fast_GET_SIZE(arg1);
+            pyobj_handle snapshot{PySequence_Tuple(arg1)};
+            if (!snapshot)
+            {
+                return nullptr;
+            }
+
+            auto count = PyTuple_GET_SIZE(snapshot.get());
 
             auto size = static_cast<uint32_t>(count);
 
@@ -384,11 +390,9 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            PyObject** items = PySequence_Fast_ITEMS(arg1);
-
             for (uint32_t i = 0; i < self->array->Size(); i++)
             {
-                if (!self->array->Set(i, items[i]))
+                if (!self->array->Set(i, PyTuple_GET_ITEM(snapshot.get(), i)))
                 {
                     return nullptr;
                 }
