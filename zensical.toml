@@ -15,6 +15,7 @@ nav = [
   "index.md",
   "installing.md",
   "types.md",
+  "threads.md",
   { "API reference" = [
     "api/index.md",
     "api/runtime.md",
