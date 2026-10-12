@@ -41,7 +41,7 @@ thread (if any) are created.
 
 **Returns:** The created dispatcher queue controller.
 
-**Return type:** `winrt.windows.ui.composition.DispatcherQueueController`
+**Return type:** `winrt.windows.system.DispatcherQueueController`
 
 **Raises:** [`OSError`](https://docs.python.org/3/builtins/exceptions.html#OSError) on failure
 
