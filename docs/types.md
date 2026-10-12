@@ -25,10 +25,11 @@ In the Python projection, names are adapted to fit [PEP8 naming conventions][pep
 
 ## Distribution packages
 
-Each WinRT namespace is projected as a separate Python package. The packages are
+Each Windows SDK namespace is projected as a separate Python package. The packages are
 named like [winrt-Windows.Foundation](https://pypi.org/project/winrt-Windows.Foundation/)
 where `winrt` is the root namespace for a specific SDK or DLL and
 `Windows.Foundation` is a WinRT namespace within that SDK or DLL.
+[Installing](installing.md) says how the other APIs are packaged.
 
 There are also some PyWinRT-specific sub-packages distributed in the
 [winrt-runtime](https://pypi.org/project/winrt-runtime/) package. As well as
