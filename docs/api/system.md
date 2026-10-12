@@ -257,22 +257,22 @@ be unboxed to get the original value.
 ### `box_*`
 
 ```python
-box_boolean(value: bool) -> Object
-box_int8(value: str) -> Object
-box_uint8(value: str) -> Object
-box_int16(value: int) -> Object
-box_uint16(value: int) -> Object
-box_int32(value: int) -> Object
-box_uint32(value: int) -> Object
-box_int64(value: int) -> Object
-box_uint64(value: int) -> Object
-box_single(value: float) -> Object
-box_double(value: float) -> Object
-box_char16(value: str) -> Object
-box_string(value: str) -> Object
-box_guid(value: uuid.UUID) -> Object
-box_date_time(value: datetime.datetime) -> Object
-box_time_span(value: datetime.timedelta) -> Object
+box_boolean(value: bool, /) -> Object
+box_int8(value: int, /) -> Object
+box_uint8(value: int, /) -> Object
+box_int16(value: int, /) -> Object
+box_uint16(value: int, /) -> Object
+box_int32(value: int, /) -> Object
+box_uint32(value: int, /) -> Object
+box_int64(value: int, /) -> Object
+box_uint64(value: int, /) -> Object
+box_single(value: float, /) -> Object
+box_double(value: float, /) -> Object
+box_char16(value: str, /) -> Object
+box_string(value: str, /) -> Object
+box_guid(value: uuid.UUID, /) -> Object
+box_date_time(value: datetime.datetime, /) -> Object
+box_time_span(value: datetime.timedelta, /) -> Object
 ```
 
 Boxes the given value into a [`winrt.system.Object`](#object).
@@ -290,22 +290,22 @@ obj = PropertyValue.create_xyz(value)
 ### `unbox_*`
 
 ```python
-unbox_boolean(value: Object) -> bool
-unbox_int8(value: Object) -> str
-unbox_uint8(value: Object) -> str
-unbox_int16(value: Object) -> int
-unbox_uint16(value: Object) -> int
-unbox_int32(value: Object) -> int
-unbox_uint32(value: Object) -> int
-unbox_int64(value: Object) -> int
-unbox_uint64(value: Object) -> int
-unbox_single(value: Object) -> float
-unbox_double(value: Object) -> float
-unbox_char16(value: Object) -> str
-unbox_string(value: Object) -> str
-unbox_guid(value: Object) -> uuid.UUID
-unbox_date_time(value: Object) -> datetime.datetime
-unbox_time_span(value: Object) -> datetime.timedelta
+unbox_boolean(value: Object, /) -> bool
+unbox_int8(value: Object, /) -> int
+unbox_uint8(value: Object, /) -> int
+unbox_int16(value: Object, /) -> int
+unbox_uint16(value: Object, /) -> int
+unbox_int32(value: Object, /) -> int
+unbox_uint32(value: Object, /) -> int
+unbox_int64(value: Object, /) -> int
+unbox_uint64(value: Object, /) -> int
+unbox_single(value: Object, /) -> float
+unbox_double(value: Object, /) -> float
+unbox_char16(value: Object, /) -> str
+unbox_string(value: Object, /) -> str
+unbox_guid(value: Object, /) -> uuid.UUID
+unbox_date_time(value: Object, /) -> datetime.datetime
+unbox_time_span(value: Object, /) -> datetime.timedelta
 ```
 
 Unboxes the given [`winrt.system.Object`](#object) into the original value.
