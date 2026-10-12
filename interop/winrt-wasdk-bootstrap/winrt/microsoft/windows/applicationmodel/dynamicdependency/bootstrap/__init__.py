@@ -3,8 +3,19 @@ import enum
 from winrt import (
     _winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap as bootstrap,
 )
+from winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap import (
+    RELEASE_VERSION,
+    RUNTIME_VERSION,
+    Shutdown,
+)
 
-__all__ = ["InitializeOptions", "initialize"]
+__all__ = [
+    "RELEASE_VERSION",
+    "RUNTIME_VERSION",
+    "InitializeOptions",
+    "Shutdown",
+    "initialize",
+]
 
 
 class InitializeOptions(enum.IntFlag):
@@ -28,10 +39,10 @@ class InitializeOptions(enum.IntFlag):
 
 
 def initialize(
-    version: str = bootstrap.RELEASE_VERSION,
-    min_version: str = bootstrap.RUNTIME_VERSION,
+    version: str = RELEASE_VERSION,
+    min_version: str = RUNTIME_VERSION,
     options: InitializeOptions = InitializeOptions.NONE,
-) -> bootstrap.Shutdown:
+) -> Shutdown:
     """
     Initialize the Windows App SDK runtime.
 

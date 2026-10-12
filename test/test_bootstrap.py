@@ -7,6 +7,11 @@ from winrt import (
 
 
 class TestBootstrap(unittest.TestCase):
+    def test_what_initialize_defaults_to_is_exported(self) -> None:
+        self.assertRegex(bootstrap.RELEASE_VERSION, r"^\d+\.\d+(-\w+)?$")
+        self.assertRegex(bootstrap.RUNTIME_VERSION, r"^\d+\.\d+\.\d+\.\d+$")
+        self.assertIs(bootstrap.Shutdown, _bootstrap.Shutdown)
+
     def test_initialize_no_match(self) -> None:
         with self.assertRaises(OSError):
             bootstrap.initialize("99.99")
