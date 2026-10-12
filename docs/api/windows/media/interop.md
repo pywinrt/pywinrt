@@ -6,16 +6,16 @@ APIs for desktop interop with the
 ## `get_for_window`
 
 ```python
-get_for_window(hwnd)
+get_for_window(hwnd, /)
 ```
 
-Targets a single window for the creation of a graphics capture item.
+Gets the system media transport controls of a window.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `hwnd` | `int` | The top-level app window (`HWND`) for which the `ISystemMediaTransportControls` interface is retrieved. |
+| `hwnd` | `int` | The handle (`HWND`) of the top-level app window to get the controls of. |
 
-**Returns:** Receives the `ISystemMediaTransportControls` that corresponds to the appWindow window.
+**Returns:** The system media transport controls of the window.
 
 **Return type:** `winrt.windows.media.SystemMediaTransportControls`
 
