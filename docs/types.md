@@ -846,6 +846,13 @@ PyWinRT uses the CppWinRT projection under the hood. Any C++ exception that is
 not handled gets propagated to Python as an [`OSError`][OSError] exception with
 [`OSError.winerror`][OSError.winerror] set to an [HRESULT][hresult] error code.
 
+Python picks the class from the HRESULT, as it does for a failed Win32 call. One
+that carries a Win32 error code, of the form `0x8007xxxx`, may raise a subclass
+of `OSError`: a path that does not exist raises
+[`FileNotFoundError`][FileNotFoundError], and `E_ACCESSDENIED` raises
+[`PermissionError`][PermissionError]. Catching `OSError` catches them all, and
+`winerror` is the HRESULT either way.
+
 !!! seealso "See also"
 
     [`winrt.system.hresult`](api/system.hresult.md) for some common error codes.
@@ -868,6 +875,7 @@ reported to `sys.unraisablehook()` in the same way, and the call it was passed
 to fails with that error code. An index or key the collection does not have
 is the one failure WinRT has a name for, and gets `E_BOUNDS` instead.
 
+[FileNotFoundError]: https://docs.python.org/3/builtins/exceptions.html#FileNotFoundError
 [OSError]: https://docs.python.org/3/builtins/exceptions.html#OSError
 [OSError.winerror]: https://docs.python.org/3/builtins/exceptions.html#OSError.winerror
 [hresult]: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
