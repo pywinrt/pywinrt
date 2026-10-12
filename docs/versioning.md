@@ -114,11 +114,17 @@ winrt-runtime>=4.0
 ```
 
 A cap on a dependency you have not seen break is a guess, and in a library it
-becomes everyone else's problem to resolve. PyWinRT's own metadata contains
-exactly one upper bound — `winrt-runtime<5` — because that incompatibility
-is known rather than guessed, and everything else leans on it. A projection
-package of the next generation cannot be installed beside a runtime of this
-one, so the cap is doing the work a cap on the projection package would.
+becomes everyone else's problem to resolve. PyWinRT's own packages cap only
+what is known rather than guessed. Each requires `winrt-runtime<5`, and a
+projection package is built with `winrt-table-compiler<5`: a package of the
+next generation cannot be installed beside a runtime of this one, so that cap
+does the work a cap on the package itself would. And a package whose classes
+derive from those of another of its own family requires it with `~=`, as
+`winrt-Windows.UI.Xaml.Controls` requires
+`winrt-Windows.UI.Xaml~=4!10.0.28000.2705.0`, because the two were generated
+from one upstream release and are published together. A Windows App SDK
+component requires every other component whose types it hands back in the same
+way, since Microsoft releases the components as a set.
 
 **Applications** should pin exactly, with a lock file if the tooling has one.
 An application controls its whole environment, so reproducibility is worth
