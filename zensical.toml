@@ -27,6 +27,7 @@ nav = [
       "api/windows/media/interop.md",
       "api/windows/system/interop.md",
       "api/windows/ui/composition/interop.md",
+      "api/windows/ui/xaml/hosting/interop.md",
     ] },
     { "winrt.microsoft namespace" = [
       "api/microsoft.md",

@@ -30,3 +30,4 @@ to bridge between WinRT and other interfaces.
 - [`winrt.windows.media.interop` module](windows/media/interop.md)
 - [`winrt.windows.system.interop` module](windows/system/interop.md)
 - [`winrt.windows.ui.composition.interop` module](windows/ui/composition/interop.md)
+- [`winrt.windows.ui.xaml.hosting.interop` module](windows/ui/xaml/hosting/interop.md)

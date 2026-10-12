@@ -54,10 +54,10 @@ class DesktopWindowXamlSourceNative:
     def __hash__(self) -> int:
         return hash(_native.get_identity(self._native))
 
-    def attach_to_window(self, hwnd: int) -> None:
+    def attach_to_window(self, hwnd: int, /) -> None:
         _native.attach_to_window(self._native, hwnd)
 
-    def pretranslate_message(self, msg: Buffer) -> bool:
+    def pretranslate_message(self, msg: Buffer, /) -> bool:
         return _native.pretranslate_message(self._native, msg)
 
     @property
