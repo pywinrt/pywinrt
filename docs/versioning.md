@@ -182,10 +182,17 @@ the PyWinRT sources:
 ```toml
 [build-system]
 requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
+build-backend = "hatchling.build"
 
 [project]
 dependencies = ["winrt-runtime>=4.0.0,<5"]
+
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]
 ```
+
+The last table turns on the build hook of `winrt-table-compiler`, which
+compiles each table the package carries into the wheel. It takes no options,
+so the table is empty.
 
 Generating the projection in the first place needs `PyWinRT.exe` and the
 shape census it ships beside, which records the ABI call shapes the runtime
