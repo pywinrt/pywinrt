@@ -15,11 +15,11 @@ Creates a visual layer on a window to host Composition content.
 |---|---|---|
 | `compositor` | `winrt.windows.ui.composition.Compositor` | The Compositor object that is used to create the `DesktopWindowTarget`. |
 | `hwnd_target` | `int` | The window handle (HWND) that the visual layer will be attached to. |
-| `is_topmost` | `bool` | |
+| `is_topmost` | `bool` | Whether the visual layer is above the window's child windows rather than below them. |
 
 **Returns:** The created `DesktopWindowTarget`.
 
-**Return type:** `winrt.windows.ui.composition.DesktopWindowTarget`
+**Return type:** `winrt.windows.ui.composition.desktop.DesktopWindowTarget`
 
 **Raises:** [`OSError`](https://docs.python.org/3/builtins/exceptions.html#OSError) on failure
 
