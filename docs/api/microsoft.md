@@ -54,7 +54,7 @@ with bootstrap.initialize(options=bootstrap.InitializeOptions.ON_NO_MATCH_SHOW_U
 !!! warning
 
     If you are using a Python runtime installed rom the Microsoft Store,
-    this method will fail with `OSError(winerror=-2147009196)` (`ERROR_NOT_SUPPORTED = -2147009196`).
+    this method will fail with `OSError(winerror=-2147024846)` (`0x80070032`, `ERROR_NOT_SUPPORTED`).
     This happens because the Microsoft Store version of Python is a "packaged" app
     and expects the dependency to be included in the package manifest. This should
     be able to be worked around using other dynamic dependency APIs, but this has
