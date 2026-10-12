@@ -13,6 +13,7 @@ site_dir = "_site"
 extra_css = ["stylesheets/extra.css"]
 nav = [
   "index.md",
+  "installing.md",
   "types.md",
   { "API reference" = [
     "api/index.md",
