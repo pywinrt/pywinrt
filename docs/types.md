@@ -1064,12 +1064,37 @@ for one that Windows canceled, because a device went away, for example.
 
 #### Other usage
 
-If you can't use either the synchronous helpers or `asyncio` (i.e. a GUI app
-that doesn't use asyncio), then you can use the `completed`  property to set
-a callback that will be called when the operation is complete. In GUI apps where
-the async method is called from the main thread (that is initialized as a single-
-threaded apartment), the callback will occur on the main thread. Otherwise, the
-callback will be called on a different thread.
+Without `asyncio`, and on a thread that refuses `get()` and `wait()`, such as a
+GUI thread, set the operation's `completed` property to a
+[delegate](#delegates). WinRT calls it with the operation and its `AsyncStatus`
+once the operation has finished, and in it `get_results()` gives the result
+without blocking. It raises the error of an operation that failed, and
+`OSError` for one that was canceled:
+
+```python
+from winrt.windows.foundation import AsyncStatus
+from winrt.windows.storage import StorageFolder
+
+def on_completed(operation, status: AsyncStatus) -> None:
+    if status == AsyncStatus.CANCELED:
+        return
+
+    try:
+        folder = operation.get_results()
+    except OSError as e:
+        print("failed:", e)
+    else:
+        print("opened", folder.name)
+
+operation = StorageFolder.get_folder_from_path_async(r"C:\Windows")
+operation.completed = on_completed
+```
+
+WinRT calls the handler on whichever thread finished the operation, even when a
+GUI thread set it, so hand the result to the thread that uses it as
+[for an event handler](#which-thread-calls-the-handler). If the operation had
+already finished, the handler is called at once, on the thread that sets the
+property.
 
 You must also be careful about not creating a reference cycle to the operation,
 otherwise it will cause a memory leak. This can happen if the callback is a
