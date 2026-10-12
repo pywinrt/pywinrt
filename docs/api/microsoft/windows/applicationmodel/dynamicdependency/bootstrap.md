@@ -25,7 +25,8 @@ Initialize the Windows App SDK runtime.
 | `min_version` | `str` | The minimum version of the Windows App SDK *runtime* to load, e.g. “5001.70.1338.0”. |
 | `options` | [`InitializeOptions`](#initializeoptions) | Initialization option flags. |
 
-**Returns:** A context manager that will shutdown the Windows App SDK runtime when exited.
+**Returns:** A [`Shutdown`](#shutdown) that will shut down the Windows App SDK runtime when
+exited as a context manager or called.
 
 **Raises:** `OSError` – if the initialization fails.
 
@@ -56,6 +57,19 @@ RUNTIME_VERSION: str
 ```
 
 The runtime version of the Windows App SDK used at compile time.
+
+!!! version-added "Added in version 2.1"
+
+## `Shutdown`
+
+```python
+class Shutdown
+```
+
+What [`initialize()`](#initialize) returns. Leaving a `with` block that it was entered
+by, or calling it, shuts down the Windows App SDK runtime, and doing either again
+does nothing. One that is garbage collected before either shuts the runtime down
+with a `RuntimeWarning`.
 
 !!! version-added "Added in version 2.1"
 

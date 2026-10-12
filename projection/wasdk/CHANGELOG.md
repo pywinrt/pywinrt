@@ -61,3 +61,4 @@ releases before v4.0 are.
 ### Fixed
 - Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
+- Fixed `bootstrap.RELEASE_VERSION`, `RUNTIME_VERSION` and `Shutdown` missing.
