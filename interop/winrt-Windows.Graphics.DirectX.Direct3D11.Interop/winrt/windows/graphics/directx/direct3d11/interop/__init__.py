@@ -15,7 +15,7 @@ __all__ = [
 _IID_IINSPECTABLE = UUID("AF86E2E0-B12D-4C6A-9C5A-D7AA65101E90")
 
 
-def create_direct3d11_device_from_dxgi_device(dxgi_device: int) -> IDirect3DDevice:
+def create_direct3d11_device_from_dxgi_device(dxgi_device: int, /) -> IDirect3DDevice:
     """
     Creates an instance of IDirect3DDevice from an IDXGIDevice.
 
@@ -32,7 +32,9 @@ def create_direct3d11_device_from_dxgi_device(dxgi_device: int) -> IDirect3DDevi
     )
 
 
-def create_direct3d11_surface_from_dxgi_surface(dxgi_surface: int) -> IDirect3DSurface:
+def create_direct3d11_surface_from_dxgi_surface(
+    dxgi_surface: int, /
+) -> IDirect3DSurface:
     """
     Creates an instance of IDirect3DSurface from an IDXGISurface.
 
@@ -49,31 +51,31 @@ def create_direct3d11_surface_from_dxgi_surface(dxgi_surface: int) -> IDirect3DS
     )
 
 
-def get_dxgi_device_from_object(object: Object) -> int:
+def get_dxgi_device_from_object(device: Object, /) -> int:
     """
     Retrieves the IDXGIDevice from a Direct3D object.
 
     Args:
-        object: The WinRT object to retrieve the IDXGIDevice from.
+        device: The WinRT object to retrieve the IDXGIDevice from.
 
     Returns:
         Pointer to IDXGIDevice interface of the WinRT object.
     """
     return _native.get_dxgi_device_from_object(
-        _runtime.as_interface(object, _IID_IINSPECTABLE)
+        _runtime.as_interface(device, _IID_IINSPECTABLE)
     )
 
 
-def get_dxgi_surface_from_object(object: Object) -> int:
+def get_dxgi_surface_from_object(surface: Object, /) -> int:
     """
     Retrieves the IDXGISurface from a Direct3D object.
 
     Args:
-        object: The WinRT object to retrieve the IDXGISurface from.
+        surface: The WinRT object to retrieve the IDXGISurface from.
 
     Returns:
         Pointer to IDXGISurface interface of the WinRT object.
     """
     return _native.get_dxgi_surface_from_object(
-        _runtime.as_interface(object, _IID_IINSPECTABLE)
+        _runtime.as_interface(surface, _IID_IINSPECTABLE)
     )
