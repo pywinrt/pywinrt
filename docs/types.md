@@ -860,6 +860,13 @@ of [`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unr
 This can cause undefined behavior in the C++ code in some cases, so it should
 be avoided.
 
+A Python `list`, `dict` or other collection passed where WinRT takes a
+collection is read through such callbacks too, so an item that fails to
+convert, such as an `int` in a `list` passed for an `IVector<String>`, is
+reported to `sys.unraisablehook()` in the same way, and the call it was passed
+to fails with that error code. An index or key the collection does not have
+is the one failure WinRT has a name for, and gets `E_BOUNDS` instead.
+
 [OSError]: https://docs.python.org/3/builtins/exceptions.html#OSError
 [OSError.winerror]: https://docs.python.org/3/builtins/exceptions.html#OSError.winerror
 [hresult]: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a
