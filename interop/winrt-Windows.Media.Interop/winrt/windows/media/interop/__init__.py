@@ -10,13 +10,13 @@ __all__ = ["get_for_window"]
 _IID_ISYSTEMMEDIATRANSPORTCONTROLSINTEROP = UUID("ddb0472d-c911-4a1f-86d9-dc3d71a95f5a")
 
 
-def get_for_window(window: int) -> SystemMediaTransportControls:
+def get_for_window(hwnd: int, /) -> SystemMediaTransportControls:
     """
     Gets an instance of the SystemMediaTransportControls interface for the
     specified window.
 
     Args:
-        window (HWND): The top-level app window for which the
+        hwnd (HWND): The top-level app window for which the
             ISystemMediaTransportControls interface is retrieved.
 
     Returns:
@@ -28,6 +28,6 @@ def get_for_window(window: int) -> SystemMediaTransportControls:
     )
 
     return _runtime.wrap_interface(
-        _native.get_for_window(factory, window),
+        _native.get_for_window(factory, hwnd),
         SystemMediaTransportControls,
     )
