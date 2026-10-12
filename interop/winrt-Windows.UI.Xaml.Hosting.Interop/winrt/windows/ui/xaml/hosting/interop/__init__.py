@@ -1,7 +1,7 @@
 from typing import Any, NoReturn, Self, final
 from uuid import UUID
 
-from typing_extensions import Buffer
+from typing_extensions import Buffer, deprecated
 
 import winrt.runtime.interop as _runtime
 import winrt._winrt_windows_ui_xaml_hosting_interop as _native
@@ -39,6 +39,13 @@ class DesktopWindowXamlSourceNative:
         self = super().__new__(cls)
         self._native = _runtime.as_interface(obj, _IID_IDESKTOPWINDOWXAMLSOURCENATIVE)
         return self
+
+    # what _query_interface_() was called before 4.0, kept with the warning a
+    # projected type's _from() gives
+    @classmethod
+    @deprecated("_from() is deprecated: use obj.as_(type) instead")
+    def _from(cls, obj: Object) -> Self:
+        return cls._query_interface_(obj)
 
     def __eq__(self, other: object) -> bool:
         # Equal to anything that is the same COM object, as a WinRT object is.
