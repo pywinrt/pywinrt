@@ -174,8 +174,8 @@ objects can be used in place of projected
 structs when calling methods that expect a projected struct or when setting
 properties that expect a projected struct.
 
-Each projected struct with more than one field also has a `unpack()` method
-the converts the projected struct to a tuple.
+Each projected struct also has an `unpack()` method that converts it to a
+tuple.
 
 Example:
 
