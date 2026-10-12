@@ -37,6 +37,7 @@ releases before v4.0 are.
 
 ### Deprecated
 - `create_reference()` is marked `@deprecated` in the type hints.
+- `DesktopWindowXamlSourceNative._from()` is deprecated in favor of `as_()`.
 
 ### Fixed
 - Fixed `[all]` leaving out the packages of the interfaces a class implements.
