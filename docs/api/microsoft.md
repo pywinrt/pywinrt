@@ -64,7 +64,8 @@ with bootstrap.initialize(options=bootstrap.InitializeOptions.ON_NO_MATCH_SHOW_U
 ## WebView2
 
 An application that is not packaged gets `Microsoft.Web.WebView2.Core.dll`
-from the `winrt-Microsoft.Web.WebView2.Dll` package. On Windows App SDK 2.x, a
+from the `winrt-Microsoft.Web.WebView2.Dll` package, whose module is
+[`winrt.microsoft.web.webview2.dll`](microsoft/web/webview2/dll.md). On Windows App SDK 2.x, a
 WebView2 control that uses its default environment needs that `.dll` loaded
 before it is created:
 
