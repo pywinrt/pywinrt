@@ -1039,6 +1039,13 @@ that, its error goes to the event loop's
 [exception handler](https://docs.python.org/3/library/asyncio-eventloop.html#asyncio.loop.set_exception_handler),
 as an error that nothing retrieved from a future does.
 
+[`asyncio.run()`](https://docs.python.org/3/library/asyncio-runner.html#asyncio.run)
+cancels the tasks its coroutine leaves running and waits for them, so it does
+not return until every operation they await has finished. An operation that
+keeps running after the request holds it up for as long as it runs. Cancel such
+a task a second time before the coroutine returns to leave the operation
+behind.
+
 A task that is canceled before it has started never awaits its operation, so
 the operation is not asked to stop.
 
