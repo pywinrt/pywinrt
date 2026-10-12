@@ -932,7 +932,7 @@ whichever comes first.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `timeout` | `float` | The timeout in seconds. A timeout that is not a positive number of seconds returns the status as it stands, without waiting. |
+| `timeout` | `float` | The timeout in seconds. A timeout that is not a positive number of seconds returns the status as it stands, without waiting, but on an operation that is still running it takes the one completed handler the operation allows, so awaiting it or calling `get()` or `wait()` again fails until it has finished (see [Asynchronous usage](#asynchronous-usage)). To look without waiting, read the operation's `status` instead. |
 
 **Returns:** The status of the operation. In case of a timeout, the status will be
 `AsyncStatus.STARTED`.
