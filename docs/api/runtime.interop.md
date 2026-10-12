@@ -33,6 +33,21 @@ def create_for_window(hwnd: int, /) -> GraphicsCaptureItem:
     )
 ```
 
+### A type that `as_()` takes
+
+`obj.as_(cls)` returns `cls._query_interface_(obj)`, which every projected
+class and interface defines. A Python class that defines it too is taken by
+`as_()` as a projected type is, which is how an interop module offers a COM
+interface that is not WinRT and so has no projection. The class method asks the
+object for the interface with [`as_interface()`](#as_interface), raising
+`OSError` as it does for an object without it, and returns an instance of the
+class holding the capsule. A type checker then types the result of `as_()` as
+that class.
+
+For a component of your own, declare its interfaces in IDL instead.
+[Its projection](../versioning.md#projections-of-your-own-components) then
+defines `_query_interface_()` for them, as for any projected interface.
+
 ## `InterfaceCapsule`
 
 ```python
