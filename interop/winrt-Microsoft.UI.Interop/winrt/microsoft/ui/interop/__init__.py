@@ -11,7 +11,7 @@ __all__ = [
 ]
 
 
-def get_window_id_from_window(hwnd: int) -> WindowId:
+def get_window_id_from_window(hwnd: int, /) -> WindowId:
     """
     Gets the WindowId that corresponds to the specified hwnd, if the provided
     HWND is valid.
@@ -19,16 +19,16 @@ def get_window_id_from_window(hwnd: int) -> WindowId:
     return WindowId(_native.get_window_id_from_window(hwnd))
 
 
-def get_window_from_window_id(window_id: WindowId) -> int:
+def get_window_from_window_id(window_id: WindowId, /) -> int:
     """
-    Gets the window handle that corresponds to the specified windowId, if the
-    provided windowId is valid and the system has an HWND that represents the
+    Gets the window handle that corresponds to the specified window_id, if the
+    provided window_id is valid and the system has an HWND that represents the
     window.
     """
     return _native.get_window_from_window_id(window_id.value)
 
 
-def get_display_id_from_monitor(hmonitor: int) -> DisplayId:
+def get_display_id_from_monitor(hmonitor: int, /) -> DisplayId:
     """
     Gets the DisplayId that corresponds to the specified hmonitor, if the
     provided HMONITOR is valid.
@@ -36,16 +36,16 @@ def get_display_id_from_monitor(hmonitor: int) -> DisplayId:
     return DisplayId(_native.get_display_id_from_monitor(hmonitor))
 
 
-def get_monitor_from_display_id(display_id: DisplayId) -> int:
+def get_monitor_from_display_id(display_id: DisplayId, /) -> int:
     """
-    Gets the display monitor handle that corresponds to the specified displayId,
-    if the provided displayId is valid and the system has an HMONITOR that
-    represents the display monitor.
+    Gets the display monitor handle that corresponds to the specified
+    display_id, if the provided display_id is valid and the system has an
+    HMONITOR that represents the display monitor.
     """
     return _native.get_monitor_from_display_id(display_id.value)
 
 
-def get_icon_id_from_icon(hicon: int) -> IconId:
+def get_icon_id_from_icon(hicon: int, /) -> IconId:
     """
     Gets the IconId that corresponds to the specified hicon, if the provided
     HICON is valid.
@@ -53,10 +53,10 @@ def get_icon_id_from_icon(hicon: int) -> IconId:
     return IconId(_native.get_icon_id_from_icon(hicon))
 
 
-def get_icon_from_icon_id(icon_id: IconId) -> int:
+def get_icon_from_icon_id(icon_id: IconId, /) -> int:
     """
-    Gets the icon handle that corresponds to the specified iconId, if the
-    provided iconId is valid and the system has an HICON that represents the
+    Gets the icon handle that corresponds to the specified icon_id, if the
+    provided icon_id is valid and the system has an HICON that represents the
     icon.
     """
     return _native.get_icon_from_icon_id(icon_id.value)
