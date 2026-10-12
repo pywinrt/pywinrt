@@ -23,13 +23,13 @@ from winrt.windows.graphics.capture import GraphicsCaptureItem
 _IID_IGRAPHICSCAPTUREITEMINTEROP = UUID("3628e81b-3cac-4c60-b7f4-23ce0e0c3356")
 
 
-def create_for_window(window: int) -> GraphicsCaptureItem:
+def create_for_window(hwnd: int, /) -> GraphicsCaptureItem:
     factory = _runtime.get_activation_factory(
         GraphicsCaptureItem, _IID_IGRAPHICSCAPTUREITEMINTEROP
     )
 
     return _runtime.wrap_interface(
-        _native.create_for_window(factory, window), GraphicsCaptureItem
+        _native.create_for_window(factory, hwnd), GraphicsCaptureItem
     )
 ```
 

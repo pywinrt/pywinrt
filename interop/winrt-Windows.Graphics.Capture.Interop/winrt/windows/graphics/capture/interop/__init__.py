@@ -10,12 +10,12 @@ __all__ = ["create_for_monitor", "create_for_window"]
 _IID_IGRAPHICSCAPTUREITEMINTEROP = UUID("3628e81b-3cac-4c60-b7f4-23ce0e0c3356")
 
 
-def create_for_monitor(monitor: int) -> GraphicsCaptureItem:
+def create_for_monitor(hmonitor: int, /) -> GraphicsCaptureItem:
     """
     Targets a monitor(s) for the creation of a graphics capture item.
 
     Args:
-        monitor (HMONITOR): The monitor handle that represents the monitor to
+        hmonitor (HMONITOR): The monitor handle that represents the monitor to
             capture.
 
     Returns:
@@ -29,17 +29,17 @@ def create_for_monitor(monitor: int) -> GraphicsCaptureItem:
     )
 
     return _runtime.wrap_interface(
-        _native.create_for_monitor(factory, monitor),
+        _native.create_for_monitor(factory, hmonitor),
         GraphicsCaptureItem,
     )
 
 
-def create_for_window(window: int) -> GraphicsCaptureItem:
+def create_for_window(hwnd: int, /) -> GraphicsCaptureItem:
     """
     Targets a single window for the creation of a graphics capture item.
 
     Args:
-        window (HWND): The window handle that represents the window to capture.
+        hwnd (HWND): The window handle that represents the window to capture.
 
     Returns:
         A graphics capture item.
@@ -52,6 +52,6 @@ def create_for_window(window: int) -> GraphicsCaptureItem:
     )
 
     return _runtime.wrap_interface(
-        _native.create_for_window(factory, window),
+        _native.create_for_window(factory, hwnd),
         GraphicsCaptureItem,
     )

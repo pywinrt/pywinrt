@@ -6,14 +6,14 @@ APIs for desktop interop with the
 ## `create_for_monitor`
 
 ```python
-create_for_monitor(monitor)
+create_for_monitor(hmonitor, /)
 ```
 
 Targets a monitor(s) for the creation of a graphics capture item.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `monitor` | `int` | The monitor handle (`HMONITOR`) that represents the monitor to capture. |
+| `hmonitor` | `int` | The monitor handle (`HMONITOR`) that represents the monitor to capture. |
 
 **Returns:** A graphics capture item.
 
@@ -26,14 +26,14 @@ Targets a monitor(s) for the creation of a graphics capture item.
 ## `create_for_window`
 
 ```python
-create_for_window(window)
+create_for_window(hwnd, /)
 ```
 
 Targets a single window for the creation of a graphics capture item.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `window` | `int` | The window handle (`HWND`) that represents the window to capture. |
+| `hwnd` | `int` | The window handle (`HWND`) that represents the window to capture. |
 
 **Returns:** A graphics capture item.
 
