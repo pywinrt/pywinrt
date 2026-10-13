@@ -35,13 +35,6 @@ There are also some PyWinRT-specific sub-packages distributed in the
 [winrt-runtime](https://pypi.org/project/winrt-runtime/) package. As well as
 some extra interop packages that bridge between WinRT and Win32 types.
 
-A namespace package holds no compiled code. It is a table describing the
-namespace - its types, their members and the ABI call each member makes - with
-the type hints beside it, so one `py3-none-any` wheel serves every supported
-version of Python and every architecture. `winrt-runtime` reads the table and
-makes the calls, so it and the interop packages are the only ones that are
-compiled for a particular interpreter.
-
 !!! seealso "See also"
 
     [API reference](api/index.md)
@@ -568,13 +561,9 @@ dropped rather than delivered.
 
 #### Exceptions in handlers
 
-A handler has no Python caller to raise to, so an exception that escapes one
-goes to [`sys.unraisablehook()`][unraisablehook] and the WinRT code that raised
-the event gets the error code
-[`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unraisable_python_exception).
-Handle exceptions inside the handler. See [Exceptions](#exceptions).
-
-[unraisablehook]: https://docs.python.org/3/library/sys.html#sys.unraisablehook
+An exception that escapes a handler goes to `sys.unraisablehook()`, as for any
+callback WinRT calls, so handle exceptions inside the handler. See
+[Exceptions](#exceptions).
 
 !!! version-changed "Changed in version 4.0"
 
@@ -683,8 +672,8 @@ its class implements is the object itself.
 
 WinRT calls the methods on whatever thread it calls them from, as it does
 [event handlers](#which-thread-calls-the-handler). An exception that escapes
-one goes to [`sys.unraisablehook()`][unraisablehook] and WinRT gets the error
-code `PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`; see [Exceptions](#exceptions).
+one goes to `sys.unraisablehook()`, as for any callback WinRT calls. See
+[Exceptions](#exceptions).
 
 !!! version-changed "Changed in version 4.0"
 
@@ -746,12 +735,10 @@ objects, which WinRT has three uses for:
 
 ### Exceptions in delegates
 
-A delegate has no Python caller to raise to, so an exception that escapes the
-callable goes to [`sys.unraisablehook()`][unraisablehook] and the WinRT code
-that called it gets the error code
-[`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unraisable_python_exception).
-A delegate that returns a value then returns nothing to its caller but the
-error. Handle exceptions inside the callable. See [Exceptions](#exceptions).
+An exception that escapes the callable goes to `sys.unraisablehook()`, as for
+any callback WinRT calls, and a delegate that returns a value then returns its
+caller only the error. Handle exceptions inside the callable. See
+[Exceptions](#exceptions).
 
 [Callable]: https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable
 [BufferError]: https://docs.python.org/3/builtins/exceptions.html#BufferError
@@ -842,9 +829,9 @@ Arrays that WinRT passes to a delegate are described under
 
 ## Exceptions
 
-PyWinRT uses the CppWinRT projection under the hood. Any C++ exception that is
-not handled gets propagated to Python as an [`OSError`][OSError] exception with
-[`OSError.winerror`][OSError.winerror] set to an [HRESULT][hresult] error code.
+A WinRT call that fails raises [`OSError`][OSError] with
+[`OSError.winerror`][OSError.winerror] set to the [HRESULT][hresult] error code
+it failed with.
 
 Python picks the class from the HRESULT, as it does for a failed Win32 call. One
 that carries a Win32 error code, of the form `0x8007xxxx`, may raise a subclass
@@ -904,8 +891,8 @@ wait for the result. There are four fundamental types that derive from this:
 
 #### Synchronous usage
 
-PyWinRT exposes the CppWinRT extension methods for calling these methods
-synchronously (i.e. when not using `asyncio`).
+Without `asyncio`, a thread can block until an operation has finished with
+`get()` or `wait()`.
 
 ##### `get`
 

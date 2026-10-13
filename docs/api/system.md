@@ -13,13 +13,6 @@ Alias of [`collections.abc.Buffer`][Buffer]. This is the projected type for
 
 !!! version-added "Added in version 3.2"
 
-!!! caution
-
-    The WinRT type system does not distinguish between
-    read-only and writeable buffers. Do not use immutable types like
-    [`bytes`](https://docs.python.org/3/builtins/stdtypes.html#bytes) when the
-    WinRT API expects a writeable buffer!
-
 !!! seealso "See also"
 
     [Buffers](../types.md#buffers)
@@ -132,25 +125,16 @@ which answer what WinRT is told about them.
     A Python implementation of a WinRT interface is an instance of `Object`,
     with its members.
 
-**Type casting**
-
-Sometimes WinRT wrapper objects may be returned as a base type or interface
-type that needs to be cast to a different type. In these cases, use the
-`as_` method to cast the object to the desired type.
-
 #### `as_`
 
 ```python
-as_(type)
+as_(type, /)
 ```
 
-Casts the object to the specified type.
-
-| Parameter | Type | Description |
-|---|---|---|
-| `type` | [`type`](https://docs.python.org/3/builtins/functions.html#type) | The type to cast the object to. |
-
-**Returns:** The object cast to the specified type.
+The object as another interface it implements, or as its runtime class. Raises
+`OSError` if the object does not implement it, and `TypeError` if `type` is
+not a runtime class or an interface. See
+[Query interface](../types.md#query-interface).
 
 !!! version-added "Added in version 3.0"
 

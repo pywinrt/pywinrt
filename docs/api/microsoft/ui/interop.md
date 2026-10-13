@@ -4,15 +4,6 @@ Exposes interop functions from the `Microsoft.UI.Interop` namespace.
 
 See: <https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/winrt-microsoft.ui.interop/>
 
-!!! version-changed "Changed in version 3.0"
-
-    The top-level package name has been changed from `winrt` to `winui3`.
-
-!!! version-changed "Changed in version 4.0"
-
-    The top-level package name has been changed back from `winui3` to
-    `winrt`.
-
 ## `get_window_id_from_window`
 
 ```python

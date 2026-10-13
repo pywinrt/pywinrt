@@ -2,15 +2,6 @@
 
 APIs for bootstrapping the Windows App runtime.
 
-!!! version-changed "Changed in version 3.0"
-
-    The top-level package name has been changed from `winrt` to `winui3`.
-
-!!! version-changed "Changed in version 4.0"
-
-    The top-level package name has been changed back from `winui3` to
-    `winrt`.
-
 ## `initialize`
 
 ```python
