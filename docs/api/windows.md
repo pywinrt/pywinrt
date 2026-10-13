@@ -6,19 +6,14 @@ on PyPI. For example, the `winrt-Windows.Foundation` package contains the
 bindings for the `Windows.Foundation` namespace and can be imported in Python
 as `import winrt.windows.foundation`.
 
-Since most of the code is generated, there currently aren't Python API docs.
-You can use <https://learn.microsoft.com/en-us/uwp/api/> instead, keeping in mind
-the Python naming conventions and other rules mentioned in
-[The WinRT type system](../types.md) section.
+These modules are generated, so their reference is Microsoft's documentation,
+<https://learn.microsoft.com/en-us/uwp/api/>, read with the Python naming
+conventions and other rules in [The WinRT type system](../types.md).
 
 !!! tip
 
     The packages include type hints so you can use those if
     you are unsure of a return type or a parameter type.
-
-!!! todo "Todo"
-
-    We could consider using <https://github.com/MicrosoftDocs/winrt-api> to autogenerate Python docs.
 
 ## Interop modules
 

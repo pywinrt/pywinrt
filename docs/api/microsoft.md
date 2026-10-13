@@ -8,10 +8,10 @@ namespace the App SDK's WinUI component defines, including
 `Microsoft.UI.Xaml`, which is imported in Python as
 `winrt.microsoft.ui.xaml`.
 
-Since most of the code is generated, there currently aren't Python API docs.
-You can use <https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/winrt/>
-instead, keeping in mind the Python naming conventions and other rules mentioned
-in [The WinRT type system](../types.md) section.
+These modules are generated, so their reference is Microsoft's documentation,
+<https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/winrt/>, read
+with the Python naming conventions and other rules in
+[The WinRT type system](../types.md).
 
 !!! tip
 
@@ -20,13 +20,14 @@ in [The WinRT type system](../types.md) section.
 
 !!! version-changed "Changed in version 3.0"
 
-    The top-level package name has been changed from `winrt` to `winui3`.
+    The top-level package name has been changed from `winrt` to `winui3`,
+    and to `webview2` for WebView2.
 
 !!! version-changed "Changed in version 4.0"
 
-    The top-level package name has been changed back from `winui3` to
-    `winrt`, and the Windows App SDK packages are published one per NuGet
-    component instead of one per WinRT namespace.
+    The top-level package name has been changed back from `winui3` and
+    `webview2` to `winrt`, and the Windows App SDK packages are published one
+    per NuGet component instead of one per WinRT namespace.
 
 ## Windows App SDK
 
