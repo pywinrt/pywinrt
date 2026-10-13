@@ -1,7 +1,7 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#   "winrt-runtime",
+#   "winrt-runtime>=4",
 #   "winrt-Windows.Foundation",
 #   "winrt-Windows.Media.Core",
 #   "winrt-Windows.Media.SpeechSynthesis",

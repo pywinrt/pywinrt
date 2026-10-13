@@ -6,7 +6,7 @@
 #   "winrt-Windows.ApplicationModel",
 #   "winrt-Windows.ApplicationModel.Activation",
 #   "winrt-Windows.UI.Xaml.Hosting",
-#   "winrt-Windows.UI.Xaml.Hosting.Interop",
+#   "winrt-Windows.UI.Xaml.Hosting.Interop>=4",
 #   "winrt-Windows.UI.Xaml.Interop",
 #   "winrt-Windows.UI.Xaml.Markup",
 #   "winui2-Microsoft.UI.Xaml",
