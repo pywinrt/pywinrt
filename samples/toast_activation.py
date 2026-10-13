@@ -3,7 +3,7 @@
 # dependencies = [
 #   "comtypes",
 #   "rich",
-#   "winrt-runtime>=3.2",
+#   "winrt-runtime>=4",
 #   "winrt-Windows.Data.Xml.Dom",
 #   "winrt-Windows.Foundation",
 #   "winrt-Windows.Foundation.Collections",

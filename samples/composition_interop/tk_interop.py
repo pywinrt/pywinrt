@@ -1,12 +1,13 @@
 # /// script
 # dependencies = [
-#   "winrt-Windows.Foundation.Numerics>=3.1",
-#   "winrt-Windows.System>=3.1",
-#   "winrt-Windows.System.Interop>=3.1",
-#   "winrt-Windows.UI>=3.1",
-#   "winrt-Windows.UI.Composition>=3.1",
-#   "winrt-Windows.UI.Composition.Desktop>=3.1",
-#   "winrt-Windows.UI.Composition.Interop>=3.1",
+#   "winrt-runtime>=4",
+#   "winrt-Windows.Foundation.Numerics",
+#   "winrt-Windows.System",
+#   "winrt-Windows.System.Interop>=4",
+#   "winrt-Windows.UI",
+#   "winrt-Windows.UI.Composition",
+#   "winrt-Windows.UI.Composition.Desktop",
+#   "winrt-Windows.UI.Composition.Interop>=4",
 # ]
 # ///
 
