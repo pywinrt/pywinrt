@@ -22,8 +22,9 @@ uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/mai
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#   "winrt-runtime",
+#   "winrt-runtime>=4",
 #   "winrt-Windows.Foundation",
+#   "winrt-Windows.Media.Core",
 #   "winrt-Windows.Media.SpeechSynthesis",
 #   "winrt-Windows.Media.Playback",
 #   "winrt-Windows.Storage",
@@ -34,6 +35,7 @@ uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/mai
 import asyncio
 
 from winrt.system import Object
+from winrt.windows.media.core import MediaSource
 from winrt.windows.media.speechsynthesis import SpeechSynthesizer
 from winrt.windows.media.playback import MediaPlayer, MediaPlayerAudioCategory
 
@@ -51,7 +53,7 @@ async def main():
     player = MediaPlayer()
     player.audio_category = MediaPlayerAudioCategory.SPEECH
 
-    player.set_stream_source(stream)
+    player.source = MediaSource.create_from_stream(stream, stream.content_type)
     player.add_media_ended(on_media_ended)
     player.play()
 
