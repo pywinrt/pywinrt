@@ -31,6 +31,7 @@ from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import
     InitializeOptions,
     initialize,
 )
+from winrt.runtime import ApartmentType, init_apartment
 from winrt.system import Array
 from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
@@ -92,6 +93,9 @@ def init(_: ApplicationInitializationCallbackParams) -> None:
     # to keep a reference to it.
     App()
 
+
+# The thread that runs the user interface has to be a single-threaded apartment.
+init_apartment(ApartmentType.SINGLE_THREADED)
 
 # This is the main entry point for the application. To use the Windows App SDK
 # outside of a packaged app, you have to bootstrap it using the initialize

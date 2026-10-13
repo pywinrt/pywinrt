@@ -20,7 +20,8 @@ from winrt.runtime import ApartmentType, init_apartment
 init_apartment(ApartmentType.SINGLE_THREADED)
 ```
 
-The WinUI 2 and WebView2 samples do this before they create their window.
+The WinUI 2, WinUI 3 and WebView2 samples do this before they create their
+window.
 
 ## What a single-threaded apartment changes
 
