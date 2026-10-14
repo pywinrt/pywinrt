@@ -23,9 +23,12 @@ Alias of [`collections.abc.Buffer`][Buffer]. This is the projected type for
 type ReadableBuffer
 ```
 
-Alias of [`collections.abc.Buffer`][Buffer] that indicates the buffer will only
-be read from. This is used for WinRT `PassArray` parameters. The buffer
-format must also match the WinRT array type.
+Alias of [`collections.abc.Buffer`][Buffer] that says WinRT only reads the
+buffer, as the same name says in the standard library's type hints. The type
+hint of an [array parameter](../types.md#arrays-as-parameters) that WinRT reads
+names it beside `Array`. A type checker sees only `Buffer`, so the layout is
+checked when the method is called: a buffer whose layout is not that of the
+array's element type raises `BufferError`.
 
 !!! version-added "Added in version 2.3"
 
@@ -35,9 +38,12 @@ format must also match the WinRT array type.
 type WriteableBuffer
 ```
 
-Alias of [`collections.abc.Buffer`][Buffer] that indicates the buffer will be
-written to. This is used for WinRT `FillArray` parameters. The buffer
-format must also match the WinRT array type.
+Alias of [`collections.abc.Buffer`][Buffer] that says WinRT writes into the
+buffer, as the same name says in the standard library's type hints. The type
+hint of an [array parameter](../types.md#arrays-as-parameters) that WinRT fills
+names it beside `Array`. A type checker sees only `Buffer`, so the buffer is
+checked when the method is called: one that is read-only, such as `bytes`, or
+whose layout is not that of the array's element type raises `BufferError`.
 
 !!! version-added "Added in version 2.3"
 
