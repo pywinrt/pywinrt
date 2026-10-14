@@ -294,12 +294,23 @@ unbox_time_span(value: Object, /) -> datetime.timedelta
 
 Unboxes the given [`winrt.system.Object`](#object) into the original value.
 
-Essentially, this is shorthand for calling:
+The value has to be boxed as that type: `unbox_int32()` takes what
+`box_int32()` makes, and not an `Int16` or an `Int64`. The `get_*()` methods of
+`IPropertyValue` convert between numeric types where they can:
 
 ```python
 from winrt.windows.foundation import IPropertyValue
 
-value = obj.as_(IPropertyValue).get_xyz()
+value = obj.as_(IPropertyValue).get_int32()
 ```
 
+**Raises:** [`TypeError`][TypeError] if the value is not boxed as that type.
+
 !!! version-added "Added in version 3.0"
+
+!!! version-changed "Changed in version 4.0"
+
+    A value boxed as another type raises `TypeError`. Previously it raised
+    `OSError`.
+
+[TypeError]: https://docs.python.org/3/builtins/exceptions.html#TypeError
