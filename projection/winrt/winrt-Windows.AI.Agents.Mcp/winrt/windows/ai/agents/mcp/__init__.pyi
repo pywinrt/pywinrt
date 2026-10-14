@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [

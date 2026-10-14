@@ -8,7 +8,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
 import winrt.windows.devices.enumeration as windows_devices_enumeration
@@ -514,7 +513,7 @@ class OutgoingVoipPhoneCallOptions(winrt.system.Object):
     def associated_device_ids(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class PhoneCall_Static(winrt._winrt.Object_Static):
+class PhoneCall_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Calls.PhoneCall Windows.ApplicationModel.Calls.PhoneCall::GetFromId(System.String)
     def get_from_id(cls, call_id: str, /) -> PhoneCall: ...
 
@@ -588,7 +587,7 @@ class PhoneCall(winrt.system.Object, metaclass=PhoneCall_Static):
     def status(self) -> PhoneCallStatus: ...
 
 @typing.final
-class PhoneCallBlocking_Static(winrt._winrt.Object_Static):
+class PhoneCallBlocking_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Calls.PhoneCallBlocking::SetCallBlockingListAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def set_call_blocking_list_async(cls, phone_number_list: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Boolean Windows.ApplicationModel.Calls.PhoneCallBlocking::get_BlockUnknownNumbers()
@@ -767,7 +766,7 @@ class PhoneCallHistoryEntryReader(winrt.system.Object):
     def read_batch_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[PhoneCallHistoryEntry]]: ...
 
 @typing.final
-class PhoneCallHistoryManager_Static(winrt._winrt.Object_Static):
+class PhoneCallHistoryManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser Windows.ApplicationModel.Calls.PhoneCallHistoryManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> PhoneCallHistoryManagerForUser: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneCallHistoryStore> Windows.ApplicationModel.Calls.PhoneCallHistoryManager::RequestStoreAsync(Windows.ApplicationModel.Calls.PhoneCallHistoryStoreAccessType)
@@ -847,7 +846,7 @@ class PhoneCallInfo(winrt.system.Object):
     def start_time(self) -> datetime.datetime: ...
 
 @typing.final
-class PhoneCallManager_Static(winrt._winrt.Object_Static):
+class PhoneCallManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneCallStore> Windows.ApplicationModel.Calls.PhoneCallManager::RequestStoreAsync()
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[PhoneCallStore]: ...
     # System.Void Windows.ApplicationModel.Calls.PhoneCallManager::ShowPhoneCallSettingsUI()
@@ -890,7 +889,7 @@ class PhoneCallVideoCapabilities(winrt.system.Object):
     def is_video_calling_capable(self) -> bool: ...
 
 @typing.final
-class PhoneCallVideoCapabilitiesManager_Static(winrt._winrt.Object_Static):
+class PhoneCallVideoCapabilitiesManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneCallVideoCapabilities> Windows.ApplicationModel.Calls.PhoneCallVideoCapabilitiesManager::GetCapabilitiesAsync(System.String)
     def get_capabilities_async(cls, phone_number: str, /) -> windows_foundation.IAsyncOperation[PhoneCallVideoCapabilities]: ...
 
@@ -951,7 +950,7 @@ class PhoneDialOptions(winrt.system.Object):
     def audio_endpoint(self, value: PhoneAudioRoutingEndpoint) -> None: ...
 
 @typing.final
-class PhoneLine_Static(winrt._winrt.Object_Static):
+class PhoneLine_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Calls.PhoneLine> Windows.ApplicationModel.Calls.PhoneLine::FromIdAsync(System.Guid)
     def from_id_async(cls, line_id: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[PhoneLine]: ...
 
@@ -1062,7 +1061,7 @@ class PhoneLineDialResult(winrt.system.Object):
     def dialed_call(self) -> PhoneCall: ...
 
 @typing.final
-class PhoneLineTransportDevice_Static(winrt._winrt.Object_Static):
+class PhoneLineTransportDevice_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Calls.PhoneLineTransportDevice Windows.ApplicationModel.Calls.PhoneLineTransportDevice::FromId(System.String)
     def from_id(cls, id: str, /) -> PhoneLineTransportDevice: ...
     @typing.overload
@@ -1174,7 +1173,7 @@ class PhoneVoicemail(winrt.system.Object):
     def type(self) -> PhoneVoicemailType: ...
 
 @typing.final
-class VoipCallCoordinator_Static(winrt._winrt.Object_Static):
+class VoipCallCoordinator_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Calls.VoipCallCoordinator Windows.ApplicationModel.Calls.VoipCallCoordinator::GetDefault()
     def get_default(cls) -> VoipCallCoordinator: ...
     # System.String Windows.ApplicationModel.Calls.VoipCallCoordinator::GetDeviceSelectorForCallControl()

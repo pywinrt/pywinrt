@@ -10,7 +10,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 
@@ -163,7 +162,7 @@ class Deferral(IClosable, winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class GuidHelper_Static(winrt._winrt.Object_Static):
+class GuidHelper_Static(winrt.system.Object_Static):
     # System.Guid Windows.Foundation.GuidHelper::CreateNewGuid()
     def create_new_guid(cls) -> _uuid.UUID: ...
     # System.Boolean Windows.Foundation.GuidHelper::Equals(System.Guid& modopt(System.Runtime.CompilerServices.IsConst),System.Guid& modopt(System.Runtime.CompilerServices.IsConst))
@@ -191,7 +190,7 @@ class MemoryBuffer(IMemoryBuffer, IClosable, winrt.system.Object):
     def create_reference(self) -> IMemoryBufferReference: ...
 
 @typing.final
-class PropertyValue_Static(winrt._winrt.Object_Static):
+class PropertyValue_Static(winrt.system.Object_Static):
     # System.Object Windows.Foundation.PropertyValue::CreateBoolean(System.Boolean)
     def create_boolean(cls, value: bool, /) -> winrt.system.Object: ...
     # System.Object Windows.Foundation.PropertyValue::CreateBooleanArray(System.Boolean[])
@@ -277,7 +276,7 @@ class PropertyValue(winrt.system.Object, metaclass=PropertyValue_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class Uri_Static(winrt._winrt.Object_Static):
+class Uri_Static(winrt.system.Object_Static):
     # System.String Windows.Foundation.Uri::EscapeComponent(System.String)
     def escape_component(cls, to_escape: str, /) -> str: ...
     # System.String Windows.Foundation.Uri::UnescapeComponent(System.String)

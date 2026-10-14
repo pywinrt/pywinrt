@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -18,7 +17,7 @@ __all__ = [
 ]
 
 @typing.final
-class CustomSensor_Static(winrt._winrt.Object_Static):
+class CustomSensor_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor> Windows.Devices.Sensors.Custom.CustomSensor::FromIdAsync(System.String)
     def from_id_async(cls, sensor_id: str, /) -> windows_foundation.IAsyncOperation[CustomSensor]: ...
     # System.String Windows.Devices.Sensors.Custom.CustomSensor::GetDeviceSelector(System.Guid)

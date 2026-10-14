@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -174,7 +173,7 @@ class GameSaveOperationResult(winrt.system.Object):
     def status(self) -> GameSaveErrorStatus: ...
 
 @typing.final
-class GameSaveProvider_Static(winrt._winrt.Object_Static):
+class GameSaveProvider_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetForUserAsync(Windows.System.User,System.String)
     def get_for_user_async(cls, user: windows_system.User, service_config_id: str, /) -> windows_foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult> Windows.Gaming.XboxLive.Storage.GameSaveProvider::GetSyncOnDemandForUserAsync(Windows.System.User,System.String)

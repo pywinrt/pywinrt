@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -47,7 +46,7 @@ class TypeName:
     def __replace__(self, /, **changes: typing.Any) -> TypeName: ...
     def unpack(self) -> tuple[str, TypeKind]: ...
 
-class NotifyCollectionChangedEventArgs_Static(winrt._winrt.Object_Static):
+class NotifyCollectionChangedEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> NotifyCollectionChangedEventArgs_Static: ...
 
 class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):

@@ -6,7 +6,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.datatransfer as windows_applicationmodel_datatransfer
 import winrt.windows.applicationmodel.datatransfer.dragdrop as windows_applicationmodel_datatransfer_dragdrop
@@ -28,7 +27,7 @@ class CoreDragUIContentMode(enum.IntFlag):
     DEFERRED = 0x1
 
 @typing.final
-class CoreDragDropManager_Static(winrt._winrt.Object_Static):
+class CoreDragDropManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreDragDropManager: ...
 

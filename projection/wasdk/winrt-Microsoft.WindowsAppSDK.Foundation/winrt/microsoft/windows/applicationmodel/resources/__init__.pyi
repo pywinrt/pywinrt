@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -31,7 +30,7 @@ class ResourceCandidateKind(enum.IntEnum):
     EMBEDDED_DATA = 3
 
 @typing.final
-class KnownResourceQualifierName_Static(winrt._winrt.Object_Static):
+class KnownResourceQualifierName_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName::get_Contrast()
     @_property
     def contrast(cls) -> str: ...
@@ -93,7 +92,7 @@ class ResourceContext(IResourceContext, winrt.system.Object):
     def qualifier_values(self) -> _cabc.MutableMapping[str, str]: ...
 
 @typing.final
-class ResourceLoader_Static(winrt._winrt.Object_Static):
+class ResourceLoader_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultResourceFilePath()
     def get_default_resource_file_path(cls) -> str: ...
 

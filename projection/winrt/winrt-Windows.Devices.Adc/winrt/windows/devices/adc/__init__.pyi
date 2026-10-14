@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.adc.provider as windows_devices_adc_provider
 import winrt.windows.foundation as windows_foundation
@@ -39,7 +38,7 @@ class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
     def controller(self) -> AdcController: ...
 
 @typing.final
-class AdcController_Static(winrt._winrt.Object_Static):
+class AdcController_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.AdcController>> Windows.Devices.Adc.AdcController::GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)
     def get_controllers_async(cls, provider: windows_devices_adc_provider.IAdcProvider, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[AdcController]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Adc.AdcController> Windows.Devices.Adc.AdcController::GetDefaultAsync()

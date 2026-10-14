@@ -3,7 +3,6 @@
 import typing
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.numerics as windows_foundation_numerics
 import winrt.windows.perception.spatial as windows_perception_spatial
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class HolographicKeyboard_Static(winrt._winrt.Object_Static):
+class HolographicKeyboard_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Holographic.HolographicKeyboard Windows.ApplicationModel.Holographic.HolographicKeyboard::GetDefault()
     def get_default(cls) -> HolographicKeyboard: ...
 

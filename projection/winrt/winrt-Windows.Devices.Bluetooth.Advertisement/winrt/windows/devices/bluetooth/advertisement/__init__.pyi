@@ -7,7 +7,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.bluetooth as windows_devices_bluetooth
 import winrt.windows.foundation as windows_foundation
@@ -151,7 +150,7 @@ class BluetoothLEAdvertisementDataSection(winrt.system.Object):
     def data(self, value: winrt.system.ReadableBuffer) -> None: ...
 
 @typing.final
-class BluetoothLEAdvertisementDataTypes_Static(winrt._winrt.Object_Static):
+class BluetoothLEAdvertisementDataTypes_Static(winrt.system.Object_Static):
     # System.Byte Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataTypes::get_AdvertisingInterval()
     @_property
     def advertising_interval(cls) -> winrt.system.UInt8: ...
@@ -356,7 +355,7 @@ class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
     def secondary_phy(self) -> BluetoothLEAdvertisementPhyType: ...
 
 @typing.final
-class BluetoothLEAdvertisementScanParameters_Static(winrt._winrt.Object_Static):
+class BluetoothLEAdvertisementScanParameters_Static(winrt.system.Object_Static):
     # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::CoexistenceOptimized()
     def coexistence_optimized(cls) -> BluetoothLEAdvertisementScanParameters: ...
     # Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementScanParameters::LowLatency()

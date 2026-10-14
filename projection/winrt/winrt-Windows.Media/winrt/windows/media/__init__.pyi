@@ -10,7 +10,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appservice as windows_applicationmodel_appservice
 import winrt.windows.foundation as windows_foundation
@@ -216,7 +215,7 @@ class ImageDisplayProperties(winrt.system.Object):
     def subtitle(self, value: str) -> None: ...
 
 @typing.final
-class MediaControl_Static(winrt._winrt.Object_Static):
+class MediaControl_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.MediaControl::add_ChannelDownPressed(Windows.Foundation.EventHandler`1<System.Object>)
     @deprecated("MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.")
     def add_channel_down_pressed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -399,7 +398,7 @@ class MediaExtensionManager(winrt.system.Object):
     def register_video_encoder_with_settings(self, activatable_class_id: str, input_subtype: _uuid.UUID, output_subtype: _uuid.UUID, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
 
 @typing.final
-class MediaMarkerTypes_Static(winrt._winrt.Object_Static):
+class MediaMarkerTypes_Static(winrt.system.Object_Static):
     # System.String Windows.Media.MediaMarkerTypes::get_Bookmark()
     @_property
     def bookmark(cls) -> str: ...
@@ -547,7 +546,7 @@ class ShuffleEnabledChangeRequestedEventArgs(winrt.system.Object):
     def requested_shuffle_enabled(self) -> bool: ...
 
 @typing.final
-class SystemMediaTransportControls_Static(winrt._winrt.Object_Static):
+class SystemMediaTransportControls_Static(winrt.system.Object_Static):
     # Windows.Media.SystemMediaTransportControls Windows.Media.SystemMediaTransportControls::GetForCurrentView()
     def get_for_current_view(cls) -> SystemMediaTransportControls: ...
 
@@ -787,7 +786,7 @@ class VideoDisplayProperties(winrt.system.Object):
     def genres(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class VideoEffects_Static(winrt._winrt.Object_Static):
+class VideoEffects_Static(winrt.system.Object_Static):
     # System.String Windows.Media.VideoEffects::get_VideoStabilization()
     @_property
     def video_stabilization(cls) -> str: ...
@@ -798,7 +797,7 @@ class VideoEffects(winrt.system.Object, metaclass=VideoEffects_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class VideoFrame_Static(winrt._winrt.Object_Static):
+class VideoFrame_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Media.VideoFrame Windows.Media.VideoFrame::CreateAsDirect3D11SurfaceBacked(Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,System.Int32)
     def create_as_direct3d11_surface_backed(cls, format: windows_graphics_directx.DirectXPixelFormat, width: winrt.system.Int32 | typing.SupportsIndex, height: winrt.system.Int32 | typing.SupportsIndex, /) -> VideoFrame: ...

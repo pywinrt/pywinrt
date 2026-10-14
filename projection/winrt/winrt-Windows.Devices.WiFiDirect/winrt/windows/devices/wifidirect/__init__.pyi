@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -135,7 +134,7 @@ class WiFiDirectConnectionListener(winrt.system.Object):
     def remove_connection_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class WiFiDirectConnectionParameters_Static(winrt._winrt.Object_Static):
+class WiFiDirectConnectionParameters_Static(winrt.system.Object_Static):
     # Windows.Devices.Enumeration.DevicePairingKinds Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters::GetDevicePairingKinds(Windows.Devices.WiFiDirect.WiFiDirectConfigurationMethod)
     def get_device_pairing_kinds(cls, configuration_method: WiFiDirectConfigurationMethod, /) -> windows_devices_enumeration.DevicePairingKinds: ...
 
@@ -178,7 +177,7 @@ class WiFiDirectConnectionRequestedEventArgs(winrt.system.Object):
     def get_connection_request(self) -> WiFiDirectConnectionRequest: ...
 
 @typing.final
-class WiFiDirectDevice_Static(winrt._winrt.Object_Static):
+class WiFiDirectDevice_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.WiFiDirectDevice> Windows.Devices.WiFiDirect.WiFiDirectDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectDevice]: ...
@@ -214,7 +213,7 @@ class WiFiDirectDevice(windows_foundation.IClosable, winrt.system.Object, metacl
     def device_id(self) -> str: ...
 
 @typing.final
-class WiFiDirectInformationElement_Static(winrt._winrt.Object_Static):
+class WiFiDirectInformationElement_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> Windows.Devices.WiFiDirect.WiFiDirectInformationElement::CreateFromBuffer(Windows.Storage.Streams.IBuffer)
     def create_from_buffer(cls, buffer: winrt.system.ReadableBuffer, /) -> _cabc.MutableSequence[WiFiDirectInformationElement]: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.WiFiDirect.WiFiDirectInformationElement> Windows.Devices.WiFiDirect.WiFiDirectInformationElement::CreateFromDeviceInformation(Windows.Devices.Enumeration.DeviceInformation)

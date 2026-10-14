@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -28,7 +27,7 @@ class BadgeNotificationGlyph(enum.IntEnum):
     UNAVAILABLE = 12
 
 @typing.final
-class BadgeNotificationManager_Static(winrt._winrt.Object_Static):
+class BadgeNotificationManager_Static(winrt.system.Object_Static):
     # Microsoft.Windows.BadgeNotifications.BadgeNotificationManager Microsoft.Windows.BadgeNotifications.BadgeNotificationManager::get_Current()
     @_property
     def current(cls) -> BadgeNotificationManager: ...

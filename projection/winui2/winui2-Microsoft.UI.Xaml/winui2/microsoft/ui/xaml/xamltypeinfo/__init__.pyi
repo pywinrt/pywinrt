@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 import winrt.windows.ui.xaml.markup as windows_ui_xaml_markup
@@ -12,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class XamlControlsXamlMetaDataProvider_Static(winrt._winrt.Object_Static):
+class XamlControlsXamlMetaDataProvider_Static(winrt.system.Object_Static):
     # System.Void Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider::Initialize()
     def initialize(cls) -> None: ...
 

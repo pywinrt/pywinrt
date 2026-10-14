@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -10,7 +9,7 @@ __all__ = [
 ]
 
 @typing.final
-class HtmlUtilities_Static(winrt._winrt.Object_Static):
+class HtmlUtilities_Static(winrt.system.Object_Static):
     # System.String Windows.Data.Html.HtmlUtilities::ConvertToText(System.String)
     def convert_to_text(cls, html: str, /) -> str: ...
 

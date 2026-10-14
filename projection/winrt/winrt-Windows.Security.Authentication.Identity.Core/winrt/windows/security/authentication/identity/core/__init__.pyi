@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -62,7 +61,7 @@ class MicrosoftAccountMultiFactorSessionAuthenticationStatus(enum.IntEnum):
     UNAUTHENTICATED = 1
 
 @typing.final
-class MicrosoftAccountMultiFactorAuthenticationManager_Static(winrt._winrt.Object_Static):
+class MicrosoftAccountMultiFactorAuthenticationManager_Static(winrt.system.Object_Static):
     # Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager::get_Current()
     @_property
     def current(cls) -> MicrosoftAccountMultiFactorAuthenticationManager: ...

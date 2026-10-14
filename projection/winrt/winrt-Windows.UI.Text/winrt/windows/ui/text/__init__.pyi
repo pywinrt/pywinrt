@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage.streams as windows_storage_streams
@@ -424,7 +423,7 @@ class ContentLinkInfo(winrt.system.Object):
     def display_text(self, value: str) -> None: ...
 
 @typing.final
-class FontWeights_Static(winrt._winrt.Object_Static):
+class FontWeights_Static(winrt.system.Object_Static):
     # Windows.UI.Text.FontWeight Windows.UI.Text.FontWeights::get_Black()
     @_property
     def black(cls) -> FontWeight: ...
@@ -686,7 +685,7 @@ class RichEditTextRange(ITextRange, winrt.system.Object):
     def story_length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class TextConstants_Static(winrt._winrt.Object_Static):
+class TextConstants_Static(winrt.system.Object_Static):
     # Windows.UI.Color Windows.UI.Text.TextConstants::get_AutoColor()
     @_property
     def auto_color(cls) -> windows_ui.Color: ...

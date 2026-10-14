@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -377,7 +376,7 @@ class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
     def selection(self) -> CoreTextRange: ...
 
 @typing.final
-class CoreTextServicesConstants_Static(winrt._winrt.Object_Static):
+class CoreTextServicesConstants_Static(winrt.system.Object_Static):
     # System.Char Windows.UI.Text.Core.CoreTextServicesConstants::get_HiddenCharacter()
     @_property
     def hidden_character(cls) -> winrt.system.Char16: ...
@@ -388,7 +387,7 @@ class CoreTextServicesConstants(winrt.system.Object, metaclass=CoreTextServicesC
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class CoreTextServicesManager_Static(winrt._winrt.Object_Static):
+class CoreTextServicesManager_Static(winrt.system.Object_Static):
     # Windows.UI.Text.Core.CoreTextServicesManager Windows.UI.Text.Core.CoreTextServicesManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreTextServicesManager: ...
 

@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.core as windows_applicationmodel_core
 import winrt.windows.foundation as windows_foundation
@@ -63,7 +62,7 @@ class ShareWindowCommand(enum.IntEnum):
     STOP_SHARING = 2
 
 @typing.final
-class AdaptiveCardBuilder_Static(winrt._winrt.Object_Static):
+class AdaptiveCardBuilder_Static(winrt.system.Object_Static):
     # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.AdaptiveCardBuilder::CreateAdaptiveCardFromJson(System.String)
     def create_adaptive_card_from_json(cls, value: str, /) -> IAdaptiveCard: ...
 
@@ -83,7 +82,7 @@ class FocusSession(winrt.system.Object):
     def id(self) -> str: ...
 
 @typing.final
-class FocusSessionManager_Static(winrt._winrt.Object_Static):
+class FocusSessionManager_Static(winrt.system.Object_Static):
     # Windows.UI.Shell.FocusSessionManager Windows.UI.Shell.FocusSessionManager::GetDefault()
     def get_default(cls) -> FocusSessionManager: ...
     # System.Boolean Windows.UI.Shell.FocusSessionManager::get_IsSupported()
@@ -141,7 +140,7 @@ class ShareWindowCommandEventArgs(winrt.system.Object):
     def window_id(self) -> windows_ui.WindowId: ...
 
 @typing.final
-class ShareWindowCommandSource_Static(winrt._winrt.Object_Static):
+class ShareWindowCommandSource_Static(winrt.system.Object_Static):
     # Windows.UI.Shell.ShareWindowCommandSource Windows.UI.Shell.ShareWindowCommandSource::GetForCurrentView()
     def get_for_current_view(cls) -> ShareWindowCommandSource: ...
 
@@ -165,7 +164,7 @@ class ShareWindowCommandSource(winrt.system.Object, metaclass=ShareWindowCommand
     def remove_command_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class TaskbarManager_Static(winrt._winrt.Object_Static):
+class TaskbarManager_Static(winrt.system.Object_Static):
     # Windows.UI.Shell.TaskbarManager Windows.UI.Shell.TaskbarManager::GetDefault()
     def get_default(cls) -> TaskbarManager: ...
 
@@ -304,7 +303,7 @@ class WindowTabGroup(winrt.system.Object):
     def icon(self, value: WindowTabIcon) -> None: ...
 
 @typing.final
-class WindowTabIcon_Static(winrt._winrt.Object_Static):
+class WindowTabIcon_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.UI.Shell.WindowTabIcon Windows.UI.Shell.WindowTabIcon::CreateFromFontGlyph(System.String,System.String)
     def create_from_font_glyph(cls, glyph: str, font_family: str, /) -> WindowTabIcon: ...
@@ -324,7 +323,7 @@ class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class WindowTabManager_Static(winrt._winrt.Object_Static):
+class WindowTabManager_Static(winrt.system.Object_Static):
     # Windows.UI.Shell.WindowTabManager Windows.UI.Shell.WindowTabManager::GetForWindow(Windows.UI.WindowId)
     def get_for_window(cls, id: windows_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> WindowTabManager: ...
     # System.Boolean Windows.UI.Shell.WindowTabManager::IsSupported()

@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.windows.appnotifications as microsoft_windows_appnotifications
 import winrt.windows.foundation as windows_foundation
@@ -78,7 +77,7 @@ class AppNotificationSoundEvent(enum.IntEnum):
     CALL10 = 24
 
 @typing.final
-class AppNotificationBuilder_Static(winrt._winrt.Object_Static):
+class AppNotificationBuilder_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationBuilder::IsUrgentScenarioSupported()
     def is_urgent_scenario_supported(cls) -> bool: ...
 
@@ -163,7 +162,7 @@ class AppNotificationBuilder(winrt.system.Object, metaclass=AppNotificationBuild
     def set_time_stamp(self, value: datetime.datetime, /) -> AppNotificationBuilder: ...
 
 @typing.final
-class AppNotificationButton_Static(winrt._winrt.Object_Static):
+class AppNotificationButton_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::IsButtonStyleSupported()
     def is_button_style_supported(cls) -> bool: ...
     # System.Boolean Microsoft.Windows.AppNotifications.Builder.AppNotificationButton::IsToolTipSupported()

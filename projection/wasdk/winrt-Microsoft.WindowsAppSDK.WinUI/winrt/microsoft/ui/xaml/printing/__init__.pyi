@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.windows.foundation as windows_foundation

@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ui.composition as windows_ui_composition
 
@@ -39,7 +38,7 @@ class CompositionDebugHeatMaps(winrt.system.Object):
     def show_redraw(self, subtree: windows_ui_composition.Visual, /) -> None: ...
 
 @typing.final
-class CompositionDebugSettings_Static(winrt._winrt.Object_Static):
+class CompositionDebugSettings_Static(winrt.system.Object_Static):
     # Windows.UI.Composition.Diagnostics.CompositionDebugSettings Windows.UI.Composition.Diagnostics.CompositionDebugSettings::TryGetSettings(Windows.UI.Composition.Compositor)
     def try_get_settings(cls, compositor: windows_ui_composition.Compositor, /) -> CompositionDebugSettings | None: ...
 

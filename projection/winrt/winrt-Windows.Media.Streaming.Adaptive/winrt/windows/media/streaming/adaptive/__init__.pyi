@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -75,7 +74,7 @@ class AdaptiveMediaSourceResourceType(enum.IntEnum):
     MEDIA_SEGMENT_INDEX = 5
 
 @typing.final
-class AdaptiveMediaSource_Static(winrt._winrt.Object_Static):
+class AdaptiveMediaSource_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult> Windows.Media.Streaming.Adaptive.AdaptiveMediaSource::CreateFromStreamAsync(Windows.Storage.Streams.IInputStream,Windows.Foundation.Uri,System.String)
     def create_from_stream_async(cls, stream: windows_storage_streams.IInputStream, uri: windows_foundation.Uri, content_type: str, /) -> windows_foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...

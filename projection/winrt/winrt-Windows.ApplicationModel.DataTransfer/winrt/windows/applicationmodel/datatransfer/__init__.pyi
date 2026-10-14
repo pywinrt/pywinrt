@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -80,7 +79,7 @@ class ShareUITheme(enum.IntEnum):
     DARK = 2
 
 @typing.final
-class Clipboard_Static(winrt._winrt.Object_Static):
+class Clipboard_Static(winrt.system.Object_Static):
     # System.Void Windows.ApplicationModel.DataTransfer.Clipboard::Clear()
     def clear(cls) -> None: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.Clipboard::ClearHistory()
@@ -524,7 +523,7 @@ class DataRequestedEventArgs(winrt.system.Object):
     def request(self) -> DataRequest: ...
 
 @typing.final
-class DataTransferManager_Static(winrt._winrt.Object_Static):
+class DataTransferManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.DataTransfer.DataTransferManager Windows.ApplicationModel.DataTransfer.DataTransferManager::GetForCurrentView()
     def get_for_current_view(cls) -> DataTransferManager: ...
     # System.Boolean Windows.ApplicationModel.DataTransfer.DataTransferManager::IsSupported()
@@ -558,7 +557,7 @@ class DataTransferManager(winrt.system.Object, metaclass=DataTransferManager_Sta
     def remove_share_providers_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class HtmlFormatHelper_Static(winrt._winrt.Object_Static):
+class HtmlFormatHelper_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.DataTransfer.HtmlFormatHelper::CreateHtmlFormat(System.String)
     def create_html_format(cls, html_fragment: str, /) -> str: ...
     # System.String Windows.ApplicationModel.DataTransfer.HtmlFormatHelper::GetStaticFragment(System.String)
@@ -661,7 +660,7 @@ class ShareUIOptions(winrt.system.Object):
     def selection_rect(self, value: windows_foundation.Rect | None) -> None: ...
 
 @typing.final
-class SharedStorageAccessManager_Static(winrt._winrt.Object_Static):
+class SharedStorageAccessManager_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager::AddFile(Windows.Storage.IStorageFile)
     def add_file(cls, file: windows_storage.IStorageFile, /) -> str: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager::RedeemTokenForFileAsync(System.String)
@@ -675,7 +674,7 @@ class SharedStorageAccessManager(winrt.system.Object, metaclass=SharedStorageAcc
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class StandardDataFormats_Static(winrt._winrt.Object_Static):
+class StandardDataFormats_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.DataTransfer.StandardDataFormats::get_Bitmap()
     @_property
     def bitmap(cls) -> str: ...
@@ -719,7 +718,7 @@ class TargetApplicationChosenEventArgs(winrt.system.Object):
     def application_name(self) -> str: ...
 
 @typing.final
-class TransferTarget_Static(winrt._winrt.Object_Static):
+class TransferTarget_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.DataTransfer.TransferTargetWatcher Windows.ApplicationModel.DataTransfer.TransferTarget::CreateWatcher(Windows.ApplicationModel.DataTransfer.TransferTargetDiscoveryOptions)
     def create_watcher(cls, options: TransferTargetDiscoveryOptions, /) -> TransferTargetWatcher: ...
 
@@ -779,7 +778,7 @@ class TransferTargetInvokeResult(winrt.system.Object):
     def succeeded(self) -> bool: ...
 
 @typing.final
-class TransferTargetWatcher_Static(winrt._winrt.Object_Static):
+class TransferTargetWatcher_Static(winrt.system.Object_Static):
     # System.Boolean Windows.ApplicationModel.DataTransfer.TransferTargetWatcher::IsSupported(Windows.ApplicationModel.DataTransfer.DataPackageView)
     def is_supported(cls, data_package: DataPackageView, /) -> bool: ...
 

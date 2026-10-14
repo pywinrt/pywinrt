@@ -6,7 +6,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -54,7 +53,7 @@ class LocalContentSuggestionSettings(winrt.system.Object):
     def properties_to_match(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class SearchPane_Static(winrt._winrt.Object_Static):
+class SearchPane_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Search.SearchPane Windows.ApplicationModel.Search.SearchPane::GetForCurrentView()
     @deprecated("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> SearchPane: ...

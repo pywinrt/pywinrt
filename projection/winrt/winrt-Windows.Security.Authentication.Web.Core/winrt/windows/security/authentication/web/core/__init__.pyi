@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -124,7 +123,7 @@ class WebAuthenticationAddAccountResult(winrt.system.Object):
     def response_status(self) -> WebAuthenticationAddAccountStatus: ...
 
 @typing.final
-class WebAuthenticationCoreManager_Static(winrt._winrt.Object_Static):
+class WebAuthenticationCoreManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult> Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::AddAccountWithTransferTokenAsync(Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest)
     def add_account_with_transfer_token_async(cls, request: WebAuthenticationTransferTokenRequest, /) -> windows_foundation.IAsyncOperation[WebAuthenticationAddAccountResult]: ...
     # Windows.Security.Authentication.Web.Core.WebAccountMonitor Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager::CreateWebAccountMonitor(Windows.Foundation.Collections.IIterable`1<Windows.Security.Credentials.WebAccount>)

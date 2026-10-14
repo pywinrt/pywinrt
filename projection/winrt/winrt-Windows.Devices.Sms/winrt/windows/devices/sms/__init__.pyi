@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -509,7 +508,7 @@ class SmsBroadcastMessage(ISmsMessageBase, winrt.system.Object):
     def sim_icc_id(self) -> str: ...
 
 @typing.final
-class SmsDevice_Static(winrt._winrt.Object_Static):
+class SmsDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sms.SmsDevice> Windows.Devices.Sms.SmsDevice::FromIdAsync(System.String)
     @deprecated("ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.")
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SmsDevice]: ...
@@ -564,7 +563,7 @@ class SmsDevice(ISmsDevice, winrt.system.Object, metaclass=SmsDevice_Static):
     def message_store(self) -> SmsDeviceMessageStore: ...
 
 @typing.final
-class SmsDevice2_Static(winrt._winrt.Object_Static):
+class SmsDevice2_Static(winrt.system.Object_Static):
     # Windows.Devices.Sms.SmsDevice2 Windows.Devices.Sms.SmsDevice2::FromId(System.String)
     def from_id(cls, device_id: str, /) -> SmsDevice2: ...
     # Windows.Devices.Sms.SmsDevice2 Windows.Devices.Sms.SmsDevice2::FromParentId(System.String)
@@ -731,7 +730,7 @@ class SmsMessageReceivedTriggerDetails(winrt.system.Object):
     def wap_message(self) -> SmsWapMessage: ...
 
 @typing.final
-class SmsMessageRegistration_Static(winrt._winrt.Object_Static):
+class SmsMessageRegistration_Static(winrt.system.Object_Static):
     # Windows.Devices.Sms.SmsMessageRegistration Windows.Devices.Sms.SmsMessageRegistration::Register(System.String,Windows.Devices.Sms.SmsFilterRules)
     def register(cls, id: str, filter_rules: SmsFilterRules, /) -> SmsMessageRegistration: ...  # type: ignore[override]
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Sms.SmsMessageRegistration> Windows.Devices.Sms.SmsMessageRegistration::get_AllRegistrations()
@@ -842,7 +841,7 @@ class SmsStatusMessage(ISmsMessageBase, winrt.system.Object):
     def to(self) -> str: ...
 
 @typing.final
-class SmsTextMessage_Static(winrt._winrt.Object_Static):
+class SmsTextMessage_Static(winrt.system.Object_Static):
     # Windows.Devices.Sms.SmsTextMessage Windows.Devices.Sms.SmsTextMessage::FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])
     @deprecated("ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.")
     def from_binary_data(cls, format: SmsDataFormat, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer, /) -> SmsTextMessage: ...

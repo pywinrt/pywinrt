@@ -4,7 +4,6 @@ import datetime
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appointments as windows_applicationmodel_appointments
 import winrt.windows.foundation as windows_foundation
@@ -36,7 +35,7 @@ class AddAppointmentOperation(winrt.system.Object):
     def source_package_family_name(self) -> str: ...
 
 @typing.final
-class AppointmentsProviderLaunchActionVerbs_Static(winrt._winrt.Object_Static):
+class AppointmentsProviderLaunchActionVerbs_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs::get_AddAppointment()
     @_property
     def add_appointment(cls) -> str: ...

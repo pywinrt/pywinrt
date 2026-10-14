@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.numerics as windows_foundation_numerics

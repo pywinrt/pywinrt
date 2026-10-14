@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -35,7 +34,7 @@ class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
     def tenant_name(self) -> str: ...
 
 @typing.final
-class EnterpriseKeyCredentialRegistrationManager_Static(winrt._winrt.Object_Static):
+class EnterpriseKeyCredentialRegistrationManager_Static(winrt.system.Object_Static):
     # Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager::get_Current()
     @_property
     def current(cls) -> EnterpriseKeyCredentialRegistrationManager: ...

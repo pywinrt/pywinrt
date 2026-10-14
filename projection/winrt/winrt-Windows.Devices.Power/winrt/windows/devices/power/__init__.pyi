@@ -5,7 +5,6 @@ import datetime
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -19,7 +18,7 @@ __all__ = [
 ]
 
 @typing.final
-class Battery_Static(winrt._winrt.Object_Static):
+class Battery_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Power.Battery> Windows.Devices.Power.Battery::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Battery]: ...
     # System.String Windows.Devices.Power.Battery::GetDeviceSelector()
@@ -74,7 +73,7 @@ class PowerGridData(winrt.system.Object):
     def severity(self) -> winrt.system.Double: ...
 
 @typing.final
-class PowerGridForecast_Static(winrt._winrt.Object_Static):
+class PowerGridForecast_Static(winrt.system.Object_Static):
     # Windows.Devices.Power.PowerGridForecast Windows.Devices.Power.PowerGridForecast::GetForecast()
     def get_forecast(cls) -> PowerGridForecast: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.Power.PowerGridForecast::add_ForecastUpdated(Windows.Foundation.EventHandler`1<System.Object>)

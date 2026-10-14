@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage.streams as windows_storage_streams

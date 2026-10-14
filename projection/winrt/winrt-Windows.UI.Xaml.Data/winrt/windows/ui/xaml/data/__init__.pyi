@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -173,7 +172,7 @@ class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Stati
     @typing.final
     def parent_binding(self) -> Binding: ...
 
-class BindingExpressionBase_Static(winrt._winrt.Object_Static):
+class BindingExpressionBase_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> BindingExpressionBase_Static: ...
 
 class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
@@ -182,7 +181,7 @@ class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class BindingOperations_Static(winrt._winrt.Object_Static):
+class BindingOperations_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.Xaml.Data.BindingOperations::SetBinding(Windows.UI.Xaml.DependencyObject,Windows.UI.Xaml.DependencyProperty,Windows.UI.Xaml.Data.BindingBase)
     def set_binding(cls, target: windows_ui_xaml.DependencyObject, dp: windows_ui_xaml.DependencyProperty, binding: BindingBase, /) -> None: ...
 
@@ -231,7 +230,7 @@ class CollectionViewSource(windows_ui_xaml.DependencyObject, metaclass=Collectio
     @_property
     def view(self) -> ICollectionView: ...
 
-class CurrentChangingEventArgs_Static(winrt._winrt.Object_Static):
+class CurrentChangingEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CurrentChangingEventArgs_Static: ...
 
 class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEventArgs_Static):
@@ -252,7 +251,7 @@ class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEve
     @typing.final
     def is_cancelable(self) -> bool: ...
 
-class ItemIndexRange_Static(winrt._winrt.Object_Static):
+class ItemIndexRange_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ItemIndexRange_Static: ...
 
 class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
@@ -271,7 +270,7 @@ class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
     @typing.final
     def length(self) -> winrt.system.UInt32: ...
 
-class PropertyChangedEventArgs_Static(winrt._winrt.Object_Static):
+class PropertyChangedEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> PropertyChangedEventArgs_Static: ...
 
 class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEventArgs_Static):

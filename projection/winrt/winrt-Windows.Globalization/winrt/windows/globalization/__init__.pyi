@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -45,7 +44,7 @@ class LanguageLayoutDirection(enum.IntEnum):
     TTB_RTL = 3
 
 @typing.final
-class ApplicationLanguages_Static(winrt._winrt.Object_Static):
+class ApplicationLanguages_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Globalization.ApplicationLanguages::GetLanguagesForUser(Windows.System.User)
     def get_languages_for_user(cls, user: windows_system.User, /) -> _cabc.Sequence[str]: ...
     # System.String Windows.Globalization.ApplicationLanguages::get_PrimaryLanguageOverride()
@@ -372,7 +371,7 @@ class Calendar(winrt.system.Object):
     def first_period_in_this_day(self) -> winrt.system.Int32: ...
 
 @typing.final
-class CalendarIdentifiers_Static(winrt._winrt.Object_Static):
+class CalendarIdentifiers_Static(winrt.system.Object_Static):
     # System.String Windows.Globalization.CalendarIdentifiers::get_Julian()
     @_property
     def julian(cls) -> str: ...
@@ -425,7 +424,7 @@ class CalendarIdentifiers(winrt.system.Object, metaclass=CalendarIdentifiers_Sta
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ClockIdentifiers_Static(winrt._winrt.Object_Static):
+class ClockIdentifiers_Static(winrt.system.Object_Static):
     # System.String Windows.Globalization.ClockIdentifiers::get_TwelveHour()
     @_property
     def twelve_hour(cls) -> str: ...
@@ -449,7 +448,7 @@ class CurrencyAmount(winrt.system.Object):
     def currency(self) -> str: ...
 
 @typing.final
-class CurrencyIdentifiers_Static(winrt._winrt.Object_Static):
+class CurrencyIdentifiers_Static(winrt.system.Object_Static):
     # System.String Windows.Globalization.CurrencyIdentifiers::get_HNL()
     @_property
     def hnl(cls) -> str: ...
@@ -943,7 +942,7 @@ class CurrencyIdentifiers(winrt.system.Object, metaclass=CurrencyIdentifiers_Sta
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class GeographicRegion_Static(winrt._winrt.Object_Static):
+class GeographicRegion_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Globalization.GeographicRegion::IsSupported(System.String)
     def is_supported(cls, geographic_region_code: str, /) -> bool: ...
 
@@ -990,7 +989,7 @@ class JapanesePhoneme(winrt.system.Object):
     def yomi_text(self) -> str: ...
 
 @typing.final
-class JapanesePhoneticAnalyzer_Static(winrt._winrt.Object_Static):
+class JapanesePhoneticAnalyzer_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.Globalization.JapanesePhoneme> Windows.Globalization.JapanesePhoneticAnalyzer::GetWords(System.String)
     def get_words(cls, input: str, /) -> _cabc.Sequence[JapanesePhoneme]: ...
@@ -1008,7 +1007,7 @@ class JapanesePhoneticAnalyzer(winrt.system.Object, metaclass=JapanesePhoneticAn
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class Language_Static(winrt._winrt.Object_Static):
+class Language_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Globalization.Language::GetMuiCompatibleLanguageListFromLanguageTags(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_mui_compatible_language_list_from_language_tags(cls, language_tags: _cabc.Iterable[str], /) -> _cabc.MutableSequence[str]: ...
     # System.Boolean Windows.Globalization.Language::IsWellFormed(System.String)
@@ -1044,7 +1043,7 @@ class Language(winrt.system.Object, metaclass=Language_Static):
     def abbreviated_name(self) -> str: ...
 
 @typing.final
-class NumeralSystemIdentifiers_Static(winrt._winrt.Object_Static):
+class NumeralSystemIdentifiers_Static(winrt.system.Object_Static):
     # System.String Windows.Globalization.NumeralSystemIdentifiers::get_FullWide()
     @_property
     def full_wide(cls) -> str: ...

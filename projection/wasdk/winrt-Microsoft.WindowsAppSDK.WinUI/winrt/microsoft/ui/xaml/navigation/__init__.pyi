@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.media.animation as microsoft_ui_xaml_media_animation
@@ -36,7 +35,7 @@ class NavigationMode(enum.IntEnum):
     FORWARD = 2
     REFRESH = 3
 
-class FrameNavigationOptions_Static(winrt._winrt.Object_Static):
+class FrameNavigationOptions_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> FrameNavigationOptions_Static: ...
 
 class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):

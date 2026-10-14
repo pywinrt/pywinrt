@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -34,7 +33,7 @@ class AIFeatureReadyState(enum.IntEnum):
     OS_UPDATE_NEEDED = 6
 
 @typing.final
-class AICapabilities_Static(winrt._winrt.Object_Static):
+class AICapabilities_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.Windows.AI.AICapabilities::HasAICapability(Microsoft.Windows.AI.AICapabilityCategory)
     def has_a_i_capability(cls, category: AICapabilityCategory, /) -> bool: ...
 

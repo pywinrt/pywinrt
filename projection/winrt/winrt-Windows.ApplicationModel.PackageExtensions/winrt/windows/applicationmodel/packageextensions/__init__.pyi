@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
@@ -49,7 +48,7 @@ class PackageExtension(winrt.system.Object):
     def package(self) -> windows_applicationmodel.Package: ...
 
 @typing.final
-class PackageExtensionCatalog_Static(winrt._winrt.Object_Static):
+class PackageExtensionCatalog_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog Windows.ApplicationModel.PackageExtensions.PackageExtensionCatalog::Open(System.String)
     def open(cls, package_extension_name: str, /) -> PackageExtensionCatalog: ...
 

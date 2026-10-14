@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.composition as microsoft_ui_composition
 import winrt.microsoft.ui.input as microsoft_ui_input

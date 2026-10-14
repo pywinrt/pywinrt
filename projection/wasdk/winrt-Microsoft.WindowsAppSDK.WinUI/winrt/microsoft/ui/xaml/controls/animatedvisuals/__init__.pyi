@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.composition as microsoft_ui_composition
 import winrt.microsoft.ui.xaml.controls as microsoft_ui_xaml_controls

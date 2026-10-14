@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -125,7 +124,7 @@ class CivicAddress(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class GeoboundingBox_Static(winrt._winrt.Object_Static):
+class GeoboundingBox_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Devices.Geolocation.GeoboundingBox Windows.Devices.Geolocation.GeoboundingBox::TryCompute(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Geolocation.BasicGeoposition>)
     def try_compute(cls, positions: _cabc.Iterable[BasicGeoposition], /) -> GeoboundingBox: ...
@@ -269,7 +268,7 @@ class GeocoordinateSatelliteData(winrt.system.Object):
     def time_dilution_of_precision(self) -> winrt.system.Double | None: ...
 
 @typing.final
-class Geolocator_Static(winrt._winrt.Object_Static):
+class Geolocator_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Geolocation.Geoposition>> Windows.Devices.Geolocation.Geolocator::GetGeopositionHistoryAsync(Windows.Foundation.DateTime)
     @deprecated("GetGeopositionHistoryAsync is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -416,7 +415,7 @@ class Geovisit(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class GeovisitMonitor_Static(winrt._winrt.Object_Static):
+class GeovisitMonitor_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geovisit> Windows.Devices.Geolocation.GeovisitMonitor::GetLastReportAsync()
     def get_last_report_async(cls) -> windows_foundation.IAsyncOperation[Geovisit]: ...
 

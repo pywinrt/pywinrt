@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.data.xml.dom as windows_data_xml_dom
 import winrt.windows.foundation as windows_foundation
@@ -287,7 +286,7 @@ class SyndicationContent(ISyndicationText, ISyndicationNode, winrt.system.Object
     def xml(self, value: windows_data_xml_dom.XmlDocument) -> None: ...
 
 @typing.final
-class SyndicationError_Static(winrt._winrt.Object_Static):
+class SyndicationError_Static(winrt.system.Object_Static):
     # Windows.Web.Syndication.SyndicationErrorStatus Windows.Web.Syndication.SyndicationError::GetStatus(System.Int32)
     def get_status(cls, hresult: winrt.system.Int32 | typing.SupportsIndex, /) -> SyndicationErrorStatus: ...
 

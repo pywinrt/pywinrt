@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -77,7 +76,7 @@ class WiFiDirectServiceStatus(enum.IntEnum):
     CUSTOM = 2
 
 @typing.final
-class WiFiDirectService_Static(winrt._winrt.Object_Static):
+class WiFiDirectService_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectService> Windows.Devices.WiFiDirect.Services.WiFiDirectService::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectService]: ...
     @typing.overload

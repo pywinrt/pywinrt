@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -21,7 +20,7 @@ class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     UNKNOWN_FAILURE = 2
 
 @typing.final
-class PlatformTelemetryClient_Static(winrt._winrt.Object_Static):
+class PlatformTelemetryClient_Static(winrt.system.Object_Static):
     @typing.overload  # type: ignore[override]
     # Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient::Register(System.String)
     def register(cls, id: str, /) -> PlatformTelemetryRegistrationResult: ...

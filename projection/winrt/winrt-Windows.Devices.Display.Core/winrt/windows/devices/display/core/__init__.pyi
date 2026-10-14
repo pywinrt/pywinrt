@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.display as windows_devices_display
 import winrt.windows.foundation as windows_foundation
@@ -202,7 +201,7 @@ class DisplayPresentationRate:
     def unpack(self) -> tuple[tuple[winrt.system.UInt32, winrt.system.UInt32], winrt.system.Int32]: ...
 
 @typing.final
-class DisplayAdapter_Static(winrt._winrt.Object_Static):
+class DisplayAdapter_Static(winrt.system.Object_Static):
     # Windows.Devices.Display.Core.DisplayAdapter Windows.Devices.Display.Core.DisplayAdapter::FromId(Windows.Graphics.DisplayAdapterId)
     def from_id(cls, id: windows_graphics.DisplayAdapterId | tuple[winrt.system.UInt32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex], /) -> DisplayAdapter: ...
 
@@ -271,7 +270,7 @@ class DisplayFence(winrt.system.Object):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class DisplayManager_Static(winrt._winrt.Object_Static):
+class DisplayManager_Static(winrt.system.Object_Static):
     # Windows.Devices.Display.Core.DisplayManager Windows.Devices.Display.Core.DisplayManager::Create(Windows.Devices.Display.Core.DisplayManagerOptions)
     def create(cls, options: DisplayManagerOptions, /) -> DisplayManager: ...
 
@@ -426,7 +425,7 @@ class DisplayModeInfo(winrt.system.Object):
     def physical_presentation_rate(self) -> DisplayPresentationRate: ...
 
 @typing.final
-class DisplayMuxDevice_Static(winrt._winrt.Object_Static):
+class DisplayMuxDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Display.Core.DisplayMuxDevice> Windows.Devices.Display.Core.DisplayMuxDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_interface_id: str, /) -> windows_foundation.IAsyncOperation[DisplayMuxDevice]: ...
     # System.String Windows.Devices.Display.Core.DisplayMuxDevice::GetDeviceSelector()
@@ -548,7 +547,7 @@ class DisplayPath(winrt.system.Object):
     def physical_presentation_rate(self, value: DisplayPresentationRate | None) -> None: ...
 
 @typing.final
-class DisplayPrimaryDescription_Static(winrt._winrt.Object_Static):
+class DisplayPrimaryDescription_Static(winrt.system.Object_Static):
     # Windows.Devices.Display.Core.DisplayPrimaryDescription Windows.Devices.Display.Core.DisplayPrimaryDescription::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,System.UInt32,System.UInt32,Windows.Graphics.DirectX.DirectXPixelFormat,Windows.Graphics.DirectX.DirectXColorSpace,System.Boolean,Windows.Graphics.DirectX.Direct3D11.Direct3DMultisampleDescription)
     def create_with_properties(cls, extra_properties: _cabc.Mapping[_uuid.UUID, winrt.system.Object] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32 | typing.SupportsIndex, height: winrt.system.UInt32 | typing.SupportsIndex, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription | tuple[winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex], /) -> DisplayPrimaryDescription: ...
 
@@ -763,7 +762,7 @@ class DisplayView(winrt.system.Object):
     def properties(self) -> _cabc.MutableMapping[_uuid.UUID, winrt.system.Object]: ...
 
 @typing.final
-class DisplayWireFormat_Static(winrt._winrt.Object_Static):
+class DisplayWireFormat_Static(winrt.system.Object_Static):
     # Windows.Devices.Display.Core.DisplayWireFormat Windows.Devices.Display.Core.DisplayWireFormat::CreateWithProperties(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.Guid,System.Object>>,Windows.Devices.Display.Core.DisplayWireFormatPixelEncoding,System.Int32,Windows.Devices.Display.Core.DisplayWireFormatColorSpace,Windows.Devices.Display.Core.DisplayWireFormatEotf,Windows.Devices.Display.Core.DisplayWireFormatHdrMetadata)
     def create_with_properties(cls, extra_properties: _cabc.Mapping[_uuid.UUID, winrt.system.Object] | _cabc.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32 | typing.SupportsIndex, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
 

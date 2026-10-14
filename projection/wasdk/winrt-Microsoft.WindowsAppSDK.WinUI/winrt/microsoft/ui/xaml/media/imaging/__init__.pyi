@@ -5,7 +5,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.media as microsoft_ui_xaml_media
@@ -309,7 +308,7 @@ class WriteableBitmap(BitmapSource):
     @_property
     def pixel_buffer(self) -> windows_storage_streams.IBuffer: ...
 
-class XamlRenderingBackgroundTask_Static(winrt._winrt.Object_Static):
+class XamlRenderingBackgroundTask_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> XamlRenderingBackgroundTask_Static: ...
 
 class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBackgroundTask_Static):

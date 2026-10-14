@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.networking.connectivity as windows_networking_connectivity
@@ -60,7 +59,7 @@ class EndpointPair(winrt.system.Object):
     def local_host_name(self, value: HostName) -> None: ...
 
 @typing.final
-class HostName_Static(winrt._winrt.Object_Static):
+class HostName_Static(winrt.system.Object_Static):
     # System.Int32 Windows.Networking.HostName::Compare(System.String,System.String)
     def compare(cls, value1: str, value2: str, /) -> winrt.system.Int32: ...
 

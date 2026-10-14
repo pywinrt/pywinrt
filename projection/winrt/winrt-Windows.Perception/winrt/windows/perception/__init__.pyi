@@ -4,7 +4,6 @@ import datetime
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -28,7 +27,7 @@ class PerceptionTimestamp(winrt.system.Object):
     def system_relative_target_time(self) -> datetime.timedelta: ...
 
 @typing.final
-class PerceptionTimestampHelper_Static(winrt._winrt.Object_Static):
+class PerceptionTimestampHelper_Static(winrt.system.Object_Static):
     # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromHistoricalTargetTime(Windows.Foundation.DateTime)
     def from_historical_target_time(cls, target_time: datetime.datetime, /) -> PerceptionTimestamp: ...
     # Windows.Perception.PerceptionTimestamp Windows.Perception.PerceptionTimestampHelper::FromSystemRelativeTargetTime(Windows.Foundation.TimeSpan)

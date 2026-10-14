@@ -5,7 +5,6 @@ import datetime
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appointments as windows_applicationmodel_appointments
 import winrt.windows.foundation as windows_foundation

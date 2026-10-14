@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
@@ -12,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class WindowManagementPreview_Static(winrt._winrt.Object_Static):
+class WindowManagementPreview_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.WindowManagement.Preview.WindowManagementPreview::SetPreferredMinSize(Windows.UI.WindowManagement.AppWindow,Windows.Foundation.Size)
     def set_preferred_min_size(cls, window: windows_ui_windowmanagement.AppWindow, preferred_frame_min_size: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...
 

@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ui.xaml.automation as windows_ui_xaml_automation
 import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peers

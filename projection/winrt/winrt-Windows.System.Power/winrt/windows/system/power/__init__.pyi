@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -43,7 +42,7 @@ class PowerSupplyStatus(enum.IntEnum):
     ADEQUATE = 2
 
 @typing.final
-class BackgroundEnergyManager_Static(winrt._winrt.Object_Static):
+class BackgroundEnergyManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.BackgroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
     @deprecated("Background Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -96,7 +95,7 @@ class BackgroundEnergyManager(winrt.system.Object, metaclass=BackgroundEnergyMan
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ForegroundEnergyManager_Static(winrt._winrt.Object_Static):
+class ForegroundEnergyManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.ForegroundEnergyManager::add_RecentEnergyUsageIncreased(Windows.Foundation.EventHandler`1<System.Object>)
     @deprecated("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
     def add_recent_energy_usage_increased(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
@@ -141,7 +140,7 @@ class ForegroundEnergyManager(winrt.system.Object, metaclass=ForegroundEnergyMan
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class PowerManager_Static(winrt._winrt.Object_Static):
+class PowerManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Power.PowerManager::add_EnergySaverStatus2Changed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_energy_saver_status2_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Power.PowerManager::remove_EnergySaverStatus2Changed(Windows.Foundation.EventRegistrationToken)

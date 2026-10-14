@@ -8,7 +8,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -128,7 +127,7 @@ class WiFiWpsKind(enum.IntEnum):
     USB = 5
 
 @typing.final
-class WiFiAdapter_Static(winrt._winrt.Object_Static):
+class WiFiAdapter_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>> Windows.Devices.WiFi.WiFiAdapter::FindAllAdaptersAsync()
     def find_all_adapters_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[WiFiAdapter]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAdapter> Windows.Devices.WiFi.WiFiAdapter::FromIdAsync(System.String)
@@ -263,7 +262,7 @@ class WiFiOnDemandHotspotConnectionResult(winrt.system.Object):
     def status(self) -> WiFiOnDemandHotspotConnectStatus: ...
 
 @typing.final
-class WiFiOnDemandHotspotNetwork_Static(winrt._winrt.Object_Static):
+class WiFiOnDemandHotspotNetwork_Static(winrt.system.Object_Static):
     # Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork::GetOrCreateById(System.Guid)
     def get_or_create_by_id(cls, network_id: _uuid.UUID, /) -> WiFiOnDemandHotspotNetwork: ...
 

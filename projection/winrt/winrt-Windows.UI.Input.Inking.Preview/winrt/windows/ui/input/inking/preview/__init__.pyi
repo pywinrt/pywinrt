@@ -4,7 +4,6 @@ import types
 import typing
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui.composition as windows_ui_composition
@@ -14,7 +13,7 @@ __all__ = [
 ]
 
 @typing.final
-class PalmRejectionDelayZonePreview_Static(winrt._winrt.Object_Static):
+class PalmRejectionDelayZonePreview_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview Windows.UI.Input.Inking.Preview.PalmRejectionDelayZonePreview::CreateForVisual(Windows.UI.Composition.Visual,Windows.Foundation.Rect)
     def create_for_visual(cls, input_panel_visual: windows_ui_composition.Visual, input_panel_rect: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], /) -> PalmRejectionDelayZonePreview: ...

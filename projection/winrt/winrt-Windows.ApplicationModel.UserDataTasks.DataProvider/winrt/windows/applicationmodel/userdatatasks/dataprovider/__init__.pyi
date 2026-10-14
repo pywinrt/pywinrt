@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.userdatatasks as windows_applicationmodel_userdatatasks
 import winrt.windows.foundation as windows_foundation

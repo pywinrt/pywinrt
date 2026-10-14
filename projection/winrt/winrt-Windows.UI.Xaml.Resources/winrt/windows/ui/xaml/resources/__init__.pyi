@@ -3,14 +3,13 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
     "CustomXamlResourceLoader",
 ]
 
-class CustomXamlResourceLoader_Static(winrt._winrt.Object_Static):
+class CustomXamlResourceLoader_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CustomXamlResourceLoader_Static: ...
     # Windows.UI.Xaml.Resources.CustomXamlResourceLoader Windows.UI.Xaml.Resources.CustomXamlResourceLoader::get_Current()
     @_property

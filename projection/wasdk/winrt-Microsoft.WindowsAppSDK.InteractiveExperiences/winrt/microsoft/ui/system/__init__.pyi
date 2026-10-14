@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui as microsoft_ui
 import winrt.windows.foundation as windows_foundation
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class ThemeSettings_Static(winrt._winrt.Object_Static):
+class ThemeSettings_Static(winrt.system.Object_Static):
     # Microsoft.UI.System.ThemeSettings Microsoft.UI.System.ThemeSettings::CreateForWindowId(Microsoft.UI.WindowId)
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> ThemeSettings: ...
 

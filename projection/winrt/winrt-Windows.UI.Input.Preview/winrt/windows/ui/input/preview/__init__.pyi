@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ui.input as windows_ui_input
 import winrt.windows.ui.windowmanagement as windows_ui_windowmanagement
@@ -12,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class InputActivationListenerPreview_Static(winrt._winrt.Object_Static):
+class InputActivationListenerPreview_Static(winrt.system.Object_Static):
     # Windows.UI.Input.InputActivationListener Windows.UI.Input.Preview.InputActivationListenerPreview::CreateForApplicationWindow(Windows.UI.WindowManagement.AppWindow)
     def create_for_application_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> windows_ui_input.InputActivationListener: ...
 

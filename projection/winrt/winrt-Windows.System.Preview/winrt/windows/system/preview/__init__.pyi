@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.sensors as windows_devices_sensors
 import winrt.windows.foundation as windows_foundation
@@ -28,7 +27,7 @@ class HingeState(enum.IntEnum):
     FULL = 5
 
 @typing.final
-class TwoPanelHingedDevicePosturePreview_Static(winrt._winrt.Object_Static):
+class TwoPanelHingedDevicePosturePreview_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.System.Preview.TwoPanelHingedDevicePosturePreview> Windows.System.Preview.TwoPanelHingedDevicePosturePreview::GetDefaultAsync()
     @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreview]: ...

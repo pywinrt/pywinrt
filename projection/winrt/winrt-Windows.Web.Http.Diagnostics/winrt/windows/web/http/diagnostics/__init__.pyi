@@ -7,7 +7,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -40,7 +39,7 @@ class HttpDiagnosticRequestInitiator(enum.IntEnum):
     BEACON = 12
 
 @typing.final
-class HttpDiagnosticProvider_Static(winrt._winrt.Object_Static):
+class HttpDiagnosticProvider_Static(winrt.system.Object_Static):
     # Windows.Web.Http.Diagnostics.HttpDiagnosticProvider Windows.Web.Http.Diagnostics.HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(Windows.System.Diagnostics.ProcessDiagnosticInfo)
     def create_from_process_diagnostic_info(cls, process_diagnostic_info: windows_system_diagnostics.ProcessDiagnosticInfo, /) -> HttpDiagnosticProvider: ...
 

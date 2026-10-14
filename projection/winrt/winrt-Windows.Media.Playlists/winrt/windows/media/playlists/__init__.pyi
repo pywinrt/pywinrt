@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -23,7 +22,7 @@ class PlaylistFormat(enum.IntEnum):
     M3U = 2
 
 @typing.final
-class Playlist_Static(winrt._winrt.Object_Static):
+class Playlist_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Playlists.Playlist> Windows.Media.Playlists.Playlist::LoadAsync(Windows.Storage.IStorageFile)
     def load_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[Playlist]: ...
 

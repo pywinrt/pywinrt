@@ -2,7 +2,6 @@
 
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions as windows_ai_actions
 import winrt.windows.foundation as windows_foundation

@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.graphics.imaging as microsoft_graphics_imaging
 import winrt.microsoft.windows.ai as microsoft_windows_ai
@@ -33,7 +32,7 @@ class VideoScalerStatus(enum.IntEnum):
     FAILURE = 7
 
 @typing.final
-class VideoScaler_Static(winrt._winrt.Object_Static):
+class VideoScaler_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Windows.AI.Video.VideoScaler> Microsoft.Windows.AI.Video.VideoScaler::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[VideoScaler]: ...
     # Windows.Foundation.IAsyncOperationWithProgress`2<Microsoft.Windows.AI.AIFeatureReadyResult,System.Double> Microsoft.Windows.AI.Video.VideoScaler::EnsureReadyAsync()

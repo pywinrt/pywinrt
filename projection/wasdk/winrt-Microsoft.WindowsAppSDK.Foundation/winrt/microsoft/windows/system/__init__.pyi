@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class EnvironmentManager_Static(winrt._winrt.Object_Static):
+class EnvironmentManager_Static(winrt.system.Object_Static):
     # Microsoft.Windows.System.EnvironmentManager Microsoft.Windows.System.EnvironmentManager::GetForMachine()
     def get_for_machine(cls) -> EnvironmentManager: ...
     # Microsoft.Windows.System.EnvironmentManager Microsoft.Windows.System.EnvironmentManager::GetForProcess()

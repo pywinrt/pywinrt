@@ -4,7 +4,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.imaging as windows_graphics_imaging
@@ -37,7 +36,7 @@ class NoteVisibilityChangedPreviewEventArgs(winrt.system.Object):
     def view_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class NotesWindowManagerPreview_Static(winrt._winrt.Object_Static):
+class NotesWindowManagerPreview_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview Windows.ApplicationModel.Preview.Notes.NotesWindowManagerPreview::GetForCurrentApp()
     def get_for_current_app(cls) -> NotesWindowManagerPreview: ...
 

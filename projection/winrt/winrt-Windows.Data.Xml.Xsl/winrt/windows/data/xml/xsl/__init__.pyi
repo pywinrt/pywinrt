@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.data.xml.dom as windows_data_xml_dom
 

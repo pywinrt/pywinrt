@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class ApplicationLanguages_Static(winrt._winrt.Object_Static):
+class ApplicationLanguages_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.Globalization.ApplicationLanguages::get_PrimaryLanguageOverride()
     @_property
     def primary_language_override(cls) -> str: ...

@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -143,7 +142,7 @@ class ResourceCandidateVectorView(_cabc.Sequence[ResourceCandidate], winrt.syste
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ResourceContext_Static(winrt._winrt.Object_Static):
+class ResourceContext_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Resources.Core.ResourceContext Windows.ApplicationModel.Resources.Core.ResourceContext::CreateMatchingContext(Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Resources.Core.ResourceQualifier>)
     def create_matching_context(cls, result: _cabc.Iterable[ResourceQualifier], /) -> ResourceContext: ...
     # Windows.ApplicationModel.Resources.Core.ResourceContext Windows.ApplicationModel.Resources.Core.ResourceContext::GetForCurrentView()
@@ -223,7 +222,7 @@ class ResourceContextLanguagesVectorView(_cabc.Sequence[str], winrt.system.Objec
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ResourceManager_Static(winrt._winrt.Object_Static):
+class ResourceManager_Static(winrt.system.Object_Static):
     # System.Boolean Windows.ApplicationModel.Resources.Core.ResourceManager::IsResourceReference(System.String)
     def is_resource_reference(cls, resource_reference: str, /) -> bool: ...
     # Windows.ApplicationModel.Resources.Core.ResourceManager Windows.ApplicationModel.Resources.Core.ResourceManager::get_Current()

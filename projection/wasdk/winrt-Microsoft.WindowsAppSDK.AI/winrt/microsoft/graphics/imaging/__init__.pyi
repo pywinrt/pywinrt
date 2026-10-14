@@ -5,7 +5,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.imaging as windows_graphics_imaging
@@ -25,7 +24,7 @@ class ImageBufferPixelFormat(enum.IntEnum):
     BGR8 = 137352
 
 @typing.final
-class ImageBuffer_Static(winrt._winrt.Object_Static):
+class ImageBuffer_Static(winrt.system.Object_Static):
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Graphics.Imaging.ImageBuffer::CreateForBuffer(Windows.Storage.Streams.IBuffer,Microsoft.Graphics.Imaging.ImageBufferPixelFormat,System.Int32,System.Int32,System.Int32)
     def create_for_buffer(cls, buffer: winrt.system.ReadableBuffer, pixel_format: ImageBufferPixelFormat, width: winrt.system.Int32 | typing.SupportsIndex, height: winrt.system.Int32 | typing.SupportsIndex, row_stride: winrt.system.Int32 | typing.SupportsIndex, /) -> ImageBuffer: ...
     # Microsoft.Graphics.Imaging.ImageBuffer Microsoft.Graphics.Imaging.ImageBuffer::CreateForSoftwareBitmap(Windows.Graphics.Imaging.SoftwareBitmap)

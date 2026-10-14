@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 
@@ -86,7 +85,7 @@ class CreatePackageDependencyOptions(winrt.system.Object):
     def architectures(self, value: PackageDependencyProcessorArchitectures) -> None: ...
 
 @typing.final
-class PackageDependency_Static(winrt._winrt.Object_Static):
+class PackageDependency_Static(winrt.system.Object_Static):
     @typing.overload
     # Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency::Create(System.String,Windows.ApplicationModel.PackageVersion)
     def create(cls, package_family_name: str, min_version: windows_applicationmodel.PackageVersion | tuple[winrt.system.UInt16 | typing.SupportsIndex, winrt.system.UInt16 | typing.SupportsIndex, winrt.system.UInt16 | typing.SupportsIndex, winrt.system.UInt16 | typing.SupportsIndex], /) -> PackageDependency: ...
@@ -138,7 +137,7 @@ class PackageDependencyContext(winrt.system.Object):
     def package_full_name(self) -> str: ...
 
 @typing.final
-class PackageDependencyRank_Static(winrt._winrt.Object_Static):
+class PackageDependencyRank_Static(winrt.system.Object_Static):
     # System.Int32 Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank::get_Default()
     @_property
     def default(cls) -> winrt.system.Int32: ...

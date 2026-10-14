@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -414,7 +413,7 @@ class WalletItemStore(winrt.system.Object):
     def update_async(self, item: WalletItem, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class WalletManager_Static(winrt._winrt.Object_Static):
+class WalletManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Wallet.WalletItemStore> Windows.ApplicationModel.Wallet.WalletManager::RequestStoreAsync()
     @deprecated("IWalletManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def request_store_async(cls) -> windows_foundation.IAsyncOperation[WalletItemStore]: ...

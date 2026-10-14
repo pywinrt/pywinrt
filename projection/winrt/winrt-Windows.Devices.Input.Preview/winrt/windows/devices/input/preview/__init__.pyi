@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.humaninterfacedevice as windows_devices_humaninterfacedevice
 import winrt.windows.foundation as windows_foundation
@@ -133,7 +132,7 @@ class GazeExitedPreviewEventArgs(winrt.system.Object):
     def current_point(self) -> GazePointPreview: ...
 
 @typing.final
-class GazeInputSourcePreview_Static(winrt._winrt.Object_Static):
+class GazeInputSourcePreview_Static(winrt.system.Object_Static):
     # Windows.Devices.Input.Preview.GazeDeviceWatcherPreview Windows.Devices.Input.Preview.GazeInputSourcePreview::CreateWatcher()
     def create_watcher(cls) -> GazeDeviceWatcherPreview: ...
     # Windows.Devices.Input.Preview.GazeInputSourcePreview Windows.Devices.Input.Preview.GazeInputSourcePreview::GetForCurrentView()

@@ -5,7 +5,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui as microsoft_ui
 import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
@@ -65,7 +64,7 @@ class DisplayAdvancedColorInfo(winrt.system.Object):
     def white_point(self) -> windows_foundation.Point: ...
 
 @typing.final
-class DisplayInformation_Static(winrt._winrt.Object_Static):
+class DisplayInformation_Static(winrt.system.Object_Static):
     # Microsoft.Graphics.Display.DisplayInformation Microsoft.Graphics.Display.DisplayInformation::CreateForDisplayId(Microsoft.UI.DisplayId)
     def create_for_display_id(cls, display_id: microsoft_ui.DisplayId | tuple[winrt.system.UInt64 | typing.SupportsIndex], /) -> DisplayInformation: ...
     # Microsoft.Graphics.Display.DisplayInformation Microsoft.Graphics.Display.DisplayInformation::CreateForWindowId(Microsoft.UI.WindowId)

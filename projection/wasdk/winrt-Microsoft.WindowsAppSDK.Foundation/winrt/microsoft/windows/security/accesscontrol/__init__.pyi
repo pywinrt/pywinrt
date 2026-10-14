@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -23,7 +22,7 @@ class AppContainerNameAndAccess:
     def unpack(self) -> tuple[str, winrt.system.UInt32]: ...
 
 @typing.final
-class SecurityDescriptorHelpers_Static(winrt._winrt.Object_Static):
+class SecurityDescriptorHelpers_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSddlForAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)
     def get_sddl_for_app_container_names(cls, access_requests: winrt.system.Array[AppContainerNameAndAccess] | winrt.system.ReadableBuffer, principal_string_sid: str, principal_access_mask: winrt.system.UInt32 | typing.SupportsIndex, /) -> str: ...
     # System.Byte[] Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers::GetSecurityDescriptorBytesFromAppContainerNames(Microsoft.Windows.Security.AccessControl.AppContainerNameAndAccess[],System.String,System.UInt32)

@@ -8,7 +8,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -311,7 +310,7 @@ class MediaFrameSourceGetPropertyResult(winrt.system.Object):
     def value(self) -> winrt.system.Object: ...
 
 @typing.final
-class MediaFrameSourceGroup_Static(winrt._winrt.Object_Static):
+class MediaFrameSourceGroup_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Media.Capture.Frames.MediaFrameSourceGroup>> Windows.Media.Capture.Frames.MediaFrameSourceGroup::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[MediaFrameSourceGroup]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Capture.Frames.MediaFrameSourceGroup> Windows.Media.Capture.Frames.MediaFrameSourceGroup::FromIdAsync(System.String)

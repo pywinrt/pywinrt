@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.core as windows_applicationmodel_core
 import winrt.windows.foundation as windows_foundation

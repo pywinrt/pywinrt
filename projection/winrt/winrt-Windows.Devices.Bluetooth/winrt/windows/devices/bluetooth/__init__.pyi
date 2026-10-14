@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.bluetooth.genericattributeprofile as windows_devices_bluetooth_genericattributeprofile
 import winrt.windows.devices.bluetooth.rfcomm as windows_devices_bluetooth_rfcomm
@@ -175,7 +174,7 @@ class BluetoothServiceCapabilities(enum.IntFlag):
     INFORMATION_SERVICE = 0x400
 
 @typing.final
-class BluetoothAdapter_Static(winrt._winrt.Object_Static):
+class BluetoothAdapter_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothAdapter> Windows.Devices.Bluetooth.BluetoothAdapter::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[BluetoothAdapter]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothAdapter> Windows.Devices.Bluetooth.BluetoothAdapter::GetDefaultAsync()
@@ -230,7 +229,7 @@ class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
     def is_low_energy_uncoded2_m_phy_supported(self) -> bool: ...
 
 @typing.final
-class BluetoothClassOfDevice_Static(winrt._winrt.Object_Static):
+class BluetoothClassOfDevice_Static(winrt.system.Object_Static):
     # Windows.Devices.Bluetooth.BluetoothClassOfDevice Windows.Devices.Bluetooth.BluetoothClassOfDevice::FromParts(Windows.Devices.Bluetooth.BluetoothMajorClass,Windows.Devices.Bluetooth.BluetoothMinorClass,Windows.Devices.Bluetooth.BluetoothServiceCapabilities)
     def from_parts(cls, major_class: BluetoothMajorClass, minor_class: BluetoothMinorClass, service_capabilities: BluetoothServiceCapabilities, /) -> BluetoothClassOfDevice: ...
     # Windows.Devices.Bluetooth.BluetoothClassOfDevice Windows.Devices.Bluetooth.BluetoothClassOfDevice::FromRawValue(System.UInt32)
@@ -254,7 +253,7 @@ class BluetoothClassOfDevice(winrt.system.Object, metaclass=BluetoothClassOfDevi
     def service_capabilities(self) -> BluetoothServiceCapabilities: ...
 
 @typing.final
-class BluetoothDevice_Static(winrt._winrt.Object_Static):
+class BluetoothDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothDevice> Windows.Devices.Bluetooth.BluetoothDevice::FromBluetoothAddressAsync(System.UInt64)
     def from_bluetooth_address_async(cls, address: winrt.system.UInt64 | typing.SupportsIndex, /) -> windows_foundation.IAsyncOperation[BluetoothDevice | None]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothDevice> Windows.Devices.Bluetooth.BluetoothDevice::FromHostNameAsync(Windows.Networking.HostName)
@@ -355,7 +354,7 @@ class BluetoothDevice(windows_foundation.IClosable, winrt.system.Object, metacla
     def was_secure_connection_used_for_pairing(self) -> bool: ...
 
 @typing.final
-class BluetoothDeviceId_Static(winrt._winrt.Object_Static):
+class BluetoothDeviceId_Static(winrt.system.Object_Static):
     # Windows.Devices.Bluetooth.BluetoothDeviceId Windows.Devices.Bluetooth.BluetoothDeviceId::FromId(System.String)
     def from_id(cls, device_id: str, /) -> BluetoothDeviceId: ...
 
@@ -374,7 +373,7 @@ class BluetoothDeviceId(winrt.system.Object, metaclass=BluetoothDeviceId_Static)
     def is_low_energy_device(self) -> bool: ...
 
 @typing.final
-class BluetoothLEAppearance_Static(winrt._winrt.Object_Static):
+class BluetoothLEAppearance_Static(winrt.system.Object_Static):
     # Windows.Devices.Bluetooth.BluetoothLEAppearance Windows.Devices.Bluetooth.BluetoothLEAppearance::FromParts(System.UInt16,System.UInt16)
     def from_parts(cls, appearance_category: winrt.system.UInt16 | typing.SupportsIndex, appearance_sub_category: winrt.system.UInt16 | typing.SupportsIndex, /) -> BluetoothLEAppearance: ...
     # Windows.Devices.Bluetooth.BluetoothLEAppearance Windows.Devices.Bluetooth.BluetoothLEAppearance::FromRawValue(System.UInt16)
@@ -395,7 +394,7 @@ class BluetoothLEAppearance(winrt.system.Object, metaclass=BluetoothLEAppearance
     def sub_category(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class BluetoothLEAppearanceCategories_Static(winrt._winrt.Object_Static):
+class BluetoothLEAppearanceCategories_Static(winrt.system.Object_Static):
     # System.UInt16 Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories::get_BarcodeScanner()
     @_property
     def barcode_scanner(cls) -> winrt.system.UInt16: ...
@@ -469,7 +468,7 @@ class BluetoothLEAppearanceCategories(winrt.system.Object, metaclass=BluetoothLE
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class BluetoothLEAppearanceSubcategories_Static(winrt._winrt.Object_Static):
+class BluetoothLEAppearanceSubcategories_Static(winrt.system.Object_Static):
     # System.UInt16 Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories::get_BarcodeScanner()
     @_property
     def barcode_scanner(cls) -> winrt.system.UInt16: ...
@@ -600,7 +599,7 @@ class BluetoothLEConnectionPhyInfo(winrt.system.Object):
     def is_uncoded2_m_phy(self) -> bool: ...
 
 @typing.final
-class BluetoothLEDevice_Static(winrt._winrt.Object_Static):
+class BluetoothLEDevice_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Bluetooth.BluetoothLEDevice> Windows.Devices.Bluetooth.BluetoothLEDevice::FromBluetoothAddressAsync(System.UInt64)
     def from_bluetooth_address_async(cls, bluetooth_address: winrt.system.UInt64 | typing.SupportsIndex, /) -> windows_foundation.IAsyncOperation[BluetoothLEDevice | None]: ...
@@ -729,7 +728,7 @@ class BluetoothLEDevice(windows_foundation.IClosable, winrt.system.Object, metac
     def was_secure_connection_used_for_pairing(self) -> bool: ...
 
 @typing.final
-class BluetoothLEPreferredConnectionParameters_Static(winrt._winrt.Object_Static):
+class BluetoothLEPreferredConnectionParameters_Static(winrt.system.Object_Static):
     # Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters::get_Balanced()
     @_property
     def balanced(cls) -> BluetoothLEPreferredConnectionParameters: ...
@@ -798,7 +797,7 @@ class BluetoothSignalStrengthFilter(winrt.system.Object):
     def in_range_threshold_in_dbm(self, value: winrt.system.Int16 | None) -> None: ...
 
 @typing.final
-class BluetoothUuidHelper_Static(winrt._winrt.Object_Static):
+class BluetoothUuidHelper_Static(winrt.system.Object_Static):
     # System.Guid Windows.Devices.Bluetooth.BluetoothUuidHelper::FromShortId(System.UInt32)
     def from_short_id(cls, short_id: winrt.system.UInt32 | typing.SupportsIndex, /) -> _uuid.UUID: ...
     # Windows.Foundation.IReference`1<System.UInt32> Windows.Devices.Bluetooth.BluetoothUuidHelper::TryGetShortId(System.Guid)

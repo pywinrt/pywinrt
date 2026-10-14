@@ -5,7 +5,6 @@ import datetime
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -20,7 +19,7 @@ __all__ = [
 ]
 
 @typing.final
-class LockApplicationHost_Static(winrt._winrt.Object_Static):
+class LockApplicationHost_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.LockScreen.LockApplicationHost Windows.ApplicationModel.LockScreen.LockApplicationHost::GetForCurrentView()
     def get_for_current_view(cls) -> LockApplicationHost: ...
 

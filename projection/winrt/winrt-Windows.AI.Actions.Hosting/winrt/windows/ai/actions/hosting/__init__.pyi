@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions as windows_ai_actions
 import winrt.windows.foundation as windows_foundation

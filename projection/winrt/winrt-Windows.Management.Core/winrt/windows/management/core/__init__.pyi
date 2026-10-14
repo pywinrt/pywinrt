@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.storage as windows_storage
 
@@ -11,7 +10,7 @@ __all__ = [
 ]
 
 @typing.final
-class ApplicationDataManager_Static(winrt._winrt.Object_Static):
+class ApplicationDataManager_Static(winrt.system.Object_Static):
     # Windows.Storage.ApplicationData Windows.Management.Core.ApplicationDataManager::CreateForPackageFamily(System.String)
     def create_for_package_family(cls, package_family_name: str, /) -> windows_storage.ApplicationData: ...
 

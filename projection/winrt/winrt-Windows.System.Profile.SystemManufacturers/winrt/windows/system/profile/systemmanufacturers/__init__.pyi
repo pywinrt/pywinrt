@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -29,7 +28,7 @@ class OemSupportInfo(winrt.system.Object):
     def support_provider(self) -> str: ...
 
 @typing.final
-class SmbiosInformation_Static(winrt._winrt.Object_Static):
+class SmbiosInformation_Static(winrt.system.Object_Static):
     # System.String Windows.System.Profile.SystemManufacturers.SmbiosInformation::get_SerialNumber()
     @_property
     def serial_number(cls) -> str: ...
@@ -66,7 +65,7 @@ class SystemSupportDeviceInfo(winrt.system.Object):
     def system_sku(self) -> str: ...
 
 @typing.final
-class SystemSupportInfo_Static(winrt._winrt.Object_Static):
+class SystemSupportInfo_Static(winrt.system.Object_Static):
     # System.String Windows.System.Profile.SystemManufacturers.SystemSupportInfo::get_LocalSystemEdition()
     @_property
     def local_system_edition(cls) -> str: ...

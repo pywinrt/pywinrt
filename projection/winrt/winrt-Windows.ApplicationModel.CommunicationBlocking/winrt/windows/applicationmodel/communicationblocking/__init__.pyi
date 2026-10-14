@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -15,7 +14,7 @@ __all__ = [
 ]
 
 @typing.final
-class CommunicationBlockingAccessManager_Static(winrt._winrt.Object_Static):
+class CommunicationBlockingAccessManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::IsBlockedNumberAsync(System.String)
     def is_blocked_number_async(cls, number: str, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Boolean Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager::ShowBlockNumbersUI(Windows.Foundation.Collections.IIterable`1<System.String>)
@@ -36,7 +35,7 @@ class CommunicationBlockingAccessManager(winrt.system.Object, metaclass=Communic
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class CommunicationBlockingAppManager_Static(winrt._winrt.Object_Static):
+class CommunicationBlockingAppManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::RequestSetAsActiveBlockingAppAsync()
     def request_set_as_active_blocking_app_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...
     # System.Void Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager::ShowCommunicationBlockingSettingsUI()

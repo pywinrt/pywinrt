@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -117,7 +116,7 @@ class MdmSession(winrt.system.Object):
     def state(self) -> MdmSessionState: ...
 
 @typing.final
-class MdmSessionManager_Static(winrt._winrt.Object_Static):
+class MdmSessionManager_Static(winrt.system.Object_Static):
     # System.Void Windows.Management.MdmSessionManager::DeleteSessionById(System.String)
     def delete_session_by_id(cls, session_id: str, /) -> None: ...
     # Windows.Management.MdmSession Windows.Management.MdmSessionManager::GetSessionById(System.String)

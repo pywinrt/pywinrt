@@ -4,7 +4,6 @@ import enum
 import typing
 import uuid as _uuid
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.storage as windows_storage
 
@@ -24,7 +23,7 @@ class ServiceDeviceType(enum.IntEnum):
     TASKS_SERVICE = 6
 
 @typing.final
-class ServiceDevice_Static(winrt._winrt.Object_Static):
+class ServiceDevice_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Portable.ServiceDevice::GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)
     def get_device_selector(cls, service_type: ServiceDeviceType, /) -> str: ...
     # System.String Windows.Devices.Portable.ServiceDevice::GetDeviceSelectorFromServiceId(System.Guid)
@@ -36,7 +35,7 @@ class ServiceDevice(winrt.system.Object, metaclass=ServiceDevice_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class StorageDevice_Static(winrt._winrt.Object_Static):
+class StorageDevice_Static(winrt.system.Object_Static):
     # Windows.Storage.StorageFolder Windows.Devices.Portable.StorageDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> windows_storage.StorageFolder: ...
     # System.String Windows.Devices.Portable.StorageDevice::GetDeviceSelector()

@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -88,7 +87,7 @@ class FileExtensionVector(_cabc.MutableSequence[str], winrt.system.Object):
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class FileOpenPicker_Static(winrt._winrt.Object_Static):
+class FileOpenPicker_Static(winrt.system.Object_Static):
     # Windows.Storage.Pickers.FileOpenPicker Windows.Storage.Pickers.FileOpenPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FileOpenPicker: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFile> Windows.Storage.Pickers.FileOpenPicker::ResumePickSingleFileAsync()
@@ -199,7 +198,7 @@ class FilePickerSelectedFilesArray(_cabc.Sequence[windows_storage.StorageFile], 
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class FileSavePicker_Static(winrt._winrt.Object_Static):
+class FileSavePicker_Static(winrt.system.Object_Static):
     # Windows.Storage.Pickers.FileSavePicker Windows.Storage.Pickers.FileSavePicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FileSavePicker: ...
 
@@ -264,7 +263,7 @@ class FileSavePicker(winrt.system.Object, metaclass=FileSavePicker_Static):
     def user(self) -> windows_system.User: ...
 
 @typing.final
-class FolderPicker_Static(winrt._winrt.Object_Static):
+class FolderPicker_Static(winrt.system.Object_Static):
     # Windows.Storage.Pickers.FolderPicker Windows.Storage.Pickers.FolderPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> FolderPicker: ...
 

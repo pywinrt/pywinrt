@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -1030,7 +1029,7 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class FlyoutShowOptions_Static(winrt._winrt.Object_Static):
+class FlyoutShowOptions_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> FlyoutShowOptions_Static: ...
 
 class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
@@ -1066,7 +1065,7 @@ class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static)
     def exclusion_rect(self, value: windows_foundation.Rect | None) -> None: ...
 
 @typing.final
-class GeneratorPositionHelper_Static(winrt._winrt.Object_Static):
+class GeneratorPositionHelper_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.Controls.Primitives.GeneratorPosition Windows.UI.Xaml.Controls.Primitives.GeneratorPositionHelper::FromIndexAndOffset(System.Int32,System.Int32)
     def from_index_and_offset(cls, index: winrt.system.Int32 | typing.SupportsIndex, offset: winrt.system.Int32 | typing.SupportsIndex, /) -> GeneratorPosition: ...
 
@@ -1418,7 +1417,7 @@ class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_
     def disabled(self, value: windows_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
-class LayoutInformation_Static(winrt._winrt.Object_Static):
+class LayoutInformation_Static(winrt.system.Object_Static):
     # Windows.Foundation.Size Windows.UI.Xaml.Controls.Primitives.LayoutInformation::GetAvailableSize(Windows.UI.Xaml.UIElement)
     def get_available_size(cls, element: windows_ui_xaml.UIElement, /) -> windows_foundation.Size: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Controls.Primitives.LayoutInformation::GetLayoutExceptionElement(System.Object)

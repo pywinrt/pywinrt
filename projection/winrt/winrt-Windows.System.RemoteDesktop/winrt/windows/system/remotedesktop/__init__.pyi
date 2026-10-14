@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -11,7 +10,7 @@ __all__ = [
 ]
 
 @typing.final
-class InteractiveSession_Static(winrt._winrt.Object_Static):
+class InteractiveSession_Static(winrt.system.Object_Static):
     # System.Boolean Windows.System.RemoteDesktop.InteractiveSession::get_IsRemote()
     @_property
     def is_remote(cls) -> bool: ...

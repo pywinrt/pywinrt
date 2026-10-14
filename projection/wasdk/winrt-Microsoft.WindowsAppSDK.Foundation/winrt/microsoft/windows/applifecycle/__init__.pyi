@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.core as windows_applicationmodel_core
 import winrt.windows.foundation as windows_foundation
@@ -67,7 +66,7 @@ class ExtendedActivationKind(enum.IntEnum):
     APP_NOTIFICATION = 5001
 
 @typing.final
-class ActivationRegistrationManager_Static(winrt._winrt.Object_Static):
+class ActivationRegistrationManager_Static(winrt.system.Object_Static):
     # System.Void Microsoft.Windows.AppLifecycle.ActivationRegistrationManager::RegisterForFileTypeActivation(System.String[],System.String,System.String,System.String[],System.String)
     def register_for_file_type_activation(cls, supported_file_types: winrt.system.Array[str] | winrt.system.ReadableBuffer, logo: str, display_name: str, supported_verbs: winrt.system.Array[str] | winrt.system.ReadableBuffer, exe_path: str, /) -> None: ...
     # System.Void Microsoft.Windows.AppLifecycle.ActivationRegistrationManager::RegisterForProtocolActivation(System.String,System.String,System.String,System.String)
@@ -98,7 +97,7 @@ class AppActivationArguments(winrt.system.Object):
     def kind(self) -> ExtendedActivationKind: ...
 
 @typing.final
-class AppInstance_Static(winrt._winrt.Object_Static):
+class AppInstance_Static(winrt.system.Object_Static):
     # Microsoft.Windows.AppLifecycle.AppInstance Microsoft.Windows.AppLifecycle.AppInstance::FindOrRegisterForKey(System.String)
     def find_or_register_for_key(cls, key: str, /) -> AppInstance: ...
     # Microsoft.Windows.AppLifecycle.AppInstance Microsoft.Windows.AppLifecycle.AppInstance::GetCurrent()

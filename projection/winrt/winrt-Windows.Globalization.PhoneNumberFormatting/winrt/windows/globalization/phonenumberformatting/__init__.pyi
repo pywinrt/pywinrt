@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -52,7 +51,7 @@ class PredictedPhoneNumberKind(enum.IntEnum):
     UNKNOWN = 11
 
 @typing.final
-class PhoneNumberFormatter_Static(winrt._winrt.Object_Static):
+class PhoneNumberFormatter_Static(winrt.system.Object_Static):
     # System.Int32 Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::GetCountryCodeForRegion(System.String)
     def get_country_code_for_region(cls, region_code: str, /) -> winrt.system.Int32: ...
     # System.String Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter::GetNationalDirectDialingPrefixForRegion(System.String,System.Boolean)
@@ -83,7 +82,7 @@ class PhoneNumberFormatter(winrt.system.Object, metaclass=PhoneNumberFormatter_S
     def format_string_with_left_to_right_markers(self, number: str, /) -> str: ...
 
 @typing.final
-class PhoneNumberInfo_Static(winrt._winrt.Object_Static):
+class PhoneNumberInfo_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo::TryParse(System.String,Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo&)
     def try_parse(cls, input: str, /) -> tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...

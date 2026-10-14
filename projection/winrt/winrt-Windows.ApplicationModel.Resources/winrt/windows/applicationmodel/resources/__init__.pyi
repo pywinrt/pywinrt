@@ -3,7 +3,6 @@
 import typing
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui as windows_ui
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class ResourceLoader_Static(winrt._winrt.Object_Static):
+class ResourceLoader_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.Resources.ResourceLoader::GetDefaultPriPath(System.String)
     def get_default_pri_path(cls, package_full_name: str, /) -> str: ...
     @typing.overload

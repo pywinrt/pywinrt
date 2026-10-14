@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -194,7 +193,7 @@ class ChatCapabilities(winrt.system.Object):
     def is_online(self) -> bool: ...
 
 @typing.final
-class ChatCapabilitiesManager_Static(winrt._winrt.Object_Static):
+class ChatCapabilitiesManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatCapabilities> Windows.ApplicationModel.Chat.ChatCapabilitiesManager::GetCachedCapabilitiesAsync(System.String)
     def get_cached_capabilities_async(cls, address: str, /) -> windows_foundation.IAsyncOperation[ChatCapabilities]: ...
@@ -530,7 +529,7 @@ class ChatMessageAttachment(winrt.system.Object):
     def original_file_name(self, value: str) -> None: ...
 
 @typing.final
-class ChatMessageBlocking_Static(winrt._winrt.Object_Static):
+class ChatMessageBlocking_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Chat.ChatMessageBlocking::MarkMessageAsBlockedAsync(System.String,System.Boolean)
     def mark_message_as_blocked_async(cls, local_chat_message_id: str, blocked: bool, /) -> windows_foundation.IAsyncAction: ...
 
@@ -587,7 +586,7 @@ class ChatMessageChangedEventArgs(winrt.system.Object):
     def get_deferral(self) -> ChatMessageChangedDeferral: ...
 
 @typing.final
-class ChatMessageManager_Static(winrt._winrt.Object_Static):
+class ChatMessageManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.ChatMessageTransport> Windows.ApplicationModel.Chat.ChatMessageManager::GetTransportAsync(System.String)
     def get_transport_async(cls, transport_id: str, /) -> windows_foundation.IAsyncOperation[ChatMessageTransport]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Chat.ChatMessageTransport>> Windows.ApplicationModel.Chat.ChatMessageManager::GetTransportsAsync()
@@ -977,7 +976,7 @@ class RcsEndUserMessageManager(winrt.system.Object):
     def remove_message_available_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class RcsManager_Static(winrt._winrt.Object_Static):
+class RcsManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Chat.RcsEndUserMessageManager Windows.ApplicationModel.Chat.RcsManager::GetEndUserMessageManager()
     def get_end_user_message_manager(cls) -> RcsEndUserMessageManager: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Chat.RcsTransport> Windows.ApplicationModel.Chat.RcsManager::GetTransportAsync(System.String)

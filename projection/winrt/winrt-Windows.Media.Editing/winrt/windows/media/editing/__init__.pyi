@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -40,7 +39,7 @@ class VideoFramePrecision(enum.IntEnum):
     NEAREST_KEY_FRAME = 1
 
 @typing.final
-class BackgroundAudioTrack_Static(winrt._winrt.Object_Static):
+class BackgroundAudioTrack_Static(winrt.system.Object_Static):
     # Windows.Media.Editing.BackgroundAudioTrack Windows.Media.Editing.BackgroundAudioTrack::CreateFromEmbeddedAudioTrack(Windows.Media.Editing.EmbeddedAudioTrack)
     def create_from_embedded_audio_track(cls, embedded_audio_track: EmbeddedAudioTrack, /) -> BackgroundAudioTrack: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.BackgroundAudioTrack> Windows.Media.Editing.BackgroundAudioTrack::CreateFromFileAsync(Windows.Storage.IStorageFile)
@@ -99,7 +98,7 @@ class EmbeddedAudioTrack(winrt.system.Object):
     def get_audio_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
 
 @typing.final
-class MediaClip_Static(winrt._winrt.Object_Static):
+class MediaClip_Static(winrt.system.Object_Static):
     # Windows.Media.Editing.MediaClip Windows.Media.Editing.MediaClip::CreateFromColor(Windows.UI.Color,Windows.Foundation.TimeSpan)
     def create_from_color(cls, color: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex], original_duration: datetime.timedelta, /) -> MediaClip: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.MediaClip> Windows.Media.Editing.MediaClip::CreateFromFileAsync(Windows.Storage.IStorageFile)
@@ -167,7 +166,7 @@ class MediaClip(winrt.system.Object, metaclass=MediaClip_Static):
     def audio_effect_definitions(self) -> _cabc.MutableSequence[windows_media_effects.IAudioEffectDefinition]: ...
 
 @typing.final
-class MediaComposition_Static(winrt._winrt.Object_Static):
+class MediaComposition_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Editing.MediaComposition> Windows.Media.Editing.MediaComposition::LoadAsync(Windows.Storage.StorageFile)
     def load_async(cls, file: windows_storage.StorageFile, /) -> windows_foundation.IAsyncOperation[MediaComposition]: ...
 

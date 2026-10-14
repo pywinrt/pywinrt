@@ -3,7 +3,6 @@
 import enum
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.storage.streams as windows_storage_streams
 
@@ -18,7 +17,7 @@ class BinaryStringEncoding(enum.IntEnum):
     UTF16_B_E = 2
 
 @typing.final
-class CryptographicBuffer_Static(winrt._winrt.Object_Static):
+class CryptographicBuffer_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Security.Cryptography.CryptographicBuffer::Compare(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
     def compare(cls, object1: winrt.system.ReadableBuffer, object2: winrt.system.ReadableBuffer, /) -> bool: ...
     # System.String Windows.Security.Cryptography.CryptographicBuffer::ConvertBinaryToString(Windows.Security.Cryptography.BinaryStringEncoding,Windows.Storage.Streams.IBuffer)

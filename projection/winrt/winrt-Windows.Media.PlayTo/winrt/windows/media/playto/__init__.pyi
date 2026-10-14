@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -135,7 +134,7 @@ class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     def previous_source(self) -> PlayToSource: ...
 
 @typing.final
-class PlayToManager_Static(winrt._winrt.Object_Static):
+class PlayToManager_Static(winrt.system.Object_Static):
     # Windows.Media.PlayTo.PlayToManager Windows.Media.PlayTo.PlayToManager::GetForCurrentView()
     @deprecated("PlayToManager may be altered or unavailable for releases after Windows 10.")
     def get_for_current_view(cls) -> PlayToManager: ...

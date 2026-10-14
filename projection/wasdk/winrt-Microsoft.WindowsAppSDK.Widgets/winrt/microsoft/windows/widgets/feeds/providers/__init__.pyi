@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.windows.widgets.notifications as microsoft_windows_widgets_notifications
 import winrt.windows.foundation as windows_foundation
@@ -107,7 +106,7 @@ class FeedErrorInfoReportedArgs(winrt.system.Object):
     def feed_provider_definition_id(self) -> str: ...
 
 @typing.final
-class FeedManager_Static(winrt._winrt.Object_Static):
+class FeedManager_Static(winrt.system.Object_Static):
     # Microsoft.Windows.Widgets.Feeds.Providers.FeedManager Microsoft.Windows.Widgets.Feeds.Providers.FeedManager::GetDefault()
     def get_default(cls) -> FeedManager: ...
 

@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -724,7 +723,7 @@ class AppBroadcastHeartbeatRequestedEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class AppBroadcastManager_Static(winrt._winrt.Object_Static):
+class AppBroadcastManager_Static(winrt.system.Object_Static):
     # System.Void Windows.Media.Capture.AppBroadcastManager::ApplyGlobalSettings(Windows.Media.Capture.AppBroadcastGlobalSettings)
     def apply_global_settings(cls, value: AppBroadcastGlobalSettings, /) -> None: ...
     # System.Void Windows.Media.Capture.AppBroadcastManager::ApplyProviderSettings(Windows.Media.Capture.AppBroadcastProviderSettings)
@@ -768,7 +767,7 @@ class AppBroadcastPlugIn(winrt.system.Object):
     def provider_settings(self) -> AppBroadcastProviderSettings: ...
 
 @typing.final
-class AppBroadcastPlugInManager_Static(winrt._winrt.Object_Static):
+class AppBroadcastPlugInManager_Static(winrt.system.Object_Static):
     # Windows.Media.Capture.AppBroadcastPlugInManager Windows.Media.Capture.AppBroadcastPlugInManager::GetDefault()
     def get_default(cls) -> AppBroadcastPlugInManager: ...
     # Windows.Media.Capture.AppBroadcastPlugInManager Windows.Media.Capture.AppBroadcastPlugInManager::GetForUser(Windows.System.User)
@@ -1210,7 +1209,7 @@ class AppBroadcastViewerCountChangedEventArgs(winrt.system.Object):
     def viewer_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class AppCapture_Static(winrt._winrt.Object_Static):
+class AppCapture_Static(winrt.system.Object_Static):
     # Windows.Media.Capture.AppCapture Windows.Media.Capture.AppCapture::GetForCurrentView()
     def get_for_current_view(cls) -> AppCapture: ...
     # Windows.Foundation.IAsyncAction Windows.Media.Capture.AppCapture::SetAllowedAsync(System.Boolean)
@@ -1349,7 +1348,7 @@ class AppCaptureFileGeneratedEventArgs(winrt.system.Object):
     def file(self) -> windows_storage.StorageFile: ...
 
 @typing.final
-class AppCaptureManager_Static(winrt._winrt.Object_Static):
+class AppCaptureManager_Static(winrt.system.Object_Static):
     # System.Void Windows.Media.Capture.AppCaptureManager::ApplySettings(Windows.Media.Capture.AppCaptureSettings)
     def apply_settings(cls, app_capture_settings: AppCaptureSettings, /) -> None: ...
     # Windows.Media.Capture.AppCaptureSettings Windows.Media.Capture.AppCaptureManager::GetCurrentSettings()
@@ -1733,7 +1732,7 @@ class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
     def allow_trimming(self, value: bool) -> None: ...
 
 @typing.final
-class CameraOptionsUI_Static(winrt._winrt.Object_Static):
+class CameraOptionsUI_Static(winrt.system.Object_Static):
     # System.Void Windows.Media.Capture.CameraOptionsUI::Show(Windows.Media.Capture.MediaCapture)
     def show(cls, media_capture: MediaCapture, /) -> None: ...
 
@@ -1896,7 +1895,7 @@ class GameBarServicesCommandEventArgs(winrt.system.Object):
     def origin(self) -> GameBarCommandOrigin: ...
 
 @typing.final
-class GameBarServicesManager_Static(winrt._winrt.Object_Static):
+class GameBarServicesManager_Static(winrt.system.Object_Static):
     # Windows.Media.Capture.GameBarServicesManager Windows.Media.Capture.GameBarServicesManager::GetDefault()
     def get_default(cls) -> GameBarServicesManager: ...
 
@@ -1978,7 +1977,7 @@ class LowLagPhotoSequenceCapture(winrt.system.Object):
     def remove_photo_captured(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class MediaCapture_Static(winrt._winrt.Object_Static):
+class MediaCapture_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Capture.MediaCaptureVideoProfile> Windows.Media.Capture.MediaCapture::FindAllVideoProfiles(System.String)
     def find_all_video_profiles(cls, video_device_id: str, /) -> _cabc.Sequence[MediaCaptureVideoProfile]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Capture.MediaCaptureVideoProfile> Windows.Media.Capture.MediaCapture::FindConcurrentProfiles(System.String)

@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
 import winrt.windows.applicationmodel.calls.background as windows_applicationmodel_calls_background
@@ -252,7 +251,7 @@ class ActivitySensorTrigger(IBackgroundTrigger, winrt.system.Object):
     def supported_activities(self) -> _cabc.Sequence[windows_devices_sensors.ActivityType]: ...
 
 @typing.final
-class AlarmApplicationManager_Static(winrt._winrt.Object_Static):
+class AlarmApplicationManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Background.AlarmAccessStatus Windows.ApplicationModel.Background.AlarmApplicationManager::GetAccessStatus()
     def get_access_status(cls) -> AlarmAccessStatus: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.AlarmAccessStatus> Windows.ApplicationModel.Background.AlarmApplicationManager::RequestAccessAsync()
@@ -341,7 +340,7 @@ class AppointmentStoreNotificationTrigger(IBackgroundTrigger, winrt.system.Objec
     def __new__(cls) -> typing.Self: ...
 
 @typing.final
-class BackgroundExecutionManager_Static(winrt._winrt.Object_Static):
+class BackgroundExecutionManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.ApplicationModel.Background.BackgroundAccessStatus Windows.ApplicationModel.Background.BackgroundExecutionManager::GetAccessStatus()
     def get_access_status(cls) -> BackgroundAccessStatus: ...
@@ -393,7 +392,7 @@ class BackgroundExecutionManager(winrt.system.Object, metaclass=BackgroundExecut
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class BackgroundTaskBuilder_Static(winrt._winrt.Object_Static):
+class BackgroundTaskBuilder_Static(winrt.system.Object_Static):
     # System.Boolean Windows.ApplicationModel.Background.BackgroundTaskBuilder::get_IsRunningTaskInStandbySupported()
     @_property
     def is_running_task_in_standby_supported(cls) -> bool: ...
@@ -481,7 +480,7 @@ class BackgroundTaskProgressEventArgs(winrt.system.Object):
     def progress(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class BackgroundTaskRegistration_Static(winrt._winrt.Object_Static):
+class BackgroundTaskRegistration_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup Windows.ApplicationModel.Background.BackgroundTaskRegistration::GetTaskGroup(System.String)
     def get_task_group(cls, group_id: str, /) -> BackgroundTaskRegistrationGroup: ...
     # Windows.Foundation.Collections.IMapView`2<System.Guid,Windows.ApplicationModel.Background.IBackgroundTaskRegistration> Windows.ApplicationModel.Background.BackgroundTaskRegistration::get_AllTasks()
@@ -545,7 +544,7 @@ class BackgroundTaskRegistrationGroup(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class BackgroundWorkCost_Static(winrt._winrt.Object_Static):
+class BackgroundWorkCost_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Background.BackgroundWorkCostValue Windows.ApplicationModel.Background.BackgroundWorkCost::get_CurrentBackgroundWorkCost()
     @_property
     def current_background_work_cost(cls) -> BackgroundWorkCostValue: ...
@@ -718,7 +717,7 @@ class CustomSystemEventTrigger(IBackgroundTrigger, winrt.system.Object):
     def trigger_id(self) -> str: ...
 
 @typing.final
-class DeviceConnectionChangeTrigger_Static(winrt._winrt.Object_Static):
+class DeviceConnectionChangeTrigger_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger> Windows.ApplicationModel.Background.DeviceConnectionChangeTrigger::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[DeviceConnectionChangeTrigger]: ...
 
@@ -811,7 +810,7 @@ class GattCharacteristicNotificationTrigger(IBackgroundTrigger, winrt.system.Obj
     def event_triggering_mode(self) -> windows_devices_bluetooth_background.BluetoothEventTriggeringMode: ...
 
 @typing.final
-class GattServiceProviderTrigger_Static(winrt._winrt.Object_Static):
+class GattServiceProviderTrigger_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Background.GattServiceProviderTriggerResult> Windows.ApplicationModel.Background.GattServiceProviderTrigger::CreateAsync(System.String,System.Guid)
     def create_async(cls, trigger_id: str, service_uuid: _uuid.UUID, /) -> windows_foundation.IAsyncOperation[GattServiceProviderTriggerResult]: ...
 
@@ -1004,7 +1003,7 @@ class StorageLibraryChangeTrackerTrigger(IBackgroundTrigger, winrt.system.Object
     def __new__(cls, tracker: windows_storage.StorageLibraryChangeTracker, /) -> typing.Self: ...
 
 @typing.final
-class StorageLibraryContentChangedTrigger_Static(winrt._winrt.Object_Static):
+class StorageLibraryContentChangedTrigger_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger::Create(Windows.Storage.StorageLibrary)
     def create(cls, storage_library: windows_storage.StorageLibrary, /) -> StorageLibraryContentChangedTrigger: ...
     # Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger Windows.ApplicationModel.Background.StorageLibraryContentChangedTrigger::CreateFromLibraries(Windows.Foundation.Collections.IIterable`1<Windows.Storage.StorageLibrary>)

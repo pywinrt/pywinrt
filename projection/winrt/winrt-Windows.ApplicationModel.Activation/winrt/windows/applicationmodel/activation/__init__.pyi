@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appointments.appointmentsprovider as windows_applicationmodel_appointments_appointmentsprovider
 import winrt.windows.applicationmodel.background as windows_applicationmodel_background

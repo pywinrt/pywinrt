@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.graphics.directx as microsoft_graphics_directx
 import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
@@ -529,7 +528,7 @@ class CompositionAnimationGroup(CompositionObject, ICompositionAnimationBase):
     def count(self) -> winrt.system.Int32: ...
 
 @typing.final
-class CompositionApiInformation_Static(winrt._winrt.Object_Static):
+class CompositionApiInformation_Static(winrt.system.Object_Static):
     # System.UInt64 Microsoft.UI.Composition.CompositionApiInformation::get_ApiVersion()
     @_property
     def api_version(cls) -> winrt.system.UInt64: ...
@@ -839,7 +838,7 @@ class CompositionEllipseGeometry(CompositionGeometry):
     def center(self, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class CompositionEngine_Static(winrt._winrt.Object_Static):
+class CompositionEngine_Static(winrt.system.Object_Static):
     # System.Object Microsoft.UI.Composition.CompositionEngine::GetForInProcessEngine(System.Object)
     def get_for_in_process_engine(cls, composition_object: winrt.system.Object, /) -> winrt.system.Object: ...
     # System.Object Microsoft.UI.Composition.CompositionEngine::GetForSystemEngine(System.Object)
@@ -1168,7 +1167,7 @@ class CompositionNineGridBrush(CompositionBrush):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
-class CompositionObject_Static(winrt._winrt.Object_Static):
+class CompositionObject_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CompositionObject_Static: ...
     # System.Void Microsoft.UI.Composition.CompositionObject::StartAnimationGroupWithIAnimationObject(Microsoft.UI.Composition.IAnimationObject,Microsoft.UI.Composition.ICompositionAnimationBase)
     def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
@@ -1863,7 +1862,7 @@ class CompositionVisualSurface(CompositionObject, ICompositionSurface):
     def source_offset(self, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class Compositor_Static(winrt._winrt.Object_Static):
+class Compositor_Static(winrt.system.Object_Static):
     # System.Single Microsoft.UI.Composition.Compositor::get_MaxGlobalPlaybackRate()
     @_property
     def max_global_playback_rate(cls) -> winrt.system.Single: ...

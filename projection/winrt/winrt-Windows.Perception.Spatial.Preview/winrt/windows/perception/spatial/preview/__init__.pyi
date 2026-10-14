@@ -5,7 +5,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.numerics as windows_foundation_numerics
 import winrt.windows.perception.spatial as windows_perception_spatial
@@ -30,7 +29,7 @@ class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
     def node_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class SpatialGraphInteropPreview_Static(winrt._winrt.Object_Static):
+class SpatialGraphInteropPreview_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Perception.Spatial.SpatialCoordinateSystem Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview::CreateCoordinateSystemForNode(System.Guid)
     def create_coordinate_system_for_node(cls, node_id: _uuid.UUID, /) -> windows_perception_spatial.SpatialCoordinateSystem: ...

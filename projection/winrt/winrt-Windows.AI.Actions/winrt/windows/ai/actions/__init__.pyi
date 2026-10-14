@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.ai.actions.hosting as windows_ai_actions_hosting
 import winrt.windows.applicationmodel.appointments as windows_applicationmodel_appointments
@@ -90,7 +89,7 @@ class RemoteFileKind(enum.IntEnum):
     PHOTO = 1
     FILE = 2
 
-class ActionEntity_Static(winrt._winrt.Object_Static):
+class ActionEntity_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ActionEntity_Static: ...
 
 class ActionEntity(windows_foundation.IClosable, winrt.system.Object, metaclass=ActionEntity_Static):
@@ -126,7 +125,7 @@ class ActionEntityDisplayInfo(windows_foundation.IClosable, winrt.system.Object)
     @_property
     def title(self) -> str: ...
 
-class ActionEntityFactory_Static(winrt._winrt.Object_Static):
+class ActionEntityFactory_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ActionEntityFactory_Static: ...
 
 class ActionEntityFactory(windows_foundation.IClosable, winrt.system.Object, metaclass=ActionEntityFactory_Static):
@@ -288,7 +287,7 @@ class ActionInvocationHelpDetails(windows_foundation.IClosable, winrt.system.Obj
     @description.setter
     def description(self, value: str) -> None: ...
 
-class ActionRuntime_Static(winrt._winrt.Object_Static):
+class ActionRuntime_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ActionRuntime_Static: ...
     # Windows.AI.Actions.ActionRuntime Windows.AI.Actions.ActionRuntime::GetDefault()
     def get_default(cls) -> ActionRuntime: ...
@@ -381,7 +380,7 @@ class ContactActionEntity(ActionEntity):
     @_property
     def contact(self) -> windows_applicationmodel_contacts.Contact: ...
 
-class CustomActionEntityStore_Static(winrt._winrt.Object_Static):
+class CustomActionEntityStore_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CustomActionEntityStore_Static: ...
 
 class CustomActionEntityStore(windows_foundation.IClosable, winrt.system.Object, metaclass=CustomActionEntityStore_Static):

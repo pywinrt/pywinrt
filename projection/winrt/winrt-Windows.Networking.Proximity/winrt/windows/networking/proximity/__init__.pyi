@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -67,7 +66,7 @@ class ConnectionRequestedEventArgs(winrt.system.Object):
     def peer_information(self) -> PeerInformation: ...
 
 @typing.final
-class PeerFinder_Static(winrt._winrt.Object_Static):
+class PeerFinder_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Sockets.StreamSocket> Windows.Networking.Proximity.PeerFinder::ConnectAsync(Windows.Networking.Proximity.PeerInformation)
     def connect_async(cls, peer_information: PeerInformation, /) -> windows_foundation.IAsyncOperation[windows_networking_sockets.StreamSocket]: ...
     # Windows.Networking.Proximity.PeerWatcher Windows.Networking.Proximity.PeerFinder::CreateWatcher()
@@ -195,7 +194,7 @@ class PeerWatcher(winrt.system.Object):
     def status(self) -> PeerWatcherStatus: ...
 
 @typing.final
-class ProximityDevice_Static(winrt._winrt.Object_Static):
+class ProximityDevice_Static(winrt.system.Object_Static):
     # Windows.Networking.Proximity.ProximityDevice Windows.Networking.Proximity.ProximityDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> ProximityDevice: ...
     # Windows.Networking.Proximity.ProximityDevice Windows.Networking.Proximity.ProximityDevice::GetDefault()

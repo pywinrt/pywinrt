@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -12,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class ClassicAppManager_Static(winrt._winrt.Object_Static):
+class ClassicAppManager_Static(winrt.system.Object_Static):
     # Windows.Management.Deployment.Preview.InstalledClassicAppInfo Windows.Management.Deployment.Preview.ClassicAppManager::FindInstalledApp(System.String)
     def find_installed_app(cls, app_uninstall_key: str, /) -> InstalledClassicAppInfo: ...
 

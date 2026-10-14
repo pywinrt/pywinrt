@@ -3,7 +3,6 @@
 import enum
 import typing
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -19,7 +18,7 @@ class XamlChangeId(enum.IntEnum):
     DEFER_CONTEXT_FLYOUT_INIT = 61098986
 
 @typing.final
-class XamlOptionalChanges_Static(winrt._winrt.Object_Static):
+class XamlOptionalChanges_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Settings.XamlOptionalChanges::DisableChange(Microsoft.UI.Xaml.Settings.XamlChangeId)
     def disable_change(cls, change_id: XamlChangeId, /) -> bool: ...
     # System.Boolean Microsoft.UI.Xaml.Settings.XamlOptionalChanges::EnableChange(Microsoft.UI.Xaml.Settings.XamlChangeId)

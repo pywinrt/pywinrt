@@ -4,7 +4,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.composition as microsoft_ui_composition
 import winrt.windows.foundation as windows_foundation

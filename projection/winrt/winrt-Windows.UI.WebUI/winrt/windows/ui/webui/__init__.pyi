@@ -10,7 +10,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
@@ -266,7 +265,7 @@ class SuspendingOperation(windows_applicationmodel.ISuspendingOperation, winrt.s
     def deadline(self) -> datetime.datetime: ...
 
 @typing.final
-class WebUIApplication_Static(winrt._winrt.Object_Static):
+class WebUIApplication_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.WebUI.WebUIApplication::EnablePrelaunch(System.Boolean)
     def enable_prelaunch(cls, value: bool, /) -> None: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Core.AppRestartFailureReason> Windows.UI.WebUI.WebUIApplication::RequestRestartAsync(System.String)
@@ -451,7 +450,7 @@ class WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(windows_applicati
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIBackgroundTaskInstance_Static(winrt._winrt.Object_Static):
+class WebUIBackgroundTaskInstance_Static(winrt.system.Object_Static):
     # Windows.UI.WebUI.IWebUIBackgroundTaskInstance Windows.UI.WebUI.WebUIBackgroundTaskInstance::get_Current()
     @_property
     def current(cls) -> IWebUIBackgroundTaskInstance: ...
@@ -1452,7 +1451,7 @@ class WebUIUserDataAccountProviderActivatedEventArgs(IActivatedEventArgsDeferral
     def activated_operation(self) -> ActivatedOperation: ...
 
 @typing.final
-class WebUIView_Static(winrt._winrt.Object_Static):
+class WebUIView_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.WebUI.WebUIView> Windows.UI.WebUI.WebUIView::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[WebUIView]: ...

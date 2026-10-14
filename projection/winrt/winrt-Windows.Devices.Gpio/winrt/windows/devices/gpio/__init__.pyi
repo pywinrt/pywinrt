@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.gpio.provider as windows_devices_gpio_provider
 import winrt.windows.foundation as windows_foundation
@@ -158,7 +157,7 @@ class GpioChangeReader(windows_foundation.IClosable, winrt.system.Object):
     def length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class GpioController_Static(winrt._winrt.Object_Static):
+class GpioController_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Gpio.GpioController>> Windows.Devices.Gpio.GpioController::GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)
     def get_controllers_async(cls, provider: windows_devices_gpio_provider.IGpioProvider, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[GpioController]]: ...
     # Windows.Devices.Gpio.GpioController Windows.Devices.Gpio.GpioController::GetDefault()

@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -37,7 +36,7 @@ class DispatcherExitDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class DispatcherQueue_Static(winrt._winrt.Object_Static):
+class DispatcherQueue_Static(winrt.system.Object_Static):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Dispatching.DispatcherQueue::GetForCurrentThread()
     def get_for_current_thread(cls) -> DispatcherQueue: ...
 
@@ -84,7 +83,7 @@ class DispatcherQueue(winrt.system.Object, metaclass=DispatcherQueue_Static):
     def has_thread_access(self) -> bool: ...
 
 @typing.final
-class DispatcherQueueController_Static(winrt._winrt.Object_Static):
+class DispatcherQueueController_Static(winrt.system.Object_Static):
     # Microsoft.UI.Dispatching.DispatcherQueueController Microsoft.UI.Dispatching.DispatcherQueueController::CreateOnCurrentThread()
     def create_on_current_thread(cls) -> DispatcherQueueController: ...
     # Microsoft.UI.Dispatching.DispatcherQueueController Microsoft.UI.Dispatching.DispatcherQueueController::CreateOnDedicatedThread()
