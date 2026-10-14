@@ -11,6 +11,7 @@ checks that what comes out is the same shape as what the thunks were.
 bytes. This checks that the runtime turns those bytes into the projection.
 """
 
+import copy
 import importlib
 import pickle
 import sys
@@ -607,6 +608,20 @@ class TestStructs(unittest.TestCase):
             hash(value),
             hash(tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))),
         )
+
+    def test_a_copy_is_the_struct_itself(self) -> None:
+        value = tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))
+
+        self.assertIs(copy.copy(value), value)
+        self.assertIs(copy.deepcopy(value), value)
+
+        # what it is for: copying something that holds a struct
+        holder = {"nested": [value], "point": wf.Point(1, 2)}
+        self.assertEqual(copy.deepcopy(holder), holder)
+
+    def test_a_struct_does_not_pickle(self) -> None:
+        with self.assertRaises(TypeError):
+            pickle.dumps(wf.Point(1, 2))
 
     def test_match_by_keyword(self) -> None:
         match tc.NonBlittable(a=True, c="hi"):

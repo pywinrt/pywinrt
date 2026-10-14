@@ -967,11 +967,23 @@ namespace py::interp
                 *info, reinterpret_cast<uint8_t const*>(self) + info->blob_offset);
         }
 
+        /**
+         * __copy__() and __deepcopy__(): a struct is immutable, so a copy of one
+         * is the struct itself, as it is for a tuple. Without them, copy would
+         * fall back on pickling, which a struct does not support.
+         */
+        PyObject* struct_copy(PyObject* self, PyObject* /*unused*/) noexcept
+        {
+            return Py_NewRef(self);
+        }
+
         PyMethodDef struct_methods[]
             = {{"__replace__",
                 reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(struct_replace)),
                 METH_VARARGS | METH_KEYWORDS,
                 nullptr},
+               {"__copy__", struct_copy, METH_NOARGS, nullptr},
+               {"__deepcopy__", struct_copy, METH_O, nullptr},
                {"unpack", struct_unpack, METH_NOARGS, nullptr},
                {}};
     } // namespace

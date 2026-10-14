@@ -162,6 +162,10 @@ The names of fields are converted to use the `lower_case_with_underscores`
 Projected structs are [`@typing.final`](https://docs.python.org/3/library/typing.html#typing.final)
 classes, so they cannot be subclassed. Projected structs are immutable. To modify a
 struct, use [`copy.replace()`][copy.replace] which creates a modified copy.
+Because a struct is immutable, [`copy.copy()`][copy.copy] and
+[`copy.deepcopy()`][copy.deepcopy] return the struct itself, as they do for a
+`tuple`, so copying a list or a dataclass that holds structs works. A struct
+cannot be pickled.
 
 As a convenience, plain [`tuple`](https://docs.python.org/3/builtins/stdtypes.html#tuple)
 objects can be used in place of projected
@@ -201,6 +205,8 @@ x, y = window.position.unpack()
     * Added `unpack()` method to convert to a tuple. Added support for using
       plain tuples in place of projected structs as method arguments.
 
+[copy.copy]: https://docs.python.org/3/library/copy.html#copy.copy
+[copy.deepcopy]: https://docs.python.org/3/library/copy.html#copy.deepcopy
 [copy.replace]: https://docs.python.org/3/library/copy.html#copy.replace
 
 ## Objects
