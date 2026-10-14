@@ -18,6 +18,7 @@ releases before v4.0 are.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
 
 ### Changed
+- The type hints say a map has no hash, so a type checker flags `{a_map}`.
 - An `IBuffer` that goes in is typed as `ReadableBuffer` or `WriteableBuffer`.
 - The type hints no longer declare the empty private class of each interface.
 - An integer parameter is typed as taking a `typing.SupportsIndex` as well.
