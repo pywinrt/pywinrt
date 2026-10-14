@@ -32,6 +32,8 @@ static class MapWriterExtensions
             method.GenericArgMap
         );
 
+        // A map compares by content, so like a dict it has no hash.
+        w.WriteLine("__hash__: typing.ClassVar[None]  # type: ignore[assignment]");
         w.WriteLine("def __len__(self) -> int: ...");
         w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{keyParamType}]: ...");
         w.WriteLine("def __contains__(self, key: object) -> bool: ...");
