@@ -31,6 +31,7 @@ repository](../CHANGELOG.md).
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
 ### Removed
+- Removed the undocumented `_guid_()` of interface types.
 - Removed the undocumented `_assign_array_()` of projected types.
 
 ### Fixed

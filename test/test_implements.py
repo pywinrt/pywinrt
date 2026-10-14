@@ -10,6 +10,7 @@ through them.
 
 import gc
 import unittest
+import uuid
 import weakref
 from typing import Any
 
@@ -130,13 +131,14 @@ class TestImplements(unittest.TestCase):
         self.assertEqual(
             ClosableFirst()._runtime_class_name_, "Windows.Foundation.IClosable"
         )
-        # _guid_() is internal to the runtime, so no stub declares it
+        # the IIDs of IRequiredOne, IRequiredTwo, IRequiredThree and
+        # IRequiredFour
         self.assertLessEqual(
             {
-                tc.IRequiredOne._guid_(),  # type: ignore[attr-defined]
-                tc.IRequiredTwo._guid_(),  # type: ignore[attr-defined]
-                tc.IRequiredThree._guid_(),  # type: ignore[attr-defined]
-                tc.IRequiredFour._guid_(),  # type: ignore[attr-defined]
+                uuid.UUID("9cdefee9-59a9-5329-a7f3-5935d9ca2711"),
+                uuid.UUID("3a307125-2148-532d-b79b-e8cddf5ca862"),
+                uuid.UUID("541f26d9-3083-50ae-9f32-26f924403688"),
+                uuid.UUID("afbf8d43-f3fa-5093-8d16-05d0e3598a5e"),
             },
             set(obj._iids_),
         )

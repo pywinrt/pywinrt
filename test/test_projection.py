@@ -371,10 +371,6 @@ class TestClasses(unittest.TestCase):
         with self.assertRaises(OSError):
             tc.Class().as_(tc.IRequiredTwo)
 
-    def test_an_interface_carries_its_iid(self) -> None:
-        # _guid_() is internal to the runtime, so no stub declares it
-        self.assertIsInstance(tc.IRequiredOne._guid_(), uuid.UUID)  # type: ignore[attr-defined]
-
     def test_a_property_reads_and_writes(self) -> None:
         instance = tc.Composable()
 
