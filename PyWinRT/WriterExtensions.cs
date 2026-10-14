@@ -155,7 +155,7 @@ static class WriterExtensions
         if (method.Method.Parameters.Any(p => p.IsPythonInParam))
         {
             paramList =
-                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap, method.GenericArgMap)}"))}, /";
+                $", {string.Join(", ", method.Method.Parameters.Where(p => p.IsPythonInParam).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap, method.GenericArgMap, isFillBuffer: method.IsFillBuffer(p.Name, nullabilityMap))}"))}, /";
         }
 
         w.WriteLine(

@@ -129,7 +129,8 @@ static class TypeExtensions
         bool useStructTupleUnion = false,
         bool useKeyValuePairIterMappingUnion = false,
         bool isUnpack = false,
-        bool useBufferProtocol = true
+        bool useBufferProtocol = true,
+        bool isFillBuffer = false
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
@@ -248,8 +249,12 @@ static class TypeExtensions
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
                 // Any Python buffer is taken where an IBuffer goes in, and
                 // what comes out is the projected IBuffer, which is one too.
+                // WinRT only reads one that goes in, except a parameter that
+                // BufferRules says it writes into.
                 { FullName: "Windows.Storage.Streams.IBuffer" }
-                    when usePythonCollectionTypes && useBufferProtocol => "winrt.system.Buffer",
+                    when usePythonCollectionTypes && useBufferProtocol => isFillBuffer
+                    ? "winrt.system.WriteableBuffer"
+                    : "winrt.system.ReadableBuffer",
                 // The integer structs are int subclasses, so neither is unpacked
                 // into a tuple or accepted as one. An HRESULT is also accepted as
                 // a plain int, which is what the winrt.system.hresult constants
@@ -304,7 +309,8 @@ static class TypeExtensions
         TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
-        bool quoteImportedTypes = false
+        bool quoteImportedTypes = false,
+        bool isFillBuffer = false
     ) =>
         param.GetCategory() switch
         {
@@ -315,7 +321,8 @@ static class TypeExtensions
                 map,
                 quoteImportedTypes,
                 useStructTupleUnion: true,
-                useKeyValuePairIterMappingUnion: true
+                useKeyValuePairIterMappingUnion: true,
+                isFillBuffer: isFillBuffer
             ),
             ParamCategory.PassArray =>
                 $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}] | winrt.system.ReadableBuffer",
