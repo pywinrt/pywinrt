@@ -721,44 +721,6 @@ namespace py::cpp::_winrt
         Py_RETURN_NONE;
     }
 
-    static PyObject* add_dll_directory(PyObject* /*unused*/, PyObject* obj) noexcept
-    {
-        std::unique_ptr<wchar_t, decltype(&PyMem_Free)> path{
-            PyUnicode_AsWideCharString(obj, nullptr), &PyMem_Free};
-
-        if (!path)
-        {
-            return nullptr;
-        }
-
-        auto cookie = AddDllDirectory(path.get());
-
-        if (!cookie)
-        {
-            PyErr_SetFromWindowsErr(GetLastError());
-            return nullptr;
-        }
-
-        return PyLong_FromVoidPtr(cookie);
-    }
-
-    static PyObject* remove_dll_directory(PyObject* /*unused*/, PyObject* obj) noexcept
-    {
-        auto cookie = PyLong_AsVoidPtr(obj);
-        if (!cookie && PyErr_Occurred())
-        {
-            return nullptr;
-        }
-
-        if (!RemoveDllDirectory(cookie))
-        {
-            PyErr_SetFromWindowsErr(GetLastError());
-            return nullptr;
-        }
-
-        Py_RETURN_NONE;
-    }
-
     /**
      * uuid.UUID.
      */
@@ -974,15 +936,6 @@ namespace py::cpp::_winrt
          METH_VARARGS,
          PyDoc_STR(
              "interop function to invoke IInitializeWithWindow::Initialize on an object")},
-        {"add_dll_directory",
-         add_dll_directory,
-         METH_O,
-         PyDoc_STR("Adds a directory to the DLL search path.")},
-        {"remove_dll_directory",
-         remove_dll_directory,
-         METH_O,
-         PyDoc_STR(
-             "Removes a directory that was added to the process DLL search path by using add_dll_directory.")},
         {"box_boolean", box_boolean, METH_O, PyDoc_STR("Box a Boolean value")},
         {"box_char16", box_char16, METH_O, PyDoc_STR("Box a Char16 value")},
         {"box_string", box_string, METH_O, PyDoc_STR("Box a string value")},

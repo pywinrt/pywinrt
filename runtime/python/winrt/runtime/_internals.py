@@ -17,9 +17,7 @@ import warnings
 
 # NB: have to import Object from here instead of winrt.system to avoid circular import issues.
 from winrt._winrt import (
-    add_dll_directory,
     load_projection as _load_projection,
-    remove_dll_directory,
     Object,
 )
 
@@ -107,32 +105,6 @@ class WinrtIntEnum(IntEnum):
             return f"<{type(self).__name__}: {self._value_!r}>"
 
         return super().__repr__()
-
-
-class _DllCookie:
-    def __init__(self, cookie: int) -> None:
-        self.cookie = cookie
-
-    def close(self):
-        if self.cookie:
-            remove_dll_directory(self.cookie)
-            self.cookie = None
-
-    def __del__(self):
-        self.close()
-
-
-def register_dll_search_path(module_path: str) -> _DllCookie:
-    """
-    Register a module's directory as a DLL search path.
-
-    Args:
-        module_path: The path to a module file (i.e. ``__file__``)
-
-    Returns:
-        An cookie object that will remove the search path when closed.
-    """
-    return _DllCookie(add_dll_directory(os.fspath(Path(module_path).parent.resolve())))
 
 
 # Staged deprecation of the method names that pywinrt v3.x used for overloaded
