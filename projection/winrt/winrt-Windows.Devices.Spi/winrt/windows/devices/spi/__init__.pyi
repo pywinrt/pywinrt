@@ -139,9 +139,6 @@ class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=Spi
     @_property
     def device_id(self) -> str: ...
 
-@typing.final
-class _ISpiDeviceStatics: ...
-
 class ISpiDeviceStatics(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Spi.SpiDevice> Windows.Devices.Spi.ISpiDeviceStatics::FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)
     @abstractmethod

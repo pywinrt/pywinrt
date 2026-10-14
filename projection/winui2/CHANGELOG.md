@@ -19,6 +19,7 @@ releases before v4.0 are.
 - Protected properties are projected, such as `Control._default_style_key`.
 
 ### Changed
+- The type hints no longer declare the empty private class of each interface.
 - An integer parameter is typed as taking a `typing.SupportsIndex` as well.
 - BREAKING: WinUI 2 is published as one package, `winui2-Microsoft.UI.Xaml`,
   named after the NuGet package it is generated from, instead of one package

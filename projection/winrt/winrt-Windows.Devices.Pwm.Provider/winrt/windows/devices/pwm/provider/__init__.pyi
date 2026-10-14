@@ -14,9 +14,6 @@ __all__ = [
     "IPwmProvider",
 ]
 
-@typing.final
-class _IPwmControllerProvider: ...
-
 class IPwmControllerProvider(winrt.system.Object):
     # System.Void Windows.Devices.Pwm.Provider.IPwmControllerProvider::AcquirePin(System.Int32)
     @abstractmethod
@@ -52,9 +49,6 @@ class IPwmControllerProvider(winrt.system.Object):
     @_property
     @abstractmethod
     def pin_count(self) -> winrt.system.Int32: ...
-
-@typing.final
-class _IPwmProvider: ...
 
 class IPwmProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.Provider.IPwmControllerProvider> Windows.Devices.Pwm.Provider.IPwmProvider::GetControllers()

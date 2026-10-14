@@ -3111,22 +3111,13 @@ class VisualUnorderedCollection(CompositionObject):
     @_property
     def count(self) -> winrt.system.Int32: ...
 
-@typing.final
-class _IAnimationObject: ...
-
 class IAnimationObject(winrt.system.Object):
     # System.Void Microsoft.UI.Composition.IAnimationObject::PopulatePropertyInfo(System.String,Microsoft.UI.Composition.AnimationPropertyInfo)
     @abstractmethod
     def populate_property_info(self, property_name: str, property_info: AnimationPropertyInfo, /) -> None: ...
 
-@typing.final
-class _ICompositionAnimationBase: ...
-
 class ICompositionAnimationBase(winrt.system.Object):
     ...
-
-@typing.final
-class _ICompositionSupportsSystemBackdrop: ...
 
 class ICompositionSupportsSystemBackdrop(winrt.system.Object):
     # Windows.UI.Composition.CompositionBrush Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop::get_SystemBackdrop()
@@ -3138,28 +3129,16 @@ class ICompositionSupportsSystemBackdrop(winrt.system.Object):
     @abstractmethod
     def system_backdrop(self, value: windows_ui_composition.CompositionBrush) -> None: ...
 
-@typing.final
-class _ICompositionSurface: ...
-
 class ICompositionSurface(winrt.system.Object):
     ...
-
-@typing.final
-class _ICompositionSurfaceFacade: ...
 
 class ICompositionSurfaceFacade(winrt.system.Object):
     # Microsoft.UI.Composition.ICompositionSurface Microsoft.UI.Composition.ICompositionSurfaceFacade::GetRealSurface()
     @abstractmethod
     def get_real_surface(self) -> ICompositionSurface: ...
 
-@typing.final
-class _IVisualElement: ...
-
 class IVisualElement(winrt.system.Object):
     ...
-
-@typing.final
-class _IVisualElement2: ...
 
 class IVisualElement2(winrt.system.Object):
     # Microsoft.UI.Composition.Visual Microsoft.UI.Composition.IVisualElement2::GetVisualInternal()

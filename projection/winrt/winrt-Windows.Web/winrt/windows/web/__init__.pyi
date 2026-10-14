@@ -82,9 +82,6 @@ class WebError(winrt.system.Object, metaclass=WebError_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _IUriToStreamResolver: ...
-
 class IUriToStreamResolver(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IInputStream> Windows.Web.IUriToStreamResolver::UriToStreamAsync(Windows.Foundation.Uri)
     @abstractmethod

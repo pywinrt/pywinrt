@@ -150,9 +150,6 @@ class UICommandSeparator(IUICommand, winrt.system.Object):
     @id.setter
     def id(self, value: winrt.system.Object) -> None: ...
 
-@typing.final
-class _IUICommand: ...
-
 class IUICommand(winrt.system.Object):
     # System.Object Windows.UI.Popups.IUICommand::get_Id()
     @_property

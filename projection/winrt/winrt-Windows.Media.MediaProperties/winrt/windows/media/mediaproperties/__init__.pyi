@@ -796,9 +796,6 @@ class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _IMediaEncodingProperties: ...
-
 class IMediaEncodingProperties(winrt.system.Object):
     # Windows.Media.MediaProperties.MediaPropertySet Windows.Media.MediaProperties.IMediaEncodingProperties::get_Properties()
     @_property

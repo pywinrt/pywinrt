@@ -1074,9 +1074,6 @@ class DesktopSiteBridge(IContentSiteBridge, windows_foundation.IClosable, micros
     @typing.final
     def is_closed(self) -> bool: ...
 
-@typing.final
-class _IContentSiteAutomation: ...
-
 class IContentSiteAutomation(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Content.IContentSiteAutomation::add_FragmentRootAutomationProviderRequested(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Content.IContentSiteAutomation,Microsoft.UI.Content.ContentSiteAutomationProviderRequestedEventArgs>)
     @abstractmethod
@@ -1115,9 +1112,6 @@ class IContentSiteAutomation(winrt.system.Object):
     @abstractmethod
     def automation_provider(self) -> winrt.system.Object: ...
 
-@typing.final
-class _IContentSiteBridge: ...
-
 class IContentSiteBridge(windows_foundation.IClosable, winrt.system.Object):
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Content.IContentSiteBridge::get_DispatcherQueue()
     @_property
@@ -1140,9 +1134,6 @@ class IContentSiteBridge(windows_foundation.IClosable, winrt.system.Object):
     @abstractmethod
     def override_scale(self, value: winrt.system.Single) -> None: ...
 
-@typing.final
-class _IContentSiteInput: ...
-
 class IContentSiteInput(winrt.system.Object):
     # System.Boolean Microsoft.UI.Content.IContentSiteInput::get_ProcessesKeyboardInput()
     @_property
@@ -1160,9 +1151,6 @@ class IContentSiteInput(winrt.system.Object):
     @processes_pointer_input.setter
     @abstractmethod
     def processes_pointer_input(self, value: bool) -> None: ...
-
-@typing.final
-class _IContentSiteLink: ...
 
 class IContentSiteLink(winrt.system.Object):
     # Microsoft.UI.Content.ContentIsland Microsoft.UI.Content.IContentSiteLink::get_Parent()

@@ -665,9 +665,6 @@ class PrintWorkflowXpsDataAvailableEventArgs(winrt.system.Object):
 class PrintWorkflowXpsObjectModelProvider(IPrintWorkflowObjectModelProvider, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
 
-@typing.final
-class _IPrintWorkflowObjectModelProvider: ...
-
 class IPrintWorkflowObjectModelProvider(winrt.system.Object):
     ...
 

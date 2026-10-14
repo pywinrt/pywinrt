@@ -178,9 +178,6 @@ class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-@typing.final
-class _IComponentConnector: ...
-
 class IComponentConnector(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Markup.IComponentConnector::Connect(System.Int32,System.Object)
     @abstractmethod
@@ -189,9 +186,6 @@ class IComponentConnector(winrt.system.Object):
     @abstractmethod
     def get_binding_connector(self, connection_id: winrt.system.Int32 | typing.SupportsIndex, target: winrt.system.Object, /) -> IComponentConnector: ...
 
-@typing.final
-class _IDataTemplateComponent: ...
-
 class IDataTemplateComponent(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::ProcessBindings(System.Object,System.Int32,System.Int32,System.Int32&)
     @abstractmethod
@@ -199,9 +193,6 @@ class IDataTemplateComponent(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Markup.IDataTemplateComponent::Recycle()
     @abstractmethod
     def recycle(self) -> None: ...
-
-@typing.final
-class _IProvideValueTarget: ...
 
 class IProvideValueTarget(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Markup.IProvideValueTarget::get_TargetObject()
@@ -213,17 +204,11 @@ class IProvideValueTarget(winrt.system.Object):
     @abstractmethod
     def target_property(self) -> winrt.system.Object: ...
 
-@typing.final
-class _IRootObjectProvider: ...
-
 class IRootObjectProvider(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Markup.IRootObjectProvider::get_RootObject()
     @_property
     @abstractmethod
     def root_object(self) -> winrt.system.Object: ...
-
-@typing.final
-class _IUriContext: ...
 
 class IUriContext(winrt.system.Object):
     # Windows.Foundation.Uri Microsoft.UI.Xaml.Markup.IUriContext::get_BaseUri()
@@ -231,24 +216,15 @@ class IUriContext(winrt.system.Object):
     @abstractmethod
     def base_uri(self) -> windows_foundation.Uri: ...
 
-@typing.final
-class _IXamlBindScopeDiagnostics: ...
-
 class IXamlBindScopeDiagnostics(winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Markup.IXamlBindScopeDiagnostics::Disable(System.Int32,System.Int32)
     @abstractmethod
     def disable(self, line_number: winrt.system.Int32 | typing.SupportsIndex, column_number: winrt.system.Int32 | typing.SupportsIndex, /) -> None: ...
 
-@typing.final
-class _IXamlCondition: ...
-
 class IXamlCondition(winrt.system.Object):
     # System.Boolean Microsoft.UI.Xaml.Markup.IXamlCondition::Evaluate(System.String)
     @abstractmethod
     def evaluate(self, argument: str, /) -> bool: ...
-
-@typing.final
-class _IXamlMember: ...
 
 class IXamlMember(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Markup.IXamlMember::GetValue(System.Object)
@@ -282,9 +258,6 @@ class IXamlMember(winrt.system.Object):
     @abstractmethod
     def type(self) -> IXamlType: ...
 
-@typing.final
-class _IXamlMetadataProvider: ...
-
 class IXamlMetadataProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Markup.IXamlType Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXamlType(Windows.UI.Xaml.Interop.TypeName)
     @abstractmethod
@@ -295,9 +268,6 @@ class IXamlMetadataProvider(winrt.system.Object):
     # Microsoft.UI.Xaml.Markup.XmlnsDefinition[] Microsoft.UI.Xaml.Markup.IXamlMetadataProvider::GetXmlnsDefinitions()
     @abstractmethod
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
-
-@typing.final
-class _IXamlType: ...
 
 class IXamlType(winrt.system.Object):
     # System.Object Microsoft.UI.Xaml.Markup.IXamlType::ActivateInstance()
@@ -370,9 +340,6 @@ class IXamlType(winrt.system.Object):
     @_property
     @abstractmethod
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
-
-@typing.final
-class _IXamlTypeResolver: ...
 
 class IXamlTypeResolver(winrt.system.Object):
     # Windows.UI.Xaml.Interop.TypeName Microsoft.UI.Xaml.Markup.IXamlTypeResolver::Resolve(System.String)

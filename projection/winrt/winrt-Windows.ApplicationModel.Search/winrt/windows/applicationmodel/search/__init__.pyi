@@ -331,9 +331,6 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral::Complete()
     def complete(self) -> None: ...
 
-@typing.final
-class _ISearchPaneQueryChangedEventArgs: ...
-
 @deprecated("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object):
     # System.String Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs::get_Language()

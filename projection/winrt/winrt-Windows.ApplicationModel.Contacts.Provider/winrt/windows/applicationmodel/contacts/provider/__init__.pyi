@@ -63,9 +63,6 @@ class ContactRemovedEventArgs(winrt.system.Object):
     @_property
     def id(self) -> str: ...
 
-@typing.final
-class _IContactProvider: ...
-
 class IContactProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Contacts.Contact> Windows.ApplicationModel.Contacts.Provider.IContactProvider::GetContactFromRemoteIdAsync(System.String)
     @abstractmethod

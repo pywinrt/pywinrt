@@ -23,9 +23,6 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
     @_property
     def json(self) -> str: ...
 
-@typing.final
-class _ISysStorageProviderEventSource: ...
-
 class ISysStorageProviderEventSource(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource::add_EventReceived(Windows.Foundation.TypedEventHandler`2<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs>)
     @abstractmethod
@@ -34,9 +31,6 @@ class ISysStorageProviderEventSource(winrt.system.Object):
     @abstractmethod
     def remove_event_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-@typing.final
-class _ISysStorageProviderHandlerFactory: ...
-
 class ISysStorageProviderHandlerFactory(winrt.system.Object):
     # Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory::GetEventSource(System.String,System.String)
     @abstractmethod
@@ -44,9 +38,6 @@ class ISysStorageProviderHandlerFactory(winrt.system.Object):
     # Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory::GetHttpRequestProvider(System.String)
     @abstractmethod
     def get_http_request_provider(self, sync_root_id: str, /) -> ISysStorageProviderHttpRequestProvider: ...
-
-@typing.final
-class _ISysStorageProviderHttpRequestProvider: ...
 
 class ISysStorageProviderHttpRequestProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Web.Http.HttpResponseMessage> Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider::SendRequestAsync(Windows.Web.Http.HttpRequestMessage)

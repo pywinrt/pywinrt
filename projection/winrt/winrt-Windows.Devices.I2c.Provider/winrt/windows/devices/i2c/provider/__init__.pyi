@@ -69,16 +69,10 @@ class ProviderI2cConnectionSettings(winrt.system.Object):
     @bus_speed.setter
     def bus_speed(self, value: ProviderI2cBusSpeed) -> None: ...
 
-@typing.final
-class _II2cControllerProvider: ...
-
 class II2cControllerProvider(winrt.system.Object):
     # Windows.Devices.I2c.Provider.II2cDeviceProvider Windows.Devices.I2c.Provider.II2cControllerProvider::GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)
     @abstractmethod
     def get_device_provider(self, settings: ProviderI2cConnectionSettings, /) -> II2cDeviceProvider: ...
-
-@typing.final
-class _II2cDeviceProvider: ...
 
 class II2cDeviceProvider(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Devices.I2c.Provider.II2cDeviceProvider::Read(System.Byte[])
@@ -103,9 +97,6 @@ class II2cDeviceProvider(windows_foundation.IClosable, winrt.system.Object):
     @_property
     @abstractmethod
     def device_id(self) -> str: ...
-
-@typing.final
-class _II2cProvider: ...
 
 class II2cProvider(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.I2c.Provider.II2cControllerProvider>> Windows.Devices.I2c.Provider.II2cProvider::GetControllersAsync()

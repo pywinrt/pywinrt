@@ -688,9 +688,6 @@ class SoftwareBitmap(windows_foundation.IClosable, winrt.system.Object, metaclas
     @_property
     def pixel_width(self) -> winrt.system.Int32: ...
 
-@typing.final
-class _IBitmapFrame: ...
-
 class IBitmapFrame(winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.PixelDataProvider> Windows.Graphics.Imaging.IBitmapFrame::GetPixelDataAsync()
@@ -744,9 +741,6 @@ class IBitmapFrame(winrt.system.Object):
     @abstractmethod
     def pixel_width(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class _IBitmapFrameWithSoftwareBitmap: ...
-
 class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync()
@@ -768,9 +762,6 @@ class IBitmapFrameWithSoftwareBitmap(IBitmapFrame, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.SoftwareBitmap> Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap::GetSoftwareBitmapAsync(Windows.Graphics.Imaging.BitmapPixelFormat,Windows.Graphics.Imaging.BitmapAlphaMode,Windows.Graphics.Imaging.BitmapTransform,Windows.Graphics.Imaging.ExifOrientationMode,Windows.Graphics.Imaging.ColorManagementMode)
     @deprecated("Use get_software_bitmap_async() instead.")
     def get_software_bitmap_transformed_async(self, pixel_format: BitmapPixelFormat, alpha_mode: BitmapAlphaMode, transform: BitmapTransform, exif_orientation_mode: ExifOrientationMode, color_management_mode: ColorManagementMode, /) -> windows_foundation.IAsyncOperation[SoftwareBitmap]: ...
-
-@typing.final
-class _IBitmapPropertiesView: ...
 
 class IBitmapPropertiesView(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Graphics.Imaging.BitmapPropertySet> Windows.Graphics.Imaging.IBitmapPropertiesView::GetPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)

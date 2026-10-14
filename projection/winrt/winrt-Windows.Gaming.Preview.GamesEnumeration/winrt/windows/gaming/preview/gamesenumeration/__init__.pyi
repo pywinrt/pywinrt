@@ -189,9 +189,6 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
     @_property
     def gaming_related_process_names(self) -> _cabc.MutableSequence[str]: ...
 
-@typing.final
-class _IGameListEntry: ...
-
 class IGameListEntry(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Gaming.Preview.GamesEnumeration.IGameListEntry::LaunchAsync()
     @abstractmethod

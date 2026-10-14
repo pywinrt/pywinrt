@@ -1711,17 +1711,11 @@ class WebUIWebAuthenticationBrokerContinuationEventArgs(IActivatedEventArgsDefer
     @_property
     def activated_operation(self) -> ActivatedOperation: ...
 
-@typing.final
-class _IActivatedEventArgsDeferral: ...
-
 class IActivatedEventArgsDeferral(winrt.system.Object):
     # Windows.UI.WebUI.ActivatedOperation Windows.UI.WebUI.IActivatedEventArgsDeferral::get_ActivatedOperation()
     @_property
     @abstractmethod
     def activated_operation(self) -> ActivatedOperation: ...
-
-@typing.final
-class _IWebUIBackgroundTaskInstance: ...
 
 class IWebUIBackgroundTaskInstance(winrt.system.Object):
     # System.Boolean Windows.UI.WebUI.IWebUIBackgroundTaskInstance::get_Succeeded()
@@ -1732,9 +1726,6 @@ class IWebUIBackgroundTaskInstance(winrt.system.Object):
     @succeeded.setter
     @abstractmethod
     def succeeded(self, value: bool) -> None: ...
-
-@typing.final
-class _IWebUINavigatedEventArgs: ...
 
 class IWebUINavigatedEventArgs(winrt.system.Object):
     # Windows.UI.WebUI.WebUINavigatedOperation Windows.UI.WebUI.IWebUINavigatedEventArgs::get_NavigatedOperation()

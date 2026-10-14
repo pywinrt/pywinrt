@@ -471,9 +471,6 @@ class VideoProperties(IStorageItemExtraProperties, winrt.system.Object):
     @_property
     def writers(self) -> _cabc.MutableSequence[str]: ...
 
-@typing.final
-class _IStorageItemExtraProperties: ...
-
 class IStorageItemExtraProperties(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMap`2<System.String,System.Object>> Windows.Storage.FileProperties.IStorageItemExtraProperties::RetrievePropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     @abstractmethod

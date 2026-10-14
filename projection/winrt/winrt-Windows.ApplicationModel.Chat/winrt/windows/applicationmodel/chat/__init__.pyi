@@ -1069,9 +1069,6 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
-@typing.final
-class _IChatItem: ...
-
 class IChatItem(winrt.system.Object):
     # Windows.ApplicationModel.Chat.ChatItemKind Windows.ApplicationModel.Chat.IChatItem::get_ItemKind()
     @_property

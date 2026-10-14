@@ -185,9 +185,6 @@ class GraphicsCaptureSession(windows_foundation.IClosable, winrt.system.Object, 
     @_property
     def configuration_iteration(self) -> winrt.system.UInt64: ...
 
-@typing.final
-class _IDisplayGraphicsCaptureSession: ...
-
 class IDisplayGraphicsCaptureSession(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowId> Windows.Graphics.Capture.IDisplayGraphicsCaptureSession::GetWindowExclusionList()
     @abstractmethod

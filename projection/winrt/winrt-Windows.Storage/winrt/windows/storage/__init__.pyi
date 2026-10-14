@@ -1497,9 +1497,6 @@ class UserDataPaths(winrt.system.Object, metaclass=UserDataPaths_Static):
     @_property
     def videos(self) -> str: ...
 
-@typing.final
-class _IStorageFile: ...
-
 class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, IStorageItem, winrt.system.Object):
     # Windows.Foundation.IAsyncAction Windows.Storage.IStorageFile::CopyAndReplaceAsync(Windows.Storage.IStorageFile)
     @abstractmethod
@@ -1570,9 +1567,6 @@ class IStorageFile(windows_storage_streams.IInputStreamReference, windows_storag
     @abstractmethod
     def file_type(self) -> str: ...
 
-@typing.final
-class _IStorageFile2: ...
-
 class IStorageFile2(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStream> Windows.Storage.IStorageFile2::OpenAsync(Windows.Storage.FileAccessMode,Windows.Storage.StorageOpenOptions)
     @abstractmethod
@@ -1589,17 +1583,11 @@ class IStorageFile2(winrt.system.Object):
     @deprecated("Use open_transacted_write_async() instead.")
     def open_transacted_write_with_options_async(self, options: StorageOpenOptions, /) -> windows_foundation.IAsyncOperation[StorageStreamTransaction]: ...
 
-@typing.final
-class _IStorageFilePropertiesWithAvailability: ...
-
 class IStorageFilePropertiesWithAvailability(winrt.system.Object):
     # System.Boolean Windows.Storage.IStorageFilePropertiesWithAvailability::get_IsAvailable()
     @_property
     @abstractmethod
     def is_available(self) -> bool: ...
-
-@typing.final
-class _IStorageFolder: ...
 
 class IStorageFolder(IStorageItem, winrt.system.Object):
     @typing.overload
@@ -1657,16 +1645,10 @@ class IStorageFolder(IStorageItem, winrt.system.Object):
     @deprecated("Use get_items_async() instead.")
     def get_items_async_overload_default_start_and_count(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IStorageItem]]: ...
 
-@typing.final
-class _IStorageFolder2: ...
-
 class IStorageFolder2(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.IStorageItem> Windows.Storage.IStorageFolder2::TryGetItemAsync(System.String)
     @abstractmethod
     def try_get_item_async(self, name: str, /) -> windows_foundation.IAsyncOperation[IStorageItem | None]: ...
-
-@typing.final
-class _IStorageItem: ...
 
 class IStorageItem(winrt.system.Object):
     @typing.overload
@@ -1716,9 +1698,6 @@ class IStorageItem(winrt.system.Object):
     @abstractmethod
     def path(self) -> str: ...
 
-@typing.final
-class _IStorageItem2: ...
-
 class IStorageItem2(IStorageItem, winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.StorageFolder> Windows.Storage.IStorageItem2::GetParentAsync()
     @abstractmethod
@@ -1726,9 +1705,6 @@ class IStorageItem2(IStorageItem, winrt.system.Object):
     # System.Boolean Windows.Storage.IStorageItem2::IsEqual(Windows.Storage.IStorageItem)
     @abstractmethod
     def is_equal(self, item: IStorageItem, /) -> bool: ...
-
-@typing.final
-class _IStorageItemProperties: ...
 
 class IStorageItemProperties(winrt.system.Object):
     @typing.overload
@@ -1768,9 +1744,6 @@ class IStorageItemProperties(winrt.system.Object):
     @abstractmethod
     def properties(self) -> windows_storage_fileproperties.StorageItemContentProperties: ...
 
-@typing.final
-class _IStorageItemProperties2: ...
-
 class IStorageItemProperties2(IStorageItemProperties, winrt.system.Object):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.FileProperties.StorageItemThumbnail> Windows.Storage.IStorageItemProperties2::GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
@@ -1793,17 +1766,11 @@ class IStorageItemProperties2(IStorageItemProperties, winrt.system.Object):
     @deprecated("Use get_scaled_image_as_thumbnail_async() instead.")
     def get_scaled_image_as_thumbnail_async_overload_default_size_default_options(self, mode: windows_storage_fileproperties.ThumbnailMode, /) -> windows_foundation.IAsyncOperation[windows_storage_fileproperties.StorageItemThumbnail | None]: ...
 
-@typing.final
-class _IStorageItemPropertiesWithProvider: ...
-
 class IStorageItemPropertiesWithProvider(IStorageItemProperties, winrt.system.Object):
     # Windows.Storage.StorageProvider Windows.Storage.IStorageItemPropertiesWithProvider::get_Provider()
     @_property
     @abstractmethod
     def provider(self) -> StorageProvider: ...
-
-@typing.final
-class _IStreamedFileDataRequest: ...
 
 class IStreamedFileDataRequest(winrt.system.Object):
     # System.Void Windows.Storage.IStreamedFileDataRequest::FailAndClose(Windows.Storage.StreamedFileFailureMode)

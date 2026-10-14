@@ -154,9 +154,6 @@ class DropOperationTargetRequestedEventArgs(winrt.system.Object):
     # System.Void Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs::SetTarget(Microsoft.UI.Input.DragDrop.IDropOperationTarget)
     def set_target(self, target: IDropOperationTarget, /) -> None: ...
 
-@typing.final
-class _IDropOperationTarget: ...
-
 class IDropOperationTarget(winrt.system.Object):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.DataTransfer.DataPackageOperation> Microsoft.UI.Input.DragDrop.IDropOperationTarget::DropAsync(Microsoft.UI.Input.DragDrop.DragInfo)
     @abstractmethod

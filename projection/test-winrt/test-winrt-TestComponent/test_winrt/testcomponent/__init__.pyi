@@ -370,40 +370,25 @@ class TestRunner(winrt.system.Object, metaclass=TestRunner_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _IRequiredFour: ...
-
 class IRequiredFour(IRequiredThree, IRequiredTwo, IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredFour::Four()
     @abstractmethod
     def four(self) -> winrt.system.Int32: ...
-
-@typing.final
-class _IRequiredOne: ...
 
 class IRequiredOne(winrt.system.Object):
     # System.Int32 TestComponent.IRequiredOne::One()
     @abstractmethod
     def one(self) -> winrt.system.Int32: ...
 
-@typing.final
-class _IRequiredThree: ...
-
 class IRequiredThree(IRequiredTwo, IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredThree::Three()
     @abstractmethod
     def three(self) -> winrt.system.Int32: ...
 
-@typing.final
-class _IRequiredTwo: ...
-
 class IRequiredTwo(IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.IRequiredTwo::Two()
     @abstractmethod
     def two(self) -> winrt.system.Int32: ...
-
-@typing.final
-class _ITests: ...
 
 class ITests(winrt.system.Object):
     # System.Boolean[] TestComponent.ITests::Array1(System.Boolean[],System.Boolean[],System.Boolean[]&)

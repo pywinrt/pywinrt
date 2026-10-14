@@ -205,9 +205,6 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     @_property
     def media_playback_item(self) -> windows_media_playback.MediaPlaybackItem: ...
 
-@typing.final
-class _IMediaProtectionServiceRequest: ...
-
 class IMediaProtectionServiceRequest(winrt.system.Object):
     # System.Guid Windows.Media.Protection.IMediaProtectionServiceRequest::get_ProtectionSystem()
     @_property

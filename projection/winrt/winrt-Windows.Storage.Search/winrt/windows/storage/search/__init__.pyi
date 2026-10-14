@@ -463,9 +463,6 @@ class ValueAndLanguage(winrt.system.Object):
     @language.setter
     def language(self, value: str) -> None: ...
 
-@typing.final
-class _IIndexableContent: ...
-
 class IIndexableContent(winrt.system.Object):
     # System.String Windows.Storage.Search.IIndexableContent::get_Id()
     @_property
@@ -495,9 +492,6 @@ class IIndexableContent(winrt.system.Object):
     @stream_content_type.setter
     @abstractmethod
     def stream_content_type(self, value: str) -> None: ...
-
-@typing.final
-class _IStorageFolderQueryOperations: ...
 
 class IStorageFolderQueryOperations(winrt.system.Object):
     # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::AreQueryOptionsSupported(Windows.Storage.Search.QueryOptions)
@@ -575,9 +569,6 @@ class IStorageFolderQueryOperations(winrt.system.Object):
     # System.Boolean Windows.Storage.Search.IStorageFolderQueryOperations::IsCommonFolderQuerySupported(Windows.Storage.Search.CommonFolderQuery)
     @abstractmethod
     def is_common_folder_query_supported(self, query: CommonFolderQuery, /) -> bool: ...
-
-@typing.final
-class _IStorageQueryResultBase: ...
 
 class IStorageQueryResultBase(winrt.system.Object):
     # System.Void Windows.Storage.Search.IStorageQueryResultBase::ApplyNewQueryOptions(Windows.Storage.Search.QueryOptions)

@@ -731,9 +731,6 @@ class RemoteSystemWebAccountFilter(IRemoteSystemFilter, winrt.system.Object):
     @_property
     def account(self) -> windows_security_credentials.WebAccount: ...
 
-@typing.final
-class _IRemoteSystemFilter: ...
-
 class IRemoteSystemFilter(winrt.system.Object):
     ...
 

@@ -26,9 +26,6 @@ class McpMessageFilterResponse(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-@typing.final
-class _IMcpMessageFilterExperimental: ...
-
 class IMcpMessageFilterExperimental(winrt.system.Object):
     # System.Void Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental::Initialize(System.String,System.UInt32,System.String,System.String,System.UInt32)
     @abstractmethod
@@ -37,9 +34,6 @@ class IMcpMessageFilterExperimental(winrt.system.Object):
     @abstractmethod
     def on_message(self, message: str, direction: McpMessageDirection, filter_response: McpMessageFilterResponse, /) -> None: ...
 
-@typing.final
-class _IMcpMessageFilterExperimental2: ...
-
 class IMcpMessageFilterExperimental2(winrt.system.Object):
     # System.Boolean Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2::Initialize(System.String,System.UInt32,System.String,System.UInt32,System.String)
     @abstractmethod
@@ -47,9 +41,6 @@ class IMcpMessageFilterExperimental2(winrt.system.Object):
     # System.Void Windows.AI.Agents.Mcp.IMcpMessageFilterExperimental2::OnMessage(System.String,Windows.AI.Agents.Mcp.McpMessageDirection,Windows.AI.Agents.Mcp.McpMessageFilterResponse)
     @abstractmethod
     def on_message(self, message: str, direction: McpMessageDirection, filter_response: McpMessageFilterResponse, /) -> None: ...
-
-@typing.final
-class _IMcpMessageFilterResponseExperimental: ...
 
 class IMcpMessageFilterResponseExperimental(winrt.system.Object):
     # System.Boolean Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental::get_IsAllowed()
@@ -68,9 +59,6 @@ class IMcpMessageFilterResponseExperimental(winrt.system.Object):
     @message_if_not_allowed.setter
     @abstractmethod
     def message_if_not_allowed(self, value: str) -> None: ...
-
-@typing.final
-class _IMcpMessageFilterResponseExperimental2: ...
 
 class IMcpMessageFilterResponseExperimental2(winrt.system.Object):
     # System.Void Windows.AI.Agents.Mcp.IMcpMessageFilterResponseExperimental2::Allow()

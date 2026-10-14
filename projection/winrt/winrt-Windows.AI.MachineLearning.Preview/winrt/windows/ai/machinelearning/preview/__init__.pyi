@@ -384,9 +384,6 @@ class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, w
     @deprecated("Use ITensorFeatureDescriptor instead of ITensorVariableDescriptorPreview. For more info, see MSDN.")
     def shape(self) -> _cabc.Iterable[winrt.system.Int64]: ...
 
-@typing.final
-class _ILearningModelVariableDescriptorPreview: ...
-
 @deprecated("Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.")
 class ILearningModelVariableDescriptorPreview(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview::get_Description()

@@ -3305,9 +3305,6 @@ class CoreWebView2WindowFeatures(winrt.system.Object):
     @_property
     def width(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class _ICoreWebView2DispatchAdapter: ...
-
 class ICoreWebView2DispatchAdapter(winrt.system.Object):
     # System.Void Microsoft.Web.WebView2.Core.ICoreWebView2DispatchAdapter::Clean()
     @abstractmethod

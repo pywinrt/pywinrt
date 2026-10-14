@@ -1072,22 +1072,13 @@ class WiFiOnDemandHotspotConnectTrigger(IBackgroundTrigger, winrt.system.Object)
 class WiFiOnDemandHotspotUpdateMetadataTrigger(IBackgroundTrigger, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
 
-@typing.final
-class _IBackgroundCondition: ...
-
 class IBackgroundCondition(winrt.system.Object):
     ...
-
-@typing.final
-class _IBackgroundTask: ...
 
 class IBackgroundTask(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Background.IBackgroundTask::Run(Windows.ApplicationModel.Background.IBackgroundTaskInstance)
     @abstractmethod
     def run(self, task_instance: IBackgroundTaskInstance, /) -> None: ...
-
-@typing.final
-class _IBackgroundTaskInstance: ...
 
 class IBackgroundTaskInstance(winrt.system.Object):
     # Windows.ApplicationModel.Background.BackgroundTaskDeferral Windows.ApplicationModel.Background.IBackgroundTaskInstance::GetDeferral()
@@ -1124,25 +1115,16 @@ class IBackgroundTaskInstance(winrt.system.Object):
     @abstractmethod
     def trigger_details(self) -> winrt.system.Object: ...
 
-@typing.final
-class _IBackgroundTaskInstance2: ...
-
 class IBackgroundTaskInstance2(IBackgroundTaskInstance, winrt.system.Object):
     # System.UInt32 Windows.ApplicationModel.Background.IBackgroundTaskInstance2::GetThrottleCount(Windows.ApplicationModel.Background.BackgroundTaskThrottleCounter)
     @abstractmethod
     def get_throttle_count(self, counter: BackgroundTaskThrottleCounter, /) -> winrt.system.UInt32: ...
-
-@typing.final
-class _IBackgroundTaskInstance4: ...
 
 class IBackgroundTaskInstance4(IBackgroundTaskInstance, winrt.system.Object):
     # Windows.System.User Windows.ApplicationModel.Background.IBackgroundTaskInstance4::get_User()
     @_property
     @abstractmethod
     def user(self) -> windows_system.User: ...
-
-@typing.final
-class _IBackgroundTaskRegistration: ...
 
 class IBackgroundTaskRegistration(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Background.IBackgroundTaskRegistration::Unregister(System.Boolean)
@@ -1169,26 +1151,17 @@ class IBackgroundTaskRegistration(winrt.system.Object):
     @abstractmethod
     def task_id(self) -> _uuid.UUID: ...
 
-@typing.final
-class _IBackgroundTaskRegistration2: ...
-
 class IBackgroundTaskRegistration2(IBackgroundTaskRegistration, winrt.system.Object):
     # Windows.ApplicationModel.Background.IBackgroundTrigger Windows.ApplicationModel.Background.IBackgroundTaskRegistration2::get_Trigger()
     @_property
     @abstractmethod
     def trigger(self) -> IBackgroundTrigger: ...
 
-@typing.final
-class _IBackgroundTaskRegistration3: ...
-
 class IBackgroundTaskRegistration3(IBackgroundTaskRegistration, winrt.system.Object):
     # Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup Windows.ApplicationModel.Background.IBackgroundTaskRegistration3::get_TaskGroup()
     @_property
     @abstractmethod
     def task_group(self) -> BackgroundTaskRegistrationGroup: ...
-
-@typing.final
-class _IBackgroundTrigger: ...
 
 class IBackgroundTrigger(winrt.system.Object):
     ...

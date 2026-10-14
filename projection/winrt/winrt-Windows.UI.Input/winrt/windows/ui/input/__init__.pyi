@@ -1397,9 +1397,6 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
     @_property
     def pointer_device(self) -> windows_devices_input.PointerDevice: ...
 
-@typing.final
-class _IPointerPointTransform: ...
-
 class IPointerPointTransform(winrt.system.Object):
     # Windows.Foundation.Rect Windows.UI.Input.IPointerPointTransform::TransformBounds(Windows.Foundation.Rect)
     @abstractmethod

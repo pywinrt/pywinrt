@@ -230,9 +230,6 @@ class UnhandledErrorDetectedEventArgs(winrt.system.Object):
     @_property
     def unhandled_error(self) -> UnhandledError: ...
 
-@typing.final
-class _ICoreApplicationUnhandledError: ...
-
 class ICoreApplicationUnhandledError(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Core.ICoreApplicationUnhandledError::add_UnhandledErrorDetected(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs>)
     @abstractmethod
@@ -240,9 +237,6 @@ class ICoreApplicationUnhandledError(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Core.ICoreApplicationUnhandledError::remove_UnhandledErrorDetected(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_unhandled_error_detected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-
-@typing.final
-class _IFrameworkView: ...
 
 class IFrameworkView(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Core.IFrameworkView::Initialize(Windows.ApplicationModel.Core.CoreApplicationView)
@@ -260,9 +254,6 @@ class IFrameworkView(winrt.system.Object):
     # System.Void Windows.ApplicationModel.Core.IFrameworkView::Uninitialize()
     @abstractmethod
     def uninitialize(self) -> None: ...
-
-@typing.final
-class _IFrameworkViewSource: ...
 
 class IFrameworkViewSource(winrt.system.Object):
     # Windows.ApplicationModel.Core.IFrameworkView Windows.ApplicationModel.Core.IFrameworkViewSource::CreateView()

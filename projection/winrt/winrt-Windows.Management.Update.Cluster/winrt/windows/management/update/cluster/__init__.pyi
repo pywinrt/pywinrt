@@ -328,9 +328,6 @@ class ValidateClusterEnvironmentResult(winrt.system.Object):
     @_property
     def validation_messages(self) -> _cabc.Sequence[UpdateValidationLogMessage]: ...
 
-@typing.final
-class _IClusterNativeEnvironmentOperations: ...
-
 class IClusterNativeEnvironmentOperations(winrt.system.Object):
     # Windows.Management.Update.Cluster.AcquireEnvironmentInfoResult Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperations::AcquireNodeEnvironmentInfo()
     @abstractmethod
@@ -350,9 +347,6 @@ class IClusterNativeEnvironmentOperations(winrt.system.Object):
     # Windows.Management.Update.Cluster.ValidateClusterEnvironmentResult Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperations::ValidateClusterEnvironment(Windows.Foundation.Collections.IMapView`2<System.String,System.String>)
     @abstractmethod
     def validate_cluster_environment(self, node_environment_info: _cabc.Mapping[str, str], /) -> ValidateClusterEnvironmentResult: ...
-
-@typing.final
-class _IClusterNativeEnvironmentOperationsPlugin: ...
 
 class IClusterNativeEnvironmentOperationsPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperations Windows.Management.Update.Cluster.IClusterNativeEnvironmentOperationsPlugin::CreateEnvironmentOperations(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)
@@ -378,9 +372,6 @@ class IClusterNativeEnvironmentOperationsPlugin(winrt.system.Object):
     @_property
     @abstractmethod
     def version(self) -> UpdatePluginVersionInfo: ...
-
-@typing.final
-class _IClusterNativeNodeOperations: ...
 
 class IClusterNativeNodeOperations(winrt.system.Object):
     # Windows.Management.Update.Cluster.AreRebootsPendingResult Windows.Management.Update.Cluster.IClusterNativeNodeOperations::AreAdditionalRebootsPending()
@@ -423,9 +414,6 @@ class IClusterNativeNodeOperations(winrt.system.Object):
     @abstractmethod
     def start_pre_update_run_operation(self) -> UpdateOperationResult: ...
 
-@typing.final
-class _IClusterNativeNodeOperationsPlugin: ...
-
 class IClusterNativeNodeOperationsPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IClusterNativeNodeOperations Windows.Management.Update.Cluster.IClusterNativeNodeOperationsPlugin::CreateNodeOperations(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)
     @abstractmethod
@@ -450,9 +438,6 @@ class IClusterNativeNodeOperationsPlugin(winrt.system.Object):
     @_property
     @abstractmethod
     def version(self) -> UpdatePluginVersionInfo: ...
-
-@typing.final
-class _IUpdateInstaller: ...
 
 class IUpdateInstaller(winrt.system.Object):
     # Windows.Management.Update.Cluster.UpdateTaskResult Windows.Management.Update.Cluster.IUpdateInstaller::AcquireUpdateListValidationInfo(System.String&)
@@ -479,9 +464,6 @@ class IUpdateInstaller(winrt.system.Object):
     # Windows.Management.Update.Cluster.ValidateAllNodesUpdateRecipeResult Windows.Management.Update.Cluster.IUpdateInstaller::ValidateAllNodesUpdateRecipe(Windows.Foundation.Collections.IVectorView`1<Windows.Management.Update.Cluster.UpdateRecipeNodeValidationInfoRecord>)
     @abstractmethod
     def validate_all_nodes_update_recipe(self, all_nodes_recipe_validation_info: _cabc.Sequence[UpdateRecipeNodeValidationInfoRecord], /) -> ValidateAllNodesUpdateRecipeResult: ...
-
-@typing.final
-class _IUpdateInstallerPlugin: ...
 
 class IUpdateInstallerPlugin(winrt.system.Object):
     # Windows.Management.Update.Cluster.IUpdateInstaller Windows.Management.Update.Cluster.IUpdateInstallerPlugin::CreateUpdateInstaller(System.String,System.String,Windows.Foundation.Collections.IMap`2<System.String,System.String>,Windows.Management.Update.Cluster.ClusterUpdateServices)

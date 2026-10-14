@@ -404,16 +404,10 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> WindowTab: ...
 
-@typing.final
-class _IAdaptiveCard: ...
-
 class IAdaptiveCard(winrt.system.Object):
     # System.String Windows.UI.Shell.IAdaptiveCard::ToJson()
     @abstractmethod
     def to_json(self) -> str: ...
-
-@typing.final
-class _IAdaptiveCardBuilderStatics: ...
 
 class IAdaptiveCardBuilderStatics(winrt.system.Object):
     # Windows.UI.Shell.IAdaptiveCard Windows.UI.Shell.IAdaptiveCardBuilderStatics::CreateAdaptiveCardFromJson(System.String)
