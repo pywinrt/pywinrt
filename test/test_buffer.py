@@ -2,6 +2,8 @@ import datetime
 import sys
 import unittest
 
+import typing_extensions
+import winrt.system
 import winrt.windows.foundation as wf
 import winrt.windows.graphics.imaging as wgi
 import winrt.windows.media.core as wmc
@@ -249,6 +251,13 @@ class TestBuffer(unittest.TestCase):
                 DeprecationWarning, "use the IMemoryBuffer itself as a buffer"
             ):
                 locked.create_reference().close()  # type: ignore[deprecated]
+
+    def test_system_buffer_is_deprecated(self) -> None:
+        with self.assertWarnsRegex(DeprecationWarning, "use collections.abc.Buffer"):
+            from winrt.system import Buffer  # pyright: ignore[reportDeprecated]
+
+        self.assertIs(Buffer, typing_extensions.Buffer)  # pyright: ignore[reportDeprecated]
+        self.assertNotIn("Buffer", winrt.system.__all__)
 
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
     def test_is_collections_abc_buffer_subclass(self) -> None:

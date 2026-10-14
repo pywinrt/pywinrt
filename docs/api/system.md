@@ -14,6 +14,14 @@ WinRT reads the buffer or writes into it.
 
 !!! version-added "Added in version 3.2"
 
+!!! deprecated "Deprecated since version 4.0"
+
+    Use [`ReadableBuffer`](#readablebuffer) or
+    [`WriteableBuffer`](#writeablebuffer) to say whether WinRT reads the buffer
+    or writes into it, or [`collections.abc.Buffer`][Buffer] itself
+    (`typing_extensions.Buffer` before Python 3.12). Importing `Buffer` from
+    `winrt.system` warns with a `DeprecationWarning`.
+
 !!! seealso "See also"
 
     [Buffers](../types.md#buffers)
