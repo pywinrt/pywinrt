@@ -356,7 +356,9 @@ sealed class TableWriter
             AddDefinedType(type);
         }
 
-        foreach (var type in members.Structs)
+        // DateTime and TimeSpan are datetime.datetime and datetime.timedelta,
+        // which are type codes of their own, so neither gets a type here.
+        foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct))
         {
             AddDefinedType(type);
         }
