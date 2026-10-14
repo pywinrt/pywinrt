@@ -24,23 +24,16 @@ RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
 # compiles the trampolines from. See runtime/src/table-format.md.
 RUNTIME_SRC_PATH = RUNTIME_PATH / "src"
 
-DOTNET = ["dotnet"] if "--dotnet" in sys.argv else []
-
 # must match <TargetFramework> in PyWinRT/PyWinRT.csproj
 PYWINRT_TFM = "net10.0"
 PYWINRT_BUILD_PATH = REPO_ROOT_PATH / "PyWinRT" / "bin"
 
 
-def find_pywinrt() -> str | pathlib.Path:
+def find_pywinrt() -> pathlib.Path:
     """
-    The PyWinRT this run uses: the dotnet tool with --dotnet, otherwise the
-    one built in this repository, the Debug build with --debug.
+    The PyWinRT this run uses: the one built in this repository, the Debug
+    build with --debug.
     """
-    if DOTNET:
-        subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
-
-        return "pywinrt"
-
     if "--debug" in sys.argv:
         exe = PYWINRT_BUILD_PATH / "Debug" / PYWINRT_TFM / "PyWinRT.exe"
 
@@ -66,26 +59,11 @@ PYWINRT_EXE = find_pywinrt()
 
 # generate code for windows sdk
 
-MINIMAL_NAMESPACES = [
-    "Windows.Data.Json",
-    "Windows.Devices.Geolocation",
-    "Windows.Foundation",
-    "Windows.Graphics.Capture",
-    "Windows.Graphics.DirectX",
-    "Windows.Storage.Streams",
-]
 WINDOWS_SDK = versions.windows_sdk_metadata_path()
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
-include_args: list[str] = []
-
-if "--minimal" in sys.argv:
-    for ns in MINIMAL_NAMESPACES:
-        include_args.extend(["-include", ns])
-
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"winrt;{WINDOWS_SDK}",
@@ -102,7 +80,6 @@ subprocess.check_call(
         # to have users.
         "--legacy-method-aliases",
     ]
-    + include_args
 )
 
 # generate code for WebView2
@@ -121,8 +98,7 @@ WEBVIEW2_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "webview2.json
 # are: the package is what the family is versioned by, and a second namespace in
 # a later release would belong to the same distribution.
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
@@ -160,8 +136,7 @@ MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH = (
 # components are: the package is what the family is versioned by, so they are
 # generated and released together.
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"winui2;Microsoft.UI.Xaml;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
@@ -193,8 +168,7 @@ WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
 )
 
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
     ]
     + WINDOWS_APP_SDK_INPUTS
@@ -226,8 +200,7 @@ TEST_PACKAGE_METADATA = (
 TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-winrt.json"
 
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"test-winrt;{TEST_PACKAGE_METADATA}",
