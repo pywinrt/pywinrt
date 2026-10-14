@@ -1501,39 +1501,62 @@ namespace py::interp
     }
 
     /**
-     * _assign_array_(): says what a winrt.system.Array holds. Every projected
-     * type carries it, a struct as much as a class, because an array of any of
-     * them can be made.
+     * The storage of a winrt.system.Array named after @p type, which is a
+     * class that has instances, the public type of an interface, a struct or
+     * an enum. Any other type, such as a static class or the wrapper an
+     * interface's instances are returned as, leaves @p array empty.
+     *
+     * @returns @c false with a Python error set.
      */
-    PyObject* type_assign_array(PyObject* cls, PyObject* arg) noexcept
+    bool make_array_of(PyTypeObject* type, std::unique_ptr<py::Array>& array) noexcept
     {
-        auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
+        auto const info = find_type_entry(type);
         if (!info)
         {
-            PyErr_Format(
-                PyExc_TypeError,
-                "'%s' is not a projected type",
-                reinterpret_cast<PyTypeObject*>(cls)->tp_name);
-            return nullptr;
+            return true;
+        }
+
+        switch (info->category)
+        {
+        case table::category::class_:
+            if (type != info->py_type)
+            {
+                return true;
+            }
+
+            if (!info->guid)
+            {
+                return true;
+            }
+
+            break;
+        case table::category::interface_:
+            if (type != info->implements)
+            {
+                return true;
+            }
+
+            break;
+        case table::category::struct_:
+        case table::category::enum_:
+            if (type != info->py_type)
+            {
+                return true;
+            }
+
+            break;
+        default:
+            return true;
         }
 
         arg_desc element{};
         if (!element_of(*info, element))
         {
-            return nullptr;
+            return false;
         }
 
-        auto array = make_table_array(*info->owner, element);
-        if (!array)
-        {
-            return nullptr;
-        }
+        array = make_table_array(*info->owner, element);
 
-        if (!cpp::_winrt::Array_Assign(arg, std::move(array)))
-        {
-            return nullptr;
-        }
-
-        Py_RETURN_NONE;
+        return array != nullptr;
     }
 } // namespace py::interp

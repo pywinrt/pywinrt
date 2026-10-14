@@ -30,6 +30,9 @@ repository](../CHANGELOG.md).
 - `winrt.system.Buffer` warns, in favor of `collections.abc.Buffer`.
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
+### Removed
+- Removed the undocumented `_assign_array_()` of projected types.
+
 ### Fixed
 - Fixed the `box_*()` and `unbox_*()` type hints incorrectly accepting keywords.
 - Fixed `Array()` refusing an iterable other than a `list` or a `tuple`.

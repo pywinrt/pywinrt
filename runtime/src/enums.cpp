@@ -4,7 +4,6 @@
 
 #include <pywinrt/base.h>
 
-#include "arrays.h"
 #include "enums.h"
 #include "types.h"
 
@@ -84,31 +83,6 @@ namespace py::interp
 
             return constants;
         }
-
-        /**
-         * Binds _assign_array_() to @p type, which is what says how wide an
-         * element of a winrt.system.Array of it is and what one converts to.
-         *
-         * Every other projected type declares the method among the methods of
-         * the type being built. An enum has no such type to declare it in -
-         * enum.IntEnum is what makes the class - so it is set on the class
-         * afterwards, bound to it the way a class method would be.
-         *
-         * @returns @c false with a Python error set.
-         */
-        bool set_assign_array(PyObject* type) noexcept
-        {
-            static PyMethodDef def
-                = {"_assign_array_", type_assign_array, METH_O, nullptr};
-
-            pyobj_handle method{PyCFunction_New(&def, type)};
-            if (!method)
-            {
-                return false;
-            }
-
-            return PyObject_SetAttrString(type, "_assign_array_", method.get()) == 0;
-        }
     } // namespace
 
     /**
@@ -181,11 +155,6 @@ namespace py::interp
         }
 
         if (PyObject_SetAttr(proj.module, name.get(), type.get()) < 0)
-        {
-            return false;
-        }
-
-        if (!set_assign_array(type.get()))
         {
             return false;
         }

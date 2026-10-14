@@ -520,16 +520,22 @@ class TestWinrtArray(unittest.TestCase):
                 with self.assertRaises(TypeError):
                     Array(impostor, 1)
 
-    def test_assign_array_that_assigns_nothing(self) -> None:
+    def test_a_type_with_no_instances_of_its_own_is_refused(self) -> None:
+        class Derived(tc.Composable):
+            pass
+
         class Foo:
             @classmethod
             def _assign_array_(cls, a: object) -> None:
                 pass
 
-        for args in ((), (1,)):
-            with self.subTest(args=args):
-                with self.assertRaisesRegex(TypeError, "Foo"):
-                    Array(Foo, *args)
+        # A static class, the wrapper an interface's instances are returned
+        # as, a Python class derived from a projected one, and a Python class
+        # that defines what Array asked a type for in 3.x.
+        for cls in (tc.TestRunner, getattr(tc, "_ITests"), Derived, Foo):
+            with self.subTest(cls=cls):
+                with self.assertRaisesRegex(TypeError, "cannot use"):
+                    Array(cls, 1)
 
     def test_copy_from_buffer(self) -> None:
         values = [blittable(1), blittable(2)]
