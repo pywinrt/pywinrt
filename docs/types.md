@@ -292,6 +292,11 @@ objects that only hold equal values, such as two `Uri` objects of the same
 address, are not equal. An object that implements `IStringable` converts to
 its string with [`str()`][str], and `repr()` is Python's default.
 
+A wrapper cannot be weakly referenced: the same WinRT object can come back as
+another wrapper, so a weak reference to one wrapper would die while the object
+lives on. A Python class derived from a projected class can be weakly
+referenced, and so can a Python implementation of an interface.
+
 A null object comes back as `None`. The type hints annotate a method or
 property `| None` where WinRT's documentation says it can return null, but
 they do not yet cover every namespace, so a member without the annotation can
