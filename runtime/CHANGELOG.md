@@ -15,6 +15,7 @@ repository](../CHANGELOG.md).
 - An `IMemoryBuffer` such as a `MemoryBuffer` now supports the buffer protocol.
 - Added `winrt.runtime.interop.get_activation_factory()`, for interop modules.
 - A vector's slices can be assigned and deleted, with a step of 1.
+- `copy.copy()` and `copy.deepcopy()` of a struct return the struct itself.
 
 ### Changed
 - BREAKING: A map is unhashable, like a `dict`, since it compares by content.
