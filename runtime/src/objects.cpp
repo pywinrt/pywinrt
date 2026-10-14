@@ -399,21 +399,6 @@ namespace py::interp
             }
         }
 
-        PyObject* type_guid(PyObject* cls, PyObject* /*unused*/) noexcept
-        {
-            auto const info = find_type_entry(reinterpret_cast<PyTypeObject*>(cls));
-            if (!info || !info->guid)
-            {
-                PyErr_Format(
-                    PyExc_AttributeError,
-                    "'%s' has no IID",
-                    reinterpret_cast<PyTypeObject*>(cls)->tp_name);
-                return nullptr;
-            }
-
-            return convert_guid(*static_cast<winrt::guid const*>(info->guid));
-        }
-
         /**
          * The abstract type an interface's public name is bound to stands for
          * an implementation it does not have, so only a subclass of it can be
@@ -539,7 +524,6 @@ namespace py::interp
             {"as_", object_as, METH_O, nullptr},
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
             {}};
 
         // A parameterized interface is only ever named with its type arguments
@@ -557,7 +541,6 @@ namespace py::interp
             {"as_", object_as, METH_O, nullptr},
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
             {"__class_getitem__",
              Py_GenericAlias,
              METH_O | METH_CLASS,
