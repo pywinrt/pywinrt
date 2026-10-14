@@ -507,21 +507,39 @@ namespace py::cpp::_winrt
                     }
                 }
 
+                // worded as py::is_buffer_compatible() words them for an array
+                // a call borrows
                 if (view.ndim != 1)
                 {
-                    PyErr_SetString(PyExc_TypeError, "ndim must be 1");
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "requires buffer with ndim == 1, have %d",
+                        view.ndim);
                     return nullptr;
                 }
 
-                if (view.itemsize != static_cast<Py_ssize_t>(self->array->ValueSize()))
+                auto const itemsize = static_cast<Py_ssize_t>(self->array->ValueSize());
+
+                if (view.itemsize != itemsize)
                 {
-                    PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "requires buffer with itemsize == %zd, have %zd",
+                        itemsize,
+                        view.itemsize);
                     return nullptr;
                 }
 
                 if (format != self->array->Format())
                 {
-                    PyErr_SetString(PyExc_TypeError, "format is incorrect");
+                    std::string const expected{self->array->Format()};
+                    std::string const actual{format};
+
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "requires buffer with format == \"%s\", have \"%s\"",
+                        expected.c_str(),
+                        actual.c_str());
                     return nullptr;
                 }
 

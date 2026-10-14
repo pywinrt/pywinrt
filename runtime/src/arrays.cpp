@@ -1042,6 +1042,32 @@ namespace py::interp
             }
         }
 
+        // A list of numbers is what a caller most often tries, and all
+        // PyObject_GetBuffer() would say about it is that it is not bytes-like.
+        if (!PyObject_CheckBuffer(obj))
+        {
+            std::wstring type;
+            if (!element_name(owner, element, type))
+            {
+                return false;
+            }
+
+            pyobj_handle expected{PyUnicode_FromWideChar(
+                type.c_str(), static_cast<Py_ssize_t>(type.size()))};
+            if (!expected)
+            {
+                return false;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "elements of type %U can only be passed in a winrt.system.Array or "
+                "a buffer, not in %s",
+                expected.get(),
+                Py_TYPE(obj)->tp_name);
+            return false;
+        }
+
         // A winrt.system.Array whose elements hold references exports them
         // read-only, so that Python cannot write a pointer into it, but the
         // memory is its own, and a callee fills a lent one all the same.

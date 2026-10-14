@@ -287,11 +287,27 @@ class TestWinrtArray(unittest.TestCase):
             list(flags), [FileAttributes.READ_ONLY, FileAttributes.DIRECTORY]
         )
 
-        with self.assertRaisesRegex(TypeError, "format is incorrect"):
+        with self.assertRaisesRegex(
+            TypeError, r'^requires buffer with format == "i", have "I"$'
+        ):
             Array(PropertyType, stdlib_array.array("I", [1]))
 
-        with self.assertRaisesRegex(TypeError, "format is incorrect"):
+        with self.assertRaisesRegex(
+            TypeError, r'^requires buffer with format == "I", have "i"$'
+        ):
             Array(FileAttributes, stdlib_array.array("i", [1]))
+
+    def test_from_a_buffer_of_another_layout(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError, r"^requires buffer with itemsize == 4, have 2$"
+        ):
+            Array(Int32, stdlib_array.array("h", [1]))
+
+        flat = memoryview(stdlib_array.array("i", [1, 2]))
+        with self.assertRaisesRegex(
+            TypeError, r"^requires buffer with ndim == 1, have 2$"
+        ):
+            Array(Int32, flat.cast("B").cast("i", (1, 2)))
 
     def test_string(self) -> None:
         a = Array(str, ["A", "B", "CDE"])
@@ -1020,7 +1036,11 @@ class TestArrayParameters(unittest.TestCase):
 
     def test_values_only_from_a_buffer(self) -> None:
         # A list holds Python objects, not the elements' layout.
-        with self.assertRaisesRegex(TypeError, "bytes-like object"):
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^elements of type Int32 can only be passed in a winrt\.system\.Array "
+            r"or a buffer, not in list$",
+        ):
             self.tests.array7([1, 2], Array(Int32, 2))  # type: ignore[arg-type]
 
     def test_lent_array_must_be_writable(self) -> None:
