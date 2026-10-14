@@ -463,6 +463,12 @@ static class FileWriters
             w.WriteLine("import enum");
         }
 
+        if (body.Contains("_os."))
+        {
+            wroteAny = true;
+            w.WriteLine("import os as _os");
+        }
+
         if (body.Contains("types."))
         {
             wroteAny = true;
@@ -541,12 +547,17 @@ static class FileWriters
         w.WriteBlankLine();
         w.WriteLine("winrt.runtime._internals.load_projection(__spec__)");
 
+        // The component .dlls are beside this file. The handle
+        // os.add_dll_directory() returns would take the directory off the
+        // search path again if it were closed, so it is held by the module.
         if (componentDlls)
         {
             w.WriteBlankLine();
-            w.WriteLine(
-                "_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)"
-            );
+            w.WriteLine("_dll_search_path_cookie_ = _os.add_dll_directory(");
+            w.Indent++;
+            w.WriteLine("_os.path.dirname(_os.path.abspath(__file__))");
+            w.Indent--;
+            w.WriteLine(")");
         }
 
         // The component .dlls are redistributed in a distribution of their
