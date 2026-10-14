@@ -17,6 +17,7 @@ import pickle
 import sys
 import unittest
 import uuid
+import weakref
 from typing import Any
 
 import test_winrt.testcomponent as tc
@@ -90,6 +91,23 @@ class TestObject(unittest.TestCase):
         self.assertNotIsInstance(object(), Object)
         self.assertFalse(issubclass(wf.Point, Object))
         self.assertFalse(issubclass(int, Object))
+
+    def test_only_a_python_class_is_weakly_referenced(self) -> None:
+        # the same WinRT object can come back as another wrapper, so a weak
+        # reference to a wrapper would not follow the object
+        with self.assertRaises(TypeError):
+            weakref.ref(wf.Uri("https://example.com"))
+
+        class Derived(tc.Composable):
+            pass
+
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        for obj in (Derived(), Stringable()):
+            with self.subTest(obj=obj):
+                self.assertIs(weakref.ref(obj)(), obj)
 
 
 class TestClasses(unittest.TestCase):
