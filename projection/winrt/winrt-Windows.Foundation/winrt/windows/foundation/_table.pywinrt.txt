@@ -76,11 +76,6 @@ enum Windows.Foundation.AsyncStatus python_type
     constant ERROR 3
     constant STARTED 0
 
-struct Windows.Foundation.DateTime python_type
-    py DateTime
-    signature struct(Windows.Foundation.DateTime;i8)
-    field universal_time UniversalTime int64
-
 class Windows.Foundation.Deferral python_type closeable
     py Deferral
     signature rc(Windows.Foundation.Deferral;{d6269732-3b7f-46a7-b40b-4fdca2a2c693})
@@ -1048,11 +1043,6 @@ struct Windows.Foundation.Size python_type
 enum TProgress parameterized
 
 enum TResult parameterized
-
-struct Windows.Foundation.TimeSpan python_type
-    py TimeSpan
-    signature struct(Windows.Foundation.TimeSpan;i8)
-    field duration Duration int64
 
 delegate Windows.Foundation.TypedEventHandler<Windows.Foundation.IMemoryBufferReference,System.Object> concrete
     py winrt.windows.foundation.TypedEventHandler[IMemoryBufferReference, Object]
