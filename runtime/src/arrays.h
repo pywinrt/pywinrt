@@ -23,7 +23,11 @@
 
 #include <Python.h>
 
+#include <pywinrt/wrappers.h>
+
 #include "interp.h"
+
+#include <memory>
 
 namespace py::interp
 {
@@ -101,5 +105,5 @@ namespace py::interp
 
     PyObject* new_array(projection& owner, arg_desc& element, uint32_t count) noexcept;
 
-    PyObject* type_assign_array(PyObject* cls, PyObject* arg) noexcept;
+    bool make_array_of(PyTypeObject* type, std::unique_ptr<py::Array>& array) noexcept;
 } // namespace py::interp

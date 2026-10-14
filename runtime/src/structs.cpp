@@ -18,7 +18,6 @@
 
 #include <pywinrt/base.h>
 
-#include "arrays.h"
 #include "generics.h"
 #include "interp.h"
 #include "numerics-buffer.h"
@@ -974,7 +973,6 @@ namespace py::interp
                 METH_VARARGS | METH_KEYWORDS,
                 nullptr},
                {"unpack", struct_unpack, METH_NOARGS, nullptr},
-               {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
                {}};
     } // namespace
 

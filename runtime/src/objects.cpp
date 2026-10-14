@@ -11,7 +11,6 @@
 #include <pywinrt/base.h>
 
 #include "_winrt_buffer.h"
-#include "arrays.h"
 #include "compose.h"
 #include "implements.h"
 #include "interp.h"
@@ -523,7 +522,6 @@ namespace py::interp
         PyMethodDef class_methods[] = {
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
             {}};
 
         // A composable class only derives from another, so the first in a
@@ -531,7 +529,6 @@ namespace py::interp
         PyMethodDef composable_root_methods[] = {
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
             {"__init_subclass__",
              reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(init_subclass)),
              METH_VARARGS | METH_KEYWORDS | METH_CLASS,
@@ -542,7 +539,6 @@ namespace py::interp
             {"as_", object_as, METH_O, nullptr},
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
             {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
             {}};
 
@@ -561,7 +557,6 @@ namespace py::interp
             {"as_", object_as, METH_O, nullptr},
             {"_query_interface_", type_query_interface, METH_O | METH_CLASS, nullptr},
             {"_from", deprecated_from, METH_O | METH_CLASS, nullptr},
-            {"_assign_array_", type_assign_array, METH_O | METH_CLASS, nullptr},
             {"_guid_", type_guid, METH_NOARGS | METH_CLASS, nullptr},
             {"__class_getitem__",
              Py_GenericAlias,
@@ -804,8 +799,8 @@ namespace py::interp
 
         std::vector<PyType_Slot> slots;
 
-        // _query_interface_() and _assign_array_() say what to do with an
-        // instance, so a static class, which has none, does not get them.
+        // _query_interface_() says what to do with an instance, so a static
+        // class, which has none, does not get it.
         if (entry.guid)
         {
             auto* const methods

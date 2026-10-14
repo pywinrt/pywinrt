@@ -1,5 +1,6 @@
 #include <pywinrt/base.h>
 #include "_winrt_array.h"
+#include "arrays.h"
 #include "module_state.h"
 #include "numerics-buffer.h"
 #include <winrt/base.h>
@@ -328,33 +329,7 @@ namespace py::cpp::_winrt
 
             auto type = reinterpret_cast<PyTypeObject*>(arg0);
 
-            // if a type has an _assign_array_ special method, use that to create
-            // the py::Array and assign it to self->array.
-            pyobj_handle assign_array{PyObject_GetAttrString(arg0, "_assign_array_")};
-
-            if (!assign_array)
-            {
-                if (PyErr_ExceptionMatches(PyExc_AttributeError))
-                {
-                    PyErr_Clear();
-                }
-                else
-                {
-                    return nullptr;
-                }
-            }
-
-            if (assign_array)
-            {
-                pyobj_handle result{
-                    PyObject_CallFunction(assign_array.get(), "O", self)};
-
-                if (!result)
-                {
-                    return nullptr;
-                }
-            }
-            else if (type == &PyBool_Type)
+            if (type == &PyBool_Type)
             {
                 self->array = std::make_unique<py::ComArray<bool>>();
             }
@@ -399,11 +374,19 @@ namespace py::cpp::_winrt
             }
             else
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "cannot use %.100s as type for WinRT array",
-                    type->tp_name);
-                return nullptr;
+                if (!py::interp::make_array_of(type, self->array))
+                {
+                    return nullptr;
+                }
+
+                if (!self->array)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "cannot use %.100s as type for WinRT array",
+                        type->tp_name);
+                    return nullptr;
+                }
             }
         }
         else
