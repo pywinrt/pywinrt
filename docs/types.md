@@ -862,7 +862,7 @@ Python callback from C++ code (i.e. an event handler or other delegate or a
 method of a Python subclass of a WinRT interface) raises an exception that isn't
 handled before the method returns, it will trigger the
 [`sys.unraisablehook()`](https://docs.python.org/3/library/sys.html#sys.unraisablehook)
-handler in Python and cause the C++ code to receive a an HRESULT error code
+handler in Python and cause the C++ code to receive an HRESULT error code
 of [`PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION`](api/system.hresult.md#pywinrt_e_unraisable_python_exception).
 This can cause undefined behavior in the C++ code in some cases, so it should
 be avoided.
@@ -886,7 +886,7 @@ above.
 
 ### Awaitables
 
-WinRT has many `_async` methods that that perform background operations and
+WinRT has many `_async` methods that perform background operations and
 return a type that derives from `Windows.Foundation.IAsyncInfo` to be able to
 wait for the result. There are four fundamental types that derive from this:
 
@@ -1225,7 +1225,7 @@ with `None` to ask whether there is a buffer at all.
 Most of the generic types in [Windows.Foundation.Collections][wfc] are projected
 as [collections.abc](https://docs.python.org/3/library/collections.abc.html) types.
 The WinRT runtime types are still present behind
-the scenes, bute the type hints use only the Python standard library types to
+the scenes, but the type hints use only the Python standard library types to
 encourage users to use the Pythonic APIs. Furthermore, types that inherit from
 these interfaces are also extended to support the Pythonic APIs.
 

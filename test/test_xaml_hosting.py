@@ -32,7 +32,7 @@ class TestXamlHost(unittest.TestCase):
             manager = WindowsXamlManager.initialize_for_current_thread()
             cls.addClassCleanup(manager.close)
 
-    def test_no_instanciation(self) -> None:
+    def test_no_instantiation(self) -> None:
         with self.assertRaisesRegex(TypeError, r"cannot create '.*' instances"):
             DesktopWindowXamlSourceNative()
 

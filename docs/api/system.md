@@ -158,8 +158,7 @@ not a runtime class or an interface. See
 
 **Introspection attributes**
 
-WinRT objects have the following attributes for inspecting various metatdata
-at runtime:
+WinRT objects have the following attributes for inspecting them at runtime:
 
 #### `_runtime_class_name_`
 
@@ -180,7 +179,7 @@ name of `IValueConverter`.
 _iids_: Array[uuid.UUID]
 ```
 
-Gets the Interface Identifiers (IIDS) of the WinRT interfaces
+Gets the Interface Identifiers (IIDs) of the WinRT interfaces
 implemented by the object.
 
 !!! version-added "Added in version 2.1"

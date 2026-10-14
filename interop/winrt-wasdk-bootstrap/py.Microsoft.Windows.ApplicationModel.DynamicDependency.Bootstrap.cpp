@@ -123,7 +123,7 @@ namespace
     static PyMethodDef module_methods[]{
         {"initialize", initialize, METH_VARARGS, nullptr}, {}};
 
-    PyDoc_STRVAR(module_doc, "APIs for boostrapping Windows App SDK framework.");
+    PyDoc_STRVAR(module_doc, "APIs for bootstrapping Windows App SDK framework.");
 
     static PyObject* shutdown_new(
         PyTypeObject* subtype, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
