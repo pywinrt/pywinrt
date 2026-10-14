@@ -10,9 +10,9 @@
 
 function(pywinrt_add_interop_module target package source root)
     pywinrt_add_module(${target} "${package}/${source}")
-    install(TARGETS ${target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
+    install(TARGETS ${target} DESTINATION "${root}")
     install(DIRECTORY "${package}/${root}/"
-        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${root}")
+        DESTINATION "${root}")
 endfunction()
 
 pywinrt_add_interop_module(_winrt_windows_graphics_capture_interop
@@ -76,4 +76,4 @@ target_link_libraries(_winrt_microsoft_windows_applicationmodel_dynamicdependenc
 # The bootstrapper is what finds the Windows App Runtime, so it is the one App
 # SDK binary that ships with the package rather than being found through it.
 install(FILES "${WASDK_FOUNDATION_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    DESTINATION "winrt")

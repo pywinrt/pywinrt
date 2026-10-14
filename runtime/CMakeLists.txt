@@ -53,8 +53,8 @@ target_include_directories(_winrt PRIVATE
 # exactly the edits the iteration loop is made of.
 target_precompile_headers(_winrt PRIVATE "${WINRT_RUNTIME_INCLUDE_PATH}/pywinrt/base.h")
 
-install(TARGETS _winrt DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
-install(DIRECTORY "${WINRT_RUNTIME_PYTHON_PATH}/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+install(TARGETS _winrt DESTINATION "winrt")
+install(DIRECTORY "${WINRT_RUNTIME_PYTHON_PATH}/" DESTINATION "winrt")
 # test_table.py and test_table_text.py read the compiler the same way the
 # build does, so it is installed as well
-install(DIRECTORY "${WINRT_TABLE_PATH}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+install(DIRECTORY "${WINRT_TABLE_PATH}/winrt/" DESTINATION "winrt")

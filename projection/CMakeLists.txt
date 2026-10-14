@@ -27,7 +27,7 @@ function(pywinrt_install_namespace_package package)
     string(REPLACE "-" "_" package_root_dir "${package_root}")
 
     install(DIRECTORY "${package}/${package_root_dir}/"
-        DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}"
+        DESTINATION "${package_root_dir}"
         PATTERN "_table.pywinrt.txt" EXCLUDE
     )
 
@@ -53,7 +53,7 @@ function(pywinrt_install_namespace_package package)
         )
 
         install(FILES "${binary}"
-            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/${package_root_dir}/${ns_dir}")
+            DESTINATION "${package_root_dir}/${ns_dir}")
 
         list(APPEND PYWINRT_TABLES "${binary}")
     endforeach()
@@ -75,7 +75,7 @@ endforeach()
 
 pywinrt_install_namespace_package("test-winrt/test-winrt-TestComponent")
 install(FILES "${PYWINRT_TOOLS_PATH}/PyWinRT.TestWinRT.${TEST_WINRT_VERSION}/runtimes/win10-${PYWINRT_TARGET_ARCH}/native/TestComponent.dll"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/test_winrt/testcomponent/")
+    DESTINATION "test_winrt/testcomponent/")
 
 # the tables of every package that is being installed, which nothing links
 # against and so nothing else would ask to be built
