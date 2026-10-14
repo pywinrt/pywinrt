@@ -36,9 +36,9 @@ with the Python naming conventions and other rules in
     None of the Windows App SDK packages can be used if the Windows
     App Runtime is not installed! You must manually install this from
     [here](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads).
-    Also read the [Boostrapping](#boostrapping) section below for how to initialize the runtime.
+    Also read the [Bootstrapping](#bootstrapping) section below for how to initialize the runtime.
 
-## Boostrapping
+## Bootstrapping
 
 To use the Windows App SDK, you need to start the runtime at the beginning of
 your program:
@@ -54,7 +54,7 @@ with bootstrap.initialize(options=bootstrap.InitializeOptions.ON_NO_MATCH_SHOW_U
 
 !!! warning
 
-    If you are using a Python runtime installed rom the Microsoft Store,
+    If you are using a Python runtime installed from the Microsoft Store,
     this method will fail with `OSError(winerror=-2147024846)` (`0x80070032`, `ERROR_NOT_SUPPORTED`).
     This happens because the Microsoft Store version of Python is a "packaged" app
     and expects the dependency to be included in the package manifest. This should
