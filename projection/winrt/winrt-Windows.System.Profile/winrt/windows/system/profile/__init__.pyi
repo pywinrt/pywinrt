@@ -117,7 +117,7 @@ class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static)
 @typing.final
 class HardwareIdentification_Static(winrt._winrt.Object_Static):
     # Windows.System.Profile.HardwareToken Windows.System.Profile.HardwareIdentification::GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)
-    def get_package_specific_token(cls, nonce: winrt.system.Buffer, /) -> HardwareToken: ...
+    def get_package_specific_token(cls, nonce: winrt.system.ReadableBuffer, /) -> HardwareToken: ...
 
 @typing.final
 class HardwareIdentification(winrt.system.Object, metaclass=HardwareIdentification_Static):

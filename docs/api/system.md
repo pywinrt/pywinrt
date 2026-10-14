@@ -8,8 +8,9 @@
 type Buffer
 ```
 
-Alias of [`collections.abc.Buffer`][Buffer]. This is the projected type for
-[Windows.Storage.Streams.IBuffer](https://learn.microsoft.com/en-us/uwp/api/windows.storage.streams.ibuffer).
+Alias of [`collections.abc.Buffer`][Buffer]. The type hints of what goes into
+WinRT name it as `ReadableBuffer` or `WriteableBuffer`, which say whether
+WinRT reads the buffer or writes into it.
 
 !!! version-added "Added in version 3.2"
 
@@ -25,10 +26,11 @@ type ReadableBuffer
 
 Alias of [`collections.abc.Buffer`][Buffer] that says WinRT only reads the
 buffer, as the same name says in the standard library's type hints. The type
-hint of an [array parameter](../types.md#arrays-as-parameters) that WinRT reads
-names it beside `Array`. A type checker sees only `Buffer`, so the layout is
-checked when the method is called: a buffer whose layout is not that of the
-array's element type raises `BufferError`.
+hints use it for an [`IBuffer`](../types.md#buffers) that goes in, and beside
+`Array` for an [array parameter](../types.md#arrays-as-parameters) that WinRT
+reads. A type checker sees only `Buffer`. An `IBuffer` takes the bytes of any
+buffer, and an array checks the layout when the method is called: a buffer
+whose layout is not that of the array's element type raises `BufferError`.
 
 !!! version-added "Added in version 2.3"
 
@@ -40,10 +42,12 @@ type WriteableBuffer
 
 Alias of [`collections.abc.Buffer`][Buffer] that says WinRT writes into the
 buffer, as the same name says in the standard library's type hints. The type
-hint of an [array parameter](../types.md#arrays-as-parameters) that WinRT fills
-names it beside `Array`. A type checker sees only `Buffer`, so the buffer is
-checked when the method is called: one that is read-only, such as `bytes`, or
-whose layout is not that of the array's element type raises `BufferError`.
+hints use it for an [`IBuffer`](../types.md#buffers) that WinRT fills, and
+beside `Array` for an [array parameter](../types.md#arrays-as-parameters) that
+WinRT fills. A type checker sees only `Buffer`, so the buffer is checked when
+the method is called. A read-only one, such as `bytes`, raises `TypeError` for
+an `IBuffer` and `BufferError` for an array, as does one whose layout is not
+that of the array's element type.
 
 !!! version-added "Added in version 2.3"
 

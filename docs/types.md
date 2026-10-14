@@ -1128,8 +1128,9 @@ any Python object that implements the buffer protocol, for example, a
 [`bytearray`](https://docs.python.org/3/builtins/stdtypes.html#bytearray),
 [`bytes`][bytes], or a [`memoryview`][memoryview], and WinRT reads or writes
 its memory directly, without a copy. The type hints name such a parameter
-[`winrt.system.Buffer`](api/system.md#buffer),
-which is an alias for [`collections.abc.Buffer`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer).
+[`winrt.system.ReadableBuffer`](api/system.md#readablebuffer), or
+[`winrt.system.WriteableBuffer`](api/system.md#writeablebuffer) where WinRT
+writes into it, both aliases for [`collections.abc.Buffer`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer).
 An `IBuffer` that WinRT hands back is typed as `IBuffer`, which supports the
 buffer protocol and `len()` too and has `length` and `capacity`.
 
