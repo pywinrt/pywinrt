@@ -20,10 +20,10 @@
     // still has. A property of a PEP 695 generic class whose type refers back
     // to the class is reported as redeclared until
     // https://github.com/microsoft/pyright/issues/11835 is fixed.
-    // TODO: a stub imports winrt._winrt, winrt.system and every namespace its
-    // types and their inherited interfaces refer to, whether it uses them or
-    // not. Choose them from the written stub, as its standard library imports
-    // are, then remove reportUnusedImport.
+    // TODO: a stub imports winrt.system and every namespace its types and
+    // their inherited interfaces refer to, whether it uses them or not.
+    // Choose them from the written stub, as its standard library imports are,
+    // then remove reportUnusedImport.
     {
       "root": "_typing",
       "reportDeprecated": "none",

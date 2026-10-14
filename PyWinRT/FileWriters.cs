@@ -371,7 +371,6 @@ static class FileWriters
             .Concat(members.Classes)
             .Concat(members.Interfaces);
 
-        w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");
 
         var referencedNamespaces = new SortedSet<QualifiedNamespace>(

@@ -66,7 +66,7 @@ static class InterfaceWriterExtensions
         // See https://github.com/python/mypy/issues/17091.
         if (!hasMembers && type.Interfaces.Any())
         {
-            baseTypes.Add("metaclass=winrt._winrt.Object_Static");
+            baseTypes.Add("metaclass=winrt.system.Object_Static");
         }
 
         if (type.IsDeprecated)
