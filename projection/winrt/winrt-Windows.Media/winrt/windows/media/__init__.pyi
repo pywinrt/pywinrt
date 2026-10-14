@@ -874,16 +874,10 @@ class VideoFrame(IMediaFrame, windows_foundation.IClosable, winrt.system.Object,
     @_property
     def software_bitmap(self) -> windows_graphics_imaging.SoftwareBitmap: ...
 
-@typing.final
-class _IMediaExtension: ...
-
 class IMediaExtension(winrt.system.Object):
     # System.Void Windows.Media.IMediaExtension::SetProperties(Windows.Foundation.Collections.IPropertySet)
     @abstractmethod
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
-
-@typing.final
-class _IMediaFrame: ...
 
 class IMediaFrame(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan> Windows.Media.IMediaFrame::get_Duration()
@@ -931,9 +925,6 @@ class IMediaFrame(windows_foundation.IClosable, winrt.system.Object):
     @abstractmethod
     def type(self) -> str: ...
 
-@typing.final
-class _IMediaMarker: ...
-
 class IMediaMarker(winrt.system.Object):
     # System.String Windows.Media.IMediaMarker::get_MediaMarkerType()
     @_property
@@ -947,9 +938,6 @@ class IMediaMarker(winrt.system.Object):
     @_property
     @abstractmethod
     def time(self) -> datetime.timedelta: ...
-
-@typing.final
-class _IMediaMarkers: ...
 
 class IMediaMarkers(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.IMediaMarker> Windows.Media.IMediaMarkers::get_Markers()

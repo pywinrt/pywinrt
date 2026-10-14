@@ -324,16 +324,10 @@ class WebAccountProvider(winrt.system.Object):
     @_property
     def is_system_provider(self) -> bool: ...
 
-@typing.final
-class _IKeyCredentialCacheConfigurationFactory: ...
-
 class IKeyCredentialCacheConfigurationFactory(winrt.system.Object):
     # Windows.Security.Credentials.KeyCredentialCacheConfiguration Windows.Security.Credentials.IKeyCredentialCacheConfigurationFactory::CreateInstance(Windows.Security.Credentials.KeyCredentialCacheOption,Windows.Foundation.TimeSpan,System.UInt32)
     @abstractmethod
     def create_instance(self, cache_option: KeyCredentialCacheOption, timeout: datetime.timedelta, usage_count: winrt.system.UInt32 | typing.SupportsIndex, /) -> KeyCredentialCacheConfiguration: ...
-
-@typing.final
-class _IWebAccount: ...
 
 class IWebAccount(winrt.system.Object):
     # Windows.Security.Credentials.WebAccountState Windows.Security.Credentials.IWebAccount::get_State()

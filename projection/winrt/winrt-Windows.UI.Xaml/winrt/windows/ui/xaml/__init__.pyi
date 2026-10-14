@@ -3668,9 +3668,6 @@ class XamlRootChangedEventArgs(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-@typing.final
-class _IDataTemplateExtension: ...
-
 class IDataTemplateExtension(winrt.system.Object):
     # System.Boolean Windows.UI.Xaml.IDataTemplateExtension::ProcessBinding(System.UInt32)
     @abstractmethod
@@ -3681,9 +3678,6 @@ class IDataTemplateExtension(winrt.system.Object):
     # System.Void Windows.UI.Xaml.IDataTemplateExtension::ResetTemplate()
     @abstractmethod
     def reset_template(self) -> None: ...
-
-@typing.final
-class _IElementFactory: ...
 
 class IElementFactory(winrt.system.Object):
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.IElementFactory::GetElement(Windows.UI.Xaml.ElementFactoryGetArgs)

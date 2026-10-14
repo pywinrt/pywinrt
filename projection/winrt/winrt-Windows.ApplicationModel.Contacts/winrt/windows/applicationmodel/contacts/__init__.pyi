@@ -1813,9 +1813,6 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
     @_property
     def user(self) -> windows_system.User: ...
 
-@typing.final
-class _IContactField: ...
-
 class IContactField(winrt.system.Object):
     # Windows.ApplicationModel.Contacts.ContactFieldCategory Windows.ApplicationModel.Contacts.IContactField::get_Category()
     @_property
@@ -1833,9 +1830,6 @@ class IContactField(winrt.system.Object):
     @_property
     @abstractmethod
     def value(self) -> str: ...
-
-@typing.final
-class _IContactFieldFactory: ...
 
 class IContactFieldFactory(winrt.system.Object):
     @typing.overload
@@ -1863,9 +1857,6 @@ class IContactFieldFactory(winrt.system.Object):
     @deprecated("Use create_field() instead.")
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
-@typing.final
-class _IContactInstantMessageFieldFactory: ...
-
 class IContactInstantMessageFieldFactory(winrt.system.Object):
     @typing.overload
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
@@ -1891,9 +1882,6 @@ class IContactInstantMessageFieldFactory(winrt.system.Object):
     # Windows.ApplicationModel.Contacts.ContactInstantMessageField Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory::CreateInstantMessage(System.String)
     @deprecated("Use create_instant_message() instead.")
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
-
-@typing.final
-class _IContactLocationFieldFactory: ...
 
 class IContactLocationFieldFactory(winrt.system.Object):
     @typing.overload

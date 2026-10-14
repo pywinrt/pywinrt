@@ -458,9 +458,6 @@ class MidiTuneRequestMessage(IMidiMessage, winrt.system.Object):
     @_property
     def type(self) -> MidiMessageType: ...
 
-@typing.final
-class _IMidiMessage: ...
-
 class IMidiMessage(winrt.system.Object):
     # Windows.Storage.Streams.IBuffer Windows.Devices.Midi.IMidiMessage::get_RawData()
     @_property
@@ -474,9 +471,6 @@ class IMidiMessage(winrt.system.Object):
     @_property
     @abstractmethod
     def type(self) -> MidiMessageType: ...
-
-@typing.final
-class _IMidiOutPort: ...
 
 class IMidiOutPort(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Devices.Midi.IMidiOutPort::SendBuffer(Windows.Storage.Streams.IBuffer)

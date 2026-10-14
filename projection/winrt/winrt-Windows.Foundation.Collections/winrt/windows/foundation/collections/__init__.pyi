@@ -130,16 +130,10 @@ class ValueSet(IPropertySet, IObservableMap[str, winrt.system.Object], _cabc.Mut
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class _IIterable: ...
-
 class IIterable[T](winrt.system.Object):
     # Windows.Foundation.Collections.IIterator`1<T> Windows.Foundation.Collections.IIterable`1::First()
     @abstractmethod
     def first(self) -> IIterator[T]: ...
-
-@typing.final
-class _IIterator: ...
 
 class IIterator[T](winrt.system.Object):
     # System.UInt32 Windows.Foundation.Collections.IIterator`1::GetMany(T[])
@@ -157,9 +151,6 @@ class IIterator[T](winrt.system.Object):
     @abstractmethod
     def has_current(self) -> bool: ...
 
-@typing.final
-class _IKeyValuePair: ...
-
 class IKeyValuePair[K, V](winrt.system.Object):
     # K Windows.Foundation.Collections.IKeyValuePair`2::get_Key()
     @_property
@@ -170,9 +161,6 @@ class IKeyValuePair[K, V](winrt.system.Object):
     @abstractmethod
     def value(self) -> V: ...
 
-@typing.final
-class _IMapChangedEventArgs: ...
-
 class IMapChangedEventArgs[K](winrt.system.Object):
     # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IMapChangedEventArgs`1::get_CollectionChange()
     @_property
@@ -182,9 +170,6 @@ class IMapChangedEventArgs[K](winrt.system.Object):
     @_property
     @abstractmethod
     def key(self) -> K: ...
-
-@typing.final
-class _IMapView: ...
 
 class IMapView[K, V](IIterable[IKeyValuePair[K, V]], _cabc.Mapping[K, V], winrt.system.Object):
     def __len__(self) -> int: ...
@@ -204,9 +189,6 @@ class IMapView[K, V](IIterable[IKeyValuePair[K, V]], _cabc.Mapping[K, V], winrt.
     @_property
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
-
-@typing.final
-class _IMap: ...
 
 class IMap[K, V](IIterable[IKeyValuePair[K, V]], _cabc.MutableMapping[K, V], winrt.system.Object):
     def __len__(self) -> int: ...
@@ -238,9 +220,6 @@ class IMap[K, V](IIterable[IKeyValuePair[K, V]], _cabc.MutableMapping[K, V], win
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class _IObservableMap: ...
-
 class IObservableMap[K, V](IMap[K, V], winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableMap`2::add_MapChanged(Windows.Foundation.Collections.MapChangedEventHandler`2<K,V>)
     @abstractmethod
@@ -248,9 +227,6 @@ class IObservableMap[K, V](IMap[K, V], winrt.system.Object):
     # System.Void Windows.Foundation.Collections.IObservableMap`2::remove_MapChanged(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_map_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-
-@typing.final
-class _IObservableVector: ...
 
 class IObservableVector[T](IVector[T], winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Foundation.Collections.IObservableVector`1::add_VectorChanged(Windows.Foundation.Collections.VectorChangedEventHandler`1<T>)
@@ -260,14 +236,8 @@ class IObservableVector[T](IVector[T], winrt.system.Object):
     @abstractmethod
     def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-@typing.final
-class _IPropertySet: ...
-
 class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object, metaclass=winrt._winrt.Object_Static):
     ...
-
-@typing.final
-class _IVectorChangedEventArgs: ...
 
 class IVectorChangedEventArgs(winrt.system.Object):
     # Windows.Foundation.Collections.CollectionChange Windows.Foundation.Collections.IVectorChangedEventArgs::get_CollectionChange()
@@ -278,9 +248,6 @@ class IVectorChangedEventArgs(winrt.system.Object):
     @_property
     @abstractmethod
     def index(self) -> winrt.system.UInt32: ...
-
-@typing.final
-class _IVectorView: ...
 
 class IVectorView[T](IIterable[T], _cabc.Sequence[T], winrt.system.Object):
     def __len__(self) -> int: ...
@@ -302,9 +269,6 @@ class IVectorView[T](IIterable[T], _cabc.Sequence[T], winrt.system.Object):
     @_property
     @abstractmethod
     def size(self) -> winrt.system.UInt32: ...
-
-@typing.final
-class _IVector: ...
 
 class IVector[T](IIterable[T], _cabc.MutableSequence[T], winrt.system.Object):
     def __len__(self) -> int: ...

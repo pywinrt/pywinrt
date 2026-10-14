@@ -224,9 +224,6 @@ class SystemBackdropConfiguration(winrt.system.Object):
     @high_contrast_background_color.setter
     def high_contrast_background_color(self, value: windows_ui.Color | None) -> None: ...
 
-@typing.final
-class _ISystemBackdropController: ...
-
 class ISystemBackdropController(windows_foundation.IClosable, winrt.system.Object):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Microsoft.UI.WindowId,Windows.UI.Composition.CompositionTarget)
     @abstractmethod
@@ -234,9 +231,6 @@ class ISystemBackdropController(windows_foundation.IClosable, winrt.system.Objec
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController::SetTarget(Windows.UI.Core.CoreWindow,Windows.UI.Composition.CompositionTarget)
     @abstractmethod
     def set_target_with_core_window(self, core_window: windows_ui_core.CoreWindow, composition_target: windows_ui_composition.CompositionTarget, /) -> bool: ...
-
-@typing.final
-class _ISystemBackdropControllerWithTargets: ...
 
 class ISystemBackdropControllerWithTargets(ISystemBackdropController, windows_foundation.IClosable, winrt.system.Object):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets::AddSystemBackdropTarget(Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop)

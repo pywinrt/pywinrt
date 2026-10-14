@@ -30,6 +30,12 @@ from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
 
+# The types an interface's instances are returned as, which the stubs do not
+# name, since only the interface is for users.
+TESTS_WRAPPER: type = getattr(tc, "_ITests")
+REQUIRED_ONE_WRAPPER: type = getattr(tc, "_IRequiredOne")
+REQUIRED_TWO_WRAPPER: type = getattr(tc, "_IRequiredTwo")
+
 
 class TestModule(unittest.TestCase):
     def test_a_type_belongs_to_the_package_that_projects_it(self) -> None:
@@ -41,8 +47,8 @@ class TestModule(unittest.TestCase):
     def test_an_interface_is_bound_twice(self) -> None:
         # The wrapper an instance is returned as, and the public name that
         # carries the IID and that a Python implementation would derive from.
-        self.assertIsNot(tc.ITests, tc._ITests)
-        self.assertEqual(tc._ITests.__name__, "_ITests")
+        self.assertIsNot(tc.ITests, TESTS_WRAPPER)
+        self.assertEqual(TESTS_WRAPPER.__name__, "_ITests")
         self.assertEqual(tc.ITests.__name__, "ITests")
 
     def test_reloading_keeps_the_types(self) -> None:
@@ -190,7 +196,7 @@ class TestClasses(unittest.TestCase):
     def test_as_and_isinstance(self) -> None:
         instance = tc.Class()
 
-        self.assertIsInstance(instance.as_(tc.IRequiredOne), tc._IRequiredOne)
+        self.assertIsInstance(instance.as_(tc.IRequiredOne), REQUIRED_ONE_WRAPPER)
         self.assertIsInstance(instance, tc.IRequiredOne)
         self.assertNotIsInstance(instance, tc.IRequiredTwo)
 
@@ -265,8 +271,8 @@ class TestClasses(unittest.TestCase):
 
     def test_issubclass_of_the_wrapper_type(self) -> None:
         # The underscored type an instance is returned as is the interface.
-        self.assertTrue(issubclass(tc._IRequiredOne, tc.IRequiredOne))
-        self.assertTrue(issubclass(tc._IRequiredTwo, tc.IRequiredOne))
+        self.assertTrue(issubclass(REQUIRED_ONE_WRAPPER, tc.IRequiredOne))
+        self.assertTrue(issubclass(REQUIRED_TWO_WRAPPER, tc.IRequiredOne))
 
     def test_issubclass_of_something_else(self) -> None:
         self.assertFalse(issubclass(tc.Blittable, tc.IRequiredOne))
@@ -464,16 +470,16 @@ class TestMembers(unittest.TestCase):
             self.tests.param7(a=1)  # type: ignore[call-arg]
 
     def test_a_descriptor_names_itself(self) -> None:
-        # the members of a wrapper type are built from the table, so its stub
-        # is the interface's and names none of them
-        descriptor = getattr(tc._ITests, "simple")
+        # the members of a wrapper type are built from the table, and the stubs
+        # do not name the type
+        descriptor = getattr(TESTS_WRAPPER, "simple")
 
         self.assertEqual(descriptor.__name__, "simple")
-        self.assertIs(descriptor.__objclass__, tc._ITests)
+        self.assertIs(descriptor.__objclass__, TESTS_WRAPPER)
 
     def test_a_descriptor_refuses_another_type(self) -> None:
         with self.assertRaises(TypeError):
-            tc._ITests.simple(tc.Class())  # type: ignore[attr-defined]
+            TESTS_WRAPPER.simple(tc.Class())  # type: ignore[attr-defined]
 
     def test_an_overload_is_chosen_by_argument_count(self) -> None:
         obj = wdj.JsonObject.parse('{ "spam": "eggs" }')

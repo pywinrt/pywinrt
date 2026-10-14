@@ -871,9 +871,6 @@ class SyndicationText(ISyndicationText, ISyndicationNode, winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
-@typing.final
-class _ISyndicationClient: ...
-
 class ISyndicationClient(winrt.system.Object):
     # Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Web.Syndication.SyndicationFeed,Windows.Web.Syndication.RetrievalProgress> Windows.Web.Syndication.ISyndicationClient::RetrieveFeedAsync(Windows.Foundation.Uri)
     @abstractmethod
@@ -921,9 +918,6 @@ class ISyndicationClient(winrt.system.Object):
     @timeout.setter
     @abstractmethod
     def timeout(self, value: winrt.system.UInt32 | typing.SupportsIndex) -> None: ...
-
-@typing.final
-class _ISyndicationNode: ...
 
 class ISyndicationNode(winrt.system.Object):
     # Windows.Data.Xml.Dom.XmlDocument Windows.Web.Syndication.ISyndicationNode::GetXmlDocument(Windows.Web.Syndication.SyndicationFormat)
@@ -977,9 +971,6 @@ class ISyndicationNode(winrt.system.Object):
     @node_value.setter
     @abstractmethod
     def node_value(self, value: str) -> None: ...
-
-@typing.final
-class _ISyndicationText: ...
 
 class ISyndicationText(ISyndicationNode, winrt.system.Object):
     # System.String Windows.Web.Syndication.ISyndicationText::get_Text()

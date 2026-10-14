@@ -1037,9 +1037,6 @@ class FindAppointmentsOptions(winrt.system.Object):
     @_property
     def fetch_properties(self) -> _cabc.MutableSequence[str]: ...
 
-@typing.final
-class _IAppointmentParticipant: ...
-
 class IAppointmentParticipant(winrt.system.Object):
     # System.String Windows.ApplicationModel.Appointments.IAppointmentParticipant::get_Address()
     @_property

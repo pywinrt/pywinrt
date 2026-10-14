@@ -477,9 +477,6 @@ class VenueData(winrt.system.Object):
     @_property
     def level(self) -> str: ...
 
-@typing.final
-class _IGeoshape: ...
-
 class IGeoshape(winrt.system.Object):
     # Windows.Devices.Geolocation.AltitudeReferenceSystem Windows.Devices.Geolocation.IGeoshape::get_AltitudeReferenceSystem()
     @_property

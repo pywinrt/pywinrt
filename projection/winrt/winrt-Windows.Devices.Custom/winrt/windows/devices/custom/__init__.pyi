@@ -95,9 +95,6 @@ class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _IIOControlCode: ...
-
 class IIOControlCode(winrt.system.Object):
     # Windows.Devices.Custom.IOControlAccessMode Windows.Devices.Custom.IIOControlCode::get_AccessMode()
     @_property

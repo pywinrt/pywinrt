@@ -313,9 +313,6 @@ class LampArrayUpdateRequestedEventArgs(winrt.system.Object):
     @_property
     def since_started(self) -> datetime.timedelta: ...
 
-@typing.final
-class _ILampArrayEffect: ...
-
 class ILampArrayEffect(winrt.system.Object):
     # System.Int32 Windows.Devices.Lights.Effects.ILampArrayEffect::get_ZIndex()
     @_property

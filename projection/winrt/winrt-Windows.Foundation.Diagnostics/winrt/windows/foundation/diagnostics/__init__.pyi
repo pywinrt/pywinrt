@@ -1150,9 +1150,6 @@ class TracingStatusChangedEventArgs(winrt.system.Object):
     @_property
     def trace_level(self) -> CausalityTraceLevel: ...
 
-@typing.final
-class _IErrorReportingSettings: ...
-
 class IErrorReportingSettings(winrt.system.Object):
     # Windows.Foundation.Diagnostics.ErrorOptions Windows.Foundation.Diagnostics.IErrorReportingSettings::GetErrorOptions()
     @abstractmethod
@@ -1160,9 +1157,6 @@ class IErrorReportingSettings(winrt.system.Object):
     # System.Void Windows.Foundation.Diagnostics.IErrorReportingSettings::SetErrorOptions(Windows.Foundation.Diagnostics.ErrorOptions)
     @abstractmethod
     def set_error_options(self, value: ErrorOptions, /) -> None: ...
-
-@typing.final
-class _IFileLoggingSession: ...
 
 class IFileLoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
@@ -1193,9 +1187,6 @@ class IFileLoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @_property
     @abstractmethod
     def name(self) -> str: ...
-
-@typing.final
-class _ILoggingChannel: ...
 
 class ILoggingChannel(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
@@ -1241,9 +1232,6 @@ class ILoggingChannel(windows_foundation.IClosable, winrt.system.Object):
     @abstractmethod
     def name(self) -> str: ...
 
-@typing.final
-class _ILoggingSession: ...
-
 class ILoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Foundation.Diagnostics.ILoggingSession::AddLoggingChannel(Windows.Foundation.Diagnostics.ILoggingChannel)
@@ -1267,9 +1255,6 @@ class ILoggingSession(windows_foundation.IClosable, winrt.system.Object):
     @_property
     @abstractmethod
     def name(self) -> str: ...
-
-@typing.final
-class _ILoggingTarget: ...
 
 class ILoggingTarget(winrt.system.Object):
     @typing.overload

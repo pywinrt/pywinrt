@@ -277,9 +277,6 @@ class JsonValue(windows_foundation.IStringable, IJsonValue, winrt.system.Object,
     @_property
     def value_type(self) -> JsonValueType: ...
 
-@typing.final
-class _IJsonValue: ...
-
 class IJsonValue(winrt.system.Object):
     # Windows.Data.Json.JsonArray Windows.Data.Json.IJsonValue::GetArray()
     @abstractmethod

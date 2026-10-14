@@ -486,9 +486,6 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-@typing.final
-class _IClosableNotifier: ...
-
 class IClosableNotifier(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.IClosableNotifier::add_Closed(Microsoft.UI.ClosableNotifierHandler)
     @abstractmethod

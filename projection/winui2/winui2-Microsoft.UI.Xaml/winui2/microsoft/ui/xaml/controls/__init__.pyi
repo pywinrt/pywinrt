@@ -5849,9 +5849,6 @@ class XamlControlsResources(windows_ui_xaml.ResourceDictionary, metaclass=XamlCo
     @controls_resources_version.setter
     def controls_resources_version(self, value: ControlsResourcesVersion) -> None: ...
 
-@typing.final
-class _IAnimatedVisual: ...
-
 class IAnimatedVisual(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Foundation.TimeSpan Microsoft.UI.Xaml.Controls.IAnimatedVisual::get_Duration()
     @_property
@@ -5866,9 +5863,6 @@ class IAnimatedVisual(windows_foundation.IClosable, winrt.system.Object):
     @abstractmethod
     def size(self) -> windows_foundation_numerics.Vector2: ...
 
-@typing.final
-class _IAnimatedVisual2: ...
-
 class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisual2::CreateAnimations()
     @abstractmethod
@@ -5877,16 +5871,10 @@ class IAnimatedVisual2(IAnimatedVisual, windows_foundation.IClosable, winrt.syst
     @abstractmethod
     def destroy_animations(self) -> None: ...
 
-@typing.final
-class _IAnimatedVisualSource: ...
-
 class IAnimatedVisualSource(winrt.system.Object):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual Microsoft.UI.Xaml.Controls.IAnimatedVisualSource::TryCreateAnimatedVisual(Windows.UI.Composition.Compositor,System.Object&)
     @abstractmethod
     def try_create_animated_visual(self, compositor: windows_ui_composition.Compositor, /) -> tuple[IAnimatedVisual, winrt.system.Object]: ...
-
-@typing.final
-class _IAnimatedVisualSource2: ...
 
 class IAnimatedVisualSource2(IAnimatedVisualSource, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2::SetColorProperty(System.String,Windows.UI.Color)
@@ -5897,16 +5885,10 @@ class IAnimatedVisualSource2(IAnimatedVisualSource, winrt.system.Object):
     @abstractmethod
     def markers(self) -> _cabc.Mapping[str, winrt.system.Double]: ...
 
-@typing.final
-class _IAnimatedVisualSource3: ...
-
 class IAnimatedVisualSource3(winrt.system.Object):
     # Microsoft.UI.Xaml.Controls.IAnimatedVisual2 Microsoft.UI.Xaml.Controls.IAnimatedVisualSource3::TryCreateAnimatedVisual(Windows.UI.Composition.Compositor,System.Object&,System.Boolean)
     @abstractmethod
     def try_create_animated_visual(self, compositor: windows_ui_composition.Compositor, create_animations: bool, /) -> tuple[IAnimatedVisual2, winrt.system.Object]: ...
-
-@typing.final
-class _IDynamicAnimatedVisualSource: ...
 
 class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::add_AnimatedVisualInvalidated(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource,System.Object>)
@@ -5915,9 +5897,6 @@ class IDynamicAnimatedVisualSource(IAnimatedVisualSource, winrt.system.Object):
     # System.Void Microsoft.UI.Xaml.Controls.IDynamicAnimatedVisualSource::remove_AnimatedVisualInvalidated(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_animated_visual_invalidated(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
-
-@typing.final
-class _IKeyIndexMapping: ...
 
 class IKeyIndexMapping(winrt.system.Object):
     # System.Int32 Microsoft.UI.Xaml.Controls.IKeyIndexMapping::IndexFromKey(System.String)

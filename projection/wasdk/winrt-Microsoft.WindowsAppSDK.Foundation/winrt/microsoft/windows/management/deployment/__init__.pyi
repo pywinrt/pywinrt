@@ -758,9 +758,6 @@ class StagePackageOptions(winrt.system.Object):
     @_property
     def package_validators(self) -> _cabc.Mapping[windows_foundation.Uri, PackageValidationEventSource]: ...
 
-@typing.final
-class _IPackageValidator: ...
-
 class IPackageValidator(winrt.system.Object):
     # System.Boolean Microsoft.Windows.Management.Deployment.IPackageValidator::IsPackageValid(System.Object)
     @abstractmethod

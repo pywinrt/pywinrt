@@ -209,9 +209,6 @@ class TranslationAnimation(IPropertyAnimation, winrt.system.Object):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
-@typing.final
-class _IPropertyAnimation: ...
-
 class IPropertyAnimation(winrt.system.Object):
     # Windows.Foundation.Point Windows.UI.Core.AnimationMetrics.IPropertyAnimation::get_Control1()
     @_property

@@ -1817,9 +1817,6 @@ class WakeOnApproachOptions(winrt.system.Object):
     @allow_when_external_display_connected.setter
     def allow_when_external_display_connected(self, value: bool) -> None: ...
 
-@typing.final
-class _IHumanPresenceSensorExtension: ...
-
 class IHumanPresenceSensorExtension(winrt.system.Object):
     # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Initialize(System.String)
     @abstractmethod
@@ -1842,9 +1839,6 @@ class IHumanPresenceSensorExtension(winrt.system.Object):
     # System.Void Windows.Devices.Sensors.IHumanPresenceSensorExtension::Uninitialize()
     @abstractmethod
     def uninitialize(self) -> None: ...
-
-@typing.final
-class _ISensorDataThreshold: ...
 
 class ISensorDataThreshold(winrt.system.Object):
     ...

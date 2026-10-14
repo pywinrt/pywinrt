@@ -1201,17 +1201,11 @@ class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def server_intermediate_certificates(self) -> _cabc.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
-@typing.final
-class _IControlChannelTriggerEventDetails: ...
-
 class IControlChannelTriggerEventDetails(winrt.system.Object):
     # Windows.Networking.Sockets.ControlChannelTrigger Windows.Networking.Sockets.IControlChannelTriggerEventDetails::get_ControlChannelTrigger()
     @_property
     @abstractmethod
     def control_channel_trigger(self) -> ControlChannelTrigger: ...
-
-@typing.final
-class _IControlChannelTriggerResetEventDetails: ...
 
 class IControlChannelTriggerResetEventDetails(winrt.system.Object):
     # System.Boolean Windows.Networking.Sockets.IControlChannelTriggerResetEventDetails::get_HardwareSlotReset()
@@ -1226,9 +1220,6 @@ class IControlChannelTriggerResetEventDetails(winrt.system.Object):
     @_property
     @abstractmethod
     def software_slot_reset(self) -> bool: ...
-
-@typing.final
-class _IWebSocket: ...
 
 class IWebSocket(windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
@@ -1260,9 +1251,6 @@ class IWebSocket(windows_foundation.IClosable, winrt.system.Object):
     @abstractmethod
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
-@typing.final
-class _IWebSocketControl: ...
-
 class IWebSocketControl(winrt.system.Object):
     # System.UInt32 Windows.Networking.Sockets.IWebSocketControl::get_OutboundBufferSizeInBytes()
     @_property
@@ -1293,17 +1281,11 @@ class IWebSocketControl(winrt.system.Object):
     @abstractmethod
     def supported_protocols(self) -> _cabc.MutableSequence[str]: ...
 
-@typing.final
-class _IWebSocketControl2: ...
-
 class IWebSocketControl2(IWebSocketControl, winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<Windows.Security.Cryptography.Certificates.ChainValidationResult> Windows.Networking.Sockets.IWebSocketControl2::get_IgnorableServerCertificateErrors()
     @_property
     @abstractmethod
     def ignorable_server_certificate_errors(self) -> _cabc.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
-
-@typing.final
-class _IWebSocketInformation: ...
 
 class IWebSocketInformation(winrt.system.Object):
     # Windows.Networking.Sockets.BandwidthStatistics Windows.Networking.Sockets.IWebSocketInformation::get_BandwidthStatistics()
@@ -1318,9 +1300,6 @@ class IWebSocketInformation(winrt.system.Object):
     @_property
     @abstractmethod
     def protocol(self) -> str: ...
-
-@typing.final
-class _IWebSocketInformation2: ...
 
 class IWebSocketInformation2(IWebSocketInformation, winrt.system.Object):
     # Windows.Security.Cryptography.Certificates.Certificate Windows.Networking.Sockets.IWebSocketInformation2::get_ServerCertificate()

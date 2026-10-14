@@ -272,9 +272,6 @@ class WidgetUpdateRequestOptions(winrt.system.Object, metaclass=WidgetUpdateRequ
     @rank.setter
     def rank(self, value: winrt.system.Int32 | None) -> None: ...
 
-@typing.final
-class _IWidgetManager: ...
-
 class IWidgetManager(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager::DeleteWidget(System.String)
     @abstractmethod
@@ -292,16 +289,10 @@ class IWidgetManager(winrt.system.Object):
     @abstractmethod
     def update_widget(self, widget_update_request_options: WidgetUpdateRequestOptions, /) -> None: ...
 
-@typing.final
-class _IWidgetManager2: ...
-
 class IWidgetManager2(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetManager2::SendMessageToContent(System.String,System.String)
     @abstractmethod
     def send_message_to_content(self, widget_id: str, message: str, /) -> None: ...
-
-@typing.final
-class _IWidgetProvider: ...
 
 class IWidgetProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider::Activate(Microsoft.Windows.Widgets.Providers.WidgetContext)
@@ -323,40 +314,25 @@ class IWidgetProvider(winrt.system.Object):
     @abstractmethod
     def on_widget_context_changed(self, context_changed_args: WidgetContextChangedArgs, /) -> None: ...
 
-@typing.final
-class _IWidgetProvider2: ...
-
 class IWidgetProvider2(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProvider2::OnCustomizationRequested(Microsoft.Windows.Widgets.Providers.WidgetCustomizationRequestedArgs)
     @abstractmethod
     def on_customization_requested(self, customization_requested_args: WidgetCustomizationRequestedArgs, /) -> None: ...
-
-@typing.final
-class _IWidgetProviderAnalytics: ...
 
 class IWidgetProviderAnalytics(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderAnalytics::OnAnalyticsInfoReported(Microsoft.Windows.Widgets.Providers.WidgetAnalyticsInfoReportedArgs)
     @abstractmethod
     def on_analytics_info_reported(self, args: WidgetAnalyticsInfoReportedArgs, /) -> None: ...
 
-@typing.final
-class _IWidgetProviderErrors: ...
-
 class IWidgetProviderErrors(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderErrors::OnErrorInfoReported(Microsoft.Windows.Widgets.Providers.WidgetErrorInfoReportedArgs)
     @abstractmethod
     def on_error_info_reported(self, args: WidgetErrorInfoReportedArgs, /) -> None: ...
 
-@typing.final
-class _IWidgetProviderMessage: ...
-
 class IWidgetProviderMessage(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetProviderMessage::OnMessageReceived(Microsoft.Windows.Widgets.Providers.WidgetMessageReceivedArgs)
     @abstractmethod
     def on_message_received(self, args: WidgetMessageReceivedArgs, /) -> None: ...
-
-@typing.final
-class _IWidgetResourceProvider: ...
 
 class IWidgetResourceProvider(winrt.system.Object):
     # System.Void Microsoft.Windows.Widgets.Providers.IWidgetResourceProvider::OnResourceRequested(Microsoft.Windows.Widgets.Providers.WidgetResourceRequestedArgs)

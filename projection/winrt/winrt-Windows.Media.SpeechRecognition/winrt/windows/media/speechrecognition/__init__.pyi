@@ -474,9 +474,6 @@ class SpeechRecognizerUIOptions(winrt.system.Object):
     @audible_prompt.setter
     def audible_prompt(self, value: str) -> None: ...
 
-@typing.final
-class _ISpeechRecognitionConstraint: ...
-
 class ISpeechRecognitionConstraint(winrt.system.Object):
     # System.Boolean Windows.Media.SpeechRecognition.ISpeechRecognitionConstraint::get_IsEnabled()
     @_property

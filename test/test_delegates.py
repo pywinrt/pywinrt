@@ -125,7 +125,7 @@ class TestDelegateShapes(unittest.TestCase):
         tc.TestRunner.test_consumer(lambda callee: seen.append(callee))
 
         self.assertEqual(len(seen), 1)
-        self.assertIsInstance(seen[0], tc._ITests)
+        self.assertIsInstance(seen[0], getattr(tc, "_ITests"))
 
 
 class TestDelegate(unittest.TestCase):

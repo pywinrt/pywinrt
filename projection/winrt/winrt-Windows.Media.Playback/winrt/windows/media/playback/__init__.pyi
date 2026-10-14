@@ -1467,9 +1467,6 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
     @_property
     def track(self) -> windows_media_core.TimedMetadataTrack: ...
 
-@typing.final
-class _IMediaEnginePlaybackSource: ...
-
 @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
 class IMediaEnginePlaybackSource(winrt.system.Object):
     # System.Void Windows.Media.Playback.IMediaEnginePlaybackSource::SetPlaybackSource(Windows.Media.Playback.IMediaPlaybackSource)
@@ -1481,9 +1478,6 @@ class IMediaEnginePlaybackSource(winrt.system.Object):
     @deprecated("Use MediaPlayer instead of MediaEngine. For more info, see MSDN.")
     @abstractmethod
     def current_item(self) -> MediaPlaybackItem: ...
-
-@typing.final
-class _IMediaPlaybackSource: ...
 
 class IMediaPlaybackSource(winrt.system.Object):
     ...

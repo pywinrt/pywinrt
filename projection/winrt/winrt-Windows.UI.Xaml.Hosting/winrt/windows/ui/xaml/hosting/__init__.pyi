@@ -265,24 +265,15 @@ class XamlUIPresenter(winrt.system.Object, metaclass=XamlUIPresenter_Static):
     @root_element.setter
     def root_element(self, value: windows_ui_xaml.UIElement) -> None: ...
 
-@typing.final
-class _IXamlUIPresenterHost: ...
-
 class IXamlUIPresenterHost(winrt.system.Object):
     # System.String Windows.UI.Xaml.Hosting.IXamlUIPresenterHost::ResolveFileResource(System.String)
     @abstractmethod
     def resolve_file_resource(self, path: str, /) -> str: ...
 
-@typing.final
-class _IXamlUIPresenterHost2: ...
-
 class IXamlUIPresenterHost2(winrt.system.Object):
     # System.String Windows.UI.Xaml.Hosting.IXamlUIPresenterHost2::GetGenericXamlFilePath()
     @abstractmethod
     def get_generic_xaml_file_path(self) -> str: ...
-
-@typing.final
-class _IXamlUIPresenterHost3: ...
 
 class IXamlUIPresenterHost3(winrt.system.Object):
     # System.Object Windows.UI.Xaml.Hosting.IXamlUIPresenterHost3::ResolveDictionaryResource(Windows.UI.Xaml.ResourceDictionary,System.Object,System.Object)

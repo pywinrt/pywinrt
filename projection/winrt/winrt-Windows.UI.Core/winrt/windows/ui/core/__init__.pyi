@@ -999,9 +999,6 @@ class WindowSizeChangedEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     @_property
     def size(self) -> windows_foundation.Size: ...
 
-@typing.final
-class _ICoreAcceleratorKeys: ...
-
 class ICoreAcceleratorKeys(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreAcceleratorKeys::add_AcceleratorKeyActivated(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.CoreDispatcher,Windows.UI.Core.AcceleratorKeyEventArgs>)
     @abstractmethod
@@ -1009,9 +1006,6 @@ class ICoreAcceleratorKeys(winrt.system.Object):
     # System.Void Windows.UI.Core.ICoreAcceleratorKeys::remove_AcceleratorKeyActivated(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_accelerator_key_activated(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
-
-@typing.final
-class _ICoreInputSourceBase: ...
 
 class ICoreInputSourceBase(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICoreInputSourceBase::add_InputEnabled(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Core.InputEnabledEventArgs>)
@@ -1032,9 +1026,6 @@ class ICoreInputSourceBase(winrt.system.Object):
     @is_input_enabled.setter
     @abstractmethod
     def is_input_enabled(self, value: bool) -> None: ...
-
-@typing.final
-class _ICorePointerInputSource: ...
 
 class ICorePointerInputSource(winrt.system.Object):
     # System.Void Windows.UI.Core.ICorePointerInputSource::ReleasePointerCapture()
@@ -1102,17 +1093,11 @@ class ICorePointerInputSource(winrt.system.Object):
     @abstractmethod
     def pointer_position(self) -> windows_foundation.Point: ...
 
-@typing.final
-class _ICorePointerInputSource2: ...
-
 class ICorePointerInputSource2(ICorePointerInputSource, winrt.system.Object):
     # Windows.System.DispatcherQueue Windows.UI.Core.ICorePointerInputSource2::get_DispatcherQueue()
     @_property
     @abstractmethod
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
-
-@typing.final
-class _ICorePointerRedirector: ...
 
 class ICorePointerRedirector(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.UI.Core.ICorePointerRedirector::add_PointerRoutedAway(Windows.Foundation.TypedEventHandler`2<Windows.UI.Core.ICorePointerRedirector,Windows.UI.Core.PointerEventArgs>)
@@ -1133,9 +1118,6 @@ class ICorePointerRedirector(winrt.system.Object):
     # System.Void Windows.UI.Core.ICorePointerRedirector::remove_PointerRoutedTo(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_pointer_routed_to(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
-
-@typing.final
-class _ICoreWindow: ...
 
 class ICoreWindow(winrt.system.Object):
     # System.Void Windows.UI.Core.ICoreWindow::Activate()
@@ -1307,9 +1289,6 @@ class ICoreWindow(winrt.system.Object):
     @abstractmethod
     def visible(self) -> bool: ...
 
-@typing.final
-class _ICoreWindowEventArgs: ...
-
 class ICoreWindowEventArgs(winrt.system.Object):
     # System.Boolean Windows.UI.Core.ICoreWindowEventArgs::get_Handled()
     @_property
@@ -1319,9 +1298,6 @@ class ICoreWindowEventArgs(winrt.system.Object):
     @handled.setter
     @abstractmethod
     def handled(self, value: bool) -> None: ...
-
-@typing.final
-class _IInitializeWithCoreWindow: ...
 
 class IInitializeWithCoreWindow(winrt.system.Object):
     # System.Void Windows.UI.Core.IInitializeWithCoreWindow::Initialize(Windows.UI.Core.CoreWindow)

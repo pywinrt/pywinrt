@@ -20,9 +20,6 @@ class ProviderAdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1
 
-@typing.final
-class _IAdcControllerProvider: ...
-
 class IAdcControllerProvider(winrt.system.Object):
     # System.Void Windows.Devices.Adc.Provider.IAdcControllerProvider::AcquireChannel(System.Int32)
     @abstractmethod
@@ -60,9 +57,6 @@ class IAdcControllerProvider(winrt.system.Object):
     @_property
     @abstractmethod
     def resolution_in_bits(self) -> winrt.system.Int32: ...
-
-@typing.final
-class _IAdcProvider: ...
 
 class IAdcProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Adc.Provider.IAdcControllerProvider> Windows.Devices.Adc.Provider.IAdcProvider::GetControllers()

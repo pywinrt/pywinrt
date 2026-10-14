@@ -63,16 +63,10 @@ class Direct3DSurfaceDescription:
     def __replace__(self, /, **changes: typing.Any) -> Direct3DSurfaceDescription: ...
     def unpack(self) -> tuple[winrt.system.Int32, winrt.system.Int32, windows_graphics_directx.DirectXPixelFormat, tuple[winrt.system.Int32, winrt.system.Int32]]: ...
 
-@typing.final
-class _IDirect3DDevice: ...
-
 class IDirect3DDevice(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice::Trim()
     @abstractmethod
     def trim(self) -> None: ...
-
-@typing.final
-class _IDirect3DSurface: ...
 
 class IDirect3DSurface(windows_foundation.IClosable, winrt.system.Object):
     # Windows.Graphics.DirectX.Direct3D11.Direct3DSurfaceDescription Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface::get_Description()

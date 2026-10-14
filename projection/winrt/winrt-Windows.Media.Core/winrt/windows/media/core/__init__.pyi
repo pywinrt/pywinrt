@@ -2290,9 +2290,6 @@ class VideoTrackSupportInfo(winrt.system.Object):
     @_property
     def media_source_status(self) -> MediaSourceStatus: ...
 
-@typing.final
-class _IMediaCue: ...
-
 class IMediaCue(winrt.system.Object):
     # Windows.Foundation.TimeSpan Windows.Media.Core.IMediaCue::get_Duration()
     @_property
@@ -2319,14 +2316,8 @@ class IMediaCue(winrt.system.Object):
     @abstractmethod
     def start_time(self, value: datetime.timedelta) -> None: ...
 
-@typing.final
-class _IMediaSource: ...
-
 class IMediaSource(winrt.system.Object):
     ...
-
-@typing.final
-class _IMediaStreamDescriptor: ...
 
 class IMediaStreamDescriptor(winrt.system.Object):
     # System.Boolean Windows.Media.Core.IMediaStreamDescriptor::get_IsSelected()
@@ -2350,9 +2341,6 @@ class IMediaStreamDescriptor(winrt.system.Object):
     @abstractmethod
     def name(self, value: str) -> None: ...
 
-@typing.final
-class _IMediaStreamDescriptor2: ...
-
 class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt.system.Object):
     # System.String Windows.Media.Core.IMediaStreamDescriptor2::get_Label()
     @_property
@@ -2362,9 +2350,6 @@ class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt.system.Object):
     @label.setter
     @abstractmethod
     def label(self, value: str) -> None: ...
-
-@typing.final
-class _IMediaTrack: ...
 
 class IMediaTrack(winrt.system.Object):
     # System.String Windows.Media.Core.IMediaTrack::get_Id()
@@ -2388,9 +2373,6 @@ class IMediaTrack(winrt.system.Object):
     @abstractmethod
     def track_kind(self) -> MediaTrackKind: ...
 
-@typing.final
-class _ISingleSelectMediaTrackList: ...
-
 class ISingleSelectMediaTrackList(winrt.system.Object):
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.ISingleSelectMediaTrackList::add_SelectedIndexChanged(Windows.Foundation.TypedEventHandler`2<Windows.Media.Core.ISingleSelectMediaTrackList,System.Object>)
     @abstractmethod
@@ -2406,9 +2388,6 @@ class ISingleSelectMediaTrackList(winrt.system.Object):
     @selected_index.setter
     @abstractmethod
     def selected_index(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
-
-@typing.final
-class _ITimedMetadataTrackProvider: ...
 
 class ITimedMetadataTrackProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.Core.TimedMetadataTrack> Windows.Media.Core.ITimedMetadataTrackProvider::get_TimedMetadataTracks()

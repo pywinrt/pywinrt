@@ -1600,9 +1600,6 @@ class SpatialAudioFormatSubtype(winrt.system.Object, metaclass=SpatialAudioForma
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _IAudioInputNode: ...
-
 class IAudioInputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     @typing.overload
     # System.Void Windows.Media.Audio.IAudioInputNode::AddOutgoingConnection(Windows.Media.Audio.IAudioNode)
@@ -1624,17 +1621,11 @@ class IAudioInputNode(IAudioNode, windows_foundation.IClosable, winrt.system.Obj
     @abstractmethod
     def outgoing_connections(self) -> _cabc.Sequence[AudioGraphConnection]: ...
 
-@typing.final
-class _IAudioInputNode2: ...
-
 class IAudioInputNode2(IAudioInputNode, IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     # Windows.Media.Audio.AudioNodeEmitter Windows.Media.Audio.IAudioInputNode2::get_Emitter()
     @_property
     @abstractmethod
     def emitter(self) -> AudioNodeEmitter: ...
-
-@typing.final
-class _IAudioNode: ...
 
 class IAudioNode(windows_foundation.IClosable, winrt.system.Object):
     # System.Void Windows.Media.Audio.IAudioNode::DisableEffectsByDefinition(Windows.Media.Effects.IAudioEffectDefinition)
@@ -1676,9 +1667,6 @@ class IAudioNode(windows_foundation.IClosable, winrt.system.Object):
     @outgoing_gain.setter
     @abstractmethod
     def outgoing_gain(self, value: winrt.system.Double) -> None: ...
-
-@typing.final
-class _IAudioNodeWithListener: ...
 
 class IAudioNodeWithListener(IAudioNode, windows_foundation.IClosable, winrt.system.Object):
     # Windows.Media.Audio.AudioNodeListener Windows.Media.Audio.IAudioNodeWithListener::get_Listener()

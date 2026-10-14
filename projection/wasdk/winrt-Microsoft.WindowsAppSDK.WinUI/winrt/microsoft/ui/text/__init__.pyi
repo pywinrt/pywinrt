@@ -644,9 +644,6 @@ class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """A class of static members only, so there is nothing to create."""
 
-@typing.final
-class _ITextCharacterFormat: ...
-
 class ITextCharacterFormat(winrt.system.Object):
     # Microsoft.UI.Text.ITextCharacterFormat Microsoft.UI.Text.ITextCharacterFormat::GetClone()
     @abstractmethod
@@ -846,9 +843,6 @@ class ITextCharacterFormat(winrt.system.Object):
     @abstractmethod
     def weight(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
 
-@typing.final
-class _ITextParagraphFormat: ...
-
 class ITextParagraphFormat(winrt.system.Object):
     # System.Void Microsoft.UI.Text.ITextParagraphFormat::AddTab(System.Single,Microsoft.UI.Text.TabAlignment,Microsoft.UI.Text.TabLeader)
     @abstractmethod
@@ -1034,9 +1028,6 @@ class ITextParagraphFormat(winrt.system.Object):
     @abstractmethod
     def widow_control(self, value: FormatEffect) -> None: ...
 
-@typing.final
-class _ITextRange: ...
-
 class ITextRange(winrt.system.Object):
     # System.Boolean Microsoft.UI.Text.ITextRange::CanPaste(System.Int32)
     @abstractmethod
@@ -1214,9 +1205,6 @@ class ITextRange(winrt.system.Object):
     @text.setter
     @abstractmethod
     def text(self, value: str) -> None: ...
-
-@typing.final
-class _ITextSelection: ...
 
 class ITextSelection(ITextRange, winrt.system.Object):
     # System.Int32 Microsoft.UI.Text.ITextSelection::EndKey(Microsoft.UI.Text.TextRangeUnit,System.Boolean)

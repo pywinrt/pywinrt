@@ -987,9 +987,6 @@ class TensorUInt8Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosa
     @_property
     def tensor_kind(self) -> TensorKind: ...
 
-@typing.final
-class _ILearningModelFeatureDescriptor: ...
-
 class ILearningModelFeatureDescriptor(winrt.system.Object):
     # System.String Windows.AI.MachineLearning.ILearningModelFeatureDescriptor::get_Description()
     @_property
@@ -1008,23 +1005,14 @@ class ILearningModelFeatureDescriptor(winrt.system.Object):
     @abstractmethod
     def name(self) -> str: ...
 
-@typing.final
-class _ILearningModelFeatureValue: ...
-
 class ILearningModelFeatureValue(winrt.system.Object):
     # Windows.AI.MachineLearning.LearningModelFeatureKind Windows.AI.MachineLearning.ILearningModelFeatureValue::get_Kind()
     @_property
     @abstractmethod
     def kind(self) -> LearningModelFeatureKind: ...
 
-@typing.final
-class _ILearningModelOperatorProvider: ...
-
 class ILearningModelOperatorProvider(winrt.system.Object):
     ...
-
-@typing.final
-class _ITensor: ...
 
 class ITensor(ILearningModelFeatureValue, winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<System.Int64> Windows.AI.MachineLearning.ITensor::get_Shape()

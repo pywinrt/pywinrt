@@ -51,9 +51,6 @@ class LowLevelDevicesController(winrt.system.Object, metaclass=LowLevelDevicesCo
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-@typing.final
-class _ILowLevelDevicesAggregateProvider: ...
-
 class ILowLevelDevicesAggregateProvider(winrt.system.Object):
     # Windows.Devices.Adc.Provider.IAdcControllerProvider Windows.Devices.ILowLevelDevicesAggregateProvider::get_AdcControllerProvider()
     @_property
