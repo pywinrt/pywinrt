@@ -62,6 +62,39 @@ namespace py::interp
         return self;
     }
 
+    namespace
+    {
+        /**
+         * The winrt.system function that boxes @p obj, for a Python value of a
+         * type WinRT boxes, or @c nullptr. An int is named for the width it
+         * is most often meant as.
+         */
+        const char* box_function_for(PyObject* obj) noexcept
+        {
+            if (PyBool_Check(obj))
+            {
+                return "box_boolean()";
+            }
+
+            if (PyLong_Check(obj))
+            {
+                return "box_int32()";
+            }
+
+            if (PyFloat_Check(obj))
+            {
+                return "box_double()";
+            }
+
+            if (PyUnicode_Check(obj))
+            {
+                return "box_string()";
+            }
+
+            return nullptr;
+        }
+    } // namespace
+
     /**
      * The ABI pointer an @c _winrt.Object holds, queried for @p iid.
      *
@@ -122,6 +155,22 @@ namespace py::interp
                 // holds the IBuffer.
                 auto buffer = convert_to_ibuffer(obj, fill);
                 return winrt::detach_abi(buffer);
+            }
+
+            // A number or a str where any object will do is a value that has
+            // to be boxed first, which is not something to guess at.
+            if (!iid)
+            {
+                if (auto const box = box_function_for(obj))
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "expected a WinRT object, not '%s': box it with "
+                        "winrt.system.%s or another box function",
+                        Py_TYPE(obj)->tp_name,
+                        box);
+                    throw python_exception();
+                }
             }
 
             PyErr_Format(

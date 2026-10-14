@@ -24,6 +24,7 @@ repository](../CHANGELOG.md).
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
 - Adding `None` as an event handler now raises `TypeError` instead of crashing.
 - `init_apartment()` raises `ValueError` for an unknown type, not `OSError`.
+- Unboxing a value boxed as another type raises `TypeError`, not `OSError`.
 
 ### Deprecated
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
