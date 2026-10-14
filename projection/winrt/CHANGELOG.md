@@ -50,3 +50,4 @@ releases before v4.0 are.
   stopped selecting our own declarations, but the `.idl` that header is
   generated from is missing `CreateDirect3D11SurfaceFromDXGISurface`, which is
   now declared separately there.
+- Fixed the interop packages declaring no dependency on what they import.
