@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.datatransfer as windows_applicationmodel_datatransfer
 import winrt.windows.foundation as windows_foundation
@@ -44,7 +43,7 @@ class CortanaPermissionsChangeResult(enum.IntEnum):
     DISABLED_BY_POLICY = 2
 
 @typing.final
-class CortanaActionableInsights_Static(winrt._winrt.Object_Static):
+class CortanaActionableInsights_Static(winrt.system.Object_Static):
     # Windows.Services.Cortana.CortanaActionableInsights Windows.Services.Cortana.CortanaActionableInsights::GetDefault()
     @deprecated("CortanaActionableInsights is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaActionableInsights: ...
@@ -123,7 +122,7 @@ class CortanaActionableInsightsOptions(winrt.system.Object):
     def content_source_web_link(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
-class CortanaPermissionsManager_Static(winrt._winrt.Object_Static):
+class CortanaPermissionsManager_Static(winrt.system.Object_Static):
     # Windows.Services.Cortana.CortanaPermissionsManager Windows.Services.Cortana.CortanaPermissionsManager::GetDefault()
     @deprecated("ICortanaPermissionsManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaPermissionsManager: ...
@@ -147,7 +146,7 @@ class CortanaPermissionsManager(winrt.system.Object, metaclass=CortanaPermission
     def revoke_permissions_async(self, permissions: _cabc.Iterable[CortanaPermission], /) -> windows_foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
 
 @typing.final
-class CortanaSettings_Static(winrt._winrt.Object_Static):
+class CortanaSettings_Static(winrt.system.Object_Static):
     # Windows.Services.Cortana.CortanaSettings Windows.Services.Cortana.CortanaSettings::GetDefault()
     @deprecated("ICortanaSettingsStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default(cls) -> CortanaSettings: ...

@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.gaming.input as windows_gaming_input
@@ -341,7 +340,7 @@ class InjectedInputTouchInfo(winrt.system.Object):
     def contact(self, value: InjectedInputRectangle | tuple[winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex]) -> None: ...
 
 @typing.final
-class InputInjector_Static(winrt._winrt.Object_Static):
+class InputInjector_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Preview.Injection.InputInjector Windows.UI.Input.Preview.Injection.InputInjector::TryCreate()
     def try_create(cls) -> InputInjector | None: ...
     # Windows.UI.Input.Preview.Injection.InputInjector Windows.UI.Input.Preview.Injection.InputInjector::TryCreateForAppBroadcastOnly()

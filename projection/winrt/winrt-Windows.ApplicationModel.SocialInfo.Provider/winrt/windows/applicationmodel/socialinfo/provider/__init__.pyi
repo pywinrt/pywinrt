@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.socialinfo as windows_applicationmodel_socialinfo
 import winrt.windows.foundation as windows_foundation
@@ -81,7 +80,7 @@ class SocialFeedUpdater(winrt.system.Object):
     def owner_remote_id(self) -> str: ...
 
 @typing.final
-class SocialInfoProviderManager_Static(winrt._winrt.Object_Static):
+class SocialInfoProviderManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater> Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager::CreateDashboardItemUpdaterAsync(System.String)
     @deprecated("ISocialInfoProviderManagerStatics is deprecated and might not work on all platforms. For more info, see MSDN.")
     def create_dashboard_item_updater_async(cls, owner_remote_id: str, /) -> windows_foundation.IAsyncOperation[SocialDashboardItemUpdater]: ...

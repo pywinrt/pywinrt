@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.background as windows_applicationmodel_background
 import winrt.windows.foundation as windows_foundation
@@ -67,7 +66,7 @@ class PushNotificationCreateChannelResult(winrt.system.Object):
     def status(self) -> PushNotificationChannelStatus: ...
 
 @typing.final
-class PushNotificationManager_Static(winrt._winrt.Object_Static):
+class PushNotificationManager_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.Windows.PushNotifications.PushNotificationManager::IsSupported()
     def is_supported(cls) -> bool: ...
     # Microsoft.Windows.PushNotifications.PushNotificationManager Microsoft.Windows.PushNotifications.PushNotificationManager::get_Default()

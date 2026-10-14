@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
@@ -38,7 +37,7 @@ class GameListEntryLaunchableState(enum.IntEnum):
     BY_TILE = 3
 
 @typing.final
-class GameList_Static(winrt._winrt.Object_Static):
+class GameList_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Gaming.Preview.GamesEnumeration.GameListEntry>> Windows.Gaming.Preview.GamesEnumeration.GameList::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[GameListEntry]]: ...
@@ -175,7 +174,7 @@ class GameModeConfiguration(winrt.system.Object):
     def related_process_names(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class GameModeUserConfiguration_Static(winrt._winrt.Object_Static):
+class GameModeUserConfiguration_Static(winrt.system.Object_Static):
     # Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration::GetDefault()
     def get_default(cls) -> GameModeUserConfiguration: ...
 

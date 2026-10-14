@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui as microsoft_ui
 import winrt.microsoft.ui.composition as microsoft_ui_composition
@@ -38,7 +37,7 @@ class XamlSourceFocusNavigationReason(enum.IntEnum):
     RIGHT = 9
     DOWN = 10
 
-class DesktopWindowXamlSource_Static(winrt._winrt.Object_Static):
+class DesktopWindowXamlSource_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> DesktopWindowXamlSource_Static: ...
 
 class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopWindowXamlSource_Static):
@@ -113,7 +112,7 @@ class DesktopWindowXamlSourceTakeFocusRequestedEventArgs(winrt.system.Object):
     def request(self) -> XamlSourceFocusNavigationRequest: ...
 
 @typing.final
-class ElementCompositionPreview_Static(winrt._winrt.Object_Static):
+class ElementCompositionPreview_Static(winrt.system.Object_Static):
     # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Hosting.ElementCompositionPreview::GetElementChildVisual(Microsoft.UI.Xaml.UIElement)
     def get_element_child_visual(cls, element: microsoft_ui_xaml.UIElement, /) -> microsoft_ui_composition.Visual: ...
     # Microsoft.UI.Composition.Visual Microsoft.UI.Xaml.Hosting.ElementCompositionPreview::GetElementVisual(Microsoft.UI.Xaml.UIElement)
@@ -137,7 +136,7 @@ class ElementCompositionPreview(winrt.system.Object, metaclass=ElementCompositio
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class WindowsXamlManager_Static(winrt._winrt.Object_Static):
+class WindowsXamlManager_Static(winrt.system.Object_Static):
     # Microsoft.UI.Xaml.Hosting.WindowsXamlManager Microsoft.UI.Xaml.Hosting.WindowsXamlManager::GetForCurrentThread()
     def get_for_current_thread(cls) -> WindowsXamlManager: ...
     # Microsoft.UI.Xaml.Hosting.WindowsXamlManager Microsoft.UI.Xaml.Hosting.WindowsXamlManager::InitializeForCurrentThread()

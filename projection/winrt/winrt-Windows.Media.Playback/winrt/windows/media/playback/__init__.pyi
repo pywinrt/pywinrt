@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -187,7 +186,7 @@ class TimedMetadataTrackPresentationMode(enum.IntEnum):
     PLATFORM_PRESENTED = 3
 
 @typing.final
-class BackgroundMediaPlayer_Static(winrt._winrt.Object_Static):
+class BackgroundMediaPlayer_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Media.Playback.BackgroundMediaPlayer::IsMediaPlaying()
     @deprecated("Use MediaPlayer instead of BackgroundMediaPlayer.  For more info, see MSDN.")
     def is_media_playing(cls) -> bool: ...
@@ -667,7 +666,7 @@ class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
     def is_shuffle_requested(self) -> bool: ...
 
 @typing.final
-class MediaPlaybackItem_Static(winrt._winrt.Object_Static):
+class MediaPlaybackItem_Static(winrt.system.Object_Static):
     # Windows.Media.Playback.MediaPlaybackItem Windows.Media.Playback.MediaPlaybackItem::FindFromMediaSource(Windows.Media.Core.MediaSource)
     def find_from_media_source(cls, source: windows_media_core.MediaSource, /) -> MediaPlaybackItem: ...
 

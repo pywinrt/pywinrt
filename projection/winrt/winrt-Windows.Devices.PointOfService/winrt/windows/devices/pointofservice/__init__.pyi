@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -381,7 +380,7 @@ class SizeUInt32:
     def unpack(self) -> tuple[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class BarcodeScanner_Static(winrt._winrt.Object_Static):
+class BarcodeScanner_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.BarcodeScanner> Windows.Devices.PointOfService.BarcodeScanner::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[BarcodeScanner]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.BarcodeScanner> Windows.Devices.PointOfService.BarcodeScanner::GetDefaultAsync()
@@ -511,7 +510,7 @@ class BarcodeScannerStatusUpdatedEventArgs(winrt.system.Object):
     def status(self) -> BarcodeScannerStatus: ...
 
 @typing.final
-class BarcodeSymbologies_Static(winrt._winrt.Object_Static):
+class BarcodeSymbologies_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.PointOfService.BarcodeSymbologies::GetName(System.UInt32)
     def get_name(cls, scan_data_type: winrt.system.UInt32 | typing.SupportsIndex, /) -> str: ...
     # System.UInt32 Windows.Devices.PointOfService.BarcodeSymbologies::get_Code11()
@@ -847,7 +846,7 @@ class BarcodeSymbologyAttributes(winrt.system.Object):
     def is_decode_length_supported(self) -> bool: ...
 
 @typing.final
-class CashDrawer_Static(winrt._winrt.Object_Static):
+class CashDrawer_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.CashDrawer> Windows.Devices.PointOfService.CashDrawer::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[CashDrawer]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.CashDrawer> Windows.Devices.PointOfService.CashDrawer::GetDefaultAsync()
@@ -1205,7 +1204,7 @@ class ClaimedJournalPrinter(ICommonClaimedPosPrinterStation, winrt.system.Object
     def line_width(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ClaimedLineDisplay_Static(winrt._winrt.Object_Static):
+class ClaimedLineDisplay_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.ClaimedLineDisplay> Windows.Devices.PointOfService.ClaimedLineDisplay::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[ClaimedLineDisplay]: ...
     @typing.overload
@@ -1743,7 +1742,7 @@ class JournalPrinterCapabilities(ICommonPosPrintStationCapabilities, winrt.syste
     def is_superscript_supported(self) -> bool: ...
 
 @typing.final
-class LineDisplay_Static(winrt._winrt.Object_Static):
+class LineDisplay_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.LineDisplay> Windows.Devices.PointOfService.LineDisplay::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[LineDisplay]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.LineDisplay> Windows.Devices.PointOfService.LineDisplay::GetDefaultAsync()
@@ -2112,7 +2111,7 @@ class LineDisplayWindow(windows_foundation.IClosable, winrt.system.Object):
     def marquee(self) -> LineDisplayMarquee: ...
 
 @typing.final
-class MagneticStripeReader_Static(winrt._winrt.Object_Static):
+class MagneticStripeReader_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.MagneticStripeReader> Windows.Devices.PointOfService.MagneticStripeReader::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[MagneticStripeReader]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.MagneticStripeReader> Windows.Devices.PointOfService.MagneticStripeReader::GetDefaultAsync()
@@ -2294,7 +2293,7 @@ class MagneticStripeReaderCapabilities(winrt.system.Object):
     def supported_encryption_algorithms(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class MagneticStripeReaderCardTypes_Static(winrt._winrt.Object_Static):
+class MagneticStripeReaderCardTypes_Static(winrt.system.Object_Static):
     # System.UInt32 Windows.Devices.PointOfService.MagneticStripeReaderCardTypes::get_Aamva()
     @_property
     def aamva(cls) -> winrt.system.UInt32: ...
@@ -2314,7 +2313,7 @@ class MagneticStripeReaderCardTypes(winrt.system.Object, metaclass=MagneticStrip
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class MagneticStripeReaderEncryptionAlgorithms_Static(winrt._winrt.Object_Static):
+class MagneticStripeReaderEncryptionAlgorithms_Static(winrt.system.Object_Static):
     # System.UInt32 Windows.Devices.PointOfService.MagneticStripeReaderEncryptionAlgorithms::get_ExtendedBase()
     @_property
     def extended_base(cls) -> winrt.system.UInt32: ...
@@ -2419,7 +2418,7 @@ class MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(winrt.system.O
     def report(self) -> MagneticStripeReaderReport: ...
 
 @typing.final
-class PosPrinter_Static(winrt._winrt.Object_Static):
+class PosPrinter_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.PosPrinter> Windows.Devices.PointOfService.PosPrinter::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[PosPrinter]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.PointOfService.PosPrinter> Windows.Devices.PointOfService.PosPrinter::GetDefaultAsync()
@@ -2510,7 +2509,7 @@ class PosPrinterCapabilities(winrt.system.Object):
     def slip(self) -> SlipPrinterCapabilities: ...
 
 @typing.final
-class PosPrinterCharacterSetIds_Static(winrt._winrt.Object_Static):
+class PosPrinterCharacterSetIds_Static(winrt.system.Object_Static):
     # System.UInt32 Windows.Devices.PointOfService.PosPrinterCharacterSetIds::get_Ansi()
     @_property
     def ansi(cls) -> winrt.system.UInt32: ...

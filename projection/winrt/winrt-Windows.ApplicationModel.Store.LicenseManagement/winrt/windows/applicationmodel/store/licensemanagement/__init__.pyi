@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -23,7 +22,7 @@ class LicenseRefreshOption(enum.IntEnum):
     ALL_LICENSES = 1
 
 @typing.final
-class LicenseManager_Static(winrt._winrt.Object_Static):
+class LicenseManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::AddLicenseAsync(Windows.Storage.Streams.IBuffer)
     def add_license_async(cls, license: winrt.system.ReadableBuffer, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult> Windows.ApplicationModel.Store.LicenseManagement.LicenseManager::GetSatisfactionInfosAsync(Windows.Foundation.Collections.IIterable`1<System.String>,Windows.Foundation.Collections.IIterable`1<System.String>)

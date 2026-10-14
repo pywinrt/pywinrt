@@ -7,7 +7,6 @@ import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -194,7 +193,7 @@ class Class(IRequiredOne, winrt.system.Object):
     # System.Int32 TestComponent.Class::One()
     def one(self) -> winrt.system.Int32: ...
 
-class Composable_Static(winrt._winrt.Object_Static):
+class Composable_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> Composable_Static: ...
     # System.Int32 TestComponent.Composable::ExpectComposable(TestComponent.Composable)
     def expect_composable(cls, t: Composable, /) -> winrt.system.Int32: ...
@@ -252,7 +251,7 @@ class DerivedOverride(Override, metaclass=DerivedOverride_Static):
     # System.Void TestComponent.DerivedOverride::remove_DerivedOverridableCalled(Windows.Foundation.EventRegistrationToken)
     def remove_derived_overridable_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class OverloadClass_Static(winrt._winrt.Object_Static):
+class OverloadClass_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> OverloadClass_Static: ...
 
 class OverloadClass(winrt.system.Object, metaclass=OverloadClass_Static):
@@ -269,7 +268,7 @@ class OverloadClass(winrt.system.Object, metaclass=OverloadClass_Static):
     # System.Void TestComponent.OverloadClass::Overload(System.Int32,System.Int32)
     def _overload_with_two(self, a: winrt.system.Int32 | typing.SupportsIndex, b: winrt.system.Int32 | typing.SupportsIndex, /) -> None: ...
 
-class Override_Static(winrt._winrt.Object_Static):
+class Override_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> Override_Static: ...
 
 class Override(winrt.system.Object, metaclass=Override_Static):
@@ -299,7 +298,7 @@ class Override(winrt.system.Object, metaclass=Override_Static):
     # System.Void TestComponent.Override::remove_ProtectedCalled(Windows.Foundation.EventRegistrationToken)
     def remove_protected_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class ProtectedMembers_Static(winrt._winrt.Object_Static):
+class ProtectedMembers_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ProtectedMembers_Static: ...
 
 class ProtectedMembers(winrt.system.Object, metaclass=ProtectedMembers_Static):
@@ -329,7 +328,7 @@ class ProtectedMembers(winrt.system.Object, metaclass=ProtectedMembers_Static):
     def _protected_value(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
 
 @typing.final
-class TestRunner_Static(winrt._winrt.Object_Static):
+class TestRunner_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncAction TestComponent.TestRunner::CreateAsyncAction(System.UInt32)
     def create_async_action(cls, milliseconds: winrt.system.UInt32 | typing.SupportsIndex, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction TestComponent.TestRunner::CreateAsyncActionWithError(System.UInt32,System.Int32)

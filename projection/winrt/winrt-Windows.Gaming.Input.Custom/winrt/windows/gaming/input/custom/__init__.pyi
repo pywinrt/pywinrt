@@ -6,7 +6,6 @@ import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.gaming.input as windows_gaming_input
@@ -86,7 +85,7 @@ class GipFirmwareUpdateProgress:
     def unpack(self) -> tuple[winrt.system.Double, winrt.system.UInt32]: ...
 
 @typing.final
-class GameControllerFactoryManager_Static(winrt._winrt.Object_Static):
+class GameControllerFactoryManager_Static(winrt.system.Object_Static):
     # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForGipInterface(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.Guid)
     def register_custom_factory_for_gip_interface(cls, factory: ICustomGameControllerFactory, interface_id: _uuid.UUID, /) -> None: ...
     # System.Void Windows.Gaming.Input.Custom.GameControllerFactoryManager::RegisterCustomFactoryForHardwareId(Windows.Gaming.Input.Custom.ICustomGameControllerFactory,System.UInt16,System.UInt16)

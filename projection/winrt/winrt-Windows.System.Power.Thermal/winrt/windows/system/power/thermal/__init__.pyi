@@ -7,7 +7,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -125,7 +124,7 @@ class PowerThermalChannelDataReceivedEventArgs(winrt.system.Object):
     def get_data(self) -> winrt.system.Array[PowerThermalChannelData]: ...
 
 @typing.final
-class PowerThermalChannelDiagnostics_Static(winrt._winrt.Object_Static):
+class PowerThermalChannelDiagnostics_Static(winrt.system.Object_Static):
     # Windows.System.Power.Thermal.PowerThermalChannelData[] Windows.System.Power.Thermal.PowerThermalChannelDiagnostics::GetDataForChannels(Windows.System.Power.Thermal.PowerThermalChannelId[])
     def get_data_for_channels(cls, channel_ids: winrt.system.Array[PowerThermalChannelId] | winrt.system.ReadableBuffer, /) -> winrt.system.Array[PowerThermalChannelData]: ...
     # Windows.System.Power.Thermal.PowerThermalChannelDiagnostics Windows.System.Power.Thermal.PowerThermalChannelDiagnostics::get_Current()
@@ -138,7 +137,7 @@ class PowerThermalChannelDiagnostics(winrt.system.Object, metaclass=PowerThermal
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class PowerThermalChannelFinder_Static(winrt._winrt.Object_Static):
+class PowerThermalChannelFinder_Static(winrt.system.Object_Static):
     # Windows.System.Power.Thermal.PowerThermalChannelId[] Windows.System.Power.Thermal.PowerThermalChannelFinder::FindChannels(System.Guid)
     def find_channels(cls, channel_interface_type: _uuid.UUID, /) -> winrt.system.Array[PowerThermalChannelId]: ...
 

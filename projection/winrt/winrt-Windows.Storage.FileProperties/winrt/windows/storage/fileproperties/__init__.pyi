@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -140,7 +139,7 @@ class DocumentProperties(IStorageItemExtraProperties, winrt.system.Object):
     def keywords(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class GeotagHelper_Static(winrt._winrt.Object_Static):
+class GeotagHelper_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Geolocation.Geopoint> Windows.Storage.FileProperties.GeotagHelper::GetGeotagAsync(Windows.Storage.IStorageFile)
     def get_geotag_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[windows_devices_geolocation.Geopoint]: ...
     # Windows.Foundation.IAsyncAction Windows.Storage.FileProperties.GeotagHelper::SetGeotagAsync(Windows.Storage.IStorageFile,Windows.Devices.Geolocation.Geopoint)

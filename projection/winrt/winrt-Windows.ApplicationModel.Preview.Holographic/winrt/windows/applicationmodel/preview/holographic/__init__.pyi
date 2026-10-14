@@ -3,7 +3,6 @@
 import typing
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
 import winrt.windows.foundation.numerics as windows_foundation_numerics
@@ -15,7 +14,7 @@ __all__ = [
 ]
 
 @typing.final
-class HolographicApplicationPreview_Static(winrt._winrt.Object_Static):
+class HolographicApplicationPreview_Static(winrt.system.Object_Static):
     # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay()
     def is_current_view_presented_on_holographic_display(cls) -> bool: ...
     # System.Boolean Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview::IsHolographicActivation(Windows.ApplicationModel.Activation.IActivatedEventArgs)
@@ -27,7 +26,7 @@ class HolographicApplicationPreview(winrt.system.Object, metaclass=HolographicAp
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class HolographicKeyboardPlacementOverridePreview_Static(winrt._winrt.Object_Static):
+class HolographicKeyboardPlacementOverridePreview_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview::GetForCurrentView()
     @deprecated("Use Windows.ApplicationModel.Holographic.HolographicKeyboard instead of Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview. For more info, see MSDN.")
     def get_for_current_view(cls) -> HolographicKeyboardPlacementOverridePreview: ...

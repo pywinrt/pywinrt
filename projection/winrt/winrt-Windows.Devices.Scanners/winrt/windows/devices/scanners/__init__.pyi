@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -68,7 +67,7 @@ class ImageScannerResolution:
     def unpack(self) -> tuple[winrt.system.Single, winrt.system.Single]: ...
 
 @typing.final
-class ImageScanner_Static(winrt._winrt.Object_Static):
+class ImageScanner_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Scanners.ImageScanner> Windows.Devices.Scanners.ImageScanner::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[ImageScanner]: ...
     # System.String Windows.Devices.Scanners.ImageScanner::GetDeviceSelector()

@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.background as windows_applicationmodel_background
 

@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.data.text as windows_data_text
 import winrt.windows.foundation as windows_foundation
@@ -97,7 +96,7 @@ class SortEntry:
     def unpack(self) -> tuple[str, bool]: ...
 
 @typing.final
-class ContentIndexer_Static(winrt._winrt.Object_Static):
+class ContentIndexer_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Storage.Search.ContentIndexer Windows.Storage.Search.ContentIndexer::GetIndexer()
     def get_indexer(cls) -> ContentIndexer: ...

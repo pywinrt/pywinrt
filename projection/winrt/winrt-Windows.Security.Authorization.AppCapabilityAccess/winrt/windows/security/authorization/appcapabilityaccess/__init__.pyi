@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -25,7 +24,7 @@ class AppCapabilityAccessStatus(enum.IntEnum):
     ALLOWED = 4
 
 @typing.final
-class AppCapability_Static(winrt._winrt.Object_Static):
+class AppCapability_Static(winrt.system.Object_Static):
     # Windows.Security.Authorization.AppCapabilityAccess.AppCapability Windows.Security.Authorization.AppCapabilityAccess.AppCapability::Create(System.String)
     def create(cls, capability_name: str, /) -> AppCapability: ...
     # Windows.Security.Authorization.AppCapabilityAccess.AppCapability Windows.Security.Authorization.AppCapabilityAccess.AppCapability::CreateWithProcessIdForUser(Windows.System.User,System.String,System.UInt32)

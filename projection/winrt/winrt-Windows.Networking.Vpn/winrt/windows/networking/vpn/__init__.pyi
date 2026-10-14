@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
 import winrt.windows.foundation as windows_foundation
@@ -184,7 +183,7 @@ class VpnAppId(winrt.system.Object):
     def type(self, value: VpnAppIdType) -> None: ...
 
 @typing.final
-class VpnChannel_Static(winrt._winrt.Object_Static):
+class VpnChannel_Static(winrt.system.Object_Static):
     # System.Void Windows.Networking.Vpn.VpnChannel::ProcessEventAsync(System.Object,System.Object)
     def process_event_async(cls, third_party_plug_in: winrt.system.Object, event: winrt.system.Object, /) -> None: ...
 

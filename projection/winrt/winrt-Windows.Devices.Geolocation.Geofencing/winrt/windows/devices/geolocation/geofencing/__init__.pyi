@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -79,7 +78,7 @@ class Geofence(winrt.system.Object):
     def start_time(self) -> datetime.datetime: ...
 
 @typing.final
-class GeofenceMonitor_Static(winrt._winrt.Object_Static):
+class GeofenceMonitor_Static(winrt.system.Object_Static):
     # Windows.Devices.Geolocation.Geofencing.GeofenceMonitor Windows.Devices.Geolocation.Geofencing.GeofenceMonitor::get_Current()
     @_property
     def current(cls) -> GeofenceMonitor: ...

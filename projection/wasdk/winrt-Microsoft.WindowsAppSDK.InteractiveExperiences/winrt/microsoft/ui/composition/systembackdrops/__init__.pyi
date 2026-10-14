@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui as microsoft_ui
 import winrt.microsoft.ui.composition as microsoft_ui_composition
@@ -47,7 +46,7 @@ class SystemBackdropTheme(enum.IntEnum):
     DARK = 2
 
 @typing.final
-class DesktopAcrylicController_Static(winrt._winrt.Object_Static):
+class DesktopAcrylicController_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController::IsSupported()
     def is_supported(cls) -> bool: ...
 
@@ -122,7 +121,7 @@ class DesktopAcrylicController(microsoft_ui.IClosableNotifier, ISystemBackdropCo
     def is_closed(self) -> bool: ...
 
 @typing.final
-class MicaController_Static(winrt._winrt.Object_Static):
+class MicaController_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Composition.SystemBackdrops.MicaController::IsSupported()
     def is_supported(cls) -> bool: ...
 

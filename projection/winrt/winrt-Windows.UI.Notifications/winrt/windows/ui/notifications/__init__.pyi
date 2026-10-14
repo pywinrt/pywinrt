@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.data.xml.dom as windows_data_xml_dom
@@ -353,7 +352,7 @@ class BadgeNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class BadgeUpdateManager_Static(winrt._winrt.Object_Static):
+class BadgeUpdateManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.UI.Notifications.BadgeUpdater Windows.UI.Notifications.BadgeUpdateManager::CreateBadgeUpdaterForApplication()
     def create_badge_updater_for_application(cls) -> BadgeUpdater: ...
@@ -418,7 +417,7 @@ class BadgeUpdater(winrt.system.Object):
     def update(self, notification: BadgeNotification, /) -> None: ...
 
 @typing.final
-class KnownAdaptiveNotificationHints_Static(winrt._winrt.Object_Static):
+class KnownAdaptiveNotificationHints_Static(winrt.system.Object_Static):
     # System.String Windows.UI.Notifications.KnownAdaptiveNotificationHints::get_Align()
     @_property
     def align(cls) -> str: ...
@@ -444,7 +443,7 @@ class KnownAdaptiveNotificationHints(winrt.system.Object, metaclass=KnownAdaptiv
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownAdaptiveNotificationTextStyles_Static(winrt._winrt.Object_Static):
+class KnownAdaptiveNotificationTextStyles_Static(winrt.system.Object_Static):
     # System.String Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles::get_Base()
     @_property
     def base(cls) -> str: ...
@@ -509,7 +508,7 @@ class KnownAdaptiveNotificationTextStyles(winrt.system.Object, metaclass=KnownAd
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownNotificationBindings_Static(winrt._winrt.Object_Static):
+class KnownNotificationBindings_Static(winrt.system.Object_Static):
     # System.String Windows.UI.Notifications.KnownNotificationBindings::get_ToastGeneric()
     @_property
     def toast_generic(cls) -> str: ...
@@ -718,7 +717,7 @@ class TileFlyoutNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class TileFlyoutUpdateManager_Static(winrt._winrt.Object_Static):
+class TileFlyoutUpdateManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.UI.Notifications.TileFlyoutUpdater Windows.UI.Notifications.TileFlyoutUpdateManager::CreateTileFlyoutUpdaterForApplication()
     def create_tile_flyout_updater_for_application(cls) -> TileFlyoutUpdater: ...
@@ -783,7 +782,7 @@ class TileNotification(winrt.system.Object):
     def content(self) -> windows_data_xml_dom.XmlDocument: ...
 
 @typing.final
-class TileUpdateManager_Static(winrt._winrt.Object_Static):
+class TileUpdateManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.UI.Notifications.TileUpdater Windows.UI.Notifications.TileUpdateManager::CreateTileUpdaterForApplication()
     def create_tile_updater_for_application(cls) -> TileUpdater: ...
@@ -946,7 +945,7 @@ class ToastFailedEventArgs(winrt.system.Object):
     def error_code(self) -> windows_foundation.HResult: ...
 
 @typing.final
-class ToastNotification_Static(winrt._winrt.Object_Static):
+class ToastNotification_Static(winrt.system.Object_Static):
     # System.Boolean Windows.UI.Notifications.ToastNotification::get_IsExpandableContentSupported()
     @_property
     def is_expandable_content_supported(cls) -> bool: ...
@@ -1099,7 +1098,7 @@ class ToastNotificationHistoryChangedTriggerDetail(winrt.system.Object):
     def collection_id(self) -> str: ...
 
 @typing.final
-class ToastNotificationManager_Static(winrt._winrt.Object_Static):
+class ToastNotificationManager_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.Notifications.ToastNotificationManager::ConfigureNotificationMirroring(Windows.UI.Notifications.NotificationMirroring)
     def configure_notification_mirroring(cls, value: NotificationMirroring, /) -> None: ...
     @typing.overload

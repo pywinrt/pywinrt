@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.data.xml.dom as windows_data_xml_dom
 import winrt.windows.foundation as windows_foundation

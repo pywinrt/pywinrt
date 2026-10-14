@@ -7,7 +7,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage as windows_storage
@@ -29,7 +28,7 @@ class PdfPageRotation(enum.IntEnum):
     ROTATE270 = 3
 
 @typing.final
-class PdfDocument_Static(winrt._winrt.Object_Static):
+class PdfDocument_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Pdf.PdfDocument> Windows.Data.Pdf.PdfDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[PdfDocument]: ...

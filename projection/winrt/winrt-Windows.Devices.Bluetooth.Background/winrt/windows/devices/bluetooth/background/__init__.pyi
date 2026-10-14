@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.bluetooth as windows_devices_bluetooth
 import winrt.windows.devices.bluetooth.advertisement as windows_devices_bluetooth_advertisement
@@ -82,7 +81,7 @@ class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
     def value_changed_events(self) -> _cabc.Sequence[windows_devices_bluetooth_genericattributeprofile.GattValueChangedEventArgs]: ...
 
 @typing.final
-class GattServiceProviderConnection_Static(winrt._winrt.Object_Static):
+class GattServiceProviderConnection_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IMapView`2<System.String,Windows.Devices.Bluetooth.Background.GattServiceProviderConnection> Windows.Devices.Bluetooth.Background.GattServiceProviderConnection::get_AllServices()
     @_property
     def all_services(cls) -> _cabc.Mapping[str, GattServiceProviderConnection]: ...

@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -119,7 +118,7 @@ class VirtualPrinterPreferredInputFormat(enum.IntEnum):
     POST_SCRIPT = 1
 
 @typing.final
-class IppAttributeConverter_Static(winrt._winrt.Object_Static):
+class IppAttributeConverter_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IMap`2<System.String,Windows.Devices.Printers.IppAttributeValue> Windows.Devices.Printers.IppAttributeConverter::ConvertBufferToIppAttributes(Windows.Storage.Streams.IBuffer)
     def convert_buffer_to_ipp_attributes(cls, attributes_buffer: winrt.system.ReadableBuffer, /) -> _cabc.MutableMapping[str, IppAttributeValue]: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.Printers.IppAttributeConverter::ConvertIppAttributesToBuffer(Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<System.String,Windows.Devices.Printers.IppAttributeValue>>,Windows.Devices.Printers.IppAttributeGroupKind)
@@ -146,7 +145,7 @@ class IppAttributeError(winrt.system.Object):
     def reason(self) -> IppAttributeErrorReason: ...
 
 @typing.final
-class IppAttributeValue_Static(winrt._winrt.Object_Static):
+class IppAttributeValue_Static(winrt.system.Object_Static):
     # Windows.Devices.Printers.IppAttributeValue Windows.Devices.Printers.IppAttributeValue::CreateBoolean(System.Boolean)
     def create_boolean(cls, value: bool, /) -> IppAttributeValue: ...
     # Windows.Devices.Printers.IppAttributeValue Windows.Devices.Printers.IppAttributeValue::CreateBooleanArray(Windows.Foundation.Collections.IIterable`1<System.Boolean>)
@@ -281,7 +280,7 @@ class IppIntegerRange(winrt.system.Object):
     def start(self) -> winrt.system.Int32: ...
 
 @typing.final
-class IppPrintDevice_Static(winrt._winrt.Object_Static):
+class IppPrintDevice_Static(winrt.system.Object_Static):
     # Windows.Devices.Printers.IppPrintDevice Windows.Devices.Printers.IppPrintDevice::FromId(System.String)
     def from_id(cls, device_id: str, /) -> IppPrintDevice: ...
     # Windows.Devices.Printers.IppPrintDevice Windows.Devices.Printers.IppPrintDevice::FromPrinterName(System.String)
@@ -356,7 +355,7 @@ class IppPrintDeviceInstallationResult(winrt.system.Object):
     def status(self) -> IppPrintDeviceInstallationStatus: ...
 
 @typing.final
-class IppPrintDeviceManager_Static(winrt._winrt.Object_Static):
+class IppPrintDeviceManager_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Devices.Printers.IppPrintDeviceManager::CanInstallIppPrintDevice()
     def can_install_ipp_print_device(cls) -> bool: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.IppPrintDeviceInstallationResult> Windows.Devices.Printers.IppPrintDeviceManager::InstallIppPrintDeviceAsync(Windows.Foundation.Uri,System.String)
@@ -451,7 +450,7 @@ class PdlPassthroughTarget(windows_foundation.IClosable, winrt.system.Object):
     def print_job_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class Print3DDevice_Static(winrt._winrt.Object_Static):
+class Print3DDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Printers.Print3DDevice> Windows.Devices.Printers.Print3DDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Print3DDevice]: ...
     # System.String Windows.Devices.Printers.Print3DDevice::GetDeviceSelector()
@@ -545,7 +544,7 @@ class VirtualPrinterInstallationResult(winrt.system.Object):
     def status(self) -> VirtualPrinterInstallationStatus: ...
 
 @typing.final
-class VirtualPrinterManager_Static(winrt._winrt.Object_Static):
+class VirtualPrinterManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<System.String> Windows.Devices.Printers.VirtualPrinterManager::FindAllVirtualPrinters()
     def find_all_virtual_printers(cls) -> _cabc.Sequence[str]: ...

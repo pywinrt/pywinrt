@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.datatransfer as windows_applicationmodel_datatransfer
 import winrt.windows.applicationmodel.datatransfer.dragdrop.core as windows_applicationmodel_datatransfer_dragdrop_core
@@ -1239,7 +1238,7 @@ class CoreWebView2ContextMenuTarget(winrt.system.Object):
     @_property
     def source_uri(self) -> str: ...
 
-class CoreWebView2Controller_Static(winrt._winrt.Object_Static):
+class CoreWebView2Controller_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CoreWebView2Controller_Static: ...
 
 class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controller_Static):
@@ -1402,7 +1401,7 @@ class CoreWebView2ControllerOptions(winrt.system.Object):
     def allow_host_input_processing(self, value: bool) -> None: ...
 
 @typing.final
-class CoreWebView2ControllerWindowReference_Static(winrt._winrt.Object_Static):
+class CoreWebView2ControllerWindowReference_Static(winrt.system.Object_Static):
     # Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference::CreateFromCoreWindow(Windows.UI.Core.CoreWindow)
     def create_from_core_window(cls, core_window: windows_ui_core.CoreWindow, /) -> CoreWebView2ControllerWindowReference: ...
     # Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference Microsoft.Web.WebView2.Core.CoreWebView2ControllerWindowReference::CreateFromWindowHandle(System.UInt64)
@@ -1654,7 +1653,7 @@ class CoreWebView2DownloadStartingEventArgs(winrt.system.Object):
     def download_operation(self) -> CoreWebView2DownloadOperation: ...
 
 @typing.final
-class CoreWebView2Environment_Static(winrt._winrt.Object_Static):
+class CoreWebView2Environment_Static(winrt.system.Object_Static):
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2Environment::CompareBrowserVersionString(System.String,System.String)
     def compare_browser_version_string(cls, browser_version_string1: str, browser_version_string2: str, /) -> winrt.system.Int32: ...
     # Windows.Foundation.IAsyncOperation`1<Microsoft.Web.WebView2.Core.CoreWebView2Environment> Microsoft.Web.WebView2.Core.CoreWebView2Environment::CreateAsync()

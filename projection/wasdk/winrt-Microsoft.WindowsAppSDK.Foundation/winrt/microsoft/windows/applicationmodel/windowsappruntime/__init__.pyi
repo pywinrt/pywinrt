@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
@@ -143,7 +142,7 @@ class DeploymentInitializeOptions(winrt.system.Object):
     def on_error_show_ui(self, value: bool) -> None: ...
 
 @typing.final
-class DeploymentManager_Static(winrt._winrt.Object_Static):
+class DeploymentManager_Static(winrt.system.Object_Static):
     # Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager::GetStatus()
     def get_status(cls) -> DeploymentResult: ...
     @typing.overload
@@ -169,7 +168,7 @@ class DeploymentResult(winrt.system.Object):
     def status(self) -> DeploymentStatus: ...
 
 @typing.final
-class ReleaseInfo_Static(winrt._winrt.Object_Static):
+class ReleaseInfo_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo::get_AsString()
     @_property
     def as_string(cls) -> str: ...
@@ -213,7 +212,7 @@ class RuntimeCompatibilityOptions(winrt.system.Object):
     def disabled_changes(self) -> _cabc.MutableSequence[RuntimeCompatibilityChange]: ...
 
 @typing.final
-class RuntimeInfo_Static(winrt._winrt.Object_Static):
+class RuntimeInfo_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo::get_AsString()
     @_property
     def as_string(cls) -> str: ...

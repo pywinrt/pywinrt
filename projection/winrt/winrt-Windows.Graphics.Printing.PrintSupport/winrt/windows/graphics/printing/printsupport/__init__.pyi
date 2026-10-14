@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
@@ -82,7 +81,7 @@ class XpsImageQuality(enum.IntEnum):
     PNG = 3
 
 @typing.final
-class PrintSupportAppInfo_Static(winrt._winrt.Object_Static):
+class PrintSupportAppInfo_Static(winrt.system.Object_Static):
     # Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::FromPrinterName(System.String)
     def from_printer_name(cls, printer_name: str, /) -> PrintSupportAppInfo: ...
     # Windows.Foundation.IReference`1<System.Boolean> Windows.Graphics.Printing.PrintSupport.PrintSupportAppInfo::GetPrintJobShowsUI(System.String,Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket)
@@ -287,7 +286,7 @@ class PrintSupportPrintDeviceCapabilitiesChangedEventArgs(winrt.system.Object):
     def mxdc_image_quality_configuration(self) -> PrintSupportMxdcImageQualityConfiguration: ...
 
 @typing.final
-class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(winrt._winrt.Object_Static):
+class PrintSupportPrintDeviceCapabilitiesUpdatePolicy_Static(winrt.system.Object_Static):
     # Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePeriodicRefresh(Windows.Foundation.TimeSpan)
     def create_periodic_refresh(cls, update_period: datetime.timedelta, /) -> PrintSupportPrintDeviceCapabilitiesUpdatePolicy: ...
     # Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy::CreatePrintJobRefresh(System.UInt32)

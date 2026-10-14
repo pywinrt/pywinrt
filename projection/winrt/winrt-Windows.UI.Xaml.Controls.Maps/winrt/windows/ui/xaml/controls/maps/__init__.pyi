@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -1633,7 +1632,7 @@ class MapStyleSheet(windows_ui_xaml.DependencyObject, metaclass=MapStyleSheet_St
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class MapStyleSheetEntries_Static(winrt._winrt.Object_Static):
+class MapStyleSheetEntries_Static(winrt.system.Object_Static):
     # System.String Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntries::get_AdminDistrict()
     @_property
     def admin_district(cls) -> str: ...
@@ -1833,7 +1832,7 @@ class MapStyleSheetEntries(winrt.system.Object, metaclass=MapStyleSheetEntries_S
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class MapStyleSheetEntryStates_Static(winrt._winrt.Object_Static):
+class MapStyleSheetEntryStates_Static(winrt.system.Object_Static):
     # System.String Windows.UI.Xaml.Controls.Maps.MapStyleSheetEntryStates::get_Disabled()
     @_property
     def disabled(cls) -> str: ...

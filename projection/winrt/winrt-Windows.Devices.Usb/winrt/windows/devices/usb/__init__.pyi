@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -166,7 +165,7 @@ class UsbConfiguration(winrt.system.Object):
     def usb_interfaces(self) -> _cabc.Sequence[UsbInterface]: ...
 
 @typing.final
-class UsbConfigurationDescriptor_Static(winrt._winrt.Object_Static):
+class UsbConfigurationDescriptor_Static(winrt.system.Object_Static):
     # Windows.Devices.Usb.UsbConfigurationDescriptor Windows.Devices.Usb.UsbConfigurationDescriptor::Parse(Windows.Devices.Usb.UsbDescriptor)
     def parse(cls, descriptor: UsbDescriptor, /) -> UsbConfigurationDescriptor: ...
     # System.Boolean Windows.Devices.Usb.UsbConfigurationDescriptor::TryParse(Windows.Devices.Usb.UsbDescriptor,Windows.Devices.Usb.UsbConfigurationDescriptor&)
@@ -231,7 +230,7 @@ class UsbDescriptor(winrt.system.Object):
     def length(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class UsbDevice_Static(winrt._winrt.Object_Static):
+class UsbDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Usb.UsbDevice> Windows.Devices.Usb.UsbDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[UsbDevice]: ...
     # System.String Windows.Devices.Usb.UsbDevice::GetDeviceClassSelector(Windows.Devices.Usb.UsbDeviceClass)
@@ -315,7 +314,7 @@ class UsbDeviceClass(winrt.system.Object):
     def class_code(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
 
 @typing.final
-class UsbDeviceClasses_Static(winrt._winrt.Object_Static):
+class UsbDeviceClasses_Static(winrt.system.Object_Static):
     # Windows.Devices.Usb.UsbDeviceClass Windows.Devices.Usb.UsbDeviceClasses::get_ActiveSync()
     @_property
     def active_sync(cls) -> UsbDeviceClass: ...
@@ -373,7 +372,7 @@ class UsbDeviceDescriptor(winrt.system.Object):
     def vendor_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class UsbEndpointDescriptor_Static(winrt._winrt.Object_Static):
+class UsbEndpointDescriptor_Static(winrt.system.Object_Static):
     # Windows.Devices.Usb.UsbEndpointDescriptor Windows.Devices.Usb.UsbEndpointDescriptor::Parse(Windows.Devices.Usb.UsbDescriptor)
     def parse(cls, descriptor: UsbDescriptor, /) -> UsbEndpointDescriptor: ...
     # System.Boolean Windows.Devices.Usb.UsbEndpointDescriptor::TryParse(Windows.Devices.Usb.UsbDescriptor,Windows.Devices.Usb.UsbEndpointDescriptor&)
@@ -432,7 +431,7 @@ class UsbInterface(winrt.system.Object):
     def interrupt_out_pipes(self) -> _cabc.Sequence[UsbInterruptOutPipe]: ...
 
 @typing.final
-class UsbInterfaceDescriptor_Static(winrt._winrt.Object_Static):
+class UsbInterfaceDescriptor_Static(winrt.system.Object_Static):
     # Windows.Devices.Usb.UsbInterfaceDescriptor Windows.Devices.Usb.UsbInterfaceDescriptor::Parse(Windows.Devices.Usb.UsbDescriptor)
     def parse(cls, descriptor: UsbDescriptor, /) -> UsbInterfaceDescriptor: ...
     # System.Boolean Windows.Devices.Usb.UsbInterfaceDescriptor::TryParse(Windows.Devices.Usb.UsbDescriptor,Windows.Devices.Usb.UsbInterfaceDescriptor&)

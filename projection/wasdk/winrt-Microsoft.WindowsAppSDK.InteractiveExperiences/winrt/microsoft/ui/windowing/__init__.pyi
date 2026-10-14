@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui as microsoft_ui
 import winrt.microsoft.ui.dispatching as microsoft_ui_dispatching
@@ -81,7 +80,7 @@ class TitleBarTheme(enum.IntEnum):
     DARK = 3
 
 @typing.final
-class AppWindow_Static(winrt._winrt.Object_Static):
+class AppWindow_Static(winrt.system.Object_Static):
     @typing.overload
     # Microsoft.UI.Windowing.AppWindow Microsoft.UI.Windowing.AppWindow::Create()
     def create(cls) -> AppWindow: ...
@@ -241,7 +240,7 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class AppWindowPresenter_Static(winrt._winrt.Object_Static):
+class AppWindowPresenter_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> AppWindowPresenter_Static: ...
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
@@ -254,7 +253,7 @@ class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Stati
     def kind(self) -> AppWindowPresenterKind: ...
 
 @typing.final
-class AppWindowTitleBar_Static(winrt._winrt.Object_Static):
+class AppWindowTitleBar_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Windowing.AppWindowTitleBar::IsCustomizationSupported()
     def is_customization_supported(cls) -> bool: ...
 
@@ -390,7 +389,7 @@ class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresen
     def initial_size(self, value: CompactOverlaySize) -> None: ...
 
 @typing.final
-class DisplayArea_Static(winrt._winrt.Object_Static):
+class DisplayArea_Static(winrt.system.Object_Static):
     # Microsoft.UI.Windowing.DisplayAreaWatcher Microsoft.UI.Windowing.DisplayArea::CreateWatcher()
     def create_watcher(cls) -> DisplayAreaWatcher: ...
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.UI.Windowing.DisplayArea> Microsoft.UI.Windowing.DisplayArea::FindAll()

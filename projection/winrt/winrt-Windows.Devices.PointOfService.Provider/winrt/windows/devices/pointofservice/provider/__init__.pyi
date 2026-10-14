@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.pointofservice as windows_devices_pointofservice
 import winrt.windows.foundation as windows_foundation

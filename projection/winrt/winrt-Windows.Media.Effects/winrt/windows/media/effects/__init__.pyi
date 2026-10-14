@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -137,7 +136,7 @@ class AudioEffectDefinition(IAudioEffectDefinition, winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class AudioEffectsManager_Static(winrt._winrt.Object_Static):
+class AudioEffectsManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Media.Effects.AudioCaptureEffectsManager Windows.Media.Effects.AudioEffectsManager::CreateAudioCaptureEffectsManager(System.String,Windows.Media.Capture.MediaCategory)
     def create_audio_capture_effects_manager(cls, device_id: str, category: windows_media_capture.MediaCategory, /) -> AudioCaptureEffectsManager: ...

@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -177,7 +176,7 @@ class ActivationViewSwitcher(winrt.system.Object):
     def show_as_standalone_with_size_preference_async(self, view_id: winrt.system.Int32 | typing.SupportsIndex, size_preference: ViewSizePreference, /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class ApplicationView_Static(winrt._winrt.Object_Static):
+class ApplicationView_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.ViewManagement.ApplicationView::ClearAllPersistedState()
     def clear_all_persisted_state(cls) -> None: ...
     # System.Void Windows.UI.ViewManagement.ApplicationView::ClearPersistedState(System.String)
@@ -340,7 +339,7 @@ class ApplicationViewConsolidatedEventArgs(winrt.system.Object):
     def is_app_initiated(self) -> bool: ...
 
 @typing.final
-class ApplicationViewScaling_Static(winrt._winrt.Object_Static):
+class ApplicationViewScaling_Static(winrt.system.Object_Static):
     # System.Boolean Windows.UI.ViewManagement.ApplicationViewScaling::TrySetDisableLayoutScaling(System.Boolean)
     def try_set_disable_layout_scaling(cls, disable_layout_scaling: bool, /) -> bool: ...
     # System.Boolean Windows.UI.ViewManagement.ApplicationViewScaling::get_DisableLayoutScaling()
@@ -353,7 +352,7 @@ class ApplicationViewScaling(winrt.system.Object, metaclass=ApplicationViewScali
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class ApplicationViewSwitcher_Static(winrt._winrt.Object_Static):
+class ApplicationViewSwitcher_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.ViewManagement.ApplicationViewSwitcher::DisableShowingMainViewOnActivation()
     def disable_showing_main_view_on_activation(cls) -> None: ...
     # System.Void Windows.UI.ViewManagement.ApplicationViewSwitcher::DisableSystemViewActivationPolicy()
@@ -488,7 +487,7 @@ class ApplicationViewTitleBar(winrt.system.Object):
     def background_color(self, value: windows_ui.Color | None) -> None: ...
 
 @typing.final
-class ApplicationViewTransferContext_Static(winrt._winrt.Object_Static):
+class ApplicationViewTransferContext_Static(winrt.system.Object_Static):
     # System.String Windows.UI.ViewManagement.ApplicationViewTransferContext::get_DataPackageFormatId()
     @_property
     def data_package_format_id(cls) -> str: ...
@@ -504,7 +503,7 @@ class ApplicationViewTransferContext(winrt.system.Object, metaclass=ApplicationV
     def view_id(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
 
 @typing.final
-class InputPane_Static(winrt._winrt.Object_Static):
+class InputPane_Static(winrt.system.Object_Static):
     # Windows.UI.ViewManagement.InputPane Windows.UI.ViewManagement.InputPane::GetForCurrentView()
     def get_for_current_view(cls) -> InputPane: ...
     # Windows.UI.ViewManagement.InputPane Windows.UI.ViewManagement.InputPane::GetForUIContext(Windows.UI.UIContext)
@@ -551,7 +550,7 @@ class InputPaneVisibilityEventArgs(winrt.system.Object):
     def occluded_rect(self) -> windows_foundation.Rect: ...
 
 @typing.final
-class ProjectionManager_Static(winrt._winrt.Object_Static):
+class ProjectionManager_Static(winrt.system.Object_Static):
     # System.String Windows.UI.ViewManagement.ProjectionManager::GetDeviceSelector()
     def get_device_selector(cls) -> str: ...
     @typing.overload
@@ -684,7 +683,7 @@ class UISettingsMessageDurationChangedEventArgs(winrt.system.Object):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class UIViewSettings_Static(winrt._winrt.Object_Static):
+class UIViewSettings_Static(winrt.system.Object_Static):
     # Windows.UI.ViewManagement.UIViewSettings Windows.UI.ViewManagement.UIViewSettings::GetForCurrentView()
     def get_for_current_view(cls) -> UIViewSettings: ...
 
@@ -703,7 +702,7 @@ class UIViewSettings(winrt.system.Object, metaclass=UIViewSettings_Static):
     def user_interaction_mode(self) -> UserInteractionMode: ...
 
 @typing.final
-class ViewModePreferences_Static(winrt._winrt.Object_Static):
+class ViewModePreferences_Static(winrt.system.Object_Static):
     # Windows.UI.ViewManagement.ViewModePreferences Windows.UI.ViewManagement.ViewModePreferences::CreateDefault(Windows.UI.ViewManagement.ApplicationViewMode)
     def create_default(cls, mode: ApplicationViewMode, /) -> ViewModePreferences: ...
 

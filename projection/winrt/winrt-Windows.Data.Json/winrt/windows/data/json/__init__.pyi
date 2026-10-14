@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -38,7 +37,7 @@ class JsonValueType(enum.IntEnum):
     OBJECT = 5
 
 @typing.final
-class JsonArray_Static(winrt._winrt.Object_Static):
+class JsonArray_Static(winrt.system.Object_Static):
     # Windows.Data.Json.JsonArray Windows.Data.Json.JsonArray::Parse(System.String)
     def parse(cls, input: str, /) -> JsonArray: ...
     # System.Boolean Windows.Data.Json.JsonArray::TryParse(System.String,Windows.Data.Json.JsonArray&)
@@ -118,7 +117,7 @@ class JsonArray(windows_foundation.IStringable, IJsonValue, _cabc.MutableSequenc
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JsonError_Static(winrt._winrt.Object_Static):
+class JsonError_Static(winrt.system.Object_Static):
     # Windows.Data.Json.JsonErrorStatus Windows.Data.Json.JsonError::GetJsonStatus(System.Int32)
     def get_json_status(cls, hresult: winrt.system.Int32 | typing.SupportsIndex, /) -> JsonErrorStatus: ...
 
@@ -128,7 +127,7 @@ class JsonError(winrt.system.Object, metaclass=JsonError_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class JsonObject_Static(winrt._winrt.Object_Static):
+class JsonObject_Static(winrt.system.Object_Static):
     # Windows.Data.Json.JsonObject Windows.Data.Json.JsonObject::Parse(System.String)
     def parse(cls, input: str, /) -> JsonObject: ...
     # System.Boolean Windows.Data.Json.JsonObject::TryParse(System.String,Windows.Data.Json.JsonObject&)
@@ -242,7 +241,7 @@ class JsonObject(windows_foundation.IStringable, IJsonValue, _cabc.MutableMappin
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class JsonValue_Static(winrt._winrt.Object_Static):
+class JsonValue_Static(winrt.system.Object_Static):
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonValue::CreateBooleanValue(System.Boolean)
     def create_boolean_value(cls, input: bool, /) -> JsonValue: ...
     # Windows.Data.Json.JsonValue Windows.Data.Json.JsonValue::CreateNullValue()

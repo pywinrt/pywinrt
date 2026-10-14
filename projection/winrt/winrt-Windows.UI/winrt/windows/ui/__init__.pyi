@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -39,7 +38,7 @@ class WindowId:
     def __replace__(self, /, **changes: typing.Any) -> WindowId: ...
 
 @typing.final
-class ColorHelper_Static(winrt._winrt.Object_Static):
+class ColorHelper_Static(winrt.system.Object_Static):
     # Windows.UI.Color Windows.UI.ColorHelper::FromArgb(System.Byte,System.Byte,System.Byte,System.Byte)
     def from_argb(cls, a: winrt.system.UInt8 | typing.SupportsIndex, r: winrt.system.UInt8 | typing.SupportsIndex, g: winrt.system.UInt8 | typing.SupportsIndex, b: winrt.system.UInt8 | typing.SupportsIndex, /) -> Color: ...
     # System.String Windows.UI.ColorHelper::ToDisplayName(Windows.UI.Color)
@@ -51,7 +50,7 @@ class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class Colors_Static(winrt._winrt.Object_Static):
+class Colors_Static(winrt.system.Object_Static):
     # Windows.UI.Color Windows.UI.Colors::get_AliceBlue()
     @_property
     def alice_blue(cls) -> Color: ...

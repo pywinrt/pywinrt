@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.haptics as windows_devices_haptics
 import winrt.windows.devices.power as windows_devices_power
@@ -262,7 +261,7 @@ class SpatialInteractionDetectedEventArgs(winrt.system.Object):
     def interaction_source(self) -> SpatialInteractionSource: ...
 
 @typing.final
-class SpatialInteractionManager_Static(winrt._winrt.Object_Static):
+class SpatialInteractionManager_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Spatial.SpatialInteractionManager Windows.UI.Input.Spatial.SpatialInteractionManager::GetForCurrentView()
     def get_for_current_view(cls) -> SpatialInteractionManager: ...
     # System.Boolean Windows.UI.Input.Spatial.SpatialInteractionManager::IsSourceKindSupported(Windows.UI.Input.Spatial.SpatialInteractionSourceKind)
@@ -529,7 +528,7 @@ class SpatialPointerInteractionSourcePose(winrt.system.Object):
     def position_accuracy(self) -> SpatialInteractionSourcePositionAccuracy: ...
 
 @typing.final
-class SpatialPointerPose_Static(winrt._winrt.Object_Static):
+class SpatialPointerPose_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Spatial.SpatialPointerPose Windows.UI.Input.Spatial.SpatialPointerPose::TryGetAtTimestamp(Windows.Perception.Spatial.SpatialCoordinateSystem,Windows.Perception.PerceptionTimestamp)
     def try_get_at_timestamp(cls, coordinate_system: windows_perception_spatial.SpatialCoordinateSystem, timestamp: windows_perception.PerceptionTimestamp, /) -> SpatialPointerPose | None: ...
 

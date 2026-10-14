@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.graphics.directx as microsoft_graphics_directx
 import winrt.microsoft.ui.composition as microsoft_ui_composition

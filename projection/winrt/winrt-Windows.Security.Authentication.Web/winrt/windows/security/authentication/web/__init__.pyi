@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -36,7 +35,7 @@ class WebAuthenticationStatus(enum.IntEnum):
     ERROR_HTTP = 2
 
 @typing.final
-class WebAuthenticationBroker_Static(winrt._winrt.Object_Static):
+class WebAuthenticationBroker_Static(winrt.system.Object_Static):
     @typing.overload
     # System.Void Windows.Security.Authentication.Web.WebAuthenticationBroker::AuthenticateAndContinue(Windows.Foundation.Uri)
     def authenticate_and_continue(cls, request_uri: windows_foundation.Uri, /) -> None: ...

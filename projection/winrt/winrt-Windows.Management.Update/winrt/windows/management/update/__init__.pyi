@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -186,7 +185,7 @@ class WindowsUpdateManagerScanMode(enum.IntEnum):
     WHAT_IF = 100
 
 @typing.final
-class PreviewBuildsManager_Static(winrt._winrt.Object_Static):
+class PreviewBuildsManager_Static(winrt.system.Object_Static):
     # Windows.Management.Update.PreviewBuildsManager Windows.Management.Update.PreviewBuildsManager::GetDefault()
     def get_default(cls) -> PreviewBuildsManager: ...
     # System.Boolean Windows.Management.Update.PreviewBuildsManager::IsSupported()
@@ -719,7 +718,7 @@ class WindowsUpdateActionResult(winrt.system.Object):
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class WindowsUpdateAdministrator_Static(winrt._winrt.Object_Static):
+class WindowsUpdateAdministrator_Static(winrt.system.Object_Static):
     # System.Void Windows.Management.Update.WindowsUpdateAdministrator::CancelRestartRequest(System.String)
     def cancel_restart_request(cls, request_restart_token: str, /) -> None: ...
     # Windows.Management.Update.WindowsUpdateGetAdministratorResult Windows.Management.Update.WindowsUpdateAdministrator::GetRegisteredAdministrator(System.String)

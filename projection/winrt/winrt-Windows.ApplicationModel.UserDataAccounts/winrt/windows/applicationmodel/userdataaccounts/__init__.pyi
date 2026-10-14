@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appointments as windows_applicationmodel_appointments
 import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
@@ -120,7 +119,7 @@ class UserDataAccount(winrt.system.Object):
     def provider_properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class UserDataAccountManager_Static(winrt._winrt.Object_Static):
+class UserDataAccountManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager::GetForUser(Windows.System.User)
     def get_for_user(cls, user: windows_system.User, /) -> UserDataAccountManagerForUser: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore> Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager::RequestStoreAsync(Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreAccessType)

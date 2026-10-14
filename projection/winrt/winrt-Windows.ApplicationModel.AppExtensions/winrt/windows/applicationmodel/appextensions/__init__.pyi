@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
@@ -55,7 +54,7 @@ class AppExtension(winrt.system.Object):
     def app_user_model_id(self) -> str: ...
 
 @typing.final
-class AppExtensionCatalog_Static(winrt._winrt.Object_Static):
+class AppExtensionCatalog_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.AppExtensions.AppExtensionCatalog Windows.ApplicationModel.AppExtensions.AppExtensionCatalog::Open(System.String)
     def open(cls, app_extension_name: str, /) -> AppExtensionCatalog: ...
 

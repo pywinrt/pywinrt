@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -74,7 +73,7 @@ class PerceptionFrameSourcePropertyChangeStatus(enum.IntEnum):
     VALUE_OUT_OF_RANGE = 5
 
 @typing.final
-class KnownCameraIntrinsicsProperties_Static(winrt._winrt.Object_Static):
+class KnownCameraIntrinsicsProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownCameraIntrinsicsProperties::get_FocalLength()
     @_property
     @deprecated("KnownCameraIntrinsicsProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -99,7 +98,7 @@ class KnownCameraIntrinsicsProperties(winrt.system.Object, metaclass=KnownCamera
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionColorFrameSourceProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionColorFrameSourceProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties::get_AutoExposureEnabled()
     @_property
     @deprecated("KnownPerceptionColorFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -120,7 +119,7 @@ class KnownPerceptionColorFrameSourceProperties(winrt.system.Object, metaclass=K
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionDepthFrameSourceProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionDepthFrameSourceProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties::get_MaxDepth()
     @_property
     @deprecated("KnownPerceptionDepthFrameSourceProperties may be unavailable after Windows Creator Update.  Use Windows.Media.Capture.Frames.DepthMediaFrame instead.")
@@ -137,7 +136,7 @@ class KnownPerceptionDepthFrameSourceProperties(winrt.system.Object, metaclass=K
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionFrameSourceProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionFrameSourceProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionFrameSourceProperties::get_DeviceModelVersion()
     @_property
     @deprecated("KnownPerceptionFrameSourceProperties may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation instead.")
@@ -170,7 +169,7 @@ class KnownPerceptionFrameSourceProperties(winrt.system.Object, metaclass=KnownP
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionInfraredFrameSourceProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionInfraredFrameSourceProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties::get_ActiveIlluminationEnabled()
     @_property
     @deprecated("KnownPerceptionInfraredFrameSourceProperties.ActiveIlluminationEnabled may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -207,7 +206,7 @@ class KnownPerceptionInfraredFrameSourceProperties(winrt.system.Object, metaclas
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionVideoFrameSourceProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionVideoFrameSourceProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties::get_AvailableVideoProfiles()
     @_property
     @deprecated("KnownPerceptionVideoFrameSourceProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -236,7 +235,7 @@ class KnownPerceptionVideoFrameSourceProperties(winrt.system.Object, metaclass=K
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class KnownPerceptionVideoProfileProperties_Static(winrt._winrt.Object_Static):
+class KnownPerceptionVideoProfileProperties_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.KnownPerceptionVideoProfileProperties::get_BitmapAlphaMode()
     @_property
     @deprecated("KnownPerceptionVideoProfileProperties may be unavailable after Windows Creator Update.  Please refer to Windows.Media.Capture.Frames APIs on MSDN.")
@@ -323,7 +322,7 @@ class PerceptionColorFrameReader(windows_foundation.IClosable, winrt.system.Obje
     def source(self) -> PerceptionColorFrameSource: ...
 
 @typing.final
-class PerceptionColorFrameSource_Static(winrt._winrt.Object_Static):
+class PerceptionColorFrameSource_Static(winrt.system.Object_Static):
     # Windows.Devices.Perception.PerceptionColorFrameSourceWatcher Windows.Devices.Perception.PerceptionColorFrameSource::CreateWatcher()
     @deprecated("PerceptionColorFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionColorFrameSourceWatcher: ...
@@ -619,7 +618,7 @@ class PerceptionDepthFrameReader(windows_foundation.IClosable, winrt.system.Obje
     def source(self) -> PerceptionDepthFrameSource: ...
 
 @typing.final
-class PerceptionDepthFrameSource_Static(winrt._winrt.Object_Static):
+class PerceptionDepthFrameSource_Static(winrt.system.Object_Static):
     # Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher Windows.Devices.Perception.PerceptionDepthFrameSource::CreateWatcher()
     @deprecated("PerceptionDepthFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionDepthFrameSourceWatcher: ...
@@ -888,7 +887,7 @@ class PerceptionInfraredFrameReader(windows_foundation.IClosable, winrt.system.O
     def source(self) -> PerceptionInfraredFrameSource: ...
 
 @typing.final
-class PerceptionInfraredFrameSource_Static(winrt._winrt.Object_Static):
+class PerceptionInfraredFrameSource_Static(winrt.system.Object_Static):
     # Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher Windows.Devices.Perception.PerceptionInfraredFrameSource::CreateWatcher()
     @deprecated("PerceptionInfraredFrameSource.CreateWatcher may be unavailable after Windows Creator Update.  Use Windows.Devices.Enumeration.DeviceInformation.CreateWatcher instead.")
     def create_watcher(cls) -> PerceptionInfraredFrameSourceWatcher: ...

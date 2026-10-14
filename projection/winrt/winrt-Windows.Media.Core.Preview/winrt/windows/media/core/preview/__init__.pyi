@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.media as windows_media
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class SoundLevelBroker_Static(winrt._winrt.Object_Static):
+class SoundLevelBroker_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.Core.Preview.SoundLevelBroker::add_SoundLevelChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_sound_level_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.Core.Preview.SoundLevelBroker::remove_SoundLevelChanged(Windows.Foundation.EventRegistrationToken)

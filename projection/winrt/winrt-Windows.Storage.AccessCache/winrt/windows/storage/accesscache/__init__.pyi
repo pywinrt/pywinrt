@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -79,7 +78,7 @@ class ItemRemovedEventArgs(winrt.system.Object):
     def removed_entry(self) -> AccessListEntry: ...
 
 @typing.final
-class StorageApplicationPermissions_Static(winrt._winrt.Object_Static):
+class StorageApplicationPermissions_Static(winrt.system.Object_Static):
     # Windows.Storage.AccessCache.StorageItemAccessList Windows.Storage.AccessCache.StorageApplicationPermissions::GetFutureAccessListForUser(Windows.System.User)
     def get_future_access_list_for_user(cls, user: windows_system.User, /) -> StorageItemAccessList: ...
     # Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList Windows.Storage.AccessCache.StorageApplicationPermissions::GetMostRecentlyUsedListForUser(Windows.System.User)

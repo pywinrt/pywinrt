@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.data.text as windows_data_text
 import winrt.windows.foundation as windows_foundation
@@ -961,7 +960,7 @@ class ContactJobInfo(winrt.system.Object):
     def company_address(self, value: str) -> None: ...
 
 @typing.final
-class ContactLaunchActionVerbs_Static(winrt._winrt.Object_Static):
+class ContactLaunchActionVerbs_Static(winrt.system.Object_Static):
     # System.String Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs::get_Call()
     @_property
     def call(cls) -> str: ...
@@ -1322,7 +1321,7 @@ class ContactLocationField(IContactField, winrt.system.Object):
     def unstructured_address(self) -> str: ...
 
 @typing.final
-class ContactManager_Static(winrt._winrt.Object_Static):
+class ContactManager_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.RandomAccessStreamReference> Windows.ApplicationModel.Contacts.ContactManager::ConvertContactToVCardAsync(Windows.ApplicationModel.Contacts.Contact)
     def convert_contact_to_v_card_async(cls, contact: Contact, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.RandomAccessStreamReference]: ...
@@ -1522,7 +1521,7 @@ class ContactPhone(winrt.system.Object):
     def description(self, value: str) -> None: ...
 
 @typing.final
-class ContactPicker_Static(winrt._winrt.Object_Static):
+class ContactPicker_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Contacts.ContactPicker Windows.ApplicationModel.Contacts.ContactPicker::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> ContactPicker: ...
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Contacts.ContactPicker::IsSupportedAsync()
@@ -1744,7 +1743,7 @@ class FullContactCardOptions(winrt.system.Object):
     def desired_remaining_view(self, value: windows_ui_viewmanagement.ViewSizePreference) -> None: ...
 
 @typing.final
-class KnownContactField_Static(winrt._winrt.Object_Static):
+class KnownContactField_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Contacts.ContactFieldType Windows.ApplicationModel.Contacts.KnownContactField::ConvertNameToType(System.String)
     @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def convert_name_to_type(cls, name: str, /) -> ContactFieldType: ...
@@ -1783,7 +1782,7 @@ class PinnedContactIdsQueryResult(winrt.system.Object):
     def contact_ids(self) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
-class PinnedContactManager_Static(winrt._winrt.Object_Static):
+class PinnedContactManager_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Contacts.PinnedContactManager Windows.ApplicationModel.Contacts.PinnedContactManager::GetDefault()
     def get_default(cls) -> PinnedContactManager: ...
     # Windows.ApplicationModel.Contacts.PinnedContactManager Windows.ApplicationModel.Contacts.PinnedContactManager::GetForUser(Windows.System.User)

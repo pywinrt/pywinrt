@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -36,7 +35,7 @@ class LocalLocationFinderStatus(enum.IntEnum):
     NOT_SUPPORTED = 7
 
 @typing.final
-class LocalCategories_Static(winrt._winrt.Object_Static):
+class LocalCategories_Static(winrt.system.Object_Static):
     # System.String Windows.Services.Maps.LocalSearch.LocalCategories::get_All()
     @_property
     def all(cls) -> str: ...
@@ -103,7 +102,7 @@ class LocalLocation(winrt.system.Object):
     def rating_info(self) -> LocalLocationRatingInfo: ...
 
 @typing.final
-class LocalLocationFinder_Static(winrt._winrt.Object_Static):
+class LocalLocationFinder_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.LocalSearch.LocalLocationFinderResult> Windows.Services.Maps.LocalSearch.LocalLocationFinder::FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)
     def find_local_locations_async(cls, search_term: str, search_area: windows_devices_geolocation.Geocircle, local_category: str, max_results: winrt.system.UInt32 | typing.SupportsIndex, /) -> windows_foundation.IAsyncOperation[LocalLocationFinderResult]: ...
 
@@ -152,7 +151,7 @@ class LocalLocationRatingInfo(winrt.system.Object):
     def rating_count(self) -> winrt.system.Int32 | None: ...
 
 @typing.final
-class PlaceInfoHelper_Static(winrt._winrt.Object_Static):
+class PlaceInfoHelper_Static(winrt.system.Object_Static):
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.LocalSearch.PlaceInfoHelper::CreateFromLocalLocation(Windows.Services.Maps.LocalSearch.LocalLocation)
     def create_from_local_location(cls, location: LocalLocation, /) -> windows_services_maps.PlaceInfo: ...
 

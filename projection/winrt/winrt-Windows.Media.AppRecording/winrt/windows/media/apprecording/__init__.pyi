@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -27,7 +26,7 @@ class AppRecordingSaveScreenshotOption(enum.IntEnum):
     HDR_CONTENT_VISIBLE = 1
 
 @typing.final
-class AppRecordingManager_Static(winrt._winrt.Object_Static):
+class AppRecordingManager_Static(winrt.system.Object_Static):
     # Windows.Media.AppRecording.AppRecordingManager Windows.Media.AppRecording.AppRecordingManager::GetDefault()
     def get_default(cls) -> AppRecordingManager: ...
 

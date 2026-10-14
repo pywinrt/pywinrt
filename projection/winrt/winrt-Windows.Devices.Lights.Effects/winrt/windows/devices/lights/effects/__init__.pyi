@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.lights as windows_devices_lights
 import winrt.windows.foundation as windows_foundation
@@ -206,7 +205,7 @@ class LampArrayCustomEffect(ILampArrayEffect, winrt.system.Object):
     def z_index(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
 
 @typing.final
-class LampArrayEffectPlaylist_Static(winrt._winrt.Object_Static):
+class LampArrayEffectPlaylist_Static(winrt.system.Object_Static):
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::PauseAll(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist>)
     def pause_all(cls, value: _cabc.Iterable[LampArrayEffectPlaylist], /) -> None: ...
     # System.Void Windows.Devices.Lights.Effects.LampArrayEffectPlaylist::StartAll(Windows.Foundation.Collections.IIterable`1<Windows.Devices.Lights.Effects.LampArrayEffectPlaylist>)

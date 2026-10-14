@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.perception as windows_devices_perception
 import winrt.windows.foundation as windows_foundation
@@ -35,7 +34,7 @@ __all__ = [
 ]
 
 @typing.final
-class KnownPerceptionFrameKind_Static(winrt._winrt.Object_Static):
+class KnownPerceptionFrameKind_Static(winrt.system.Object_Static):
     # System.String Windows.Devices.Perception.Provider.KnownPerceptionFrameKind::get_Color()
     @_property
     @deprecated("KnownPerceptionFrameKind may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
@@ -167,7 +166,7 @@ class PerceptionFrameProviderInfo(winrt.system.Object):
     def device_kind(self, value: str) -> None: ...
 
 @typing.final
-class PerceptionFrameProviderManagerService_Static(winrt._winrt.Object_Static):
+class PerceptionFrameProviderManagerService_Static(winrt.system.Object_Static):
     # System.Void Windows.Devices.Perception.Provider.PerceptionFrameProviderManagerService::PublishFrameForProvider(Windows.Devices.Perception.Provider.IPerceptionFrameProvider,Windows.Devices.Perception.Provider.PerceptionFrame)
     @deprecated("PerceptionFrameProviderManagerService may be unavailable after Windows Creator Update. Please refer to AVStream on MSDN.")
     def publish_frame_for_provider(cls, provider: IPerceptionFrameProvider, frame: PerceptionFrame, /) -> None: ...

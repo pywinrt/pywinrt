@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
@@ -473,7 +472,7 @@ class AdaptiveTrigger(StateTriggerBase, metaclass=AdaptiveTrigger_Static):
     @typing.final
     def min_window_height(self, value: winrt.system.Double) -> None: ...
 
-class Application_Static(winrt._winrt.Object_Static):
+class Application_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> Application_Static: ...
     @typing.overload
     # System.Void Windows.UI.Xaml.Application::LoadComponent(System.Object,Windows.Foundation.Uri)
@@ -688,7 +687,7 @@ class BringIntoViewRequestedEventArgs(RoutedEventArgs):
     @_property
     def vertical_alignment_ratio(self) -> winrt.system.Double: ...
 
-class BrushTransition_Static(winrt._winrt.Object_Static):
+class BrushTransition_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> BrushTransition_Static: ...
 
 class BrushTransition(winrt.system.Object, metaclass=BrushTransition_Static):
@@ -898,7 +897,7 @@ class ColorPaletteResources(ResourceDictionary, metaclass=ColorPaletteResources_
     def accent(self, value: windows_ui.Color | None) -> None: ...
 
 @typing.final
-class CornerRadiusHelper_Static(winrt._winrt.Object_Static):
+class CornerRadiusHelper_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.CornerRadius Windows.UI.Xaml.CornerRadiusHelper::FromRadii(System.Double,System.Double,System.Double,System.Double)
     def from_radii(cls, top_left: winrt.system.Double, top_right: winrt.system.Double, bottom_right: winrt.system.Double, bottom_left: winrt.system.Double, /) -> CornerRadius: ...
     # Windows.UI.Xaml.CornerRadius Windows.UI.Xaml.CornerRadiusHelper::FromUniformRadius(System.Double)
@@ -943,7 +942,7 @@ class DataTemplate(FrameworkTemplate, IElementFactory, metaclass=DataTemplate_St
     # System.Void Windows.UI.Xaml.DataTemplate::RecycleElement(Windows.UI.Xaml.ElementFactoryRecycleArgs)
     def recycle_element(self, args: ElementFactoryRecycleArgs, /) -> None: ...
 
-class DataTemplateKey_Static(winrt._winrt.Object_Static):
+class DataTemplateKey_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> DataTemplateKey_Static: ...
 
 class DataTemplateKey(winrt.system.Object, metaclass=DataTemplateKey_Static):
@@ -1005,7 +1004,7 @@ class DebugSettings(winrt.system.Object):
     @fail_fast_on_errors.setter
     def fail_fast_on_errors(self, value: bool) -> None: ...
 
-class DependencyObject_Static(winrt._winrt.Object_Static):
+class DependencyObject_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> DependencyObject_Static: ...
 
 class DependencyObject(winrt.system.Object, metaclass=DependencyObject_Static):
@@ -1094,7 +1093,7 @@ class DependencyObjectCollection(DependencyObject, windows_foundation_collection
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class DependencyProperty_Static(winrt._winrt.Object_Static):
+class DependencyProperty_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.DependencyProperty::Register(System.String,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.PropertyMetadata)
     def register(cls, name: str, property_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], owner_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], type_metadata: PropertyMetadata, /) -> DependencyProperty: ...  # type: ignore[override]
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.DependencyProperty::RegisterAttached(System.String,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.Interop.TypeName,Windows.UI.Xaml.PropertyMetadata)
@@ -1124,7 +1123,7 @@ class DependencyPropertyChangedEventArgs(winrt.system.Object):
     @_property
     def property(self) -> DependencyProperty: ...
 
-class DispatcherTimer_Static(winrt._winrt.Object_Static):
+class DispatcherTimer_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> DispatcherTimer_Static: ...
 
 class DispatcherTimer(winrt.system.Object, metaclass=DispatcherTimer_Static):
@@ -1314,7 +1313,7 @@ class DropCompletedEventArgs(RoutedEventArgs):
     def drop_result(self) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
 
 @typing.final
-class DurationHelper_Static(winrt._winrt.Object_Static):
+class DurationHelper_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.Duration Windows.UI.Xaml.DurationHelper::Add(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)
     def add(cls, target: Duration | tuple[datetime.timedelta, DurationType], duration: Duration | tuple[datetime.timedelta, DurationType], /) -> Duration: ...
     # System.Int32 Windows.UI.Xaml.DurationHelper::Compare(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)
@@ -1356,7 +1355,7 @@ class EffectiveViewportChangedEventArgs(winrt.system.Object):
     @_property
     def max_viewport(self) -> windows_foundation.Rect: ...
 
-class ElementFactoryGetArgs_Static(winrt._winrt.Object_Static):
+class ElementFactoryGetArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ElementFactoryGetArgs_Static: ...
 
 class ElementFactoryGetArgs(winrt.system.Object, metaclass=ElementFactoryGetArgs_Static):
@@ -1377,7 +1376,7 @@ class ElementFactoryGetArgs(winrt.system.Object, metaclass=ElementFactoryGetArgs
     @typing.final
     def data(self, value: winrt.system.Object) -> None: ...
 
-class ElementFactoryRecycleArgs_Static(winrt._winrt.Object_Static):
+class ElementFactoryRecycleArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ElementFactoryRecycleArgs_Static: ...
 
 class ElementFactoryRecycleArgs(winrt.system.Object, metaclass=ElementFactoryRecycleArgs_Static):
@@ -1399,7 +1398,7 @@ class ElementFactoryRecycleArgs(winrt.system.Object, metaclass=ElementFactoryRec
     def element(self, value: UIElement) -> None: ...
 
 @typing.final
-class ElementSoundPlayer_Static(winrt._winrt.Object_Static):
+class ElementSoundPlayer_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.Xaml.ElementSoundPlayer::Play(Windows.UI.Xaml.ElementSoundKind)
     def play(cls, sound: ElementSoundKind, /) -> None: ...
     # System.Double Windows.UI.Xaml.ElementSoundPlayer::get_Volume()
@@ -1854,7 +1853,7 @@ class FrameworkViewSource(windows_applicationmodel_core.IFrameworkViewSource, wi
     def create_view(self) -> windows_applicationmodel_core.IFrameworkView: ...
 
 @typing.final
-class GridLengthHelper_Static(winrt._winrt.Object_Static):
+class GridLengthHelper_Static(winrt.system.Object_Static):
     # System.Boolean Windows.UI.Xaml.GridLengthHelper::Equals(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)
     def equals(cls, target: GridLength | tuple[winrt.system.Double, GridUnitType], value: GridLength | tuple[winrt.system.Double, GridUnitType], /) -> bool: ...
     # Windows.UI.Xaml.GridLength Windows.UI.Xaml.GridLengthHelper::FromPixels(System.Double)
@@ -1885,7 +1884,7 @@ class MediaFailedRoutedEventArgs(ExceptionRoutedEventArgs):
     def error_trace(self) -> str: ...
 
 @typing.final
-class PointHelper_Static(winrt._winrt.Object_Static):
+class PointHelper_Static(winrt.system.Object_Static):
     # Windows.Foundation.Point Windows.UI.Xaml.PointHelper::FromCoordinates(System.Single,System.Single)
     def from_coordinates(cls, x: winrt.system.Single, y: winrt.system.Single, /) -> windows_foundation.Point: ...
 
@@ -1894,7 +1893,7 @@ class PointHelper(winrt.system.Object, metaclass=PointHelper_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-class PropertyMetadata_Static(winrt._winrt.Object_Static):
+class PropertyMetadata_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> PropertyMetadata_Static: ...
     @typing.overload
     # Windows.UI.Xaml.PropertyMetadata Windows.UI.Xaml.PropertyMetadata::Create(System.Object)
@@ -1938,7 +1937,7 @@ class PropertyPath(DependencyObject):
     def path(self) -> str: ...
 
 @typing.final
-class RectHelper_Static(winrt._winrt.Object_Static):
+class RectHelper_Static(winrt.system.Object_Static):
     # System.Boolean Windows.UI.Xaml.RectHelper::Contains(Windows.Foundation.Rect,Windows.Foundation.Point)
     def contains(cls, target: windows_foundation.Rect | tuple[winrt.system.Single, winrt.system.Single, winrt.system.Single, winrt.system.Single], point: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> bool: ...
     # System.Boolean Windows.UI.Xaml.RectHelper::Equals(Windows.Foundation.Rect,Windows.Foundation.Rect)
@@ -2029,7 +2028,7 @@ class RoutedEvent(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
-class RoutedEventArgs_Static(winrt._winrt.Object_Static):
+class RoutedEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> RoutedEventArgs_Static: ...
 
 class RoutedEventArgs(winrt.system.Object, metaclass=RoutedEventArgs_Static):
@@ -2040,7 +2039,7 @@ class RoutedEventArgs(winrt.system.Object, metaclass=RoutedEventArgs_Static):
     @typing.final
     def original_source(self) -> winrt.system.Object: ...
 
-class ScalarTransition_Static(winrt._winrt.Object_Static):
+class ScalarTransition_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ScalarTransition_Static: ...
 
 class ScalarTransition(winrt.system.Object, metaclass=ScalarTransition_Static):
@@ -2151,7 +2150,7 @@ class SizeChangedEventArgs(RoutedEventArgs):
     def previous_size(self) -> windows_foundation.Size: ...
 
 @typing.final
-class SizeHelper_Static(winrt._winrt.Object_Static):
+class SizeHelper_Static(winrt.system.Object_Static):
     # System.Boolean Windows.UI.Xaml.SizeHelper::Equals(Windows.Foundation.Size,Windows.Foundation.Size)
     def equals(cls, target: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], value: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> bool: ...
     # Windows.Foundation.Size Windows.UI.Xaml.SizeHelper::FromDimensions(System.Single,System.Single)
@@ -2240,7 +2239,7 @@ class TargetPropertyPath(winrt.system.Object):
     def path(self, value: PropertyPath) -> None: ...
 
 @typing.final
-class ThicknessHelper_Static(winrt._winrt.Object_Static):
+class ThicknessHelper_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.Thickness Windows.UI.Xaml.ThicknessHelper::FromLengths(System.Double,System.Double,System.Double,System.Double)
     def from_lengths(cls, left: winrt.system.Double, top: winrt.system.Double, right: winrt.system.Double, bottom: winrt.system.Double, /) -> Thickness: ...
     # Windows.UI.Xaml.Thickness Windows.UI.Xaml.ThicknessHelper::FromUniformLength(System.Double)
@@ -3356,7 +3355,7 @@ class UIElement(DependencyObject, windows_ui_composition.IVisualElement, windows
     @typing.final
     def can_be_scroll_anchor(self, value: bool) -> None: ...
 
-class UIElementWeakCollection_Static(winrt._winrt.Object_Static):
+class UIElementWeakCollection_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> UIElementWeakCollection_Static: ...
 
 class UIElementWeakCollection(_cabc.MutableSequence[UIElement], winrt.system.Object, metaclass=UIElementWeakCollection_Static):
@@ -3423,7 +3422,7 @@ class UnhandledExceptionEventArgs(winrt.system.Object):
     @_property
     def message(self) -> str: ...
 
-class Vector3Transition_Static(winrt._winrt.Object_Static):
+class Vector3Transition_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> Vector3Transition_Static: ...
 
 class Vector3Transition(winrt.system.Object, metaclass=Vector3Transition_Static):
@@ -3576,7 +3575,7 @@ class VisualTransition(DependencyObject, metaclass=VisualTransition_Static):
     def from_(self, value: str) -> None: ...
 
 @typing.final
-class Window_Static(winrt._winrt.Object_Static):
+class Window_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.Window Windows.UI.Xaml.Window::get_Current()
     @_property
     def current(cls) -> Window: ...

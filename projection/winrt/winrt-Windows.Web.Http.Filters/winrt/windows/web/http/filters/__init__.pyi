@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -42,7 +41,7 @@ class HttpCookieUsageBehavior(enum.IntEnum):
     NO_COOKIES = 1
 
 @typing.final
-class HttpBaseProtocolFilter_Static(winrt._winrt.Object_Static):
+class HttpBaseProtocolFilter_Static(winrt.system.Object_Static):
     # Windows.Web.Http.Filters.HttpBaseProtocolFilter Windows.Web.Http.Filters.HttpBaseProtocolFilter::CreateForUser(Windows.System.User)
     def create_for_user(cls, user: windows_system.User, /) -> HttpBaseProtocolFilter: ...
 

@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.numerics as windows_foundation_numerics
@@ -60,7 +59,7 @@ class CornerRadiusToThicknessConverterKind(enum.IntEnum):
     FILTER_LEFT_FROM_TOP_LEFT = 11
 
 @typing.final
-class AutoSuggestBoxHelper_Static(winrt._winrt.Object_Static):
+class AutoSuggestBoxHelper_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.AutoSuggestBoxHelper::GetKeepInteriorCornersSquare(Windows.UI.Xaml.Controls.AutoSuggestBox)
     def get_keep_interior_corners_square(cls, auto_suggest_box: windows_ui_xaml_controls.AutoSuggestBox, /) -> bool: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.AutoSuggestBoxHelper::SetKeepInteriorCornersSquare(Windows.UI.Xaml.Controls.AutoSuggestBox,System.Boolean)
@@ -250,7 +249,7 @@ class ColumnMajorUniformToLargestGridLayout(microsoft_ui_xaml_controls.NonVirtua
     def column_spacing(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class ComboBoxHelper_Static(winrt._winrt.Object_Static):
+class ComboBoxHelper_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper::GetKeepInteriorCornersSquare(Windows.UI.Xaml.Controls.ComboBox)
     def get_keep_interior_corners_square(cls, combo_box: windows_ui_xaml_controls.ComboBox, /) -> bool: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper::SetKeepInteriorCornersSquare(Windows.UI.Xaml.Controls.ComboBox,System.Boolean)
@@ -275,7 +274,7 @@ class CommandBarFlyoutCommandBar(windows_ui_xaml_controls.CommandBar, metaclass=
     def flyout_template_settings(self) -> CommandBarFlyoutCommandBarTemplateSettings: ...
 
 @typing.final
-class CommandBarFlyoutCommandBarAutomationProperties_Static(winrt._winrt.Object_Static):
+class CommandBarFlyoutCommandBarAutomationProperties_Static(winrt.system.Object_Static):
     # Windows.UI.Xaml.Automation.Peers.AutomationControlType Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarAutomationProperties::GetControlType(Windows.UI.Xaml.UIElement)
     def get_control_type(cls, element: windows_ui_xaml.UIElement, /) -> windows_ui_xaml_automation_peers.AutomationControlType: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarAutomationProperties::SetControlType(Windows.UI.Xaml.UIElement,Windows.UI.Xaml.Automation.Peers.AutomationControlType)

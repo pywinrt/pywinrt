@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.windows.widgets as microsoft_windows_widgets
 import winrt.windows.foundation as windows_foundation
@@ -139,7 +138,7 @@ class WidgetInfo(winrt.system.Object):
     def rank(self) -> winrt.system.Int32: ...
 
 @typing.final
-class WidgetManager_Static(winrt._winrt.Object_Static):
+class WidgetManager_Static(winrt.system.Object_Static):
     # Microsoft.Windows.Widgets.Providers.WidgetManager Microsoft.Windows.Widgets.Providers.WidgetManager::GetDefault()
     def get_default(cls) -> WidgetManager: ...
 
@@ -230,7 +229,7 @@ class WidgetResourceResponse(winrt.system.Object):
     def status_code(self) -> winrt.system.Int32: ...
 
 @typing.final
-class WidgetUpdateRequestOptions_Static(winrt._winrt.Object_Static):
+class WidgetUpdateRequestOptions_Static(winrt.system.Object_Static):
     # System.String Microsoft.Windows.Widgets.Providers.WidgetUpdateRequestOptions::get_UnsetValue()
     @_property
     def unset_value(cls) -> str: ...

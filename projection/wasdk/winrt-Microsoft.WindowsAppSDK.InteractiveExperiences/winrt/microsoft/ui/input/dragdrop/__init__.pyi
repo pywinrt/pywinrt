@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.content as microsoft_ui_content
 import winrt.microsoft.ui.input as microsoft_ui_input
@@ -39,7 +38,7 @@ class DragUIContentMode(enum.IntEnum):
     DEFERRED = 1
 
 @typing.final
-class DragDropManager_Static(winrt._winrt.Object_Static):
+class DragDropManager_Static(winrt.system.Object_Static):
     # Microsoft.UI.Input.DragDrop.DragDropManager Microsoft.UI.Input.DragDrop.DragDropManager::GetForIsland(Microsoft.UI.Content.ContentIsland)
     def get_for_island(cls, content: microsoft_ui_content.ContentIsland, /) -> DragDropManager: ...
 

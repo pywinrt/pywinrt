@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -65,7 +64,7 @@ class WindowingEnvironmentKind(enum.IntEnum):
     TILED = 2
 
 @typing.final
-class AppWindow_Static(winrt._winrt.Object_Static):
+class AppWindow_Static(winrt.system.Object_Static):
     # System.Void Windows.UI.WindowManagement.AppWindow::ClearAllPersistedState()
     def clear_all_persisted_state(cls) -> None: ...
     # System.Void Windows.UI.WindowManagement.AppWindow::ClearPersistedState(System.String)
@@ -224,7 +223,7 @@ class AppWindowPlacement(winrt.system.Object):
     @_property
     def size(self) -> windows_foundation.Size: ...
 
-class AppWindowPresentationConfiguration_Static(winrt._winrt.Object_Static):
+class AppWindowPresentationConfiguration_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> AppWindowPresentationConfiguration_Static: ...
 
 class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
@@ -392,7 +391,7 @@ class FullScreenPresentationConfiguration(AppWindowPresentationConfiguration):
     def is_exclusive(self, value: bool) -> None: ...
 
 @typing.final
-class WindowServices_Static(winrt._winrt.Object_Static):
+class WindowServices_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowId> Windows.UI.WindowManagement.WindowServices::FindAllTopLevelWindowIds()
     def find_all_top_level_window_ids(cls) -> _cabc.Sequence[windows_ui.WindowId]: ...
 
@@ -402,7 +401,7 @@ class WindowServices(winrt.system.Object, metaclass=WindowServices_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class WindowingEnvironment_Static(winrt._winrt.Object_Static):
+class WindowingEnvironment_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.Collections.IVectorView`1<Windows.UI.WindowManagement.WindowingEnvironment> Windows.UI.WindowManagement.WindowingEnvironment::FindAll()
     def find_all(cls) -> _cabc.Sequence[WindowingEnvironment]: ...

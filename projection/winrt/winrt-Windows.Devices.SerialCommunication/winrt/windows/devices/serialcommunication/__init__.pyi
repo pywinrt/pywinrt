@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage.streams as windows_storage_streams
@@ -72,7 +71,7 @@ class PinChangedEventArgs(winrt.system.Object):
     def pin_change(self) -> SerialPinChange: ...
 
 @typing.final
-class SerialDevice_Static(winrt._winrt.Object_Static):
+class SerialDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.SerialCommunication.SerialDevice> Windows.Devices.SerialCommunication.SerialDevice::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[SerialDevice]: ...
     @typing.overload

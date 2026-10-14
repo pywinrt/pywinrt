@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -537,7 +536,7 @@ class XmlComment(IXmlCharacterData, IXmlNode, IXmlNodeSerializer, IXmlNodeSelect
     def inner_text(self, value: str) -> None: ...
 
 @typing.final
-class XmlDocument_Static(winrt._winrt.Object_Static):
+class XmlDocument_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Data.Xml.Dom.XmlDocument> Windows.Data.Xml.Dom.XmlDocument::LoadFromFileAsync(Windows.Storage.IStorageFile)
     def load_from_file_async(cls, file: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncOperation[XmlDocument]: ...

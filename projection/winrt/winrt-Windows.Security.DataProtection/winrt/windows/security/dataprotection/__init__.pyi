@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage as windows_storage
@@ -54,7 +53,7 @@ class UserDataBufferUnprotectResult(winrt.system.Object):
     def unprotected_buffer(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
-class UserDataProtectionManager_Static(winrt._winrt.Object_Static):
+class UserDataProtectionManager_Static(winrt.system.Object_Static):
     # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetDefault()
     def try_get_default(cls) -> UserDataProtectionManager | None: ...
     # Windows.Security.DataProtection.UserDataProtectionManager Windows.Security.DataProtection.UserDataProtectionManager::TryGetForUser(Windows.System.User)

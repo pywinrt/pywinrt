@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage as windows_storage
@@ -109,7 +108,7 @@ class LoggingOpcode(enum.IntEnum):
     SEND = 9
 
 @typing.final
-class AsyncCausalityTracer_Static(winrt._winrt.Object_Static):
+class AsyncCausalityTracer_Static(winrt.system.Object_Static):
     # System.Void Windows.Foundation.Diagnostics.AsyncCausalityTracer::TraceOperationCompletion(Windows.Foundation.Diagnostics.CausalityTraceLevel,Windows.Foundation.Diagnostics.CausalitySource,System.Guid,System.UInt64,Windows.Foundation.AsyncStatus)
     def trace_operation_completion(cls, trace_level: CausalityTraceLevel, source: CausalitySource, platform_id: _uuid.UUID, operation_id: winrt.system.UInt64 | typing.SupportsIndex, status: windows_foundation.AsyncStatus, /) -> None: ...
     # System.Void Windows.Foundation.Diagnostics.AsyncCausalityTracer::TraceOperationCreation(Windows.Foundation.Diagnostics.CausalityTraceLevel,Windows.Foundation.Diagnostics.CausalitySource,System.Guid,System.UInt64,System.String,System.UInt64)
@@ -131,7 +130,7 @@ class AsyncCausalityTracer(winrt.system.Object, metaclass=AsyncCausalityTracer_S
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ErrorDetails_Static(winrt._winrt.Object_Static):
+class ErrorDetails_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Diagnostics.ErrorDetails> Windows.Foundation.Diagnostics.ErrorDetails::CreateFromHResultAsync(System.Int32)
     def create_from_h_result_async(cls, error_code: winrt.system.Int32 | typing.SupportsIndex, /) -> windows_foundation.IAsyncOperation[ErrorDetails]: ...
 

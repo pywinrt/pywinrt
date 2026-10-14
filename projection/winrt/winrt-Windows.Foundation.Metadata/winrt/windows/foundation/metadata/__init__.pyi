@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -71,7 +70,7 @@ class ThreadingModel(enum.IntEnum):
     INVALID_THREADING = 0
 
 @typing.final
-class ApiInformation_Static(winrt._winrt.Object_Static):
+class ApiInformation_Static(winrt.system.Object_Static):
     @typing.overload
     # System.Boolean Windows.Foundation.Metadata.ApiInformation::IsApiContractPresent(System.String,System.UInt16)
     def is_api_contract_present(cls, contract_name: str, major_version: winrt.system.UInt16 | typing.SupportsIndex, /) -> bool: ...

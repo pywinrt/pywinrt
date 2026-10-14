@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.composition as microsoft_ui_composition
 import winrt.microsoft.ui.input as microsoft_ui_input
@@ -330,7 +329,7 @@ class AppBarToggleButtonTemplateSettings(microsoft_ui_xaml.DependencyObject):
     def keyboard_accelerator_text_min_width(self) -> winrt.system.Double: ...
 
 @typing.final
-class AutoSuggestBoxHelper_Static(winrt._winrt.Object_Static):
+class AutoSuggestBoxHelper_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.AutoSuggestBoxHelper::GetKeepInteriorCornersSquare(Microsoft.UI.Xaml.Controls.AutoSuggestBox)
     def get_keep_interior_corners_square(cls, auto_suggest_box: microsoft_ui_xaml_controls.AutoSuggestBox, /) -> bool: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.AutoSuggestBoxHelper::SetKeepInteriorCornersSquare(Microsoft.UI.Xaml.Controls.AutoSuggestBox,System.Boolean)
@@ -755,7 +754,7 @@ class ColumnMajorUniformToLargestGridLayout(microsoft_ui_xaml_controls.NonVirtua
     def column_spacing(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class ComboBoxHelper_Static(winrt._winrt.Object_Static):
+class ComboBoxHelper_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper::GetKeepInteriorCornersSquare(Microsoft.UI.Xaml.Controls.ComboBox)
     def get_keep_interior_corners_square(cls, combo_box: microsoft_ui_xaml_controls.ComboBox, /) -> bool: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.ComboBoxHelper::SetKeepInteriorCornersSquare(Microsoft.UI.Xaml.Controls.ComboBox,System.Boolean)
@@ -810,7 +809,7 @@ class CommandBarFlyoutCommandBar(microsoft_ui_xaml_controls.CommandBar, metaclas
     def system_backdrop(self, value: microsoft_ui_xaml_media.SystemBackdrop) -> None: ...
 
 @typing.final
-class CommandBarFlyoutCommandBarAutomationProperties_Static(winrt._winrt.Object_Static):
+class CommandBarFlyoutCommandBarAutomationProperties_Static(winrt.system.Object_Static):
     # Microsoft.UI.Xaml.Automation.Peers.AutomationControlType Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarAutomationProperties::GetControlType(Microsoft.UI.Xaml.UIElement)
     def get_control_type(cls, element: microsoft_ui_xaml.UIElement, /) -> microsoft_ui_xaml_automation_peers.AutomationControlType: ...
     # System.Void Microsoft.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarAutomationProperties::SetControlType(Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Automation.Peers.AutomationControlType)
@@ -1247,7 +1246,7 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class FlyoutShowOptions_Static(winrt._winrt.Object_Static):
+class FlyoutShowOptions_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> FlyoutShowOptions_Static: ...
 
 class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
@@ -1283,7 +1282,7 @@ class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static)
     def exclusion_rect(self, value: windows_foundation.Rect | None) -> None: ...
 
 @typing.final
-class GeneratorPositionHelper_Static(winrt._winrt.Object_Static):
+class GeneratorPositionHelper_Static(winrt.system.Object_Static):
     # Microsoft.UI.Xaml.Controls.Primitives.GeneratorPosition Microsoft.UI.Xaml.Controls.Primitives.GeneratorPositionHelper::FromIndexAndOffset(System.Int32,System.Int32)
     def from_index_and_offset(cls, index: winrt.system.Int32 | typing.SupportsIndex, offset: winrt.system.Int32 | typing.SupportsIndex, /) -> GeneratorPosition: ...
 
@@ -1678,7 +1677,7 @@ class JumpListItemForegroundConverter(microsoft_ui_xaml.DependencyObject, micros
     def disabled(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
-class LayoutInformation_Static(winrt._winrt.Object_Static):
+class LayoutInformation_Static(winrt.system.Object_Static):
     # Windows.Foundation.Size Microsoft.UI.Xaml.Controls.Primitives.LayoutInformation::GetAvailableSize(Microsoft.UI.Xaml.UIElement)
     def get_available_size(cls, element: microsoft_ui_xaml.UIElement, /) -> windows_foundation.Size: ...
     # Microsoft.UI.Xaml.UIElement Microsoft.UI.Xaml.Controls.Primitives.LayoutInformation::GetLayoutExceptionElement(System.Object)
@@ -3593,7 +3592,7 @@ class SelectorItem(microsoft_ui_xaml_controls.ContentControl, metaclass=Selector
     @typing.final
     def is_selected(self, value: bool) -> None: ...
 
-class SnapPointBase_Static(winrt._winrt.Object_Static):
+class SnapPointBase_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> SnapPointBase_Static: ...
 
 class SnapPointBase(winrt.system.Object, metaclass=SnapPointBase_Static):

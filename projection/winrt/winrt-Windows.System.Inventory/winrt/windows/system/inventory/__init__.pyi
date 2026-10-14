@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -14,7 +13,7 @@ __all__ = [
 ]
 
 @typing.final
-class InstalledDesktopApp_Static(winrt._winrt.Object_Static):
+class InstalledDesktopApp_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.System.Inventory.InstalledDesktopApp>> Windows.System.Inventory.InstalledDesktopApp::GetInventoryAsync()
     def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[InstalledDesktopApp]]: ...
 

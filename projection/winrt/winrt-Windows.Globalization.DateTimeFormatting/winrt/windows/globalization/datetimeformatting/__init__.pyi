@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -59,7 +58,7 @@ class YearFormat(enum.IntEnum):
     FULL = 3
 
 @typing.final
-class DateTimeFormatter_Static(winrt._winrt.Object_Static):
+class DateTimeFormatter_Static(winrt.system.Object_Static):
     # Windows.Globalization.DateTimeFormatting.DateTimeFormatter Windows.Globalization.DateTimeFormatting.DateTimeFormatter::get_LongDate()
     @_property
     def long_date(cls) -> DateTimeFormatter: ...

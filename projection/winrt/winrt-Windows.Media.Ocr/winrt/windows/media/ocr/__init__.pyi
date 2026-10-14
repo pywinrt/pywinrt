@@ -4,7 +4,6 @@ import collections.abc as _cabc
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -19,7 +18,7 @@ __all__ = [
 ]
 
 @typing.final
-class OcrEngine_Static(winrt._winrt.Object_Static):
+class OcrEngine_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Media.Ocr.OcrEngine::IsLanguageSupported(Windows.Globalization.Language)
     def is_language_supported(cls, language: windows_globalization.Language, /) -> bool: ...
     # Windows.Media.Ocr.OcrEngine Windows.Media.Ocr.OcrEngine::TryCreateFromLanguage(Windows.Globalization.Language)

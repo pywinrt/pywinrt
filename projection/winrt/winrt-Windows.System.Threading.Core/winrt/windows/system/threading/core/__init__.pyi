@@ -4,7 +4,6 @@ import datetime
 import typing
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.system.threading as windows_system_threading
@@ -27,7 +26,7 @@ class PreallocatedWorkItem(winrt.system.Object):
     def run_async(self) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
-class SignalNotifier_Static(winrt._winrt.Object_Static):
+class SignalNotifier_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.System.Threading.Core.SignalNotifier Windows.System.Threading.Core.SignalNotifier::AttachToEvent(System.String,Windows.System.Threading.Core.SignalHandler)
     def attach_to_event(cls, name: str, handler: SignalHandler, /) -> SignalNotifier: ...

@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.pwm.provider as windows_devices_pwm_provider
 import winrt.windows.foundation as windows_foundation
@@ -24,7 +23,7 @@ class PwmPulsePolarity(enum.IntEnum):
     ACTIVE_LOW = 1
 
 @typing.final
-class PwmController_Static(winrt._winrt.Object_Static):
+class PwmController_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Pwm.PwmController> Windows.Devices.Pwm.PwmController::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[PwmController]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Pwm.PwmController>> Windows.Devices.Pwm.PwmController::GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)

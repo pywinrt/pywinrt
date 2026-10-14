@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -507,7 +506,7 @@ class CoreIndependentInputSource(ICorePointerRedirector, ICorePointerInputSource
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
-class CoreIndependentInputSourceController_Static(winrt._winrt.Object_Static):
+class CoreIndependentInputSourceController_Static(winrt.system.Object_Static):
     # Windows.UI.Core.CoreIndependentInputSourceController Windows.UI.Core.CoreIndependentInputSourceController::CreateForIVisualElement(Windows.UI.Composition.IVisualElement)
     def create_for_ivisual_element(cls, visual_element: windows_ui_composition.IVisualElement, /) -> CoreIndependentInputSourceController: ...
     # Windows.UI.Core.CoreIndependentInputSourceController Windows.UI.Core.CoreIndependentInputSourceController::CreateForVisual(Windows.UI.Composition.Visual)
@@ -548,7 +547,7 @@ class CoreIndependentInputSourceController(windows_foundation.IClosable, winrt.s
     def source(self) -> CoreIndependentInputSource: ...
 
 @typing.final
-class CoreWindow_Static(winrt._winrt.Object_Static):
+class CoreWindow_Static(winrt.system.Object_Static):
     # Windows.UI.Core.CoreWindow Windows.UI.Core.CoreWindow::GetForCurrentThread()
     def get_for_current_thread(cls) -> CoreWindow: ...
 
@@ -828,7 +827,7 @@ class CoreWindowPopupShowingEventArgs(winrt.system.Object):
     def set_desired_size(self, value: windows_foundation.Size | tuple[winrt.system.Single, winrt.system.Single], /) -> None: ...
 
 @typing.final
-class CoreWindowResizeManager_Static(winrt._winrt.Object_Static):
+class CoreWindowResizeManager_Static(winrt.system.Object_Static):
     # Windows.UI.Core.CoreWindowResizeManager Windows.UI.Core.CoreWindowResizeManager::GetForCurrentView()
     def get_for_current_view(cls) -> CoreWindowResizeManager: ...
 
@@ -907,7 +906,7 @@ class PointerEventArgs(ICoreWindowEventArgs, winrt.system.Object):
     def key_modifiers(self) -> windows_system.VirtualKeyModifiers: ...
 
 @typing.final
-class SystemNavigationManager_Static(winrt._winrt.Object_Static):
+class SystemNavigationManager_Static(winrt.system.Object_Static):
     # Windows.UI.Core.SystemNavigationManager Windows.UI.Core.SystemNavigationManager::GetForCurrentView()
     def get_for_current_view(cls) -> SystemNavigationManager: ...
 

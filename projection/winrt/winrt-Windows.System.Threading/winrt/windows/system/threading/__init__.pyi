@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -30,7 +29,7 @@ class WorkItemPriority(enum.IntEnum):
     HIGH = 1
 
 @typing.final
-class ThreadPool_Static(winrt._winrt.Object_Static):
+class ThreadPool_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncAction Windows.System.Threading.ThreadPool::RunAsync(Windows.System.Threading.WorkItemHandler)
     def run_async(cls, handler: WorkItemHandler, /) -> windows_foundation.IAsyncAction: ...
@@ -55,7 +54,7 @@ class ThreadPool(winrt.system.Object, metaclass=ThreadPool_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ThreadPoolTimer_Static(winrt._winrt.Object_Static):
+class ThreadPoolTimer_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.System.Threading.ThreadPoolTimer Windows.System.Threading.ThreadPoolTimer::CreatePeriodicTimer(Windows.System.Threading.TimerElapsedHandler,Windows.Foundation.TimeSpan)
     def create_periodic_timer(cls, handler: TimerElapsedHandler, period: datetime.timedelta, /) -> ThreadPoolTimer: ...

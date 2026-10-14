@@ -3,7 +3,6 @@
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -29,7 +28,7 @@ class DecimalValue:
     def unpack(self) -> tuple[winrt.system.UInt16, winrt.system.UInt8, winrt.system.UInt8, winrt.system.UInt32, winrt.system.UInt64]: ...
 
 @typing.final
-class DecimalHelper_Static(winrt._winrt.Object_Static):
+class DecimalHelper_Static(winrt.system.Object_Static):
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::Abs(Microsoft.Windows.Foundation.DecimalValue)
     def abs(cls, value: DecimalValue | tuple[winrt.system.UInt16 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt32 | typing.SupportsIndex, winrt.system.UInt64 | typing.SupportsIndex], /) -> DecimalValue: ...
     # Microsoft.Windows.Foundation.DecimalValue Microsoft.Windows.Foundation.DecimalHelper::Add(Microsoft.Windows.Foundation.DecimalValue,Microsoft.Windows.Foundation.DecimalValue)

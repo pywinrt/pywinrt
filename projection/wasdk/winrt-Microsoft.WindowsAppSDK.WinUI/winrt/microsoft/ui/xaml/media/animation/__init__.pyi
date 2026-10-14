@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.composition as microsoft_ui_composition
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
@@ -435,7 +434,7 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: ConnectedAnimationConfiguration) -> None: ...
 
-class ConnectedAnimationConfiguration_Static(winrt._winrt.Object_Static):
+class ConnectedAnimationConfiguration_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ConnectedAnimationConfiguration_Static: ...
 
 class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAnimationConfiguration_Static):
@@ -444,7 +443,7 @@ class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAn
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class ConnectedAnimationService_Static(winrt._winrt.Object_Static):
+class ConnectedAnimationService_Static(winrt.system.Object_Static):
     # Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService Microsoft.UI.Xaml.Media.Animation.ConnectedAnimationService::GetForCurrentView()
     def get_for_current_view(cls) -> ConnectedAnimationService: ...
 
@@ -1093,7 +1092,7 @@ class KeySpline(microsoft_ui_xaml.DependencyObject):
     def control_point1(self, value: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class KeyTimeHelper_Static(winrt._winrt.Object_Static):
+class KeyTimeHelper_Static(winrt.system.Object_Static):
     # Microsoft.UI.Xaml.Media.Animation.KeyTime Microsoft.UI.Xaml.Media.Animation.KeyTimeHelper::FromTimeSpan(Windows.Foundation.TimeSpan)
     def from_time_span(cls, time_span: datetime.timedelta, /) -> KeyTime: ...
 
@@ -1535,7 +1534,7 @@ class ReorderThemeTransition(Transition):
     def __new__(cls) -> typing.Self: ...
 
 @typing.final
-class RepeatBehaviorHelper_Static(winrt._winrt.Object_Static):
+class RepeatBehaviorHelper_Static(winrt.system.Object_Static):
     # System.Boolean Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper::Equals(Microsoft.UI.Xaml.Media.Animation.RepeatBehavior,Microsoft.UI.Xaml.Media.Animation.RepeatBehavior)
     def equals(cls, target: RepeatBehavior | tuple[winrt.system.Double, datetime.timedelta, RepeatBehaviorType], value: RepeatBehavior | tuple[winrt.system.Double, datetime.timedelta, RepeatBehaviorType], /) -> bool: ...
     # Microsoft.UI.Xaml.Media.Animation.RepeatBehavior Microsoft.UI.Xaml.Media.Animation.RepeatBehaviorHelper::FromCount(System.Double)

@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.userdataaccounts as windows_applicationmodel_userdataaccounts
 import winrt.windows.foundation.collections as windows_foundation_collections

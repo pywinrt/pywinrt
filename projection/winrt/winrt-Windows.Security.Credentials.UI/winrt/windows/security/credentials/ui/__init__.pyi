@@ -5,7 +5,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage.streams as windows_storage_streams
@@ -52,7 +51,7 @@ class UserConsentVerifierAvailability(enum.IntEnum):
     DEVICE_BUSY = 4
 
 @typing.final
-class CredentialPicker_Static(winrt._winrt.Object_Static):
+class CredentialPicker_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.CredentialPickerResults> Windows.Security.Credentials.UI.CredentialPicker::PickAsync(Windows.Security.Credentials.UI.CredentialPickerOptions)
     def pick_async(cls, options: CredentialPickerOptions, /) -> windows_foundation.IAsyncOperation[CredentialPickerResults]: ...
@@ -171,7 +170,7 @@ class CredentialPickerResults(winrt.system.Object):
     def error_code(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class UserConsentVerifier_Static(winrt._winrt.Object_Static):
+class UserConsentVerifier_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.UserConsentVerifierAvailability> Windows.Security.Credentials.UI.UserConsentVerifier::CheckAvailabilityAsync()
     def check_availability_async(cls) -> windows_foundation.IAsyncOperation[UserConsentVerifierAvailability]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Credentials.UI.UserConsentVerificationResult> Windows.Security.Credentials.UI.UserConsentVerifier::RequestVerificationAsync(System.String)

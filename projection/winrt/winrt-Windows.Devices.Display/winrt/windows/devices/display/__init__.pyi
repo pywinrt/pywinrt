@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics as windows_graphics
@@ -43,7 +42,7 @@ class DisplayMonitorUsageKind(enum.IntEnum):
     SPECIAL_PURPOSE = 2
 
 @typing.final
-class DisplayMonitor_Static(winrt._winrt.Object_Static):
+class DisplayMonitor_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Display.DisplayMonitor> Windows.Devices.Display.DisplayMonitor::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[DisplayMonitor]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Display.DisplayMonitor> Windows.Devices.Display.DisplayMonitor::FromInterfaceIdAsync(System.String)

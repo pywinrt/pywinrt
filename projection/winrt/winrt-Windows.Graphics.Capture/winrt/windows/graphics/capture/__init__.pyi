@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -68,7 +67,7 @@ class Direct3D11CaptureFrame(windows_foundation.IClosable, winrt.system.Object):
     def configuration_iteration(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class Direct3D11CaptureFramePool_Static(winrt._winrt.Object_Static):
+class Direct3D11CaptureFramePool_Static(winrt.system.Object_Static):
     # Windows.Graphics.Capture.Direct3D11CaptureFramePool Windows.Graphics.Capture.Direct3D11CaptureFramePool::Create(Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice,Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,Windows.Graphics.SizeInt32)
     def create(cls, device: windows_graphics_directx_direct3d11.IDirect3DDevice, pixel_format: windows_graphics_directx.DirectXPixelFormat, number_of_buffers: winrt.system.Int32 | typing.SupportsIndex, size: windows_graphics.SizeInt32 | tuple[winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex], /) -> Direct3D11CaptureFramePool: ...
     # Windows.Graphics.Capture.Direct3D11CaptureFramePool Windows.Graphics.Capture.Direct3D11CaptureFramePool::CreateFreeThreaded(Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice,Windows.Graphics.DirectX.DirectXPixelFormat,System.Int32,Windows.Graphics.SizeInt32)
@@ -97,7 +96,7 @@ class Direct3D11CaptureFramePool(windows_foundation.IClosable, winrt.system.Obje
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
 @typing.final
-class GraphicsCaptureAccess_Static(winrt._winrt.Object_Static):
+class GraphicsCaptureAccess_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.Authorization.AppCapabilityAccess.AppCapabilityAccessStatus> Windows.Graphics.Capture.GraphicsCaptureAccess::RequestAccessAsync(Windows.Graphics.Capture.GraphicsCaptureAccessKind)
     def request_access_async(cls, request: GraphicsCaptureAccessKind, /) -> windows_foundation.IAsyncOperation[windows_security_authorization_appcapabilityaccess.AppCapabilityAccessStatus]: ...
 
@@ -107,7 +106,7 @@ class GraphicsCaptureAccess(winrt.system.Object, metaclass=GraphicsCaptureAccess
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class GraphicsCaptureItem_Static(winrt._winrt.Object_Static):
+class GraphicsCaptureItem_Static(winrt.system.Object_Static):
     # Windows.Graphics.Capture.GraphicsCaptureItem Windows.Graphics.Capture.GraphicsCaptureItem::CreateFromVisual(Windows.UI.Composition.Visual)
     def create_from_visual(cls, visual: windows_ui_composition.Visual, /) -> GraphicsCaptureItem: ...
     # Windows.Graphics.Capture.GraphicsCaptureItem Windows.Graphics.Capture.GraphicsCaptureItem::TryCreateFromDisplayId(Windows.Graphics.DisplayId)
@@ -137,7 +136,7 @@ class GraphicsCapturePicker(winrt.system.Object):
     def pick_single_item_async(self) -> windows_foundation.IAsyncOperation[GraphicsCaptureItem]: ...
 
 @typing.final
-class GraphicsCaptureSession_Static(winrt._winrt.Object_Static):
+class GraphicsCaptureSession_Static(winrt.system.Object_Static):
     # System.Boolean Windows.Graphics.Capture.GraphicsCaptureSession::IsSupported()
     def is_supported(cls) -> bool: ...
 

@@ -2,7 +2,6 @@
 
 import enum
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [

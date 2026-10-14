@@ -8,7 +8,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -49,7 +48,7 @@ class ProductType(enum.IntEnum):
     CONSUMABLE = 2
 
 @typing.final
-class CurrentApp_Static(winrt._winrt.Object_Static):
+class CurrentApp_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentApp::GetAppReceiptAsync()
@@ -108,7 +107,7 @@ class CurrentApp(winrt.system.Object, metaclass=CurrentApp_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class CurrentAppSimulator_Static(winrt._winrt.Object_Static):
+class CurrentAppSimulator_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppPurchaseCampaignIdAsync()
     def get_app_purchase_campaign_id_async(cls) -> windows_foundation.IAsyncOperation[str]: ...
     # Windows.Foundation.IAsyncOperation`1<System.String> Windows.ApplicationModel.Store.CurrentAppSimulator::GetAppReceiptAsync()

@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.web.webview2.core as microsoft_web_webview2_core
 import winrt.windows.applicationmodel.contacts as windows_applicationmodel_contacts
@@ -1475,7 +1474,7 @@ class InfoBar(windows_ui_xaml_controls.Control, metaclass=InfoBar_Static):
     @typing.final
     def template_settings(self) -> InfoBarTemplateSettings: ...
 
-class InfoBarClosedEventArgs_Static(winrt._winrt.Object_Static):
+class InfoBarClosedEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> InfoBarClosedEventArgs_Static: ...
 
 class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventArgs_Static):
@@ -1487,7 +1486,7 @@ class InfoBarClosedEventArgs(winrt.system.Object, metaclass=InfoBarClosedEventAr
     @typing.final
     def reason(self) -> InfoBarCloseReason: ...
 
-class InfoBarClosingEventArgs_Static(winrt._winrt.Object_Static):
+class InfoBarClosingEventArgs_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> InfoBarClosingEventArgs_Static: ...
 
 class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEventArgs_Static):
@@ -1682,7 +1681,7 @@ class ItemsRepeaterScrollHost(windows_ui_xaml.FrameworkElement):
     @_property
     def current_anchor(self) -> windows_ui_xaml.UIElement: ...
 
-class ItemsSourceView_Static(winrt._winrt.Object_Static):
+class ItemsSourceView_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> ItemsSourceView_Static: ...
 
 class ItemsSourceView(windows_ui_xaml_interop.INotifyCollectionChanged, winrt.system.Object, metaclass=ItemsSourceView_Static):

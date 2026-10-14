@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -132,7 +131,7 @@ class MidiControlChangeMessage(IMidiMessage, winrt.system.Object):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiInPort_Static(winrt._winrt.Object_Static):
+class MidiInPort_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiInPort> Windows.Devices.Midi.MidiInPort::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[MidiInPort]: ...
     # System.String Windows.Devices.Midi.MidiInPort::GetDeviceSelector()
@@ -207,7 +206,7 @@ class MidiNoteOnMessage(IMidiMessage, winrt.system.Object):
     def velocity(self) -> winrt.system.UInt8: ...
 
 @typing.final
-class MidiOutPort_Static(winrt._winrt.Object_Static):
+class MidiOutPort_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.IMidiOutPort> Windows.Devices.Midi.MidiOutPort::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[IMidiOutPort]: ...
     # System.String Windows.Devices.Midi.MidiOutPort::GetDeviceSelector()
@@ -348,7 +347,7 @@ class MidiStopMessage(IMidiMessage, winrt.system.Object):
     def type(self) -> MidiMessageType: ...
 
 @typing.final
-class MidiSynthesizer_Static(winrt._winrt.Object_Static):
+class MidiSynthesizer_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Midi.MidiSynthesizer> Windows.Devices.Midi.MidiSynthesizer::CreateAsync()
     def create_async(cls) -> windows_foundation.IAsyncOperation[MidiSynthesizer]: ...

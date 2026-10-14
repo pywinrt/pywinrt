@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -95,7 +94,7 @@ class CastingConnectionErrorOccurredEventArgs(winrt.system.Object):
     def message(self) -> str: ...
 
 @typing.final
-class CastingDevice_Static(winrt._winrt.Object_Static):
+class CastingDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.Casting.CastingDevice::DeviceInfoSupportsCastingAsync(Windows.Devices.Enumeration.DeviceInformation)
     def device_info_supports_casting_async(cls, device: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Casting.CastingDevice> Windows.Media.Casting.CastingDevice::FromIdAsync(System.String)

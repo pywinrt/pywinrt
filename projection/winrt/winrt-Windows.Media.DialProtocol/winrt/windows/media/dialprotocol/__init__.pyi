@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.enumeration as windows_devices_enumeration
 import winrt.windows.foundation as windows_foundation
@@ -81,7 +80,7 @@ class DialAppStateDetails(winrt.system.Object):
     def state(self) -> DialAppState: ...
 
 @typing.final
-class DialDevice_Static(winrt._winrt.Object_Static):
+class DialDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.DialProtocol.DialDevice::DeviceInfoSupportsDialAsync(Windows.Devices.Enumeration.DeviceInformation)
     def device_info_supports_dial_async(cls, device: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.DialProtocol.DialDevice> Windows.Media.DialProtocol.DialDevice::FromIdAsync(System.String)
@@ -176,7 +175,7 @@ class DialDisconnectButtonClickedEventArgs(winrt.system.Object):
     def device(self) -> DialDevice: ...
 
 @typing.final
-class DialReceiverApp_Static(winrt._winrt.Object_Static):
+class DialReceiverApp_Static(winrt.system.Object_Static):
     # Windows.Media.DialProtocol.DialReceiverApp Windows.Media.DialProtocol.DialReceiverApp::get_Current()
     @_property
     def current(cls) -> DialReceiverApp: ...

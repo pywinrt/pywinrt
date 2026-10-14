@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -117,7 +116,7 @@ class PenTipShape(enum.IntEnum):
     RECTANGLE = 1
 
 @typing.final
-class InkDrawingAttributes_Static(winrt._winrt.Object_Static):
+class InkDrawingAttributes_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Inking.InkDrawingAttributes Windows.UI.Input.Inking.InkDrawingAttributes::CreateForPencil()
     def create_for_pencil(cls) -> InkDrawingAttributes: ...
 
@@ -786,7 +785,7 @@ class InkUnprocessedInput(winrt.system.Object):
     def ink_presenter(self) -> InkPresenter: ...
 
 @typing.final
-class PenAndInkSettings_Static(winrt._winrt.Object_Static):
+class PenAndInkSettings_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Inking.PenAndInkSettings Windows.UI.Input.Inking.PenAndInkSettings::GetDefault()
     def get_default(cls) -> PenAndInkSettings: ...
 

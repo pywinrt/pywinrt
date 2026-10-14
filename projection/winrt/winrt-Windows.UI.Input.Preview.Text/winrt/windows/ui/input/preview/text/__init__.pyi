@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.system as windows_system
@@ -490,7 +489,7 @@ class TextInputProvider(winrt.system.Object):
     def selection_bounds(self) -> windows_foundation.Rect | None: ...
 
 @typing.final
-class TextInputService_Static(winrt._winrt.Object_Static):
+class TextInputService_Static(winrt.system.Object_Static):
     # Windows.UI.Input.Preview.Text.TextInputService Windows.UI.Input.Preview.Text.TextInputService::GetForCurrentThread()
     def get_for_current_thread(cls) -> TextInputService: ...
 

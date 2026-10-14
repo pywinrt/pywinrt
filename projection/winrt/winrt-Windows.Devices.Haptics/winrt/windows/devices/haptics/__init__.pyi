@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -45,7 +44,7 @@ class HapticsControllerOverrideToken:
     def __replace__(self, /, **changes: typing.Any) -> HapticsControllerOverrideToken: ...
 
 @typing.final
-class InputHapticsManager_Static(winrt._winrt.Object_Static):
+class InputHapticsManager_Static(winrt.system.Object_Static):
     # Windows.Devices.Haptics.InputHapticsManager Windows.Devices.Haptics.InputHapticsManager::GetForCurrentThread()
     def get_for_current_thread(cls) -> InputHapticsManager: ...
     # System.Boolean Windows.Devices.Haptics.InputHapticsManager::IsHapticDevicePresent()
@@ -90,7 +89,7 @@ class InputHapticsManager(winrt.system.Object, metaclass=InputHapticsManager_Sta
     def thread_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class KnownSimpleHapticsControllerWaveforms_Static(winrt._winrt.Object_Static):
+class KnownSimpleHapticsControllerWaveforms_Static(winrt.system.Object_Static):
     # System.UInt16 Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms::get_BuzzContinuous()
     @_property
     def buzz_continuous(cls) -> winrt.system.UInt16: ...
@@ -205,7 +204,7 @@ class SimpleHapticsControllerFeedback(winrt.system.Object):
     def waveform(self) -> winrt.system.UInt16: ...
 
 @typing.final
-class VibrationDevice_Static(winrt._winrt.Object_Static):
+class VibrationDevice_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>> Windows.Devices.Haptics.VibrationDevice::FindAllAsync()
     def find_all_async(cls) -> windows_foundation.IAsyncOperation[_cabc.Sequence[VibrationDevice]]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationDevice> Windows.Devices.Haptics.VibrationDevice::FromIdAsync(System.String)

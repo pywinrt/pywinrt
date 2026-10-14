@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -1029,7 +1028,7 @@ class TextElement(windows_ui_xaml.DependencyObject, metaclass=TextElement_Static
     @typing.final
     def xaml_root(self, value: windows_ui_xaml.XamlRoot) -> None: ...
 
-class TextHighlighter_Static(winrt._winrt.Object_Static):
+class TextHighlighter_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> TextHighlighter_Static: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.TextHighlighter::get_BackgroundProperty()
     @_property
@@ -1091,7 +1090,7 @@ class TextPointer(winrt.system.Object):
     def visual_parent(self) -> windows_ui_xaml.FrameworkElement: ...
 
 @typing.final
-class Typography_Static(winrt._winrt.Object_Static):
+class Typography_Static(winrt.system.Object_Static):
     # System.Int32 Windows.UI.Xaml.Documents.Typography::GetAnnotationAlternates(Windows.UI.Xaml.DependencyObject)
     def get_annotation_alternates(cls, element: windows_ui_xaml.DependencyObject, /) -> winrt.system.Int32: ...
     # System.Boolean Windows.UI.Xaml.Documents.Typography::GetCapitalSpacing(Windows.UI.Xaml.DependencyObject)

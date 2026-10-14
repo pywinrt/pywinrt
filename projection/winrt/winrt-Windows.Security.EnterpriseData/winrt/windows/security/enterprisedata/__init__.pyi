@@ -8,7 +8,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -121,7 +120,7 @@ class DataProtectionInfo(winrt.system.Object):
     def status(self) -> DataProtectionStatus: ...
 
 @typing.final
-class DataProtectionManager_Static(winrt._winrt.Object_Static):
+class DataProtectionManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.EnterpriseData.DataProtectionInfo> Windows.Security.EnterpriseData.DataProtectionManager::GetProtectionInfoAsync(Windows.Storage.Streams.IBuffer)
     def get_protection_info_async(cls, protected_data: winrt.system.ReadableBuffer, /) -> windows_foundation.IAsyncOperation[DataProtectionInfo]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.EnterpriseData.DataProtectionInfo> Windows.Security.EnterpriseData.DataProtectionManager::GetStreamProtectionInfoAsync(Windows.Storage.Streams.IInputStream)
@@ -158,7 +157,7 @@ class FileProtectionInfo(winrt.system.Object):
     def is_protect_while_open_supported(self) -> bool: ...
 
 @typing.final
-class FileProtectionManager_Static(winrt._winrt.Object_Static):
+class FileProtectionManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.EnterpriseData.FileProtectionManager::CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)
     def copy_protection_async(cls, source: windows_storage.IStorageItem, target: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Security.EnterpriseData.ProtectedFileCreateResult> Windows.Security.EnterpriseData.FileProtectionManager::CreateProtectedAndOpenAsync(Windows.Storage.IStorageFolder,System.String,System.String,Windows.Storage.CreationCollisionOption)
@@ -213,7 +212,7 @@ class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class FileRevocationManager_Static(winrt._winrt.Object_Static):
+class FileRevocationManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Security.EnterpriseData.FileRevocationManager::CopyProtectionAsync(Windows.Storage.IStorageItem,Windows.Storage.IStorageItem)
     @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def copy_protection_async(cls, source_storage_item: windows_storage.IStorageItem, target_storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -340,7 +339,7 @@ class ProtectionPolicyAuditInfo(winrt.system.Object):
     def action(self, value: ProtectionPolicyAuditAction) -> None: ...
 
 @typing.final
-class ProtectionPolicyManager_Static(winrt._winrt.Object_Static):
+class ProtectionPolicyManager_Static(winrt.system.Object_Static):
     # Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult Windows.Security.EnterpriseData.ProtectionPolicyManager::CheckAccess(System.String,System.String)
     def check_access(cls, source_identity: str, target_identity: str, /) -> ProtectionPolicyEvaluationResult: ...
     # Windows.Security.EnterpriseData.ProtectionPolicyEvaluationResult Windows.Security.EnterpriseData.ProtectionPolicyManager::CheckAccessForApp(System.String,System.String)

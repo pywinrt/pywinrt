@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 
@@ -43,7 +42,7 @@ class StartupAppInfoPreview(winrt.system.Object):
     def publisher(self) -> str: ...
 
 @typing.final
-class StartupAppsManagerPreview_Static(winrt._winrt.Object_Static):
+class StartupAppsManagerPreview_Static(winrt.system.Object_Static):
     # Windows.ApplicationModel.Preview.StartupAppsManagerPreview Windows.ApplicationModel.Preview.StartupAppsManagerPreview::GetDefault()
     def get_default(cls) -> StartupAppsManagerPreview: ...
 

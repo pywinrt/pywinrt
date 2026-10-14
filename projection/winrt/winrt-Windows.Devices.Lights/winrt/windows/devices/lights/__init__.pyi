@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.numerics as windows_foundation_numerics
@@ -49,7 +48,7 @@ class LampPurposes(enum.IntFlag):
     PRESENTATION = 0x20
 
 @typing.final
-class Lamp_Static(winrt._winrt.Object_Static):
+class Lamp_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.Lamp> Windows.Devices.Lights.Lamp::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Lamp]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.Lamp> Windows.Devices.Lights.Lamp::GetDefaultAsync()
@@ -95,7 +94,7 @@ class Lamp(windows_foundation.IClosable, winrt.system.Object, metaclass=Lamp_Sta
     def is_color_settable(self) -> bool: ...
 
 @typing.final
-class LampArray_Static(winrt._winrt.Object_Static):
+class LampArray_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Lights.LampArray> Windows.Devices.Lights.LampArray::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[LampArray]: ...
     # System.String Windows.Devices.Lights.LampArray::GetDeviceSelector()

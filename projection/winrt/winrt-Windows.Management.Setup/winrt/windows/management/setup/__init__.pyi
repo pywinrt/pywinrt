@@ -7,7 +7,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -223,7 +222,7 @@ class DevicePreparationExecutionContext(winrt.system.Object):
     def context(self) -> str: ...
 
 @typing.final
-class MachineProvisioningProgressReporter_Static(winrt._winrt.Object_Static):
+class MachineProvisioningProgressReporter_Static(winrt.system.Object_Static):
     # Windows.Management.Setup.MachineProvisioningProgressReporter Windows.Management.Setup.MachineProvisioningProgressReporter::GetForLaunchUri(Windows.Foundation.Uri,Windows.Management.Setup.DeploymentSessionHeartbeatRequested)
     def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, heartbeat_handler: DeploymentSessionHeartbeatRequested, /) -> MachineProvisioningProgressReporter: ...
 

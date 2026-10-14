@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
 import winrt.windows.foundation as windows_foundation
@@ -36,7 +35,7 @@ class GameChatOverlayPosition(enum.IntEnum):
     TOP_RIGHT = 7
 
 @typing.final
-class GameBar_Static(winrt._winrt.Object_Static):
+class GameBar_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Gaming.UI.GameBar::add_IsInputRedirectedChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_is_input_redirected_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Gaming.UI.GameBar::remove_IsInputRedirectedChanged(Windows.Foundation.EventRegistrationToken)
@@ -78,7 +77,7 @@ class GameChatMessageReceivedEventArgs(winrt.system.Object):
     def sender_name(self) -> str: ...
 
 @typing.final
-class GameChatOverlay_Static(winrt._winrt.Object_Static):
+class GameChatOverlay_Static(winrt.system.Object_Static):
     # Windows.Gaming.UI.GameChatOverlay Windows.Gaming.UI.GameChatOverlay::GetDefault()
     def get_default(cls) -> GameChatOverlay: ...
 

@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -352,7 +351,7 @@ class SpeechRecognitionVoiceCommandDefinitionConstraint(ISpeechRecognitionConstr
     def type(self) -> SpeechRecognitionConstraintType: ...
 
 @typing.final
-class SpeechRecognizer_Static(winrt._winrt.Object_Static):
+class SpeechRecognizer_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SpeechRecognition.SpeechRecognizer::TrySetSystemSpeechLanguageAsync(Windows.Globalization.Language)
     def try_set_system_speech_language_async(cls, speech_language: windows_globalization.Language, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Globalization.Language> Windows.Media.SpeechRecognition.SpeechRecognizer::get_SupportedGrammarLanguages()

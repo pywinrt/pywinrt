@@ -6,7 +6,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -98,7 +97,7 @@ class GlobalSystemMediaTransportControlsSession(winrt.system.Object):
     def source_app_user_model_id(self) -> str: ...
 
 @typing.final
-class GlobalSystemMediaTransportControlsSessionManager_Static(winrt._winrt.Object_Static):
+class GlobalSystemMediaTransportControlsSessionManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager> Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager::RequestAsync()
     def request_async(cls) -> windows_foundation.IAsyncOperation[GlobalSystemMediaTransportControlsSessionManager]: ...
 

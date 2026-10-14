@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -39,7 +38,7 @@ class OfflineMapPackageStatus(enum.IntEnum):
     DELETING = 3
 
 @typing.final
-class OfflineMapPackage_Static(winrt._winrt.Object_Static):
+class OfflineMapPackage_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesAsync(Windows.Devices.Geolocation.Geopoint)
     def find_packages_async(cls, query_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[OfflineMapPackageQueryResult]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult> Windows.Services.Maps.OfflineMaps.OfflineMapPackage::FindPackagesInBoundingBoxAsync(Windows.Devices.Geolocation.GeoboundingBox)

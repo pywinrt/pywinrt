@@ -8,7 +8,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -139,7 +138,7 @@ class KeyCredentialCacheConfiguration(winrt.system.Object):
     def usage_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class KeyCredentialManager_Static(winrt._winrt.Object_Static):
+class KeyCredentialManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncAction Windows.Security.Credentials.KeyCredentialManager::DeleteAsync(System.String)
     def delete_async(cls, name: str, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Storage.Streams.IBuffer Windows.Security.Credentials.KeyCredentialManager::GetSecureId()

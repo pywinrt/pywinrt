@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -559,7 +558,7 @@ class CompositionBrush(CompositionObject, metaclass=CompositionBrush_Static):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
-class CompositionCapabilities_Static(winrt._winrt.Object_Static):
+class CompositionCapabilities_Static(winrt.system.Object_Static):
     # Windows.UI.Composition.CompositionCapabilities Windows.UI.Composition.CompositionCapabilities::GetForCurrentView()
     def get_for_current_view(cls) -> CompositionCapabilities: ...
 
@@ -1184,7 +1183,7 @@ class CompositionNineGridBrush(CompositionBrush):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
-class CompositionObject_Static(winrt._winrt.Object_Static):
+class CompositionObject_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> CompositionObject_Static: ...
     # System.Void Windows.UI.Composition.CompositionObject::StartAnimationGroupWithIAnimationObject(Windows.UI.Composition.IAnimationObject,Windows.UI.Composition.ICompositionAnimationBase)
     def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
@@ -1930,7 +1929,7 @@ class CompositionVisualSurface(CompositionObject, ICompositionSurface):
     def source_offset(self, value: windows_foundation_numerics.Vector2 | tuple[winrt.system.Single, winrt.system.Single]) -> None: ...
 
 @typing.final
-class Compositor_Static(winrt._winrt.Object_Static):
+class Compositor_Static(winrt.system.Object_Static):
     # System.Single Windows.UI.Composition.Compositor::get_MaxGlobalPlaybackRate()
     @_property
     def max_global_playback_rate(cls) -> winrt.system.Single: ...

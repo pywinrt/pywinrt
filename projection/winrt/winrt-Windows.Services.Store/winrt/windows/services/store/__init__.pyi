@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.foundation as windows_foundation
@@ -296,7 +295,7 @@ class StoreConsumableResult(winrt.system.Object):
     def tracking_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class StoreContext_Static(winrt._winrt.Object_Static):
+class StoreContext_Static(winrt.system.Object_Static):
     # Windows.Services.Store.StoreContext Windows.Services.Store.StoreContext::GetDefault()
     def get_default(cls) -> StoreContext: ...
     # Windows.Services.Store.StoreContext Windows.Services.Store.StoreContext::GetForUser(Windows.System.User)
@@ -747,7 +746,7 @@ class StoreRateAndReviewResult(winrt.system.Object):
     def was_updated(self) -> bool: ...
 
 @typing.final
-class StoreRequestHelper_Static(winrt._winrt.Object_Static):
+class StoreRequestHelper_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Store.StoreSendRequestResult> Windows.Services.Store.StoreRequestHelper::SendRequestAsync(Windows.Services.Store.StoreContext,System.UInt32,System.String)
     def send_request_async(cls, context: StoreContext, request_kind: winrt.system.UInt32 | typing.SupportsIndex, parameters_as_json: str, /) -> windows_foundation.IAsyncOperation[StoreSendRequestResult]: ...
 

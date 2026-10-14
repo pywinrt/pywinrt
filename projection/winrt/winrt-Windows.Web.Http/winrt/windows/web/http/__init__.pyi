@@ -9,7 +9,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -451,7 +450,7 @@ class HttpGetStringResult(windows_foundation.IStringable, windows_foundation.ICl
     def value(self) -> str: ...
 
 @typing.final
-class HttpMethod_Static(winrt._winrt.Object_Static):
+class HttpMethod_Static(winrt.system.Object_Static):
     # Windows.Web.Http.HttpMethod Windows.Web.Http.HttpMethod::get_Delete()
     @_property
     def delete(cls) -> HttpMethod: ...

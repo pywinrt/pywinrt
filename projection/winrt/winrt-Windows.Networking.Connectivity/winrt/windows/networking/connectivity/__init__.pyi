@@ -9,7 +9,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -432,7 +431,7 @@ class ConnectivityInterval(winrt.system.Object):
     def start_time(self) -> datetime.datetime: ...
 
 @typing.final
-class ConnectivityManager_Static(winrt._winrt.Object_Static):
+class ConnectivityManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Connectivity.ConnectionSession> Windows.Networking.Connectivity.ConnectivityManager::AcquireConnectionAsync(Windows.Networking.Connectivity.CellularApnContext)
     def acquire_connection_async(cls, cellular_apn_context: CellularApnContext, /) -> windows_foundation.IAsyncOperation[ConnectionSession]: ...
     # System.Void Windows.Networking.Connectivity.ConnectivityManager::AddHttpRoutePolicy(Windows.Networking.Connectivity.RoutePolicy)
@@ -552,7 +551,7 @@ class NetworkAdapter(winrt.system.Object):
     def outbound_max_bits_per_second(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class NetworkInformation_Static(winrt._winrt.Object_Static):
+class NetworkInformation_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Connectivity.ConnectionProfile>> Windows.Networking.Connectivity.NetworkInformation::FindConnectionProfilesAsync(Windows.Networking.Connectivity.ConnectionProfileFilter)
     def find_connection_profiles_async(cls, p_profile_filter: ConnectionProfileFilter, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[ConnectionProfile]]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Connectivity.ConnectionProfile> Windows.Networking.Connectivity.NetworkInformation::GetConnectionProfiles()

@@ -4,7 +4,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.adc.provider as windows_devices_adc_provider
 import winrt.windows.devices.gpio.provider as windows_devices_gpio_provider
@@ -38,7 +37,7 @@ class LowLevelDevicesAggregateProvider(ILowLevelDevicesAggregateProvider, winrt.
     def spi_controller_provider(self) -> windows_devices_spi_provider.ISpiControllerProvider: ...
 
 @typing.final
-class LowLevelDevicesController_Static(winrt._winrt.Object_Static):
+class LowLevelDevicesController_Static(winrt.system.Object_Static):
     # Windows.Devices.ILowLevelDevicesAggregateProvider Windows.Devices.LowLevelDevicesController::get_DefaultProvider()
     @_property
     def default_provider(cls) -> ILowLevelDevicesAggregateProvider: ...

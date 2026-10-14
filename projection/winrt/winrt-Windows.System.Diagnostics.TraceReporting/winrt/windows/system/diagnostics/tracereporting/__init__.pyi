@@ -6,7 +6,6 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation.collections as windows_foundation_collections
 
@@ -51,7 +50,7 @@ class PlatformDiagnosticTraceSlotType(enum.IntEnum):
     MINI = 2
 
 @typing.final
-class PlatformDiagnosticActions_Static(winrt._winrt.Object_Static):
+class PlatformDiagnosticActions_Static(winrt.system.Object_Static):
     # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::DownloadLatestSettingsForNamespace(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
     def download_latest_settings_for_namespace(cls, partner: str, feature: str, is_scenario_namespace: bool, download_over_costed_network: bool, download_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
     # Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions::ForceUpload(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticEventBufferLatencies,System.Boolean,System.Boolean)

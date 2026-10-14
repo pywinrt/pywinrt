@@ -6,7 +6,6 @@ import types
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -84,7 +83,7 @@ class SpeechSynthesisStream(windows_media_core.ITimedMetadataTrackProvider, wind
     def position(self) -> winrt.system.UInt64: ...
 
 @typing.final
-class SpeechSynthesizer_Static(winrt._winrt.Object_Static):
+class SpeechSynthesizer_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.Media.SpeechSynthesis.SpeechSynthesizer::TrySetDefaultVoiceAsync(Windows.Media.SpeechSynthesis.VoiceInformation)
     def try_set_default_voice_async(cls, voice: VoiceInformation, /) -> windows_foundation.IAsyncOperation[bool]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Media.SpeechSynthesis.VoiceInformation> Windows.Media.SpeechSynthesis.SpeechSynthesizer::get_AllVoices()

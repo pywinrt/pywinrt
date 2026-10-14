@@ -5,7 +5,6 @@ import uuid as _uuid
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.storage as windows_storage
@@ -61,7 +60,7 @@ class PhoneCallOrigin(winrt.system.Object):
     def display_picture(self, value: windows_storage.StorageFile) -> None: ...
 
 @typing.final
-class PhoneCallOriginManager_Static(winrt._winrt.Object_Static):
+class PhoneCallOriginManager_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<System.Boolean> Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager::RequestSetAsActiveCallOriginAppAsync()
     @deprecated("PhoneCallOriginManager is deprecated and might not work for all platforms. For more info, see MSDN.")
     def request_set_as_active_call_origin_app_async(cls) -> windows_foundation.IAsyncOperation[bool]: ...

@@ -4,7 +4,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 
 __all__ = [
@@ -13,7 +12,7 @@ __all__ = [
 ]
 
 @typing.final
-class BackgroundEnergyDiagnostics_Static(winrt._winrt.Object_Static):
+class BackgroundEnergyDiagnostics_Static(winrt.system.Object_Static):
     # System.UInt64 Windows.System.Power.Diagnostics.BackgroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
@@ -32,7 +31,7 @@ class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnerg
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ForegroundEnergyDiagnostics_Static(winrt._winrt.Object_Static):
+class ForegroundEnergyDiagnostics_Static(winrt.system.Object_Static):
     # System.UInt64 Windows.System.Power.Diagnostics.ForegroundEnergyDiagnostics::ComputeTotalEnergyUsage()
     @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...

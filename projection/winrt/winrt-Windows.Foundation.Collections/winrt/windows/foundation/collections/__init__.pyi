@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from abc import abstractmethod
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -241,7 +240,7 @@ class IObservableVector[T](IVector[T], winrt.system.Object):
     @abstractmethod
     def remove_vector_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object, metaclass=winrt._winrt.Object_Static):
+class IPropertySet(IObservableMap[str, winrt.system.Object], IMap[str, winrt.system.Object], IIterable[IKeyValuePair[str, winrt.system.Object]], winrt.system.Object, metaclass=winrt.system.Object_Static):
     ...
 
 class IVectorChangedEventArgs(winrt.system.Object):

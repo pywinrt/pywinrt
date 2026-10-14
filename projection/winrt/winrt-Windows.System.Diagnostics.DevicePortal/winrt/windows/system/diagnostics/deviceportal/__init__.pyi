@@ -6,7 +6,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel.appservice as windows_applicationmodel_appservice
 import winrt.windows.foundation as windows_foundation
@@ -30,7 +29,7 @@ class DevicePortalConnectionClosedReason(enum.IntEnum):
     SERVICE_TERMINATED = 5
 
 @typing.final
-class DevicePortalConnection_Static(winrt._winrt.Object_Static):
+class DevicePortalConnection_Static(winrt.system.Object_Static):
     # Windows.System.Diagnostics.DevicePortal.DevicePortalConnection Windows.System.Diagnostics.DevicePortal.DevicePortalConnection::GetForAppServiceConnection(Windows.ApplicationModel.AppService.AppServiceConnection)
     def get_for_app_service_connection(cls, app_service_connection: windows_applicationmodel_appservice.AppServiceConnection, /) -> DevicePortalConnection: ...
 

@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 
@@ -86,7 +85,7 @@ class Print3DWorkflowPrinterChangedEventArgs(winrt.system.Object):
     def new_device_id(self) -> str: ...
 
 @typing.final
-class PrintExtensionContext_Static(winrt._winrt.Object_Static):
+class PrintExtensionContext_Static(winrt.system.Object_Static):
     # System.Object Windows.Devices.Printers.Extensions.PrintExtensionContext::FromDeviceId(System.String)
     def from_device_id(cls, device_id: str, /) -> winrt.system.Object: ...
 

@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -64,7 +63,7 @@ class UnsupportedAppRequirementReasons(enum.IntFlag):
     DENIED_BY_SYSTEM = 0x1
 
 @typing.final
-class AnalyticsInfo_Static(winrt._winrt.Object_Static):
+class AnalyticsInfo_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IMapView`2<System.String,System.String>> Windows.System.Profile.AnalyticsInfo::GetSystemPropertiesAsync(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_system_properties_async(cls, attribute_names: _cabc.Iterable[str], /) -> windows_foundation.IAsyncOperation[_cabc.Mapping[str, str]]: ...
     # System.String Windows.System.Profile.AnalyticsInfo::get_DeviceForm()
@@ -94,7 +93,7 @@ class AnalyticsVersionInfo(winrt.system.Object):
     def product_name(self) -> str: ...
 
 @typing.final
-class AppApplicability_Static(winrt._winrt.Object_Static):
+class AppApplicability_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<Windows.System.Profile.UnsupportedAppRequirement> Windows.System.Profile.AppApplicability::GetUnsupportedAppRequirements(Windows.Foundation.Collections.IIterable`1<System.String>)
     def get_unsupported_app_requirements(cls, capabilities: _cabc.Iterable[str], /) -> _cabc.Sequence[UnsupportedAppRequirement]: ...
 
@@ -104,7 +103,7 @@ class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class EducationSettings_Static(winrt._winrt.Object_Static):
+class EducationSettings_Static(winrt.system.Object_Static):
     # System.Boolean Windows.System.Profile.EducationSettings::get_IsEducationEnvironment()
     @_property
     def is_education_environment(cls) -> bool: ...
@@ -115,7 +114,7 @@ class EducationSettings(winrt.system.Object, metaclass=EducationSettings_Static)
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class HardwareIdentification_Static(winrt._winrt.Object_Static):
+class HardwareIdentification_Static(winrt.system.Object_Static):
     # Windows.System.Profile.HardwareToken Windows.System.Profile.HardwareIdentification::GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)
     def get_package_specific_token(cls, nonce: winrt.system.ReadableBuffer, /) -> HardwareToken: ...
 
@@ -139,7 +138,7 @@ class HardwareToken(winrt.system.Object):
     def signature(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
-class KnownRetailInfoProperties_Static(winrt._winrt.Object_Static):
+class KnownRetailInfoProperties_Static(winrt.system.Object_Static):
     # System.String Windows.System.Profile.KnownRetailInfoProperties::get_BatteryLifeDescription()
     @_property
     def battery_life_description(cls) -> str: ...
@@ -213,7 +212,7 @@ class KnownRetailInfoProperties(winrt.system.Object, metaclass=KnownRetailInfoPr
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class PlatformAutomaticAppSignInManager_Static(winrt._winrt.Object_Static):
+class PlatformAutomaticAppSignInManager_Static(winrt.system.Object_Static):
     # Windows.System.Profile.PlatformAutomaticAppSignInPolicy Windows.System.Profile.PlatformAutomaticAppSignInManager::get_Policy()
     @_property
     def policy(cls) -> PlatformAutomaticAppSignInPolicy: ...
@@ -224,7 +223,7 @@ class PlatformAutomaticAppSignInManager(winrt.system.Object, metaclass=PlatformA
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class PlatformDiagnosticsAndUsageDataSettings_Static(winrt._winrt.Object_Static):
+class PlatformDiagnosticsAndUsageDataSettings_Static(winrt.system.Object_Static):
     # System.Boolean Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings::CanCollectDiagnostics(Windows.System.Profile.PlatformDataCollectionLevel)
     def can_collect_diagnostics(cls, level: PlatformDataCollectionLevel, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.System.Profile.PlatformDiagnosticsAndUsageDataSettings::add_CollectionLevelChanged(Windows.Foundation.EventHandler`1<System.Object>)
@@ -241,7 +240,7 @@ class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object, metaclass=Pla
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class RetailInfo_Static(winrt._winrt.Object_Static):
+class RetailInfo_Static(winrt.system.Object_Static):
     # System.Boolean Windows.System.Profile.RetailInfo::get_IsDemoModeEnabled()
     @_property
     def is_demo_mode_enabled(cls) -> bool: ...
@@ -258,7 +257,7 @@ class RetailInfo(winrt.system.Object, metaclass=RetailInfo_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class SharedModeSettings_Static(winrt._winrt.Object_Static):
+class SharedModeSettings_Static(winrt.system.Object_Static):
     # System.Boolean Windows.System.Profile.SharedModeSettings::get_IsEnabled()
     @_property
     def is_enabled(cls) -> bool: ...
@@ -272,7 +271,7 @@ class SharedModeSettings(winrt.system.Object, metaclass=SharedModeSettings_Stati
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class SmartAppControlPolicy_Static(winrt._winrt.Object_Static):
+class SmartAppControlPolicy_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Profile.SmartAppControlPolicy::add_Changed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Profile.SmartAppControlPolicy::remove_Changed(Windows.Foundation.EventRegistrationToken)
@@ -287,7 +286,7 @@ class SmartAppControlPolicy(winrt.system.Object, metaclass=SmartAppControlPolicy
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class SystemIdentification_Static(winrt._winrt.Object_Static):
+class SystemIdentification_Static(winrt.system.Object_Static):
     # Windows.System.Profile.SystemIdentificationInfo Windows.System.Profile.SystemIdentification::GetSystemIdForPublisher()
     def get_system_id_for_publisher(cls) -> SystemIdentificationInfo: ...
     # Windows.System.Profile.SystemIdentificationInfo Windows.System.Profile.SystemIdentification::GetSystemIdForUser(Windows.System.User)
@@ -310,7 +309,7 @@ class SystemIdentificationInfo(winrt.system.Object):
     def source(self) -> SystemIdentificationSource: ...
 
 @typing.final
-class SystemSetupInfo_Static(winrt._winrt.Object_Static):
+class SystemSetupInfo_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Profile.SystemSetupInfo::add_OutOfBoxExperienceStateChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_out_of_box_experience_state_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Profile.SystemSetupInfo::remove_OutOfBoxExperienceStateChanged(Windows.Foundation.EventRegistrationToken)
@@ -336,7 +335,7 @@ class UnsupportedAppRequirement(winrt.system.Object):
     def requirement(self) -> str: ...
 
 @typing.final
-class WindowsIntegrityPolicy_Static(winrt._winrt.Object_Static):
+class WindowsIntegrityPolicy_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.System.Profile.WindowsIntegrityPolicy::add_PolicyChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_policy_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.System.Profile.WindowsIntegrityPolicy::remove_PolicyChanged(Windows.Foundation.EventRegistrationToken)

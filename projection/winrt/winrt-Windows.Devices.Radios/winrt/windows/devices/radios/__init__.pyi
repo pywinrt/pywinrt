@@ -5,7 +5,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
@@ -37,7 +36,7 @@ class RadioState(enum.IntEnum):
     DISABLED = 3
 
 @typing.final
-class Radio_Static(winrt._winrt.Object_Static):
+class Radio_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.Radios.Radio> Windows.Devices.Radios.Radio::FromIdAsync(System.String)
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[Radio]: ...
     # System.String Windows.Devices.Radios.Radio::GetDeviceSelector()

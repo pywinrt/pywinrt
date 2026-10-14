@@ -2,7 +2,6 @@
 
 import typing
 
-import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.input as microsoft_ui_input
 import winrt.windows.devices.input as windows_devices_input
@@ -12,7 +11,7 @@ __all__ = [
 ]
 
 @typing.final
-class PenDeviceInterop_Static(winrt._winrt.Object_Static):
+class PenDeviceInterop_Static(winrt.system.Object_Static):
     # Windows.Devices.Input.PenDevice Microsoft.UI.Input.Interop.PenDeviceInterop::FromPointerPoint(Microsoft.UI.Input.PointerPoint)
     def from_pointer_point(cls, pointer_point: microsoft_ui_input.PointerPoint, /) -> windows_devices_input.PenDevice: ...
 

@@ -7,7 +7,6 @@ from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.applicationmodel as windows_applicationmodel
 import winrt.windows.applicationmodel.activation as windows_applicationmodel_activation
@@ -55,7 +54,7 @@ class AppListEntry(winrt.system.Object):
     def app_info(self) -> windows_applicationmodel.AppInfo: ...
 
 @typing.final
-class CoreApplication_Static(winrt._winrt.Object_Static):
+class CoreApplication_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.ApplicationModel.Core.CoreApplicationView Windows.ApplicationModel.Core.CoreApplication::CreateNewView()
     def create_new_view(cls) -> CoreApplicationView: ...

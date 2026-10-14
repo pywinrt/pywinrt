@@ -7,7 +7,6 @@ import typing
 from builtins import property as _property
 from typing_extensions import deprecated
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.devices.geolocation as windows_devices_geolocation
 import winrt.windows.foundation as windows_foundation
@@ -269,7 +268,7 @@ class MapLocation(winrt.system.Object):
     def point(self) -> windows_devices_geolocation.Geopoint: ...
 
 @typing.final
-class MapLocationFinder_Static(winrt._winrt.Object_Static):
+class MapLocationFinder_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapLocationFinderResult> Windows.Services.Maps.MapLocationFinder::FindLocationsAsync(System.String,Windows.Devices.Geolocation.Geopoint)
     def find_locations_async(cls, search_text: str, reference_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapLocationFinderResult]: ...
@@ -308,7 +307,7 @@ class MapLocationFinderResult(winrt.system.Object):
     def status(self) -> MapLocationFinderStatus: ...
 
 @typing.final
-class MapManager_Static(winrt._winrt.Object_Static):
+class MapManager_Static(winrt.system.Object_Static):
     # System.Void Windows.Services.Maps.MapManager::ShowDownloadedMapsUI()
     def show_downloaded_maps_ui(cls) -> None: ...
     # System.Void Windows.Services.Maps.MapManager::ShowMapsUpdateUI()
@@ -392,7 +391,7 @@ class MapRouteDrivingOptions(winrt.system.Object):
     def departure_time(self, value: datetime.datetime | None) -> None: ...
 
 @typing.final
-class MapRouteFinder_Static(winrt._winrt.Object_Static):
+class MapRouteFinder_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Services.Maps.MapRouteFinderResult> Windows.Services.Maps.MapRouteFinder::GetDrivingRouteAsync(Windows.Devices.Geolocation.Geopoint,Windows.Devices.Geolocation.Geopoint)
     def get_driving_route_async(cls, start_point: windows_devices_geolocation.Geopoint, end_point: windows_devices_geolocation.Geopoint, /) -> windows_foundation.IAsyncOperation[MapRouteFinderResult]: ...
@@ -539,7 +538,7 @@ class MapRouteManeuver(winrt.system.Object):
     def warnings(self) -> _cabc.Sequence[ManeuverWarning]: ...
 
 @typing.final
-class MapService_Static(winrt._winrt.Object_Static):
+class MapService_Static(winrt.system.Object_Static):
     # System.String Windows.Services.Maps.MapService::get_ServiceToken()
     @_property
     def service_token(cls) -> str: ...
@@ -565,7 +564,7 @@ class MapService(winrt.system.Object, metaclass=MapService_Static):
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class PlaceInfo_Static(winrt._winrt.Object_Static):
+class PlaceInfo_Static(winrt.system.Object_Static):
     @typing.overload
     # Windows.Services.Maps.PlaceInfo Windows.Services.Maps.PlaceInfo::Create(Windows.Devices.Geolocation.Geopoint)
     def create(cls, reference_point: windows_devices_geolocation.Geopoint, /) -> PlaceInfo: ...

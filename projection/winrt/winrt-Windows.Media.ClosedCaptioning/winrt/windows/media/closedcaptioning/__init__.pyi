@@ -4,7 +4,6 @@ import enum
 import typing
 from builtins import property as _property
 
-import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui as windows_ui
@@ -63,7 +62,7 @@ class ClosedCaptionStyle(enum.IntEnum):
     SMALL_CAPITALS = 7
 
 @typing.final
-class ClosedCaptionProperties_Static(winrt._winrt.Object_Static):
+class ClosedCaptionProperties_Static(winrt.system.Object_Static):
     # Windows.Foundation.EventRegistrationToken Windows.Media.ClosedCaptioning.ClosedCaptionProperties::add_PropertiesChanged(Windows.Foundation.EventHandler`1<System.Object>)
     def add_properties_changed(cls, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Media.ClosedCaptioning.ClosedCaptionProperties::remove_PropertiesChanged(Windows.Foundation.EventRegistrationToken)
@@ -111,7 +110,7 @@ class ClosedCaptionProperties(winrt.system.Object, metaclass=ClosedCaptionProper
         """A class of static members only, so there is nothing to create."""
 
 @typing.final
-class ClosedCaptionTheme_Static(winrt._winrt.Object_Static):
+class ClosedCaptionTheme_Static(winrt.system.Object_Static):
     # Windows.Media.ClosedCaptioning.ClosedCaptionTheme[] Windows.Media.ClosedCaptioning.ClosedCaptionTheme::GetAvailableThemes()
     def get_available_themes(cls) -> winrt.system.Array[ClosedCaptionTheme]: ...
     # Windows.Media.ClosedCaptioning.ClosedCaptionTheme Windows.Media.ClosedCaptioning.ClosedCaptionTheme::GetSelectedTheme()
