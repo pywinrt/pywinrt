@@ -51,6 +51,11 @@ class TestModule(unittest.TestCase):
         self.assertEqual(TESTS_WRAPPER.__name__, "_ITests")
         self.assertEqual(tc.ITests.__name__, "ITests")
 
+    def test_date_time_and_time_span_have_no_struct_type(self) -> None:
+        # They are datetime.datetime and datetime.timedelta wherever they appear.
+        self.assertFalse(hasattr(wf, "DateTime"))
+        self.assertFalse(hasattr(wf, "TimeSpan"))
+
     def test_reloading_keeps_the_types(self) -> None:
         before = tc.Class
         importlib.reload(sys.modules["test_winrt.testcomponent"])
