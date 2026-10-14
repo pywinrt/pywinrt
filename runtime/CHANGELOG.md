@@ -17,6 +17,7 @@ repository](../CHANGELOG.md).
 - A vector's slices can be assigned and deleted, with a step of 1.
 
 ### Changed
+- BREAKING: A map is unhashable, like a `dict`, since it compares by content.
 - An unraisable report names the handler, method or property WinRT called.
 - A character a `Char16` cannot hold, such as an emoji, raises `ValueError`.
 - A negative unsigned integer raises `ValueError`, not `OverflowError`.

@@ -280,10 +280,11 @@ class MainPage(Page, runtime_class_name="MyApp.MainPage"):
 A wrapper is not the WinRT object itself, and reading the same object twice,
 for example from a property, gives two wrappers. They compare equal with `==`
 and have the same `hash()`, because those ask whether the two hold the same
-WinRT object, but `is` tells them apart. Two objects that only hold equal
-values, such as two `Uri` objects of the same address, are not equal. An
-object that implements `IStringable` converts to its string with
-[`str()`][str]; `repr()` is Python's default.
+WinRT object, but `is` tells them apart. A [mapping](#mappings) is the
+exception: it compares by content and has no hash, as a `dict` does. Two
+objects that only hold equal values, such as two `Uri` objects of the same
+address, are not equal. An object that implements `IStringable` converts to
+its string with [`str()`][str], and `repr()` is Python's default.
 
 A null object comes back as `None`. The type hints annotate a method or
 property `| None` where WinRT's documentation says it can return null, but
@@ -1263,6 +1264,13 @@ behave like Python dictionaries, so you can access values with `map[key]` or
 `map.keys()`, `map.values()`, and `map.items()` respectively. Equality operators
 (`==` and `!=`) can be used to compare mappings for equality based on their
 key-value pairs. You can also use `len(map)` to get the number of keys in the mapping.
+Like a `dict`, a mapping has no hash, so it cannot be a key of a `dict` or be
+put in a `set`.
+
+!!! version-changed "Changed in version 4.0"
+
+    A mapping has no hash. Before, it hashed by identity, so two equal mappings
+    had different hashes.
 
 !!! note
 
