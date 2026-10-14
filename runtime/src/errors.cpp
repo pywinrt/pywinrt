@@ -422,6 +422,50 @@ void py::set_call_error(
 }
 
 /**
+ * Sets the error for @p obj, a number that a conversion found does not fit in
+ * @p type: the WinRT name of an integer type, such as @c "UInt8", which is
+ * also the winrt.system alias a type hint names.
+ *
+ * The conversion may have raised already. Its OverflowError, or the
+ * ValueError of a negative number for an unsigned type, is replaced with one
+ * of the same class that names the type, and anything else, such as the
+ * TypeError of a str, is left as it is. With nothing raised, which is what the
+ * range check of a narrow type finds, it is an OverflowError.
+ */
+void py::set_out_of_range_error(PyObject* obj, const char* type) noexcept
+{
+    PyObject* exception_type = PyExc_OverflowError;
+
+    if (PyErr_Occurred())
+    {
+        if (PyErr_ExceptionMatches(PyExc_ValueError))
+        {
+            exception_type = PyExc_ValueError;
+        }
+        else if (!PyErr_ExceptionMatches(PyExc_OverflowError))
+        {
+            return;
+        }
+
+        PyErr_Clear();
+    }
+
+    auto const article = type[0] == 'I' ? "an" : "a";
+
+    pyobj_handle number{PyNumber_Index(obj)};
+    pyobj_handle text{number ? PyObject_Str(number.get()) : nullptr};
+    if (!text)
+    {
+        // a number longer than sys.get_int_max_str_digits() allows has no str()
+        PyErr_Clear();
+        PyErr_Format(exception_type, "int does not fit in %s %s", article, type);
+        return;
+    }
+
+    PyErr_Format(exception_type, "%U does not fit in %s %s", text.get(), article, type);
+}
+
+/**
  * Reports the pending Python exception to sys.unraisablehook, with @p source,
  * the Python object WinRT was calling, as the object it was raised in, which
  * the default hook names in its "Exception ignored in" line.

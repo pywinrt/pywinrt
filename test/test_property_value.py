@@ -3,6 +3,7 @@ from array import array
 from datetime import datetime, timedelta, UTC
 from uuid import UUID, uuid4
 
+import winrt.system
 import winrt.windows.foundation as wf
 from winrt.system import Array, Char16
 
@@ -61,9 +62,9 @@ class TestPropertyValue(unittest.TestCase):
         ipv = o.as_(wf.IPropertyValue)
         self.assertEqual(ipv.type, wf.PropertyType.INT64)
         self.assertTrue(ipv.get_int64(), -9223372036854775800)
-        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int32(2**63))
+        self.assertRaises(OverflowError, lambda: wf.PropertyValue.create_int64(2**63))
         self.assertRaises(
-            OverflowError, lambda: wf.PropertyValue.create_int32(-(2**63 + 1))
+            OverflowError, lambda: wf.PropertyValue.create_int64(-(2**63 + 1))
         )
 
     def test_create_uint64(self) -> None:
@@ -434,3 +435,55 @@ class TestUnsignedIntegers(unittest.TestCase):
         for name, _ in self.WIDTHS:
             with self.subTest(name), self.assertRaises(TypeError):
                 self.create(name, 1.0)
+
+
+class TestOutOfRange(unittest.TestCase):
+    # A number that does not fit names the winrt.system alias of the type,
+    # whichever width it is. The box functions reach every width, where
+    # PropertyValue has no Int8.
+    CASES = (
+        ("int8", "an Int8", -(2**7) - 1, 2**7),
+        ("uint8", "a UInt8", -1, 2**8),
+        ("int16", "an Int16", -(2**15) - 1, 2**15),
+        ("uint16", "a UInt16", -1, 2**16),
+        ("int32", "an Int32", -(2**31) - 1, 2**31),
+        ("uint32", "a UInt32", -1, 2**32),
+        ("int64", "an Int64", -(2**63) - 1, 2**63),
+        ("uint64", "a UInt64", -1, 2**64),
+    )
+
+    def create(self, name: str, value: object) -> object:
+        return getattr(winrt.system, f"box_{name}")(value)
+
+    def test_too_large(self) -> None:
+        for name, alias, _, too_large in self.CASES:
+            with (
+                self.subTest(name),
+                self.assertRaisesRegex(
+                    OverflowError, f"^{too_large} does not fit in {alias}$"
+                ),
+            ):
+                self.create(name, too_large)
+
+    def test_too_small(self) -> None:
+        # A negative number for an unsigned type is a ValueError, as
+        # PyLong_AsUInt32() raises it.
+        for name, alias, too_small, _ in self.CASES:
+            error = ValueError if name.startswith("u") else OverflowError
+            with (
+                self.subTest(name),
+                self.assertRaisesRegex(error, f"^{too_small} does not fit in {alias}$"),
+            ):
+                self.create(name, too_small)
+
+    def test_an_index_object_names_its_number(self) -> None:
+        with self.assertRaisesRegex(OverflowError, "^256 does not fit in a UInt8$"):
+            self.create("uint8", Index(256))
+
+    def test_a_number_too_long_to_print(self) -> None:
+        with self.assertRaisesRegex(OverflowError, "^int does not fit in an Int64$"):
+            self.create("int64", 10**5000)
+
+    def test_a_str_is_still_a_type_error(self) -> None:
+        with self.assertRaises(TypeError):
+            self.create("int32", "1")
