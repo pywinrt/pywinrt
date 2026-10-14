@@ -27,7 +27,7 @@ import winrt.windows.foundation.collections as wfc
 import winrt.windows.globalization as wg
 import winrt.windows.storage as ws
 import winrt.windows.storage.provider as wsp
-from winrt.system import Array, Int32, Object
+from winrt.system import Array, Int32, Object, Object_Static
 from winrt.system.hresult import E_FAIL
 
 BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
@@ -92,6 +92,12 @@ class TestObject(unittest.TestCase):
         self.assertFalse(issubclass(wf.Point, Object))
         self.assertFalse(issubclass(int, Object))
 
+    def test_every_class_has_the_public_metaclass(self) -> None:
+        # what the type hints name, through winrt.system
+        self.assertIs(type(Object), Object_Static)
+        self.assertIsInstance(wf.Uri, Object_Static)
+        self.assertIsInstance(wf.IStringable, Object_Static)
+
     def test_only_a_python_class_is_weakly_referenced(self) -> None:
         # the same WinRT object can come back as another wrapper, so a weak
         # reference to a wrapper would not follow the object
@@ -151,9 +157,9 @@ class TestClasses(unittest.TestCase):
         self.assertEqual(tc.Class().one(), 1)
 
     def test_runtime_types_are_named_for_their_module(self) -> None:
-        # Object and Array are named for the module they are imported from,
-        # which is what reprs and error messages show.
-        for cls in (Object, Array):
+        # Object, its metaclass and Array are named for the module they are
+        # imported from, which is what reprs and error messages show.
+        for cls in (Object, Object_Static, Array):
             with self.subTest(cls=cls):
                 self.assertEqual(cls.__module__, "winrt.system")
 
