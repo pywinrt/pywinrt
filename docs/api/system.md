@@ -185,6 +185,19 @@ implemented by the object.
 
 !!! version-added "Added in version 2.1"
 
+### `Object_Static`
+
+```python
+class Object_Static(type)
+```
+
+The metaclass of `Object` and of every projected class and interface. A
+class's static members are on a metaclass of its own, named after the class
+with `_Static`, such as `Uri_Static`, which derives from this one. The type
+hints name it, and code has no need to.
+
+!!! version-added "Added in version 4.0"
+
 ### `Array`
 
 ```python

@@ -328,7 +328,7 @@ namespace py::cpp::_winrt
            {}};
 
     static PyType_Spec Object_Static_type_spec
-        = {"winrt._winrt.Object_Static",
+        = {"winrt.system.Object_Static",
            0,
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,

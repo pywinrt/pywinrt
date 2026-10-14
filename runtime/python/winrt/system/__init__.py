@@ -6,6 +6,7 @@ from typing_extensions import Buffer as _Buffer, deprecated
 from winrt._winrt import (
     Array,
     Object,
+    Object_Static,
     box_boolean,
     box_char16,
     box_date_time,
@@ -151,6 +152,7 @@ __all__ = [
     "Double",
     "Char16",
     "Object",
+    "Object_Static",
     "Array",
     "ReadableBuffer",
     "WriteableBuffer",
