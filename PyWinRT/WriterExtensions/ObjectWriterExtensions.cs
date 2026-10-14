@@ -42,7 +42,7 @@ static class ObjectWriterExtensions
 
         if (type.PyRequiresMetaclass)
         {
-            var baseType = "winrt._winrt.Object_Static";
+            var baseType = "winrt.system.Object_Static";
 
             if (type.Type.BaseType is TypeReference b && b.Namespace != "System")
             {
@@ -62,9 +62,9 @@ static class ObjectWriterExtensions
 
             // pyright checks the keywords of a class statement against the
             // metaclass's __new__ when the metaclass declares one, and
-            // ABCMeta's, which winrt._winrt.Object_Static inherits in the
-            // stubs, takes any keyword, so the runtime_class_name keyword
-            // that __init_subclass__ takes below is declared here as well.
+            // ABCMeta's, which Object_Static inherits in the stubs, takes any
+            // keyword, so the runtime_class_name keyword that
+            // __init_subclass__ takes below is declared here as well.
             if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
             {
                 w.WriteLine(
@@ -76,7 +76,7 @@ static class ObjectWriterExtensions
 
             foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
             {
-                // The stubs declare winrt._winrt.Object_Static as an ABCMeta,
+                // The stubs declare Object_Static as an ABCMeta,
                 // so a static register() is an incompatible override of
                 // ABCMeta.register(), which is not there at run time. mypy
                 // reports an overloaded method on its first decorator and
