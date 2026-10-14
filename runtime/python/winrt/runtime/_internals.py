@@ -338,6 +338,10 @@ def mixin_mapping(typ: type) -> None:
         or sys.version_info < (3, 12)
     ):
         setattr(typ, "__eq__", Mapping[Any, Any].__eq__)
+        # Equal maps are different objects, so an identity hash would break
+        # hash(a) == hash(b) for a == b. A class derived from Mapping is
+        # unhashable for the same reason.
+        setattr(typ, "__hash__", None)
 
     if (
         typ.__ne__ == object.__ne__

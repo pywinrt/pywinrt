@@ -82,6 +82,21 @@ class TestCollectionsStringMap(unittest.TestCase):
         with self.assertRaisesRegex(KeyError, r"^'popitem\(\): map is empty'$"):
             m.popitem()
 
+    def test_a_map_has_no_hash(self) -> None:
+        # it compares by content, as a dict does, and two equal maps are
+        # different objects
+        a = wfc.StringMap()
+        a["hello"] = "world"
+        b = wfc.StringMap()
+        b["hello"] = "world"
+
+        self.assertEqual(a, b)
+
+        for m in (a, a.get_view()):
+            with self.subTest(m=m):
+                with self.assertRaises(TypeError):
+                    hash(m)
+
     def test_key_iterator_lets_go_of_the_pairs(self) -> None:
         m = wfc.StringMap()
         m["hello"] = "world"
