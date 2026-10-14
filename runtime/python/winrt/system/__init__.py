@@ -1,6 +1,7 @@
-from typing import Annotated, TypeAlias
+from typing import TYPE_CHECKING, Annotated, Any, Protocol, TypeAlias, runtime_checkable
+import warnings
 
-from typing_extensions import Buffer
+from typing_extensions import Buffer as _Buffer, deprecated
 
 from winrt._winrt import (
     Array,
@@ -100,10 +101,38 @@ Char16 = Annotated[str, BufferFormat("u"), StructFormat("H"), WinrtSignature("c2
 
 winrt.runtime._internals.mixin_sequence(Array)
 
-# Type hints for Python buffer protocol - can use standard Python types in
-# addition to the WinRT Array.
-ReadableBuffer: TypeAlias = Buffer  # WinRT PassArray
-WriteableBuffer: TypeAlias = Buffer  # WinRT FillArray
+# What an IBuffer or an array parameter takes besides an Array: any buffer,
+# named for whether WinRT reads it or writes into it, as typeshed's aliases of
+# the same names are.
+ReadableBuffer: TypeAlias = _Buffer
+WriteableBuffer: TypeAlias = _Buffer
+
+# PEP 702 deprecates a class or a function, not an alias, so the type checkers
+# see a deprecated copy of typeshed's collections.abc.Buffer, and the real one
+# is what __getattr__() hands out at run time.
+if TYPE_CHECKING:
+
+    @deprecated(
+        "Use collections.abc.Buffer instead, "
+        "or typing_extensions.Buffer before Python 3.12"
+    )
+    @runtime_checkable
+    class Buffer(Protocol):
+        def __buffer__(self, flags: int, /) -> memoryview: ...
+
+else:
+
+    def __getattr__(name: str) -> Any:
+        if name == "Buffer":
+            warnings.warn(
+                "winrt.system.Buffer is deprecated: use collections.abc.Buffer, "
+                "or typing_extensions.Buffer before Python 3.12",
+                DeprecationWarning,
+                stacklevel=2,
+            )
+            return _Buffer
+
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 
 __all__ = [
@@ -123,7 +152,6 @@ __all__ = [
     "Char16",
     "Object",
     "Array",
-    "Buffer",
     "ReadableBuffer",
     "WriteableBuffer",
     "box_boolean",

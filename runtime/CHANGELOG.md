@@ -27,6 +27,7 @@ repository](../CHANGELOG.md).
 - Unboxing a value boxed as another type raises `TypeError`, not `OSError`.
 
 ### Deprecated
+- `winrt.system.Buffer` warns, in favor of `collections.abc.Buffer`.
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
 
 ### Fixed
