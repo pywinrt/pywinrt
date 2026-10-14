@@ -285,19 +285,19 @@ def mixin_sequence(typ: type) -> None:
     """
     # mixin methods
     if not hasattr(typ, "index"):
-        typ.index = _sequence_index  # type: ignore
+        setattr(typ, "index", _sequence_index)
 
     if not hasattr(typ, "count"):
-        typ.count = Sequence.count  # type: ignore
+        setattr(typ, "count", Sequence[Any].count)
 
     if not hasattr(typ, "__contains__"):
-        typ.__contains__ = Sequence.__contains__  # type: ignore
+        setattr(typ, "__contains__", Sequence[Any].__contains__)
 
     if not hasattr(typ, "__iter__"):
-        typ.__iter__ = Sequence.__iter__  # type: ignore
+        setattr(typ, "__iter__", Sequence[Any].__iter__)
 
     if not hasattr(typ, "__reversed__"):
-        typ.__reversed__ = Sequence.__reversed__  # type: ignore
+        setattr(typ, "__reversed__", Sequence[Any].__reversed__)
 
     _register(Sequence, typ)
 
@@ -311,25 +311,25 @@ def mixin_mutable_sequence(typ: type) -> None:
 
     # mixin methods
     if not hasattr(typ, "append"):
-        typ.append = MutableSequence.append  # type: ignore
+        setattr(typ, "append", MutableSequence[Any].append)
 
     if not hasattr(typ, "clear"):
-        typ.clear = MutableSequence.clear  # type: ignore
+        setattr(typ, "clear", MutableSequence[Any].clear)
 
     if not hasattr(typ, "extend"):
-        typ.extend = MutableSequence.extend  # type: ignore
+        setattr(typ, "extend", MutableSequence[Any].extend)
 
     if not hasattr(typ, "reverse"):
-        typ.reverse = MutableSequence.reverse  # type: ignore
+        setattr(typ, "reverse", MutableSequence[Any].reverse)
 
     if not hasattr(typ, "pop"):
-        typ.pop = MutableSequence.pop  # type: ignore
+        setattr(typ, "pop", MutableSequence[Any].pop)
 
     if not hasattr(typ, "remove"):
-        typ.remove = _mutable_sequence_remove  # type: ignore
+        setattr(typ, "remove", _mutable_sequence_remove)
 
     if not hasattr(typ, "__iadd__"):
-        typ.__iadd__ = MutableSequence.__iadd__  # type: ignore
+        setattr(typ, "__iadd__", MutableSequence[Any].__iadd__)
 
     _register(MutableSequence, typ)
 
@@ -341,19 +341,19 @@ def mixin_mapping(typ: type) -> None:
     """
     # mixin methods
     if not hasattr(typ, "keys"):
-        typ.keys = Mapping.keys  # type: ignore
+        setattr(typ, "keys", Mapping[Any, Any].keys)
 
     if not hasattr(typ, "items"):
-        typ.items = Mapping.items  # type: ignore
+        setattr(typ, "items", Mapping[Any, Any].items)
 
     if not hasattr(typ, "values"):
-        typ.values = Mapping.values  # type: ignore
+        setattr(typ, "values", Mapping[Any, Any].values)
 
     if not hasattr(typ, "get"):
-        typ.get = Mapping.get  # type: ignore
+        setattr(typ, "get", Mapping[Any, Any].get)
 
     if not hasattr(typ, "__contains__"):
-        typ.__contains__ = Mapping.__contains__  # type: ignore
+        setattr(typ, "__contains__", Mapping[Any, Any].__contains__)
 
     # HACK: Version check works around inheritance anomaly caused by hacky
     # metaclass inheritance implementation in runtime.cpp. This works as long
@@ -365,14 +365,14 @@ def mixin_mapping(typ: type) -> None:
         or typ.__eq__ == Object.__eq__
         or sys.version_info < (3, 12)
     ):
-        typ.__eq__ = Mapping.__eq__  # type: ignore
+        setattr(typ, "__eq__", Mapping[Any, Any].__eq__)
 
     if (
         typ.__ne__ == object.__ne__
         or typ.__ne__ == Object.__ne__
         or sys.version_info < (3, 12)
     ):
-        typ.__ne__ = Mapping.__ne__  # type: ignore
+        setattr(typ, "__ne__", Mapping[Any, Any].__ne__)
 
     _register(Mapping, typ)
 
@@ -386,21 +386,25 @@ def mixin_mutable_mapping(typ: type) -> None:
 
     # mixin methods
     if not hasattr(typ, "clear"):
-        typ.clear = MutableMapping.clear  # type: ignore
+        setattr(typ, "clear", MutableMapping[Any, Any].clear)
 
     if not hasattr(typ, "pop"):
-        typ.pop = MutableMapping.pop  # type: ignore
+        setattr(typ, "pop", MutableMapping[Any, Any].pop)
         # private-name-mangled attribute :-(
-        typ._MutableMapping__marker = MutableMapping._MutableMapping__marker  # type: ignore
+        setattr(
+            typ,
+            "_MutableMapping__marker",
+            getattr(MutableMapping, "_MutableMapping__marker"),
+        )
 
     if not hasattr(typ, "popitem"):
-        typ.popitem = _mutable_mapping_popitem  # type: ignore
+        setattr(typ, "popitem", _mutable_mapping_popitem)
 
     if not hasattr(typ, "setdefault"):
-        typ.setdefault = MutableMapping.setdefault  # type: ignore
+        setattr(typ, "setdefault", MutableMapping[Any, Any].setdefault)
 
     if not hasattr(typ, "update"):
-        typ.update = MutableMapping.update  # type: ignore
+        setattr(typ, "update", MutableMapping[Any, Any].update)
 
     _register(MutableMapping, typ)
 
