@@ -663,6 +663,13 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+        if (type != static_cast<long>(winrt::apartment_type::multi_threaded)
+            && type != static_cast<long>(winrt::apartment_type::single_threaded))
+        {
+            PyErr_Format(PyExc_ValueError, "%ld is not a valid ApartmentType", type);
+            return nullptr;
+        }
+
         try
         {
             winrt::init_apartment(static_cast<winrt::apartment_type>(type));

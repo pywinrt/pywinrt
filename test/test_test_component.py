@@ -811,10 +811,16 @@ class TestTestComponent(unittest.TestCase):
         self.assertDictEqual({i.key: i.value for i in ret}, arg)
         self.assertDictEqual({i.key: i.value for i in out}, arg)
 
+    def test_init_apartment_refuses_an_unknown_type(self) -> None:
+        with self.assertRaisesRegex(ValueError, "^7 is not a valid ApartmentType$"):
+            wr.init_apartment(7)  # type: ignore[arg-type]
+
     def test_async_action_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^get\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_action(10).get()
         finally:
             wr.uninit_apartment()
@@ -839,7 +845,9 @@ class TestTestComponent(unittest.TestCase):
     def test_async_action_wait_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^wait\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_action(10).wait(1)
         finally:
             wr.uninit_apartment()
@@ -880,7 +888,9 @@ class TestTestComponent(unittest.TestCase):
     def test_async_operation_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^get\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_operation(10, 1).get()
         finally:
             wr.uninit_apartment()
@@ -902,7 +912,9 @@ class TestTestComponent(unittest.TestCase):
     def test_async_operation_wait_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^wait\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_operation(10, 1).wait(1)
         finally:
             wr.uninit_apartment()

@@ -403,12 +403,12 @@ void py::set_call_error(
         // even count, which it only fails to do with a Python error already set
         if (arg_count != -1)
         {
-            PyErr_SetString(PyExc_TypeError, "Invalid parameter count");
+            PyErr_SetString(PyExc_TypeError, "invalid parameter count");
         }
         break;
 
     case call_error::keyword_arguments:
-        PyErr_SetString(PyExc_TypeError, "keyword arguments not supported");
+        PyErr_SetString(PyExc_TypeError, "keyword arguments are not supported");
         break;
 
     case call_error::cannot_instantiate:
