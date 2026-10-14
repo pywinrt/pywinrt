@@ -11,8 +11,7 @@
   // analysed. The first three patterns are pyright's own defaults, which
   // setting this key would otherwise replace; "**/.*" is what covers
   // .mypy_cache and .ruff_cache. "**/build" is what setuptools leaves next to a
-  // package it built. scripts/2to3 is the PyWinRT 2.x to 3.x migration script,
-  // which is kept as it was written for 3.0.
+  // package it built.
   //
   // The projection and interop packages are checked as installed, merged into
   // one tree, by pyrightconfig.lint.json: an interop package is a subpackage
@@ -25,8 +24,7 @@
     "_*/**",
     "**/build",
     "projection/**",
-    "interop/*/winrt/**",
-    "scripts/2to3"
+    "interop/*/winrt/**"
   ],
 
   // The packages merged as they are installed, which scripts/merge-packages.py
