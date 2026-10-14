@@ -7,6 +7,6 @@
 
 set(WEBVIEW2_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
 install(DIRECTORY "winrt-Microsoft.Web.WebView2.Dll/winrt/"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    DESTINATION "winrt")
 install(FILES "${WEBVIEW2_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native_uap/Microsoft.Web.WebView2.Core.dll"
-    DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/microsoft/web/webview2/dll")
+    DESTINATION "winrt/microsoft/web/webview2/dll")

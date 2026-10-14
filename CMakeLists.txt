@@ -20,8 +20,6 @@ set(CMAKE_CXX_SCAN_FOR_MODULES 0)
 # filling up the console buffer with the output.
 set(CMAKE_INSTALL_MESSAGE NEVER)
 
-set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install prefix")
-
 # .config/_tools.json is the single source of truth for NuGet package versions
 file(READ ".config/_tools.json" TOOLS_JSON)
 string(JSON WEBVIEW2_VERSION GET ${TOOLS_JSON} "Microsoft.Web.WebView2")
