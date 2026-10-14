@@ -97,6 +97,22 @@ class TestCollectionsStringMap(unittest.TestCase):
                 with self.assertRaises(TypeError):
                     hash(m)
 
+    def test_a_key_of_another_type_is_refused(self) -> None:
+        # as os.environ does, even where a dict would answer False or None
+        m = wfc.StringMap()
+        m["hello"] = "world"
+        key: Any = 5
+
+        for name, call in (
+            ("in", lambda: key in m),
+            ("[]", lambda: m[key]),
+            ("get", lambda: m.get(key)),
+            ("pop", lambda: m.pop(key, None)),
+        ):
+            with self.subTest(name=name):
+                with self.assertRaises(TypeError):
+                    call()
+
     def test_key_iterator_lets_go_of_the_pairs(self) -> None:
         m = wfc.StringMap()
         m["hello"] = "world"
