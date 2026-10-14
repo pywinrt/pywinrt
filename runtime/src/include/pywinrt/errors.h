@@ -36,6 +36,8 @@ namespace py
     {
     };
 
+    void set_out_of_range_error(PyObject* obj, const char* type) noexcept;
+
     inline WINRT_IMPL_NOINLINE void set_invalid_activation_error(
         const char* const type_name) noexcept
     {

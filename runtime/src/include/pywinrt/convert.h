@@ -184,12 +184,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
+                set_out_of_range_error(obj, "Int8");
                 throw python_exception();
             }
 
             if (result < INT8_MIN || result > INT8_MAX)
             {
-                PyErr_SetString(PyExc_OverflowError, "does not fit in int8_t");
+                set_out_of_range_error(obj, "Int8");
                 throw python_exception();
             }
 
@@ -213,12 +214,13 @@ namespace py
 
             if (as_uint32(obj, &result) == -1)
             {
+                set_out_of_range_error(obj, "UInt8");
                 throw python_exception();
             }
 
             if (result > UINT8_MAX)
             {
-                PyErr_SetString(PyExc_OverflowError, "does not fit in uint8_t");
+                set_out_of_range_error(obj, "UInt8");
                 throw python_exception();
             }
 
@@ -242,12 +244,13 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
+                set_out_of_range_error(obj, "Int16");
                 throw python_exception();
             }
 
             if (result < INT16_MIN || result > INT16_MAX)
             {
-                PyErr_SetString(PyExc_OverflowError, "does not fit in int16_t");
+                set_out_of_range_error(obj, "Int16");
                 throw python_exception();
             }
 
@@ -271,12 +274,13 @@ namespace py
 
             if (as_uint32(obj, &result) == -1)
             {
+                set_out_of_range_error(obj, "UInt16");
                 throw python_exception();
             }
 
             if (result > UINT16_MAX)
             {
-                PyErr_SetString(PyExc_OverflowError, "does not fit in uint16_t");
+                set_out_of_range_error(obj, "UInt16");
                 throw python_exception();
             }
 
@@ -300,6 +304,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
+                set_out_of_range_error(obj, "Int32");
                 throw python_exception();
             }
 
@@ -323,6 +328,7 @@ namespace py
 
             if (as_uint32(obj, &result) == -1)
             {
+                set_out_of_range_error(obj, "UInt32");
                 throw python_exception();
             }
 
@@ -346,6 +352,7 @@ namespace py
 
             if (result == -1 && PyErr_Occurred())
             {
+                set_out_of_range_error(obj, "Int64");
                 throw python_exception();
             }
 
@@ -369,6 +376,7 @@ namespace py
 
             if (as_uint64(obj, &result) == -1)
             {
+                set_out_of_range_error(obj, "UInt64");
                 throw python_exception();
             }
 
