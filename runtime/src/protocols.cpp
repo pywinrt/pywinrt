@@ -956,6 +956,7 @@ namespace py::interp
 
         /**
          * Waits for @p self to finish and returns the status of the wait.
+         * @p operation is the call that waits, which an error names.
          *
          * @returns @c false with a Python error set if the wait could not be
          * made at all.
@@ -963,6 +964,7 @@ namespace py::interp
         bool wait_for_async(
             type_entry const& info,
             PyObject* self,
+            char const* operation,
             uint32_t timeout_ms,
             int32_t& status) noexcept
         {
@@ -996,7 +998,7 @@ namespace py::interp
                 return false;
             }
 
-            if (set_sta_blocking_wait_error())
+            if (set_sta_blocking_wait_error(operation))
             {
                 return false;
             }
@@ -1021,7 +1023,7 @@ namespace py::interp
 
             int32_t status{};
 
-            if (!wait_for_async(*info, self, async_wait_forever, status))
+            if (!wait_for_async(*info, self, "get()", async_wait_forever, status))
             {
                 return nullptr;
             }
@@ -1060,7 +1062,8 @@ namespace py::interp
 
             int32_t status{};
 
-            if (!wait_for_async(*info, self, async_timeout_ms(timeout), status))
+            if (!wait_for_async(
+                    *info, self, "wait()", async_timeout_ms(timeout), status))
             {
                 return nullptr;
             }

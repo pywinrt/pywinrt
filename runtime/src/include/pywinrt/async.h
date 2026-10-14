@@ -30,18 +30,22 @@ namespace py
      * being waited for may need that very thread to dispatch a call before it
      * can finish, so waiting for it there deadlocks.
      *
+     * @p operation is the name the error gives the blocking call, such as
+     * @c "get()".
+     *
      * The GIL must be held.
      */
-    inline bool set_sta_blocking_wait_error() noexcept
+    inline bool set_sta_blocking_wait_error(const char* operation) noexcept
     {
         if (!winrt::impl::is_sta_thread())
         {
             return false;
         }
 
-        PyErr_SetString(
+        PyErr_Format(
             PyExc_RuntimeError,
-            "Cannot call blocking method from single-threaded apartment.");
+            "%s cannot block a single-threaded apartment",
+            operation);
 
         return true;
     }

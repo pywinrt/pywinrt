@@ -20,7 +20,19 @@ apartment type.
 |---|---|---|
 | `apartment_type` | [`ApartmentType`](#apartmenttype) | The apartment type to initialize the runtime in. |
 
+**Raises:** [`ValueError`][ValueError] if `apartment_type` is not an
+`ApartmentType`, and [`OSError`][OSError] if the thread is already in an
+apartment of the other type.
+
 !!! version-added "Added in version 3.0"
+
+!!! version-changed "Changed in version 4.0"
+
+    A value that is not an `ApartmentType` raises `ValueError`. Previously it
+    raised `OSError`.
+
+[ValueError]: https://docs.python.org/3/builtins/exceptions.html#ValueError
+[OSError]: https://docs.python.org/3/builtins/exceptions.html#OSError
 
 ### `uninit_apartment`
 

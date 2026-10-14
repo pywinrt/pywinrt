@@ -23,6 +23,7 @@ repository](../CHANGELOG.md).
 - An `async def` function given as a delegate handler now raises `TypeError`.
 - `op.completed = None` and `op.progress = None` now raise `TypeError`.
 - Adding `None` as an event handler now raises `TypeError` instead of crashing.
+- `init_apartment()` raises `ValueError` for an unknown type, not `OSError`.
 
 ### Deprecated
 - `IMemoryBuffer.create_reference()` warns; use the buffer protocol instead.
