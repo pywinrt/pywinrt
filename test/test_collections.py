@@ -79,7 +79,7 @@ class TestCollectionsStringMap(unittest.TestCase):
 
         self.assertEqual(m.popitem(), ("hello", "world"))
 
-        with self.assertRaises(KeyError):
+        with self.assertRaisesRegex(KeyError, r"^'popitem\(\): map is empty'$"):
             m.popitem()
 
     def test_key_iterator_lets_go_of_the_pairs(self) -> None:
@@ -202,7 +202,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
         self.assertIsNotNone(m.popitem())
 
-        with self.assertRaises(KeyError):
+        with self.assertRaisesRegex(KeyError, r"^'popitem\(\): map is empty'$"):
             m.popitem()
 
     def test_property_set_is_a_mutable_mapping(self) -> None:
@@ -251,6 +251,24 @@ class TestCollectionsVector(unittest.TestCase):
 
     def test_reversed(self) -> None:
         self.assertEqual(list(reversed(self.vector)), ["b", "a"])
+
+    def test_index_and_remove_of_a_missing_value(self) -> None:
+        self.assertEqual(self.vector.index("b"), 1)
+
+        with self.assertRaisesRegex(ValueError, r"^index\(x\): x not in vector$"):
+            self.vector.index("z")
+
+        with self.assertRaisesRegex(ValueError, r"^remove\(x\): x not in vector$"):
+            self.vector.remove("z")
+
+        self.vector.remove("a")
+        self.assertEqual(list(self.vector), ["b"])
+
+    def test_view_index_of_a_missing_value(self) -> None:
+        view, _ = tc.TestRunner.make_tests().collection6(["a", "b"])
+
+        with self.assertRaisesRegex(ValueError, r"^index\(x\): x not in vector$"):
+            view.index("z")
 
     def test_negative_index_assign_and_del(self) -> None:
         self.vector[-1] = "z"

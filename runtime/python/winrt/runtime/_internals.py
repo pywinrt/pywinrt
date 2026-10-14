@@ -238,6 +238,46 @@ def _register(abc_type: type, typ: type) -> None:
     cast(ABCMeta, abc_type).register(typ)
 
 
+def _sequence_index(
+    self: Sequence[Any], value: Any, start: int = 0, stop: int = sys.maxsize
+) -> int:
+    """
+    Sequence.index(), with a message like the one list.index() gives rather
+    than none at all. It names a vector rather than the type, which may be a
+    wrapper such as _IVector[String] that the user never sees.
+    """
+    try:
+        return Sequence[Any].index(self, value, start, stop)
+    except ValueError:
+        raise ValueError("index(x): x not in vector") from None
+
+
+def _mutable_sequence_remove(self: MutableSequence[Any], value: Any) -> None:
+    """
+    MutableSequence.remove(), with a message like the one list.remove() gives.
+    """
+    try:
+        index = Sequence[Any].index(self, value)
+    except ValueError:
+        raise ValueError("remove(x): x not in vector") from None
+
+    del self[index]
+
+
+def _mutable_mapping_popitem(self: MutableMapping[Any, Any]) -> tuple[Any, Any]:
+    """
+    MutableMapping.popitem(), with a message like the one dict.popitem() gives.
+    """
+    try:
+        key = next(iter(self))
+    except StopIteration:
+        raise KeyError("popitem(): map is empty") from None
+
+    value = self[key]
+    del self[key]
+    return key, value
+
+
 def mixin_sequence(typ: type) -> None:
     """
     Adds missing Python mapping methods to types that implement IVectorView and
@@ -245,7 +285,7 @@ def mixin_sequence(typ: type) -> None:
     """
     # mixin methods
     if not hasattr(typ, "index"):
-        typ.index = Sequence.index  # type: ignore
+        typ.index = _sequence_index  # type: ignore
 
     if not hasattr(typ, "count"):
         typ.count = Sequence.count  # type: ignore
@@ -286,7 +326,7 @@ def mixin_mutable_sequence(typ: type) -> None:
         typ.pop = MutableSequence.pop  # type: ignore
 
     if not hasattr(typ, "remove"):
-        typ.remove = MutableSequence.remove  # type: ignore
+        typ.remove = _mutable_sequence_remove  # type: ignore
 
     if not hasattr(typ, "__iadd__"):
         typ.__iadd__ = MutableSequence.__iadd__  # type: ignore
@@ -354,7 +394,7 @@ def mixin_mutable_mapping(typ: type) -> None:
         typ._MutableMapping__marker = MutableMapping._MutableMapping__marker  # type: ignore
 
     if not hasattr(typ, "popitem"):
-        typ.popitem = MutableMapping.popitem  # type: ignore
+        typ.popitem = _mutable_mapping_popitem  # type: ignore
 
     if not hasattr(typ, "setdefault"):
         typ.setdefault = MutableMapping.setdefault  # type: ignore
