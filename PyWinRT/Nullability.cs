@@ -199,11 +199,13 @@ class ParameterNullabilityInfo
     [JsonConstructor]
     public ParameterNullabilityInfo(
         string name,
+        ParameterKind kind,
         TypeRefNullabilityInfo type,
         bool fillBuffer = false
     )
     {
         Name = name;
+        Kind = kind;
         Type = type;
         FillBuffer = fillBuffer;
     }
