@@ -261,21 +261,88 @@ CPPWINRT_HEADERS = """INCLUDE_DIRS = [
 ]"""
 
 # The Windows App SDK is redistributed with an app rather than part of Windows,
-# so its own headers and import libraries come from the NuGet packages that
-# scripts/fetch-tools.ps1 downloads. It is a metapackage over components that
-# are published separately, so each module names the component that ships what
-# it includes.
-APP_SDK_INIT = """
+# so its own headers and import libraries come from its NuGet packages. It is a
+# metapackage over components that are published separately, so each module
+# names the component that ships what it includes. A build in this repository
+# points an environment variable at the copy scripts/fetch-tools.ps1 unpacked,
+# which is also how a machine that cannot reach nuget.org builds; a build from
+# the source distribution downloads the component instead, so that it needs
+# nothing but PyPI and nuget.org, and checks it against the hash taken when the
+# setup.py was generated.
+APP_SDK_INIT = '''
+# Each Windows App SDK component the module compiles against, named by the
+# environment variable that points at an unpacked copy of it: what it is
+# unpacked as, where nuget.org serves it, and what it has to hash to.
+APP_SDK_PACKAGES = {{
+{packages}}}
+
+
+def unpack_app_sdk_package(env: str) -> pathlib.Path:
+    """
+    Where the component named by @p env is unpacked: the copy the environment
+    variable points at, or else one downloaded from nuget.org into build/.
+    """
+    if env in os.environ:
+        return pathlib.Path(os.environ[env]).resolve()
+
+    name, url, sha256 = APP_SDK_PACKAGES[env]
+    path = pathlib.Path(__file__).parent.resolve() / "build" / "nuget" / name
+
+    if path.is_dir():
+        return path
+
+    try:
+        with urllib.request.urlopen(url, timeout=120) as response:
+            data = response.read()
+    except OSError as error:
+        raise RuntimeError(
+            f"could not download {{url}}: {{error}}. Set {{env}} to an unpacked"
+            f" copy of {{name}} to build without reaching the network."
+        ) from error
+
+    digest = hashlib.sha256(data).hexdigest()
+
+    if digest != sha256:
+        raise RuntimeError(f"{{url}} hashes to {{digest}} and not to {{sha256}}")
+
+    # Unpacked beside where it goes and then moved there, so that a build
+    # stopped halfway leaves nothing the next one would take for unpacked.
+    partial = path.with_name(path.name + ".partial")
+    shutil.rmtree(partial, ignore_errors=True)
+
+    with zipfile.ZipFile(io.BytesIO(data)) as package:
+        package.extractall(partial)
+
+    partial.rename(path)
+
+    return path
+
+
 WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {{}}
 
-for name in [{envs}]:
-    try:
-        WINDOWS_APP_SDK_PATHS[name] = pathlib.Path(os.environ[name]).resolve()
-    except KeyError:
-        raise RuntimeError(f"Please set the {{name}} environment variable")
-
+for name in APP_SDK_PACKAGES:
+    WINDOWS_APP_SDK_PATHS[name] = unpack_app_sdk_package(name)
     print(f"Using {{name}} from {{WINDOWS_APP_SDK_PATHS[name]}}")
     INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
+'''
+
+# The release of the Windows App SDK that the bootstrap module is built for,
+# which it and MddBootstrap.h read from WindowsAppSDK-VersionInfo.h. That header
+# is the one file the build would need from the Runtime component, which
+# scripts/app_sdk.py takes out of the package rather than install, so the macros
+# they read are written into the package instead, from that copy, and a build
+# from the source distribution downloads only Foundation.
+VERSION_INFO_H = """// WARNING: Please don't edit this file. It was automatically generated.
+//
+// The Windows App SDK release this module is built for, as
+// WindowsAppSDK-VersionInfo.h in {nuget_package} {nuget_version}
+// defines it.
+
+#pragma once
+
+{defines}"""
+
+VERSION_INFO_MANIFEST_IN = """include version_info.h
 """
 
 # An interop package's headers are not package data - nothing installs them -

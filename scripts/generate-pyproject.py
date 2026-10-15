@@ -89,34 +89,38 @@ class DllPayload(NamedTuple):
         """
         return versions.unpacked_nuget_path(self.nuget_package)
 
-    def nupkg_name(self) -> str:
-        version = NUGET_PACKAGE_VERSIONS[self.nuget_package]
-
-        return f"{self.nuget_package}.{version}.nupkg"
-
     def nupkg_url(self) -> str:
-        """
-        Where nuget.org serves the package, which a build that has no unpacked
-        copy downloads it from.
-        """
-        version = NUGET_PACKAGE_VERSIONS[self.nuget_package]
-        package = self.nuget_package.lower()
-
-        return (
-            "https://api.nuget.org/v3-flatcontainer"
-            f"/{package}/{version}/{package}.{version}.nupkg"
-        )
+        return nupkg_url(self.nuget_package)
 
     def nupkg_sha256(self) -> str:
-        """
-        What the downloaded package has to hash to.
+        return nupkg_sha256(self.nuget_package)
 
-        It is taken from the copy in _tools/, which nuget left there when it
-        unpacked the package and which is byte for byte what nuget.org serves.
-        """
-        nupkg = self.nuget_path() / self.nupkg_name()
 
-        return hashlib.sha256(nupkg.read_bytes()).hexdigest()
+def nupkg_url(package: str) -> str:
+    """
+    Where nuget.org serves @p package, which a build that has no unpacked copy
+    downloads it from.
+    """
+    version = NUGET_PACKAGE_VERSIONS[package]
+    lower = package.lower()
+
+    return (
+        "https://api.nuget.org/v3-flatcontainer"
+        f"/{lower}/{version}/{lower}.{version}.nupkg"
+    )
+
+
+def nupkg_sha256(package: str) -> str:
+    """
+    What @p package has to hash to when it is downloaded.
+
+    It is taken from the copy in _tools/, which nuget left there when it
+    unpacked the package and which is byte for byte what nuget.org serves.
+    """
+    version = NUGET_PACKAGE_VERSIONS[package]
+    nupkg = versions.unpacked_nuget_path(package) / f"{package}.{version}.nupkg"
+
+    return hashlib.sha256(nupkg.read_bytes()).hexdigest()
 
 
 # The component .dlls that are redistributed in a distribution of their own,
@@ -685,6 +689,19 @@ def write_compiled_project_files(
             if own_headers:
                 f.write(templates.OWN_HEADERS_MANIFEST_IN)
 
+            if is_app_sdk_bootstrap_package(package_name):
+                f.write(templates.VERSION_INFO_MANIFEST_IN)
+
+        if is_app_sdk_bootstrap_package(package_name):
+            with open_if_changed(package_path / "version_info.h") as f:
+                f.write(
+                    templates.VERSION_INFO_H.format(
+                        nuget_package=APP_SDK_RUNTIME_PACKAGE,
+                        nuget_version=NUGET_PACKAGE_VERSIONS[APP_SDK_RUNTIME_PACKAGE],
+                        defines=format_version_info_defines(),
+                    )
+                )
+
         with open_if_changed(package_path / INTEROP_HEADER) as f:
             f.write(
                 templates.INTEROP_HEADER.format(
@@ -699,6 +716,9 @@ def write_compiled_project_files(
                 setup_py_imports=format_setup_py_imports(
                     ["os", "pathlib"]
                     if is_runtime or needs_app_sdk or own_headers
+                    else [],
+                    ["hashlib", "io", "shutil", "urllib.request", "zipfile"]
+                    if needs_app_sdk
                     else [],
                     ["json"] if redistributes else [],
                 ),
@@ -740,12 +760,7 @@ def write_compiled_project_files(
                 ),
                 extra_init=(
                     templates.APP_SDK_INIT.format(
-                        envs=", ".join(
-                            f'"{name}"'
-                            for name in packages.APP_SDK_INTEROP_COMPONENTS[
-                                package_name
-                            ]
-                        )
+                        packages=format_app_sdk_packages(package_name)
                     )
                     if needs_app_sdk
                     else ""
@@ -855,6 +870,62 @@ def format_setup_py_imports(*groups: list[str]) -> str:
         return ""
 
     return "\n" + "".join(f"import {module}\n" for module in modules)
+
+
+def format_app_sdk_packages(package_name: str) -> str:
+    """
+    The Windows App SDK components an interop package compiles against, as the
+    entries of its setup.py's APP_SDK_PACKAGES.
+    """
+    entries: list[str] = []
+
+    for env in packages.APP_SDK_INTEROP_COMPONENTS[package_name]:
+        package = packages.NUGET_ENVIRONMENT[env]
+        entries.append(
+            f'    "{env}": (\n'
+            f'        "{package}.{NUGET_PACKAGE_VERSIONS[package]}",\n'
+            f'        "{nupkg_url(package)}",\n'
+            f'        "{nupkg_sha256(package)}",\n'
+            "    ),\n"
+        )
+
+    return "".join(entries)
+
+
+# The Runtime component of the Windows App SDK, whose WindowsAppSDK-VersionInfo.h
+# says which release the bootstrap module is built for, and the macros of it
+# that the module and MddBootstrap.h read.
+APP_SDK_RUNTIME_PACKAGE = "Microsoft.WindowsAppSDK.Runtime"
+VERSION_INFO_MACROS = [
+    "WINDOWSAPPSDK_RELEASE_MAJOR",
+    "WINDOWSAPPSDK_RELEASE_MINOR",
+    "WINDOWSAPPSDK_RELEASE_MAJORMINOR",
+    "WINDOWSAPPSDK_RELEASE_VERSION_TAG",
+    "WINDOWSAPPSDK_RELEASE_VERSION_TAG_W",
+    "WINDOWSAPPSDK_RUNTIME_VERSION_UINT64",
+    "WINDOWSAPPSDK_RUNTIME_VERSION_DOTQUADSTRING",
+]
+
+
+def format_version_info_defines() -> str:
+    """
+    The macros the bootstrap module reads, as the pinned Runtime component's
+    WindowsAppSDK-VersionInfo.h defines them.
+    """
+    header = (
+        versions.unpacked_nuget_path(APP_SDK_RUNTIME_PACKAGE)
+        / "include"
+        / "WindowsAppSDK-VersionInfo.h"
+    )
+    values = dict(
+        re.findall(
+            r"^#define (\w+)[ \t]+(.*?)[ \t]*$",
+            header.read_text(encoding="utf-8"),
+            re.MULTILINE,
+        )
+    )
+
+    return "".join(f"#define {name} {values[name]}\n" for name in VERSION_INFO_MACROS)
 
 
 def format_dll_paths(payload: DllPayload, wheel_tag: bool) -> str:

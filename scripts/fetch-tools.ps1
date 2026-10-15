@@ -65,8 +65,9 @@ if (!$noWindowsAppSDK) {
         }
     }
 
-    # WindowsAppSDK-VersionInfo.h, which the bootstrap interop module includes,
-    # into the place an installed Runtime component would have put it
+    # WindowsAppSDK-VersionInfo.h, which scripts/generate-pyproject.py takes the
+    # bootstrap interop module's release from, into the place an installed
+    # Runtime component would have put it
     & py "$repoRootPath/scripts/app_sdk.py"
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

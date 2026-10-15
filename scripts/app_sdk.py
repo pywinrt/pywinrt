@@ -39,9 +39,10 @@ COMPONENTS = {
 
 RUNTIME_COMPONENT = "Microsoft.WindowsAppSDK.Runtime"
 
-# What the bootstrap interop module includes to learn which Windows App
-# Runtime an App SDK release expects: WINDOWSAPPSDK_RELEASE_MAJOR and MINOR,
-# and the version it hands to MddBootstrapInitialize.
+# Where an App SDK release says which Windows App Runtime it expects:
+# WINDOWSAPPSDK_RELEASE_MAJOR and MINOR, and the version the bootstrap interop
+# module hands to MddBootstrapInitialize. scripts/generate-pyproject.py copies
+# those into the module's version_info.h.
 VERSION_HEADER = "include/WindowsAppSDK-VersionInfo.h"
 
 
