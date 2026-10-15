@@ -23,11 +23,10 @@ set(CMAKE_INSTALL_MESSAGE NEVER)
 # .config/_tools.json is the single source of truth for NuGet package versions
 file(READ ".config/_tools.json" TOOLS_JSON)
 string(JSON WEBVIEW2_VERSION GET ${TOOLS_JSON} "Microsoft.Web.WebView2")
-# Only the three components the interop modules compile against: the App SDK
+# Only the two components the interop modules compile against: the App SDK
 # is a metapackage and nothing else here is built from it.
 string(JSON WASDK_FOUNDATION_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.Foundation")
 string(JSON WASDK_INTERACTIVE_EXPERIENCES_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.InteractiveExperiences")
-string(JSON WASDK_RUNTIME_VERSION GET ${TOOLS_JSON} "Microsoft.WindowsAppSDK.Runtime")
 string(JSON TEST_WINRT_VERSION GET ${TOOLS_JSON} "PyWinRT.TestWinRT")
 
 # where scripts/fetch-tools.ps1 puts those packages

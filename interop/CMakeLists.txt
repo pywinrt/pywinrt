@@ -42,11 +42,11 @@ pywinrt_add_interop_module(_winrt_windows_ui_xaml_hosting_interop
 # well, since the App SDK is redistributed with the app rather than part of
 # Windows. Each takes them from the component that ships what it includes:
 # Microsoft.UI.Interop.h from InteractiveExperiences, and the bootstrapper's
-# header, import library and DLL from Foundation. The one header the Runtime
-# component is read for is fetched by scripts/app_sdk.py rather than installed.
+# header, import library and DLL from Foundation. The release the bootstrapper
+# looks for is in version_info.h beside its source, which
+# scripts/generate-pyproject.py writes from the Runtime component.
 set(WASDK_FOUNDATION_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.WindowsAppSDK.Foundation.${WASDK_FOUNDATION_VERSION}")
 set(WASDK_INTERACTIVE_EXPERIENCES_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.WindowsAppSDK.InteractiveExperiences.${WASDK_INTERACTIVE_EXPERIENCES_VERSION}")
-set(WASDK_RUNTIME_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.WindowsAppSDK.Runtime.${WASDK_RUNTIME_VERSION}")
 set(WASDK_FOUNDATION_LIB_PATH "${WASDK_FOUNDATION_PATH}/lib/native/${PYWINRT_TARGET_ARCH}")
 
 pywinrt_add_interop_module(_winrt_microsoft_ui_interop
@@ -64,11 +64,9 @@ endif()
 pywinrt_add_interop_module(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
     "winrt-wasdk-bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winrt")
-# MddBootstrap.h is in Foundation and WindowsAppSDK-VersionInfo.h, which says
-# which Windows App Runtime this release expects, is in Runtime.
+# MddBootstrap.h is in Foundation.
 target_include_directories(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
-    "${WASDK_FOUNDATION_PATH}/include"
-    "${WASDK_RUNTIME_PATH}/include")
+    "${WASDK_FOUNDATION_PATH}/include")
 target_link_directories(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE
     "${WASDK_FOUNDATION_LIB_PATH}")
 target_link_libraries(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE

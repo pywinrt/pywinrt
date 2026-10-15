@@ -67,3 +67,4 @@ is also where the releases before v4.0 are.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
 - Fixed `bootstrap.RELEASE_VERSION`, `RUNTIME_VERSION` and `Shutdown` missing.
 - Fixed the interop packages declaring no dependency on what they import.
+- Fixed the interop packages' sdists needing environment variables to build.

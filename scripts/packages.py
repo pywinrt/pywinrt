@@ -37,7 +37,6 @@ REDIST_PATH = (REPO_PATH / "redist").resolve()
 NUGET_ENVIRONMENT = {
     "WASDK_FOUNDATION_PATH": "Microsoft.WindowsAppSDK.Foundation",
     "WASDK_INTERACTIVE_EXPERIENCES_PATH": "Microsoft.WindowsAppSDK.InteractiveExperiences",
-    "WASDK_RUNTIME_PATH": "Microsoft.WindowsAppSDK.Runtime",
     "WEBVIEW2_PATH": "Microsoft.Web.WebView2",
 }
 
@@ -61,10 +60,10 @@ INTEROP_DISTRIBUTIONS = {
 APP_SDK_INTEROP_COMPONENTS = {
     # Microsoft.UI.Interop.h
     "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
-    # MddBootstrap.h and its import library, and WindowsAppSDK-VersionInfo.h
+    # MddBootstrap.h and its import library; the release it expects is written
+    # into the package by scripts/generate-pyproject.py
     "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
-        "WASDK_FOUNDATION_PATH",
-        "WASDK_RUNTIME_PATH",
+        "WASDK_FOUNDATION_PATH"
     ],
 }
 

@@ -1,11 +1,12 @@
 #include "interop.h"
+// before MddBootstrap.h, which reads the release it expects from it
+#include "version_info.h"
 
 #include <windows.h>
 
 // MddBootstrap.h calls std::abort() without including <cstdlib>.
 #include <cstdlib>
 
-#include <WindowsAppSDK-VersionInfo.h>
 #include <MddBootstrap.h>
 
 #include <memory>
