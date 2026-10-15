@@ -453,9 +453,19 @@ namespace py::interp
                 *next++ = *static_cast<winrt::guid const*>(iface.info->guid);
             }
 
-            std::copy(inherited.begin(), inherited.end(), next);
+            // The object composed over lists the overridable interfaces too,
+            // which this object answers itself and has listed already.
+            auto* const own_end = next;
 
-            *count = static_cast<uint32_t>(size);
+            for (auto const& iid : inherited)
+            {
+                if (std::find(iids, own_end, iid) == own_end)
+                {
+                    *next++ = iid;
+                }
+            }
+
+            *count = static_cast<uint32_t>(next - iids);
             *array = iids;
 
             return 0;

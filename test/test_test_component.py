@@ -81,6 +81,19 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 0)
         self.assertEqual(c.one(), 1)
 
+    def test_composed_iids_are_listed_once(self) -> None:
+        # The object composed over lists the overridable interfaces as well,
+        # which the composed object answers itself.
+        class D(tc.DerivedOverride):
+            pass
+
+        iids = list(D()._iids_)
+
+        self.assertEqual(len(iids), len(set(iids)))
+        # IOverrideOverrides and IDerivedOverrideOverrides
+        self.assertIn(UUID("151ca069-60b7-5c26-a3f3-0cf4db7c4a10"), iids)
+        self.assertIn(UUID("29af5e3f-1046-5a3e-88c7-a2eadac91378"), iids)
+
     def test_composable_runtime_class_name(self) -> None:
         # C++/WinRT names a composed object after the first interface the
         # derived object implements itself, so a subclass of a class that
