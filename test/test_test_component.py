@@ -765,11 +765,12 @@ class TestTestComponent(unittest.TestCase):
     def test_tuple_to_struct(self) -> None:
         test = tc.TestRunner.make_tests()
 
-        # can pass unspecialized tuple as projected struct
-        _, _ = test.param13(
-            (1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-        )
+        # can pass unspecialized tuple as projected struct; the call refuses
+        # two arguments that differ, and hands the struct back twice
+        expected = tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10))
+        result = test.param13((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), expected)
+
+        self.assertEqual(result, (expected, expected))
 
     def test_tuple_to_struct_wrong_arity(self) -> None:
         test = tc.TestRunner.make_tests()
@@ -795,13 +796,15 @@ class TestTestComponent(unittest.TestCase):
         test = tc.TestRunner.make_tests()
 
         # nested structs can also be tuples
-        _, _ = test.param15(
-            ((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), (True, "b", "c", 4)),
-            tc.Nested(
-                tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-                tc.NonBlittable(True, "b", "c", 4),
-            ),
+        expected = tc.Nested(
+            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            tc.NonBlittable(True, "b", "c", 4),
         )
+        result = test.param15(
+            ((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), (True, "b", "c", 4)), expected
+        )
+
+        self.assertEqual(result, (expected, expected))
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     def test_struct_replace_bool(self) -> None:
@@ -909,7 +912,10 @@ class TestTestComponent(unittest.TestCase):
             wr.uninit_apartment()
 
     def test_async_action_get(self) -> None:
-        tc.TestRunner.create_async_action(10).get()
+        op = tc.TestRunner.create_async_action(10)
+
+        self.assertIsNone(op.get())
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
     def test_async_action_get_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(10)
@@ -1021,7 +1027,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(status, wf.AsyncStatus.ERROR)
 
     def test_async_action_with_progress_get(self) -> None:
-        tc.TestRunner.create_async_action_with_progress(10, [1, 2]).get()
+        op = tc.TestRunner.create_async_action_with_progress(10, [1, 2])
+
+        self.assertIsNone(op.get())
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
     def test_async_action_progress_handler_is_replaced(self) -> None:
         first: list[int] = []

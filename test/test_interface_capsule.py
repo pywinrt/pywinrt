@@ -41,6 +41,13 @@ E_INVALIDARG = -2147024809
 INTERFACE_CAPSULE_NAME = b"winrt.interface"
 
 
+def is_interface_capsule(obj: object) -> bool:
+    is_valid = ctypes.pythonapi.PyCapsule_IsValid
+    is_valid.argtypes = (ctypes.py_object, ctypes.c_char_p)
+    is_valid.restype = ctypes.c_int
+    return bool(is_valid(obj, INTERFACE_CAPSULE_NAME))
+
+
 class ErrorInfo:
     """
     The error info that originating ``hresult`` with ``message`` leaves on this
@@ -253,7 +260,9 @@ class TestActivationFactory(unittest.TestCase):
     def test_static_class(self) -> None:
         # A static class has a factory although it has no instances, and so no
         # default interface.
-        interop.get_activation_factory(ApiInformation, IID_IACTIVATIONFACTORY)
+        capsule = interop.get_activation_factory(ApiInformation, IID_IACTIVATIONFACTORY)
+
+        self.assertTrue(is_interface_capsule(capsule))
 
     def test_interface_not_implemented(self) -> None:
         with self.assertRaises(OSError):
