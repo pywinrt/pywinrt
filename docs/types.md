@@ -97,6 +97,15 @@ type raises [`ValueError`][ValueError].
     3.14's `PyLong_AsUInt32()` and `PyLong_AsUInt64()` do. Previously it raised
     `OverflowError`.
 
+A `Char16` takes a `str` of one character. A character outside the Basic
+Multilingual Plane, such as an emoji, needs two UTF-16 code units and raises
+[`ValueError`][ValueError].
+
+!!! version-changed "Changed in version 4.0"
+
+    A character outside the Basic Multilingual Plane raises `ValueError`.
+    Previously it raised `TypeError`, saying the string was of length 2.
+
 The eleven types that have no Python type of their own are named in Python by
 the aliases in [`winrt.system`](api/system.md), such as `winrt.system.Int32`. Each
 alias is annotated with what its type is called in each of the three languages
@@ -341,12 +350,19 @@ interface such as `IVector[str]` included, it raises [`TypeError`][TypeError].
 [`isinstance()`][isinstance] asks the same question without raising; see
 [Interfaces](#interfaces).
 
+!!! version-changed "Changed in version 4.0"
+
+    `Type._from(obj)`, the spelling from before `as_()`, is deprecated and
+    raises a [`DeprecationWarning`][DeprecationWarning]. Write `obj.as_(Type)`
+    instead.
+
 !!! seealso "See also"
 
     [`winrt.runtime.interop.as_interface()`](api/runtime.interop.md#as_interface) for an
     interface that the projection does not know.
 
 [TypeError]: https://docs.python.org/3/builtins/exceptions.html#TypeError
+[DeprecationWarning]: https://docs.python.org/3/builtins/exceptions.html#DeprecationWarning
 [QueryInterface]: https://learn.microsoft.com/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(refiid_void)
 
 ### Methods
@@ -522,7 +538,8 @@ async def scan() -> None:
 
 A handler is a plain function, not an `async def` one: WinRT does not await
 what a handler returns, so the body of an `async def` handler would never run,
-and passing one raises `TypeError`.
+and passing one raises `TypeError`. `None` raises `TypeError` too, since it is
+no handler. A handler is taken off with `remove_<event>()`.
 
 The sender carries on after the handler returns, so a property of the sender
 read later from a task on the event loop describes the object as it is then,
@@ -587,11 +604,6 @@ dropped rather than delivered.
 An exception that escapes a handler goes to `sys.unraisablehook()`, as for any
 callback WinRT calls, so handle exceptions inside the handler. See
 [Exceptions](#exceptions).
-
-!!! version-changed "Changed in version 4.0"
-
-    `EventRegistrationToken` is a subclass of `int`. Previously it was a
-    struct with a single `value` field.
 
 ## Interfaces
 
@@ -723,6 +735,18 @@ from winrt.windows.foundation import Deferral
 
 deferral = Deferral(lambda: print("completed"))
 ```
+
+WinRT calls the callable and does not await what it returns, so an
+`async def` function raises [`TypeError`][TypeError] wherever a delegate is
+passed, since its body would never run. `None` passes no delegate, where WinRT
+accepts that, except as an event handler or as an async operation's
+`completed` or `progress` handler, which raise `TypeError` for it.
+
+!!! version-changed "Changed in version 4.0"
+
+    An `async def` function, and `None` where it is refused, raise
+    `TypeError`. Previously the body of an `async def` function never ran,
+    and `None` could crash the process.
 
 A delegate that has outputs returns them in the same way as a
 [method](#methods): its return value alone, or, with output parameters, a
@@ -866,6 +890,9 @@ of `OSError`: a path that does not exist raises
 !!! seealso "See also"
 
     [`winrt.system.hresult`](api/system.hresult.md) for some common error codes.
+
+An error code that WinRT hands back as a value rather than raising, such as an
+async operation's `error_code`, is an [`HResult`](#windowsfoundationhresult).
 
 On the other hand, Python exceptions cannot be propagated to C++ code. WinRT
 requires that errors are serializable, but Python exceptions are not. So if a
@@ -1426,6 +1453,29 @@ WinRT serializes values of this type as 100s of nanoseconds.
 It uses a signed 64-bit integer for this, so the `"q"` format string is used in Python.
 
 [OverflowError]: https://docs.python.org/3/builtins/exceptions.html#OverflowError
+
+### Error codes and event tokens
+
+Two structs in WinRT hold a single integer, and are projected as subclasses of
+[`int`][int], so they compare, hash and format as the integer they hold.
+
+#### Windows.Foundation.HResult
+
+An error code that WinRT hands back as a value rather than raising, such as an
+async operation's `error_code`. It compares with
+[`OSError.winerror`][OSError.winerror] and with the codes in
+[`winrt.system.hresult`](api/system.hresult.md) directly.
+
+#### Windows.Foundation.EventRegistrationToken
+
+What `add_<event>()` returns and `remove_<event>()` takes. See
+[Events](#events).
+
+!!! version-changed "Changed in version 4.0"
+
+    `HResult` and `EventRegistrationToken` are subclasses of `int`. Previously
+    each was a struct with a single `value` field, which is deprecated and
+    raises a [`DeprecationWarning`][DeprecationWarning].
 
 ### Numerics
 
