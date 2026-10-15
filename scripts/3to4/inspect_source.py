@@ -54,6 +54,9 @@ MATRICES = {"Matrix3x2", "Matrix4x4"}
 
 MATRIX_PRODUCT = "@ for the product of two matrices; * between two of them raises"
 
+# what winrt.system.Buffer, deprecated in v4, was all along
+BUFFER = "collections.abc.Buffer (typing_extensions.Buffer before Python 3.12)"
+
 
 def normalize(name: str) -> str:
     """
@@ -164,6 +167,30 @@ def matrix_names(tree: ast.AST) -> dict[str, str]:
     return names
 
 
+def system_module_names(tree: ast.AST) -> set[str]:
+    """
+    The names winrt.system goes by in @p tree: its own, and any that
+    ``import winrt.system as ws``, ``from winrt import system`` or
+    ``import winrt as w`` gives it.
+    """
+    names = {"winrt.system"}
+
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                if alias.name == "winrt.system" and alias.asname:
+                    names.add(alias.asname)
+                elif alias.name == "winrt" and alias.asname:
+                    names.add(f"{alias.asname}.system")
+        elif isinstance(node, ast.ImportFrom):
+            if node.level == 0 and node.module == "winrt":
+                for alias in node.names:
+                    if alias.name == "system":
+                        names.add(alias.asname or alias.name)
+
+    return names
+
+
 def source_of(lines: list[str], node: ast.expr) -> str:
     """
     The text of @p node, on one line.
@@ -203,6 +230,7 @@ def from_match(lines: list[str], node: ast.Call) -> Match:
 
 def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
     matrices = matrix_names(tree)
+    systems = system_module_names(tree)
 
     for node in ast.walk(tree):
         if isinstance(node, ast.Attribute):
@@ -241,6 +269,15 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
                         "winrt.windows.foundation.EventRegistrationToken.value",
                         f"{receiver}, without .value: an EventRegistrationToken is an int",
                     )
+
+            if node.attr == "Buffer" and ast.unparse(node.value) in systems:
+                assert node.end_lineno is not None
+                yield Match(
+                    node.end_lineno,
+                    attribute_column(lines, node),
+                    "winrt.system.Buffer",
+                    BUFFER,
+                )
 
             if node.attr in MATRICES:
                 assert node.end_lineno is not None
@@ -300,6 +337,16 @@ def find(tree: ast.AST, lines: list[str]) -> Iterator[Match]:
         elif isinstance(node, ast.ImportFrom):
             if node.level or node.module is None:
                 continue
+
+            if node.module == "winrt.system":
+                for alias in node.names:
+                    if alias.name == "Buffer":
+                        yield Match(
+                            alias.lineno,
+                            column(lines, alias.lineno, alias.col_offset),
+                            "winrt.system.Buffer",
+                            BUFFER,
+                        )
 
             new_module = renamed_package(node.module)
 
