@@ -16,6 +16,7 @@ releases before v4.0 are.
 - Protected constructors are projected, so a class such as `Panel` is derivable.
 - Protected properties are projected, such as `Control._default_style_key`.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
+- The type hints of the numerics structs have `__buffer__`, `@` and indexing.
 
 ### Changed
 - The type hints say a map has no hash, so a type checker flags `{a_map}`.
@@ -37,6 +38,7 @@ releases before v4.0 are.
   namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
   release, but it is not the same API: the classes for enumerating and
   describing servers are gone and what is there now filters messages.
+- BREAKING: `DesktopWindowXamlSourceNative` is not a `winrt.system.Object`.
 
 ### Deprecated
 - `create_reference()` is marked `@deprecated` in the type hints.

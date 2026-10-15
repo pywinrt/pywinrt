@@ -17,6 +17,10 @@ repository](../CHANGELOG.md).
 - A vector's slices can be assigned and deleted, with a step of 1.
 - `copy.copy()` and `copy.deepcopy()` of a struct return the struct itself.
 - `winrt.system.Object_Static`, the metaclass that the type hints name.
+- A numerics struct exports a buffer, so NumPy reads one without a copy.
+- `@` is the matrix and quaternion product, and `vector @ matrix` the transform.
+- Numerics vectors and quaternions are sequences, and `m[r, c]` reads a matrix.
+- A float buffer is taken where a numerics struct or an array of them is.
 
 ### Changed
 - BREAKING: A map is unhashable, like a `dict`, since it compares by content.
@@ -28,6 +32,9 @@ repository](../CHANGELOG.md).
 - Adding `None` as an event handler now raises `TypeError` instead of crashing.
 - `init_apartment()` raises `ValueError` for an unknown type, not `OSError`.
 - Unboxing a value boxed as another type raises `TypeError`, not `OSError`.
+- BREAKING: `Matrix * Matrix` raises `TypeError`, since `@` is the product.
+- BREAKING: An `Array` of numerics structs exports a float buffer, as `(n, 3)`.
+- BREAKING: A numerics operator takes the struct or a number, not a tuple.
 
 ### Deprecated
 - `winrt.system.Buffer` warns, in favor of `collections.abc.Buffer`.
