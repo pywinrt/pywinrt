@@ -1071,13 +1071,26 @@ class TestTestComponent(unittest.TestCase):
 
     @async_test
     async def test_async_action_cancel(self) -> None:
-        op = tc.TestRunner.create_async_action(500)
+        source = tc.AsyncActionSource()
+        op = source.operation
 
-        with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
                 await op
 
-        # The Python asyncio.Future propagates the cancellation to the WinRT action.
+        task = asyncio.create_task(wait_with_timeout())
+
+        try:
+            await self._run_callbacks()
+
+            # The timeout asked the WinRT action to cancel.
+            self.assertEqual(source.cancel_request_count, 1)
+        finally:
+            source.cancel()
+
+        with self.assertRaises(asyncio.TimeoutError):
+            await task
+
         self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
 
     @async_test
@@ -1185,8 +1198,9 @@ class TestTestComponent(unittest.TestCase):
     @async_test
     async def test_async_action_with_progress_iter_cancel(self) -> None:
         expected = [1, 2, 3]
-        op = tc.TestRunner.create_async_action_with_progress(500, expected)
-        asyncio.get_running_loop().call_later(0.1, op.cancel)
+        # a report every 100 ms, the first of which the cancel comes before
+        op = tc.TestRunner.create_async_action_with_progress(100, expected)
+        asyncio.get_running_loop().call_later(0.02, op.cancel)
 
         actual: list[int] = []
 
