@@ -85,6 +85,34 @@ namespace
             return nullptr;
         }
     }
+
+    /**
+     * Whether @p module is a namespace package, which no file of its own
+     * defines.
+     *
+     * @returns -1 with a Python error set.
+     */
+    int is_namespace_package(PyObject* module) noexcept
+    {
+        py::pyobj_handle spec{};
+        if (PyObject_GetOptionalAttrString(module, "__spec__", spec.put()) < 0)
+        {
+            return -1;
+        }
+
+        if (!spec || Py_IsNone(spec.get()))
+        {
+            return 0;
+        }
+
+        py::pyobj_handle origin{};
+        if (PyObject_GetOptionalAttrString(spec.get(), "origin", origin.put()) < 0)
+        {
+            return -1;
+        }
+
+        return !origin || Py_IsNone(origin.get());
+    }
 } // namespace
 
 PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
@@ -151,10 +179,51 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         return nullptr;
     }
 
-    pyobj_handle type{PyObject_GetAttrString(module.get(), type_name.c_str())};
-    if (!type)
+    pyobj_handle type{};
+    if (PyObject_GetOptionalAttrString(module.get(), type_name.c_str(), type.put()) < 0)
     {
         return nullptr;
+    }
+
+    if (!type)
+    {
+        // Every package installs into the same directories, so a namespace
+        // whose package is missing is still a namespace package when a package
+        // of a namespace below it is installed. It has no types, and the
+        // package to install is the one named after it, so it is missing as a
+        // module would be.
+        auto const is_namespace = is_namespace_package(module.get());
+        if (is_namespace < 0)
+        {
+            return nullptr;
+        }
+
+        if (is_namespace)
+        {
+            pyobj_handle name{PyUnicode_FromString(module_name.c_str())};
+            if (!name)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle message{
+                PyUnicode_FromFormat("No module named '%s'", module_name.c_str())};
+            if (!message)
+            {
+                return nullptr;
+            }
+
+            PyErr_SetImportErrorSubclass(
+                PyExc_ModuleNotFoundError, message.get(), name.get(), nullptr);
+            return nullptr;
+        }
+
+        // Asked again for the module's own AttributeError.
+        type.attach(PyObject_GetAttrString(module.get(), type_name.c_str()));
+        if (!type)
+        {
+            return nullptr;
+        }
     }
 
     if (!PyType_Check(type.get()))
