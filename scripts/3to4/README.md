@@ -167,7 +167,8 @@ There is also an `inspect_source.py` script that looks for renamed methods in
 your Python files, along with the other changes that it can find by looking at
 the source: the `winui3` and `webview2` imports, the deprecated
 `HResult.value` and `EventRegistrationToken.value`, the deprecated `_from()`,
-format strings passed to `winrt.system.Array`, the uses of `Matrix3x2` and
+the deprecated `winrt.system.Buffer`, format strings passed to
+`winrt.system.Array`, the uses of `Matrix3x2` and
 `Matrix4x4`, whose product is `@`, and requirements on v3 distributions that
 were renamed, removed or constrained to v3.
 
@@ -233,6 +234,15 @@ it suggests may repeat each other.
 `Type._from(obj)` is deprecated and raises a `DeprecationWarning`. Write
 `obj.as_(Type)` instead, which has done the same thing since v3. The script
 reports each call with the `as_()` call that replaces it.
+
+## `winrt.system.Buffer` is `collections.abc.Buffer`
+
+`winrt.system` imported `Buffer` from `typing_extensions` in v3, so
+`from winrt.system import Buffer` gave that alias. In v4 the name is
+deprecated, and reading it issues a `DeprecationWarning`. Import `Buffer` from
+`collections.abc` instead, or from `typing_extensions` before Python 3.12.
+The script reports each import and each `winrt.system.Buffer`, whatever name
+the module is imported as.
 
 ## The product of two matrices is `@`
 

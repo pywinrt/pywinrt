@@ -22,7 +22,7 @@ SOURCE = textwrap.dedent(
     import winui3.microsoft.ui.xaml
     from webview2.microsoft.web.webview2.core import CoreWebView2
     from winrt.microsoft.web import webview2
-    from winrt.system import Array, Int32
+    from winrt.system import Array, Buffer, Int32
 
     services = device.get_gatt_services_with_cache_mode_async(mode)
     updater = manager.create_tile_updater_for_application("id")
@@ -40,6 +40,12 @@ SOURCE = textwrap.dedent(
         inputs["name"]
     )
     stream = IRandomAccessStream._from(a or b)
+    data: winrt.system.Buffer = b""
+    from winrt import system
+    import winrt.system as ws
+    kept: system.Buffer | ws.Buffer = b""
+    import winrt as w
+    more: w.system.Buffer = b""
     """
 )
 
@@ -83,6 +89,10 @@ class Inspect(unittest.TestCase):
                 f"{p}:2:1",
                 "possible match: webview2.microsoft.web.webview2.core",
                 "rename to: winrt.microsoft.web.webview2.core",
+                f"{p}:4:33",
+                "possible match: winrt.system.Buffer",
+                "rename to: collections.abc.Buffer"
+                " (typing_extensions.Buffer before Python 3.12)",
                 f"{p}:6:19",
                 "possible match: winrt.windows.devices.bluetooth.BluetoothLEDevice"
                 ".get_gatt_services_with_cache_mode_async",
@@ -121,6 +131,23 @@ class Inspect(unittest.TestCase):
                 f"{p}:21:30",
                 "possible match: IRandomAccessStream._from",
                 "rename to: (a or b).as_(IRandomAccessStream)",
+                f"{p}:22:20",
+                "possible match: winrt.system.Buffer",
+                "rename to: collections.abc.Buffer"
+                " (typing_extensions.Buffer before Python 3.12)",
+                # and under the names the module is imported as
+                f"{p}:25:14",
+                "possible match: winrt.system.Buffer",
+                "rename to: collections.abc.Buffer"
+                " (typing_extensions.Buffer before Python 3.12)",
+                f"{p}:25:26",
+                "possible match: winrt.system.Buffer",
+                "rename to: collections.abc.Buffer"
+                " (typing_extensions.Buffer before Python 3.12)",
+                f"{p}:27:16",
+                "possible match: winrt.system.Buffer",
+                "rename to: collections.abc.Buffer"
+                " (typing_extensions.Buffer before Python 3.12)",
             ],
         )
 
