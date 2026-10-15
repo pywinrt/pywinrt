@@ -58,6 +58,15 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
+      # the changelogs, and the packaging files whose Changelog link the
+      # packaging tests check, which the patterns above leave out
+      - CHANGELOG.md
+      - runtime/CHANGELOG.md
+      - table/CHANGELOG.md
+      - table/pyproject.toml
+      - interop/*/CHANGELOG.md
+      - projection/*/CHANGELOG.md
+      - redist/*/pyproject.toml
       - test/**
   pull_request:
     paths:
@@ -110,6 +119,15 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
+      # the changelogs, and the packaging files whose Changelog link the
+      # packaging tests check, which the patterns above leave out
+      - CHANGELOG.md
+      - runtime/CHANGELOG.md
+      - table/CHANGELOG.md
+      - table/pyproject.toml
+      - interop/*/CHANGELOG.md
+      - projection/*/CHANGELOG.md
+      - redist/*/pyproject.toml
       - test/**
 
 jobs:

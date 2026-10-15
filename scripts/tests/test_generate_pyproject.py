@@ -10,6 +10,7 @@ import ast
 import re
 import tomllib
 import unittest
+from pathlib import Path
 
 from packaging.requirements import Requirement
 
@@ -70,6 +71,82 @@ class RuntimeSources(unittest.TestCase):
             ),
             on_disk,
         )
+
+
+class Changelogs(unittest.TestCase):
+    """
+    The changelog that each package's Changelog link on PyPI points at.
+
+    Each release unit keeps one in its directory, and every package it releases
+    links that one, so a reader following the link finds what changed in the
+    version they installed. A link to a file that is not in the tree stays dead
+    on PyPI for as long as the version that carries it is published.
+    """
+
+    LINK = "https://github.com/pywinrt/pywinrt/blob/main/"
+
+    def changelog_link(self, package: Path) -> str:
+        pyproject = tomllib.loads(
+            (package / "pyproject.toml").read_text(encoding="utf-8")
+        )
+        link: str = pyproject["project"]["urls"]["Changelog"]
+
+        self.assertTrue(link.startswith(self.LINK), link)
+
+        return link.removeprefix(self.LINK)
+
+    def test_every_release_unit_has_a_changelog(self) -> None:
+        for unit in versions.published_versions():
+            with self.subTest(unit=unit):
+                if unit in (versions.RUNTIME_PATH.name, versions.TABLE_PATH.name):
+                    path = versions.REPO_PATH / unit
+                elif (versions.REPO_PATH / "projection" / unit).is_dir():
+                    path = versions.REPO_PATH / "projection" / unit
+                else:
+                    path = versions.INTEROP_PATH / unit
+
+                self.assertTrue((path / "CHANGELOG.md").is_file())
+
+    def test_a_package_links_the_changelog_of_the_unit_that_releases_it(
+        self,
+    ) -> None:
+        expected = {
+            versions.RUNTIME_PATH: "runtime/CHANGELOG.md",
+            versions.TABLE_PATH: "table/CHANGELOG.md",
+        }
+
+        for package in sorted(versions.INTEROP_PATH.glob("winrt-*")):
+            family = versions.FAMILY_RELEASED_INTEROP.get(package.name)
+            expected[package] = (
+                f"projection/{family}/CHANGELOG.md"
+                if family
+                else f"interop/{package.name}/CHANGELOG.md"
+            )
+
+        for package in sorted(
+            p.parent
+            for p in (versions.REPO_PATH / "projection").glob("*/*/pyproject.toml")
+        ):
+            family = package.parent.name
+            expected[package] = (
+                "CHANGELOG.md"
+                if family in versions.UNPUBLISHED_FAMILIES
+                else f"projection/{family}/CHANGELOG.md"
+            )
+
+        for package, changelog in expected.items():
+            with self.subTest(package=package.name):
+                self.assertEqual(self.changelog_link(package), changelog)
+                self.assertTrue((versions.REPO_PATH / changelog).is_file())
+
+    def test_a_redistributed_dll_links_the_changelog_of_its_family(self) -> None:
+        # it is released with the family of the projection that imports it
+        for package in sorted((versions.REPO_PATH / "redist").glob("winrt-*")):
+            with self.subTest(package=package.name):
+                changelog = Path(self.changelog_link(package))
+
+                self.assertEqual(changelog.parent.parent.name, "projection")
+                self.assertTrue((versions.REPO_PATH / changelog).is_file())
 
 
 class StubImports(unittest.TestCase):

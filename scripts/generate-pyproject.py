@@ -16,6 +16,7 @@ import packages
 # the text of every file this writes
 import pyproject_templates as templates
 
+REPO_PATH = Path(__file__).parent.parent.resolve()
 PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
 TABLE_PATH = (Path(__file__).parent.parent / "table").resolve()
 RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
@@ -427,23 +428,30 @@ def format_dependencies(requirements: list[str]) -> str:
     return "".join(f'    "{requirement}",\n' for requirement in requirements)
 
 
-# Each family of packages is released on its own upstream's schedule, so each
-# has a changelog of its own and a reader following one from PyPI finds what
-# changed in the version they installed. The one at the root of the repository
-# is winrt-runtime's, the code generator's and everything that affects every
-# package; a family with nothing of its own, such as the test component, is
-# pointed at it too.
-FAMILY_CHANGELOGS = frozenset({"winrt", "wasdk", "winui2", "webview2"})
+def format_project_urls(unit_path: Path) -> str:
+    """
+    Renders the links PyPI shows beside a package.
 
-
-def format_project_urls(family: str | None = None) -> str:
-    changelog = (
-        f"projection/{family}/CHANGELOG.md"
-        if family in FAMILY_CHANGELOGS
-        else "CHANGELOG.md"
-    )
+    Each release unit is released on its own, so each has a changelog of its
+    own in its directory, and a reader following the link from PyPI finds what
+    changed in the version they installed. A package that goes with a family
+    is pointed at the family's. The test component is released nowhere and is
+    pointed at the changelog at the root of the repository.
+    """
+    changelog = (unit_path / "CHANGELOG.md").relative_to(REPO_PATH).as_posix()
 
     return templates.PROJECT_URLS.format(changelog=changelog)
+
+
+def family_path(family: str) -> Path:
+    """
+    The directory of a family of packages, which is its release unit's, or the
+    root of the repository for a family that is not published.
+    """
+    if family in versions.UNPUBLISHED_FAMILIES:
+        return REPO_PATH
+
+    return PROJECTION_PATH / family
 
 
 def write_readme(
@@ -643,7 +651,9 @@ def write_compiled_project_files(
             templates.COMPILED_PYPROJECT_TOML.format(
                 classifiers=templates.CLASSIFIERS,
                 project_urls=format_project_urls(
-                    None if is_runtime else package_families[package_name]
+                    family_path(versions.FAMILY_RELEASED_INTEROP[package_path.name])
+                    if package_path.name in versions.FAMILY_RELEASED_INTEROP
+                    else package_path
                 ),
                 package_name=package_name,
                 static_version=f'version = "{version}"\n' if static_version else "",
@@ -815,7 +825,9 @@ def write_projection_project_files(
         f.write(
             templates.PROJECTION_PYPROJECT_TOML.format(
                 classifiers=templates.CLASSIFIERS,
-                project_urls=format_project_urls(package_families[package_name]),
+                project_urls=format_project_urls(
+                    family_path(package_families[package_name])
+                ),
                 package_name=package_name,
                 version=version,
                 description="Python projection of Windows Runtime (WinRT) APIs",
@@ -959,7 +971,9 @@ def write_dll_project_files(
         f.write(
             templates.DLL_PYPROJECT_TOML.format(
                 classifiers=templates.CLASSIFIERS,
-                project_urls=format_project_urls(package_families[importer]),
+                project_urls=format_project_urls(
+                    family_path(package_families[importer])
+                ),
                 package_name=package_name,
                 version=version,
                 description=f"{payload.dll_name}, redistributed for PyWinRT",
@@ -1141,7 +1155,7 @@ with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
     f.write(
         templates.TABLE_PYPROJECT_TOML.format(
             classifiers=templates.CLASSIFIERS,
-            project_urls=format_project_urls(),
+            project_urls=format_project_urls(TABLE_PATH),
             package_name="winrt-table-compiler",
             version=TABLE_COMPILER_VERSION,
             description="Compiler for the projection tables of PyWinRT",
