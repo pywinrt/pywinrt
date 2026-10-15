@@ -288,24 +288,24 @@ class TestWinrtArray(unittest.TestCase):
         )
 
         with self.assertRaisesRegex(
-            TypeError, r'^requires buffer with format == "i", have "I"$'
+            BufferError, r'^requires buffer with format == "i", have "I"$'
         ):
             Array(PropertyType, stdlib_array.array("I", [1]))
 
         with self.assertRaisesRegex(
-            TypeError, r'^requires buffer with format == "I", have "i"$'
+            BufferError, r'^requires buffer with format == "I", have "i"$'
         ):
             Array(FileAttributes, stdlib_array.array("i", [1]))
 
     def test_from_a_buffer_of_another_layout(self) -> None:
         with self.assertRaisesRegex(
-            TypeError, r"^requires buffer with itemsize == 4, have 2$"
+            BufferError, r"^requires buffer with itemsize == 4, have 2$"
         ):
             Array(Int32, stdlib_array.array("h", [1]))
 
         flat = memoryview(stdlib_array.array("i", [1, 2]))
         with self.assertRaisesRegex(
-            TypeError, r"^requires buffer with ndim == 1, have 2$"
+            BufferError, r"^requires buffer with ndim == 1, have 2$"
         ):
             Array(Int32, flat.cast("B").cast("i", (1, 2)))
 

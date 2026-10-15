@@ -490,12 +490,12 @@ namespace py::cpp::_winrt
                     }
                 }
 
-                // worded as py::is_buffer_compatible() words them for an array
-                // a call borrows
+                // raised as py::is_buffer_compatible() raises them for an
+                // array a call borrows
                 if (view.ndim != 1)
                 {
                     PyErr_Format(
-                        PyExc_TypeError,
+                        PyExc_BufferError,
                         "requires buffer with ndim == 1, have %d",
                         view.ndim);
                     return nullptr;
@@ -506,7 +506,7 @@ namespace py::cpp::_winrt
                 if (view.itemsize != itemsize)
                 {
                     PyErr_Format(
-                        PyExc_TypeError,
+                        PyExc_BufferError,
                         "requires buffer with itemsize == %zd, have %zd",
                         itemsize,
                         view.itemsize);
@@ -519,7 +519,7 @@ namespace py::cpp::_winrt
                     std::string const actual{format};
 
                     PyErr_Format(
-                        PyExc_TypeError,
+                        PyExc_BufferError,
                         "requires buffer with format == \"%s\", have \"%s\"",
                         expected.c_str(),
                         actual.c_str());
