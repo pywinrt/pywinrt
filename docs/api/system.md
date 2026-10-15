@@ -272,14 +272,14 @@ be unboxed to get the original value.
 
 ```python
 box_boolean(value: bool, /) -> Object
-box_int8(value: int, /) -> Object
-box_uint8(value: int, /) -> Object
-box_int16(value: int, /) -> Object
-box_uint16(value: int, /) -> Object
-box_int32(value: int, /) -> Object
-box_uint32(value: int, /) -> Object
-box_int64(value: int, /) -> Object
-box_uint64(value: int, /) -> Object
+box_int8(value: typing.SupportsIndex, /) -> Object
+box_uint8(value: typing.SupportsIndex, /) -> Object
+box_int16(value: typing.SupportsIndex, /) -> Object
+box_uint16(value: typing.SupportsIndex, /) -> Object
+box_int32(value: typing.SupportsIndex, /) -> Object
+box_uint32(value: typing.SupportsIndex, /) -> Object
+box_int64(value: typing.SupportsIndex, /) -> Object
+box_uint64(value: typing.SupportsIndex, /) -> Object
 box_single(value: float, /) -> Object
 box_double(value: float, /) -> Object
 box_char16(value: str, /) -> Object

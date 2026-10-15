@@ -129,7 +129,7 @@ instance of `type` holds.
 ## `hresult_error`
 
 ```python
-hresult_error(hresult: int, error_info: InterfaceCapsule | None = None, /) -> OSError
+hresult_error(hresult: typing.SupportsIndex, error_info: InterfaceCapsule | None = None, /) -> OSError
 ```
 
 The exception that a WinRT call which failed with `hresult` raises, for an
@@ -137,7 +137,7 @@ interop module to raise in turn.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `hresult` | `int` | The failure `HRESULT`, signed or unsigned. |
+| `hresult` | `typing.SupportsIndex` | The failure `HRESULT`, signed or unsigned. |
 | `error_info` | [`InterfaceCapsule`](#interfacecapsule) | An interface pointer capsule holding the *IErrorInfo* that the failed call left on the thread, or `None`. Its message is used when it is about the same `HRESULT`. |
 
 !!! version-added "Added in version 4.0"
@@ -145,7 +145,7 @@ interop module to raise in turn.
 ## `initialize_with_window`
 
 ```python
-initialize_with_window(obj: Object, hwnd: int, /) -> None
+initialize_with_window(obj: Object, hwnd: typing.SupportsIndex, /) -> None
 ```
 
 Provide an owner window to a Windows Runtime (WinRT) object used in a desktop application.
@@ -153,7 +153,7 @@ Provide an owner window to a Windows Runtime (WinRT) object used in a desktop ap
 | Parameter | Type | Description |
 |---|---|---|
 | `obj` | [`Object`](system.md#object) | A WinRT object that implements *IInitializeWithWindow* interface. |
-| `hwnd` | `int` | The handle of the window to be used as the owner window. |
+| `hwnd` | `typing.SupportsIndex` | The handle of the window to be used as the owner window. |
 
 !!! version-added "Added in version 3.0"
 
