@@ -82,6 +82,31 @@ class TestBuffer(unittest.TestCase):
 
         self.assertEqual(target, bytes(5))
 
+    def test_wrapped_buffer_winrt_fills_refuses_read_only(self) -> None:
+        # MediaStreamSample hands back the IBuffer it was made from, which is
+        # the Python buffer as WinRT holds it.
+        data = b"abc"
+        sample = wmc.MediaStreamSample.create_from_buffer(data, datetime.timedelta())
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^create_memory_buffer_over_ibuffer\(\) argument 1 must be read-write "
+            r"bytes-like object, not a read-only Python buffer wrapped as an IBuffer$",
+        ):
+            wss.Buffer.create_memory_buffer_over_ibuffer(sample.buffer)
+
+        self.assertEqual(data, b"abc")
+
+    def test_wrapped_writable_buffer_winrt_fills(self) -> None:
+        target = bytearray(b"abc")
+        sample = wmc.MediaStreamSample.create_from_buffer(target, datetime.timedelta())
+
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(sample.buffer)
+        with memoryview(mb) as view:
+            view[0] = ord("A")
+
+        self.assertEqual(target, b"Abc")
+
     def test_read_only_buffer_refuses_a_length(self) -> None:
         # MediaStreamSample hands back the IBuffer it was made from, which is
         # how a writer that no rule names would find it.
@@ -100,6 +125,47 @@ class TestBuffer(unittest.TestCase):
 
         buffer.length = 1
         self.assertEqual(bytes(buffer), b"a")
+
+    def test_python_buffer_keeps_its_read_only_view(self) -> None:
+        # MediaStreamSample hands back the IBuffer it was made from, which is
+        # the Python buffer as WinRT holds it.
+        data = b"abc"
+
+        sample = wmc.MediaStreamSample.create_from_buffer(data, datetime.timedelta())
+        with memoryview(sample.buffer) as view:
+            self.assertTrue(view.readonly)
+
+            with self.assertRaises(TypeError):
+                view[0] = ord("A")
+
+        self.assertEqual(data, b"abc")
+
+        target = bytearray(b"abc")
+
+        sample = wmc.MediaStreamSample.create_from_buffer(target, datetime.timedelta())
+        with memoryview(sample.buffer) as view:
+            self.assertFalse(view.readonly)
+            view[0] = ord("A")
+
+        self.assertEqual(target, b"Abc")
+
+    def test_memory_buffer_holds_the_python_buffer(self) -> None:
+        data = bytearray(b"ABCDE")
+
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
+
+        with self.assertRaises(BufferError):
+            data.append(ord("F"))
+
+        with memoryview(mb) as view:
+            view[0] = ord("a")
+
+        self.assertEqual(data, b"aBCDE")
+
+        del mb
+        data.append(ord("F"))
+
+        self.assertEqual(data, b"aBCDEF")
 
     def test_memory_buffer(self) -> None:
         data = bytearray(b"ABCDE")

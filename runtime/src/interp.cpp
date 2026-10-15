@@ -15,6 +15,7 @@
 
 #include <pywinrt/base.h>
 
+#include "_winrt_buffer.h"
 #include "arrays.h"
 #include "compose.h"
 #include "delegates.h"
@@ -325,6 +326,41 @@ namespace py::interp
             }
 
             return view.view().readonly != 0;
+        }
+
+        /**
+         * Whether @p arg refuses @p value, a WinRT object that is a Python
+         * buffer that promises never to change, such as bytes, wrapped as an
+         * IBuffer and handed back, because WinRT writes into the buffer.
+         */
+        bool refuses_wrapped_read_only(arg_desc const& arg, PyObject* value)
+        {
+            if (!arg.fill_buffer)
+            {
+                return false;
+            }
+
+            auto const object_type = get_object_type();
+            if (!object_type)
+            {
+                throw python_exception();
+            }
+
+            if (!PyObject_TypeCheck(value, object_type))
+            {
+                return false;
+            }
+
+            winrt::Windows::Foundation::IUnknown object;
+            winrt::copy_from_abi(object, abi_of(value));
+            if (!object)
+            {
+                // The conversion says the object holds nothing.
+                return false;
+            }
+
+            auto _gil = release_gil();
+            return is_read_only_python_buffer(object);
         }
     } // namespace
 
@@ -1704,6 +1740,17 @@ namespace py::interp
                             member.py_name,
                             next_arg + 1,
                             Py_TYPE(args[next_arg])->tp_name);
+                        throw python_exception();
+                    }
+
+                    if (refuses_wrapped_read_only(arg, args[next_arg]))
+                    {
+                        PyErr_Format(
+                            PyExc_TypeError,
+                            "%U() argument %zd must be read-write bytes-like object, "
+                            "not a read-only Python buffer wrapped as an IBuffer",
+                            member.py_name,
+                            next_arg + 1);
                         throw python_exception();
                     }
 
