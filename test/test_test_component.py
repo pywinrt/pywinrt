@@ -230,6 +230,76 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(called, ["base", "derived"])
 
+    def test_a_second_composable_class_is_refused(self) -> None:
+        # The object is composed into the first, so it would implement none of
+        # the second's members.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'C' cannot derive from both '.*Override' and '.*ProtectedMembers', "
+            r"because a class derived from a WinRT class derives from one class, "
+            r"besides the WinRT interfaces it adds$",
+        ):
+
+            class C(tc.Override, tc.ProtectedMembers):  # type: ignore[metaclass]
+                pass
+
+    def test_a_python_base_is_refused(self) -> None:
+        class Mixin:
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Mixin'"):
+
+            class _(Mixin, tc.Override):
+                pass
+
+    def test_a_second_chain_of_bases_is_refused(self) -> None:
+        # Inheritance is linear, as in C#, and a class of both would have two
+        # base classes.
+        class A(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "a"
+
+        class B(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "b"
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from both '.*A' and '.*B', because a class "
+            r"derived from a WinRT class derives from one class, besides the "
+            r"WinRT interfaces it adds$",
+        ):
+
+            class _(A, B):
+                pass
+
+    def test_a_python_base_is_refused_after_a_derived_class(self) -> None:
+        class Mixin:
+            pass
+
+        class D(tc.Override):
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Mixin'"):
+
+            class _(D, Mixin):
+                pass
+
+    def test_a_python_base_is_refused_behind_a_silent_one(self) -> None:
+        # A base whose __init_subclass__() does not call the next one hides the
+        # class statement, so the class is refused when it is first created.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        class C(Silent, tc.Override):
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'C' cannot derive from 'Silent'"):
+            C()
+
     def test_a_protected_constructor_does_not_create_its_class(self) -> None:
         for args in ((), (5,)):
             with self.subTest(args=args):

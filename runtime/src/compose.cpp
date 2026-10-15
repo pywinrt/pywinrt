@@ -687,6 +687,113 @@ namespace py::interp
 
             return winrt::to_hstring(named->winrt_name);
         }
+
+        /**
+         * The WinRT class @p type is composed into: the first one its chain of
+         * bases reaches.
+         */
+        type_entry* composed_class_of(PyTypeObject* type) noexcept
+        {
+            for (auto* base = type; base; base = base->tp_base)
+            {
+                auto* const entry = find_type_entry(base);
+                if (!entry)
+                {
+                    continue;
+                }
+
+                if (entry->category == table::category::class_)
+                {
+                    return entry;
+                }
+            }
+
+            return nullptr;
+        }
+
+        /**
+         * Refuses @p cls unless every base it adds to the WinRT class it is
+         * composed into is a WinRT interface, which the object implements
+         * itself. That class's own bases, and the Python classes already
+         * derived from it, come with it, as long as those form one chain of
+         * base classes, as inheritance in C# does.
+         */
+        bool check_composed_bases(PyTypeObject* cls) noexcept
+        {
+            auto const* const composed = composed_class_of(cls);
+            if (!composed)
+            {
+                return true;
+            }
+
+            auto* const object_type = get_object_type();
+            if (!object_type)
+            {
+                return false;
+            }
+
+            auto const* const mro = cls->tp_mro;
+            // The last class of the chain from cls to the WinRT class, which
+            // the next Python class derived from it must be a base of.
+            auto* chain = cls;
+
+            for (Py_ssize_t m = 1; m < PyTuple_GET_SIZE(mro); m++)
+            {
+                auto* const base
+                    = reinterpret_cast<PyTypeObject*>(PyTuple_GET_ITEM(mro, m));
+
+                if (base == object_type || base == &PyBaseObject_Type)
+                {
+                    continue;
+                }
+
+                if (PyType_IsSubtype(composed->py_type, base))
+                {
+                    continue;
+                }
+
+                if (auto const* const entry = find_type_entry(base))
+                {
+                    if (entry->category == table::category::interface_)
+                    {
+                        continue;
+                    }
+                }
+                else if (PyType_IsSubtype(base, composed->py_type))
+                {
+                    if (PyType_IsSubtype(chain, base))
+                    {
+                        chain = base;
+                        continue;
+                    }
+                }
+
+                if (composed_class_of(base))
+                {
+                    auto const* const first = chain == cls ? composed->py_type : chain;
+
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "'%s' cannot derive from both '%s' and '%s', because a "
+                        "class derived from a WinRT class derives from one class, "
+                        "besides the WinRT interfaces it adds",
+                        cls->tp_name,
+                        first->tp_name,
+                        base->tp_name);
+                    return false;
+                }
+
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' cannot derive from '%s', because a class derived from "
+                    "a WinRT class can add only WinRT interfaces to it",
+                    cls->tp_name,
+                    base->tp_name);
+                return false;
+            }
+
+            return true;
+        }
     } // namespace
 
     /**
@@ -695,10 +802,17 @@ namespace py::interp
      * with, as the runtime_class_name keyword of the class statement.
      *
      * Any other keyword goes on to the classes after Object in the MRO, as
-     * Python's own __init_subclass__() would pass it.
+     * Python's own __init_subclass__() would pass it. A class with a base
+     * that is not a WinRT interface, besides the class it derives from, is
+     * refused here, at its class statement.
      */
     PyObject* init_subclass(PyObject* cls, PyObject* args, PyObject* kwds) noexcept
     {
+        if (!check_composed_bases(reinterpret_cast<PyTypeObject*>(cls)))
+        {
+            return nullptr;
+        }
+
         pyobj_handle rest{kwds ? PyDict_Copy(kwds) : PyDict_New()};
         if (!rest)
         {
@@ -825,6 +939,13 @@ namespace py::interp
             return nullptr;
         }
 
+        // init_subclass() refuses such a class already, unless a base before
+        // it in the MRO does not call the next __init_subclass__().
+        if (!check_composed_bases(type))
+        {
+            return nullptr;
+        }
+
         // What the outer object answers itself: every interface the Python
         // class says it implements, and every interface the WinRT class leaves
         // to whatever derives from it.
@@ -845,18 +966,15 @@ namespace py::interp
 
         // Each WinRT class in the chain lists the overridable interfaces it
         // declares itself, and the Python class may override a member of any of
-        // them, so every class in the MRO is asked, from the one derived from
-        // to the root. The bases are types already built, so nothing is
-        // imported here. The first interface found names the object, as the
-        // first one the most derived class declares does in C++/WinRT.
+        // them, so every class is asked, from the one composed into to the
+        // root. Their types are the bases of that one's, already built, so
+        // nothing is imported here. The first interface found names the object,
+        // as the first one the most derived class declares does in C++/WinRT.
         type_entry* named{};
 
-        auto const* const mro = type->tp_mro;
-
-        for (Py_ssize_t m = 0; m < PyTuple_GET_SIZE(mro); m++)
+        for (auto* base_type = entry.py_type; base_type; base_type = base_type->tp_base)
         {
-            auto* const base = find_type_entry(
-                reinterpret_cast<PyTypeObject*>(PyTuple_GET_ITEM(mro, m)));
+            auto* const base = find_type_entry(base_type);
             if (!base)
             {
                 continue;
