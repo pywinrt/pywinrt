@@ -245,6 +245,17 @@ class App(Application):
         ...
 ```
 
+Besides the class it derives from, such a subclass can have only WinRT
+interfaces as bases, which it then implements, as an application that is a
+XAML metadata provider adds `IXamlMetadataProvider`. Any other base, such as a
+Python mixin or a second runtime class, raises `TypeError`.
+
+Inheritance is linear, as in C#. A subclass can derive from another Python
+subclass of its class, but not from two of them, and not from a Python subclass
+of a class its own class derives from, such as one written for `Control` reused
+under `ContentControl`. Nor can it be generic, since a WinRT class has no type
+parameters, so `typing.Generic` is refused like any other Python base.
+
 A class whose constructor is protected, such as `Panel` or `Control`, is
 created only through a class derived from it, as in C#, so calling the class
 itself raises [`TypeError`][TypeError]. A type checker cannot tell the two

@@ -49,3 +49,4 @@ repository](../CHANGELOG.md).
 - Fixed iterating over a WinRT map, or its keys or items, leaking memory.
 - Fixed WinRT failing to set, or losing, the length of a Python buffer it fills.
 - Fixed WinRT writing into `bytes`; a buffer WinRT fills must be writable.
+- Fixed a subclass of a composable class taking a base that is not an interface.
