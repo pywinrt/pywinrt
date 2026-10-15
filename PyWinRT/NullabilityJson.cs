@@ -486,6 +486,7 @@ static class NullabilityJson
     private static ParameterNullabilityInfo ReadParameter(ref Utf8JsonReader reader)
     {
         var name = default(string);
+        var kind = default(ParameterNullabilityInfo.ParameterKind);
         var type = default(TypeRefNullabilityInfo);
         var fillBuffer = false;
 
@@ -496,6 +497,11 @@ static class NullabilityJson
             if (reader.ValueTextEquals("name"u8))
             {
                 name = ReadString(ref reader);
+            }
+            else if (reader.ValueTextEquals("kind"u8))
+            {
+                reader.Read();
+                kind = ReadParameterKind(ref reader);
             }
             else if (reader.ValueTextEquals("type"u8))
             {
@@ -509,13 +515,48 @@ static class NullabilityJson
             }
             else
             {
-                // NB: this includes "kind", which is derived from the
-                // metadata rather than read from the file
                 reader.Skip();
             }
         }
 
-        return new ParameterNullabilityInfo(name!, type!, fillBuffer);
+        return new ParameterNullabilityInfo(name!, kind, type!, fillBuffer);
+    }
+
+    /// <summary>
+    /// Reads a parameter's kind, which a run takes from the metadata for the
+    /// namespaces it projects and from here for the ones it writes back as
+    /// they were.
+    /// </summary>
+    private static ParameterNullabilityInfo.ParameterKind ReadParameterKind(
+        ref Utf8JsonReader reader
+    )
+    {
+        if (reader.ValueTextEquals("in"u8))
+        {
+            return ParameterNullabilityInfo.ParameterKind.In;
+        }
+
+        if (reader.ValueTextEquals("out"u8))
+        {
+            return ParameterNullabilityInfo.ParameterKind.Out;
+        }
+
+        if (reader.ValueTextEquals("passArray"u8))
+        {
+            return ParameterNullabilityInfo.ParameterKind.PassArray;
+        }
+
+        if (reader.ValueTextEquals("fillArray"u8))
+        {
+            return ParameterNullabilityInfo.ParameterKind.FillArray;
+        }
+
+        if (reader.ValueTextEquals("receiveArray"u8))
+        {
+            return ParameterNullabilityInfo.ParameterKind.ReceiveArray;
+        }
+
+        throw new JsonException($"Unknown parameter kind {reader.GetString()}");
     }
 
     private static TypeRefNullabilityInfo ReadTypeRef(ref Utf8JsonReader reader)

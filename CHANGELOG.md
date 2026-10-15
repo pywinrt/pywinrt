@@ -365,6 +365,7 @@
 - Fixed the type hints of `Array` taking only a one-item tuple.
 - Fixed the type hints of event handlers refusing a handler that returns a value.
 - Fixed the type hints of a struct passed by reference refusing a tuple.
+- Fixed `PyWinRT.exe --include` losing parameter kinds in the nullability file.
 
 [#139]: https://github.com/pywinrt/pywinrt/issues/139
 [3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md

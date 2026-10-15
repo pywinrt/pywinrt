@@ -61,6 +61,15 @@ jobs:
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py
+      # A run that projects only part of a package writes the rest of its
+      # nullability file back as it read it, which the full runs above never
+      # do. This one projects nothing, so all of it must come back unchanged.
+      - run: |
+          $tools = Get-Content .config/_tools.json | ConvertFrom-Json
+          $winmd = "_tools/PyWinRT.TestWinRT.$($tools.'PyWinRT.TestWinRT')/lib/uap10.0/TestComponent.winmd"
+          $sdk = python3 -c "import sys; sys.path.insert(0, 'scripts'); import versions; print(versions.windows_sdk_metadata_path())"
+          ./PyWinRT/bin/Release/net10.0/PyWinRT.exe --input "test-winrt;$winmd" --reference "winrt;$sdk" --output "$env:RUNNER_TEMP/partial" --nullability-json nullability/test-winrt.json --component-dlls --include NoSuchNamespace
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
       # fail if a generator changed a committed file
       - run: git diff --exit-code
       # or wrote one that is not committed, which git diff does not see
