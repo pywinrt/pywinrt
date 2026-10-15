@@ -7,10 +7,11 @@ WinUI 2. It keeps a prefix and a top-level package of its own because
 WinUI 2 defines the same namespaces as the Windows App SDK's WinUI
 component.
 
-Everything that affects every PyWinRT package - `winrt-runtime`, the code
-generator, the versioning scheme and the packaging - is in the [changelog at
-the root of the repository](../../CHANGELOG.md), which is also where the
-releases before v4.0 are.
+What changed in `winrt-runtime`, which every package runs on, is in [its own
+changelog](../../runtime/CHANGELOG.md). Everything else that affects every
+PyWinRT package - the code generator, the versioning scheme and the packaging -
+is in the [changelog at the root of the repository](../../CHANGELOG.md), which
+is also where the releases before v4.0 are.
 
 ## [Unreleased]
 

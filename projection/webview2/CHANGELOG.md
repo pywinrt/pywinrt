@@ -6,10 +6,11 @@ What changed in `winrt-Microsoft.Web.WebView2`, which projects the
 WebView2 SDK, and in `winrt-Microsoft.Web.WebView2.Dll`, which
 redistributes the `.dll` behind it.
 
-Everything that affects every PyWinRT package - `winrt-runtime`, the code
-generator, the versioning scheme and the packaging - is in the [changelog at
-the root of the repository](../../CHANGELOG.md), which is also where the
-releases before v4.0 are.
+What changed in `winrt-runtime`, which every package runs on, is in [its own
+changelog](../../runtime/CHANGELOG.md). Everything else that affects every
+PyWinRT package - the code generator, the versioning scheme and the packaging -
+is in the [changelog at the root of the repository](../../CHANGELOG.md), which
+is also where the releases before v4.0 are.
 
 ## [Unreleased]
 

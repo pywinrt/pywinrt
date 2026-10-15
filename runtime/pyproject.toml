@@ -27,7 +27,7 @@ requires-python = ">=3.11"
 [project.urls]
 Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"
-Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/runtime/CHANGELOG.md"
 
 [tool.setuptools.dynamic]
 version = { file = "version.txt" }

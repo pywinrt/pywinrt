@@ -423,21 +423,22 @@ def format_dependencies(requirements: list[str]) -> str:
     return "".join(f'    "{requirement}",\n' for requirement in requirements)
 
 
-# Each family of packages is released on its own upstream's schedule, so each
-# has a changelog of its own and a reader following one from PyPI finds what
-# changed in the version they installed. The one at the root of the repository
-# is winrt-runtime's, the code generator's and everything that affects every
-# package; a family with nothing of its own, such as the test component, is
-# pointed at it too.
+# Each family of packages is released on its own upstream's schedule, and
+# winrt-runtime on its own, so each has a changelog of its own and a reader
+# following one from PyPI finds what changed in the version they installed. The
+# one at the root of the repository is the code generator's and everything that
+# affects every package. A family with nothing of its own, such as the test
+# component, is pointed at it too.
 FAMILY_CHANGELOGS = frozenset({"winrt", "wasdk", "winui2", "webview2"})
 
 
-def format_project_urls(family: str | None = None) -> str:
-    changelog = (
-        f"projection/{family}/CHANGELOG.md"
-        if family in FAMILY_CHANGELOGS
-        else "CHANGELOG.md"
-    )
+def format_project_urls(family: str | None = None, *, runtime: bool = False) -> str:
+    if runtime:
+        changelog = "runtime/CHANGELOG.md"
+    elif family in FAMILY_CHANGELOGS:
+        changelog = f"projection/{family}/CHANGELOG.md"
+    else:
+        changelog = "CHANGELOG.md"
 
     return templates.PROJECT_URLS.format(changelog=changelog)
 
@@ -638,8 +639,10 @@ def write_compiled_project_files(
         f.write(
             templates.COMPILED_PYPROJECT_TOML.format(
                 classifiers=templates.CLASSIFIERS,
-                project_urls=format_project_urls(
-                    None if is_runtime else package_families[package_name]
+                project_urls=(
+                    format_project_urls(runtime=True)
+                    if is_runtime
+                    else format_project_urls(package_families[package_name])
                 ),
                 package_name=package_name,
                 static_version=f'version = "{version}"\n' if static_version else "",

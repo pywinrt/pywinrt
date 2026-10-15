@@ -260,10 +260,10 @@
 - Each family of packages now has a changelog of its own, which is what a
   package's `Changelog` link on PyPI points at, so the Windows SDK, the
   Windows App SDK, WinUI 2 and WebView2 each say what changed in the version
-  you installed. The changelog at the root of the repository is
-  `winrt-runtime`'s and the code generator's, and it keeps everything that
-  affects every package - the versioning scheme, the packaging and the
-  release history before v4.0.
+  you installed, and so does `winrt-runtime`. The changelog at the root of the
+  repository is the code generator's, and it keeps everything that affects
+  every package - the versioning scheme, the packaging and the release history
+  before v4.0.
 - No `.dll` is copied into a wheel after it is built any more. The two that
   PyWinRT redistributes are put there by the build that produces the wheel,
   which is why a wheel built from a source distribution now carries one too,
