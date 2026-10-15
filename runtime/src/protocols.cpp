@@ -12,6 +12,7 @@
 
 #include <pywinrt/base.h>
 
+#include "_winrt_buffer.h"
 #include "arrays.h"
 #include "async.h"
 #include "interp.h"
@@ -1142,16 +1143,25 @@ namespace py::interp
 
         /**
          * Fills in @p view over @p size bytes at @p data, which @p self owns.
+         *
+         * @param read_only The bytes belong to an object that promises never
+         * to change, so the view refuses a writer.
          */
         int fill_buffer_view(
             PyObject* self,
             Py_buffer* view,
             int flags,
             void* data,
-            uint32_t size) noexcept
+            uint32_t size,
+            bool read_only = false) noexcept
         {
             return PyBuffer_FillInfo(
-                view, self, data, static_cast<Py_ssize_t>(size), 0, flags);
+                view,
+                self,
+                data,
+                static_cast<Py_ssize_t>(size),
+                read_only ? 1 : 0,
+                flags);
         }
 
         /**
@@ -1186,6 +1196,7 @@ namespace py::interp
 
                 uint8_t* data{};
                 uint32_t size{};
+                bool read_only{};
 
                 {
                     auto _gil = release_gil();
@@ -1193,9 +1204,10 @@ namespace py::interp
                         = object.as<winrt::Windows::Storage::Streams::IBuffer>();
                     data = buffer.data();
                     size = buffer.Length();
+                    read_only = is_read_only_python_buffer(buffer);
                 }
 
-                return fill_buffer_view(self, view, flags, data, size);
+                return fill_buffer_view(self, view, flags, data, size, read_only);
             }
             catch (...)
             {

@@ -13,10 +13,36 @@
 
 namespace py::cpp::_winrt
 {
+    /**
+     * How a Python buffer given to WinRT as an IBuffer is told apart from any
+     * other IBuffer when it comes back, which nothing outside the runtime
+     * implements.
+     */
+    struct
+#if WINRT_IMPL_HAS_DECLSPEC_UUID
+        __declspec(uuid("2c818abf-c31d-43a5-bfde-27da32bd393f"))
+#endif
+        IPywinrtBuffer : ::IUnknown
+    {
+        virtual int32_t __stdcall IsReadOnly(bool&) = 0;
+    };
+} // namespace py::cpp::_winrt
+
+#if !WINRT_IMPL_HAS_DECLSPEC_UUID
+__CRT_UUID_DECL(
+    py::cpp::_winrt::IPywinrtBuffer,
+    // clang-format off
+    0x2c818abf, 0xc31d, 0x43a5, 0xbf, 0xde, 0x27, 0xda, 0x32, 0xbd, 0x39, 0x3f
+);
+#endif
+
+namespace py::cpp::_winrt
+{
     struct PyWinRTBuffer : winrt::implements<
                                PyWinRTBuffer,
                                winrt::Windows::Storage::Streams::IBuffer,
-                               Windows::Storage::Streams::IBufferByteAccess>
+                               Windows::Storage::Streams::IBufferByteAccess,
+                               IPywinrtBuffer>
     {
       private:
         py::buffer_view buffer;
@@ -98,6 +124,12 @@ namespace py::cpp::_winrt
             *value = reinterpret_cast<uint8_t*>(buffer.data());
             return S_OK;
         }
+
+        int32_t __stdcall IsReadOnly(bool& value) noexcept final
+        {
+            value = read_only;
+            return S_OK;
+        }
     };
 
 } // namespace py::cpp::_winrt
@@ -106,4 +138,24 @@ winrt::Windows::Storage::Streams::IBuffer py::convert_to_ibuffer(
     PyObject* obj, bool fill)
 {
     return winrt::make<py::cpp::_winrt::PyWinRTBuffer>(obj, fill);
+}
+
+/**
+ * Whether @p object is a Python buffer that promises never to change, such as
+ * bytes, so that a view of it is read-only too and WinRT may not write into it.
+ *
+ * It may be a proxy, so this is a call into its apartment.
+ */
+bool py::is_read_only_python_buffer(
+    winrt::Windows::Foundation::IUnknown const& object)
+{
+    auto const python_buffer = object.try_as<py::cpp::_winrt::IPywinrtBuffer>();
+    if (!python_buffer)
+    {
+        return false;
+    }
+
+    bool read_only{};
+    winrt::check_hresult(python_buffer->IsReadOnly(read_only));
+    return read_only;
 }
