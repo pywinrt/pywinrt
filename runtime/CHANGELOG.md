@@ -32,6 +32,7 @@ repository](../CHANGELOG.md).
 - Adding `None` as an event handler now raises `TypeError` instead of crashing.
 - `init_apartment()` raises `ValueError` for an unknown type, not `OSError`.
 - Unboxing a value boxed as another type raises `TypeError`, not `OSError`.
+- A missing package's type raises `ModuleNotFoundError`, not `AttributeError`.
 - BREAKING: `Matrix * Matrix` raises `TypeError`, since `@` is the product.
 - BREAKING: An `Array` of numerics structs exports a float buffer, as `(n, 3)`.
 - BREAKING: A numerics operator takes the struct or a number, not a tuple.

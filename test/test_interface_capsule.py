@@ -12,6 +12,11 @@ call.
 import ctypes
 import datetime
 import gc
+import importlib.machinery
+import os
+import sys
+import tempfile
+import types
 import unittest
 import uuid
 
@@ -186,6 +191,48 @@ class TestInterfaceCapsule(unittest.TestCase):
 
         with self.assertRaisesRegex(TypeError, "must be a type or str"):
             interop.wrap_interface(capsule, 42)  # type: ignore[call-overload]
+
+    def test_namespace_not_installed(self) -> None:
+        # A namespace whose package is missing is still a namespace package
+        # when the package of a namespace below it is installed, as Storage is
+        # once Storage.Streams is.
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+        module = "winrt.windows.pywinrtnotinstalled"
+
+        with tempfile.TemporaryDirectory() as root:
+            os.makedirs(os.path.join(root, *module.split(".")))
+            sys.path.insert(0, root)
+            self.addCleanup(sys.modules.pop, module, None)
+            self.addCleanup(sys.path.remove, root)
+
+            with self.assertRaisesRegex(
+                ModuleNotFoundError, f"^No module named '{module}'$"
+            ) as cm:
+                interop.wrap_interface(capsule, f"{module}.Thing")
+
+        self.assertEqual(cm.exception.name, module)
+
+    def test_module_without_origin(self) -> None:
+        # A module from a custom finder can have no origin, as a namespace
+        # package has, and the type is found in it all the same.
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+        name = "pywinrt_test_without_origin"
+        module = types.ModuleType(name)
+        module.__spec__ = importlib.machinery.ModuleSpec(name, loader=None)
+        module.Thing = type("Thing", (), {})  # type: ignore[attr-defined]
+        sys.modules[name] = module
+        self.addCleanup(sys.modules.pop, name, None)
+
+        with self.assertRaisesRegex(TypeError, "not a type a projection"):
+            interop.wrap_interface(capsule, f"{name}.Thing")
+
+    def test_name_not_in_module(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+
+        with self.assertRaisesRegex(AttributeError, "PywinrtNotDefined"):
+            interop.wrap_interface(
+                capsule, "winrt.windows.foundation.PywinrtNotDefined"
+            )
 
     def test_wrong_capsule_name(self) -> None:
         with self.assertRaises(ValueError):
