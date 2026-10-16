@@ -26,6 +26,8 @@ from typing_extensions import override
 
 from ._util import async_test, catch_unraisable
 
+IID_ISTRINGABLE = UUID("96369F54-8EB6-48F0-ABCE-C1B211E627C3")
+
 
 class TestTestComponent(unittest.TestCase):
     def test_struct_subclass(self) -> None:
@@ -256,6 +258,33 @@ class TestTestComponent(unittest.TestCase):
             class C(tc.Override, tc.ProtectedMembers):  # type: ignore[metaclass]
                 pass
 
+    def test_an_added_interface_is_answered(self) -> None:
+        # Override does not implement IStringable, so the composed object
+        # answers it for the Python class.
+        class C(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "c"
+
+        c = C()
+
+        self.assertIn(IID_ISTRINGABLE, c._iids_)
+        self.assertEqual(c.as_(wf.IStringable).to_string(), "c")
+
+    def test_a_subclass_of_a_subclass_adds_an_interface(self) -> None:
+        class C(tc.Override):
+            pass
+
+        class D(C, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "d"
+
+        d = D()
+
+        self.assertIn(IID_ISTRINGABLE, d._iids_)
+        self.assertEqual(d.as_(wf.IStringable).to_string(), "d")
+
     def test_a_python_base_is_refused(self) -> None:
         class Mixin:
             pass
@@ -312,6 +341,18 @@ class TestTestComponent(unittest.TestCase):
 
         with self.assertRaisesRegex(TypeError, r"^'C' cannot derive from 'Silent'"):
             C()
+
+    def test_a_silent_base_after_the_class_is_refused_at_once(self) -> None:
+        # The class's own __init_subclass__() comes first in the MRO, so the
+        # class statement is refused.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Silent'"):
+
+            class _(tc.Override, Silent):
+                pass
 
     def test_a_protected_constructor_does_not_create_its_class(self) -> None:
         for args in ((), (5,)):
