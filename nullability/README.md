@@ -45,7 +45,8 @@ An array parameter's `"type"` is its element type, while an array return's is
 the array's, such as `System.Double[]`. A fact on an array, parameter or return,
 is about its elements (`Array[T | None]`), not the array.
 A type has a `"name"` and, for a parameterized type, its `"args"`, each a type in
-turn. Everything else is a fact, written only where it is true.
+turn. Everything else is a fact, written only where it is true. A property the
+generator does not know, such as a misspelled fact, stops the run.
 
 
 ## Null
