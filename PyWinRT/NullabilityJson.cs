@@ -52,14 +52,14 @@ sealed class NullabilityInfoFile
             reader.Skip();
             var length = (int)reader.BytesConsumed - start;
 
+            var name = NullabilityJson.ReadNamespaceName(bytes.AsSpan(start, length));
+
             var lazy = new Lazy<NamespaceNullabilityInfo>(
-                () => NullabilityJson.ReadNamespace(bytes.AsSpan(start, length)),
+                () => NullabilityJson.ReadNamespace(bytes.AsSpan(start, length), name, file),
                 LazyThreadSafetyMode.ExecutionAndPublication
             );
 
-            var name =
-                NullabilityJson.ReadNamespaceName(bytes.AsSpan(start, length))
-                ?? lazy.Value.Namespace;
+            name ??= lazy.Value.Namespace;
 
             if (!result.namespaces.TryAdd(name, lazy))
             {
@@ -358,16 +358,36 @@ static class NullabilityJson
     /// <summary>
     /// Reads a serialized <see cref="NamespaceNullabilityInfo"/>.
     /// </summary>
-    public static NamespaceNullabilityInfo ReadNamespace(ReadOnlySpan<byte> json)
+    /// <param name="json">The namespace's object.</param>
+    /// <param name="name">The namespace's name, if it is known.</param>
+    /// <param name="file">The file the namespace is in.</param>
+    /// <remarks>
+    /// An error names the namespace and the file, since a namespace is read
+    /// when it is first needed, on whichever thread needs it.
+    /// </remarks>
+    public static NamespaceNullabilityInfo ReadNamespace(
+        ReadOnlySpan<byte> json,
+        string? name,
+        FileInfo file
+    )
     {
         var reader = new Utf8JsonReader(json);
 
-        if (!reader.Read())
+        try
         {
-            throw new JsonException("Unexpected end of JSON");
-        }
+            if (!reader.Read())
+            {
+                throw new JsonException("Unexpected end of JSON");
+            }
 
-        return ReadNamespace(ref reader);
+            return ReadNamespace(ref reader);
+        }
+        catch (JsonException e)
+        {
+            var where = name is null ? file.FullName : $"namespace {name} of {file.FullName}";
+
+            throw new JsonException($"{e.Message}, in {where}", e);
+        }
     }
 
     private delegate T ReadItem<T>(ref Utf8JsonReader reader);
@@ -391,7 +411,7 @@ static class NullabilityJson
             }
             else
             {
-                reader.Skip();
+                throw UnknownProperty(ref reader, "a namespace");
             }
         }
 
@@ -417,7 +437,7 @@ static class NullabilityJson
             }
             else
             {
-                reader.Skip();
+                throw UnknownProperty(ref reader, "a type");
             }
         }
 
@@ -433,29 +453,37 @@ static class NullabilityJson
 
         ExpectStartObject(ref reader);
 
-        while (ReadPropertyName(ref reader))
+        try
         {
-            if (reader.ValueTextEquals("signature"u8))
+            while (ReadPropertyName(ref reader))
             {
-                signature = ReadString(ref reader);
+                if (reader.ValueTextEquals("signature"u8))
+                {
+                    signature = ReadString(ref reader);
+                }
+                else if (reader.ValueTextEquals("name"u8))
+                {
+                    name = ReadString(ref reader);
+                }
+                else if (reader.ValueTextEquals("return"u8))
+                {
+                    reader.Read();
+                    @return = ReadReturn(ref reader);
+                }
+                else if (reader.ValueTextEquals("parameters"u8))
+                {
+                    parameters = ReadList(ref reader, ReadParameter);
+                }
+                else
+                {
+                    throw UnknownProperty(ref reader, "a method");
+                }
             }
-            else if (reader.ValueTextEquals("name"u8))
-            {
-                name = ReadString(ref reader);
-            }
-            else if (reader.ValueTextEquals("return"u8))
-            {
-                reader.Read();
-                @return = ReadReturn(ref reader);
-            }
-            else if (reader.ValueTextEquals("parameters"u8))
-            {
-                parameters = ReadList(ref reader, ReadParameter);
-            }
-            else
-            {
-                reader.Skip();
-            }
+        }
+        catch (JsonException e) when (signature is not null)
+        {
+            // the signature comes first in a file the generator wrote
+            throw new JsonException($"{e.Message} of {signature}", e);
         }
 
         return new MethodNullabilityInfo(signature!, name!, @return!, parameters!);
@@ -476,7 +504,7 @@ static class NullabilityJson
             }
             else
             {
-                reader.Skip();
+                throw UnknownProperty(ref reader, "a return");
             }
         }
 
@@ -515,7 +543,7 @@ static class NullabilityJson
             }
             else
             {
-                reader.Skip();
+                throw UnknownProperty(ref reader, "a parameter");
             }
         }
 
@@ -595,12 +623,20 @@ static class NullabilityJson
             }
             else
             {
-                reader.Skip();
+                throw UnknownProperty(ref reader, "a type reference");
             }
         }
 
         return new TypeRefNullabilityInfo(name!, args, allowNull, maybeNull, evidence);
     }
+
+    /// <summary>
+    /// Refuses a property the file has no place for, such as a misspelled
+    /// fact, which would otherwise be dropped without a word, since a run
+    /// writes back only what it read.
+    /// </summary>
+    private static JsonException UnknownProperty(ref Utf8JsonReader reader, string owner) =>
+        new($"Unknown property {reader.GetString()} in {owner}");
 
     /// <summary>
     /// Verifies that the current token is the start of an object.

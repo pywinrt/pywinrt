@@ -70,6 +70,13 @@ jobs:
           $sdk = python3 -c "import sys; sys.path.insert(0, 'scripts'); import versions; print(versions.windows_sdk_metadata_path())"
           ./PyWinRT/bin/Release/net10.0/PyWinRT.exe --input "test-winrt;$winmd" --reference "winrt;$sdk" --output "$env:RUNNER_TEMP/partial" --nullability-json nullability/test-winrt.json --component-dlls --include NoSuchNamespace
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          # A misspelled fact is refused, where writing the file back would drop it.
+          $json = [regex]::new('"kind": "in"').Replace((Get-Content nullability/test-winrt.json -Raw), '"kind": "in", "maybenul": true', 1)
+          [IO.File]::WriteAllText("$env:RUNNER_TEMP/misspelled.json", $json)
+          $out = (./PyWinRT/bin/Release/net10.0/PyWinRT.exe --input "test-winrt;$winmd" --reference "winrt;$sdk" --output "$env:RUNNER_TEMP/misspelled" --nullability-json "$env:RUNNER_TEMP/misspelled.json" --component-dlls --include NoSuchNamespace 2>&1) -join "`n"
+          if (!$LASTEXITCODE) { throw "a misspelled fact was not refused" }
+          if ($out -notmatch "Unknown property maybenul in a parameter of \S+ \S+::\S+\(.*\), in namespace TestComponent of .+misspelled\.json") { $out; throw "a misspelled fact was refused for another reason" }
+          exit 0
       # fail if a generator changed a committed file
       - run: git diff --exit-code
       # or wrote one that is not committed, which git diff does not see
