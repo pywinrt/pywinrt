@@ -190,7 +190,7 @@ static class InterfaceWriterExtensions
             w.WriteLine("@typing.final");
             w.WriteLine($"def get(self) -> {returnType}: ...");
             w.WriteLine("@typing.final");
-            w.WriteLine($"def wait(self, timeout: float) -> {statusTypeName}: ...");
+            w.WriteLine($"def wait(self, timeout: float, /) -> {statusTypeName}: ...");
         }
 
         foreach (var group in methodGroups)
