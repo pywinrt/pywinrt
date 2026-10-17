@@ -187,7 +187,6 @@ HUBS = frozenset(
 # nothing about which component a given namespace was generated from.
 NUGET_PACKAGE_VERSIONS = versions.nuget_package_versions()
 
-RUNTIME_REQUIREMENT = versions.runtime_requirement()
 TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
 RUNTIME_VERSION = versions.runtime_version()
 TABLE_COMPILER_VERSION = versions.table_compiler_version()
@@ -1026,6 +1025,12 @@ def write_dll_project_files(
 
 runtime_table_format = versions.runtime_table_format()
 
+# every revision of the census names its release before any is read below
+versions.check_census()
+
+with open(versions.SHAPES_PATH, encoding="utf-8") as census_file:
+    runtime_census = json.load(census_file)
+
 for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
     package_path = deps_path.parent
 
@@ -1041,6 +1046,37 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
             f"{deps_path} is table format {table_format[0]}.{table_format[1]}"
             f" and {versions.TABLE_HEADER_PATH.name} reads"
             f" {runtime_table_format[0]}.{runtime_table_format[1]}"
+        )
+
+    # The census its tables name their call shapes in is the other half of
+    # reading them.
+    census = deps["census"]
+
+    if census["lineage"] != runtime_census["lineage"]:
+        raise RuntimeError(
+            f"{deps_path} is census {census['lineage']} and"
+            f" {versions.SHAPES_PATH.name} is {runtime_census['lineage']}"
+        )
+
+    if census["revision"] > runtime_census["revision"]:
+        raise RuntimeError(
+            f"{deps_path} needs census revision {census['revision']} and"
+            f" {versions.SHAPES_PATH.name} is revision {runtime_census['revision']}"
+        )
+
+    # The release the package requires is the newest of the ones that first
+    # have what it needs, so it can be no older than the one the census names
+    # for its revision; a release named after the package was generated, or
+    # changed since, leaves it older or null.
+    census_runtime = runtime_census["revisions"][census["revision"] - 1]["runtime"]
+
+    if deps["runtime"] is None or versions.release_of(
+        deps["runtime"]
+    ) < versions.release_of(census_runtime):
+        raise RuntimeError(
+            f"{deps_path} was generated before {versions.SHAPES_PATH.name} named"
+            f" winrt-runtime {census_runtime} for census revision"
+            f" {census['revision']}; generate it again"
         )
 
     package_name = package_path.name
@@ -1074,7 +1110,10 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
         else set()
     )
 
-    dependencies = [RUNTIME_REQUIREMENT]
+    try:
+        dependencies = [versions.runtime_requirement(deps["runtime"])]
+    except RuntimeError as error:
+        raise RuntimeError(f"{deps_path}: {error}") from error
 
     for dep in sorted(required | same_family | (HUBS & referenced)):
         dep_version = FAMILY_VERSIONS[package_families[dep]]

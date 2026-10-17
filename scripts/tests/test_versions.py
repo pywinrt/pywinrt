@@ -108,19 +108,42 @@ class CompatibilityGeneration(unittest.TestCase):
 
 class RuntimeRequirement(unittest.TestCase):
     """
-    The requirement every package that the runtime executes carries, and the
-    only upper bound anywhere in PyWinRT's metadata.
+    The requirement every projection package carries, and the one upper bound
+    in PyWinRT's metadata besides the ~= between Windows App SDK components.
     """
 
     def setUp(self) -> None:
         self.generation = versions.compatibility_generation()
         self.runtime_version = versions.runtime_version()
         self.specifier = SpecifierSet(
-            versions.runtime_requirement().removeprefix("winrt-runtime")
+            versions.runtime_requirement(f"{self.generation}.0.0").removeprefix(
+                "winrt-runtime"
+            )
         )
 
     def test_the_runtime_of_this_tree_satisfies_it(self) -> None:
         self.assertIn(self.runtime_version, self.specifier)
+
+    def test_the_floor_is_the_one_the_package_needs(self) -> None:
+        # a fix to the runtime does not raise the requirement of a package
+        # that needs nothing it added
+        with mock.patch.object(
+            versions, "runtime_version", return_value=f"{self.generation}.0.5"
+        ):
+            self.assertEqual(
+                versions.runtime_requirement(f"{self.generation}.0.0"),
+                f"winrt-runtime>={self.generation}.0.0,<{self.generation + 1}",
+            )
+
+    def test_a_floor_this_tree_has_not_reached_is_refused(self) -> None:
+        with self.assertRaisesRegex(
+            RuntimeError, "later than the runtime of this tree"
+        ):
+            versions.runtime_requirement(f"{self.generation}.99.0")
+
+    def test_a_floor_of_another_generation_is_refused(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "not of generation"):
+            versions.runtime_requirement("3.2.1")
 
     def test_a_later_runtime_of_this_generation_satisfies_it(self) -> None:
         self.assertIn(f"{self.generation}.99.99", self.specifier)

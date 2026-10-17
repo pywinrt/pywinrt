@@ -461,8 +461,10 @@ def check_census() -> None:
     a later one, and shapes.json records the first winrt-runtime release of
     each revision. PyWinRT.exe cannot know that release when it appends a
     revision, so it leaves it out, and no package is generated until a person
-    names it: every package requires the runtime of this tree, so that runtime
-    has to be one that has every revision.
+    names it: a package floors its runtime requirement at the release of the
+    revision its tables need, among others, so every revision has to name
+    one, and none can be later than the runtime of this tree, which would be a
+    release that has not happened.
     """
     generation = compatibility_generation()
     shapes = "runtime/src/shapes.json"
@@ -532,22 +534,43 @@ def check_census() -> None:
         previous = runtime
 
 
-def runtime_requirement() -> str:
+def runtime_requirement(floor: str) -> str:
     """
-    What a package that the runtime executes requires of it.
+    What a projection package requires of the runtime, given the first
+    release that has everything it needs of it.
 
-    The floor is the runtime this tree generates for, since a package may use
-    anything the runtime of its own release has, and check_census() is what
-    says that runtime has every call shape a package of this tree can name.
-    The cap is the only upper bound anywhere in PyWinRT's metadata, and it is
-    there because the incompatibility behind it is known rather than guessed:
-    a package of one compatibility generation is refused by the runtime of the
-    next, so without the cap pip would upgrade the runtime on its own into an
-    import error instead of moving it and the packages together.
+    PyWinRT.exe writes that release into the package's deps.json: the newest
+    of the ones that first read its table format, first have the census
+    revision its tables need, and first have the runtime names its modules
+    use. Flooring there rather than at the runtime of this tree means a fix
+    to the runtime does not raise every package's requirement, as
+    interop_runtime_requirement() does for an interop package. The census
+    part is a release only because check_census() makes shapes.json name one,
+    and a floor above the runtime of this tree is a release that has not
+    happened, so both are refused.
+
+    The cap and the ~= between the Windows App SDK components, which
+    Microsoft releases as one set, are the only upper bounds in PyWinRT's
+    metadata. The cap is there because the incompatibility behind it is known
+    rather than guessed: a package of one compatibility generation is refused
+    by the runtime of the next, so without the cap pip would upgrade the
+    runtime on its own into an import error instead of moving it and the
+    packages together.
     """
     check_census()
 
-    return f"winrt-runtime>={runtime_version()},<{compatibility_generation() + 1}"
+    generation = compatibility_generation()
+    current = runtime_version()
+
+    if release_of(floor)[0] != generation:
+        raise RuntimeError(f"winrt-runtime {floor} is not of generation {generation}")
+
+    if release_of(floor) > release_of(current):
+        raise RuntimeError(
+            f"winrt-runtime {floor} is later than the runtime of this tree, {current}"
+        )
+
+    return f"winrt-runtime>={floor},<{generation + 1}"
 
 
 def table_compiler_requirement() -> str:
