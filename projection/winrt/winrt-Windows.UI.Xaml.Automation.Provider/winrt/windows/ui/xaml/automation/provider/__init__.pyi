@@ -103,7 +103,7 @@ class IDragProvider(winrt.system.Object):
     # System.String[] Windows.UI.Xaml.Automation.Provider.IDragProvider::get_DropEffects()
     @_property
     @abstractmethod
-    def drop_effects(self) -> str: ...
+    def drop_effects(self) -> winrt.system.Array[str]: ...
     # System.Boolean Windows.UI.Xaml.Automation.Provider.IDragProvider::get_IsGrabbed()
     @_property
     @abstractmethod
@@ -117,7 +117,7 @@ class IDropTargetProvider(winrt.system.Object):
     # System.String[] Windows.UI.Xaml.Automation.Provider.IDropTargetProvider::get_DropEffects()
     @_property
     @abstractmethod
-    def drop_effects(self) -> str: ...
+    def drop_effects(self) -> winrt.system.Array[str]: ...
 
 class IExpandCollapseProvider(winrt.system.Object):
     # System.Void Windows.UI.Xaml.Automation.Provider.IExpandCollapseProvider::Collapse()

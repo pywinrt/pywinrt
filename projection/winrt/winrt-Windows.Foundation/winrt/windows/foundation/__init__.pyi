@@ -652,7 +652,7 @@ class IReferenceArray[T](IPropertyValue, winrt.system.Object):
     # T[] Windows.Foundation.IReferenceArray`1::get_Value()
     @_property
     @abstractmethod
-    def value(self) -> T: ...
+    def value(self) -> winrt.system.Array[T]: ...
 
 class IReference[T](IPropertyValue, winrt.system.Object):
     # T Windows.Foundation.IReference`1::get_Value()

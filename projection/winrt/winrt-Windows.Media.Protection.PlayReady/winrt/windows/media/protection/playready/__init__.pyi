@@ -227,11 +227,11 @@ class NDCustomData(INDCustomData, winrt.system.Object):
     # System.Byte[] Windows.Media.Protection.PlayReady.NDCustomData::get_CustomData()
     @_property
     @deprecated("INDCustomData is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def custom_data(self) -> winrt.system.UInt8: ...
+    def custom_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.NDCustomData::get_CustomDataTypeID()
     @_property
     @deprecated("INDCustomData is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def custom_data_type_id(self) -> winrt.system.UInt8: ...
+    def custom_data_type_id(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final
 @deprecated("NDDownloadEngineNotifier is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -271,7 +271,7 @@ class NDLicenseFetchDescriptor(INDLicenseFetchDescriptor, winrt.system.Object):
     # System.Byte[] Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor::get_ContentID()
     @_property
     @deprecated("INDLicenseFetchDescriptor is deprecated and might not work on all platforms. For more info, see MSDN.")
-    def content_id(self) -> winrt.system.UInt8: ...
+    def content_id(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Media.Protection.PlayReady.NDContentIDType Windows.Media.Protection.PlayReady.NDLicenseFetchDescriptor::get_ContentIDType()
     @_property
     @deprecated("INDLicenseFetchDescriptor is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -360,10 +360,10 @@ class PlayReadyContentHeader(winrt.system.Object):
     def license_acquisition_user_interface_url(self) -> windows_foundation.Uri: ...
     # System.String[] Windows.Media.Protection.PlayReady.PlayReadyContentHeader::get_KeyIdStrings()
     @_property
-    def key_id_strings(self) -> str: ...
+    def key_id_strings(self) -> winrt.system.Array[str]: ...
     # System.Guid[] Windows.Media.Protection.PlayReady.PlayReadyContentHeader::get_KeyIds()
     @_property
-    def key_ids(self) -> _uuid.UUID: ...
+    def key_ids(self) -> winrt.system.Array[_uuid.UUID]: ...
 
 @typing.final
 class PlayReadyContentResolver_Static(winrt.system.Object_Static):
@@ -707,7 +707,7 @@ class PlayReadyMeteringReportServiceRequest(IPlayReadyServiceRequest, windows_me
     def type(self) -> _uuid.UUID: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest::get_MeteringCertificate()
     @_property
-    def metering_certificate(self) -> winrt.system.UInt8: ...
+    def metering_certificate(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Void Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest::put_MeteringCertificate(System.Byte[])
     @metering_certificate.setter
     def metering_certificate(self, value: winrt.system.Array[winrt.system.UInt8] | winrt.system.ReadableBuffer) -> None: ...
@@ -806,7 +806,7 @@ class PlayReadySecureStopServiceRequest(IPlayReadySecureStopServiceRequest, IPla
     def type(self) -> _uuid.UUID: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest::get_PublisherCertificate()
     @_property
-    def publisher_certificate(self) -> winrt.system.UInt8: ...
+    def publisher_certificate(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadySecureStopServiceRequest::get_SessionID()
     @_property
     def session_id(self) -> _uuid.UUID: ...
@@ -908,7 +908,7 @@ class INDClosedCaptionDataReceivedEventArgs(winrt.system.Object):
     @_property
     @deprecated("INDClosedCaptionDataReceivedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def closed_caption_data(self) -> winrt.system.UInt8: ...
+    def closed_caption_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Media.Protection.PlayReady.NDClosedCaptionFormat Windows.Media.Protection.PlayReady.INDClosedCaptionDataReceivedEventArgs::get_ClosedCaptionDataFormat()
     @_property
     @deprecated("INDClosedCaptionDataReceivedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -926,12 +926,12 @@ class INDCustomData(winrt.system.Object):
     @_property
     @deprecated("INDCustomData is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def custom_data(self) -> winrt.system.UInt8: ...
+    def custom_data(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.INDCustomData::get_CustomDataTypeID()
     @_property
     @deprecated("INDCustomData is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def custom_data_type_id(self) -> winrt.system.UInt8: ...
+    def custom_data_type_id(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @deprecated("INDDownloadEngine is deprecated and might not work on all platforms. For more info, see MSDN.")
 class INDDownloadEngine(winrt.system.Object):
@@ -1017,7 +1017,7 @@ class INDLicenseFetchDescriptor(winrt.system.Object):
     @_property
     @deprecated("INDLicenseFetchDescriptor is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def content_id(self) -> winrt.system.UInt8: ...
+    def content_id(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Media.Protection.PlayReady.NDContentIDType Windows.Media.Protection.PlayReady.INDLicenseFetchDescriptor::get_ContentIDType()
     @_property
     @deprecated("INDLicenseFetchDescriptor is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1098,7 +1098,7 @@ class INDSendResult(winrt.system.Object):
     @_property
     @deprecated("INDSendResult is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def response(self) -> winrt.system.UInt8: ...
+    def response(self) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @deprecated("INDStartResult is deprecated and might not work on all platforms. For more info, see MSDN.")
 class INDStartResult(winrt.system.Object):
@@ -1169,7 +1169,7 @@ class INDTransmitterProperties(winrt.system.Object):
     @_property
     @deprecated("INDTransmitterProperties is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def client_id(self) -> winrt.system.UInt8: ...
+    def client_id(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # Windows.Foundation.DateTime Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ExpirationDate()
     @_property
     @deprecated("INDTransmitterProperties is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1179,7 +1179,7 @@ class INDTransmitterProperties(winrt.system.Object):
     @_property
     @deprecated("INDTransmitterProperties is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def model_digest(self) -> winrt.system.UInt8: ...
+    def model_digest(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.String Windows.Media.Protection.PlayReady.INDTransmitterProperties::get_ModelManufacturerName()
     @_property
     @deprecated("INDTransmitterProperties is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1214,7 +1214,7 @@ class INDTransmitterProperties(winrt.system.Object):
     @_property
     @deprecated("INDTransmitterProperties is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
-    def supported_features(self) -> NDCertificateFeature: ...
+    def supported_features(self) -> winrt.system.Array[NDCertificateFeature]: ...
 
 class IPlayReadyDomain(winrt.system.Object):
     # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyDomain::get_AccountId()
@@ -1302,7 +1302,7 @@ class IPlayReadySecureStopServiceRequest(IPlayReadyServiceRequest, windows_media
     # System.Byte[] Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_PublisherCertificate()
     @_property
     @abstractmethod
-    def publisher_certificate(self) -> winrt.system.UInt8: ...
+    def publisher_certificate(self) -> winrt.system.Array[winrt.system.UInt8]: ...
     # System.Guid Windows.Media.Protection.PlayReady.IPlayReadySecureStopServiceRequest::get_SessionID()
     @_property
     @abstractmethod

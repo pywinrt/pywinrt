@@ -71,6 +71,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed the type hints of a struct's constructor refusing a tuple for a field.
 - Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
+- Fixed the type hints incorrectly typing an array property as one element.
 - Fixed `bootstrap.RELEASE_VERSION`, `RUNTIME_VERSION` and `Shutdown` missing.
 - Fixed the interop packages declaring no dependency on what they import.
 - Fixed the interop packages' sdists needing environment variables to build.

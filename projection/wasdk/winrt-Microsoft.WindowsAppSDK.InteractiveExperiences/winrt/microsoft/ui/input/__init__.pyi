@@ -1101,7 +1101,7 @@ class NonClientRegionsChangedEventArgs(winrt.system.Object):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Input.NonClientRegionKind[] Microsoft.UI.Input.NonClientRegionsChangedEventArgs::get_ChangedRegions()
     @_property
-    def changed_regions(self) -> NonClientRegionKind: ...
+    def changed_regions(self) -> winrt.system.Array[NonClientRegionKind]: ...
 
 @typing.final
 class PointerEventArgs(winrt.system.Object):
