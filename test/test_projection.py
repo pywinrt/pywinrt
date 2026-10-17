@@ -720,6 +720,33 @@ class TestIntegerStructs(unittest.TestCase):
         self.assertIsInstance(error_code, wf.HResult)
         self.assertEqual(error_code, E_FAIL)
 
+    def test_an_hresult_is_the_signed_form_of_either(self) -> None:
+        # an HRESULT is written as the unsigned 0x8XXXXXXX and read back as a
+        # negative int32, and both make the one value WinRT hands back
+        self.assertEqual(wf.HResult(0x80004005), E_FAIL)
+        self.assertEqual(wf.HResult(E_FAIL), E_FAIL)
+        self.assertEqual(wf.HResult(0x80004005), self.failed().error_code)
+        self.assertIsInstance(wf.HResult(0x80004005), wf.HResult)
+
+    def test_an_hresult_takes_one_integer(self) -> None:
+        # what an Int32 parameter takes, rather than everything int() does
+        cases: list[tuple[Any, ...]] = [(), ("0x80004005", 16), (1.5,), ("1",)]
+
+        for args in cases:
+            with self.subTest(args=args), self.assertRaises(TypeError):
+                wf.HResult(*args)
+
+        with self.assertRaises(TypeError):
+            wf.HResult(value=1)  # type: ignore[call-arg]
+
+    def test_an_hresult_does_not_take_more_than_32_bits(self) -> None:
+        for value in (2**32, -(2**31) - 1, 2**64):
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(OverflowError, "does not fit in an HRESULT"),
+            ):
+                wf.HResult(value)
+
     def test_an_input_takes_a_plain_int(self) -> None:
         # E_FAIL is a plain int and the parameter is an HRESULT, which is what
         # the action above was asked for.

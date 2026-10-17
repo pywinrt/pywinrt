@@ -1466,6 +1466,12 @@ async operation's `error_code`. It compares with
 [`OSError.winerror`][OSError.winerror] and with the codes in
 [`winrt.system.hresult`](api/system.hresult.md) directly.
 
+A code is a signed 32-bit integer, which is how WinRT hands one back, so
+`E_FAIL` is `-2147467259`. `HResult()` takes one integer, in that form or in
+the unsigned form a code is usually written in, so
+`HResult(0x80004005) == E_FAIL`. Anything that is not a 32-bit code in either
+form raises [`OverflowError`][OverflowError].
+
 #### Windows.Foundation.EventRegistrationToken
 
 What `add_<event>()` returns and `remove_<event>()` takes. See

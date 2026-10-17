@@ -33,5 +33,6 @@ namespace py::interp
     bool make_struct_type(
         projection& proj, type_entry& entry, table::type_view const& record);
 
-    bool make_integer_type(projection& proj, type_entry& entry);
+    bool make_integer_type(
+        projection& proj, type_entry& entry, table::type_view const& record);
 } // namespace py::interp

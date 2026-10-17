@@ -1162,19 +1162,98 @@ namespace py::interp
         return remember(entry, entry.py_type);
     }
 
+    namespace
+    {
+        /**
+         * HResult(x): the integer x as the signed 32 bits WinRT hands an
+         * HRESULT back as.
+         *
+         * It takes what an Int32 parameter takes, one integer, rather than
+         * everything int() does. An HRESULT is written as often as the
+         * unsigned 0x8XXXXXXX as it is read back as a negative int32, so
+         * either form is taken, and the two compare equal afterwards.
+         * Anything else raises OverflowError, as hresult_error() does.
+         */
+        PyObject* hresult_new(
+            PyTypeObject* type, PyObject* args, PyObject* kwargs) noexcept
+        {
+            auto const keywords = kwargs ? PyDict_GET_SIZE(kwargs) : 0;
+            if (keywords != 0)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError, "HResult() takes no keyword arguments");
+                return nullptr;
+            }
+
+            PyObject* arg{};
+            if (!PyArg_UnpackTuple(args, "HResult", 1, 1, &arg))
+            {
+                return nullptr;
+            }
+
+            pyobj_handle value{PyNumber_Index(arg)};
+            if (!value)
+            {
+                return nullptr;
+            }
+
+            int overflow{};
+            auto const number = PyLong_AsLongLongAndOverflow(value.get(), &overflow);
+            if (number == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            bool const fits
+                = overflow == 0 && number >= INT32_MIN && number <= UINT32_MAX;
+            if (!fits)
+            {
+                PyErr_Format(
+                    PyExc_OverflowError, "%R does not fit in an HRESULT", value.get());
+                return nullptr;
+            }
+
+            pyobj_handle signed_value{
+                PyLong_FromLong(static_cast<int32_t>(static_cast<uint32_t>(number)))};
+            if (!signed_value)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle signed_args{PyTuple_Pack(1, signed_value.get())};
+            if (!signed_args)
+            {
+                return nullptr;
+            }
+
+            return PyLong_Type.tp_new(type, signed_args.get(), nullptr);
+        }
+    } // namespace
+
     /**
      * Creates the Python type of a WinRT struct that is one integer, which is
      * a subclass of int rather than a wrapper with a field in it.
      *
-     * Nothing else about the record is read: the value is the integer, so
-     * there is no layout to work out, no field to read and nothing to give
-     * back. What the type is for is what a stub and isinstance() need - an
-     * HRESULT told apart from a count - and the name its field had, which
-     * __init__.py keeps as a deprecated property of it.
+     * Only the field's type is read from the record: the value is the
+     * integer, so there is no layout to work out, no field value to read
+     * and nothing to give back. What the type is for is what a stub and
+     * isinstance() need - an HRESULT told apart from a count - and the name
+     * its field had, which __init__.py keeps as a deprecated property of it.
+     * The one whose field is an Int32 is HResult, which takes either form of
+     * a code (hresult_new()).
      */
-    bool make_integer_type(projection& proj, type_entry& entry)
+    bool make_integer_type(
+        projection& proj, type_entry& entry, table::type_view const& record)
     {
-        PyType_Slot slots[] = {{}};
+        auto const is_hresult = record.field_count() == 1
+                                && record.field(0).code() == table::type_code::int32;
+
+        PyType_Slot hresult_slots[] = {
+            {Py_tp_new, reinterpret_cast<void*>(hresult_new)},
+            {},
+        };
+        PyType_Slot plain_slots[] = {{}};
+        auto* const slots = is_hresult ? hresult_slots : plain_slots;
 
         PyType_Spec spec{entry.tp_name.c_str(), 0, 0, Py_TPFLAGS_DEFAULT, slots};
 

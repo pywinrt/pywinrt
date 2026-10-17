@@ -384,7 +384,7 @@ namespace py::interp
                 // lay out.
                 if (record.flags() & table::type_flags::integer)
                 {
-                    if (!make_integer_type(proj, entry))
+                    if (!make_integer_type(proj, entry, record))
                     {
                         return nullptr;
                     }
