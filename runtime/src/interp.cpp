@@ -1673,22 +1673,6 @@ namespace py::interp
             }
         }
 
-        // The projection's own deprecation, which a later major release drops:
-        // an IMemoryBuffer exports a buffer itself, through a reference that
-        // only the view can reach.
-        if (overload.role == table::member_role::create_reference)
-        {
-            if (PyErr_WarnEx(
-                    PyExc_DeprecationWarning,
-                    "create_reference() is deprecated: use the IMemoryBuffer itself "
-                    "as a buffer instead, e.g. with memoryview()",
-                    1)
-                < 0)
-            {
-                return nullptr;
-            }
-        }
-
         winrt::com_ptr<::IUnknown> queried;
         winrt::com_ptr<::IUnknown> composed_over;
 

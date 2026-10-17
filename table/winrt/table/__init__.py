@@ -138,7 +138,6 @@ ROLES = (
     "split",
     "pair_key",
     "pair_value",
-    "create_reference",
 )
 
 if len(ROLES) > 1 << MEMBER_ROLE_BITS:
