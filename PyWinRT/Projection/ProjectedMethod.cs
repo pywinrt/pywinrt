@@ -131,10 +131,11 @@ class ProjectedMethod
     /// stubs give.
     /// </summary>
     /// <remarks>
-    /// WinRT's own <c>[Deprecated]</c> is Microsoft's, so it is only marked in
-    /// the stubs. These are this project's: the runtime warns when one is
-    /// called, which it knows from the member's role in the table, and a later
-    /// major release stops projecting it.
+    /// These are WinRT members that Python has a better way to do, so they are
+    /// marked in the stubs, where an editor and a type checker point at the
+    /// better way, as WinRT's own <c>[Deprecated]</c> is. They are not removed
+    /// and the runtime does not warn, since a member stays as WinRT defines it
+    /// and code ported from C# may call it on purpose.
     /// </remarks>
     private static readonly Dictionary<string, string> projectionDeprecations = new(
         StringComparer.Ordinal
