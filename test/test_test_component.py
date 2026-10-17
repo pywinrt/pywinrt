@@ -317,6 +317,32 @@ class TestTestComponent(unittest.TestCase):
             class _(A, B):
                 pass
 
+    def test_a_subclass_of_a_base_class_is_refused(self) -> None:
+        # D is not in the chain from DerivedOverride, so it is a second chain.
+        class D(tc.Override):
+            pass
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from both '.*DerivedOverride' and 'D', because a "
+            r"class derived from a WinRT class derives from one class, besides "
+            r"the WinRT interfaces it adds$",
+        ):
+
+            class _(tc.DerivedOverride, D):
+                pass
+
+    def test_a_generic_class_is_refused(self) -> None:
+        # A WinRT class has no type parameters.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from '(typing\.)?Generic', because a class "
+            r"derived from a WinRT class can add only WinRT interfaces to it$",
+        ):
+
+            class _(tc.Override, Generic[T]):
+                pass
+
     def test_a_python_base_is_refused_after_a_derived_class(self) -> None:
         class Mixin:
             pass
