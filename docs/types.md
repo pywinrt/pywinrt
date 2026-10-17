@@ -1222,12 +1222,15 @@ A [Windows.Foundation.IMemoryBuffer][IMemoryBuffer] - a `MemoryBuffer`, the
 directly. A view keeps the memory for as long as it exists, whatever is done
 with the buffer meanwhile, so it may outlive the `with` block that closes the
 buffer. A `SoftwareBitmap` stays locked while a view of its `BitmapBuffer`
-exists. Its `create_reference()` is deprecated, since a view needs no reference.
+exists. A view needs no reference, so the type hints mark `create_reference()`
+deprecated and point at the buffer protocol instead. A reference from it holds
+the buffer until it is closed, and closing it while a view of it exists raises
+[`BufferError`][BufferError].
 
 !!! version-changed "Changed in version 4.0"
 
-    An `IMemoryBuffer` supports the buffer protocol itself, and
-    `create_reference()` is deprecated in its favor.
+    An `IMemoryBuffer` supports the buffer protocol itself, and the type hints
+    mark `create_reference()` deprecated in its favor.
 
 A *Windows.Foundation.IMemoryBufferReference* supports the buffer protocol as
 well, and is what WebView2's `CoreWebView2SharedBuffer.buffer` returns. Closing

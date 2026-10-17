@@ -85,7 +85,6 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - `Array("i", ...)` and the other format strings warn, in favor of the type.
 - `Type._from(obj)` warns, in favor of `obj.as_(Type)`.
 - `winrt.system.Buffer` warns, in favor of `collections.abc.Buffer`.
-- `IMemoryBuffer.create_reference()` warns, in favor of the buffer protocol.
 
 ### Removed
 - BREAKING: Python 3.9 and 3.10 are no longer supported.

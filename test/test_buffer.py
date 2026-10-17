@@ -13,17 +13,6 @@ from ._util import async_test
 
 
 class TestBuffer(unittest.TestCase):
-    def reference_of(
-        self, memory_buffer: wf.IMemoryBuffer
-    ) -> wf.IMemoryBufferReference:
-        """
-        A reference to the memory of a memory buffer, made with the deprecated
-        create_reference(). The reference's own buffer export stays, since it
-        is the only one WebView2's CoreWebView2SharedBuffer.buffer has.
-        """
-        with self.assertWarns(DeprecationWarning):
-            return memory_buffer.create_reference()  # type: ignore[deprecated]
-
     def test_new(self) -> None:
         buf = wss.Buffer(5)
         self.assertEqual(buf.length, 0)
@@ -171,7 +160,7 @@ class TestBuffer(unittest.TestCase):
         data = bytearray(b"ABCDE")
 
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(data)
-        with self.reference_of(mb) as mbr, memoryview(mbr) as mv:
+        with mb.create_reference() as mbr, memoryview(mbr) as mv:  # type: ignore[deprecated]
             self.assertEqual(mv, data)
 
             mv[0] = ord("a")
@@ -206,7 +195,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_len(self) -> None:
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(bytearray(b"ABCDE"))
-        with self.reference_of(mb) as mbr:
+        with mb.create_reference() as mbr:  # type: ignore[deprecated]
             self.assertEqual(len(mbr), mbr.capacity)
 
             with memoryview(mbr) as mv:
@@ -214,7 +203,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_len_closed(self) -> None:
         mb = wss.Buffer.create_memory_buffer_over_ibuffer(bytearray(b"ABCDE"))
-        mbr = self.reference_of(mb)
+        mbr = mb.create_reference()  # type: ignore[deprecated]
         mbr.close()
 
         self.assertEqual(len(mbr), 0)
@@ -224,7 +213,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_reference_is_not_closed_while_exported(self) -> None:
         with wf.MemoryBuffer(4) as memory_buffer:
-            reference = self.reference_of(memory_buffer)
+            reference = memory_buffer.create_reference()  # type: ignore[deprecated]
             view = memoryview(reference)
             view[0] = 42
 
@@ -248,7 +237,7 @@ class TestBuffer(unittest.TestCase):
 
     def test_memory_buffer_reference_waits_for_every_export(self) -> None:
         with wf.MemoryBuffer(4) as memory_buffer:
-            reference = self.reference_of(memory_buffer)
+            reference = memory_buffer.create_reference()  # type: ignore[deprecated]
 
             with memoryview(reference):
                 with memoryview(reference):
@@ -309,15 +298,6 @@ class TestBuffer(unittest.TestCase):
         view.release()
         bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ).close()
 
-    def test_create_reference_is_deprecated(self) -> None:
-        bitmap = wgi.SoftwareBitmap(wgi.BitmapPixelFormat.BGRA8, 2, 2)
-
-        with bitmap.lock_buffer(wgi.BitmapBufferAccessMode.READ) as locked:
-            with self.assertWarnsRegex(
-                DeprecationWarning, "use the IMemoryBuffer itself as a buffer"
-            ):
-                locked.create_reference().close()  # type: ignore[deprecated]
-
     def test_system_buffer_is_deprecated(self) -> None:
         with self.assertWarnsRegex(DeprecationWarning, "use collections.abc.Buffer"):
             from winrt.system import Buffer  # pyright: ignore[reportDeprecated]
@@ -334,7 +314,7 @@ class TestBuffer(unittest.TestCase):
 
         with (
             wf.MemoryBuffer(4) as memory_buffer,
-            self.reference_of(memory_buffer) as reference,
+            memory_buffer.create_reference() as reference,  # type: ignore[deprecated]
         ):
             self.assertIsInstance(memory_buffer, Buffer)
             self.assertIsInstance(reference, Buffer)
