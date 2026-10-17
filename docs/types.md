@@ -1475,7 +1475,8 @@ form raises [`OverflowError`][OverflowError].
 #### Windows.Foundation.EventRegistrationToken
 
 What `add_<event>()` returns and `remove_<event>()` takes. See
-[Events](#events).
+[Events](#events). Only WinRT issues one, so creating one from Python raises
+[`TypeError`][TypeError].
 
 !!! version-changed "Changed in version 4.0"
 

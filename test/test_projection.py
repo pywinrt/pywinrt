@@ -761,6 +761,29 @@ class TestIntegerStructs(unittest.TestCase):
         # and goes back as the integer it is
         obj.remove_overridable_called(int(token))  # type: ignore[arg-type]
 
+    def test_an_event_token_cannot_be_created(self) -> None:
+        # WinRT issues one from add_<event>(), and there is nothing to make one
+        # from, but one is still read back from WinRT as the type
+        with self.assertRaisesRegex(TypeError, "cannot create"):
+            wf.EventRegistrationToken(1)  # type: ignore[arg-type]
+
+        self.assertIsInstance(
+            Array(wf.EventRegistrationToken, 1)[0], wf.EventRegistrationToken
+        )
+
+    def test_an_event_token_cannot_be_copied(self) -> None:
+        # whatever added the handler is the one owner of its registration
+        obj = tc.Override()
+        token = obj.add_overridable_called(lambda s, e: None)
+        self.addCleanup(obj.remove_overridable_called, token)
+
+        for copier in (copy.copy, copy.deepcopy, pickle.dumps):
+            with (
+                self.subTest(copier.__name__),
+                self.assertRaisesRegex(TypeError, "cannot pickle"),
+            ):
+                copier(token)
+
     def test_the_field_the_type_used_to_have(self) -> None:
         error_code = self.failed().error_code
 

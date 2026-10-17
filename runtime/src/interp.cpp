@@ -836,7 +836,9 @@ namespace py::interp
                 // an instance of the type the record names: an enum member, an
                 // HRESULT, an event token. The type is called with the integer,
                 // which is what makes a member of the enum and what a subclass
-                // of int is built from.
+                // of int is built from, except for an event token, whose type
+                // cannot be called because only WinRT issues one, so int's own
+                // constructor makes it.
                 auto const info = resolve(owner, arg.type, arg.info);
                 if (!info)
                 {
@@ -847,6 +849,17 @@ namespace py::interp
                 if (!value)
                 {
                     return nullptr;
+                }
+
+                if (arg.code == table::type_code::event_token)
+                {
+                    pyobj_handle token_args{PyTuple_Pack(1, value.get())};
+                    if (!token_args)
+                    {
+                        return nullptr;
+                    }
+
+                    return PyLong_Type.tp_new(info->py_type, token_args.get(), nullptr);
                 }
 
                 return PyObject_CallOneArg(

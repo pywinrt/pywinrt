@@ -1240,7 +1240,9 @@ namespace py::interp
      * isinstance() need - an HRESULT told apart from a count - and the name
      * its field had, which __init__.py keeps as a deprecated property of it.
      * The one whose field is an Int32 is HResult, which takes either form of
-     * a code (hresult_new()).
+     * a code (hresult_new()). The other is EventRegistrationToken, which
+     * WinRT issues and Python has nothing to make one from, so it cannot be
+     * created, and convert_out() makes one with int's own constructor.
      */
     bool make_integer_type(
         projection& proj, type_entry& entry, table::type_view const& record)
@@ -1252,10 +1254,13 @@ namespace py::interp
             {Py_tp_new, reinterpret_cast<void*>(hresult_new)},
             {},
         };
-        PyType_Slot plain_slots[] = {{}};
-        auto* const slots = is_hresult ? hresult_slots : plain_slots;
+        PyType_Slot token_slots[] = {{}};
+        auto* const slots = is_hresult ? hresult_slots : token_slots;
+        auto const flags = is_hresult
+                               ? Py_TPFLAGS_DEFAULT
+                               : Py_TPFLAGS_DEFAULT | Py_TPFLAGS_DISALLOW_INSTANTIATION;
 
-        PyType_Spec spec{entry.tp_name.c_str(), 0, 0, Py_TPFLAGS_DEFAULT, slots};
+        PyType_Spec spec{entry.tp_name.c_str(), 0, 0, flags, slots};
 
         pyobj_handle bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(&PyLong_Type))};
         if (!bases)

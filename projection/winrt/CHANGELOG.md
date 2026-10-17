@@ -35,6 +35,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Requires another package with a floor rather than one `~=` release of it.
 - Requires the packages of `IAsyncOperation`, `IVectorView` and `IBuffer`.
 - `HResult` and `EventRegistrationToken` are `int` subclasses, not structs.
+- `EventRegistrationToken` cannot be created, only received from `add_*()`.
 - More return types include `None`, in `Windows.Storage`, Bluetooth and more.
 - The type hints use `X | None`, `collections.abc` and PEP 695 type parameters.
 - The projected collections are `collections.abc` types in the type hints.
