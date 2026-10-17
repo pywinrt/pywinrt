@@ -104,6 +104,8 @@ class PropertyType(enum.IntEnum):
 
 @typing.final
 class EventRegistrationToken(int):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT issues a token from add_<event>(), so there is nothing to create one from."""
     @deprecated("EventRegistrationToken.value is deprecated, the value is the EventRegistrationToken itself")
     @_property
     def value(self) -> int: ...
