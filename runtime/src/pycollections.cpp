@@ -214,17 +214,16 @@ namespace py::interp
         }
 
         /**
-         * Whether an iterable of @p info's type yields the entries of a map.
+         * The member that reads an item of an iterable of @p info's type.
          *
          * It is read off the table the long way round - what First() hands
-         * back, what that reads an item with, what the item is - because an
-         * IIterable<IKeyValuePair<K, V>> is the one collection whose own
-         * record says nothing about being a mapping.
+         * back and what that reads an item with - because the item type of an
+         * IIterable<T> is said nowhere in its own record.
          *
          * @throws python_exception if the table does not say what @p info
          * iterates.
          */
-        bool iterates_mapping_entries(type_entry& info)
+        member_desc& item_reader(type_entry& info)
         {
             auto* const first = info.protocol.first;
 
@@ -250,7 +249,22 @@ namespace py::interp
                 throw python_exception();
             }
 
-            auto& item = output_arg(current->overloads[0], 0);
+            return *current;
+        }
+
+        /**
+         * Whether an iterable of @p info's type yields the entries of a map,
+         * which an IIterable<IKeyValuePair<K, V>> is the one collection whose
+         * own record says nothing about.
+         *
+         * @throws python_exception if the table does not say what @p info
+         * iterates.
+         */
+        bool iterates_mapping_entries(type_entry& info)
+        {
+            auto& current = item_reader(info);
+
+            auto& item = output_arg(current.overloads[0], 0);
 
             // Only a parameterized instance can be one, and an item of any
             // other type code names no record to ask.
@@ -259,7 +273,7 @@ namespace py::interp
                 return false;
             }
 
-            auto* const element = resolve(*current->owner, item.type, item.info);
+            auto* const element = resolve(*current.owner, item.type, item.info);
 
             if (!element)
             {
@@ -267,6 +281,50 @@ namespace py::interp
             }
 
             return is_mapping_entry(*element);
+        }
+
+        /**
+         * Whether the items of a sequence or an iterable of @p info's type are
+         * strings.
+         *
+         * @throws python_exception if the table does not say what @p info
+         * holds.
+         */
+        bool holds_strings(type_entry& info)
+        {
+            auto* const reader
+                = info.protocol.get_at ? info.protocol.get_at : &item_reader(info);
+
+            return output_arg(reader->overloads[0], 0).code == table::type_code::string;
+        }
+
+        /**
+         * Refuses a str as a collection of strings.
+         *
+         * A str is a sequence of the strings of its characters, so it would
+         * otherwise be read as one string for each of them, which is never
+         * what a collection of strings is given one for.
+         *
+         * @throws python_exception if @p obj is a str and @p info holds
+         * strings.
+         */
+        void refuse_characters(type_entry& info, PyObject* obj)
+        {
+            if (!PyUnicode_Check(obj))
+            {
+                return;
+            }
+
+            if (!holds_strings(info))
+            {
+                return;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s' takes a list or other collection of strings, not a str",
+                info.winrt_name);
+            throw python_exception();
         }
 
         /**
@@ -314,6 +372,8 @@ namespace py::interp
 
         if (info.protocol.get_at)
         {
+            refuse_characters(info, obj);
+
             if (!PySequence_Check(obj))
             {
                 refuse(info, obj, "sequence");
@@ -326,6 +386,8 @@ namespace py::interp
         {
             return nullptr;
         }
+
+        refuse_characters(info, obj);
 
         // An iterable of pairs is how WinRT spells a mapping that is only
         // read in order, so a Python mapping stands in for one by looking

@@ -1267,6 +1267,17 @@ the scenes, but the type hints use only the Python standard library types to
 encourage users to use the Pythonic APIs. Furthermore, types that inherit from
 these interfaces are also extended to support the Pythonic APIs.
 
+Where WinRT takes a collection of strings, such as an `IIterable<String>` or
+an `IVector<String>`, a `str` raises [`TypeError`][TypeError], although it is
+an iterable of strings: it would be read as one string for each of its
+characters. Pass a list of one string instead, such as
+`DeviceInformation.create_watcher(aqs, ["System.ItemNameDisplay"])`.
+
+!!! version-changed "Changed in version 4.0"
+
+    A `str` given for a collection of strings raises `TypeError`. Before, it was
+    read as one string for each of its characters.
+
 [wfc]: https://learn.microsoft.com/en-us/uwp/api/windows.foundation.collections
 
 #### Sequences
@@ -1371,7 +1382,8 @@ data = NotificationData({"my_key": "my_value"})
 #### Iterators
 
 [IIterable&lt;T&gt;][IIterable] becomes [Iterable[T]][Iterable]. Any iterable Python
-type can be used as an argument and return values can be used as any other iterable
+type but a `str` for an `IIterable<String>`, as [above](#collections), can be
+used as an argument and return values can be used as any other iterable
 in Python. Don't use the WinRT `first()` method to get an iterator, instead use the
 builtin [`iter()`](https://docs.python.org/3/builtins/functions.html#iter) function
 or other Python features like `for` loops.

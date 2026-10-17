@@ -237,6 +237,20 @@ class TestSequenceAsCollection(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, E_POINTER)
 
+    def test_a_str_is_not_a_collection_of_strings(self) -> None:
+        # A str iterates as the strings of its characters, which is never what
+        # it is passed for, so it is refused rather than read that way.
+        for method in (
+            self.tests.collection1,
+            self.tests.collection5,
+            self.tests.collection6,
+        ):
+            with (
+                self.subTest(method=method),
+                self.assertRaisesRegex(TypeError, "collection of strings, not a str"),
+            ):
+                method("ab")  # type: ignore[arg-type]
+
     def test_something_that_is_not_a_sequence_is_refused(self) -> None:
         with self.assertRaisesRegex(TypeError, "sequence"):
             self.tests.collection5(42)  # type: ignore

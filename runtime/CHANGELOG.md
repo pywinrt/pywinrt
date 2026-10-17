@@ -79,6 +79,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - A missing package's type raises `ModuleNotFoundError`, not `AttributeError`.
 - `Array()` raises `BufferError` for a buffer of the wrong layout, as calls do.
 - The integer inputs of `box_*()`, `Array()` and more are typed `SupportsIndex`.
+- A `str` given where WinRT takes a collection of strings raises `TypeError`.
 
 ### Deprecated
 - `Array("i", ...)` and the other format strings warn, in favor of the type.
