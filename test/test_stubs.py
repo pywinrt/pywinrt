@@ -2,6 +2,7 @@ import importlib.resources
 import types
 import unittest
 
+import winrt.windows.foundation as wf
 import winrt.windows.security.cryptography.certificates as wscc
 import winrt.windows.storage.pickers as wsp
 import winrt.windows.system.power as wsysp
@@ -47,4 +48,11 @@ class TestStubs(unittest.TestCase):
         self.assertEqual(
             _line(wscc, "def serial_number("),
             "def serial_number(self) -> winrt.system.Array[winrt.system.UInt8]: ...",
+        )
+
+    def test_wait_takes_its_timeout_positionally(self) -> None:
+        # The runtime refuses timeout= as it does a keyword to any method.
+        self.assertEqual(
+            _line(wf, "def wait("),
+            "def wait(self, timeout: float, /) -> AsyncStatus: ...",
         )

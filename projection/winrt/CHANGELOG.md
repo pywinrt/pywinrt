@@ -70,5 +70,6 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
 - Fixed the type hint of `Matrix4x4.translation()`, which is a `Vector3`.
 - Fixed the type hints incorrectly typing an array property as one element.
+- Fixed the type hints incorrectly accepting `timeout=` for `wait()`.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/

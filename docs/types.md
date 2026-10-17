@@ -974,10 +974,10 @@ These methods block until the operation is complete.
 ##### `wait`
 
 ```python
-IAsyncAction.wait(self, timeout: float) -> AsyncStatus
-IAsyncOperation.wait(self, timeout: float) -> AsyncStatus
-IAsyncActionWithProgress.wait(self, timeout: float) -> AsyncStatus
-IAsyncOperationWithProgress.wait(self, timeout: float) -> AsyncStatus
+IAsyncAction.wait(self, timeout: float, /) -> AsyncStatus
+IAsyncOperation.wait(self, timeout: float, /) -> AsyncStatus
+IAsyncActionWithProgress.wait(self, timeout: float, /) -> AsyncStatus
+IAsyncOperationWithProgress.wait(self, timeout: float, /) -> AsyncStatus
 ```
 
 These methods block until the operation is complete or the timeout is reached,
