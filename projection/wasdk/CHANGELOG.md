@@ -2,68 +2,77 @@
 
 # Changelog
 
-What changed in the `winrt-Microsoft.WindowsAppSDK.*` packages, which
-project the Windows App SDK, and in the hand-written interop modules
-beside them.
+What changed in the packages that project the Windows App SDK:
 
-Everything that affects every PyWinRT package - `winrt-runtime`, the code
-generator, the versioning scheme and the packaging - is in the [changelog at
-the root of the repository](../../CHANGELOG.md), which is also where the
-releases before v4.0 are.
+- `winrt-Microsoft.WindowsAppSDK.AI`
+- `winrt-Microsoft.WindowsAppSDK.Foundation`
+- `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`
+- `winrt-Microsoft.WindowsAppSDK.Search`
+- `winrt-Microsoft.WindowsAppSDK.Widgets`
+- `winrt-Microsoft.WindowsAppSDK.WinUI`
+- `winrt-Microsoft.Windows.AI.MachineLearning`
 
-## [Unreleased]
+and in the two interop packages released with them:
+
+- `winrt-Microsoft.UI.Interop`
+- `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
+
+What changed in `winrt-runtime`, which every package runs on, is in [its own
+changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
+[changelog at the root of the repository](../../CHANGELOG.md).
+
+## [4!2.5.1] - Unreleased
+
+See the [4.0 release notes][4.0] for what these changes mean together.
 
 ### Added
+- Nine new namespaces, such as `Microsoft.Windows.Storage.Pickers`.
 - Protected constructors are projected, so a class such as `Panel` is derivable.
 - Protected properties are projected, such as `Control._default_style_key`.
+- Members and types WinRT marks deprecated are `@deprecated` in the type hints.
+- The interop packages' wheels are published for 3.14, 3.15, 3.14t and 3.15t.
 
 ### Changed
+- BREAKING: `winui3-*` is now `winrt-*`, imported from `winrt.microsoft`.
+- BREAKING: Published as 7 packages, one per NuGet component, not per namespace.
+- BREAKING: A frozen application must carry each module's `_table.pywinrt`.
+- BREAKING: Versioned by the Windows App SDK release it projects, as `4!2.5.1`.
+- BREAKING: An overloaded method has one name again, with no v3 alias.
+- A package is one `py3-none-any` wheel of data, not compiled code.
+- Updated the Windows App SDK to 2.5.1, from 1.7.250513003.
+- The two interop packages are released with the family and carry its version.
+- Requires `winrt-runtime>=4.0.0,<5` rather than one `~=` release of it.
+- Requires a component it hands back types of with `~=`, others with a floor.
+- A wheel built from the bootstrap package's sdist carries its `.dll` too.
+- The bootstrap package's wheel carries the App SDK license and an SBOM.
+- `bootstrap.initialize()` and its shutdown release the GIL while they wait.
+- `winrt-Microsoft.UI.Interop` builds from its sdist with nothing from PyWinRT.
+- `MSVCP140.dll` is no longer needed by the interop packages.
+- The type hints use `X | None`, `collections.abc` and PEP 695 type parameters.
+- The projected collections are `collections.abc` types in the type hints.
+- `winrt.system.Object` is the base of every interface in the type hints.
+- The type hints infer the variance of a generic interface's type parameters.
+- Pyright requires an implementation of an interface to define all its members.
 - The type hints say a map has no hash, so a type checker flags `{a_map}`.
 - An `IBuffer` that goes in is typed as `ReadableBuffer` or `WriteableBuffer`.
+- An `IBuffer` that comes out is typed as one, not as `winrt.system.Buffer`.
 - The type hints no longer declare the empty private class of each interface.
 - An integer parameter is typed as taking a `typing.SupportsIndex` as well.
-- A method or property that returns an `IBuffer` is typed as returning one,
-  not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
-- Updated the Windows App SDK to 2.5.1, from 1.7.250513003, whose servicing
-  ended in March. Nine namespaces are new and have a package each:
-  `Microsoft.Windows.AI.Foundation`, `Microsoft.Windows.AI.MachineLearning`,
-  `Microsoft.Windows.AI.Video`, `Microsoft.Windows.Vision`,
-  `Microsoft.Windows.SemanticSearch`, `Microsoft.Windows.Search.AppContentIndex`,
-  `Microsoft.Windows.Storage.Pickers`, `Microsoft.Windows.Foundation` and
-  `Microsoft.UI.Xaml.Settings`. No namespace was removed, so the family goes
-  from 69 packages to 78. Everything in it is now versioned `4!2.5.1`, the
-  version of the `Microsoft.WindowsAppSDK` metapackage, which is the version
-  Microsoft's own release notes and runtime installer speak.
-- BREAKING: The Windows App SDK is published as one package per NuGet
-  component instead of one per namespace, so its 78 packages become 7:
-  `winrt-Microsoft.WindowsAppSDK.Foundation`, `.InteractiveExperiences`,
-  `.WinUI`, `.Widgets`, `.AI`, `.Search`, and
-  `winrt-Microsoft.Windows.AI.MachineLearning`. A package now carries every
-  namespace its component owns - `.WinUI` has all 25 `Microsoft.UI.Xaml.*`
-  modules and `Microsoft.UI.Text` - and its README lists them and names the
-  component and version its metadata came from. Which module a namespace is
-  imported from is unaffected; what changes is which package to install to
-  get it. The whole family
-  is 1.2 MB of wheels, and a package that hands back a type from another
-  component of the same release requires it outright, since Microsoft's own
-  build refuses a project that mixes component versions.
-- The Windows App SDK is projected from its component packages rather than
-  from the metapackage, which has carried no metadata since 2.0. That is what
-  lets a release be projected at all, and it is also what decides the
-  packages above: a namespace is published in the component that defines it,
-  and one that several components contribute to would be published on its own
-  instead. In this release none is.
-- `Microsoft.WindowsAppRuntime.Bootstrap.dll` is put into
-  `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` by the
-  build that produces the wheel rather than copied in afterwards, so a wheel
-  built from the source distribution carries it too. The wheel also carries the
-  Windows App SDK license text beside PyWinRT's own and a CycloneDX bill of
-  materials naming the redistributed `.dll`, its version and Microsoft as its
-  supplier.
+- The wheels carry the text of their license.
+
+### Removed
+- BREAKING: Python 3.9 and 3.10 are no longer supported.
 
 ### Fixed
+- Fixed `@typing.overload` missing from the type hints of overloaded methods.
+- Fixed methods being dropped when two overloads could not be told apart.
+- Fixed the type hints of a handler refusing one that returns a value.
+- Fixed the type hints of a struct passed by reference refusing a tuple.
+- Fixed the type hints of a struct's constructor refusing a tuple for a field.
 - Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
 - Fixed `bootstrap.RELEASE_VERSION`, `RUNTIME_VERSION` and `Shutdown` missing.
 - Fixed the interop packages declaring no dependency on what they import.
 - Fixed the interop packages' sdists needing environment variables to build.
+
+[4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/

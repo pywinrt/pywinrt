@@ -3,56 +3,71 @@
 # Changelog
 
 What changed in the `winrt-Windows.*` packages, which project the
-Windows SDK, and in the hand-written interop modules beside them.
+Windows SDK.
 
-Everything that affects every PyWinRT package - `winrt-runtime`, the code
-generator, the versioning scheme and the packaging - is in the [changelog at
-the root of the repository](../../CHANGELOG.md), which is also where the
-releases before v4.0 are.
+What changed in `winrt-runtime`, which every package runs on, is in [its own
+changelog](../../runtime/CHANGELOG.md), and each interop package, such as
+`winrt-Windows.System.Interop`, has a changelog in its directory under
+`interop/`. The releases before v4.0 are in the [changelog at the root of the
+repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!10.0.28000.2705] - Unreleased
+
+See the [4.0 release notes][4.0] for what these changes mean together.
 
 ### Added
+- Seven new namespaces, such as `Windows.AI.Agents.Mcp`, have a package each.
 - Protected constructors are projected, so a class such as `Panel` is derivable.
 - Protected properties are projected, such as `Control._default_style_key`.
+- Members and types WinRT marks deprecated are `@deprecated` in the type hints.
 - The type hints of classes that implement `IMemoryBuffer` have `__buffer__`.
 - The type hints of the numerics structs have `__buffer__`, `@` and indexing.
+- The type hints of `IBuffer` and `IMemoryBufferReference` have `__len__`.
 
 ### Changed
+- BREAKING: A frozen application must carry each module's `_table.pywinrt`.
+- BREAKING: Versioned by the Windows SDK it projects, as `4!10.0.28000.2705`.
+- BREAKING: An overloaded method has one name again, called by argument count.
+- BREAKING: A `TileUpdateManagerForUser` method was renamed, with no alias kept.
+- A package is one `py3-none-any` wheel of data, not compiled code.
+- Updated the Windows SDK to 10.0.28000.2705, from 10.0.26100.4188.
+- Requires `winrt-runtime>=4.0.0,<5` rather than one `~=` release of it.
+- Requires another package with a floor, or `~=` where a class derives from it.
+- Requires the packages of `IAsyncOperation`, `IVectorView` and `IBuffer`.
+- `HResult` and `EventRegistrationToken` are `int` subclasses, not structs.
+- More return types include `None`, in `Windows.Storage`, Bluetooth and more.
+- The type hints use `X | None`, `collections.abc` and PEP 695 type parameters.
+- The projected collections are `collections.abc` types in the type hints.
+- `winrt.system.Object` is the base of every interface in the type hints.
+- The type hints infer the variance of a generic interface's type parameters.
+- Pyright requires an implementation of an interface to define all its members.
 - The type hints say a map has no hash, so a type checker flags `{a_map}`.
 - An `IBuffer` that goes in is typed as `ReadableBuffer` or `WriteableBuffer`.
+- An `IBuffer` that comes out is typed as one, not as `winrt.system.Buffer`.
 - The type hints no longer declare the empty private class of each interface.
 - An integer parameter is typed as taking a `typing.SupportsIndex` as well.
-- A method or property that returns an `IBuffer` is typed as returning one,
-  not `winrt.system.Buffer`, so `length` and `capacity` type-check on it.
+- A numerics method's struct parameter is typed as taking a tuple as well.
 - The type hints of the `completed` and `progress` getters include `None`.
-- BREAKING: `TileUpdateManagerForUser.create_tile_updater_for_application()` is
-  now `create_tile_updater_for_application_for_user()`. The old name is the
-  overload that takes an application id, so it could not be kept as an alias.
-- Updated Windows SDK to 10.0.28000.2705. Seven namespaces are new and have a
-  package each: `Windows.AI.Agents.Mcp`, `Windows.ApplicationModel.Preview`,
-  `Windows.Management.Update.Cluster`, `Windows.System.Power.Thermal`,
-  `Windows.UI.Input.Preview.Text`, `Windows.UI.Shell.CompanionWindows` and
-  `Windows.UI.Shell.Tasks`.
-- REMOVED: `winrt-Windows.AI.ModelContextProtocol`. The SDK no longer has that
-  namespace. `Windows.AI.Agents.Mcp` covers Model Context Protocol in this
-  release, but it is not the same API: the classes for enumerating and
-  describing servers are gone and what is there now filters messages.
-- BREAKING: `DesktopWindowXamlSourceNative` is not a `winrt.system.Object`.
+- The wheels carry the text of their license.
 
 ### Deprecated
+- The v3 names of overloaded methods warn, in favor of the one name.
+- `HResult.value` and `EventRegistrationToken.value` warn, as each is an `int`.
 - `create_reference()` is marked `@deprecated` in the type hints.
-- `DesktopWindowXamlSourceNative._from()` is deprecated in favor of `as_()`.
+
+### Removed
+- BREAKING: Python 3.9 and 3.10 are no longer supported.
+- BREAKING: Removed `winrt-Windows.AI.ModelContextProtocol`, as the SDK did.
 
 ### Fixed
+- Fixed `@typing.overload` missing from the type hints of overloaded methods.
+- Fixed methods being dropped when two overloads could not be told apart.
+- Fixed the type hints of a handler refusing one that returns a value.
+- Fixed the type hints of a struct passed by reference refusing a tuple.
+- Fixed the type hints of a struct's constructor refusing a tuple for a field.
 - Fixed `[all]` leaving out the packages of the interfaces a class implements.
 - Fixed the type hints incorrectly accepting keywords for a constructor.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
-- Fixed the type hint of `Matrix4x4.translation()`, which said `Vector2`
-  where the value is a `Vector3`.
-- Fixed building the `Windows.Graphics.DirectX.Direct3D11` interop module on
-  MSYS2. mingw-w64 now ships an interop header, so the `__has_include` check
-  stopped selecting our own declarations, but the `.idl` that header is
-  generated from is missing `CreateDirect3D11SurfaceFromDXGISurface`, which is
-  now declared separately there.
-- Fixed the interop packages declaring no dependency on what they import.
+- Fixed the type hint of `Matrix4x4.translation()`, which is a `Vector3`.
+
+[4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/

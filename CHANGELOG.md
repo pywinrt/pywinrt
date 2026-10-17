@@ -2,373 +2,38 @@
 
 # Changelog
 
-## [Unreleased]
+From v4.0 on, each part of PyWinRT that is released on its own has a changelog
+of its own, which is what the `Changelog` link of each of its packages points
+at:
 
-### Added
-- Wheels are now published for Python 3.14 and Python 3.15.
-- A projection package whose table is missing now raises an `ImportError`
-  that names the module and the table it went looking for, where it used to
-  raise whatever the operating system said about a file it did not name. That
-  is nearly always a build that copied the module without the data file beside
-  it, and the old message gave a reader nothing to go on.
-- `winrt-runtime` now ships a PyInstaller hook, so freezing an application
-  that uses PyWinRT needs no configuration. The hook collects the
-  `_table.pywinrt` beside each projection module, which PyInstaller would
-  otherwise leave behind, and every installed projection package rather than
-  only the ones the application imports: the type a call hands back is found
-  by importing the module that owns it while the program runs, so an
-  application that imports one namespace is routinely handed types from
-  others. It also collects a redistributed component `.dll`, which is loaded
-  by bare name and appears in no import table. cx_Freeze and Nuitka take no
-  hook of this shape and are covered in the documentation instead.
-- Added `winrt-table-compiler`, a small pure-Python package that compiles the
-  table a projection package carries as text into the binary form that
-  `winrt-runtime` reads. It is a build-time dependency of every projection
-  package and there is nothing in it to import.
-- `winrt.system.Array` now accepts the type of its elements wherever it used to
-  need a format string. The eleven `winrt.system` aliases - `Int8`, `UInt8`,
-  `Int16`, `UInt16`, `Int32`, `UInt32`, `Int64`, `UInt64`, `Single`, `Double`
-  and `Char16` - name the scalars, `bool` names `Boolean`, and a projected enum
-  type names an array of that enum, which had no spelling at all before.
-- The `winrt.system` aliases say what their annotation means. Each one carries
-  a `winrt.system.BufferFormat`, a `winrt.system.StructFormat` and a
-  `winrt.system.WinrtSignature`, so code that reads one finds it with an
-  `isinstance` check over `typing.get_args` rather than by its position. They
-  are subclasses of `str`, and the buffer format comes first, so the single
-  string the aliases used to carry reads back the same as it did.
-- A subclass of a composable class names its runtime class with `runtime_class_name=`.
+- [`winrt-runtime`](runtime/CHANGELOG.md), which every package runs on
+- [`winrt-table-compiler`](table/CHANGELOG.md)
+- [The Windows SDK packages](projection/winrt/CHANGELOG.md), `winrt-Windows.*`
+- [The Windows App SDK packages](projection/wasdk/CHANGELOG.md), with
+  `winrt-Microsoft.UI.Interop` and the bootstrap module
+- [WinUI 2](projection/winui2/CHANGELOG.md), `winui2-Microsoft.UI.Xaml`
+- [WebView2](projection/webview2/CHANGELOG.md), with
+  `winrt-Microsoft.Web.WebView2.Dll`
+- [`winrt-Windows.Graphics.Capture.Interop`][capture]
+- [`winrt-Windows.Graphics.DirectX.Direct3D11.Interop`][direct3d11]
+- [`winrt-Windows.Media.Interop`][media]
+- [`winrt-Windows.System.Interop`][system]
+- [`winrt-Windows.UI.Composition.Interop`][composition]
+- [`winrt-Windows.UI.Xaml.Hosting.Interop`][xaml-hosting]
+- [The `PyWinRT` code generator](PyWinRT/CHANGELOG.md), on NuGet
 
-### Changed
-- A projection package no longer contains a compiled extension module. Each
-  one is a single `py3-none-any` wheel holding the type stubs, a small
-  `__init__.py` and a table that describes the namespace: its types, their
-  members, and the ABI call each member makes. `winrt-runtime` reads that
-  table and makes the calls, so it and the interop packages are the only parts
-  of the projection that are still compiled. One wheel now serves every
-  supported version of Python and every architecture, where a package used to
-  be built once for each combination of the two, and installing a package from
-  its source distribution needs neither a C++ compiler nor the Windows SDK.
-  All 410 projection packages together are 6.2 MB of wheels; the 420 of v3.2.1
-  were 49.2 MB for each version of Python and each architecture. The largest
-  of them, `winui3-Microsoft.UI.Xaml.Controls`, is 0.28 MB where it was
-  3.54 MB.
-- A tool that freezes an application has to collect each namespace's table,
-  which is the `_table.pywinrt` file beside its `__init__.py`. Collecting the
-  Python modules and the extension modules of a projection package is no
-  longer enough to make it work, since the table is neither. PyInstaller is
-  told this by the hook `winrt-runtime` now ships; cx_Freeze and Nuitka take
-  a few options, which the documentation gives.
-- Calling a WinRT member costs more than it did in v3.2.1. A projection
-  package used to be C++ compiled for the member being called, and it is now a
-  table that the runtime reads at the moment of the call; interpreting it is
-  what pays for the package being data. Measured on one machine with both
-  builds on the same day, most kinds of member cost 10 to 45 % more per call,
-  and two cost about twice as much: a `dict` passed where an `IMap` is
-  expected, and `get()` on an async operation that has already completed. In
-  absolute terms that is tens of nanoseconds added to calls that took 60 to
-  400 ns, so what the member itself does - reaching a device, a file or the
-  display - still dominates by orders of magnitude. Treat any single one of
-  these figures as approximate: a benchmark row moves by up to 20 % between
-  builds of code that cannot affect it.
-- Generating a projection of your own WinRT component needs nothing but the
-  tool. The table names the ABI call shape of each member by an id, the ids
-  are assigned by a census that `winrt-runtime` compiles its call trampolines
-  from, and the `PyWinRT` NuGet package now carries that census beside
-  `pywinrt.exe`. It is the one the `winrt-runtime` of the same release was
-  built from, so a component whose members all have shapes it already lists
-  works with the published wheel and no option has to be given. A different
-  census is named with `--shapes <file>`, for targeting a `winrt-runtime`
-  other than the one the tool shipped with. What the tool writes for your
-  component is a table and the type stubs beside it, so projecting one needs
-  no compiler either.
-- A component that makes a call no shape in the census covers is now reported
-  while it is generated, naming each shape the census is missing. Those
-  members are still projected and the rest of the namespace is unaffected;
-  using one raises rather than dispatching to the wrong trampoline. The way to
-  get such a shape covered is to add a member of that shape to
-  https://github.com/pywinrt/testwinrt, which puts it in the next
-  `winrt-runtime` release. `--emit-shapes <dir>` still appends one locally,
-  but a projection generated that way loads only against a `winrt-runtime`
-  built from `<dir>`, so it is not a route to a publishable package.
-- A table now records which census its shape ids were assigned by, as a
-  lineage and a revision, and `winrt-runtime` refuses one whose census is not
-  the one its own trampolines came from. Before this, a projection generated
-  against a census that was not the runtime's would import and then call the
-  wrong trampoline, with the arguments laid out for another signature.
-- The type stubs now use modern annotation syntax. Optional and union types are
-  spelled `X | None` and `X | Y` instead of `typing.Optional[X]` and
-  `typing.Union[X, Y]`, `typing.Tuple` and `typing.Type` are now the builtin
-  `tuple` and `type`, and the abstract collection types come from
-  `collections.abc` instead of `typing`. This only affects how the annotations
-  read; they mean the same thing to type checkers.
-- The type stubs now follow the conventions that type checkers and stub linters
-  expect of a stub. A method that returns the type it was called on says
-  `typing.Self` instead of naming a type variable, an empty class body is `...`
-  instead of `pass`, a default value that is not a literal is written `...`, and
-  `typing.Generic` comes last in a list of base classes. The redundant `__str__`
-  declaration is gone from the classes that implement `IStringable`; `str()` on
-  them works the same as it always has.
-- `winrt-runtime` no longer ships a copy of `MSVCP140.dll`, and no module in
-  the projection needs the Visual C++ redistributable any more. The whole of
-  that dependency was two cold standard library helpers, which are now compiled
-  into each module instead. Windows binds a DLL import by base name to whichever
-  copy loaded first, so the copy we shipped became the one every package in the
-  process used, and it could be older than another package needed - importing
-  `winrt` before some packages was enough to stop them loading ([#139]).
-- Overloaded methods are called by the number of arguments again instead of
-  using a separate name for each overload. The
-  `[Windows.Foundation.Metadata.Overload]` attribute is now only used for
-  overloads that take the same number of arguments as another overload and for
-  overridable methods.
-- Python classes that implement a WinRT interface now implement all overloads of
-  a method with a single method. The old names are still called if they are
-  defined, so this only shows up as a type checker error.
-- Greatly improved the speed of the `PyWinRT` code generation tool.
-- A member is no longer checked against `ApiInformation` before it is called.
-  A member that another interface declares is reached by querying that
-  interface, which answers the question the call actually depends on; a member
-  declared by the default interface of a class is not checked at all, since an
-  object cannot exist without implementing it; and a static member is simply
-  called, since there is no object to query for one. Reaching a member that
-  this version of Windows does not have therefore fails in the call or in the
-  activation factory, and the metadata is consulted only then, to say so. Two
-  things change in what you see: the `AttributeError` now names the member, as
-  in `method 'Windows.Media.Ocr.OcrEngine.IsLanguageSupported' is not available
-  in this version of Windows`, and an argument that cannot be converted raises
-  `TypeError` before it, where the version error used to come first. A
-  projection of your own component is answered the same way. The check used to
-  be left out of a `--component-dlls` build because `ApiInformation` cannot
-  always answer for a third-party component, and now that the question is only
-  asked after a call has failed, an unanswerable one costs nothing and falls
-  back to reporting the `HRESULT`.
-- BREAKING: The `winrt-sdk` package is gone. It shipped the C++/WinRT headers
-  and the hand-written PyWinRT headers that a generated projection compiled
-  against, and no projection package compiles any more. A module written by
-  hand to pass WinRT values to Python - the interop packages here are the
-  examples - includes `<pywinrt/base.h>`, which `winrt-runtime` ships
-  and `winrt._include.get_include()` locates, the way NumPy and pybind11
-  publish their headers:
+The [4.0 release notes][4.0] describe what changed in PyWinRT as a whole.
 
-  ```python
-  from setuptools import setup
-  from winrt._include import get_include
+[capture]: interop/winrt-Windows.Graphics.Capture.Interop/CHANGELOG.md
+[direct3d11]: interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop/CHANGELOG.md
+[media]: interop/winrt-Windows.Media.Interop/CHANGELOG.md
+[system]: interop/winrt-Windows.System.Interop/CHANGELOG.md
+[composition]: interop/winrt-Windows.UI.Composition.Interop/CHANGELOG.md
+[xaml-hosting]: interop/winrt-Windows.UI.Xaml.Hosting.Interop/CHANGELOG.md
+[4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
 
-  setup(..., include_dirs=[get_include(), "path/to/cppwinrt"])
-  ```
-
-  Such a module needs nothing generated: it names the WinRT type it is handing
-  over and the runtime resolves the name. `pybase.h` is now
-  `<pywinrt/base.h>`, mirroring C++/WinRT's own `<winrt/base.h>`.
-- `<pywinrt/base.h>` is now an umbrella header over ten smaller ones - among
-  them `<pywinrt/abi.h>`, which holds the ABI struct that a compiled module
-  and `winrt-runtime` agree on, and `<pywinrt/convert.h>`, which holds the
-  Python-to-WinRT conversions. Code that includes `<pywinrt/base.h>` needs no
-  change: it still provides everything.
-- `winrt-runtime` and the interop modules are compiled without RTTI (`/GR-`
-  on MSVC, `-fno-rtti` otherwise). Nothing in them uses `dynamic_cast`, and
-  the only uses of `typeid` were a dozen `typeid(T).name()` calls in the
-  messages of `NotImplementedError`, which now name the WinRT type instead of
-  giving an MSVC mangled name.
-- The `PyWinRT` dotnet tool now targets .NET 10 and needs the .NET 10 runtime
-  to run. This only affects generating your own projection with the tool; the
-  published wheels are unchanged and have never needed .NET installed.
-- An index that a Python sequence does not have is now reported to WinRT as
-  `E_BOUNDS`, which is what a WinRT collection raises for an index out of
-  range, instead of being written out as an unraisable `IndexError`. A WinRT
-  caller that reads past the end of a list therefore fails with a bounds error
-  rather than the generic "Unraisable Python exception". Everything else a
-  Python object can raise while WinRT is reading it still goes to
-  `sys.unraisablehook`, since WinRT has no way to report it.
-- `HResult` and `EventRegistrationToken` are projected as subclasses of `int`
-  rather than as structs with a single field in them, since that is what each
-  of them is. An `EventRegistrationToken` can be compared, hashed and used as
-  a dictionary key like the integer it is, and an `HResult` can be compared
-  against the codes in `winrt.system.hresult` directly.
-- BREAKING: A package is now versioned by the metadata it projects instead of
-  by the version of the generator that read that metadata.
-  `winrt-Windows.Storage` is `4!10.0.28000.2705`, the version of the
-  `Microsoft.Windows.SDK.CPP` NuGet package its winmd files come from, and the
-  WinUI 2, Windows App SDK and WebView2 packages are likewise numbered by their
-  own upstream. Each package's README names which NuGet package and version
-  that is. So a package now says which Windows APIs are in it, an upstream
-  release no longer has to wait for a PyWinRT release to be numbered after,
-  and the right way to pin one is the way its upstream numbers it -
-  `winrt-Microsoft.WindowsAppSDK.WinUI==4!2.5.*` - rather than by a PyWinRT
-  version.
-  The packages that are written by hand rather than generated - `winrt-runtime`,
-  `winrt-table-compiler` and the eight interop modules - keep plain semantic
-  versioning, since there is no upstream release for them to be numbered after,
-  and each is released on its own when it changes. So moving the Windows SDK
-  pin no longer republishes the interop modules that were built against it,
-  and a fix to `winrt-runtime` does not renumber anything else. The exception
-  is the two Windows App SDK interop modules, which are released with the App
-  SDK packages and numbered like them, since the App SDK release is what you
-  choose and the bootstrap module carries a `.dll` and its defaults out of it.
-- BREAKING: The `4!` in front of those versions is a PEP 440 epoch and says
-  which generation of PyWinRT the package was built for. It is the same number
-  as `winrt-runtime`'s major version and it changes only when every projection
-  package has to be rebuilt anyway, so a `pip freeze` says which runtime a
-  package goes with. It is also what makes the new numbering sort above the
-  old: several upstream lines are numbered below the `3.2.1` PyWinRT last
-  published - the Windows App SDK is on 2.x and WebView2 on 1.x - so a bare
-  `2.5.1` would read as older than the release it follows, which an epoch
-  fixes and a rename would only hide. Some tools that rewrite dependency
-  constraints have historically mishandled epochs; the spelling is `4!2.5.1`
-  wherever one is written out.
-- BREAKING: A package now requires `winrt-runtime>=<the version it was
-  generated with>,<5` where it used to pin `winrt-runtime~=<version>.0`. Any
-  runtime of the same generation can run it, so pip is free to install a newer
-  one. The upper bound is the only one anywhere in PyWinRT's metadata, and it
-  is there because that incompatibility is known rather than guessed: a
-  package of one generation is refused by the runtime of the next, so without
-  it pip would upgrade the runtime on its own into an import error. Building a
-  package from its source distribution caps `winrt-table-compiler` the same
-  way, for the same reason - a compiler of the next generation would write a
-  table that the runtime the wheel then asks for cannot read. Its floor is the
-  generation rather than a particular version, since what the compiler has to
-  be able to do is write the table format, and that does not move when the
-  runtime is fixed.
-- `winrt-Windows.Foundation`, `winrt-Windows.Foundation.Collections` and
-  `winrt-Windows.Storage.Streams` are now installed with any package that
-  hands back one of their types, instead of being offered by that package's
-  `[all]` extra. Nearly everything in the projection returns an
-  `IAsyncOperation`, an `IVectorView` or an `IBuffer`, so a minimal install
-  was usually missing one of these and said so only when a call returned. The
-  three together are under a megabyte and reference nothing outside the set,
-  so nothing else is pulled in with them.
-- Everything else one package says about another is now a floor rather than a
-  `~=` pin, including the packages named by the `[all]` extra. Packages do not
-  call into each other's compiled code - a type from another package is
-  resolved through WinRT by name - so the pin was protecting nothing, and it
-  made installing two packages that were generated from different upstream
-  releases fail to resolve. Packages that do come from one set of metadata,
-  such as `winrt-Microsoft.WindowsAppSDK.WinUI` and
-  `winrt-Microsoft.WindowsAppSDK.InteractiveExperiences`, are still pinned to
-  each other, because they are generated and released together. The interop
-  modules are not among those: each is written by hand and released on its own,
-  so what one says about the projection package whose types it hands back is a
-  floor as well.
-- Every wheel now carries the text of the license it is published under, in
-  its `.dist-info/licenses/` directory, where before it carried only the name
-  of the license in its metadata. A wheel that redistributes a Microsoft
-  binary carries that binary's license as well, and a CycloneDX bill of
-  materials under `.dist-info/sboms/` naming the binary, the NuGet package and
-  version it came from, and Microsoft as its supplier (PEP 639 and PEP 770).
-  The bill of materials distinguishes the two parties: PyWinRT is an
-  independent project and is the root component, under the MIT license, and
-  each redistributed binary is a component inside it.
-- Each family of packages now has a changelog of its own, which is what a
-  package's `Changelog` link on PyPI points at, so the Windows SDK, the
-  Windows App SDK, WinUI 2 and WebView2 each say what changed in the version
-  you installed. The changelog at the root of the repository is
-  `winrt-runtime`'s and the code generator's, and it keeps everything that
-  affects every package - the versioning scheme, the packaging and the
-  release history before v4.0.
-- No `.dll` is copied into a wheel after it is built any more. The two that
-  PyWinRT redistributes are put there by the build that produces the wheel,
-  which is why a wheel built from a source distribution now carries one too,
-  and a check over every wheel refuses one whose `.dll`s and bill of materials
-  disagree. No source distribution carries a prebuilt binary: the build takes
-  it out of the NuGet package it comes from, downloading that package and
-  checking it against a pinned SHA-256 unless an environment variable names an
-  unpacked copy already on the machine.
-- BREAKING: The Windows App SDK and WebView2 packages carry the `winrt-`
-  prefix again and are imported from the `winrt` top-level package, as they
-  were before v3.0. `webview2-Microsoft.Web.WebView2.Core` is now
-  `winrt-Microsoft.Web.WebView2` - named after the `Microsoft.Web.WebView2`
-  NuGet package it is generated from, the way the Windows App SDK packages
-  below are, rather than after the one namespace in it - the
-  `winui3-Microsoft.*` packages are the `winrt-Microsoft.WindowsAppSDK.*` ones
-  listed below, and the two hand-written modules are
-  `winrt-Microsoft.UI.Interop` and
-  `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`. In
-  Python, `webview2.microsoft.web.webview2.core` becomes
-  `winrt.microsoft.web.webview2.core` and `winui3.microsoft.ui.xaml` becomes
-  `winrt.microsoft.ui.xaml`. `winui2` keeps a prefix and a top-level package
-  of its own, because WinUI 2 defines the same `Microsoft.UI.Xaml.*`
-  namespaces as the App SDK's WinUI component and the two cannot be imported
-  from one package; nothing else needed a prefix of its own. See
-  the [v3 to v4 migration guide][3to4] for the full list of renames.
-- The type hints of generic interfaces infer variance, so `IIterable[Uri]` is an `IIterable[Object]`.
-- A Python implementation of a WinRT interface is an instance of `winrt.system.Object`.
-
-### Deprecated
-- Passing a format string to `winrt.system.Array` is deprecated and raises a
-  `DeprecationWarning`. Pass the type of the elements instead: `bool` for
-  `"?"`, `winrt.system.Int8` for `"b"`, `UInt8` for `"B"`, `Int16` for `"h"`,
-  `UInt16` for `"H"`, `Int32` for `"i"`, `UInt32` for `"I"`, `Int64` for `"q"`,
-  `UInt64` for `"Q"`, `Single` for `"f"`, `Double` for `"d"` and `Char16` for
-  `"u"`. An array of enums was spelled `"i"` or `"I"` and is now spelled with
-  the enum type. Format strings will be removed in a future release.
-- `HResult.value` and `EventRegistrationToken.value` are deprecated. The value
-  of each is now the object itself, so reading the field still works and
-  raises a `DeprecationWarning`. It will be removed in a future release.
-- The method names that v3.x generated from the
-  `[Windows.Foundation.Metadata.Overload]` attribute are still available as
-  aliases, but calling one raises a `DeprecationWarning`. They will be removed
-  in a future release.
-- `Type._from(obj)` is deprecated in favor of `obj.as_(Type)`.
-
-### Removed
-- Dropped support for Python 3.9 and Python 3.10. PyWinRT now requires
-  Python 3.11 or later. Python 3.9 is past its upstream end of life and
-  Python 3.10 reaches its own in October 2026.
-
-### Fixed
-- Fixed a crash when Windows let go, on a thread of its own, of the `IBuffer`
-  that a Python buffer such as `bytes` was passed as.
-- Fixed deadlocks with WinRT objects that live in another apartment or
-  process, such as a `StorageFile`, whose apartment may be waiting for the
-  GIL to call a Python handler: the projection no longer holds the GIL
-  when it lets go of the last reference to one, which a wrapper, an
-  array, a struct or a nullable value may hold, or when it asks one for
-  an interface.
-- Activating a class whose server runs in another process no longer stops
-  every other Python thread until the server has started.
-- Fixed a crash at exit when WinRT releases a Python object after the
-  interpreter has finalized.
-- The interop modules no longer hold the GIL while a call may wait for another
-  thread or process: `bootstrap.initialize()` and its shutdown, which can start
-  the Windows App SDK's lifetime manager or wait for the user,
-  `DesktopWindowXamlSourceNative.attach_to_window()` and `pretranslate_message()`,
-  which can send messages to a window on another thread, and the release of an
-  interface pointer capsule.
-- `DesktopWindowXamlSourceNative.pretranslate_message()` accepts a
-  `ctypes.wintypes.MSG`, or any other buffer the size of a `MSG`.
-- Fixed a Python thread state leaking every time the projection took the GIL on
-  a thread that already held it. `PyGILState_Ensure()` reports whether the
-  caller already had the GIL, and the RAII wrapper used that answer as its
-  "holding nothing" value, so it skipped the matching `PyGILState_Release()` in
-  exactly that case. The release does not unlock anything there, but it is what
-  balances the counter that decides when the state of a thread the projection
-  did not create is torn down. The most common way to reach it was garbage
-  collecting an object that held an event handler.
-- Fixed a C++ exception of an unrecognized type crashing the process on its way
-  out of a WinRT call. Only the standard exception types were caught, and
-  anything else escaped a `noexcept` function and terminated the interpreter;
-  they now raise `RuntimeError`.
-- Fixed calling a member that an object does not implement crashing the process
-  instead of raising `AttributeError`. This happened whenever the metadata of
-  the member was present but the object was not, for example an object from an
-  older version of a component, an object implemented in Python, or any object
-  at all in a `--component-dlls` build, where the check was omitted entirely.
-- Fixed `GetMany()` raising `NotImplementedError` on every collection backed by
-  a Python object. WinRT code that reads a wrapped list or dict in batches -
-  which is what C++/WinRT's own `to_vector()` does - failed instead of getting
-  the items.
-- Fixed replacing an item of a Python list passed to WinRT as an `IVector`. The
-  value was released one time too many, which corrupts the interpreter, and it
-  only worked at all if the object was a `list` rather than any other sequence.
-- Fixed `@typing.overload` missing from the type hints of overloaded methods.
-- Fixed methods being silently dropped when two overloads could not be told
-  apart.
-- Fixed the type hints of `Array` taking only a one-item tuple.
-- Fixed the type hints of event handlers refusing a handler that returns a value.
-- Fixed the type hints of a struct passed by reference refusing a tuple.
-- Fixed `PyWinRT.exe --include` losing parameter kinds in the nullability file.
-
-[#139]: https://github.com/pywinrt/pywinrt/issues/139
-[3to4]: https://github.com/pywinrt/pywinrt/blob/main/scripts/3to4/README.md
+The releases below are those before v4.0, when every package was released
+together and carried the same version.
 
 ## [v3.2.1] - 2025-06-06
 
@@ -762,7 +427,6 @@ package only.
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.2.1...HEAD
 [v3.2.1]: https://github.com/pywinrt/pywinrt/compare/v3.2.0...v3.2.1
 [v3.2.0]: https://github.com/pywinrt/pywinrt/compare/v3.1.0...v3.2.0
 [v3.1.0]: https://github.com/pywinrt/pywinrt/compare/v3.0.0...v3.1.0
