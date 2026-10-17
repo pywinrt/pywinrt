@@ -71,12 +71,15 @@ static class FileWriters
         );
         members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
 
+        var censusRevision = 0;
+        IEnumerable<string> namesReleases = [];
+
         // The generated files are independent of each other, so write them
         // in parallel. This helps the largest namespaces, which would
         // otherwise be the last ones still running at the end.
         Parallel.Invoke(
             () =>
-                WriteNamespaceDunderInitPy(
+                namesReleases = WriteNamespaceDunderInitPy(
                     nsDir,
                     ns,
                     nullabilityMap,
@@ -86,7 +89,15 @@ static class FileWriters
                     dllPackage
                 ),
             () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
-            () => TableWriter.Write(nsDir, ns, packageMap, nullabilityMap, members, census)
+            () =>
+                censusRevision = TableWriter.Write(
+                    nsDir,
+                    ns,
+                    packageMap,
+                    nullabilityMap,
+                    members,
+                    census
+                )
         );
 
         // Several namespaces may be published in one distribution, so what
@@ -103,7 +114,13 @@ static class FileWriters
                 packageMap,
                 includeDelegates: true,
                 includeInheritedInterfaces: true
-            )
+            ),
+            censusRevision,
+            RuntimeReleases.Newest([
+                census.Revisions[censusRevision - 1].Runtime,
+                RuntimeReleases.TableFormat,
+                .. namesReleases,
+            ])
         );
     }
 
@@ -118,6 +135,9 @@ static class FileWriters
     /// </remarks>
     internal static void WriteDepsJson(
         DirectoryInfo packageDir,
+        Census census,
+        int censusRevision,
+        string? runtime,
         IReadOnlyCollection<string> namespaces,
         IReadOnlyCollection<string> required,
         IReadOnlyCollection<string> referenced
@@ -154,6 +174,24 @@ static class FileWriters
                 },
                 ","
             );
+
+            // The census the tables name their members' call shapes in, and
+            // the newest revision of it any of them needs.
+            w.Write("\"census\": ");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine($"\"lineage\": \"{census.Lineage}\",");
+                    w.WriteLine($"\"revision\": {censusRevision}");
+                },
+                ","
+            );
+
+            // The first winrt-runtime release that has everything the package
+            // needs of it - the table format, the census revision and the
+            // names its modules use - which is null while the census names no
+            // release of that revision.
+            w.WriteLine($"\"runtime\": {(runtime is null ? "null" : $"\"{runtime}\"")},");
             writeList("namespaces", namespaces, ",");
             writeList("required", required, ",");
             writeList("referenced", referenced, "");
@@ -495,7 +533,10 @@ static class FileWriters
         return wroteAny;
     }
 
-    private static void WriteNamespaceDunderInitPy(
+    /// <returns>
+    /// The releases that first have the runtime names the module uses.
+    /// </returns>
+    private static IEnumerable<string> WriteNamespaceDunderInitPy(
         DirectoryInfo nsDir,
         QualifiedNamespace ns,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
@@ -656,5 +697,7 @@ static class FileWriters
         hw.Write(body);
 
         sw.WriteFileIfChanged(nsDir, "__init__.py");
+
+        return RuntimeReleases.OfNamesIn(body);
     }
 }

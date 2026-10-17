@@ -332,7 +332,11 @@ sealed class TableWriter
         this.census = census;
     }
 
-    public static void Write(
+    /// <summary>
+    /// Writes the table of one namespace.
+    /// </summary>
+    /// <returns>The revision of the census the table needs.</returns>
+    public static int Write(
         DirectoryInfo nsDir,
         QualifiedNamespace ns,
         IReadOnlyDictionary<string, string> packageMap,
@@ -344,7 +348,8 @@ sealed class TableWriter
         var writer = new TableWriter(ns, packageMap, nullabilityMap, census);
 
         writer.Build(members);
-        writer.Serialize(nsDir);
+
+        return writer.Serialize(nsDir);
     }
 
     // ----- building the model ---------------------------------------------
@@ -1676,7 +1681,7 @@ sealed class TableWriter
     /// order they are numbered in there. The grammar and the vocabulary are in
     /// <c>runtime/src/table-format.md</c>.
     /// </remarks>
-    private void Serialize(DirectoryInfo nsDir)
+    private int Serialize(DirectoryInfo nsDir)
     {
         // The types this namespace defines come first, sorted by name, and the
         // references to other namespaces follow, so that a runtime that wants to
@@ -1707,17 +1712,21 @@ sealed class TableWriter
             }
         }
 
+        var revision = CensusRevisionFor(sorted);
+
         FileContent.WriteIfChanged(
             nsDir,
             "_table.pywinrt.txt",
-            sink => WriteTable(new TextSink(sink), sorted)
+            sink => WriteTable(new TextSink(sink), sorted, revision)
         );
+
+        return revision;
     }
 
-    private void WriteTable(TextSink sink, IReadOnlyList<TableType> sorted)
+    private void WriteTable(TextSink sink, IReadOnlyList<TableType> sorted, int revision)
     {
         sink.Line($"format {FormatMajor}.{FormatMinor}");
-        sink.Line($"census {census.Lineage} {CensusRevisionFor(sorted)}");
+        sink.Line($"census {census.Lineage} {revision}");
         sink.Line($"namespace {ns.Namespace}");
 
         foreach (var type in sorted)

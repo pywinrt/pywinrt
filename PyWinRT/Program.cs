@@ -523,6 +523,9 @@ rootCommand.SetHandler(
 
             FileWriters.WriteDepsJson(
                 new DirectoryInfo(Path.Combine(output.FullName, name)),
+                census,
+                distribution.Max(d => d.CensusRevision),
+                RuntimeReleases.Newest(distribution.Select(d => d.Runtime)),
                 [.. provided.Order(StringComparer.Ordinal)],
                 names(d => d.Required),
                 names(d => d.Referenced)

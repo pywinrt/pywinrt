@@ -185,6 +185,7 @@ requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
 build-backend = "hatchling.build"
 
 [project]
+# the floor is the "runtime" of deps.json, as below
 dependencies = ["winrt-runtime>=4.0.0,<5"]
 
 [tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]
@@ -193,6 +194,12 @@ dependencies = ["winrt-runtime>=4.0.0,<5"]
 The last table turns on the build hook of `winrt-table-compiler`, which
 compiles each table the package carries into the wheel. It takes no options,
 so the table is empty.
+
+The floor of `winrt-runtime` is the release that `PyWinRT.exe` writes as
+`runtime` in the `deps.json` beside each package it generates: the first one
+that reads the package's tables and has everything its modules call when they
+are imported. A later `PyWinRT.exe` can raise it, so take it from `deps.json`
+each time you generate.
 
 Generating the projection in the first place needs `PyWinRT.exe` and the
 shape census it ships beside, which records the ABI call shapes the runtime

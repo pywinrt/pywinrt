@@ -11,6 +11,14 @@
 /// interface a type implements or inherits, and in the signature of a member or a delegate,
 /// type arguments included. It is what the <c>[all]</c> extra of a package offers.
 /// </param>
+/// <param name="CensusRevision">
+/// The revision of the shape census the namespace's table needs, which a winrt-runtime
+/// has to be built from, or from a later one, to load it.
+/// </param>
+/// <param name="Runtime">
+/// The first winrt-runtime release that has everything the namespace needs of it, or null
+/// while the census names no release of <paramref name="CensusRevision"/>.
+/// </param>
 /// <remarks>
 /// Several namespaces may be published in one distribution, so this is handed back rather
 /// than written where it is found: one deps.json is written per distribution once every
@@ -19,5 +27,7 @@
 sealed record NamespaceDependencies(
     string Namespace,
     IReadOnlyCollection<QualifiedNamespace> Required,
-    IReadOnlyCollection<QualifiedNamespace> Referenced
+    IReadOnlyCollection<QualifiedNamespace> Referenced,
+    int CensusRevision,
+    string? Runtime
 );
