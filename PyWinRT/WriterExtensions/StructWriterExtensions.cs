@@ -113,6 +113,13 @@ static class StructWriterExtensions
         w.WriteLine($"class {type.Name}(int):");
         w.Indent++;
 
+        // HResult takes one integer, a code in either the signed or the
+        // unsigned form, as an Int32 parameter does, not what int() takes.
+        if (type.Type.Fields is [{ FieldType.FullName: "System.Int32" }])
+        {
+            w.WriteLine("def __new__(cls, value: typing.SupportsIndex, /) -> typing.Self: ...");
+        }
+
         foreach (var field in type.Type.Fields)
         {
             w.WriteLine(
