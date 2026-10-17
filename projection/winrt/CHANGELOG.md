@@ -32,7 +32,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - A package is one `py3-none-any` wheel of data, not compiled code.
 - Updated the Windows SDK to 10.0.28000.2705, from 10.0.26100.4188.
 - Requires `winrt-runtime>=4.0.0,<5` rather than one `~=` release of it.
-- Requires another package with a floor, or `~=` where a class derives from it.
+- Requires another package with a floor rather than one `~=` release of it.
 - Requires the packages of `IAsyncOperation`, `IVectorView` and `IBuffer`.
 - `HResult` and `EventRegistrationToken` are `int` subclasses, not structs.
 - More return types include `None`, in `Windows.Storage`, Bluetooth and more.

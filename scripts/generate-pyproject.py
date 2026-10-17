@@ -587,26 +587,6 @@ def write_interop_readme(
         )
 
 
-def format_hard_requirement(package: str, version: str, same_family: bool) -> str:
-    """
-    Renders a requirement on another package that this one's types name.
-
-    Within one family the two come from one winmd set and one generator run,
-    so they are released together and ~= is what says so - and unlike the ==
-    that #137 rejected, it still admits a .postN of either one on its own.
-    Across families the other package follows its own upstream on its own
-    schedule, so all that can honestly be said about it is a floor.
-
-    A package written by hand is never the first of those, whatever family it
-    was built against: it carries a version of its own and is released when
-    it changes, so it takes the floor even for a package of its own family.
-    """
-    if same_family:
-        return f"{package}~={version}.0"
-
-    return f"{package}>={version}"
-
-
 def write_compiled_project_files(
     package_path: Path,
     module_name: str,
@@ -1126,9 +1106,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
             dependencies.append(f"{dep}>={dep_version}")
         else:
             dependencies.append(
-                format_hard_requirement(
-                    dep, dep_version, package_families[dep] == family
-                )
+                versions.family_requirement(dep, dep_version, pinned=dep in same_family)
             )
 
     # A component .dll is redistributed in a package of its own, since it is
@@ -1178,10 +1156,10 @@ for path in INTEROP_PATH.glob("winrt-*"):
                 f"{runtime_requirement}\n",
             ]
             + [
-                format_hard_requirement(
+                versions.family_requirement(
                     dep,
                     FAMILY_VERSIONS[package_families[dep]],
-                    same_family=False,
+                    pinned=False,
                 )
                 + "\n"
                 for dep in interop_deps

@@ -16,6 +16,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
+from packaging.requirements import Requirement
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
 
@@ -271,8 +272,15 @@ class FamilyRequirement(unittest.TestCase):
 
     def setUp(self) -> None:
         self.version = versions.family_versions()["winrt"]
-        self.pinned = SpecifierSet(f"~={self.version}.0")
-        self.floor = SpecifierSet(f">={self.version}")
+        self.pinned = self.specifier(self.version, pinned=True)
+        self.floor = self.specifier(self.version, pinned=False)
+
+    def specifier(self, version: str, pinned: bool) -> SpecifierSet:
+        requirement = Requirement(
+            versions.family_requirement("winrt-Windows.Foundation", version, pinned)
+        )
+
+        return requirement.specifier
 
     def test_the_pin_admits_the_version_it_was_written_for(self) -> None:
         self.assertIn(self.version, self.pinned)
@@ -297,6 +305,17 @@ class FamilyRequirement(unittest.TestCase):
     def test_the_floor_refuses_the_previous_generation(self) -> None:
         # an epoch is what keeps the two apart without an upper bound
         self.assertNotIn("3.2.1", self.floor)
+
+    def test_a_prerelease_pin_admits_only_that_prerelease(self) -> None:
+        # ~= cannot follow a phase with another number, and the members of a
+        # set are released together, so a preview pins its own preview
+        pinned = self.specifier("4!2.6.0b1", pinned=True)
+        pinned.prereleases = True
+
+        self.assertIn("4!2.6.0b1", pinned)
+        self.assertIn("4!2.6.0b1.post1", pinned)
+        self.assertNotIn("4!2.6.0b2", pinned)
+        self.assertNotIn("4!2.6.0", pinned)
 
 
 class ReleaseTags(unittest.TestCase):

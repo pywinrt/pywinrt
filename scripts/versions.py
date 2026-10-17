@@ -573,6 +573,38 @@ def runtime_requirement(floor: str) -> str:
     return f"winrt-runtime>={floor},<{generation + 1}"
 
 
+def family_requirement(package: str, version: str, pinned: bool) -> str:
+    """
+    A requirement on another package that this one's types name, at the
+    version of its family.
+
+    A family published as NuGet components is released as a set - Microsoft's
+    own build refuses a project that mixes versions of them - so a component
+    pins the others of its family to its own release. ~= says so, and unlike
+    the == that #137 rejected, it still admits a .postN of either one. ~=
+    cannot follow a prerelease with another number, so a prerelease is pinned
+    as the range from it to the next prerelease of its phase, which admits the
+    same.
+
+    Every other requirement is a floor. A package of another family follows
+    its own upstream on its own schedule, and within the Windows SDK a newer
+    package of a base class serves an older derived one, which is what such a
+    requirement is. A package written by hand takes the floor even on its own
+    family: it carries a version of its own and is released when it changes.
+    """
+    if not pinned:
+        return f"{package}>={version}"
+
+    prerelease = re.fullmatch(r"(.*(?:a|b|rc))(\d+)", version)
+
+    if prerelease:
+        later = f"{prerelease[1]}{int(prerelease[2]) + 1}"
+
+        return f"{package}>={version},<{later}"
+
+    return f"{package}~={version}.0"
+
+
 def table_compiler_requirement() -> str:
     """
     What a projection package requires of the compiler that builds it.

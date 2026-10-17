@@ -28,8 +28,8 @@ dependencies = [
     "winrt-Windows.Foundation>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
     "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Xaml~=4!10.0.28000.2705.0",
-    "winrt-Windows.UI.Xaml.Controls~=4!10.0.28000.2705.0",
+    "winrt-Windows.UI.Xaml>=4!10.0.28000.2705",
+    "winrt-Windows.UI.Xaml.Controls>=4!10.0.28000.2705",
 ]
 
 [project.optional-dependencies]
