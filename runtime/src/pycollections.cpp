@@ -119,7 +119,7 @@ namespace py::interp
                 // The type, as collections.cpp reports one, rather than an
                 // object whose repr() can be any size.
                 write_unraisable_and_throw(
-                    reinterpret_cast<PyObject*>(Py_TYPE(target())));
+                    reinterpret_cast<PyObject*>(Py_TYPE(obj.get())));
             }
         }
         catch (...)

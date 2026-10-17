@@ -47,13 +47,22 @@ namespace py::interp
          * the pair is something the runtime makes: a two-item tuple of the
          * key and the value, behind the two members the table gives the roles
          * pair_key and pair_value.
+         *
+         * It holds the mapping it is an entry of, which is what a key or a
+         * value that fails to convert is reported against, but it is not that
+         * mapping, so it has no Python object of its own to hand back.
          */
         struct pair_calls final : collection_calls
         {
-            pair_calls(PyObject* key, PyObject* value) noexcept
-                : collection_calls{nullptr}, key{Py_NewRef(key)},
+            pair_calls(PyObject* mapping, PyObject* key, PyObject* value) noexcept
+                : collection_calls{mapping}, key{Py_NewRef(key)},
                   value{Py_NewRef(value)}
             {
+            }
+
+            PyObject* target() const noexcept override
+            {
+                return nullptr;
             }
 
             PyObject* operate(
@@ -206,7 +215,8 @@ namespace py::interp
 
             return {
                 &output_type(*slot.member, *slot.overload, 0),
-                std::make_unique<pair_calls>(current_key.get(), current_value.get())};
+                std::make_unique<pair_calls>(
+                    obj.get(), current_key.get(), current_value.get())};
         }
 
         sub_collection mapping_iterator_calls::make_collection(reverse_slot const& slot)

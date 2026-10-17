@@ -310,6 +310,38 @@ class TestMappingAsCollection(unittest.TestCase):
 
         self.assertEqual(sys.getrefcount(entries), before)
 
+    def assert_an_entry_is_unraisable(self, entries: dict[Any, Any]) -> None:
+        # WinRT reads each entry through a pair the runtime makes of it, and a
+        # key or value that fails to convert there is reported against the
+        # mapping, as an element of a list is against the list.
+        for method in (
+            self.tests.collection2,
+            self.tests.collection3,
+            self.tests.collection4,
+        ):
+            with (
+                self.subTest(method=method),
+                self.assertRaises(OSError) as ctx,
+                catch_unraisable() as exceptions,
+            ):
+                method(entries)
+
+            self.assertEqual(
+                ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
+            )
+            self.assertEqual(len(exceptions), 1)
+            self.assertEqual(exceptions[0].exc_type, TypeError)
+            self.assertIs(exceptions[0].object, dict)
+
+    def test_a_key_of_the_wrong_type_is_unraisable(self) -> None:
+        self.assert_an_entry_is_unraisable({1: "2"})
+
+    def test_a_value_of_the_wrong_type_is_unraisable(self) -> None:
+        self.assert_an_entry_is_unraisable({"1": 2})
+
+    def test_a_value_of_none_is_unraisable(self) -> None:
+        self.assert_an_entry_is_unraisable({"1": None})
+
     def test_something_that_is_not_a_mapping_is_refused(self) -> None:
         with self.assertRaisesRegex(TypeError, "mapping"):
             self.tests.collection3(42)  # type: ignore

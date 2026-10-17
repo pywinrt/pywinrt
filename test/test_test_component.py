@@ -757,8 +757,6 @@ class TestTestComponent(unittest.TestCase):
         self.assertDictEqual(dict(result[0]), arg)
         self.assertDictEqual(dict(result[1]), arg)
 
-        # TODO: test wrong type in dict. currently this will cause an abort
-
     def test_dict_to_map_view(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
@@ -769,8 +767,6 @@ class TestTestComponent(unittest.TestCase):
         # returns a copy of the dict both as a return value and as an out parameter
         self.assertDictEqual(dict(result[0]), arg)
         self.assertDictEqual(dict(result[1]), arg)
-
-        # TODO: test wrong type in dict. currently this will cause an abort
 
     def test_list_to_vector(self) -> None:
         arg = ["1", "2", "3", "4"]
