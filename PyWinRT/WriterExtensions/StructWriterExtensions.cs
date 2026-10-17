@@ -115,9 +115,21 @@ static class StructWriterExtensions
 
         // HResult takes one integer, a code in either the signed or the
         // unsigned form, as an Int32 parameter does, not what int() takes.
+        // EventRegistrationToken is issued by WinRT and cannot be created,
+        // which a parameter no argument fits says to both mypy and pyright, as
+        // for a class with no constructor.
         if (type.Type.Fields is [{ FieldType.FullName: "System.Int32" }])
         {
             w.WriteLine("def __new__(cls, value: typing.SupportsIndex, /) -> typing.Self: ...");
+        }
+        else
+        {
+            w.WriteLine("def __new__(cls, _: typing.Never, /) -> typing.Self:");
+            w.Indent++;
+            w.WriteLine(
+                "\"\"\"WinRT issues a token from add_<event>(), so there is nothing to create one from.\"\"\""
+            );
+            w.Indent--;
         }
 
         foreach (var field in type.Type.Fields)
