@@ -110,6 +110,7 @@ class EventRegistrationToken(int):
 
 @typing.final
 class HResult(int):
+    def __new__(cls, value: typing.SupportsIndex, /) -> typing.Self: ...
     @deprecated("HResult.value is deprecated, the value is the HResult itself")
     @_property
     def value(self) -> int: ...
