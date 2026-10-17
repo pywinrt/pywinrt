@@ -9,6 +9,7 @@ against a second copy of the rules written out by hand.
 """
 
 import ast
+import json
 import tempfile
 import textwrap
 import unittest
@@ -132,6 +133,79 @@ class RuntimeRequirement(unittest.TestCase):
         # package of one generation is refused by the runtime of the next, and
         # without it pip would upgrade the runtime on its own into that error
         self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
+
+
+class CallShapeCensus(unittest.TestCase):
+    """
+    The census a table's shape ids mean something in, and the runtime release
+    that first has each revision of it.
+    """
+
+    def setUp(self) -> None:
+        self.census = json.loads(versions.SHAPES_PATH.read_text(encoding="utf-8"))
+
+    def test_the_tree_passes(self) -> None:
+        versions.check_census()
+
+    def test_another_lineage_is_refused(self) -> None:
+        # what PyWinRT.exe writes when it finds no shapes.json to extend
+        self.census["lineage"] = "00000000-0000-0000-0000-000000000000"
+
+        with self.assertRaisesRegex(RuntimeError, "restore it from git"):
+            self.check()
+
+    def test_a_census_the_runtime_was_not_built_from_is_refused(self) -> None:
+        self.census["revision"] += 1
+        self.census["revisions"].append(dict(self.census["revisions"][-1]))
+
+        with self.assertRaisesRegex(RuntimeError, "generate the projection again"):
+            self.check()
+
+    def test_a_revision_in_no_release_is_refused(self) -> None:
+        self.census["revisions"][-1]["runtime"] = None
+
+        with self.assertRaisesRegex(RuntimeError, "in no winrt-runtime release yet"):
+            self.check()
+
+    def test_a_revision_in_a_later_runtime_than_the_tree_is_refused(self) -> None:
+        self.census["revisions"][-1]["runtime"] = (
+            f"{versions.compatibility_generation()}.99.0"
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "set runtime/version.txt"):
+            self.check()
+
+    def test_a_revision_in_an_earlier_runtime_than_the_one_before_is_refused(
+        self,
+    ) -> None:
+        generation = versions.compatibility_generation()
+        self.census["revisions"][0]["runtime"] = f"{generation}.0.1"
+        self.census["revisions"][1]["runtime"] = f"{generation}.0.0"
+
+        with (
+            mock.patch.object(
+                versions, "runtime_version", return_value=f"{generation}.0.1"
+            ),
+            self.assertRaisesRegex(RuntimeError, "an earlier revision is in"),
+        ):
+            self.check()
+
+    def test_a_revision_of_another_generation_is_refused(self) -> None:
+        self.census["revisions"][0]["runtime"] = "3.2.1"
+
+        with self.assertRaisesRegex(RuntimeError, "not of generation"):
+            self.check()
+
+    def check(self) -> None:
+        """
+        Runs check_census() on the census this test has changed, with the
+        header and every other file of the tree as they are.
+        """
+        path = Path(self.enterContext(tempfile.TemporaryDirectory())) / "shapes.json"
+        path.write_text(json.dumps(self.census), encoding="utf-8")
+
+        with mock.patch.object(versions, "SHAPES_PATH", path):
+            versions.check_census()
 
 
 class TableCompilerRequirement(unittest.TestCase):

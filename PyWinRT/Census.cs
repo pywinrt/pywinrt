@@ -45,6 +45,19 @@ sealed class CensusRevision
 
     [JsonPropertyName("reverse_shapes")]
     public int ReverseShapes { get; set; }
+
+    /// <summary>
+    /// The first <c>winrt-runtime</c> release built from this revision, or
+    /// null while none is named.
+    /// </summary>
+    /// <remarks>
+    /// A table needs a runtime built from the revision it names or a later
+    /// one, so this is the floor of the runtime a package carrying it
+    /// requires. The run that appends a revision cannot know which release
+    /// will ship it, so it leaves this null for a person to fill in.
+    /// </remarks>
+    [JsonPropertyName("runtime")]
+    public string? Runtime { get; set; }
 }
 
 /// <summary>

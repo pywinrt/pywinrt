@@ -27,7 +27,17 @@ TABLE_PATH = REPO_PATH / "table"
 TABLE_VERSION_PATH = TABLE_PATH / "version.txt"
 INTEROP_PATH = REPO_PATH / "interop"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
+SHAPES_PATH = RUNTIME_PATH / "src" / "shapes.json"
+SHAPES_HEADER_PATH = RUNTIME_PATH / "src" / "shapes-generated.h"
 INTEROP_HEADER_PATH = INTEROP_PATH / "interop.h"
+
+# The lineage of the call shape census that the runtime of each compatibility
+# generation is built from. A table names each member's call shape by an id
+# that means something only in the census that issued it, and a runtime refuses
+# a table of another lineage, so a census started afresh - which is what
+# PyWinRT.exe does when it finds no shapes.json to extend - would leave every
+# package of the generation unreadable by the runtime built from it.
+CENSUS_LINEAGES = {4: "2e30db26-66c8-4551-85b9-a537376d8f99"}
 
 # The winrt-runtime version that each winrt.runtime.interop function an interop
 # package calls first shipped in. An interop package requires the newest of the
@@ -442,18 +452,101 @@ def unit_of_tag(tag: str) -> str:
     return units[tag]
 
 
+def check_census() -> None:
+    """
+    Checks that the call shape census is the one of this generation, and that
+    the runtime of this tree is built from every revision of it.
+
+    A table needs a runtime built from the revision of the census it names or
+    a later one, and shapes.json records the first winrt-runtime release of
+    each revision. PyWinRT.exe cannot know that release when it appends a
+    revision, so it leaves it out, and no package is generated until a person
+    names it: every package requires the runtime of this tree, so that runtime
+    has to be one that has every revision.
+    """
+    generation = compatibility_generation()
+    shapes = "runtime/src/shapes.json"
+
+    with open(SHAPES_PATH, encoding="utf-8") as census_file:
+        census = json.load(census_file)
+
+    if census["lineage"] != CENSUS_LINEAGES[generation]:
+        raise RuntimeError(
+            f"{shapes} is census {census['lineage']}, and every package of"
+            f" generation {generation} was generated against census"
+            f" {CENSUS_LINEAGES[generation]}, which the runtime would refuse them"
+            " for; restore it from git"
+        )
+
+    # the runtime is built from the header, so it is the header that has to
+    # be this census
+    header = SHAPES_HEADER_PATH.read_text(encoding="utf-8")
+    built_lineage = re.search(r'census_lineage\[\] = "([^"]*)";', header)
+    built_revision = re.search(r"census_revision = (\d+);", header)
+
+    if (
+        built_lineage and built_lineage[1],
+        built_revision and int(built_revision[1]),
+    ) != (
+        census["lineage"],
+        census["revision"],
+    ):
+        raise RuntimeError(
+            f"{SHAPES_HEADER_PATH.name} was not written from {shapes} as it"
+            " stands; generate the projection again"
+        )
+
+    current = runtime_version()
+    version_txt = "runtime/version.txt"
+    previous = f"{generation}.0.0"
+
+    for revision, entry in enumerate(census["revisions"], start=1):
+        runtime = entry.get("runtime")
+
+        if runtime is None:
+            raise RuntimeError(
+                f"revision {revision} of the call shape census is in no winrt-runtime"
+                f" release yet; set its runtime in {shapes} to the release that will"
+                f" ship it, and {version_txt} to at least that"
+            )
+
+        if release_of(runtime)[0] != generation:
+            raise RuntimeError(
+                f"{shapes} says winrt-runtime {runtime} ships revision {revision},"
+                f" which is not of generation {generation}"
+            )
+
+        if release_of(runtime) < release_of(previous):
+            raise RuntimeError(
+                f"{shapes} says winrt-runtime {runtime} ships revision {revision},"
+                f" but an earlier revision is in {previous}"
+            )
+
+        if release_of(runtime) > release_of(current):
+            raise RuntimeError(
+                f"{shapes} says winrt-runtime {runtime} ships revision {revision},"
+                f" but the runtime of this tree is {current}; set {version_txt} to"
+                " at least that"
+            )
+
+        previous = runtime
+
+
 def runtime_requirement() -> str:
     """
     What a package that the runtime executes requires of it.
 
     The floor is the runtime this tree generates for, since a package may use
-    anything the runtime of its own release has. The cap is the only upper
-    bound anywhere in PyWinRT's metadata, and it is there because the
-    incompatibility behind it is known rather than guessed: a package of one
-    compatibility generation is refused by the runtime of the next, so
-    without the cap pip would upgrade the runtime on its own into an import
-    error instead of moving it and the packages together.
+    anything the runtime of its own release has, and check_census() is what
+    says that runtime has every call shape a package of this tree can name.
+    The cap is the only upper bound anywhere in PyWinRT's metadata, and it is
+    there because the incompatibility behind it is known rather than guessed:
+    a package of one compatibility generation is refused by the runtime of the
+    next, so without the cap pip would upgrade the runtime on its own into an
+    import error instead of moving it and the packages together.
     """
+    check_census()
+
     return f"winrt-runtime>={runtime_version()},<{compatibility_generation() + 1}"
 
 

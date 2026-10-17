@@ -5,15 +5,18 @@
     "revisions": [
         {
             "shapes": 338,
-            "reverse_shapes": 516
+            "reverse_shapes": 516,
+            "runtime": "4.0.0"
         },
         {
             "shapes": 348,
-            "reverse_shapes": 522
+            "reverse_shapes": 522,
+            "runtime": "4.0.0"
         },
         {
             "shapes": 353,
-            "reverse_shapes": 522
+            "reverse_shapes": 522,
+            "runtime": "4.0.0"
         }
     ],
     "shape_ids": {
