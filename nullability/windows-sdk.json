@@ -110177,7 +110177,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/test_nullability.py"
                 }
               }
             ]
@@ -110212,7 +110214,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {
@@ -110254,7 +110258,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {
@@ -110344,7 +110350,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/test_nullability.py"
                 }
               }
             ]
@@ -110374,7 +110382,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {
@@ -110411,7 +110421,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {
@@ -110558,7 +110570,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {
@@ -110600,7 +110614,9 @@
                     {
                       "name": "System.String"
                     }
-                  ]
+                  ],
+                  "allowNull": true,
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here"
                 }
               },
               {

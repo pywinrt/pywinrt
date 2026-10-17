@@ -53,6 +53,21 @@ class TestAcceptsNone(unittest.TestCase):
         devices = wde.DeviceInformation.find_all_async(NO_DEVICES, None).get()
         self.assertEqual(devices.size, 0)
 
+    def test_device_information_create_watcher_additional_properties(self) -> None:
+        watcher = wde.DeviceInformation.create_watcher(NO_DEVICES, None)
+        self.assertEqual(watcher.status, wde.DeviceWatcherStatus.CREATED)
+
+    def test_device_information_create_from_id_async_additional_properties(
+        self,
+    ) -> None:
+        devices = wde.DeviceInformation.find_all_async().get()
+
+        if devices.size == 0:
+            self.skipTest("this machine has no devices")
+
+        device = wde.DeviceInformation.create_from_id_async(devices[0].id, None).get()
+        self.assertEqual(device.id, devices[0].id)
+
     def test_query_options_file_type_filter(self) -> None:
         options = wss.QueryOptions(wss.CommonFileQuery.DEFAULT_QUERY, None)
         self.assertEqual(list(options.file_type_filter), [])
