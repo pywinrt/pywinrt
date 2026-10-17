@@ -17,7 +17,7 @@ import unittest
 from typing import Any
 
 import winrt._winrt
-from winrt.table import TableTextError, build, parse
+from winrt.table import ROLES, TableTextError, build, parse
 from winrt.table.version import VERSION
 
 # A table that uses every kind of record, since the point is that nothing the
@@ -289,6 +289,15 @@ class TestTextTable(unittest.TestCase):
         }
 
         self.assertEqual(groups["clear"]["members"][0]["role"], MEMBER_ROLE_CLEAR)
+
+    def test_the_last_role_reads_back_as_itself(self) -> None:
+        # The role is five bits of the member's flags and a reader masks the
+        # bits above them away, so the last role is the one that would come
+        # back as another if the list outgrew them.
+        table = read(TABLE.replace("role=clear", f"role={ROLES[-1]}"))
+        groups = {g["py_name"]: g for g in types(table)["Test.Sample.IThing"]["groups"]}
+
+        self.assertEqual(groups["clear"]["members"][0]["role"], len(ROLES) - 1)
 
     def test_a_parameter_keeps_what_it_is_and_how_it_travels(self) -> None:
         table = read()

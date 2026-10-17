@@ -1628,6 +1628,23 @@ sealed class TableWriter
         "create_reference",
     ];
 
+    /// <summary>
+    /// Refuses a role the member flags cannot hold. The role is the bits
+    /// <see cref="TableMemberFlags.RoleMask"/> covers and a reader masks the
+    /// ones above away, so a role past them would read back as another.
+    /// </summary>
+    static TableWriter()
+    {
+        var limit = ((uint)TableMemberFlags.RoleMask >> MemberRoleShift) + 1;
+
+        if (roleNames.Length > limit)
+        {
+            throw new InvalidOperationException(
+                $"{roleNames.Length} member roles do not fit in the {limit} the table format has"
+            );
+        }
+    }
+
     private static readonly string[] paramCategoryNames =
     [
         "in",

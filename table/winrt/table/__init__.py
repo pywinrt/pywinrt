@@ -101,8 +101,11 @@ MEMBER_FLAGS = {
     "default_overload": 1 << 7,
 }
 
-#: Where the member's protocol role sits in its flags.
+#: Where the member's protocol role sits in its flags, and how many bits it has
+#: there. A reader masks the bits above away, so a role that needs more is a
+#: format minor that widens the field into the reserved bits.
 MEMBER_ROLE_SHIFT = 8
+MEMBER_ROLE_BITS = 5
 
 ROLES = (
     "none",
@@ -137,6 +140,9 @@ ROLES = (
     "pair_value",
     "create_reference",
 )
+
+if len(ROLES) > 1 << MEMBER_ROLE_BITS:
+    raise AssertionError(f"{len(ROLES)} roles do not fit in {MEMBER_ROLE_BITS} bits")
 
 PARAM_CATEGORIES = ("in", "out", "pass_array", "fill_array", "receive_array")
 

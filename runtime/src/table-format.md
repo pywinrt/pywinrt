@@ -463,6 +463,7 @@ Member flags:
 | 6 | `deprecated` | |
 | 7 | `default_overload` | |
 | 8-12 | `role=` | protocol role, see below |
+| 13-31 | | reserved, zero; a role past 31 widens the field into them, which is a format minor |
 
 The protocol role says which Python operation, if any, this member is the one
 behind. It is read in both directions: `len(v)` on a projected collection calls
