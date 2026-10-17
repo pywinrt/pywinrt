@@ -25,9 +25,9 @@
 
   <!-- https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets -->
   <PropertyGroup>
-    <Authors>Microsoft,dlech</Authors>
+    <Authors>dlech</Authors>
     <Description>Py/WinRT is a tool for generating a Python projection of any Windows Runtime library.</Description>
-    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
+    <Copyright>© Microsoft Corporation. All rights reserved. Copyright (c) 2021-2026 David Lechner</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
