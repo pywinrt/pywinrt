@@ -39,6 +39,7 @@ nav = [
     ] },
   ] },
   "versioning.md",
+  { "Release notes" = ["release-notes/index.md", "release-notes/4.0.md"] },
   "freezing.md",
 ]
 

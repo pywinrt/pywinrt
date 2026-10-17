@@ -4,7 +4,7 @@ PyWinRT v4 renames the packages and the Python modules of the Windows App SDK
 and WebView2 projections, and publishes the Windows App SDK and WinUI 2 in
 fewer, larger packages. This describes what you need to change in your own
 code and in your dependency lists. Everything else that changed in v4 is in
-[CHANGELOG.md](../../CHANGELOG.md).
+the [4.0 release notes](https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/).
 
 Coming from v2? Go straight to v4. An overloaded method has the name it had in
 v2 again, where v3 had renamed it, and a type checker run over your code with
