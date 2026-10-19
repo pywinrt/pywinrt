@@ -650,7 +650,13 @@ def write_compiled_project_files(
                 dynamic_version=(
                     "" if static_version else 'version = { file = "version.txt" }\n'
                 ),
-                description="Python projection of Windows Runtime (WinRT) APIs",
+                # PyPI shows the summary as plain text, so the README's
+                # Markdown code marks are left out
+                description=(
+                    "The runtime that every PyWinRT projection package runs on"
+                    if is_runtime
+                    else INTEROP_SUMMARIES[package_name].replace("`", "")
+                ),
                 packages_find=(
                     templates.RUNTIME_PACKAGE_FIND
                     if is_runtime
@@ -817,7 +823,13 @@ def write_projection_project_files(
                 ),
                 package_name=package_name,
                 version=version,
-                description="Python projection of Windows Runtime (WinRT) APIs",
+                # a NuGet component is the subject of its package, as one
+                # namespace is of a Windows SDK package
+                description=(
+                    f"PyWinRT projection of the {component} NuGet package"
+                    if component
+                    else f"PyWinRT projection of the {namespaces[0]} namespace"
+                ),
                 table_compiler_requirement=TABLE_COMPILER_REQUIREMENT,
                 dependencies=format_dependencies(dependencies),
                 optional_dependencies=(
