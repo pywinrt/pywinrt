@@ -8,7 +8,7 @@ reads, which is why the ones that hold Python double the braces of everything
 in them that is not a substitution.
 """
 
-# Every package carries the same classifiers, and the versions of Python named
+# Every package carries these classifiers, and the versions of Python named
 # here are the ones winrt-runtime is built for: a projection package runs on
 # whichever of them the runtime it resolved supports, so saying less would
 # understate what an install can use.
@@ -23,6 +23,17 @@ CLASSIFIERS = """classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
 ]"""
+
+# A package that a program imports also says that it ships type hints and that
+# it runs on a free-threaded Python. That is marked Beta: the tests pass there,
+# and a race that only multi-threaded XAML use reaches is documented rather
+# than prevented.
+IMPORTED_CLASSIFIERS = (
+    CLASSIFIERS.removesuffix("]")
+    + """    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Typing :: Typed",
+]"""
+)
 
 # The links PyPI shows beside a package. One repository publishes all of
 # them, so only the changelog differs. There is no Homepage: that label is

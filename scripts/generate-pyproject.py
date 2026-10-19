@@ -636,7 +636,7 @@ def write_compiled_project_files(
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
             templates.COMPILED_PYPROJECT_TOML.format(
-                classifiers=templates.CLASSIFIERS,
+                classifiers=templates.IMPORTED_CLASSIFIERS,
                 project_urls=format_project_urls(
                     family_path(versions.FAMILY_RELEASED_INTEROP[package_path.name])
                     if package_path.name in versions.FAMILY_RELEASED_INTEROP
@@ -811,7 +811,7 @@ def write_projection_project_files(
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
             templates.PROJECTION_PYPROJECT_TOML.format(
-                classifiers=templates.CLASSIFIERS,
+                classifiers=templates.IMPORTED_CLASSIFIERS,
                 project_urls=format_project_urls(
                     family_path(package_families[package_name])
                 ),
