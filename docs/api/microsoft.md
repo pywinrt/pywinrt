@@ -40,6 +40,12 @@ with the Python naming conventions and other rules in
 
 ## Bootstrapping
 
+An application that is not packaged gets the bootstrapper from the
+`winrt-Microsoft.WindowsAppRuntime.Bootstrap` package, whose module is
+[`winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap`](microsoft/windows/applicationmodel/dynamicdependency/bootstrap.md).
+No other package requires it, since a packaged application declares the
+runtime in its manifest instead, so name it among your own requirements.
+
 To use the Windows App SDK, you need to start the runtime at the beginning of
 your program:
 
