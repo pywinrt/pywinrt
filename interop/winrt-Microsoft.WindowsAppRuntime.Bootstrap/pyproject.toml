@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
 version = "4!2.5.1"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Finds the Windows App Runtime for an unpackaged app and loads it, as MddBootstrap.h does in C++. A packaged app does not need it."
 readme = "README.md"
 license = "MIT AND LicenseRef-Microsoft-WindowsAppSDK"
 license-files = ["LICENSE", "LICENSE.Microsoft.WindowsAppSDK.txt"]

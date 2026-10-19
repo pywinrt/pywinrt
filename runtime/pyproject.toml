@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-runtime"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "The runtime that every PyWinRT projection package runs on"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

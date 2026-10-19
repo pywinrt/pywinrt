@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.Graphics.Capture.Interop"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Makes a GraphicsCaptureItem for a window or a monitor, from its handle."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

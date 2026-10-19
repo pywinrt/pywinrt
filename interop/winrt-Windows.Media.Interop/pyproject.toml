@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.Media.Interop"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Gets the SystemMediaTransportControls of a window, from its handle."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

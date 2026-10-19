@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.UI.Xaml.Hosting.Interop"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Attaches a DesktopWindowXamlSource to a window and hands it the window's messages, for XAML Islands."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

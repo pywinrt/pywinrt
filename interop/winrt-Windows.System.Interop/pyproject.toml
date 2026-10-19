@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.System.Interop"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Creates a DispatcherQueueController on the current thread or on a dedicated one of its own."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

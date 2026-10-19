@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 [project]
 name = "winrt-Windows.AI.Agents.Mcp"
 version = "4!10.0.28000.2705"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "PyWinRT projection of the Windows.AI.Agents.Mcp namespace"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

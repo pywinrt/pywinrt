@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 [project]
 name = "test-winrt-TestComponent"
 version = "4!1.6.1"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "PyWinRT projection of the TestComponent namespace"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

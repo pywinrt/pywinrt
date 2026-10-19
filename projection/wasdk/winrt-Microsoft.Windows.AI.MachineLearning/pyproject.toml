@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 [project]
 name = "winrt-Microsoft.Windows.AI.MachineLearning"
 version = "4!2.5.1"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "PyWinRT projection of the Microsoft.Windows.AI.MachineLearning NuGet package"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

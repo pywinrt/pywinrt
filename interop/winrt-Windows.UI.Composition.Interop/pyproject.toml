@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.UI.Composition.Interop"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "Creates a DesktopWindowTarget that shows a composition visual tree in a window."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

@@ -7,7 +7,7 @@ build-backend = "hatchling.build"
 [project]
 name = "winrt-Windows.Perception.Spatial.Preview"
 version = "4!10.0.28000.2705"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+description = "PyWinRT projection of the Windows.Perception.Spatial.Preview namespace"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
