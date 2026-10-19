@@ -1088,7 +1088,8 @@ the operation is not asked to stop.
 
 The operation's own `cancel()` is `IAsyncInfo.Cancel()`, which asks WinRT to
 cancel it and returns nothing. An `await` of an operation canceled that way
-raises [`OSError`][OSError] with `winerror` set to `ERROR_CANCELLED`, as it does
+raises [`OSError`][OSError] with `winerror` set to
+[`WIN32_ERROR_CANCELLED`](api/system.hresult.md#win32_error_cancelled), as it does
 for one that Windows canceled, because a device went away, for example.
 
 !!! version-changed "Changed in version 4.0"
