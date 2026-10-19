@@ -1,6 +1,6 @@
 <!-- warning: Please don't edit this file. It was automatically generated. -->
 
-# winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap
+# winrt-Microsoft.WindowsAppRuntime.Bootstrap
 
 **IMPORTANT**: Windows App SDK packages cannot be used without the Windows App
 Runtime. This has to be installed manually by the end user. Read the
@@ -17,5 +17,5 @@ It carries `Microsoft.WindowsAppRuntime.Bootstrap.dll` from version 2.3.12 of th
 `Microsoft.WindowsAppSDK.Foundation` NuGet package.
 
 ```
-pip install winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap
+pip install winrt-Microsoft.WindowsAppRuntime.Bootstrap
 ```

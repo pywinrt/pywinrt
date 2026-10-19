@@ -5,7 +5,7 @@ requires = ["setuptools>=78"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+name = "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
 version = "4!2.5.1"
 description = "Python projection of Windows Runtime (WinRT) APIs"
 readme = "README.md"

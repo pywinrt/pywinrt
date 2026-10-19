@@ -109,9 +109,9 @@ def get_sbom() -> dict[str, object]:
         "metadata": {
             "component": {
                 "type": "library",
-                "name": "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
+                "name": "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
                 "version": "4!2.5.1",
-                "purl": "pkg:pypi/winrt-microsoft-windows-applicationmodel-dynamicdependency-bootstrap@4!2.5.1",
+                "purl": "pkg:pypi/winrt-microsoft-windowsappruntime-bootstrap@4!2.5.1",
                 "licenses": [{"expression": "MIT"}],
                 "supplier": {"name": "PyWinRT"},
             }
