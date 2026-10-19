@@ -1435,16 +1435,20 @@ object from the standard Python library.
 
 WinRT has a resolution of 100 nanoseconds while the Python type has a resolution
 of 1 microsecond, so there is a small loss of precision in the conversion. Python
-also has a much smaller allowed range of dates (years from 1 to 9999).
+also has a much smaller allowed range of dates (years from 1 to 9999), so a
+value from WinRT outside those years raises [`OverflowError`][OverflowError].
 
-WinRT serializes values of this type as 100s of nanoseconds since since January 1, 1601 (UTC).
+WinRT serializes values of this type as 100s of nanoseconds since January 1, 1601 (UTC).
 It uses a signed 64-bit integer for this, so the `"q"` format string is used in Python.
 
 WinRT uses UTC for all values, so any `datetime` object returned from a Windows
 API will use that timezone. It is recommended to use the UTC timezone when
 creating `datetime` objects to pass to Windows APIs as well. "Naive" `datetime`
 objects (without a timezone) are assumed to use the local timezone and will
-be converted to UTC.
+be converted to UTC. On Windows, Python can find the local time only for a
+limited range of years, so a naive `datetime` far in the past or future raises
+an error from Python itself. An aware `datetime` converts for every year from 1
+to 9999.
 
 Example:
 

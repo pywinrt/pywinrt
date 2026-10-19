@@ -80,6 +80,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - `Array()` raises `BufferError` for a buffer of the wrong layout, as calls do.
 - The integer inputs of `box_*()`, `Array()` and more are typed `SupportsIndex`.
 - A `str` given where WinRT takes a collection of strings raises `TypeError`.
+- A `DateTime` after the year 9999 raises `OverflowError`, not `ValueError`.
 
 ### Deprecated
 - `Array("i", ...)` and the other format strings warn, in favor of the type.
@@ -113,6 +114,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed `UInt32` and `UInt64` refusing an object with `__index__()`.
 - Fixed an enum value newer than the projection raising `ValueError`.
 - Fixed a `timedelta` too long for a `TimeSpan` wrapping instead of raising.
+- Fixed an aware `datetime` or a `DateTime` before 1601 raising `OSError`.
 - Fixed `Array(T, list)` reading freed memory if a conversion edits the list.
 - Fixed closing an `IMemoryBufferReference` with a live `memoryview` crashing.
 - Fixed `_measure_override()` and the like never called on a `Grid` subclass.

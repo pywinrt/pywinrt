@@ -323,8 +323,90 @@ bool py::is_buffer_compatible(
     return true;
 }
 
+namespace
+{
+    // A DateTime counts 100 ns ticks from here, as a FILETIME does.
+    constexpr std::chrono::sys_days datetime_epoch{
+        std::chrono::year{1601} / std::chrono::January / 1};
+
+    /**
+     * Raises the OverflowError for a DateTime in a year a Python datetime cannot
+     * hold.
+     * @param [in]  year    The DateTime's year.
+     */
+    [[noreturn]] void throw_year_out_of_range(int year)
+    {
+        PyErr_Format(
+            PyExc_OverflowError,
+            "a DateTime in the year %d is out of range for a datetime, which holds "
+            "the years 1 to 9999",
+            year);
+        throw py::python_exception();
+    }
+
+    /**
+     * Reads a DateTime before 1601 on the proleptic Gregorian calendar, as
+     * Python's datetime does.
+     * @param [in]  value   The DateTime, with a negative tick count.
+     * @returns             Its date and time, to the millisecond.
+     */
+    SYSTEMTIME calendar_system_time(winrt::Windows::Foundation::DateTime value)
+    {
+        auto const time
+            = std::chrono::sys_time<std::chrono::milliseconds>{datetime_epoch}
+              + std::chrono::floor<std::chrono::milliseconds>(value.time_since_epoch());
+        auto const date = std::chrono::floor<std::chrono::days>(time);
+        std::chrono::year_month_day const ymd{date};
+
+        if (static_cast<int>(ymd.year()) < 1)
+        {
+            throw_year_out_of_range(static_cast<int>(ymd.year()));
+        }
+
+        std::chrono::hh_mm_ss const hms{time - date};
+
+        SYSTEMTIME st{};
+        st.wYear = static_cast<WORD>(static_cast<int>(ymd.year()));
+        st.wMonth = static_cast<WORD>(static_cast<unsigned>(ymd.month()));
+        st.wDay = static_cast<WORD>(static_cast<unsigned>(ymd.day()));
+        st.wHour = static_cast<WORD>(hms.hours().count());
+        st.wMinute = static_cast<WORD>(hms.minutes().count());
+        st.wSecond = static_cast<WORD>(hms.seconds().count());
+        st.wMilliseconds = static_cast<WORD>(hms.subseconds().count());
+
+        return st;
+    }
+
+    /**
+     * Counts the ticks of a date and time before 1601 on the proleptic Gregorian
+     * calendar, as Python's datetime does.
+     * @param [in]  st      The date and time, to the millisecond.
+     * @returns             The DateTime, with a negative tick count.
+     */
+    winrt::Windows::Foundation::DateTime calendar_date_time(SYSTEMTIME const& st)
+    {
+        auto const date = std::chrono::sys_days{
+            std::chrono::year{st.wYear} / std::chrono::month{st.wMonth}
+            / std::chrono::day{st.wDay}};
+        auto const since_epoch = date - datetime_epoch + std::chrono::hours{st.wHour}
+                                 + std::chrono::minutes{st.wMinute}
+                                 + std::chrono::seconds{st.wSecond}
+                                 + std::chrono::milliseconds{st.wMilliseconds};
+
+        return winrt::Windows::Foundation::DateTime{
+            std::chrono::duration_cast<winrt::Windows::Foundation::TimeSpan>(
+                since_epoch)};
+    }
+} // namespace
+
 /**
  * Converts a winrt Windows.Foundation.DateTime to a Python datetime.datetime.
+ *
+ * Windows converts a DateTime from 1601 on, since it knows the leap seconds a
+ * tick count includes from 2018 on. It refuses an earlier one, which is read on
+ * the calendar instead. There is no leap second before 1972 for the two to
+ * disagree on.
+ *
  * @param [in]  value   The winrt Windows.Foundation.DateTime.
  * @returns             The Python datetime.datetime or nullptr on error.
  */
@@ -332,19 +414,32 @@ PyObject* py::convert_datetime(winrt::Windows::Foundation::DateTime value) noexc
 {
     try
     {
-        FILETIME ft = winrt::clock::to_FILETIME(value);
         SYSTEMTIME st;
 
-        if (!FileTimeToSystemTime(&ft, &st))
+        if (value.time_since_epoch().count() < 0)
         {
-            winrt::throw_last_error();
+            st = calendar_system_time(value);
+        }
+        else
+        {
+            FILETIME ft = winrt::clock::to_FILETIME(value);
+
+            if (!FileTimeToSystemTime(&ft, &st))
+            {
+                winrt::throw_last_error();
+            }
         }
 
-        auto microseconds = static_cast<int>(
-            std::chrono::time_point_cast<std::chrono::microseconds>(value)
-                .time_since_epoch()
-                .count()
-            % 1000);
+        if (st.wYear > 9999)
+        {
+            throw_year_out_of_range(st.wYear);
+        }
+
+        auto const since_epoch = value.time_since_epoch();
+        auto const microseconds = static_cast<int>(
+            (std::chrono::floor<std::chrono::microseconds>(since_epoch)
+             - std::chrono::floor<std::chrono::milliseconds>(since_epoch))
+                .count());
 
         if (!PyDateTimeAPI)
         {
@@ -377,6 +472,10 @@ PyObject* py::convert_datetime(winrt::Windows::Foundation::DateTime value) noexc
 
 /**
  * Converts a Python datetime.datetime to a winrt Windows.Foundation.DateTime.
+ *
+ * Windows converts a date from 1601 on and the calendar an earlier one, as in
+ * py::convert_datetime().
+ *
  * @param [in]  obj     The Python datetime.datetime object.
  * @returns             The winrt Windows.Foundation.DateTime value.
  */
@@ -420,14 +519,23 @@ winrt::Windows::Foundation::DateTime py::convert_to_datetime(PyObject* obj)
     st.wSecond = PyDateTime_DATE_GET_SECOND(utc.get());
     st.wMilliseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) / 1000;
 
-    FILETIME ft;
+    winrt::Windows::Foundation::DateTime value;
 
-    if (!SystemTimeToFileTime(&st, &ft))
+    if (st.wYear < 1601)
     {
-        winrt::throw_last_error();
+        value = calendar_date_time(st);
     }
+    else
+    {
+        FILETIME ft;
 
-    auto value = winrt::clock::from_FILETIME(ft);
+        if (!SystemTimeToFileTime(&st, &ft))
+        {
+            winrt::throw_last_error();
+        }
+
+        value = winrt::clock::from_FILETIME(ft);
+    }
 
     auto microseconds = PyDateTime_DATE_GET_MICROSECOND(utc.get()) % 1000;
 
