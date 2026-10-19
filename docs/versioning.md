@@ -161,9 +161,9 @@ disappearing:
    than only to developers;
 3. it is removed.
 
-A compatibility alias is carried across at least one major version, and is
-marked with `@warnings.deprecated` in the type stubs, so a type checker
-reports it before anything is run.
+A compatibility alias, such as a method name from v3.x, goes through the same
+stages, and is marked with `@warnings.deprecated` in the type stubs from the
+start, so a type checker reports it before anything is run.
 
 ## Projections of your own components
 
