@@ -2,7 +2,7 @@
 # dependencies = [
 #   "typing-extensions>=4.5",
 #   "winrt-runtime>=4",
-#   "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap",
+#   "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
 #   "winrt-Microsoft.WindowsAppSDK.WinUI",
 #   "winrt-Windows.Foundation",
 #   "winrt-Windows.Foundation.Collections",

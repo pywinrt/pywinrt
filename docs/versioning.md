@@ -46,7 +46,7 @@ The exception is an interop module built against an upstream other than the
 Windows SDK, which is released with that upstream's packages and carries their
 version, since that release is the one you choose. Today that is the two of
 the Windows App SDK, `winrt-Microsoft.UI.Interop` and
-`winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`, so the
+`winrt-Microsoft.WindowsAppRuntime.Bootstrap`, so the
 interop modules for `winrt-Microsoft.WindowsAppSDK.WinUI` `4!2.5.1` are
 `4!2.5.1` too. The bootstrap module would have to be anyway: its wheel carries
 the bootstrapper `.dll` of the Windows App SDK release it was built against

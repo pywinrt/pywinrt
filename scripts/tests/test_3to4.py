@@ -12,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import textwrap
+import tomllib
 import unittest
 from pathlib import Path
 
@@ -371,6 +372,31 @@ class Requirements(unittest.TestCase):
         )
 
 
+def tree_versions() -> dict[str, str]:
+    """
+    The version of each distribution in the tree, by its name.
+    """
+    repo = SCRIPT.parent.parent.parent
+    versions: dict[str, str] = {}
+
+    for pattern in (
+        "projection/*/*/pyproject.toml",
+        "interop/*/pyproject.toml",
+        "runtime/pyproject.toml",
+    ):
+        for path in repo.glob(pattern):
+            project = tomllib.loads(path.read_text())["project"]
+
+            if "version" in project:
+                version = project["version"]
+            else:
+                version = (path.parent / "version.txt").read_text().strip()
+
+            versions[project["name"]] = version
+
+    return versions
+
+
 class Tables(unittest.TestCase):
     """
     distributions.csv against the tree and against the README's tables, which
@@ -378,23 +404,24 @@ class Tables(unittest.TestCase):
     """
 
     def test_every_new_distribution_is_in_the_tree(self) -> None:
-        repo = SCRIPT.parent.parent.parent
-        names: set[str] = set()
-
-        for pattern in (
-            "projection/*/*/pyproject.toml",
-            "interop/*/pyproject.toml",
-            "runtime/pyproject.toml",
-        ):
-            for path in repo.glob(pattern):
-                found = re.search(r'^name = "(.*)"$', path.read_text(), re.MULTILINE)
-                assert found is not None
-                names.add(found[1])
+        versions = tree_versions()
 
         for row in DISTRIBUTIONS:
             if row["new_distribution"]:
                 with self.subTest(row["distribution"]):
-                    self.assertIn(row["new_distribution"], names)
+                    self.assertIn(row["new_distribution"], versions)
+
+    def test_every_floor_is_the_version_in_the_tree(self) -> None:
+        versions = tree_versions()
+
+        for row in DISTRIBUTIONS:
+            with self.subTest(row["distribution"]):
+                if row["new_distribution"]:
+                    self.assertEqual(
+                        row["floor"], f">={versions[row['new_distribution']]}"
+                    )
+                else:
+                    self.assertEqual(row["floor"], "")
 
     def test_readme_agrees(self) -> None:
         readme = (SCRIPT.parent / "README.md").read_text()

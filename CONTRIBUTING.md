@@ -276,17 +276,18 @@ headers they compile.
 An interop module that compiles against any other family is released with
 that family and has its version, since that family's release is what its users
 choose: today `interop/winrt-Microsoft.UI.Interop` and
-`interop/winrt-wasdk-bootstrap`, with `wasdk`. The bootstrap would have to be
-anyway, because its wheel carries `Microsoft.WindowsAppRuntime.Bootstrap.dll`
-out of the pin and loads that release by default, so moving the pin changes
-it. `FAMILY_RELEASED_INTEROP` in `scripts/versions.py` lists each such module
-with its family, and the build refuses one that is not listed. They have no
-`version.txt`. To release a fix to one between two pins, add one holding the
-family's version with a fourth number on the end, such as `4!2.5.1.1`: that
-makes it a unit of its own, with a tag of its own. When the pin next moves,
-`generate-pyproject.py` refuses the file until it is deleted, and the package
-goes back to being released with the family. A fix cannot follow a preview of
-the family, since a fourth number would sort above the final release.
+`interop/winrt-Microsoft.WindowsAppRuntime.Bootstrap`, with `wasdk`. The
+bootstrap would have to be anyway, because its wheel carries
+`Microsoft.WindowsAppRuntime.Bootstrap.dll` out of the pin and loads that
+release by default, so moving the pin changes it. `FAMILY_RELEASED_INTEROP` in
+`scripts/versions.py` lists each such module with its family, and the build
+refuses one that is not listed. They have no `version.txt`. To release a fix to
+one between two pins, add one holding the family's version with a fourth number
+on the end, such as `4!2.5.1.1`: that makes it a unit of its own, with a tag of
+its own. When the pin next moves, `generate-pyproject.py` refuses the file until
+it is deleted, and the package goes back to being released with the family. A
+fix cannot follow a preview of the family, since a fourth number would sort
+above the final release.
 
 An interop package requires the newest `winrt-runtime` that one of the
 `winrt.runtime.interop` functions it calls first shipped in, not the runtime of

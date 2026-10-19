@@ -41,7 +41,7 @@ The page of a package on PyPI lists the modules it provides.
 Some APIs that bridge WinRT and Win32 are packages of their own too, named for
 the namespace they extend, such as `winrt-Windows.Graphics.Capture.Interop`. So
 are the Windows App SDK's bootstrapper,
-`winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`, and the
+`winrt-Microsoft.WindowsAppRuntime.Bootstrap`, and the
 WebView2 runtime component, `winrt-Microsoft.Web.WebView2.Dll`. Their modules
 are in the [API reference](api/index.md).
 

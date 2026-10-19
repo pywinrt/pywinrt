@@ -100,6 +100,13 @@ V3_PACKAGES = {
     "winui2": "winui2",
 }
 
+# The hand-written modules that v4 renamed beyond their prefix.
+RENAMED_DISTRIBUTIONS = {
+    "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": (
+        "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
+    ),
+}
+
 ALIAS_CALL = re.compile(
     r'alias_(?:static_)?method\((\w+), "(\w+)", "(\w+)"\)',
 )
@@ -346,8 +353,10 @@ def distribution_rows(v3_names: list[str]) -> list[tuple[str, str, str]]:
         if new_name not in versions:
             prefix, _, namespace = name.partition("-")
 
-            if prefix in ("winui3", "webview2"):
-                # the hand-written modules only changed their prefix
+            if name in RENAMED_DISTRIBUTIONS:
+                new_name = RENAMED_DISTRIBUTIONS[name]
+            elif prefix in ("winui3", "webview2"):
+                # the other hand-written modules only changed their prefix
                 new_name = f"winrt-{namespace}"
 
             # a winrt- name that is not in the tree any more is gone: the

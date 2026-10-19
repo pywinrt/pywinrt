@@ -88,7 +88,7 @@ RUNTIME_FAMILY = "runtime"
 # package a unit of its own until the pin moves (see interop_version()).
 FAMILY_RELEASED_INTEROP = {
     "winrt-Microsoft.UI.Interop": "wasdk",
-    "winrt-wasdk-bootstrap": "wasdk",
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": "wasdk",
 }
 
 # A family version that a fix to one of those packages can follow: a final

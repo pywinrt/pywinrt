@@ -367,7 +367,7 @@ winui3-Microsoft.UI.Dispatching,winrt-Microsoft.WindowsAppSDK.InteractiveExperie
 winui3-Microsoft.UI.Input,winrt-Microsoft.WindowsAppSDK.InteractiveExperiences,>=4!2.5.1
 winui3-Microsoft.UI.Input.DragDrop,winrt-Microsoft.WindowsAppSDK.InteractiveExperiences,>=4!2.5.1
 winui3-Microsoft.UI.Input.Interop,winrt-Microsoft.WindowsAppSDK.InteractiveExperiences,>=4!2.5.1
-winui3-Microsoft.UI.Interop,winrt-Microsoft.UI.Interop,>=4.0.0
+winui3-Microsoft.UI.Interop,winrt-Microsoft.UI.Interop,>=4!2.5.1
 winui3-Microsoft.UI.System,winrt-Microsoft.WindowsAppSDK.InteractiveExperiences,>=4!2.5.1
 winui3-Microsoft.UI.Text,winrt-Microsoft.WindowsAppSDK.WinUI,>=4!2.5.1
 winui3-Microsoft.UI.Windowing,winrt-Microsoft.WindowsAppSDK.InteractiveExperiences,>=4!2.5.1
@@ -404,7 +404,7 @@ winui3-Microsoft.Windows.AppNotifications.Builder,winrt-Microsoft.WindowsAppSDK.
 winui3-Microsoft.Windows.ApplicationModel.Background,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1
 winui3-Microsoft.Windows.ApplicationModel.Background.UniversalBGTask,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1
 winui3-Microsoft.Windows.ApplicationModel.DynamicDependency,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1
-winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap,winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap,>=4.0.0
+winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap,winrt-Microsoft.WindowsAppRuntime.Bootstrap,>=4!2.5.1
 winui3-Microsoft.Windows.ApplicationModel.Resources,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1
 winui3-Microsoft.Windows.ApplicationModel.WindowsAppRuntime,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1
 winui3-Microsoft.Windows.BadgeNotifications,winrt-Microsoft.WindowsAppSDK.Foundation,>=4!2.5.1

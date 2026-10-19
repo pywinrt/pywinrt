@@ -62,7 +62,7 @@ if (NOT MSVC)
 endif()
 
 pywinrt_add_interop_module(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap
-    "winrt-wasdk-bootstrap"
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
     "py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp" "winrt")
 # MddBootstrap.h is in Foundation.
 target_include_directories(_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap PRIVATE

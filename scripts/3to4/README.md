@@ -113,10 +113,10 @@ The modules you import from them are unchanged.
 
 The two hand-written modules are renamed but not regrouped:
 
-| v3 distribution                                                       | v4 distribution                                                      |
-| --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `winui3-Microsoft.UI.Interop`                                          | `winrt-Microsoft.UI.Interop`                                          |
-| `winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` | `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` |
+| v3 distribution                                                         | v4 distribution                               |
+| ----------------------------------------------------------------------- | --------------------------------------------- |
+| `winui3-Microsoft.UI.Interop`                                           | `winrt-Microsoft.UI.Interop`                  |
+| `winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap` | `winrt-Microsoft.WindowsAppRuntime.Bootstrap` |
 
 ### Version constraints
 

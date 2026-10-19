@@ -15,7 +15,7 @@ What changed in the packages that project the Windows App SDK:
 and in the two interop packages released with them:
 
 - `winrt-Microsoft.UI.Interop`
-- `winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
+- `winrt-Microsoft.WindowsAppRuntime.Bootstrap`
 
 What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
@@ -35,6 +35,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 ### Changed
 - BREAKING: `winui3-*` is now `winrt-*`, imported from `winrt.microsoft`.
 - BREAKING: Published as 7 packages, one per NuGet component, not per namespace.
+- BREAKING: Bootstrap package is `winrt-Microsoft.WindowsAppRuntime.Bootstrap`.
 - BREAKING: A frozen application must carry each module's `_table.pywinrt`.
 - BREAKING: Versioned by the Windows App SDK release it projects, as `4!2.5.1`.
 - BREAKING: An overloaded method has one name again, with no v3 alias.

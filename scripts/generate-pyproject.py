@@ -232,7 +232,7 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
         "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences",
     ],
     # only calls the bootstrapper, which has no projected types
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [],
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": [],
 }
 
 # What each interop package does, which is the first thing its README says,
@@ -264,9 +264,19 @@ INTEROP_SUMMARIES = {
         "Converts window, monitor and icon handles to and from the `WindowId`,"
         " `DisplayId` and `IconId` that Windows App SDK APIs take."
     ),
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": (
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": (
         "Finds the Windows App Runtime for an unpackaged app and loads it, as"
         " `MddBootstrap.h` does in C++. A packaged app does not need it."
+    ),
+}
+
+# The namespace an interop package's module and source file are named after,
+# where it is not the one in the distribution's name. The bootstrapper's
+# distribution is named after Microsoft.WindowsAppRuntime.Bootstrap.dll, which
+# it carries, and its module after the C++ namespace of MddBootstrap.h.
+INTEROP_MODULE_NAMESPACES = {
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": (
+        "Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
     ),
 }
 
@@ -387,9 +397,7 @@ package_families = packages.distribution_families()
 
 
 def is_app_sdk_bootstrap_package(name: str) -> bool:
-    return (
-        name == "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
-    )
+    return name == "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
 
 
 def is_windows_app_package(name: str) -> bool:
@@ -601,8 +609,8 @@ def write_compiled_project_files(
     only ones that still need setuptools, a setup.py and a cibuildwheel build
     per Python and architecture.
     """
-    # winrt-runtime lives outside of projection/, and the bootstrap package's
-    # directory is shortened, so the caller says which distribution this is
+    # winrt-runtime lives outside of interop/, in a directory not named after
+    # it, so the caller says which distribution this is
     package_name = package_name or package_path.name
     is_runtime = package_name == "winrt-runtime"
     root_package = module_name.split(".")[0]
@@ -1143,7 +1151,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 
 for path in INTEROP_PATH.glob("winrt-*"):
     # KeyError here means a new interop package needs a row in the table
-    interop_deps = INTEROP_DEPENDENCIES[packages.interop_distribution(path)]
+    interop_deps = INTEROP_DEPENDENCIES[path.name]
     runtime_requirement = versions.interop_runtime_requirement(
         versions.runtime_functions_called(path)
     )
@@ -1207,10 +1215,12 @@ write_compiled_project_files(
 )
 
 for package_path in INTEROP_PATH.glob("winrt-*"):
-    package_name = packages.interop_distribution(package_path)
+    package_name = package_path.name
     family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
-    namespace = package_name.removeprefix(f"{root_package}-")
+    namespace = INTEROP_MODULE_NAMESPACES.get(
+        package_name, package_name.removeprefix(f"{root_package}-")
+    )
     module_name = (
         f"{root_package.replace('-', '_')}.{winrt_ns_to_py_package(namespace)}"
     )

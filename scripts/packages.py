@@ -40,17 +40,6 @@ NUGET_ENVIRONMENT = {
     "WEBVIEW2_PATH": "Microsoft.Web.WebView2",
 }
 
-# The distribution in each interop package's directory. A directory is named
-# after the distribution in it, except where that name is long enough to push
-# a build path past the 260 characters Windows allows by default: this one is
-# 68, and a wheel build puts a .dist-info directory named after it, and a
-# licenses directory inside that, underneath it.
-INTEROP_DISTRIBUTIONS = {
-    "winrt-wasdk-bootstrap": (
-        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
-    ),
-}
-
 # The Windows App SDK components each hand-written module compiles against,
 # named by the environment variable above that says where fetch-tools.ps1
 # unpacked each one. The App SDK is a metapackage, so what a module includes
@@ -62,9 +51,7 @@ APP_SDK_INTEROP_COMPONENTS = {
     "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
     # MddBootstrap.h and its import library; the release it expects is written
     # into the package by scripts/generate-pyproject.py
-    "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap": [
-        "WASDK_FOUNDATION_PATH"
-    ],
+    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": ["WASDK_FOUNDATION_PATH"],
 }
 
 # A package that redistributes a component .dll is released with the family
@@ -96,7 +83,7 @@ class Package(NamedTuple):
     """
 
     # the directory its packaging is in, which is named after the
-    # distribution except where INTEROP_DISTRIBUTIONS says otherwise
+    # distribution
     path: Path
     distribution: str
     # the upstream family it belongs to, which says which NuGet package it
@@ -108,10 +95,6 @@ class Package(NamedTuple):
     # versions.FAMILY_RELEASED_INTEROP releases it with a family
     release: str
     build: Build
-
-
-def interop_distribution(package_path: Path) -> str:
-    return INTEROP_DISTRIBUTIONS.get(package_path.name, package_path.name)
 
 
 def generated() -> Iterator[Package]:
@@ -149,7 +132,7 @@ def generated() -> Iterator[Package]:
         yield Package(path, path.name, family, family, Build.REDIST)
 
     for path in sorted(INTEROP_PATH.glob("winrt-*")):
-        distribution = interop_distribution(path)
+        distribution = path.name
         family = "wasdk" if distribution in APP_SDK_INTEROP_COMPONENTS else "winrt"
 
         if versions.FAMILY_RELEASED_INTEROP.get(path.name, "winrt") != family:

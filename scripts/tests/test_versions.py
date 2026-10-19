@@ -406,10 +406,13 @@ class FamilyReleasedInterop(unittest.TestCase):
     a fix to it released between two pins.
     """
 
-    name = "winrt-wasdk-bootstrap"
+    name = "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
 
     def test_the_app_sdk_interop_modules_are_released_with_it(self) -> None:
-        for name in ("winrt-Microsoft.UI.Interop", "winrt-wasdk-bootstrap"):
+        for name in (
+            "winrt-Microsoft.UI.Interop",
+            "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
+        ):
             with self.subTest(name=name):
                 self.assertEqual(versions.interop_release(name), "wasdk")
                 self.assertEqual(
