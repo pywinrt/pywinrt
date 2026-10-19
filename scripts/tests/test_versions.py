@@ -220,6 +220,12 @@ class CallShapeCensus(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "not of generation"):
             self.check()
 
+    def test_a_runtime_that_is_not_a_release_is_refused_by_name(self) -> None:
+        self.census["revisions"][0]["runtime"] = "4.0.0rc1"
+
+        with self.assertRaisesRegex(ValueError, "'4.0.0rc1' is not a release"):
+            self.check()
+
     def check(self) -> None:
         """
         Runs check_census() on the census this test has changed, with the

@@ -701,6 +701,12 @@ def release_of(version: str) -> tuple[int, ...]:
     A version of the form the hand-written packages carry, as something that
     compares the way the versions do.
     """
+    if not re.fullmatch(r"[0-9]+(\.[0-9]+)*", version):
+        raise ValueError(
+            f"{version!r} is not a release of the form the hand-written packages"
+            " carry, numbers joined by dots such as 4.0.0"
+        )
+
     return tuple(int(part) for part in version.split("."))
 
 
