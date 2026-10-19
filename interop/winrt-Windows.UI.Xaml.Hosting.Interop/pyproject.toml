@@ -20,6 +20,8 @@ classifiers = [
     "Programming Language :: Python :: 3.15",
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Typing :: Typed",
 ]
 dynamic = ["version", "dependencies"]
 requires-python = ">=3.11"
