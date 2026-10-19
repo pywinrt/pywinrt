@@ -52,6 +52,7 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - `as_()` given something it does not take raises a `TypeError` that says so.
 - `==` with an object that is not from WinRT lets that object answer.
 - The `Object` and `Array` types say they are in `winrt.system`, not `_winrt`.
+- The `winrt.system.hresult` constants are `HResult`s, not plain `int`s.
 - A vector counts a negative index from the end and raises `IndexError`.
 - `insert()` on a vector takes any position, as `list.insert()` does.
 - An index that a Python list passed to WinRT lacks is reported as `E_BOUNDS`.

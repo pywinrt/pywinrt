@@ -9,6 +9,12 @@ WinRT types, but it is not exhaustive (there are 1000s of known error codes!).
 
 !!! version-added "Added in version 3.2"
 
+!!! version-changed "Changed in version 4.0"
+
+    The constants are [`HResult`](../types.md#error-codes-and-event-tokens)s
+    rather than plain `int`s, so importing the module needs
+    `winrt-Windows.Foundation`.
+
 ## Windows error codes
 
 Most error codes are defined by Microsoft. Here are a few examples.
