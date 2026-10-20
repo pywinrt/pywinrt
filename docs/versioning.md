@@ -202,7 +202,21 @@ each time you generate.
 Generating the projection in the first place needs `PyWinRT.exe` and the
 shape census it ships beside, which records the ABI call shapes the runtime
 has trampolines for. A component whose members need a shape the census does
-not have cannot be projected until that shape is added to the runtime.
+not have is reported when it is generated. Those members are still projected,
+but using one raises, since no published `winrt-runtime` can make that call.
+
+To have such a shape covered, add a member of that shape to
+[TestWinRT](https://github.com/pywinrt/testwinrt), the component PyWinRT is
+tested against. That puts the shape in the census of the next `winrt-runtime`
+and `PyWinRT` releases. `PyWinRT.exe --emit-shapes` can add it to a census of
+your own instead, but a projection generated that way loads only in a
+`winrt-runtime` built from that census, so it is not a route to a package you
+can publish.
+
+If waiting for a release turns out to be a problem in practice, say so in an
+[issue](https://github.com/pywinrt/pywinrt/issues). The runtime could have a
+generic way to make a call that no trampoline covers, slower than a
+trampoline, but it does not have one now.
 
 ## Moving from 3.x
 
