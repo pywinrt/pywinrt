@@ -123,5 +123,6 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed WinRT failing to set, or losing, the length of a Python buffer it fills.
 - Fixed WinRT writing into `bytes` and other read-only buffers.
 - Fixed a subclass of a composable class taking a base that is not an interface.
+- Fixed a frozen application lacking `uuid`, which the runtime imports to load.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
