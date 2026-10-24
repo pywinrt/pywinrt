@@ -1,0 +1,21 @@
+<!--
+The upstream package each family of generated packages takes its version
+from, in a form Dependabot reads, so that it proposes each new release as a
+pull request of its own. Nothing builds this project. Dependabot restores it
+and proposes only a release compatible with its target framework, which is
+the one Microsoft.UI.Xaml ships a library for. The other three ship none, so
+any release of them fits.
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <!-- Dependabot restores on Linux -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.7" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4191.47" />
+    <PackageReference Include="Microsoft.Windows.SDK.CPP" Version="10.0.28000.2705" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+  </ItemGroup>
+</Project>

@@ -17,6 +17,13 @@ updates:
     # one has been noticed first; security updates are not held back
     cooldown:
       default-days: 14
+  # A new release of the upstream package a family of generated packages is
+  # generated from, proposed as soon as it is out, one pull request per
+  # family.
+  - package-ecosystem: nuget
+    directory: /.config/upstream
+    schedule:
+      interval: weekly
   # The build tools that the release workflows and Read the Docs install are
   # pinned too, so that a release is built with what was tested, and a monthly
   # pull request of their own unfreezes them.
