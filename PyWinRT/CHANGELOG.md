@@ -8,7 +8,7 @@ projection of a WinRT component.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.0.2] - 2026-10-24
 
 ### Changed
 - The type stubs declare the constructors of derivable classes as `__init__`.
