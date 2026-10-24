@@ -159,8 +159,42 @@ sealed class Members
             }
         }
 
+        // A struct field of a struct is resolved when the struct's type is
+        // built, which imports the package that defines it. A struct only
+        // referenced through a generic, such as IReference<T>, is resolved on
+        // first use instead.
+        foreach (var s in Structs)
+        {
+            foreach (var fieldType in s.Type.Fields.Select(f => f.FieldType))
+            {
+                if (
+                    fieldType.Namespace != s.Namespace
+                    && fieldType.Namespace != "System"
+                    && IsNestedStruct(fieldType)
+                )
+                {
+                    namespaces.Add(fieldType.GetQualifiedNamespace(packageMap));
+                }
+            }
+        }
+
         return namespaces;
     }
+
+    /// <summary>
+    /// Indicates that a field of type <paramref name="type"/> holds a struct
+    /// the runtime resolves to its own type, rather than one it stores as a
+    /// value of its own, like DateTime or HResult.
+    /// </summary>
+    private static bool IsNestedStruct(TypeReference type) =>
+        type.FullName
+            is not (
+                "Windows.Foundation.DateTime"
+                or "Windows.Foundation.TimeSpan"
+                or "Windows.Foundation.HResult"
+                or "Windows.Foundation.EventRegistrationToken"
+            )
+        && type.TryResolve()?.GetCategory() == Category.Struct;
 
     private readonly IReadOnlyCollection<QualifiedNamespace>?[] referencedNamespacesCache =
         new IReadOnlyCollection<QualifiedNamespace>?[4];

@@ -106,7 +106,9 @@ static class FileWriters
         //
         // The interfaces a class implements are bases of its stub, so their
         // namespaces are referenced too, but only referenced: importing the
-        // module does not import them, which only a base class requires.
+        // module does not import them. It does import the namespaces of base
+        // classes and of structs nested in its structs, which are therefore
+        // required.
         return new NamespaceDependencies(
             ns.Namespace,
             members.GetRequiredNamespaces(packageMap),
