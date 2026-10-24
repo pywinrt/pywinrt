@@ -263,6 +263,19 @@ and an interop module that compiles against a family other than the Windows
 SDK (below). Moving a pin is a change of its own, made the way the sections
 above describe.
 
+A package of a family that changes before the pin next moves, because the
+generator now writes it differently, is released again on its own with a number
+on the family's version, and only the packages that changed are. Run
+
+    py .\scripts\fix-versions.py
+
+It compares each family with the newest of its release tags, writes the
+packages that differ into the family's `fixes.json` at the next number, such as
+`4!10.0.28000.2705.1`, and regenerates the packaging. The family's tag at that
+version releases those packages alone. A family that has not been released at
+its pin is left alone, since its changes go out with that release. When the pin
+next moves, `generate-pyproject.py` refuses a `fixes.json` until it is deleted.
+
 A package written by hand has no upstream release to follow, so it keeps its
 own `version.txt` and is released on its own: `runtime`, `table` and each
 directory under `interop/` that compiles against the Windows SDK alone. Bump

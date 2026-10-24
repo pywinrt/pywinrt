@@ -29,6 +29,14 @@ one upstream release are published together and carry the same version, and so
 does the package that redistributes that upstream's `.dll`, such as
 `winrt-Microsoft.Web.WebView2.Dll` with the WebView2 packages.
 
+A fix that PyWinRT makes to a projection package between two upstream releases
+adds a number to that version, and only the packages it changes are released
+again. `winrt-Windows.UI.Xaml` `4!10.0.28000.2705.1` has the API surface of
+`4!10.0.28000.2705` with a fix of PyWinRT's own, and a package the fix did not
+touch, such as `winrt-Windows.Storage`, stays at `4!10.0.28000.2705`. What
+requires one of them names the upstream release, which a fix satisfies, so the
+two install together.
+
 A **package written by hand** has no upstream release to follow, so it uses
 semantic versioning and is released on its own when it changes:
 
@@ -143,12 +151,15 @@ have helped either.
 
 ## Re-releases: .postN
 
-`.postN` on a projection package means PyWinRT republished the same upstream
-release — to fix something in the packaging, not in the API surface.
-`4!10.0.28000.2705.post1` and `4!10.0.28000.2705` project the same Windows
-SDK. Nothing else uses the segment; a prerelease of an upstream release is
-spelled the way [PEP 440](https://peps.python.org/pep-0440/) spells one, so
-`1.8.0-preview2` upstream is published as `4!1.8.0b2`.
+`.postN` on a projection package means PyWinRT rebuilt the same content and
+published it again, such as a wheel that was built wrong.
+`4!10.0.28000.2705.post1` and `4!10.0.28000.2705` are built from the same
+files. A change to what a package holds, its requirements included, is a fix
+instead, which adds a number to the version (see [What a version tells
+you](#what-a-version-tells-you)). Nothing else uses the segment; a prerelease
+of an upstream release is spelled the way
+[PEP 440](https://peps.python.org/pep-0440/) spells one, so `1.8.0-preview2`
+upstream is published as `4!1.8.0b2`.
 
 ## Deprecation policy
 
