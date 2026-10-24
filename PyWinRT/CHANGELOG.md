@@ -8,7 +8,7 @@ projection of a WinRT component.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.0.1] - 2026-10-24
 
 ### Fixed
 - Fixed `deps.json` not requiring the namespace of a struct nested in a struct.
