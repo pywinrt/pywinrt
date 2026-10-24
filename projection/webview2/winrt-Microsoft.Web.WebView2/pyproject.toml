@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Microsoft.Web.WebView2"
-version = "4!1.0.4191.47"
+version = "4!1.0.4191.47.1"
 description = "PyWinRT projection of the Microsoft.Web.WebView2 NuGet package"
 readme = "README.md"
 license = "MIT"

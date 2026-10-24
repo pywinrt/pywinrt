@@ -10,6 +10,14 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [4!1.0.4191.47.1] - 2026-10-24
+
+`winrt-Microsoft.Web.WebView2.Dll` is not released again and stays at
+`4!1.0.4191.47`.
+
+### Changed
+- The type hints declare the constructors of derivable classes as `__init__`.
+
 ## [4!1.0.4191.47] - 2026-10-23
 
 See the [4.0 release notes][4.0] for what these changes mean together.

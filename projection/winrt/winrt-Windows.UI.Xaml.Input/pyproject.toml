@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.UI.Xaml.Input"
-version = "4!10.0.28000.2705"
+version = "4!10.0.28000.2705.1"
 description = "PyWinRT projection of the Windows.UI.Xaml.Input namespace"
 readme = "README.md"
 license = "MIT"

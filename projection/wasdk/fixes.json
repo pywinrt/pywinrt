@@ -1,0 +1,5 @@
+{
+    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences": "4!2.5.1.1",
+    "winrt-Microsoft.WindowsAppSDK.Search": "4!2.5.1.1",
+    "winrt-Microsoft.WindowsAppSDK.WinUI": "4!2.5.1.1"
+}

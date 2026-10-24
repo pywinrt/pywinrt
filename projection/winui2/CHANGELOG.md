@@ -11,7 +11,7 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!2.8.7.1] - 2026-10-24
 
 ### Changed
 - The type hints declare the constructors of derivable classes as `__init__`.
