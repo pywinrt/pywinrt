@@ -6,7 +6,7 @@ on:
   # release that rebuilt everything would fail on whatever did not change.
   # scripts/release-tags.py prints the tag that releases each one.
   push:
-      tags: [wheels/*]
+      tags: [wheels/**]
   # allows compile testing all packages on a branch before merging, and is
   # what builds the wheelhouse that a release candidate is tested from
   workflow_dispatch:
