@@ -310,10 +310,6 @@ class TimelinePanel(Panel):
 panel = TimelinePanel(spacing=12)
 ```
 
-The type hints declare the constructors of a class as `__new__`, so a type
-checker that checks a call against `__new__` as well as `__init__`, as pyright
-does, still refuses arguments that only the subclass's `__init__` takes.
-
 WinRT asks such an object for its runtime class name, which by default is the
 name of the first overridable interface its class implements, or nothing when
 the class has none. A XAML metadata provider looks types up by that name, so a

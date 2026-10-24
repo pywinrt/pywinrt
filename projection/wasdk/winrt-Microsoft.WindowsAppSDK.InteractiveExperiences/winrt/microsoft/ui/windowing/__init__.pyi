@@ -245,7 +245,7 @@ class AppWindowPresenter_Static(winrt.system.Object_Static):
 
 class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Windowing.AppWindowPresenterKind Microsoft.UI.Windowing.AppWindowPresenter::get_Kind()
     @_property
@@ -379,7 +379,7 @@ class CompactOverlayPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresenter_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Windowing.CompactOverlaySize Microsoft.UI.Windowing.CompactOverlayPresenter::get_InitialSize()
     @_property
@@ -462,7 +462,7 @@ class FullScreenPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class FullScreenPresenter(AppWindowPresenter, metaclass=FullScreenPresenter_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -481,7 +481,7 @@ class OverlappedPresenter_Static(AppWindowPresenter_Static):
 
 @typing.final
 class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Windowing.OverlappedPresenter::Maximize()
     def maximize(self) -> None: ...

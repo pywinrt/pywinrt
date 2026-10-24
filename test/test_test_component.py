@@ -8,7 +8,7 @@ import threading
 import traceback
 import unittest
 import weakref
-from typing import Any, Generic, TypedDict, TypeVar
+from typing import Any, Generic, Self, TypedDict, TypeVar
 from uuid import UUID
 
 import test_winrt.testcomponent as tc
@@ -180,10 +180,13 @@ class TestTestComponent(unittest.TestCase):
                     return "spam"
 
     def test_overriding_new(self) -> None:
+        # Overriding __new__ to pass arguments to the constructor is not the
+        # way, and the type hints refuse it: an __init__ that calls
+        # super().__init__(2) is. It keeps working for code that does it.
         class C(tc.Composable):
             @override
-            def __new__(cls):
-                return super().__new__(cls, 2)
+            def __new__(cls) -> Self:
+                return super().__new__(cls, 2)  # type: ignore
 
         c = C()
         self.assertIsInstance(c, C)
@@ -394,19 +397,16 @@ class TestTestComponent(unittest.TestCase):
         class C(tc.ProtectedMembers):
             pass
 
+        # Not the way, as test_overriding_new says, but it works.
         class D(tc.ProtectedMembers):
             @override
-            def __new__(cls):
-                return super().__new__(cls, 6)
+            def __new__(cls) -> Self:
+                return super().__new__(cls, 6)  # type: ignore
 
         self.assertEqual(C()._protected_value, 0)
         self.assertEqual(C(5)._protected_value, 5)
         self.assertEqual(D()._protected_value, 6)
         self.assertIsInstance(C(), tc.ProtectedMembers)
-
-    # The stubs declare a constructor as __new__, which a type checker checks
-    # a call to a derived class against as well as the class's own __init__,
-    # so the calls below that pass an __init__ its own arguments are ignored.
 
     def test_a_derived_class_with_init_takes_its_own_arguments(self) -> None:
         class C(tc.ProtectedMembers):
@@ -418,9 +418,9 @@ class TestTestComponent(unittest.TestCase):
 
         for c, scale, offset in (
             (C(), 1, 0),
-            (C(3), 3, 0),  # type: ignore
-            (C(3, offset=4), 3, 4),  # type: ignore
-            (C(offset=5), 1, 5),  # type: ignore
+            (C(3), 3, 0),
+            (C(3, offset=4), 3, 4),
+            (C(offset=5), 1, 5),
         ):
             with self.subTest(scale=scale, offset=offset):
                 self.assertEqual((c.scale, c.offset), (scale, offset))
@@ -430,10 +430,10 @@ class TestTestComponent(unittest.TestCase):
         class C(tc.ProtectedMembers):
             @override
             def __init__(self, name: str, initial: int) -> None:
-                super().__init__(initial)  # type: ignore
+                super().__init__(initial)
                 self.name = name
 
-        c = C("spam", 5)  # type: ignore
+        c = C("spam", 5)
         self.assertEqual(c.name, "spam")
         self.assertEqual(c._protected_value, 5)
 
@@ -446,7 +446,7 @@ class TestTestComponent(unittest.TestCase):
                 super().__init__(initial, initial)  # type: ignore
 
         with self.assertRaisesRegex(TypeError, "parameter count"):
-            C(5)  # type: ignore
+            C(5)
 
         class D(tc.ProtectedMembers):
             @override
@@ -460,12 +460,12 @@ class TestTestComponent(unittest.TestCase):
         class C(tc.Composable):
             @override
             def __init__(self, init: int) -> None:
-                super().__init__(init * 2)  # type: ignore
+                super().__init__(init * 2)
 
         class D(C):
             pass
 
-        self.assertEqual(D(4).value, 8)  # type: ignore
+        self.assertEqual(D(4).value, 8)
 
     def test_a_class_derived_from_a_derived_class_has_its_own_init(self) -> None:
         class C(tc.Composable):
@@ -506,7 +506,7 @@ class TestTestComponent(unittest.TestCase):
                 except RuntimeError as e:
                     errors.append(e)
 
-                super().__init__(3)  # type: ignore
+                super().__init__(3)
                 values.append(self._protected_value)
 
         C()
@@ -576,7 +576,7 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaisesRegex(
             TypeError, message.format("C", "keyword arguments")
         ):
-            C(spacing=12)  # type: ignore
+            C(spacing=12)
 
         class D(tc.Composable):
             @override
@@ -585,7 +585,7 @@ class TestTestComponent(unittest.TestCase):
                 self.spacing = spacing
 
         with self.assertRaisesRegex(TypeError, message.format("D", "2 arguments")):
-            D(300, 12)  # type: ignore
+            D(300, 12)
 
     def test_a_derived_class_whose_super_init_fails(self) -> None:
         # A super().__init__() that fails, here in converting its argument,
@@ -628,7 +628,7 @@ class TestTestComponent(unittest.TestCase):
         c = C()
 
         with self.assertRaisesRegex(TypeError, "already composed"):
-            c.__init__()
+            c.__init__()  # type: ignore[misc]
 
         self.assertEqual(c.one(), 1)
 
@@ -639,20 +639,21 @@ class TestTestComponent(unittest.TestCase):
             pass
 
         c = C(5)
-        c.__init__(6)  # type: ignore
+        c.__init__(6)  # type: ignore[misc]
         self.assertEqual(c.value, 5)
 
     def test_a_derived_class_with_init_ignores_the_arguments_of_new(self) -> None:
         # The constructor takes what __init__ passes on, as object.__new__()
-        # ignores the arguments of a class that has an __init__.
+        # ignores the arguments of a class that has an __init__. Overriding
+        # __new__ is not the way, as test_overriding_new says.
         class C(tc.Composable):
             @override
-            def __new__(cls):
-                return super().__new__(cls, 6)
+            def __new__(cls) -> Self:
+                return super().__new__(cls, 6)  # type: ignore
 
             @override
             def __init__(self) -> None:
-                super().__init__(7)  # type: ignore
+                super().__init__(7)
 
         self.assertEqual(C().value, 7)
 
@@ -671,7 +672,7 @@ class TestTestComponent(unittest.TestCase):
             def _on_overridable(self) -> None:
                 tags.append(self.tag)
 
-        c = C("spam")  # type: ignore
+        c = C("spam")
         c.call_overridable()
         self.assertEqual(tags, ["spam"])
 

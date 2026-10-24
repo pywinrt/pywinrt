@@ -275,7 +275,7 @@ class CanExecuteRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.CharacterReceivedRoutedEventArgs::get_Handled()
     @_property
@@ -292,7 +292,7 @@ class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ContextRequestedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Input.ContextRequestedEventArgs::TryGetPosition(Windows.UI.Xaml.UIElement,Windows.Foundation.Point&)
     def try_get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> tuple[bool, windows_foundation.Point]: ...
     # System.Boolean Windows.UI.Xaml.Input.ContextRequestedEventArgs::get_Handled()
@@ -304,7 +304,7 @@ class ContextRequestedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class DoubleTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs::GetPosition(Windows.UI.Xaml.UIElement)
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     # System.Boolean Windows.UI.Xaml.Input.DoubleTappedRoutedEventArgs::get_Handled()
@@ -461,7 +461,7 @@ class FocusMovementResult(winrt.system.Object):
 
 @typing.final
 class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.GettingFocusEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
@@ -503,7 +503,7 @@ class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class HoldingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Input.HoldingRoutedEventArgs::GetPosition(Windows.UI.Xaml.UIElement)
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     # System.Boolean Windows.UI.Xaml.Input.HoldingRoutedEventArgs::get_Handled()
@@ -572,7 +572,7 @@ class InertiaTranslationBehavior(winrt.system.Object):
 
 @typing.final
 class InputScope(windows_ui_xaml.DependencyObject):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.Input.InputScopeName> Windows.UI.Xaml.Input.InputScope::get_Names()
     @_property
     def names(self) -> _cabc.MutableSequence[InputScopeName]: ...
@@ -580,9 +580,9 @@ class InputScope(windows_ui_xaml.DependencyObject):
 @typing.final
 class InputScopeName(windows_ui_xaml.DependencyObject):
     @typing.overload
-    def __new__(cls, name_value: InputScopeNameValue, /) -> typing.Self: ...
+    def __init__(self, name_value: InputScopeNameValue, /) -> None: ...
     @typing.overload
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Input.InputScopeNameValue Windows.UI.Xaml.Input.InputScopeName::get_NameValue()
     @_property
     def name_value(self) -> InputScopeNameValue: ...
@@ -592,7 +592,7 @@ class InputScopeName(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class KeyRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.KeyRoutedEventArgs::get_Handled()
     @_property
@@ -632,7 +632,7 @@ class KeyboardAccelerator_Static(windows_ui_xaml.DependencyObject_Static):
     def scope_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAccelerator_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Input.KeyboardAccelerator::add_Invoked(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Input.KeyboardAccelerator,Windows.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>)
     def add_invoked(self, handler: windows_foundation.TypedEventHandler[KeyboardAccelerator, KeyboardAcceleratorInvokedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -687,7 +687,7 @@ class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
 
 @typing.final
 class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.LosingFocusEventArgs::TryCancel()
     def try_cancel(self) -> bool: ...
@@ -729,7 +729,7 @@ class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationCompletedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs::get_Handled()
     @_property
     def handled(self) -> bool: ...
@@ -757,7 +757,7 @@ class ManipulationCompletedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationDeltaRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Void Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs::Complete()
     def complete(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs::get_Handled()
@@ -790,7 +790,7 @@ class ManipulationDeltaRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class ManipulationInertiaStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Input.InertiaTranslationBehavior Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs::get_TranslationBehavior()
     @_property
     def translation_behavior(self) -> InertiaTranslationBehavior: ...
@@ -854,7 +854,7 @@ class ManipulationStartedRoutedEventArgs_Static(windows_ui_xaml.RoutedEventArgs_
     ...
 
 class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=ManipulationStartedRoutedEventArgs_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     @typing.final
     # System.Void Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs::Complete()
     def complete(self) -> None: ...
@@ -884,7 +884,7 @@ class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metacl
 
 @typing.final
 class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Input.ManipulationPivot Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs::get_Pivot()
     @_property
     def pivot(self) -> ManipulationPivot: ...
@@ -912,7 +912,7 @@ class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
 
 @typing.final
 class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Xaml.Input.NoFocusCandidateFoundEventArgs::get_Handled()
     @_property
@@ -946,7 +946,7 @@ class Pointer(winrt.system.Object):
 
 @typing.final
 class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Input.PointerPoint Windows.UI.Xaml.Input.PointerRoutedEventArgs::GetCurrentPoint(Windows.UI.Xaml.UIElement)
     def get_current_point(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_ui_input.PointerPoint: ...
@@ -987,7 +987,7 @@ class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
 
 @typing.final
 class RightTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Input.RightTappedRoutedEventArgs::GetPosition(Windows.UI.Xaml.UIElement)
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     # System.Boolean Windows.UI.Xaml.Input.RightTappedRoutedEventArgs::get_Handled()
@@ -1008,9 +1008,9 @@ class StandardUICommand_Static(XamlUICommand_Static):
 
 class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
     @typing.overload
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     @typing.overload
-    def __new__(cls, kind: StandardUICommandKind, /) -> typing.Self: ...
+    def __init__(self, kind: StandardUICommandKind, /) -> None: ...
     # Windows.UI.Xaml.Input.StandardUICommandKind Windows.UI.Xaml.Input.StandardUICommand::get_Kind()
     @_property
     def kind(self) -> StandardUICommandKind: ...
@@ -1021,7 +1021,7 @@ class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
 
 @typing.final
 class TappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Input.TappedRoutedEventArgs::GetPosition(Windows.UI.Xaml.UIElement)
     def get_position(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_foundation.Point: ...
     # System.Boolean Windows.UI.Xaml.Input.TappedRoutedEventArgs::get_Handled()
@@ -1061,7 +1061,7 @@ class XamlUICommand_Static(windows_ui_xaml.DependencyObject_Static):
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlUICommand(windows_ui_xaml.DependencyObject, ICommand, metaclass=XamlUICommand_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Input.XamlUICommand::CanExecute(System.Object)
     def can_execute(self, parameter: winrt.system.Object, /) -> bool: ...
     # System.Void Windows.UI.Xaml.Input.XamlUICommand::Execute(System.Object)

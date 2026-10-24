@@ -282,7 +282,7 @@ class AcrylicBrush_Static(XamlCompositionBrushBase_Static):
     def tint_luminosity_opacity_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class AcrylicBrush(XamlCompositionBrushBase, metaclass=AcrylicBrush_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.TimeSpan Windows.UI.Xaml.Media.AcrylicBrush::get_TintTransitionDuration()
     @_property
     def tint_transition_duration(self) -> datetime.timedelta: ...
@@ -346,7 +346,7 @@ class ArcSegment_Static(PathSegment_Static):
 
 @typing.final
 class ArcSegment(PathSegment, metaclass=ArcSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.SweepDirection Windows.UI.Xaml.Media.ArcSegment::get_SweepDirection()
     @_property
     def sweep_direction(self) -> SweepDirection: ...
@@ -392,7 +392,7 @@ class BezierSegment_Static(PathSegment_Static):
 
 @typing.final
 class BezierSegment(PathSegment, metaclass=BezierSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.BezierSegment::get_Point3()
     @_property
     def point3(self) -> windows_foundation.Point: ...
@@ -414,7 +414,7 @@ class BezierSegment(PathSegment, metaclass=BezierSegment_Static):
 
 @typing.final
 class BitmapCache(CacheMode):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 class Brush_Static(windows_ui_xaml.DependencyObject_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Media.Brush::get_OpacityProperty()
@@ -431,7 +431,7 @@ class Brush_Static(windows_ui_xaml.DependencyObject_Static):
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Brush(windows_ui_xaml.DependencyObject, windows_ui_composition.IAnimationObject, metaclass=Brush_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """Brush's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Media.Brush::PopulatePropertyInfo(System.String,Windows.UI.Composition.AnimationPropertyInfo)
     def populate_property_info(self, property_name: str, property_info: windows_ui_composition.AnimationPropertyInfo, /) -> None: ...
@@ -509,7 +509,7 @@ class CacheMode_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class CacheMode(windows_ui_xaml.DependencyObject, metaclass=CacheMode_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """CacheMode's constructor is protected: derive a class from it and create that."""
 
 @typing.final
@@ -544,7 +544,7 @@ class CompositeTransform_Static(Transform_Static):
 
 @typing.final
 class CompositeTransform(Transform, metaclass=CompositeTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.CompositeTransform::get_TranslateY()
     @_property
     def translate_y(self) -> winrt.system.Double: ...
@@ -680,7 +680,7 @@ class EllipseGeometry_Static(Geometry_Static):
 
 @typing.final
 class EllipseGeometry(Geometry, metaclass=EllipseGeometry_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.EllipseGeometry::get_RadiusY()
     @_property
     def radius_y(self) -> winrt.system.Double: ...
@@ -709,7 +709,7 @@ class FontFamily_Static(winrt.system.Object_Static):
 
 class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, family_name: str, /) -> typing.Self: ...
+    def __init__(self, family_name: str, /) -> None: ...
     # System.String Windows.UI.Xaml.Media.FontFamily::get_Source()
     @_property
     @typing.final
@@ -719,7 +719,7 @@ class GeneralTransform_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class GeneralTransform(windows_ui_xaml.DependencyObject, metaclass=GeneralTransform_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """GeneralTransform's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.Foundation.Rect Windows.UI.Xaml.Media.GeneralTransform::TransformBounds(Windows.Foundation.Rect)
@@ -757,7 +757,7 @@ class Geometry_Static(windows_ui_xaml.DependencyObject_Static):
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Geometry(windows_ui_xaml.DependencyObject, metaclass=Geometry_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Transform Windows.UI.Xaml.Media.Geometry::get_Transform()
     @_property
@@ -828,7 +828,7 @@ class GeometryGroup_Static(Geometry_Static):
 
 @typing.final
 class GeometryGroup(Geometry, metaclass=GeometryGroup_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.FillRule Windows.UI.Xaml.Media.GeometryGroup::get_FillRule()
     @_property
     def fill_rule(self) -> FillRule: ...
@@ -861,7 +861,7 @@ class GradientBrush_Static(Brush_Static):
     def spread_method_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class GradientBrush(Brush, metaclass=GradientBrush_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """GradientBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Media.GradientSpreadMethod Windows.UI.Xaml.Media.GradientBrush::get_SpreadMethod()
     @_property
@@ -903,7 +903,7 @@ class GradientStop_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class GradientStop(windows_ui_xaml.DependencyObject, metaclass=GradientStop_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.GradientStop::get_Offset()
     @_property
     def offset(self) -> winrt.system.Double: ...
@@ -971,7 +971,7 @@ class ImageBrush_Static(TileBrush_Static):
 
 @typing.final
 class ImageBrush(TileBrush, metaclass=ImageBrush_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Media.ImageBrush::add_ImageFailed(Windows.UI.Xaml.ExceptionRoutedEventHandler)
     def add_image_failed(self, handler: windows_ui_xaml.ExceptionRoutedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Media.ImageBrush::remove_ImageFailed(Windows.Foundation.EventRegistrationToken)
@@ -991,7 +991,7 @@ class ImageSource_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class ImageSource(windows_ui_xaml.DependencyObject, metaclass=ImageSource_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -1005,7 +1005,7 @@ class LineGeometry_Static(Geometry_Static):
 
 @typing.final
 class LineGeometry(Geometry, metaclass=LineGeometry_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.LineGeometry::get_StartPoint()
     @_property
     def start_point(self) -> windows_foundation.Point: ...
@@ -1027,7 +1027,7 @@ class LineSegment_Static(PathSegment_Static):
 
 @typing.final
 class LineSegment(PathSegment, metaclass=LineSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.LineSegment::get_Point()
     @_property
     def point(self) -> windows_foundation.Point: ...
@@ -1047,9 +1047,9 @@ class LinearGradientBrush_Static(GradientBrush_Static):
 @typing.final
 class LinearGradientBrush(GradientBrush, metaclass=LinearGradientBrush_Static):
     @typing.overload
-    def __new__(cls, gradient_stop_collection: GradientStopCollection, angle: winrt.system.Double, /) -> typing.Self: ...
+    def __init__(self, gradient_stop_collection: GradientStopCollection, angle: winrt.system.Double, /) -> None: ...
     @typing.overload
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.LinearGradientBrush::get_StartPoint()
     @_property
     def start_point(self) -> windows_foundation.Point: ...
@@ -1124,7 +1124,7 @@ class Matrix3DProjection_Static(Projection_Static):
 
 @typing.final
 class Matrix3DProjection(Projection, metaclass=Matrix3DProjection_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.Media3D.Matrix3D Windows.UI.Xaml.Media.Matrix3DProjection::get_ProjectionMatrix()
     @_property
     def projection_matrix(self) -> windows_ui_xaml_media_media3d.Matrix3D: ...
@@ -1157,7 +1157,7 @@ class MatrixTransform_Static(Transform_Static):
 
 @typing.final
 class MatrixTransform(Transform, metaclass=MatrixTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.Matrix Windows.UI.Xaml.Media.MatrixTransform::get_Matrix()
     @_property
     def matrix(self) -> Matrix: ...
@@ -1201,7 +1201,7 @@ class PathFigure_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class PathFigure(windows_ui_xaml.DependencyObject, metaclass=PathFigure_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.PathFigure::get_StartPoint()
     @_property
     def start_point(self) -> windows_foundation.Point: ...
@@ -1284,7 +1284,7 @@ class PathGeometry_Static(Geometry_Static):
 
 @typing.final
 class PathGeometry(Geometry, metaclass=PathGeometry_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.FillRule Windows.UI.Xaml.Media.PathGeometry::get_FillRule()
     @_property
     def fill_rule(self) -> FillRule: ...
@@ -1302,7 +1302,7 @@ class PathSegment_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class PathSegment(windows_ui_xaml.DependencyObject, metaclass=PathSegment_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -1395,7 +1395,7 @@ class PlaneProjection_Static(Projection_Static):
 
 @typing.final
 class PlaneProjection(Projection, metaclass=PlaneProjection_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.PlaneProjection::get_RotationZ()
     @_property
     def rotation_z(self) -> winrt.system.Double: ...
@@ -1526,7 +1526,7 @@ class PolyBezierSegment_Static(PathSegment_Static):
 
 @typing.final
 class PolyBezierSegment(PathSegment, metaclass=PolyBezierSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.PointCollection Windows.UI.Xaml.Media.PolyBezierSegment::get_Points()
     @_property
     def points(self) -> PointCollection: ...
@@ -1542,7 +1542,7 @@ class PolyLineSegment_Static(PathSegment_Static):
 
 @typing.final
 class PolyLineSegment(PathSegment, metaclass=PolyLineSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.PointCollection Windows.UI.Xaml.Media.PolyLineSegment::get_Points()
     @_property
     def points(self) -> PointCollection: ...
@@ -1558,7 +1558,7 @@ class PolyQuadraticBezierSegment_Static(PathSegment_Static):
 
 @typing.final
 class PolyQuadraticBezierSegment(PathSegment, metaclass=PolyQuadraticBezierSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.PointCollection Windows.UI.Xaml.Media.PolyQuadraticBezierSegment::get_Points()
     @_property
     def points(self) -> PointCollection: ...
@@ -1570,7 +1570,7 @@ class Projection_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Projection(windows_ui_xaml.DependencyObject, metaclass=Projection_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """Projection's constructor is protected: derive a class from it and create that."""
 
 @typing.final
@@ -1584,7 +1584,7 @@ class QuadraticBezierSegment_Static(PathSegment_Static):
 
 @typing.final
 class QuadraticBezierSegment(PathSegment, metaclass=QuadraticBezierSegment_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Point Windows.UI.Xaml.Media.QuadraticBezierSegment::get_Point2()
     @_property
     def point2(self) -> windows_foundation.Point: ...
@@ -1600,7 +1600,7 @@ class QuadraticBezierSegment(PathSegment, metaclass=QuadraticBezierSegment_Stati
 
 @typing.final
 class RateChangedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class RectangleGeometry_Static(Geometry_Static):
@@ -1610,7 +1610,7 @@ class RectangleGeometry_Static(Geometry_Static):
 
 @typing.final
 class RectangleGeometry(Geometry, metaclass=RectangleGeometry_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Rect Windows.UI.Xaml.Media.RectangleGeometry::get_Rect()
     @_property
     def rect(self) -> windows_foundation.Rect: ...
@@ -1638,13 +1638,13 @@ class RevealBackgroundBrush_Static(RevealBrush_Static):
     ...
 
 class RevealBackgroundBrush(RevealBrush, metaclass=RevealBackgroundBrush_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 class RevealBorderBrush_Static(RevealBrush_Static):
     ...
 
 class RevealBorderBrush(RevealBrush, metaclass=RevealBorderBrush_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 class RevealBrush_Static(XamlCompositionBrushBase_Static):
     # Windows.UI.Xaml.Media.RevealBrushState Windows.UI.Xaml.Media.RevealBrush::GetState(Windows.UI.Xaml.UIElement)
@@ -1669,7 +1669,7 @@ class RevealBrush_Static(XamlCompositionBrushBase_Static):
     def target_theme_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RevealBrush(XamlCompositionBrushBase, metaclass=RevealBrush_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """RevealBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.ApplicationTheme Windows.UI.Xaml.Media.RevealBrush::get_TargetTheme()
     @_property
@@ -1707,7 +1707,7 @@ class RotateTransform_Static(Transform_Static):
 
 @typing.final
 class RotateTransform(Transform, metaclass=RotateTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.RotateTransform::get_CenterY()
     @_property
     def center_y(self) -> winrt.system.Double: ...
@@ -1744,7 +1744,7 @@ class ScaleTransform_Static(Transform_Static):
 
 @typing.final
 class ScaleTransform(Transform, metaclass=ScaleTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.ScaleTransform::get_ScaleY()
     @_property
     def scale_y(self) -> winrt.system.Double: ...
@@ -1774,7 +1774,7 @@ class Shadow_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class Shadow(windows_ui_xaml.DependencyObject, metaclass=Shadow_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -1794,7 +1794,7 @@ class SkewTransform_Static(Transform_Static):
 
 @typing.final
 class SkewTransform(Transform, metaclass=SkewTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.SkewTransform::get_CenterY()
     @_property
     def center_y(self) -> winrt.system.Double: ...
@@ -1829,9 +1829,9 @@ class SolidColorBrush_Static(Brush_Static):
 @typing.final
 class SolidColorBrush(Brush, metaclass=SolidColorBrush_Static):
     @typing.overload
-    def __new__(cls, color: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex], /) -> typing.Self: ...
+    def __init__(self, color: windows_ui.Color | tuple[winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex, winrt.system.UInt8 | typing.SupportsIndex], /) -> None: ...
     @typing.overload
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Color Windows.UI.Xaml.Media.SolidColorBrush::get_Color()
     @_property
     def color(self) -> windows_ui.Color: ...
@@ -1843,7 +1843,7 @@ class ThemeShadow_Static(Shadow_Static):
     ...
 
 class ThemeShadow(Shadow, metaclass=ThemeShadow_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.UIElementWeakCollection Windows.UI.Xaml.Media.ThemeShadow::get_Receivers()
     @_property
     @typing.final
@@ -1864,7 +1864,7 @@ class TileBrush_Static(Brush_Static):
     def stretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TileBrush(Brush, metaclass=TileBrush_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """TileBrush's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Media.Stretch Windows.UI.Xaml.Media.TileBrush::get_Stretch()
     @_property
@@ -1902,7 +1902,7 @@ class TimelineMarker_Static(windows_ui_xaml.DependencyObject_Static):
 
 @typing.final
 class TimelineMarker(windows_ui_xaml.DependencyObject, metaclass=TimelineMarker_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.String Windows.UI.Xaml.Media.TimelineMarker::get_Type()
     @_property
     def type(self) -> str: ...
@@ -1970,7 +1970,7 @@ class TimelineMarkerCollection(_cabc.MutableSequence[TimelineMarker], winrt.syst
 
 @typing.final
 class TimelineMarkerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.TimelineMarker Windows.UI.Xaml.Media.TimelineMarkerRoutedEventArgs::get_Marker()
     @_property
     def marker(self) -> TimelineMarker: ...
@@ -1982,7 +1982,7 @@ class Transform_Static(GeneralTransform_Static):
     ...
 
 class Transform(GeneralTransform, metaclass=Transform_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -2039,7 +2039,7 @@ class TransformGroup_Static(Transform_Static):
 
 @typing.final
 class TransformGroup(Transform, metaclass=TransformGroup_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.TransformCollection Windows.UI.Xaml.Media.TransformGroup::get_Children()
     @_property
     def children(self) -> TransformCollection: ...
@@ -2061,7 +2061,7 @@ class TranslateTransform_Static(Transform_Static):
 
 @typing.final
 class TranslateTransform(Transform, metaclass=TranslateTransform_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Media.TranslateTransform::get_Y()
     @_property
     def y(self) -> winrt.system.Double: ...
@@ -2120,7 +2120,7 @@ class XamlCompositionBrushBase_Static(Brush_Static):
     def fallback_color_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class XamlCompositionBrushBase(Brush, metaclass=XamlCompositionBrushBase_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """XamlCompositionBrushBase's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Media.XamlCompositionBrushBase::OnConnected()
     def _on_connected(self) -> None: ...
@@ -2153,7 +2153,7 @@ class XamlLight_Static(windows_ui_xaml.DependencyObject_Static):
     def remove_target_element(cls, light_id: str, element: windows_ui_xaml.UIElement, /) -> None: ...
 
 class XamlLight(windows_ui_xaml.DependencyObject, metaclass=XamlLight_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.String Windows.UI.Xaml.Media.XamlLight::GetId()
     def _get_id(self) -> str: ...
     # System.Void Windows.UI.Xaml.Media.XamlLight::OnConnected(Windows.UI.Xaml.UIElement)

@@ -20,7 +20,14 @@ static class ObjectWriterExtensions
     /// </remarks>
     static void WriteNoConstructor(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteLine("def __new__(cls, _: typing.Never, /) -> typing.Self:");
+        // __init__ where constructors are, so that no class in a hierarchy
+        // declares a __new__ for a checker to find inconsistent with the
+        // __init__ of another.
+        w.WriteLine(
+            type.DeclaresInit
+                ? "def __init__(self, _: typing.Never, /) -> None:"
+                : "def __new__(cls, _: typing.Never, /) -> typing.Self:"
+        );
         w.Indent++;
         w.WriteLine(
             type.IsStatic
@@ -455,12 +462,25 @@ static class ObjectWriterExtensions
                 w.WriteDeprecated(ctor.DeprecatedMessage);
             }
 
+            // The constructor of a composable class is __init__, which a
+            // Python class derived from it overrides with one that takes its
+            // own arguments and reaches the base's through super(), so a
+            // type checker checks a call to the derived class against the
+            // derived class's __init__ alone, as the runtime does. So is the
+            // constructor of a class derived from one, which would otherwise
+            // declare a __new__ beside the __init__ it inherits. No class
+            // derives from any other class, so its constructor is __new__,
+            // which is what the runtime implements.
+            var (name, first, returns) = type.DeclaresInit
+                ? ("__init__", "self", "None")
+                : ("__new__", "cls", "typing.Self");
+
             // A type checker cannot be told that a protected constructor is
             // for a derived class only, so the docstring, which an editor
             // shows for the call, says so instead.
             if (ctor.IsProtected)
             {
-                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self:");
+                w.WriteLine($"def {name}({first}{paramList}) -> {returns}:");
                 w.Indent++;
                 w.WriteLine(
                     $"\"\"\"{type.Name}'s constructor is protected: derive a class from it and create that.\"\"\""
@@ -469,7 +489,7 @@ static class ObjectWriterExtensions
             }
             else
             {
-                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
+                w.WriteLine($"def {name}({first}{paramList}) -> {returns}: ...");
             }
 
             didWriteLine = true;

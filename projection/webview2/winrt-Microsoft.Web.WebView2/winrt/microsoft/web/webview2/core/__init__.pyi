@@ -1077,7 +1077,7 @@ class CoreWebView2ClientCertificateRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class CoreWebView2CompositionController(CoreWebView2Controller):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.ApplicationModel.DataTransfer.DataPackageOperation Microsoft.Web.WebView2.Core.CoreWebView2CompositionController::DragEnter(Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo,Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride)
     def drag_enter(self, drag_info: windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo, drag_ui_override: windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride, /) -> windows_applicationmodel_datatransfer.DataPackageOperation: ...
@@ -1243,7 +1243,7 @@ class CoreWebView2Controller_Static(winrt.system.Object_Static):
 
 class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controller_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Microsoft.Web.WebView2.Core.CoreWebView2Controller::Close()
