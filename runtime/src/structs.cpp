@@ -995,7 +995,34 @@ namespace py::interp
     bool make_struct_type(
         projection& proj, type_entry& entry, table::type_view const& record)
     {
-        auto const layout = proj.table->get_struct_layout(record);
+        entry.fields.resize(record.field_count());
+
+        // A struct in a struct is resolved into the field before anything is
+        // laid out. Releasing one has to know what it holds and is not a place
+        // that can import a package, and the table cannot measure a struct of
+        // another namespace: it holds only an external record naming it, with
+        // no fields, so the size has to come from the entry that defines it.
+        for (uint32_t i = 0; i < record.field_count(); i++)
+        {
+            auto& field = entry.fields[i];
+
+            field.code = record.field(i).code();
+            field.type = record.field(i).type();
+
+            if (field.code == table::type_code::struct_
+                && !resolve(proj, field.type, field.info))
+            {
+                return false;
+            }
+        }
+
+        auto const layout = proj.table->get_struct_layout(
+            record,
+            [&entry](uint32_t position)
+            {
+                auto const& info = *entry.fields[position].info;
+                return table::value_layout{info.size, info.align};
+            });
 
         entry.numerics_kind = numerics::classify(entry.winrt_name);
 
@@ -1012,7 +1039,6 @@ namespace py::interp
         entry.align = layout.align;
         entry.blob_offset
             = align_up(static_cast<uint32_t>(sizeof(PyObject)), layout.align);
-        entry.fields.resize(record.field_count());
 
         std::vector<PyGetSetDef> getsets;
 
@@ -1021,9 +1047,7 @@ namespace py::interp
             auto const record_field = record.field(i);
             auto& field = entry.fields[i];
 
-            field.code = record_field.code();
             field.offset = layout.offsets[i];
-            field.type = record_field.type();
             field.declaring = &entry;
 
             pyobj_handle interned{
@@ -1048,14 +1072,6 @@ namespace py::interp
                 entry.owns_resources = true;
                 break;
             case table::type_code::struct_:
-                // A struct in a struct is resolved into the field now rather
-                // than on first use, because releasing one has to know what
-                // it holds and is not a place that can import a package.
-                if (!resolve(proj, field.type, field.info))
-                {
-                    return false;
-                }
-
                 if (field.info->owns_resources)
                 {
                     entry.owns_resources = true;
