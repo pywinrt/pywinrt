@@ -56,6 +56,7 @@ setup(
                 "src/enums.cpp",
                 "src/errors.cpp",
                 "src/generics.cpp",
+                "src/handles.cpp",
                 "src/implements.cpp",
                 "src/interp.cpp",
                 "src/members.cpp",

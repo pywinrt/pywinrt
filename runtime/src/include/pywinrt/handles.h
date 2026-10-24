@@ -10,6 +10,12 @@
 
 namespace py
 {
+#if PY_VERSION_HEX >= 0x030F0000
+    PyInterpreterView* main_interpreter_view() noexcept;
+#endif
+
+    void keep_thread_state() noexcept;
+
     /**
      * Holds the Python GIL for as long as it is in scope, unless the
      * interpreter is being finalized or already has been, in which case it
@@ -28,6 +34,10 @@ namespace py
      * check and the attach one step. Before that they are two, so a thread
      * that passes the check just as another starts finalizing still attaches
      * to an interpreter that is going away.
+     *
+     * On a thread Python has not seen, which is most threads WinRT calls back
+     * on, the guard first gives the thread a thread state of its own: see
+     * keep_thread_state().
      */
     struct gil_guard
     {
@@ -55,13 +65,16 @@ namespace py
       private:
         static PyThreadStateToken* attach() noexcept
         {
-            // A view does not keep the interpreter from finalizing, so the one
-            // taken on first use serves for as long as the process runs.
-            static PyInterpreterView* const view = PyInterpreterView_FromMain();
+            PyInterpreterView* const view = main_interpreter_view();
 
             if (!view)
             {
                 return nullptr;
+            }
+
+            if (!PyGILState_GetThisThreadState())
+            {
+                keep_thread_state();
             }
 
             return PyThreadState_EnsureFromView(view);
@@ -80,6 +93,11 @@ namespace py
         {
             if (m_held)
             {
+                if (!PyGILState_GetThisThreadState())
+                {
+                    keep_thread_state();
+                }
+
                 m_state = PyGILState_Ensure();
             }
         }
