@@ -27,7 +27,8 @@ are what is left of the cibuildwheel build per Python and architecture.
 Every argument other than the ones above is passed to cibuildwheel.
 
 A release unit is usually one half or the other, so a workflow asks first
-which halves have anything to build, and builds nothing while it asks:
+which halves have anything to build, and how the upload authenticates, and
+builds nothing while it asks:
 
     python scripts/build-bdist.py --plan --tag wheels/table/v4.0.0
 """
@@ -64,7 +65,9 @@ parser.add_argument(
     "--plan",
     action="store_true",
     help="print pure=true|false and compiled=true|false, the halves that have"
-    " a package to build, as GitHub Actions output lines, and build nothing",
+    " a package to build, and trusted=true|false|mixed, whether its units"
+    " upload with trusted publishing, as GitHub Actions output lines, and"
+    " build nothing",
 )
 packages.add_arguments(parser)
 args, cibuildwheel_args = parser.parse_known_args()
@@ -75,9 +78,11 @@ if args.plan:
     builds = {package.build for package in selected}
     pure = bool(builds & {packages.Build.ANY, packages.Build.REDIST})
     compiled = packages.Build.COMPILED in builds
+    trusted = {package.release in packages.TRUSTED_PUBLISHING for package in selected}
 
     print(f"pure={str(pure).lower()}")
     print(f"compiled={str(compiled).lower()}")
+    print(f"trusted={'mixed' if len(trusted) > 1 else str(True in trusted).lower()}")
 
     raise SystemExit
 

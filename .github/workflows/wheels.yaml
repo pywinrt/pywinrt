@@ -43,14 +43,16 @@ env:
   BUILD_PACKAGES: ${{ inputs.packages }}
 
 jobs:
-  # Which halves of the wheel build have a package to build. A release unit is
-  # usually one of them: winrt-runtime and an interop module compile, and the
-  # table compiler and a family of projection packages are data.
+  # Which halves of the wheel build have a package to build, and how the
+  # upload authenticates. A release unit is usually one half: winrt-runtime
+  # and an interop module compile, and the table compiler and a family of
+  # projection packages are data.
   plan:
     runs-on: windows-latest
     outputs:
       pure: ${{ steps.plan.outputs.pure }}
       compiled: ${{ steps.plan.outputs.compiled }}
+      trusted: ${{ steps.plan.outputs.trusted }}
     steps:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -183,7 +185,7 @@ jobs:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
   publish:
-    needs: [sdist, pure, bdist]
+    needs: [plan, sdist, pure, bdist]
     # a tag publishes to PyPI; a run started by hand publishes where it was
     # told to, which is nowhere unless it says otherwise. A half of the build
     # that the unit has no package in is skipped, which is not a failure.
@@ -191,10 +193,17 @@ jobs:
       ${{ !cancelled() && !failure()
           && (github.event_name == 'push' || inputs.publish != 'none') }}
     runs-on: ubuntu-latest
-    # the upload carries its own credentials, so this job needs nothing that
-    # the workflow token can grant
-    permissions: {}
+    # A unit in packages.TRUSTED_PUBLISHING uploads to PyPI with trusted
+    # publishing, which exchanges this job's OIDC token for one that only its
+    # projects take; every other upload carries the account's token.
+    permissions:
+      id-token: write
     steps:
+      - name: Refuse a mix of trusted and token units
+        if: needs.plan.outputs.trusted == 'mixed' && inputs.publish != 'testpypi'
+        run: |
+          echo "::error::one upload authenticates one way; publish these units apart"
+          exit 1
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           path: dist
@@ -203,9 +212,11 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           user: __token__
+          # no password is what makes the action use trusted publishing
           password: >-
             ${{ inputs.publish == 'testpypi' && secrets.TEST_PYPI_API_TOKEN
-                || secrets.PYPI_API_TOKEN }}
+                || needs.plan.outputs.trusted != 'true' && secrets.PYPI_API_TOKEN
+                || '' }}
           repository-url: >-
             ${{ inputs.publish == 'testpypi' && 'https://test.pypi.org/legacy/'
                 || 'https://upload.pypi.org/legacy/' }}
