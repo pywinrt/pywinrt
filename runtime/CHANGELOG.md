@@ -11,7 +11,7 @@ repository](../CHANGELOG.md).
 ## [Unreleased]
 
 ### Fixed
-- `threading.local` and `contextvars` now carry over between WinRT callbacks.
+- `threading.local` and `contextvars` carry over between WinRT callbacks.
 - A second thread composing a subclass instance is refused rather than racing.
 
 ## [4.0.2] - 2026-10-24

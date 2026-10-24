@@ -61,6 +61,12 @@ of the program's own.
 [Which thread calls the handler](types.md#which-thread-calls-the-handler) says
 how to hand the work to the thread or event loop that should do it.
 
+Such a thread keeps what Python stores per thread, such as a `threading.local`
+or the context of `contextvars`, from one call to the next for as long as it
+lives, as a thread of the program's own does. A thread pool thread serves the
+callbacks of unrelated objects, though, so what one handler leaves there is
+what the next handler on that thread finds.
+
 ## Free-threaded Python
 
 PyWinRT runs on the free-threaded build of CPython, where threads run Python
