@@ -14,8 +14,9 @@ winrt-table-compiler ships does.
 A package that redistributes a Microsoft binary carries no copy of it, since
 nothing prebuilt belongs in a source distribution; its build fetches the NuGet
 package instead, and an environment variable names an unpacked copy for a
-machine that cannot reach nuget.org. The variables are set below so that
-building here never goes to the network.
+machine that cannot reach nuget.org. The variables are set below for each
+package that scripts/fetch-tools.ps1 unpacked, so that building here goes to
+the network only for one it did not.
 """
 
 import argparse

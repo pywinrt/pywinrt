@@ -25,6 +25,11 @@ py3-none-any wheel. Nothing in the half needs a compiler.
 winrt-runtime and the eight hand-written interop modules do compile, so they
 are what is left of the cibuildwheel build per Python and architecture.
 Every argument other than the ones above is passed to cibuildwheel.
+
+A release unit is usually one half or the other, so a workflow asks first
+which halves have anything to build, and builds nothing while it asks:
+
+    python scripts/build-bdist.py --plan --tag wheels/table/v4.0.0
 """
 
 import argparse
@@ -55,10 +60,26 @@ half.add_argument(
     action="store_true",
     help="build only the wheels that cibuildwheel builds",
 )
+parser.add_argument(
+    "--plan",
+    action="store_true",
+    help="print pure=true|false and compiled=true|false, the halves that have"
+    " a package to build, as GitHub Actions output lines, and build nothing",
+)
 packages.add_arguments(parser)
 args, cibuildwheel_args = parser.parse_known_args()
 
 selected = packages.select(args)
+
+if args.plan:
+    builds = {package.build for package in selected}
+    pure = bool(builds & {packages.Build.ANY, packages.Build.REDIST})
+    compiled = packages.Build.COMPILED in builds
+
+    print(f"pure={str(pure).lower()}")
+    print(f"compiled={str(compiled).lower()}")
+
+    raise SystemExit
 
 
 def build_wheel(package: packages.Package) -> None:

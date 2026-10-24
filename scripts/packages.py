@@ -31,9 +31,10 @@ REDIST_PATH = (REPO_PATH / "redist").resolve()
 # redistributed with an app rather than part of Windows, so the two interop
 # modules that call it take its headers and its import libraries from these;
 # it is a metapackage over components published separately, so each module
-# names the one it needs. WebView2 is where the component .dll comes from,
-# and pointing at the unpacked copy is what keeps a build in this tree off
-# the network: a build hook that finds no copy downloads the package itself.
+# names the one it needs. WebView2 is where the component .dll comes from.
+# A build that finds no variable downloads the one package it needs itself,
+# checked against a hash, as a build from the source distribution does, so
+# pointing at an unpacked copy only keeps a build in this tree off the network.
 NUGET_ENVIRONMENT = {
     "WASDK_FOUNDATION_PATH": "Microsoft.WindowsAppSDK.Foundation",
     "WASDK_INTERACTIVE_EXPERIENCES_PATH": "Microsoft.WindowsAppSDK.InteractiveExperiences",
@@ -169,11 +170,18 @@ def distribution_families() -> dict[str, str]:
 def set_nuget_environment() -> None:
     """
     Points every build in this tree at the NuGet packages that
-    scripts/fetch-tools.ps1 unpacked, so that building here never goes to the
-    network for one.
+    scripts/fetch-tools.ps1 unpacked, so that building here goes to the
+    network only for a package it did not unpack.
+
+    A package that is not there is left to the build that needs it, which
+    downloads that one package and nothing else. That is why a release fetches
+    nothing ahead of its builds: most units need no NuGet package at all.
     """
     for env, package in NUGET_ENVIRONMENT.items():
-        os.environ[env] = os.fspath(versions.unpacked_nuget_path(package))
+        path = versions.unpacked_nuget_path(package)
+
+        if path.is_dir():
+            os.environ[env] = os.fspath(path)
 
 
 def add_arguments(parser: argparse.ArgumentParser) -> None:
