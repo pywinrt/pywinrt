@@ -8,7 +8,7 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [4.0.0] - Unreleased
+## [4.0.0] - 2026-10-23
 
 See the [4.0 release notes][4.0] for what these changes mean together.
 

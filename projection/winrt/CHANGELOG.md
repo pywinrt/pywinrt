@@ -11,7 +11,7 @@ changelog](../../runtime/CHANGELOG.md), and each interop package, such as
 `interop/`. The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
-## [4!10.0.28000.2705] - Unreleased
+## [4!10.0.28000.2705] - 2026-10-23
 
 See the [4.0 release notes][4.0] for what these changes mean together.
 

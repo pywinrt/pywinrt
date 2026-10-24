@@ -5,7 +5,7 @@
 What changed in `winrt-table-compiler`, which compiles the table of a
 PyWinRT projection package when that package is built.
 
-## [4.0.0] - Unreleased
+## [4.0.0] - 2026-10-23
 
 See the [4.0 release notes][4.0] for what changed in PyWinRT as a whole.
 
