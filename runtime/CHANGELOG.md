@@ -8,7 +8,7 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.0.3] - 2026-10-24
 
 ### Fixed
 - `threading.local` and `contextvars` carry over between WinRT callbacks.
