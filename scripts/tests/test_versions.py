@@ -182,14 +182,8 @@ class UpstreamPins(unittest.TestCase):
 
         with self.assertRaisesRegex(
             RuntimeError,
-            r"pins Microsoft\.Web\.WebView2 at 1\.0\.9999\.1 .* copy it into",
+            r"pins Microsoft\.Web\.WebView2 at 1\.0\.9999\.1 .* scripts/move-upstream-pins\.py",
         ):
-            self.check()
-
-    def test_the_app_sdk_is_moved_with_its_components(self) -> None:
-        self.move_pin("Microsoft.WindowsAppSDK", "9.9.9")
-
-        with self.assertRaisesRegex(RuntimeError, "scripts/resolve-wasdk.py"):
             self.check()
 
     def move_pin(self, package: str, version: str) -> None:

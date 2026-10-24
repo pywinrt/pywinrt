@@ -18,10 +18,10 @@ $CppWinRTVersion = $toolsJson."Microsoft.Windows.CppWinRT"
 $WindowsSdkVersion = $toolsJson."Microsoft.Windows.SDK.CPP"
 $MicrosoftUiXaml = $toolsJson."Microsoft.UI.Xaml"
 # The Windows App SDK is a metapackage over components that are versioned and
-# published separately, and _tools.json records the set scripts/resolve-wasdk.py
-# derived, so the family is fetched by name from there. The Runtime component is
-# left out, since scripts/app_sdk.py takes the one file PyWinRT reads from it out
-# of the package instead.
+# published separately, and _tools.json records the set
+# scripts/move-upstream-pins.py derived, so the family is fetched by name from
+# there. The Runtime component is left out, since scripts/app_sdk.py takes the
+# one file PyWinRT reads from it out of the package instead.
 $WindowsAppSDKPackages = $toolsJson.PSObject.Properties.Name | Where-Object {
     ($_ -like "Microsoft.WindowsAppSDK*" -or $_ -eq "Microsoft.Windows.AI.MachineLearning") -and
     $_ -ne "Microsoft.WindowsAppSDK.Runtime"

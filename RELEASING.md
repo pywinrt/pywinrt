@@ -8,11 +8,11 @@ a release rather than to us. Move the metapackage's pin in
 `.config/upstream/upstream.csproj`, where Dependabot proposes each new release,
 and run
 
-    py .\scripts\resolve-wasdk.py
+    py .\scripts\move-upstream-pins.py
 
 which takes the component set from that release's nuspec, checks it against
-the list the Runtime component carries, and writes the result. Then fetch and
-regenerate as `CONTRIBUTING.md` describes.
+the list the Runtime component carries, writes the result, and fetches and
+regenerates everything that depends on it.
 
 ## Building the Nuget package
 

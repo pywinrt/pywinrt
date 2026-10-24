@@ -417,20 +417,12 @@ def check_upstream_pins() -> None:
     project = ".config/upstream/upstream.csproj"
 
     for family, version in upstream_pins().items():
-        package = NUGET_PACKAGES[family]
-
-        if tools[family] == version:
-            continue
-
-        if family == "wasdk":
-            how = "move it with scripts/resolve-wasdk.py, which resolves the components"
-        else:
-            how = "copy it into .config/_tools.json"
-
-        raise RuntimeError(
-            f"{project} pins {package} at {version} and .config/_tools.json at"
-            f" {tools[family]}; {how}, then generate the projection again"
-        )
+        if tools[family] != version:
+            raise RuntimeError(
+                f"{project} pins {NUGET_PACKAGES[family]} at {version} and"
+                f" .config/_tools.json at {tools[family]};"
+                " run scripts/move-upstream-pins.py"
+            )
 
 
 def family_versions() -> dict[str, str]:
