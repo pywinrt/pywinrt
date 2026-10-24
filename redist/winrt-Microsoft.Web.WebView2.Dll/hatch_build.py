@@ -15,14 +15,14 @@ from hatchling.builders.config import BuilderConfig
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
 NUGET_PACKAGE = "Microsoft.Web.WebView2"
-NUGET_VERSION = "1.0.4191.47"
+NUGET_VERSION = "1.0.4314.35"
 
 # Where the .nupkg comes from and what it has to hash to. The build fetches it
 # rather than the source distribution carrying the .dll, so that nothing
 # calling itself source holds a prebuilt binary; the checksum, taken when this
 # file was generated, is what makes the download worth trusting.
-NUGET_URL = "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4191.47/microsoft.web.webview2.1.0.4191.47.nupkg"
-NUGET_SHA256 = "f492bbf547d0da329553b6727435b677579b1e9f91cc9e4a1ad029366d5f23d0"
+NUGET_URL = "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4314.35/microsoft.web.webview2.1.0.4314.35.nupkg"
+NUGET_SHA256 = "90778deb1b77e36292828b4b5833c9255c27533f40e0ddd55891ae718944edc4"
 
 # An unpacked copy of the NuGet package. scripts/build-bdist.py and
 # scripts/build-sdist.py point this at what scripts/fetch-tools.ps1
@@ -106,8 +106,8 @@ def get_sbom() -> dict[str, Any]:
             "component": {
                 "type": "library",
                 "name": "winrt-Microsoft.Web.WebView2.Dll",
-                "version": "4!1.0.4191.47",
-                "purl": "pkg:pypi/winrt-microsoft-web-webview2-dll@4!1.0.4191.47",
+                "version": "4!1.0.4314.35",
+                "purl": "pkg:pypi/winrt-microsoft-web-webview2-dll@4!1.0.4314.35",
                 "licenses": [{"expression": "MIT"}],
                 "supplier": {"name": "PyWinRT"},
             }

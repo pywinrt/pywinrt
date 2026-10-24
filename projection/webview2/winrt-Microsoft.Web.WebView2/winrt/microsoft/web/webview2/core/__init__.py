@@ -79,6 +79,7 @@ __all__ = [
     "CoreWebView2ControllerWindowReference",
     "CoreWebView2Cookie",
     "CoreWebView2CookieManager",
+    "CoreWebView2CrashReport",
     "CoreWebView2CustomSchemeRegistration",
     "CoreWebView2DOMContentLoadedEventArgs",
     "CoreWebView2DedicatedWorker",
