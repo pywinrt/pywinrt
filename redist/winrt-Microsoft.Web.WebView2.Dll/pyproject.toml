@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Microsoft.Web.WebView2.Dll"
-version = "4!1.0.4191.47"
+version = "4!1.0.4314.35"
 description = "Microsoft.Web.WebView2.Core.dll, redistributed for PyWinRT"
 readme = "README.md"
 # The Python in this package is PyWinRT's and the .dll in it is Microsoft's,

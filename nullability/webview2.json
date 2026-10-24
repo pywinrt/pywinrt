@@ -5273,6 +5273,81 @@
         ]
       },
       {
+        "name": "CoreWebView2CrashReport",
+        "methods": [
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_BucketId()",
+            "name": "get_BucketId",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_CrashReportId()",
+            "name": "get_CrashReportId",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_ExceptionCode()",
+            "name": "get_ExceptionCode",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultOffset()",
+            "name": "get_FaultOffset",
+            "return": {
+              "type": {
+                "name": "System.UInt64"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultingModuleName()",
+            "name": "get_FaultingModuleName",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultingModuleVersion()",
+            "name": "get_FaultingModuleVersion",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_ReportTime()",
+            "name": "get_ReportTime",
+            "return": {
+              "type": {
+                "name": "System.UInt64"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
         "name": "CoreWebView2CustomSchemeRegistration",
         "methods": [
           {
@@ -10750,6 +10825,16 @@
       {
         "name": "CoreWebView2ProcessFailedEventArgs",
         "methods": [
+          {
+            "signature": "Microsoft.Web.WebView2.Core.CoreWebView2CrashReport Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs::get_CrashReport()",
+            "name": "get_CrashReport",
+            "return": {
+              "type": {
+                "name": "Microsoft.Web.WebView2.Core.CoreWebView2CrashReport"
+              }
+            },
+            "parameters": []
+          },
           {
             "signature": "System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs::get_ExitCode()",
             "name": "get_ExitCode",

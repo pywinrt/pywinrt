@@ -90,6 +90,7 @@ __all__ = [
     "CoreWebView2ControllerWindowReference",
     "CoreWebView2Cookie",
     "CoreWebView2CookieManager",
+    "CoreWebView2CrashReport",
     "CoreWebView2CustomSchemeRegistration",
     "CoreWebView2DOMContentLoadedEventArgs",
     "CoreWebView2DedicatedWorker",
@@ -1487,6 +1488,32 @@ class CoreWebView2CookieManager(winrt.system.Object):
     def get_cookies_async(self, uri: str, /) -> windows_foundation.IAsyncOperation[_cabc.Sequence[CoreWebView2Cookie]]: ...
 
 @typing.final
+class CoreWebView2CrashReport(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_BucketId()
+    @_property
+    def bucket_id(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_CrashReportId()
+    @_property
+    def crash_report_id(self) -> str: ...
+    # System.UInt32 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_ExceptionCode()
+    @_property
+    def exception_code(self) -> winrt.system.UInt32: ...
+    # System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultOffset()
+    @_property
+    def fault_offset(self) -> winrt.system.UInt64: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultingModuleName()
+    @_property
+    def faulting_module_name(self) -> str: ...
+    # System.String Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_FaultingModuleVersion()
+    @_property
+    def faulting_module_version(self) -> str: ...
+    # System.UInt64 Microsoft.Web.WebView2.Core.CoreWebView2CrashReport::get_ReportTime()
+    @_property
+    def report_time(self) -> winrt.system.UInt64: ...
+
+@typing.final
 class CoreWebView2CustomSchemeRegistration(winrt.system.Object):
     def __new__(cls, scheme_name: str, /) -> typing.Self: ...
     # System.Int32 Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration::get_TreatAsSecure()
@@ -2642,6 +2669,9 @@ class CoreWebView2ProcessFailedEventArgs(winrt.system.Object):
     # System.String Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs::get_FailureSourceModulePath()
     @_property
     def failure_source_module_path(self) -> str: ...
+    # Microsoft.Web.WebView2.Core.CoreWebView2CrashReport Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs::get_CrashReport()
+    @_property
+    def crash_report(self) -> CoreWebView2CrashReport: ...
 
 @typing.final
 class CoreWebView2ProcessInfo(winrt.system.Object):

@@ -1367,6 +1367,33 @@ enum Microsoft.Web.WebView2.Core.CoreWebView2CookieSameSiteKind python_type
     constant LAX 1
     constant STRICT 2
 
+class Microsoft.Web.WebView2.Core.CoreWebView2CrashReport python_type
+    py CoreWebView2CrashReport
+    signature rc(Microsoft.Web.WebView2.Core.CoreWebView2CrashReport;{f64f1e46-c697-5e39-af5d-3f47dab454e8})
+    default Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport
+    property bucket_id
+        get get_BucketId slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out string return
+    property crash_report_id
+        get get_CrashReportId slot=7 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out string return
+    property exception_code
+        get get_ExceptionCode slot=8 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out uint32 return
+    property fault_offset
+        get get_FaultOffset slot=9 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out uint64 return
+    property faulting_module_name
+        get get_FaultingModuleName slot=10 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out string return
+    property faulting_module_version
+        get get_FaultingModuleVersion slot=11 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out string return
+    property report_time
+        get get_ReportTime slot=12 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport shape=4
+            out uint64 return
+
 class Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration python_type
     py CoreWebView2CustomSchemeRegistration
     signature rc(Microsoft.Web.WebView2.Core.CoreWebView2CustomSchemeRegistration;{16dc60d9-ddec-5c3d-bc1f-4408d1875af1})
@@ -2915,6 +2942,7 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs python_type
     default Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs
     requires Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs2
     requires Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs3
+    requires Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs4
     requires Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs
     property process_failed_kind
         get get_ProcessFailedKind slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs shape=4
@@ -2934,6 +2962,9 @@ class Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedEventArgs python_type
     property failure_source_module_path
         get get_FailureSourceModulePath slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs3 shape=4
             out string return
+    property crash_report
+        get get_CrashReport slot=6 inputs=0 outputs=1 declaring=Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs4 shape=4
+            out class type=Microsoft.Web.WebView2.Core.CoreWebView2CrashReport return
 
 enum Microsoft.Web.WebView2.Core.CoreWebView2ProcessFailedKind python_type
     py CoreWebView2ProcessFailedKind
@@ -4381,6 +4412,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2CookieManager
 interface Microsoft.Web.WebView2.Core.ICoreWebView2CookieManager_Manual
     guid 9bcca0ea-7225-577a-bb23-c7c98023154e
 
+interface Microsoft.Web.WebView2.Core.ICoreWebView2CrashReport
+    guid f64f1e46-c697-5e39-af5d-3f47dab454e8
+
 interface Microsoft.Web.WebView2.Core.ICoreWebView2CustomSchemeRegistration
     guid 16dc60d9-ddec-5c3d-bc1f-4408d1875af1
 
@@ -4659,6 +4693,9 @@ interface Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs2
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs3
     guid d129a419-adae-5c3c-8fce-5592994e9cd3
+
+interface Microsoft.Web.WebView2.Core.ICoreWebView2ProcessFailedEventArgs4
+    guid 4bc601b4-378f-5439-8e3b-a219c7374331
 
 interface Microsoft.Web.WebView2.Core.ICoreWebView2ProcessInfo
     guid b6ec37e1-23eb-5924-b346-e837890aa9d5

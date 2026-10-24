@@ -3,7 +3,7 @@
 # winrt-Microsoft.Web.WebView2.Dll
 
 Redistributes `Microsoft.Web.WebView2.Core.dll`
-from version 1.0.4191.47 of the `Microsoft.Web.WebView2` NuGet package, one wheel
+from version 1.0.4314.35 of the `Microsoft.Web.WebView2` NuGet package, one wheel
 per architecture.
 
 `winrt-Microsoft.Web.WebView2`

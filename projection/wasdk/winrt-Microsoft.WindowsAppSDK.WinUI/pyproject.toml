@@ -36,7 +36,7 @@ dependencies = [
 
 [project.optional-dependencies]
 all = [
-    "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4191.47",
+    "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4314.35",
     "winrt-Microsoft.WindowsAppSDK.Foundation[all]>=4!2.5.1",
     "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]>=4!2.5.1",
     "winrt-Windows.ApplicationModel[all]>=4!10.0.28000.2705",
