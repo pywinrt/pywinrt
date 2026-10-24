@@ -1,0 +1,266 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Management
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[MdmAlert]
+    guid a0a617dc-210c-529f-b5e9-29aeceebb5a8
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.MdmAlert;{b0fbc327-28c1-4b52-a548-c5807caf70b6}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.MdmAlert
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[MdmAlert]
+    guid b4a6ebea-b19f-5da5-b3d1-e859f1f4df17
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.MdmAlert;{b0fbc327-28c1-4b52-a548-c5807caf70b6}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.MdmAlert
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> shape=4 reverse=22 role=current
+            out class type=Windows.Management.MdmAlert return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.MdmAlert name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Management.IMdmAlert
+    guid b0fbc327-28c1-4b52-a548-c5807caf70b6
+
+interface Windows.Management.IMdmSession
+    guid fe89314c-8f64-4797-a9d7-9d88f86ae166
+
+interface Windows.Management.IMdmSessionManagerStatics
+    guid cf4ad959-f745-4b79-9b5c-de0bf8efe44b
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[MdmAlert]
+    guid 2b94038c-24aa-5261-80d8-c90f7970644a
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.MdmAlert;{b0fbc327-28c1-4b52-a548-c5807caf70b6}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert>
+    argument Windows.Management.MdmAlert
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.MdmAlert> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.MdmAlert return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.MdmAlert name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.MdmAlert name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Management.MdmAlert activatable python_type
+    py MdmAlert
+    signature rc(Windows.Management.MdmAlert;{b0fbc327-28c1-4b52-a548-c5807caf70b6})
+    default Windows.Management.IMdmAlert
+    requires Windows.Management.IMdmAlert
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property type
+        get get_Type slot=17 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out string return
+        put put_Type slot=18 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in string name=value
+    property target
+        get get_Target slot=15 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out string return
+        put put_Target slot=16 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in string name=value
+    property source
+        get get_Source slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out string return
+        put put_Source slot=13 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in string name=value
+    property mark
+        get get_Mark slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out enum32 type=Windows.Management.MdmAlertMark return
+        put put_Mark slot=11 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in enum32 type=Windows.Management.MdmAlertMark name=value
+    property format
+        get get_Format slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out enum32 type=Windows.Management.MdmAlertDataType return
+        put put_Format slot=9 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in enum32 type=Windows.Management.MdmAlertDataType name=value
+    property data
+        get get_Data slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out string return
+        put put_Data slot=7 inputs=1 outputs=0 declaring=Windows.Management.IMdmAlert shape=4
+            in string name=value
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Windows.Management.IMdmAlert shape=4
+            out uint32 return
+
+enum Windows.Management.MdmAlertDataType python_type
+    py MdmAlertDataType
+    signature enum(Windows.Management.MdmAlertDataType;i4)
+    constant STRING 0
+    constant BASE64 1
+    constant BOOLEAN 2
+    constant INTEGER 3
+
+enum Windows.Management.MdmAlertMark python_type
+    py MdmAlertMark
+    signature enum(Windows.Management.MdmAlertMark;i4)
+    constant NONE 0
+    constant FATAL 1
+    constant CRITICAL 2
+    constant WARNING 3
+    constant INFORMATIONAL 4
+
+class Windows.Management.MdmSession python_type
+    py MdmSession
+    signature rc(Windows.Management.MdmSession;{fe89314c-8f64-4797-a9d7-9d88f86ae166})
+    default Windows.Management.IMdmSession
+    requires Windows.Management.IMdmSession
+    property alerts
+        get get_Alerts slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.MdmAlert> return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=8 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out string return
+    property state
+        get get_State slot=9 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out enum32 type=Windows.Management.MdmSessionState return
+    method attach_async
+        method AttachAsync slot=10 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+    method delete
+        method Delete slot=11 inputs=0 outputs=0 declaring=Windows.Management.IMdmSession shape=0
+    method start_async
+        method StartAsync slot=12 inputs=0 outputs=1 declaring=Windows.Management.IMdmSession shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+        method StartAsync slot=13 inputs=1 outputs=1 declaring=Windows.Management.IMdmSession shape=51
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.MdmAlert> name=alerts
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.Management.MdmSessionManager static python_type
+    py MdmSessionManager
+    factory Windows.Management.IMdmSessionManagerStatics
+    property session_ids static
+        get get_SessionIds slot=6 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method delete_session_by_id static
+        method DeleteSessionById slot=8 inputs=1 outputs=0 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
+            in string name=sessionId
+    method get_session_by_id static
+        method GetSessionById slot=9 inputs=1 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=51 static
+            in string name=sessionId
+            out class type=Windows.Management.MdmSession return
+    method try_create_session static
+        method TryCreateSession slot=7 inputs=0 outputs=1 declaring=Windows.Management.IMdmSessionManagerStatics shape=4 static
+            out class type=Windows.Management.MdmSession return
+
+enum Windows.Management.MdmSessionState python_type
+    py MdmSessionState
+    signature enum(Windows.Management.MdmSessionState;i4)
+    constant NOT_STARTED 0
+    constant STARTING 1
+    constant CONNECTING 2
+    constant COMMUNICATING 3
+    constant ALERT_STATUS_AVAILABLE 4
+    constant RETRYING 5
+    constant COMPLETED 6
+
+class System.String external
+    py winrt.system.String
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

@@ -1,0 +1,368 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.ApplicationModel.WindowsAppRuntime
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions activatable python_type
+    py DeploymentInitializeOptions
+    signature rc(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions;{578a5fd4-9d7f-5e01-97b8-d8ea61db4027})
+    default Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions
+    requires Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions
+    requires Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property force_deployment
+        get get_ForceDeployment slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4
+            out boolean return
+        put put_ForceDeployment slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions shape=4
+            in boolean name=value
+    property on_error_show_ui
+        get get_OnErrorShowUI slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4
+            out boolean return
+        put put_OnErrorShowUI slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2 shape=4
+            in boolean name=value
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager static python_type
+    py DeploymentManager
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2
+    method get_status static
+        method GetStatus slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 static
+            out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
+    method initialize static
+        method Initialize slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics shape=4 static
+            out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
+        method Initialize slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2 shape=51 static
+            in class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions name=deploymentInitializeOptions
+            out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult python_type
+    py DeploymentResult
+    signature rc(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult;{27203f62-463d-587a-8eb7-870098901078})
+    default Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult
+    requires Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResultFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResultFactory shape=318
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus name=status
+            in hresult type=Windows.Foundation.HResult name=extendedError
+            out class type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentResult return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult shape=4
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus return
+
+enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus python_type
+    py DeploymentStatus
+    signature enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentStatus;i4)
+    constant UNKNOWN 0
+    constant OK 1
+    constant PACKAGE_INSTALL_REQUIRED 2
+    constant PACKAGE_INSTALL_FAILED 3
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions
+    guid 578a5fd4-9d7f-5e01-97b8-d8ea61db4027
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentInitializeOptions2
+    guid ad902820-149f-5e16-a566-9b2363997de2
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics
+    guid 6782a9d0-bfd0-50ea-81b0-32e9ed37cdf0
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentManagerStatics2
+    guid f49c16ee-6ebc-5f15-bebb-2ba49f8c0b30
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResult
+    guid 27203f62-463d-587a-8eb7-870098901078
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IDeploymentResultFactory
+    guid acd7bdae-4ae6-5cac-8205-1e8c305f953b
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[RuntimeCompatibilityChange]
+    guid 79fffbf6-dc39-59e3-a684-fa55fb49238f
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[RuntimeCompatibilityChange]
+    guid 25abd83a-a7d6-5c3a-94a4-674fd9cec6b4
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=current
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics
+    guid ed9be8ff-073c-5c66-bf97-ef0ce67405c3
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions
+    guid d7403bd9-b25d-5b8f-8de1-9dcb57d99f6c
+
+interface Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics
+    guid e5cb9549-8951-590e-a753-8f281cd77ab5
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[RuntimeCompatibilityChange]
+    guid b2d54673-319a-5cef-9997-2aa95cae7d4b
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=173 role=append
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=101 role=index_of
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=211 role=replace_all
+            pass_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[RuntimeCompatibilityChange]
+    guid b3675e71-9db8-5b51-986a-1223964c6f52
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange>
+    argument Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> shape=117 reverse=66 role=index_of
+            in enum32 type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange name=value
+            out uint32 name=index
+            out boolean return
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.ReleaseInfo static python_type
+    py ReleaseInfo
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics
+    property as_string static
+        get get_AsString slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
+            out string return
+    property major static
+        get get_Major slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
+            out uint16 return
+    property minor static
+        get get_Minor slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
+            out uint16 return
+    property patch static
+        get get_Patch slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
+            out uint16 return
+    property version_tag static
+        get get_VersionTag slot=9 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IReleaseInfoStatics shape=4 static
+            out string return
+
+enum Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange python_type
+    py RuntimeCompatibilityChange
+    signature enum(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange;i4)
+    constant NONE 0
+    constant ITEM_TEMPLATE_WRAPPER_RECYCLE_POOL_LEAK 61574373
+    constant ANIMATION_FIX_IMPLICIT_HIDE_ANIMATION_CRASH 61760863
+    constant TITLE_BAR_CONTENT_DRAG_REGIONS 61831627
+    constant POPUP_WINDOWED_POPUP_OVERRIDE_SCALE 61847252
+    constant UI_AFFINITY_RELEASE_QUEUE_PAUSE_DISPATCH_DURING_CLEANUP 61855278
+    constant GET_MODULE_HANDLE_FIX_AMBIGUOUS_MODULE_LOOKUP 62040515
+    constant PACKAGE_MANAGER_FIX_CRASH 62056332
+    constant MODEL_INITIALIZATION_GET_READY_STATE_AVAILABILITY_GUARD 62056572
+    constant WINDOWS_ML_MULTI_EP_PER_PACKAGE 62083086
+    constant LANGUAGE_MODEL_INSIGHTS_GET_PARTIAL_RESULT_LATENCY 62100233
+    constant WINDOWS_ML_FRAMEWORK_EP_ENUMERATION 62100797
+    constant WINDOWS_ML_EP_SELECTION_MODE 62100876
+    constant UNIFORM_GRID_LAYOUT_GET_ITEMS_PER_LINE_DIVIDE_BY_ZERO 62147120
+    constant APPLICATION_DATA_GET_FOR_UNPACKAGED 61684930
+    constant INPUT_POINTER_SOURCE_POINTER_CANCEL_CRASH_FIX 61854090
+    constant RENDER_TARGET_BITMAP_PRE_COMMIT_CRASH_ON_TREE_LEAVE 62216616
+    constant SCROLL_VIEW_HIDE_INDICATORS_TIMER_USE_AFTER_FREE 62255131
+    constant THEME_SETTINGS_OFF_THREAD_DESTRUCTOR_FIX 62276145
+    constant M_R_T_CORE_SPARSE_PACKAGED_PRI_FALLBACK 62382643
+    constant GET_PEER_PRIVATE_USE_AFTER_FREE 62422195
+    constant WINDOWS_ML_FLAT_C_CATALOG_CALLBACK_STRING_OWNERSHIP 62440888
+    constant WINDOWS_ML_COM_RUNDOWN_FIX 62440888
+    constant WINDOWS_ML_COM_INITIALIZATION_FIX 62440888
+    constant C_POPUP_ROOT_REPLAY_POINTER_UPDATE_CRASH 62393567
+    constant XAML_ISLAND_ROOT_UIA_TEARDOWN_REENTRANCY_CRASH 62406051
+    constant MODERN_COLLECTION_BASE_PANEL_STALE_VIEWPORT_ANCHOR_RECYCLE 62434240
+    constant POPUP_REMOVE_CHILD_IDEMPOTENT_WHEN_CLOSING 62434371
+    constant UI_A_WINDOW_PAUSE_NEW_DISPATCH_ON_DISCONNECT_PROVIDERS 62434372
+    constant CASCADING_MENU_HELPER_DELAY_OPEN_TIMER_TICK_AFTER_UNLOAD 62434373
+    constant ACRYLIC_BRUSH_INITIALIZE_PROPERTY_IN_MARKUP 62471884
+    constant XAML_RESERVE_VECTOR_SPACE 62542953
+    constant XAML_UI_COMMAND_LIGHTWEIGHT_BINDINGS 62639407
+    constant XAML_DEFAULT_STYLE_OPTIMIZATIONS 62644600
+    constant XAML_THEME_RESOURCE_USE_RESOURCE_KEYS 62645877
+    constant XAML_FASTER_RESOURCE_DICTIONARY 62646974
+    constant XAML_CACHED_TYPE_CHECKS 62659855
+    constant XAML_FASTER_XBF_INT_LOADING 62673714
+    constant XAML_ACTIVATION_FACTORY_FAST_PATHS 62676756
+    constant XAML_UI_COMMAND_SKIP_EMPTY_KEYBOARD_ACCELERATOR_BINDING 62676766
+    constant XAML_REDUCE_THEME_RESOURCE_LOOKUP_HASHING 62676773
+    constant REFRESH_RATE_INFO_REMOVE_POWER_NOTIFICATION 62688041
+    constant APPLICATION_DATA_GET_FOR_UNPACKAGED_LOCAL_SETTINGS 62698635
+    constant CUSTOM_METADATA_TYPES_INVALIDATE_USE_AFTER_FREE 62724527
+    constant C_POPUP_OPEN_SET_FOCUS_REENTRANCY 62724733
+    constant MEDIA_PLAYER_PRESENTER_DEVICE_LOST_CRASH 62724906
+    constant H_W_BUILD_GLYPH_RUN_TEXTURES_DEVICE_GUARD_SCOPE 62725196
+    constant FOCUS_RECT_MANAGER_FIND_FOCUS_RECT_HOST_CRASH 62725364
+    constant XAML_EAGER_DEVICE_REMOVED_EVENT_REGISTRATION 62726703
+    constant XAML_SETTINGS_OPTIONAL_CHANGES_API 62738389
+    constant UNIVERSAL_B_G_TASK_RUN_CRASH 62755661
+    constant XAML_OPTIMIZED_COMMAND_BAR_INITIALIZATION 62759377
+    constant FLYOUT_SIDE_PLACEMENT_FLIP_UP_ALIGNMENT_FIX 62771256
+    constant LANGUAGE_MODEL_STRUCTURED_JSON_OUTPUT 62774942
+    constant XAML_OPTIMIZED_COMMAND_BAR_FLYOUT_UPDATE_COMMANDS 62776273
+    constant XAML_INIT_GET_MUX_VERSION_COMPILE_TIME 62779870
+    constant XAML_ICON_NO_GRID_OPTIMIZATION 62784965
+    constant UNIFORM_GRID_LAYOUT_FLOW_LAYOUT_ON_ITEMS_CHANGED_NULL_LAYOUT_STATE_CRASH 62786355
+    constant XAML_DEFER_STYLE_PROPERTY_SETTERS 62789076
+    constant XAML_LOAD_DEFERRED_RESOURCE_OPTIMIZATION 62818033
+    constant XAML_DEFER_CONTEXT_FLYOUT_INIT 62833838
+    constant XAML_DELAY_APPLY_STYLES_AFTER_CREATION_COMPLETE 62847209
+    constant XAML_RESERVE_TRACKER_COLLECTION_SPACE 62849414
+    constant WINDOWS_ML_EXECUTION_PROVIDER_ENUMERATION_UPDATE 62865780
+    constant COMPOSITION_ENGINE_A_P_I 62917618
+    constant WINDOWS_SERVICES_GET_KEYBOARD_MODIFIERS_STATE_RACE 62927180
+    constant VIDEO_SUPER_RESOLUTION_HARDWARE_DETECTION 62934326
+    constant INPUT_POINTER_SOURCE_DEPARTING_SCROLL_INPUT_CRASH_FIX 62785439
+    constant STORAGE_PICKERS_RESTORE_FOCUS_AFTER_DIALOG_CLOSES 63006068
+    constant RESOURCE_MANAGER_RESTORE_DEFAULT_FALLBACK_PATH 63048673
+    constant INPUT_POINTER_SOURCE_OS_HAPTICS 63096865
+    constant WINDOWS_APP_RUNTIME_BASE_DIRECTORY_ISOLATION 63098302
+    constant APP_CONTENT_SEARCH_NEW_A_P_I_LAF_CHECK 63264582
+    constant LANGUAGE_MODEL_LANGUAGE_DETECTION_STATUS 63293066
+    constant POINTER_INPUT_PROCESSOR_RELEASE_CAPTURE_ON_DISPOSED_ISLAND 62943243
+    constant NAVIGATION_VIEW_UPDATE_PANE_LAYOUT_NEGATIVE_MAX_HEIGHT 62995866
+    constant POINTER_POSITION_PROPERTY_SET_UPDATE_WHILE_PRESSED 62998965
+    constant NAVIGATION_VIEW_ITEM_DEFERRED_FLYOUT_SHOW_STALE_STATE 63007686
+    constant KEYBOARD_ACCELERATOR_OEM_KEY_NO_FAIL_FAST 63417306
+    constant WINDOWS_XAML_MANAGER_ACTIVATION_FACTORY_CACHE_RESET_RACE 63435928
+    constant COMMAND_BAR_SPURIOUS_OVERFLOW_BUTTON_AT_FRACTIONAL_SCALE 63435929
+    constant COMPOSITION_ENGINE_SWITCHER_SEPTEMBER_FIXES 63494532
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions activatable python_type
+    py RuntimeCompatibilityOptions
+    signature rc(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityOptions;{d7403bd9-b25d-5b8f-8de1-9dcb57d99f6c})
+    default Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions
+    requires Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property patch_level2
+        get get_PatchLevel2 slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
+            out struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion return
+        put put_PatchLevel2 slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=313
+            in struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion name=value
+    property patch_level1
+        get get_PatchLevel1 slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
+            out struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion return
+        put put_PatchLevel1 slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=313
+            in struct type=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion name=value
+    property disabled_changes
+        get get_DisabledChanges slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange> return
+    method apply
+        method Apply slot=11 inputs=0 outputs=0 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeCompatibilityOptions shape=0
+
+class Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeInfo static python_type
+    py RuntimeInfo
+    factory Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics
+    property as_string static
+        get get_AsString slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 static
+            out string return
+    property version static
+        get get_Version slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.ApplicationModel.WindowsAppRuntime.IRuntimeInfoStatics shape=4 static
+            out struct type=Windows.ApplicationModel.PackageVersion return
+
+struct Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion python_type
+    py WindowsAppRuntimeVersion
+    signature struct(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.WindowsAppRuntimeVersion;u4;u4;u4)
+    field major Major uint32
+    field minor Minor uint32
+    field patch Patch uint32
+
+struct Windows.ApplicationModel.PackageVersion external
+    py winrt.windows.applicationmodel.PackageVersion
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

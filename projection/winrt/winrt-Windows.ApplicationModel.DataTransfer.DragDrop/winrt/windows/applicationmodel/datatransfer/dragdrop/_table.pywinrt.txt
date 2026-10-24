@@ -1,0 +1,14 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.ApplicationModel.DataTransfer.DragDrop
+
+enum Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers python_type flags_enum
+    py DragDropModifiers
+    signature enum(Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers;u4)
+    constant NONE 0x0
+    constant SHIFT 0x1
+    constant CONTROL 0x2
+    constant ALT 0x4
+    constant LEFT_BUTTON 0x8
+    constant MIDDLE_BUTTON 0x10
+    constant RIGHT_BUTTON 0x20

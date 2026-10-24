@@ -1,7 +1,16 @@
 {
-    "pywinrt": {
-        "version": "0.0.0"
+    "table_format": {
+        "major": 4,
+        "minor": 0
     },
+    "census": {
+        "lineage": "2e30db26-66c8-4551-85b9-a537376d8f99",
+        "revision": 1
+    },
+    "runtime": "4.0.0",
+    "namespaces": [
+        "Windows.UI.Accessibility"
+    ],
     "required": [
     ],
     "referenced": [

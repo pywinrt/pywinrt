@@ -1,47 +1,61 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools>=78", "winrt-sdk"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
+build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.Graphics.Imaging"
-description = "Python projection of Windows Runtime (WinRT) APIs"
+version = "4!10.0.28000.2705"
+description = "PyWinRT projection of the Windows.Graphics.Imaging namespace"
 readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
 classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Programming Language :: Python :: Implementation :: CPython",
     "Intended Audience :: Developers",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Typing :: Typed",
 ]
-dynamic = ["version", "dependencies", "optional-dependencies"]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
+dependencies = [
+    "winrt-runtime>=4.0.0,<5",
+    "winrt-Windows.Foundation>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
+]
+
+[project.optional-dependencies]
+all = [
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Graphics.DirectX.Direct3D11[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
+]
 
 [project.urls]
-# Homepage = "https://github.com/pywinrt/pywinrt"
 Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"
-Changelog = "https://github.com/pywinrt/pywinrt/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/projection/winrt/CHANGELOG.md"
 
-[tool.setuptools.dynamic]
-version = { file = "version.txt" }
-dependencies = { file = "requirements.txt" }
-optional-dependencies.all = { file = "all-requirements.txt" }
+[tool.hatch.build.targets.sdist]
+# The text form of the table is what the source distribution carries, and the
+# compiled form is build output wherever it turns up. Hatchling reads no
+# .gitignore above the package, so it has to be told about the latter.
+only-include = ["winrt", "LICENSE", "README.md"]
+exclude = ["**/_table.pywinrt"]
 
-[tool.setuptools.package-data]
-"*" = ["*.pyi", "py.typed"]
+[tool.hatch.build.targets.wheel]
+packages = ["winrt"]
+exclude = ["**/_table.pywinrt.txt"]
 
-[tool.cibuildwheel]
-# use local winrt-sdk build dependency
-environment = { PYTHONPATH="../../winrt-sdk/src" }
-# don't install winrt-sdk from PyPI
-build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
-before-build = "uv pip install setuptools"
-# don't build for PyPy
-skip = "pp*"
-# suppress warnings about ARM64 testing
-test-skip = "*-win_arm64"
-
-[tool.cibuildwheel.windows]
-archs = ["x86", "AMD64", "ARM64"]
+# winrt.table.build_hooks in winrt-table-compiler, which compiles each table
+# the package carries and puts the result beside the __init__.py that loads it.
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]

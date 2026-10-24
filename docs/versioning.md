@@ -1,0 +1,246 @@
+# Versioning
+
+A PyWinRT version says which metadata a package was generated from, not which
+version of the code generator read that metadata. There are two schemes,
+because there are two kinds of package, and one number that both of them
+carry.
+
+!!! note
+
+    This describes PyWinRT 4.0 and later. Versions up to 3.2.1 gave every
+    package the code generator's own version, so upgrading the generator meant
+    republishing everything. See [Moving from 3.x](#moving-from-3x).
+
+## What a version tells you
+
+A **projection package** is generated from a WinRT metadata release, so it is
+versioned after that release:
+
+```text
+winrt-Windows.Storage                 4!10.0.28000.2705   Windows SDK
+winui2-Microsoft.UI.Xaml              4!2.8.7             Microsoft.UI.Xaml
+winrt-Microsoft.WindowsAppSDK.WinUI   4!2.5.1             Windows App SDK
+winrt-Microsoft.Web.WebView2          4!1.0.4191.47       WebView2
+```
+
+Reading one of these tells you exactly which upstream release the API surface
+came from, which is otherwise invisible from Python. Packages generated from
+one upstream release are published together and carry the same version, and so
+does the package that redistributes that upstream's `.dll`, such as
+`winrt-Microsoft.Web.WebView2.Dll` with the WebView2 packages.
+
+A **package written by hand** has no upstream release to follow, so it uses
+semantic versioning and is released on its own when it changes:
+
+```text
+winrt-runtime                         4.0.0
+winrt-table-compiler                  4.0.0
+winrt-Windows.System.Interop          4.0.0
+```
+
+These all start at `4.0.0`, and from there each moves only when that
+package changes: a fix to `winrt-runtime` does not renumber the interop
+modules, and moving the Windows SDK pin does not renumber any of them.
+
+The exception is an interop module built against an upstream other than the
+Windows SDK, which is released with that upstream's packages and carries their
+version, since that release is the one you choose. Today that is the two of
+the Windows App SDK, `winrt-Microsoft.UI.Interop` and
+`winrt-Microsoft.WindowsAppRuntime.Bootstrap`, so the
+interop modules for `winrt-Microsoft.WindowsAppSDK.WinUI` `4!2.5.1` are
+`4!2.5.1` too. The bootstrap module would have to be anyway: its wheel carries
+the bootstrapper `.dll` of the Windows App SDK release it was built against
+and loads that release by default. A fix to one of them released between two
+upstream releases adds a fourth number, such as `4!2.5.1.1`.
+
+The `4!` on the first group is a [PEP 440](https://peps.python.org/pep-0440/)
+*epoch*, and the leading `4` on the second is the major. They are the same number.
+
+## The compatibility generation
+
+That number is the compatibility generation. It appears in two places that
+must agree — the epoch of every projection package and the format of the table
+a projection package carries — because a change to the format breaks every
+projection package at once. Rather than two numbers that have to be reasoned
+about together, it is one number that says: *these packages work with each
+other, and with no runtime of another generation.*
+
+An epoch sorts above everything published before it, whatever the release
+segments say, and that is what makes these numbers usable at all. An upstream
+line is numbered for its own reasons, and several of them are below the
+`3.2.1` that PyWinRT itself last published: the Windows App SDK is on 2.x
+and WebView2 on 1.x. `2.5.1` would be an upgrade to nothing, while
+`4!2.5.1` is unambiguously newer than `3.2.1`. The epoch is what lets a
+package be numbered after its upstream without its history running
+backwards.
+
+The generation changes rarely, and when it does every projection package is
+republished.
+
+## What has to be new enough, and why
+
+One thing is checked at run time: **winrt-runtime has to be at least as new
+as the tables it reads.** A projection package carries a table describing its
+namespace. The runtime refuses a table whose format minor is higher than the
+one it reads, and reads an older table happily.
+
+The interop packages are compiled, but they reach the runtime only through
+the Python functions of [`winrt.runtime.interop`](api/runtime.interop.md), so
+there is no C ABI between them and the runtime to check. A third-party interop
+module uses the same functions.
+
+The newer half may be the runtime and never the projection package. The
+`>=` floors in every package's metadata say so, which is why pip normally
+gets this right on its own: installing a newer projection package pulls a
+runtime new enough to read it.
+
+If the two are forced apart anyway — with `--no-deps`, a stale lock file, or
+a vendored copy — the failure is an exception at import that names both
+versions, not a crash:
+
+```text
+ImportError: table format version 4.3 is newer than this runtime, which reads 4.0
+```
+
+The fix is to upgrade `winrt-runtime`.
+
+## How to pin
+
+**Libraries** should use floors and no upper bounds:
+
+```text
+winrt-Windows.Foundation>=4!10.0.28000
+winrt-runtime>=4.0
+```
+
+A cap on a dependency you have not seen break is a guess, and in a library it
+becomes everyone else's problem to resolve. PyWinRT's own packages cap only
+what is known rather than guessed. Each requires `winrt-runtime<5`, and a
+projection package is built with `winrt-table-compiler<5`: a package of the
+next generation cannot be installed beside a runtime of this one, so that cap
+does the work a cap on the package itself would. And a Windows App SDK
+component requires every other component whose types it hands back with `~=`,
+as `winrt-Microsoft.WindowsAppSDK.WinUI` requires
+`winrt-Microsoft.WindowsAppSDK.Foundation~=4!2.5.1.0`, since Microsoft
+releases the components as a set.
+
+**Applications** should pin exactly, with a lock file if the tooling has one.
+An application controls its whole environment, so reproducibility is worth
+more than resolver freedom.
+
+**An application tied to a Windows App SDK line** can pin to that line, since
+the version says which one it is:
+
+```text
+winrt-Microsoft.WindowsAppSDK.WinUI==4!2.5.*
+```
+
+Pinning a Windows SDK package to a line is rarely worth it, because Windows
+APIs are almost always additive: a newer projection has what an older one had.
+The exception is a namespace Microsoft withdraws, whose package stops being
+published — there is no newer version of it to move to, so a pin would not
+have helped either.
+
+## Re-releases: .postN
+
+`.postN` on a projection package means PyWinRT republished the same upstream
+release — to fix something in the packaging, not in the API surface.
+`4!10.0.28000.2705.post1` and `4!10.0.28000.2705` project the same Windows
+SDK. Nothing else uses the segment; a prerelease of an upstream release is
+spelled the way [PEP 440](https://peps.python.org/pep-0440/) spells one, so
+`1.8.0-preview2` upstream is published as `4!1.8.0b2`.
+
+## Deprecation policy
+
+Open floors are only safe if upgrading does not break code without warning, so
+an API that is removed or renamed goes through stages rather than
+disappearing:
+
+1. it keeps working and raises `DeprecationWarning`, for at least a year;
+2. the warning becomes `FutureWarning`, which is shown to end users rather
+   than only to developers;
+3. it is removed.
+
+A compatibility alias, such as a method name from v3.x, goes through the same
+stages, and is marked with `@warnings.deprecated` in the type stubs from the
+start, so a type checker reports it before anything is run.
+
+## Projections of your own components
+
+If you generate a projection of your own WinRT component, its version is
+yours — nothing about PyWinRT's scheme is baked into what you publish, which
+was not true before 4.0.
+
+What you do have to track is the generation. Your package carries a table, so
+it depends on `winrt-runtime` of the generation it was built for, and it is
+built by `winrt-table-compiler`, which writes that generation's table
+format. Both are published packages, so a build of your own needs no copy of
+the PyWinRT sources:
+
+```toml
+[build-system]
+requires = ["hatchling", "winrt-table-compiler>=4.0.0,<5"]
+build-backend = "hatchling.build"
+
+[project]
+# the floor is the "runtime" of deps.json, as below
+dependencies = ["winrt-runtime>=4.0.0,<5"]
+
+[tool.hatch.build.targets.wheel.hooks.winrt-table-compiler]
+```
+
+The last table turns on the build hook of `winrt-table-compiler`, which
+compiles each table the package carries into the wheel. It takes no options,
+so the table is empty.
+
+The floor of `winrt-runtime` is the release that `PyWinRT.exe` writes as
+`runtime` in the `deps.json` beside each package it generates: the first one
+that reads the package's tables and has everything its modules call when they
+are imported. A later `PyWinRT.exe` can raise it, so take it from `deps.json`
+each time you generate.
+
+Generating the projection in the first place needs `PyWinRT.exe` and the
+shape census it ships beside, which records the ABI call shapes the runtime
+has trampolines for. A component whose members need a shape the census does
+not have is reported when it is generated. Those members are still projected,
+but using one raises, since no published `winrt-runtime` can make that call.
+
+To have such a shape covered, add a member of that shape to
+[TestWinRT](https://github.com/pywinrt/testwinrt), the component PyWinRT is
+tested against. That puts the shape in the census of the next `winrt-runtime`
+and `PyWinRT` releases. `PyWinRT.exe --emit-shapes` can add it to a census of
+your own instead, but a projection generated that way loads only in a
+`winrt-runtime` built from that census, so it is not a route to a package you
+can publish.
+
+If waiting for a release turns out to be a problem in practice, say so in an
+[issue](https://github.com/pywinrt/pywinrt/issues). The runtime could have a
+generic way to make a call that no trampoline covers, slower than a
+trampoline, but it does not have one now.
+
+## Moving from 3.x
+
+Up to 3.2.1 every package carried the code generator's version, with a fourth
+segment added to fix one package on its own, and a projection of your own
+components had to use the same scheme. None of that applies now.
+
+The two generations never mix. A 3.x projection package is compiled code
+built for the 3.x runtime, and importing one with runtime 4 fails:
+
+```text
+AttributeError: module 'winrt._winrt' has no attribute '_C_API'
+```
+
+This is what you see after upgrading `winrt-runtime` on its own, for
+example with `pip install -U winrt-runtime`. The 3.x packages require
+`winrt-runtime~=3.2.1.0`, but pip only warns about that conflict and leaves
+them installed. The fix is to upgrade the projection packages too, under
+their 4.x names (see `scripts/3to4/README.md` in the repository), so that
+nothing from 3.x is left in the environment.
+
+The forward promise above — that a runtime runs anything of its generation
+that is no newer than itself — begins at 4.0 and says nothing about 3.x.
+
+!!! seealso "See also"
+
+    [The WinRT type system](types.md)

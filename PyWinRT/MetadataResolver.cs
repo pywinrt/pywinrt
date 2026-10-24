@@ -33,8 +33,24 @@ class MetadataResolver : Mono.Cecil.MetadataResolver
         }
     }
 
-    public override TypeDefinition Resolve(TypeReference type)
+    /// <summary>
+    /// Resolves <paramref name="type"/> to a type definition without throwing
+    /// if the type cannot be resolved.
+    /// </summary>
+    /// <remarks>
+    /// Fundamental types in the <c>System</c> namespace (e.g. <c>System.Object</c>)
+    /// are never resolvable since we don't load <c>mscorlib</c>, so this is
+    /// short-circuited to avoid the cost of the lookup.
+    /// </remarks>
+    public TypeDefinition? TryResolve(TypeReference type)
     {
+        var elementType = type.GetElementType();
+
+        if (elementType.Namespace == "System")
+        {
+            return null;
+        }
+
         var resolvedType = base.Resolve(type);
 
         // If type was in the same assembly, it should be resolved already
@@ -44,11 +60,19 @@ class MetadataResolver : Mono.Cecil.MetadataResolver
         }
 
         // Otherwise look it up in the types we've registered
-        if (registeredTypes.TryGetValue(type.GetElementType().FullName, out var typeDefinition))
+        if (registeredTypes.TryGetValue(elementType.FullName, out var typeDefinition))
         {
             return typeDefinition;
         }
 
-        throw new Exception($"Could not resolve type: {type.FullName}");
+        return null;
+    }
+
+    public override TypeDefinition Resolve(TypeReference type)
+    {
+        // NB: ResolutionException is what Mono.Cecil expects when it resolves
+        // types internally, e.g. when reading custom attribute arguments, so
+        // it can handle the failure gracefully.
+        return TryResolve(type) ?? throw new ResolutionException(type);
     }
 }

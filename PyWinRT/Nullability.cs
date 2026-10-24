@@ -60,7 +60,7 @@ class TypeNullabilityInfo
         Name = type.Name;
         var comparer = new MethodComparer();
 
-        if (type.IsDelegate())
+        if (type.IsDelegate)
         {
             // have to exclude constructor for delegates since that isn't part of the projection
             Methods = [new MethodNullabilityInfo(type.Methods.Single(m => m.Name == "Invoke"))];
@@ -69,7 +69,7 @@ class TypeNullabilityInfo
         {
             Methods =
             [
-                .. type.Methods.Select(m => new MethodNullabilityInfo(m)).OrderBy(m => m, comparer)
+                .. type.Methods.Select(m => new MethodNullabilityInfo(m)).OrderBy(m => m, comparer),
             ];
         }
     }
@@ -80,7 +80,7 @@ class TypeNullabilityInfo
         var comparer = new MethodComparer();
         var oldMethods = old.Methods.ToDictionary(m => m.Signature);
 
-        if (type.IsDelegate())
+        if (type.IsDelegate)
         {
             // have to exclude constructor for delegates since that isn't part of the projection
 
@@ -88,7 +88,7 @@ class TypeNullabilityInfo
 
             Methods =
             [
-                new MethodNullabilityInfo(invokeMethod, oldMethods[invokeMethod.ToString()])
+                new MethodNullabilityInfo(invokeMethod, oldMethods[invokeMethod.ToString()]),
             ];
         }
         else
@@ -105,7 +105,7 @@ class TypeNullabilityInfo
 
                         return new MethodNullabilityInfo(m);
                     })
-                    .OrderBy(m => m, comparer)
+                    .OrderBy(m => m, comparer),
             ];
         }
     }
@@ -148,7 +148,7 @@ class MethodNullabilityInfo
         [
             .. method.Parameters.Select(
                 (p, i) => new ParameterNullabilityInfo(p, old.Parameters[i])
-            )
+            ),
         ];
     }
 
@@ -156,6 +156,12 @@ class MethodNullabilityInfo
     public string Name { get; }
     public ReturnNullabilityInfo Return { get; }
     public IList<ParameterNullabilityInfo> Parameters { get; }
+
+    /// <summary>
+    /// Gets a copy whose return may be null.
+    /// </summary>
+    public MethodNullabilityInfo WithMaybeNullReturn() =>
+        new(Signature, Name, new ReturnNullabilityInfo(Return.Type.WithMaybeNull()), Parameters);
 }
 
 class ReturnNullabilityInfo
@@ -191,10 +197,17 @@ class ParameterNullabilityInfo
     }
 
     [JsonConstructor]
-    public ParameterNullabilityInfo(string name, TypeRefNullabilityInfo type)
+    public ParameterNullabilityInfo(
+        string name,
+        ParameterKind kind,
+        TypeRefNullabilityInfo type,
+        bool fillBuffer = false
+    )
     {
         Name = name;
+        Kind = kind;
         Type = type;
+        FillBuffer = fillBuffer;
     }
 
     public ParameterNullabilityInfo(ParameterDefinition parameter)
@@ -227,6 +240,7 @@ class ParameterNullabilityInfo
     {
         Name = parameter.Name;
         Kind = (ParameterKind)parameter.GetCategory();
+        FillBuffer = old.FillBuffer;
 
         if (parameter.ParameterType is ArrayType array)
         {
@@ -253,6 +267,13 @@ class ParameterNullabilityInfo
 
     public ParameterKind Kind { get; }
     public TypeRefNullabilityInfo Type { get; }
+
+    /// <summary>
+    /// Gets whether WinRT writes into the buffer passed as this <c>IBuffer</c>,
+    /// as it fills a fill array, which the metadata cannot say.
+    /// </summary>
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public bool FillBuffer { get; }
 }
 
 class TypeRefNullabilityInfo
@@ -262,13 +283,15 @@ class TypeRefNullabilityInfo
         string name,
         IList<TypeRefNullabilityInfo>? args = default,
         bool allowNull = false,
-        bool maybeNull = false
+        bool maybeNull = false,
+        string? evidence = default
     )
     {
         Name = name;
         Args = args;
         AllowNull = allowNull;
         MaybeNull = maybeNull;
+        Evidence = evidence;
     }
 
     public TypeRefNullabilityInfo(TypeReference type)
@@ -302,6 +325,7 @@ class TypeRefNullabilityInfo
 
         AllowNull = old.AllowNull;
         MaybeNull = old.MaybeNull;
+        Evidence = old.Evidence;
     }
 
     public string Name { get; }
@@ -314,4 +338,75 @@ class TypeRefNullabilityInfo
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool MaybeNull { get; }
+
+    /// <summary>
+    /// Why <see cref="AllowNull"/> or <see cref="MaybeNull"/> is set: where
+    /// the documentation or a caller shows that null is accepted or returned.
+    /// </summary>
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public string? Evidence { get; }
+
+    /// <summary>
+    /// Gets a copy that may be null.
+    /// </summary>
+    public TypeRefNullabilityInfo WithMaybeNull() =>
+        new(Name, Args, AllowNull, maybeNull: true, Evidence);
+}
+
+/// <summary>
+/// The nullability the projection assumes for a member by rule, on top of what
+/// the curated files say.
+/// </summary>
+/// <remarks>
+/// Nothing is null unless a curated fact or a rule says so. A rule is applied
+/// when the stubs are written rather than written into the files, so that the
+/// files keep meaning curated fact. These rules name an interface member, so
+/// each covers every type that implements the interface, in any projection,
+/// with nothing to add for each one. A rule about a type wherever it appears,
+/// such as <c>IReference&lt;T&gt;</c> being nullable, is in
+/// <see cref="TypeExtensions.ToPyTypeName"/>, which does not know the member.
+/// </remarks>
+static class NullabilityRules
+{
+    /// <summary>
+    /// The interface members whose return may be null, each as the full name of
+    /// the interface that declares it and its WinRT name.
+    /// </summary>
+    /// <remarks>
+    /// An async operation's Completed and Progress handlers read back null
+    /// before one is set, and again once a finished operation has run its
+    /// Completed handler and let go of it, whoever implements the operation.
+    /// </remarks>
+    private static readonly HashSet<string> maybeNullReturns = new(StringComparer.Ordinal)
+    {
+        "Windows.Foundation.IAsyncAction.get_Completed",
+        "Windows.Foundation.IAsyncActionWithProgress`1.get_Completed",
+        "Windows.Foundation.IAsyncActionWithProgress`1.get_Progress",
+        "Windows.Foundation.IAsyncOperation`1.get_Completed",
+        "Windows.Foundation.IAsyncOperationWithProgress`2.get_Completed",
+        "Windows.Foundation.IAsyncOperationWithProgress`2.get_Progress",
+    };
+
+    /// <summary>
+    /// Gets the nullability of <paramref name="method"/>: what
+    /// <paramref name="nullabilityMap"/> says, or the default, with the rules
+    /// applied.
+    /// </summary>
+    public static MethodNullabilityInfo GetNullability(
+        this ProjectedMethod method,
+        IReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap
+    )
+    {
+        var info = nullabilityMap.GetValueOrDefault(
+            method.Signature,
+            new MethodNullabilityInfo(method.Method)
+        );
+
+        if (method.InterfaceMembers.Any(maybeNullReturns.Contains))
+        {
+            return info.WithMaybeNullReturn();
+        }
+
+        return info;
+    }
 }

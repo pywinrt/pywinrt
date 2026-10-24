@@ -4,54 +4,194 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
+      - next
     paths:
       - .github/workflows/test.yaml
+      - CMakeLists.txt
+      - cmake/**
+      - requirements.txt
+      - .config/_tools.json
+      - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
+      # the version scheme, whose tests are part of the suite
+      - scripts/versions.py
+      # the wheel contents check, whose tests are part of the suite
+      - scripts/check-wheel-contents.py
+      # the migration script, whose tests are part of the suite
+      - scripts/3to4/**
+      - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
-      - '!projection/**/setup.py'
+      # except a namespace's table, which is what the tests read, and a
+      # package's pyproject.toml, which the packaging tests read
+      - projection/**/_table.pywinrt.txt
+      - projection/*/*/pyproject.toml
       - projection/CMakeLists.txt
+      - interop/**
+      - '!interop/**/*.md'
+      - '!interop/**/*.toml'
+      - '!interop/**/*.txt'
+      - '!interop/**/setup.py'
+      # except a package's pyproject.toml, which the packaging tests read, and
+      # its version.txt, which the version tests read
+      - interop/*/pyproject.toml
+      - interop/*/version.txt
+      - interop/CMakeLists.txt
+      - runtime/**
+      - '!runtime/**/*.md'
+      - '!runtime/**/*.toml'
+      - '!runtime/**/*.txt'
+      - runtime/CMakeLists.txt
+      # except the version the runtime is published with, which the
+      # version tests read, and its pyproject.toml, which the migration
+      # script's tests read
+      - runtime/version.txt
+      - runtime/pyproject.toml
+      - table/**
+      - '!table/**/*.md'
+      - '!table/**/*.toml'
+      - '!table/winrt/table/build_hooks.py'
+      # the changelogs, and the packaging files whose Changelog link the
+      # packaging tests check, which the patterns above leave out
+      - CHANGELOG.md
+      - runtime/CHANGELOG.md
+      - table/CHANGELOG.md
+      - table/pyproject.toml
+      - interop/*/CHANGELOG.md
+      - projection/*/CHANGELOG.md
+      - redist/*/pyproject.toml
+      - test/**
+  pull_request:
+    paths:
+      - .github/workflows/test.yaml
+      - CMakeLists.txt
+      - cmake/**
+      - requirements.txt
+      - .config/_tools.json
+      - scripts/fetch-tools.ps1
+      # what fetch-tools.ps1 runs to fetch the App SDK
+      - scripts/app_sdk.py
+      - scripts/nuget.py
+      # the version scheme, whose tests are part of the suite
+      - scripts/versions.py
+      # the wheel contents check, whose tests are part of the suite
+      - scripts/check-wheel-contents.py
+      # the migration script, whose tests are part of the suite
+      - scripts/3to4/**
+      - scripts/tests/**
+      - projection/**
+      - '!projection/**/*.md'
+      - '!projection/**/*.toml'
+      - '!projection/**/*.txt'
+      # except a namespace's table, which is what the tests read, and a
+      # package's pyproject.toml, which the packaging tests read
+      - projection/**/_table.pywinrt.txt
+      - projection/*/*/pyproject.toml
+      - projection/CMakeLists.txt
+      - interop/**
+      - '!interop/**/*.md'
+      - '!interop/**/*.toml'
+      - '!interop/**/*.txt'
+      - '!interop/**/setup.py'
+      # except a package's pyproject.toml, which the packaging tests read, and
+      # its version.txt, which the version tests read
+      - interop/*/pyproject.toml
+      - interop/*/version.txt
+      - interop/CMakeLists.txt
+      - runtime/**
+      - '!runtime/**/*.md'
+      - '!runtime/**/*.toml'
+      - '!runtime/**/*.txt'
+      - runtime/CMakeLists.txt
+      # except the version the runtime is published with, which the
+      # version tests read, and its pyproject.toml, which the migration
+      # script's tests read
+      - runtime/version.txt
+      - runtime/pyproject.toml
+      - table/**
+      - '!table/**/*.md'
+      - '!table/**/*.toml'
+      - '!table/winrt/table/build_hooks.py'
+      # the changelogs, and the packaging files whose Changelog link the
+      # packaging tests check, which the patterns above leave out
+      - CHANGELOG.md
+      - runtime/CHANGELOG.md
+      - table/CHANGELOG.md
+      - table/pyproject.toml
+      - interop/*/CHANGELOG.md
+      - projection/*/CHANGELOG.md
+      - redist/*/pyproject.toml
       - test/**
 
 jobs:
   msvc:
-    runs-on: windows-2022
+    runs-on: ${{ matrix.runs-on }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.9', '3.10', "3.11", "3.12", "3.13"]
-        architecture: ['x86', 'x64']
-        release-type: ['Release'] # no "Debug" - https://github.com/actions/setup-python/issues/86
+        python-version: ["3.11", "3.12", "3.13", "3.14", "3.15"]
+        architecture: ['x86', 'x64', 'arm64']
         include:
           - architecture: 'x86'
             vs-arch: 'Win32'
+            runs-on: windows-2025-vs2026
           - architecture: 'x64'
             vs-arch: 'x64'
-    name: Python ${{ matrix.python-version }} ${{ matrix.architecture }} ${{ matrix.release-type }}
+            runs-on: windows-2025-vs2026
+          - architecture: 'arm64'
+            vs-arch: 'ARM64'
+            runs-on: windows-11-vs2026-arm
+          # The free-threaded build, where a bug in releasing the GIL would
+          # show. FindPython takes the GIL-enabled library of the same
+          # install unless told to look for the free-threaded one.
+          - python-version: '3.14t'
+            architecture: 'x64'
+            vs-arch: 'x64'
+            runs-on: windows-2025-vs2026
+            cmake-args: '-DPython3_FIND_ABI="ANY;ANY;ANY;ON"'
+    name: Python ${{ matrix.python-version }} ${{ matrix.architecture }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        id: python
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
           architecture: ${{ matrix.architecture }}
-      - run: python -m pip install -r requirements.txt
+      - run: ${{ steps.python.outputs.python-path }} -m pip install -r requirements.txt
+      # XAML islands refuse to start unless the application manifest declares
+      # maxversiontested, and the manifest in the interpreter that setup-python
+      # installs does not. Without this, test_xaml_host skips.
+      - name: declare maxversiontested in the interpreter's manifest
+        run: ./scripts/fix_python_manifest_for_xaml_islands.ps1 "${{ steps.python.outputs.python-path }}"
       - name: install nuget packages
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -A ${{ matrix.vs-arch }}
+        run: cmake -S . -B _build/projection -A ${{ matrix.vs-arch }} -DPython3_EXECUTABLE="${{ steps.python.outputs.python-path }}" ${{ matrix.cmake-args }}
+      # Release only: a Debug build needs a debug interpreter, which
+      # setup-python does not install
+      # (https://github.com/actions/setup-python/issues/86).
       - name: build
-        run: cmake --build _build/projection --config ${{ matrix.release-type }} --parallel --verbose
+        run: cmake --build _build/projection --config Release --parallel --verbose
       - name: install
         run: cmake --install _build/projection --prefix _install/projection
+      # Not UTC, so the tests can tell local time from UTC; a half-hour offset
+      # with no daylight saving time is the same all year.
+      - name: set a time zone other than UTC
+        run: tzutil /s "India Standard Time"
       - name: test
         env:
           PYTHONPATH: _install/projection
-        run: python -X dev -m unittest -v
+        run: ${{ steps.python.outputs.python-path }} -X dev -m unittest -v
   mingw:
-    runs-on: windows-2022
+    runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix:
@@ -64,8 +204,8 @@ jobs:
       run:
         shell: msys2 {0}
     steps:
-      - uses: actions/checkout@v4
-      - uses: msys2/setup-msys2@v2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884 # v2.32.0
         with:
           msystem: ${{matrix.sys}}
           update: true
@@ -73,49 +213,23 @@ jobs:
             cc:p
             cmake:p
             python:p
+            python-packaging:p
             python-typing_extensions:p
       - name: install nuget packages
         shell: pwsh
-        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noWindowsSDK -noMicrosoftUiXaml
+        run: ./scripts/fetch-tools.ps1 -noMicrosoftUiXaml
       - name: configure
-        run: ${MINGW_PREFIX}/bin/cmake -S projection -B _build/projection -DPYWINRT_FULL_PROJECTION=OFF -DPython3_ROOT_DIR=${MINGW_PREFIX}
+        run: ${MINGW_PREFIX}/bin/cmake -S . -B _build/projection -DPython3_ROOT_DIR=${MINGW_PREFIX}
       - name: build
         run: ${MINGW_PREFIX}/bin/cmake --build _build/projection --verbose
       - name: install
         run: ${MINGW_PREFIX}/bin/cmake --install _build/projection --prefix _install/projection
+      # Not UTC, so the tests can tell local time from UTC; a half-hour offset
+      # with no daylight saving time is the same all year.
+      - name: set a time zone other than UTC
+        shell: pwsh
+        run: tzutil /s "India Standard Time"
       - name: test
         env:
           PYTHONPATH: _install/projection
         run: ${MINGW_PREFIX}/bin/python -X dev -m unittest -v
-  lint:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: merge packages
-        run: |
-          mkdir _install/lint -Force
-          Get-ChildItem -Path projection/*/* -Directory -Recurse | Where-Object Name -IN "winrt", "webview2", "winui2", "winui3", "test_winrt" | ForEach-Object { Copy-Item -Path $_.FullName -Filter "*.py*" -Destination _install/lint/ -Recurse -Force  }
-      - name: Run mypy on winrt
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winrt
-      - name: Run mypy on winui2
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winui2
-      - name: Run mypy on winui3
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p winui3
-      - name: Run mypy on webview2
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p webview2
-      - name: Run mypy on test-winrt
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p test_winrt
-      - name: Run mypy on tests
-        env:
-          MYPYPATH: _install/lint
-        run: pipx run mypy -p test

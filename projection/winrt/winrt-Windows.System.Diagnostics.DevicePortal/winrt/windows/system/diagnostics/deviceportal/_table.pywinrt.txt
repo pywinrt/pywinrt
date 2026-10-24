@@ -1,0 +1,241 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.System.Diagnostics.DevicePortal
+
+class Windows.System.Diagnostics.DevicePortal.DevicePortalConnection python_type
+    py DevicePortalConnection
+    signature rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnection;{0f447f51-1198-4da1-8d54-bdef393e09b6})
+    default Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection
+    requires Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection
+    requires Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection
+    factory Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics
+    event closed
+        add add_Closed slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Closed slot=7 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event request_received
+        add add_RequestReceived slot=8 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_RequestReceived slot=9 inputs=1 outputs=0 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_for_app_service_connection static
+        method GetForAppServiceConnection slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics shape=51 static
+            in class type=Windows.ApplicationModel.AppService.AppServiceConnection name=appServiceConnection
+            out class type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnection return
+    method get_server_message_web_socket_for_request
+        method GetServerMessageWebSocketForRequest slot=6 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection shape=51
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out class type=Windows.Networking.Sockets.ServerMessageWebSocket return
+        method GetServerMessageWebSocketForRequest slot=7 inputs=3 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection shape=195
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            in enum32 type=Windows.Networking.Sockets.SocketMessageType name=messageType
+            in string name=protocol
+            out class type=Windows.Networking.Sockets.ServerMessageWebSocket return
+        method GetServerMessageWebSocketForRequest slot=8 inputs=6 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection shape=278
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            in enum32 type=Windows.Networking.Sockets.SocketMessageType name=messageType
+            in string name=protocol
+            in uint32 name=outboundBufferSizeInBytes
+            in uint32 name=maxMessageSize
+            in enum32 type=Windows.Networking.Sockets.MessageWebSocketReceiveMode name=receiveMode
+            out class type=Windows.Networking.Sockets.ServerMessageWebSocket return
+    method get_server_stream_web_socket_for_request
+        method GetServerStreamWebSocketForRequest slot=9 inputs=1 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection shape=51
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out class type=Windows.Networking.Sockets.ServerStreamWebSocket return
+        method GetServerStreamWebSocketForRequest slot=10 inputs=4 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection shape=239
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            in string name=protocol
+            in uint32 name=outboundBufferSizeInBytes
+            in boolean name=noDelay
+            out class type=Windows.Networking.Sockets.ServerStreamWebSocket return
+
+class Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs python_type
+    py DevicePortalConnectionClosedEventArgs
+    signature rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs;{fcf70e38-7032-428c-9f50-945c15a9f0cb})
+    default Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionClosedEventArgs
+    requires Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionClosedEventArgs
+    property reason
+        get get_Reason slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionClosedEventArgs shape=4
+            out enum32 type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason return
+
+enum Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason python_type
+    py DevicePortalConnectionClosedReason
+    signature enum(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedReason;i4)
+    constant UNKNOWN 0
+    constant RESOURCE_LIMITS_EXCEEDED 1
+    constant PROTOCOL_ERROR 2
+    constant NOT_AUTHORIZED 3
+    constant USER_NOT_PRESENT 4
+    constant SERVICE_TERMINATED 5
+
+class Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs python_type
+    py DevicePortalConnectionRequestReceivedEventArgs
+    signature rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs;{64dae045-6fda-4459-9ebd-ecce22e38559})
+    default Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs
+    requires Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs
+    requires Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs
+    property request_message
+        get get_RequestMessage slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs shape=4
+            out class type=Windows.Web.Http.HttpRequestMessage return
+    property response_message
+        get get_ResponseMessage slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs shape=4
+            out class type=Windows.Web.Http.HttpResponseMessage return
+    property is_web_socket_upgrade_request
+        get get_IsWebSocketUpgradeRequest slot=6 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs shape=4
+            out boolean return
+    property web_socket_protocols_requested
+        get get_WebSocketProtocolsRequested slot=7 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalConnection
+    guid 0f447f51-1198-4da1-8d54-bdef393e09b6
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionClosedEventArgs
+    guid fcf70e38-7032-428c-9f50-945c15a9f0cb
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionRequestReceivedEventArgs
+    guid 64dae045-6fda-4459-9ebd-ecce22e38559
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalConnectionStatics
+    guid 4bbe31e7-e9b9-4645-8fed-a53eea0edbd6
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnection
+    guid 67657920-d65a-42f0-aef4-787808098b7b
+
+interface Windows.System.Diagnostics.DevicePortal.IDevicePortalWebSocketConnectionRequestReceivedEventArgs
+    guid 79fdcaba-175c-4739-9f74-dda797c35b3f
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DevicePortalConnection, DevicePortalConnectionClosedEventArgs]
+    guid 2aad93a8-52fa-54b3-9556-15d651208b3f
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnection;{0f447f51-1198-4da1-8d54-bdef393e09b6});rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs;{fcf70e38-7032-428c-9f50-945c15a9f0cb}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Diagnostics.DevicePortal.DevicePortalConnection
+    argument Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnection name=sender
+            in class type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionClosedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Diagnostics.DevicePortal.DevicePortalConnection,Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DevicePortalConnection, DevicePortalConnectionRequestReceivedEventArgs]
+    guid d8e33ff8-8ac4-5fd9-b184-8ae87d828eb9
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnection;{0f447f51-1198-4da1-8d54-bdef393e09b6});rc(Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs;{64dae045-6fda-4459-9ebd-ecce22e38559}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Diagnostics.DevicePortal.DevicePortalConnection
+    argument Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnection name=sender
+            in class type=Windows.System.Diagnostics.DevicePortal.DevicePortalConnectionRequestReceivedEventArgs name=args
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.AppService.AppServiceConnection external
+    py winrt.windows.applicationmodel.appservice.AppServiceConnection
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+enum Windows.Networking.Sockets.MessageWebSocketReceiveMode external
+    py winrt.windows.networking.sockets.MessageWebSocketReceiveMode
+
+class Windows.Networking.Sockets.ServerMessageWebSocket external
+    py winrt.windows.networking.sockets.ServerMessageWebSocket
+
+class Windows.Networking.Sockets.ServerStreamWebSocket external
+    py winrt.windows.networking.sockets.ServerStreamWebSocket
+
+enum Windows.Networking.Sockets.SocketMessageType external
+    py winrt.windows.networking.sockets.SocketMessageType
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

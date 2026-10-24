@@ -1,0 +1,360 @@
+"""
+The functions the interop packages reach the runtime through.
+
+An interop package's compiled code shares no C ABI with winrt-runtime. It
+takes a WinRT object's interface as an interface pointer capsule from
+``as_interface()``, and a runtime class's activation factory from
+``get_activation_factory()``, hands one back to ``wrap_interface()`` to be made
+into a projected object, and raises what ``hresult_error()`` builds for a failed
+call.
+"""
+
+import ctypes
+import datetime
+import gc
+import importlib.machinery
+import os
+import sys
+import tempfile
+import types
+import unittest
+import uuid
+
+import test_winrt.testcomponent as tc
+import winrt._winrt
+from winrt.runtime import interop
+from winrt.windows.foundation import IStringable, Point, Uri, WwwFormUrlDecoder
+from winrt.windows.foundation.metadata import ApiInformation
+from winrt.windows.foundation.collections import IIterable
+
+IID_IINSPECTABLE = uuid.UUID("AF86E2E0-B12D-4C6A-9C5A-D7AA65101E90")
+IID_IUNKNOWN = uuid.UUID("00000000-0000-0000-C000-000000000046")
+# IStringable, which a Uri implements and a PropertyValue does not
+IID_ISTRINGABLE = uuid.UUID("96369F54-8EB6-48F0-ABCE-C1B211E627C3")
+IID_IACTIVATIONFACTORY = uuid.UUID("00000035-0000-0000-C000-000000000046")
+IID_IURIRUNTIMECLASSFACTORY = uuid.UUID("44A9796F-723E-4FDF-A218-033E75B0C084")
+
+E_FAIL = -2147467259
+E_INVALIDARG = -2147024809
+
+# The capsule keeps a pointer to its name, so the name has to outlive it.
+INTERFACE_CAPSULE_NAME = b"winrt.interface"
+
+
+def is_interface_capsule(obj: object) -> bool:
+    is_valid = ctypes.pythonapi.PyCapsule_IsValid
+    is_valid.argtypes = (ctypes.py_object, ctypes.c_char_p)
+    is_valid.restype = ctypes.c_int
+    return bool(is_valid(obj, INTERFACE_CAPSULE_NAME))
+
+
+class ErrorInfo:
+    """
+    The error info that originating ``hresult`` with ``message`` leaves on this
+    thread, taken the way an interop extension takes it, as an interface
+    pointer capsule that does not release it, so that the test can.
+    """
+
+    def __init__(self, hresult: int, message: str) -> None:
+        combase = ctypes.windll.combase
+
+        hstring = ctypes.c_void_p()
+        if combase.WindowsCreateString(message, len(message), ctypes.byref(hstring)):
+            raise OSError("WindowsCreateString failed")
+
+        try:
+            combase.RoOriginateError(ctypes.c_long(hresult), hstring)
+        finally:
+            combase.WindowsDeleteString(hstring)
+
+        self.abi = ctypes.c_void_p()
+        if ctypes.windll.oleaut32.GetErrorInfo(0, ctypes.byref(self.abi)) != 0:
+            raise OSError("GetErrorInfo found nothing")
+
+        new_capsule = ctypes.pythonapi.PyCapsule_New
+        new_capsule.restype = ctypes.py_object
+        new_capsule.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_void_p]
+        self.capsule = new_capsule(self.abi, INTERFACE_CAPSULE_NAME, None)
+
+    def release(self) -> None:
+        vtable = ctypes.cast(self.abi, ctypes.POINTER(ctypes.POINTER(ctypes.c_void_p)))
+        release = ctypes.WINFUNCTYPE(ctypes.c_ulong, ctypes.c_void_p)(vtable[0][2])
+        release(self.abi)
+
+
+class TestInterfaceCapsule(unittest.TestCase):
+    def test_round_trip(self) -> None:
+        uri = Uri("https://example.com/")
+
+        capsule = interop.as_interface(uri, IID_IINSPECTABLE)
+        wrapped = interop.wrap_interface(capsule, "winrt.windows.foundation.Uri")
+
+        self.assertIsInstance(wrapped, Uri)
+        self.assertEqual(wrapped, uri)
+        self.assertEqual(wrapped.absolute_uri, "https://example.com/")
+
+    def test_capsule_holds_its_own_reference(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IUNKNOWN)
+
+        wrapped = interop.wrap_interface(capsule, "winrt.windows.foundation.Uri")
+        del capsule
+
+        self.assertEqual(wrapped.absolute_uri, "https://example.com/")
+
+    def test_name_built_at_run_time(self) -> None:
+        # A type that nothing else wraps by name, so that the name built here
+        # is the one the runtime first resolves it by.
+        capsule = interop.as_interface(WwwFormUrlDecoder("a=1"), IID_IINSPECTABLE)
+
+        def wrap() -> None:
+            name = "winrt.windows.foundation." + "".join(["Www", "Form", "UrlDecoder"])
+            self.assertIsInstance(
+                interop.wrap_interface(capsule, name), WwwFormUrlDecoder
+            )
+
+        def cached() -> int:
+            # The runtime module's state visits the type once for each name the
+            # cache has it under.
+            return gc.get_referents(winrt._winrt).count(WwwFormUrlDecoder)
+
+        wrap()
+        garbage = [str(i) * 16 for i in range(1000)]
+        entries = cached()
+
+        # A lookup that no longer finds the first name adds a second entry.
+        wrap()
+
+        self.assertEqual(cached(), entries)
+        del garbage
+
+    def test_none(self) -> None:
+        self.assertIsNone(interop.as_interface(None, IID_IINSPECTABLE))
+        self.assertIsNone(interop.wrap_interface(None, "winrt.windows.foundation.Uri"))
+
+    def test_not_a_winrt_object(self) -> None:
+        with self.assertRaisesRegex(TypeError, "expected a WinRT object"):
+            interop.as_interface(object(), IID_IINSPECTABLE)  # type: ignore[call-overload]
+
+    def test_interface_not_implemented(self) -> None:
+        boxed = winrt._winrt.box_int32(1)
+
+        with self.assertRaises(OSError) as cm:
+            interop.as_interface(boxed, IID_ISTRINGABLE)
+
+        self.assertEqual(cm.exception.winerror, -2147467262)  # E_NOINTERFACE
+
+    def test_round_trip_by_class(self) -> None:
+        uri = Uri("https://example.com/")
+
+        capsule = interop.as_interface(uri, Uri)
+        wrapped = interop.wrap_interface(capsule, Uri)
+
+        self.assertIsInstance(wrapped, Uri)
+        self.assertEqual(wrapped, uri)
+
+    def test_round_trip_by_interface(self) -> None:
+        uri = Uri("https://example.com/")
+
+        capsule = interop.as_interface(uri, IStringable)
+        wrapped = interop.wrap_interface(capsule, IStringable)
+
+        self.assertIsInstance(wrapped, IStringable)
+        self.assertEqual(wrapped.to_string(), "https://example.com/")
+
+    def test_interface_class_not_implemented(self) -> None:
+        boxed = winrt._winrt.box_int32(1)
+
+        with self.assertRaises(OSError) as cm:
+            interop.as_interface(boxed, IStringable)
+
+        self.assertEqual(cm.exception.winerror, -2147467262)  # E_NOINTERFACE
+
+    def test_none_by_type(self) -> None:
+        self.assertIsNone(interop.as_interface(None, IStringable))
+        self.assertIsNone(interop.wrap_interface(None, Uri))
+
+    def test_not_a_projected_type(self) -> None:
+        uri = Uri("https://example.com/")
+        capsule = interop.as_interface(uri, IID_IINSPECTABLE)
+
+        # a struct, the metaclass that carries a class's statics, and a type
+        # that is not projected at all
+        for type_ in (Point, type(Uri), int):
+            with self.subTest(type=type_):
+                with self.assertRaisesRegex(TypeError, "not a type a projection"):
+                    interop.as_interface(uri, type_)  # type: ignore[arg-type]
+
+                with self.assertRaisesRegex(TypeError, "not a type a projection"):
+                    interop.wrap_interface(capsule, type_)  # type: ignore[type-var]
+
+    def test_parameterized_interface(self) -> None:
+        uri = Uri("https://example.com/")
+
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            interop.as_interface(uri, IIterable)
+
+    def test_neither_type_nor_name(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+
+        with self.assertRaisesRegex(TypeError, "must be a type or str"):
+            interop.wrap_interface(capsule, 42)  # type: ignore[call-overload]
+
+    def test_namespace_not_installed(self) -> None:
+        # A namespace whose package is missing is still a namespace package
+        # when the package of a namespace below it is installed, as Storage is
+        # once Storage.Streams is.
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+        module = "winrt.windows.pywinrtnotinstalled"
+
+        with tempfile.TemporaryDirectory() as root:
+            os.makedirs(os.path.join(root, *module.split(".")))
+            sys.path.insert(0, root)
+            self.addCleanup(sys.modules.pop, module, None)
+            self.addCleanup(sys.path.remove, root)
+
+            with self.assertRaisesRegex(
+                ModuleNotFoundError, f"^No module named '{module}'$"
+            ) as cm:
+                interop.wrap_interface(capsule, f"{module}.Thing")
+
+        self.assertEqual(cm.exception.name, module)
+
+    def test_module_without_origin(self) -> None:
+        # A module from a custom finder can have no origin, as a namespace
+        # package has, and the type is found in it all the same.
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+        name = "pywinrt_test_without_origin"
+        module = types.ModuleType(name)
+        module.__spec__ = importlib.machinery.ModuleSpec(name, loader=None)
+        module.Thing = type("Thing", (), {})  # type: ignore[attr-defined]
+        sys.modules[name] = module
+        self.addCleanup(sys.modules.pop, name, None)
+
+        with self.assertRaisesRegex(TypeError, "not a type a projection"):
+            interop.wrap_interface(capsule, f"{name}.Thing")
+
+    def test_name_not_in_module(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+
+        with self.assertRaisesRegex(AttributeError, "PywinrtNotDefined"):
+            interop.wrap_interface(
+                capsule, "winrt.windows.foundation.PywinrtNotDefined"
+            )
+
+    def test_wrong_capsule_name(self) -> None:
+        with self.assertRaises(ValueError):
+            interop.wrap_interface(
+                datetime.datetime_CAPI,  # type: ignore[call-overload]
+                "winrt.windows.foundation.Uri",
+            )
+
+
+class TestActivationFactory(unittest.TestCase):
+    def test_factory(self) -> None:
+        capsule = interop.get_activation_factory(Uri, IID_IACTIVATIONFACTORY)
+        self.assertEqual(type(capsule).__name__, "PyCapsule")
+
+        # the interface Uri's constructors are reached through
+        interop.get_activation_factory(Uri, IID_IURIRUNTIMECLASSFACTORY)
+
+    def test_static_class(self) -> None:
+        # A static class has a factory although it has no instances, and so no
+        # default interface.
+        capsule = interop.get_activation_factory(ApiInformation, IID_IACTIVATIONFACTORY)
+
+        self.assertTrue(is_interface_capsule(capsule))
+
+    def test_interface_not_implemented(self) -> None:
+        with self.assertRaises(OSError):
+            interop.get_activation_factory(Uri, IID_ISTRINGABLE)
+
+    def test_a_runtime_class_is_no_iid(self) -> None:
+        # It would stand for its default interface, which no factory implements.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^get_activation_factory\(\) takes an interface or a uuid\.UUID, "
+            r"not the runtime class '.*Uri'$",
+        ):
+            interop.get_activation_factory(Uri, Uri)
+
+    def test_a_subclass_of_a_composable_class_is_no_iid(self) -> None:
+        class Derived(tc.Override):
+            pass
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^get_activation_factory\(\) takes an interface or a uuid\.UUID, "
+            r"not '.*Derived', a subclass of the runtime class '.*Override'$",
+        ):
+            interop.get_activation_factory(tc.Override, Derived)
+
+    def test_not_a_runtime_class(self) -> None:
+        for cls in (IStringable, Point, int):
+            with (
+                self.subTest(cls=cls),
+                self.assertRaisesRegex(TypeError, "is not a runtime class"),
+            ):
+                interop.get_activation_factory(cls, IID_IACTIVATIONFACTORY)  # type: ignore[arg-type]
+
+        with self.assertRaises(TypeError):
+            interop.get_activation_factory(
+                Uri("https://example.com/"),  # type: ignore[arg-type]
+                IID_IACTIVATIONFACTORY,
+            )
+
+
+class TestPublicModule(unittest.TestCase):
+    def test_same_functions(self) -> None:
+        self.assertIs(interop.as_interface, winrt._winrt.as_interface)
+        self.assertIs(
+            interop.get_activation_factory, winrt._winrt.get_activation_factory
+        )
+        self.assertIs(interop.wrap_interface, winrt._winrt.wrap_interface)
+        self.assertIs(interop.hresult_error, winrt._winrt.hresult_error)
+
+
+class TestHresultError(unittest.TestCase):
+    def test_hresult(self) -> None:
+        error = interop.hresult_error(E_INVALIDARG)
+
+        self.assertIs(type(error), OSError)
+        self.assertEqual(error.winerror, E_INVALIDARG)
+        self.assertEqual(error.strerror, "The parameter is incorrect.")
+
+    def test_unsigned_hresult(self) -> None:
+        error = interop.hresult_error(0x80070057)
+
+        self.assertEqual(error.winerror, E_INVALIDARG)
+
+    def test_not_a_failure(self) -> None:
+        with self.assertRaises(ValueError):
+            interop.hresult_error(0)
+
+        with self.assertRaises(OverflowError):
+            interop.hresult_error(1 << 32)
+
+    def test_error_info(self) -> None:
+        info = ErrorInfo(E_FAIL, "the details")
+        try:
+            error = interop.hresult_error(E_FAIL, info.capsule)
+        finally:
+            info.release()
+
+        self.assertEqual(error.winerror, E_FAIL)
+        self.assertEqual(error.strerror, "the details")
+
+    def test_error_info_about_another_hresult(self) -> None:
+        info = ErrorInfo(E_FAIL, "the details")
+        try:
+            error = interop.hresult_error(E_INVALIDARG, info.capsule)
+        finally:
+            info.release()
+
+        self.assertEqual(error.winerror, E_INVALIDARG)
+        self.assertEqual(error.strerror, "The parameter is incorrect.")
+
+    def test_not_error_info(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
+
+        with self.assertRaises(TypeError):
+            interop.hresult_error(E_FAIL, capsule)

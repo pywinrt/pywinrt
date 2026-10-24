@@ -1,0 +1,363 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Gaming.Input.Preview
+
+enum Windows.Gaming.Input.Preview.DeviceCommand python_type
+    py DeviceCommand
+    signature enum(Windows.Gaming.Input.Preview.DeviceCommand;i4)
+    constant RESET 0
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryChargingState python_type
+    py GameControllerBatteryChargingState
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryChargingState;i4)
+    constant UNKNOWN 0
+    constant INACTIVE 1
+    constant ACTIVE 2
+    constant ERROR 3
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryKind python_type
+    py GameControllerBatteryKind
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryKind;i4)
+    constant UNKNOWN 0
+    constant NONE 1
+    constant STANDARD 2
+    constant RECHARGEABLE 3
+
+enum Windows.Gaming.Input.Preview.GameControllerBatteryLevel python_type
+    py GameControllerBatteryLevel
+    signature enum(Windows.Gaming.Input.Preview.GameControllerBatteryLevel;i4)
+    constant UNKNOWN 0
+    constant CRITICAL 1
+    constant LOW 2
+    constant MEDIUM 3
+    constant FULL 4
+
+enum Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason python_type
+    py GameControllerFirmwareCorruptReason
+    signature enum(Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason;i4)
+    constant UNKNOWN 0
+    constant NOT_CORRUPT 1
+    constant TWO_UP_CORRUPT 2
+    constant APP_CORRUPT 3
+    constant RADIO_CORRUPT 4
+    constant EEPROM_CORRUPT 5
+    constant SAFE_TO_UPDATE 6
+
+class Windows.Gaming.Input.Preview.GameControllerProviderInfo static python_type
+    py GameControllerProviderInfo
+    factory Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
+    method get_parent_provider_id static
+        method GetParentProviderId slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics shape=51 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out string return
+    method get_provider_id static
+        method GetProviderId slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics shape=51 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out string return
+
+struct Windows.Gaming.Input.Preview.HeadsetGeqGains python_type
+    py HeadsetGeqGains
+    signature struct(Windows.Gaming.Input.Preview.HeadsetGeqGains;i4;i4;i4;i4;i4)
+    field band1_gain band1Gain int32
+    field band2_gain band2Gain int32
+    field band3_gain band3Gain int32
+    field band4_gain band4Gain int32
+    field band5_gain band5Gain int32
+
+enum Windows.Gaming.Input.Preview.HeadsetLevel python_type
+    py HeadsetLevel
+    signature enum(Windows.Gaming.Input.Preview.HeadsetLevel;i4)
+    constant OFF 0
+    constant LOW 1
+    constant MEDIUM 2
+    constant HIGH 3
+
+enum Windows.Gaming.Input.Preview.HeadsetOperation python_type
+    py HeadsetOperation
+    signature enum(Windows.Gaming.Input.Preview.HeadsetOperation;i4)
+    constant GEQ 0
+    constant BASS_BOOST_GAIN 1
+    constant SMART_MUTE 2
+    constant SIDE_TONE 3
+    constant MUTE_LED_BRIGHTNESS 4
+    constant SWAP_MIX_AND_VOLUME_DIALS 5
+
+interface Windows.Gaming.Input.Preview.IGameControllerProviderInfoStatics
+    guid 0be1e6c5-d9bd-44ee-8362-488b2e464bfb
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[RemappingButtonCategory, Object]]
+    guid da1c35a5-5993-56ce-9d1d-4f1e22433034
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[RemappingButtonCategory, Object]]
+    guid 2f396834-b86a-5cd3-9e25-92d36931f0e2
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable)))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[RemappingButtonCategory, Object]
+    guid bfb7672c-b8eb-5a83-bb57-c37ebcc053e6
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable))
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Gaming.Input.Preview.RemappingButtonCategory
+    argument System.Object
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=22 role=pair_key
+            out enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=43 role=pair_value
+            out object return
+
+interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    guid 2da3ed52-ffd9-43e2-825c-1d2790e04d14
+
+interface Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics
+    guid d40dda17-b1f4-499a-874c-7095aac15291
+
+interface Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[RemappingButtonCategory, Object]
+    guid a73dd129-3e15-5afc-ba2b-18ecabbdb6fb
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4);cinterface(IInspectable))
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>>
+    argument Windows.Gaming.Input.Preview.RemappingButtonCategory
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=65 role=has_key
+            in enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=24 role=lookup
+            in enum32 type=Windows.Gaming.Input.Preview.RemappingButtonCategory name=key
+            out object return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=second
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider python_type
+    py LegacyGipGameControllerProvider
+    signature rc(Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider;{2da3ed52-ffd9-43e2-825c-1d2790e04d14})
+    default Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    requires Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider
+    factory Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics
+    property app_compat_version
+        get get_AppCompatVersion slot=19 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out uint32 return
+    property battery_charging_state
+        get get_BatteryChargingState slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryChargingState return
+    property battery_kind
+        get get_BatteryKind slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryKind return
+    property battery_level
+        get get_BatteryLevel slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerBatteryLevel return
+    property is_firmware_corrupted
+        get get_IsFirmwareCorrupted slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out boolean return
+    property is_synthetic_device
+        get get_IsSyntheticDevice slot=12 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out boolean return
+    property preferred_types
+        get get_PreferredTypes slot=13 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method clear_pairing static
+        method ClearPairing slot=9 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+    method execute_command
+        method ExecuteCommand slot=14 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            in enum32 type=Windows.Gaming.Input.Preview.DeviceCommand name=command
+    method from_game_controller static
+        method FromGameController slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 static
+            in interface type=Windows.Gaming.Input.IGameController name=controller
+            out class type=Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider return
+    method from_game_controller_provider static
+        method FromGameControllerProvider slot=7 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=51 static
+            in interface type=Windows.Gaming.Input.Custom.IGameControllerProvider name=provider
+            out class type=Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider return
+    method get_device_firmware_corruption_state
+        method GetDeviceFirmwareCorruptionState slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            out enum32 type=Windows.Gaming.Input.Preview.GameControllerFirmwareCorruptReason return
+    method get_extended_device_info
+        method GetExtendedDeviceInfo slot=16 inputs=0 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=51
+            receive_array uint8 return
+    method get_headset_operation
+        method GetHeadsetOperation slot=18 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in enum32 type=Windows.Gaming.Input.Preview.HeadsetOperation name=operation
+            receive_array uint8 return
+    method get_standard_controller_button_remapping
+        method GetStandardControllerButtonRemapping slot=21 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in class type=Windows.System.User name=user
+            in boolean name=previous
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> return
+    method is_copilot static
+        method IsCopilot slot=11 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+            out string return
+    method is_interface_supported
+        method IsInterfaceSupported slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=94
+            in guid name=interfaceId
+            out boolean return
+    method is_pilot static
+        method IsPilot slot=10 inputs=2 outputs=1 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 static
+            in class type=Windows.System.User name=user
+            in string name=controllerProviderId
+            out string return
+    method pair_pilot_to_copilot static
+        method PairPilotToCopilot slot=8 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProviderStatics shape=117 static
+            in class type=Windows.System.User name=user
+            in string name=pilotControllerProviderId
+            in string name=copilotControllerProviderId
+    method set_headset_operation
+        method SetHeadsetOperation slot=17 inputs=2 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in enum32 type=Windows.Gaming.Input.Preview.HeadsetOperation name=operation
+            pass_array uint8 name=buffer
+    method set_home_led_intensity
+        method SetHomeLedIntensity slot=15 inputs=1 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=4
+            in uint8 name=intensity
+    method set_standard_controller_button_remapping
+        method SetStandardControllerButtonRemapping slot=20 inputs=3 outputs=0 declaring=Windows.Gaming.Input.Preview.ILegacyGipGameControllerProvider shape=117
+            in class type=Windows.System.User name=user
+            in boolean name=previous
+            in parameterized type=Windows.Foundation.Collections.IMapView<Windows.Gaming.Input.Preview.RemappingButtonCategory,System.Object> name=remapping
+
+enum Windows.Gaming.Input.Preview.RemappingButtonCategory python_type
+    py RemappingButtonCategory
+    signature enum(Windows.Gaming.Input.Preview.RemappingButtonCategory;i4)
+    constant BUTTON_SETTINGS 0
+    constant ANALOG_SETTINGS 1
+    constant VIBRATION_SETTINGS 2
+    constant SHARE_SHORT_PRESS 3
+    constant SHARE_SHORT_PRESS_META_DATA 4
+    constant SHARE_SHORT_PRESS_META_DATA_DISPLAY 5
+    constant SHARE_LONG_PRESS 6
+    constant SHARE_LONG_PRESS_META_DATA 7
+    constant SHARE_LONG_PRESS_META_DATA_DISPLAY 8
+    constant SHARE_DOUBLE_PRESS 9
+    constant SHARE_DOUBLE_PRESS_META_DATA 10
+    constant SHARE_DOUBLE_PRESS_META_DATA_DISPLAY 11
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+interface Windows.Gaming.Input.IGameController external
+    py winrt.windows.gaming.input._IGameController
+    guid 1baf6522-5f64-42c5-8267-b9fe2215bfbd
+
+interface Windows.Gaming.Input.Custom.IGameControllerProvider external
+    py winrt.windows.gaming.input.custom._IGameControllerProvider
+    guid e6d73982-2996-4559-b16c-3e57d46e58d6
+
+class Windows.System.User external
+    py winrt.windows.system.User

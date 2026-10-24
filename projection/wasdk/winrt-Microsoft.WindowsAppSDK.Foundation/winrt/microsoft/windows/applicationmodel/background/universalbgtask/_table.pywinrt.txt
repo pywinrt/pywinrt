@@ -1,0 +1,27 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.ApplicationModel.Background.UniversalBGTask
+
+interface Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
+    guid 89cf5f73-8195-590b-8158-bc7d2816ce16
+
+class Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task activatable python_type
+    py Task
+    signature rc(Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.Task;{89cf5f73-8195-590b-8158-bc7d2816ce16})
+    default Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
+    requires Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.ITask
+    requires Windows.ApplicationModel.Background.IBackgroundTask
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method run
+        method Run slot=6 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBackgroundTask shape=4 reverse=22
+            in interface type=Windows.ApplicationModel.Background.IBackgroundTaskInstance name=taskInstance
+
+interface Windows.ApplicationModel.Background.IBackgroundTask external
+    py winrt.windows.applicationmodel.background._IBackgroundTask
+    guid 7d13d534-fd12-43ce-8c22-ea1ff13c06df
+
+interface Windows.ApplicationModel.Background.IBackgroundTaskInstance external
+    py winrt.windows.applicationmodel.background._IBackgroundTaskInstance
+    guid 865bda7a-21d8-4573-8f32-928a1b0641f6

@@ -1,0 +1,350 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.ApplicationModel.Contacts.Provider
+
+enum Windows.ApplicationModel.Contacts.Provider.AddContactResult python_type
+    py AddContactResult
+    signature enum(Windows.ApplicationModel.Contacts.Provider.AddContactResult;i4)
+    constant ADDED 0
+    constant ALREADY_ADDED 1
+    constant UNAVAILABLE 2
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Contact]
+    guid a1d09bee-c181-5419-bd14-8223b95f29a1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.ApplicationModel.Contacts.Contact
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.ApplicationModel.Contacts.Provider.ContactPickerUI python_type
+    py ContactPickerUI
+    signature rc(Windows.ApplicationModel.Contacts.Provider.ContactPickerUI;{e2cc1366-cf66-43c4-a96a-a5a112db4746})
+    default Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    requires Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
+    property desired_fields
+        get get_DesiredFields slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    property selection_mode
+        get get_SelectionMode slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactSelectionMode return
+    property desired_fields_with_contact_field_type
+        get get_DesiredFieldsWithContactFieldType slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    event contact_removed
+        add add_ContactRemoved slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ContactRemoved slot=12 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method add_contact
+        method AddContact slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2 shape=51
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
+        method AddContact slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=117 deprecated
+            in string name=id
+            in class type=Windows.ApplicationModel.Contacts.Contact name=contact
+            out enum32 type=Windows.ApplicationModel.Contacts.Provider.AddContactResult return
+    method contains_contact
+        method ContainsContact slot=8 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=51
+            in string name=id
+            out boolean return
+    method remove_contact
+        method RemoveContact slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Contacts.Provider.IContactPickerUI shape=4
+            in string name=id
+
+class Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs python_type
+    py ContactRemovedEventArgs
+    signature rc(Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs;{6f354338-3302-4d13-ad8d-adcc0ff9e47c})
+    default Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    requires Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs shape=4
+            out string return
+
+interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Contact]
+    guid 857db963-f62c-53c4-a3a0-f6bf0c8fd3d3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.ApplicationModel.Contacts.Contact;{ec0072f3-2118-4049-9ebc-17f0ab692b64}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.ApplicationModel.Contacts.Contact
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.Contacts.Contact> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> shape=4 reverse=62 role=get_results
+            out class type=Windows.ApplicationModel.Contacts.Contact return
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI
+    guid e2cc1366-cf66-43c4-a96a-a5a112db4746
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactPickerUI2
+    guid 6e449e28-7b25-4999-9b0b-875400a1e8c8
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactProvider python_type
+    py _IContactProvider
+    guid c44bb54b-732f-5004-8cd7-65d90cf25f42
+    signature {c44bb54b-732f-5004-8cd7-65d90cf25f42}
+    property contact_list_id
+        get get_ContactListId slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactProvider shape=4 reverse=43
+            out string return
+    method get_contact_from_remote_id_async
+        method GetContactFromRemoteIdAsync slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Contacts.Provider.IContactProvider shape=51 reverse=24
+            in string name=contactRemoteId
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.Contacts.Contact> return
+
+interface Windows.ApplicationModel.Contacts.Provider.IContactRemovedEventArgs
+    guid 6f354338-3302-4d13-ad8d-adcc0ff9e47c
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ContactFieldType]
+    guid 384b8b1b-ce8e-5781-b3dc-0776d684f658
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ContactFieldType]
+    guid 2f6d856a-50d4-5173-abea-db6c6b8fc530
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=22 role=current
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ContactFieldType]
+    guid 6fdc2115-1649-54a4-8faa-3049cefb05a4
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType>
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=173 role=append
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=101 role=index_of
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=211 role=replace_all
+            pass_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ContactFieldType]
+    guid 39d6abda-a00a-5777-8611-82d7c326c18d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.ApplicationModel.Contacts.ContactFieldType;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType>
+    argument Windows.ApplicationModel.Contacts.ContactFieldType
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Contacts.ContactFieldType> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Contacts.ContactFieldType> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Contacts.ContactFieldType> shape=117 reverse=66 role=index_of
+            in enum32 type=Windows.ApplicationModel.Contacts.ContactFieldType name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.Contacts.Provider.ContactPickerUI,Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ContactPickerUI, ContactRemovedEventArgs]
+    guid a39aeb7e-765c-5e83-b231-84bead98e9a0
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Contacts.Provider.ContactPickerUI;{e2cc1366-cf66-43c4-a96a-a5a112db4746});rc(Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs;{6f354338-3302-4d13-ad8d-adcc0ff9e47c}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.ApplicationModel.Contacts.Provider.ContactPickerUI
+    argument Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.ApplicationModel.Contacts.Provider.ContactPickerUI name=sender
+            in class type=Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs name=args
+
+class System.String external
+    py winrt.system.String
+
+class Windows.ApplicationModel.Contacts.Contact external
+    py winrt.windows.applicationmodel.contacts.Contact
+
+enum Windows.ApplicationModel.Contacts.ContactFieldType external
+    py winrt.windows.applicationmodel.contacts.ContactFieldType
+
+enum Windows.ApplicationModel.Contacts.ContactSelectionMode external
+    py winrt.windows.applicationmodel.contacts.ContactSelectionMode
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

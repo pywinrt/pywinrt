@@ -2,6 +2,16 @@
 
 # winrt-Windows.UI.Input.Inking
 
-Windows Runtime (WinRT) APIs for for the `Windows.UI.Input.Inking` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.UI.Input.Inking` namespace.
 
 This package provides the `winrt.windows.ui.input.inking` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.UI.Input.Inking
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

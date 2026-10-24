@@ -1,7 +1,8 @@
+import asyncio
 import struct
 import unittest
 import uuid
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, UTC
 
 import winrt.windows.storage.streams as wss
 
@@ -9,7 +10,7 @@ from ._util import async_test
 
 
 class TestWindowsStorageStreams(unittest.TestCase):
-    def test_DataReader(self):
+    def test_DataReader(self) -> None:
         bool_value = True
         buffer_value = b"\x02\x04\x05"
         byte_value = 6
@@ -95,7 +96,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 self.assertEqual(read_bytes, bytes_value)
                 self.assertEqual(
                     reader.read_date_time(),
-                    datetime(1601, 1, 2, 3, 4, 5, 6007, timezone.utc),
+                    datetime(1601, 1, 2, 3, 4, 5, 6007, UTC),
                 )
                 self.assertEqual(reader.read_double(), double_value)
                 self.assertEqual(reader.read_guid(), guid_value)
@@ -112,12 +113,12 @@ class TestWindowsStorageStreams(unittest.TestCase):
                 self.assertEqual(reader.read_uint32(), uint32_value)
                 self.assertEqual(reader.read_uint64(), uint64_value)
 
-    def test_DataWriter(self):
+    def test_DataWriter(self) -> None:
         bool_value = True
         buffer_value = b"\x02\x04\x05"
         byte_value = 6
         bytes_value = b"\x07\x08\x09"
-        date_time_value = datetime(1601, 1, 2, 3, 4, 5, 6007, timezone.utc)
+        date_time_value = datetime(1601, 1, 2, 3, 4, 5, 6007, UTC)
         double_value = 10.0
         guid_value = uuid.UUID("00112233-4455-6677-8899-AABBCCDDEEFF")
         int16_value = 11
@@ -207,7 +208,7 @@ class TestWindowsStorageStreams(unittest.TestCase):
                     self.assertEqual(actual, expected)
 
     @async_test
-    async def test_async(self):
+    async def test_async(self) -> None:
         """
         Regression test for https://github.com/pywinrt/python-winsdk/issues/21
         """
@@ -223,3 +224,23 @@ class TestWindowsStorageStreams(unittest.TestCase):
         reader = wss.DataReader(stream)
         num = await reader.load_async(10)
         self.assertEqual(num, 10)
+
+    @async_test
+    async def test_async_operation_classes(self) -> None:
+        # DataWriterStoreOperation and DataReaderLoadOperation are runtime
+        # classes rather than async interfaces, and are built as classes, so
+        # they are checked as awaitables of their own.
+        stream = wss.InMemoryRandomAccessStream()
+        writer = wss.DataWriter(stream)
+        writer.write_bytes(b"X" * 10)
+
+        store = writer.store_async()
+
+        self.assertIsInstance(store, wss.DataWriterStoreOperation)
+        self.assertEqual(await store, 10)
+
+        stream.seek(0)
+        load = wss.DataReader(stream).load_async(10)
+
+        self.assertIsInstance(load, wss.DataReaderLoadOperation)
+        self.assertEqual(await asyncio.gather(load), [10])

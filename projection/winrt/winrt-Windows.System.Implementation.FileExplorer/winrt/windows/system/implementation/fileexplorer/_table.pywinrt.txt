@@ -1,0 +1,140 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.System.Implementation.FileExplorer
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.Http.HttpResponseMessage> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[HttpResponseMessage]
+    guid cfe26c2b-ec28-5d16-b2b7-67fba5666944
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Web.Http.HttpResponseMessage
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[HttpResponseMessage]
+    guid c3fdb0bb-ef3e-57d5-8135-fb9d30e48543
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Web.Http.HttpResponseMessage
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.Http.HttpResponseMessage> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Web.Http.HttpResponseMessage> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> shape=4 reverse=62 role=get_results
+            out class type=Windows.Web.Http.HttpResponseMessage return
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    guid e132d1b9-7b9d-5820-9728-4262b5289142
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory
+    guid de1a780e-e975-5f68-bcc6-fb46281c6a61
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource python_type
+    py _ISysStorageProviderEventSource
+    guid 1f36c476-9546-536a-8381-2f9a2c08cedd
+    signature {1f36c476-9546-536a-8381-2f9a2c08cedd}
+    event event_received
+        add add_EventReceived slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource shape=51 reverse=24
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_EventReceived slot=7 inputs=1 outputs=0 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource shape=26 reverse=53
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory python_type
+    py _ISysStorageProviderHandlerFactory
+    guid ee798431-8213-5e89-a623-14d8c72b8a61
+    signature {ee798431-8213-5e89-a623-14d8c72b8a61}
+    method get_event_source
+        method GetEventSource slot=7 inputs=2 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory shape=117 reverse=45
+            in string name=syncRootId
+            in string name=eventName
+            out interface type=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource return
+    method get_http_request_provider
+        method GetHttpRequestProvider slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHandlerFactory shape=51 reverse=24
+            in string name=syncRootId
+            out interface type=Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider return
+
+interface Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider python_type
+    py _ISysStorageProviderHttpRequestProvider
+    guid cb6fefb6-e76a-5c25-a33e-3e78a6e0e0ce
+    signature {cb6fefb6-e76a-5c25-a33e-3e78a6e0e0ce}
+    method send_request_async
+        method SendRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderHttpRequestProvider shape=51 reverse=24
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Web.Http.HttpResponseMessage> return
+
+class Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs python_type
+    py SysStorageProviderEventReceivedEventArgs
+    signature rc(Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs;{e132d1b9-7b9d-5820-9728-4262b5289142})
+    default Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    requires Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs
+    factory Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgsFactory shape=51
+            in string name=json
+            out class type=Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs return
+    property json
+        get get_Json slot=6 inputs=0 outputs=1 declaring=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventReceivedEventArgs shape=4
+            out string return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource,Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs]
+    guid da34b79f-979c-5e94-82fb-d6c964e97ef6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};{1f36c476-9546-536a-8381-2f9a2c08cedd};rc(Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs;{e132d1b9-7b9d-5820-9728-4262b5289142}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource
+    argument Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in interface type=Windows.System.Implementation.FileExplorer.ISysStorageProviderEventSource name=sender
+            in class type=Windows.System.Implementation.FileExplorer.SysStorageProviderEventReceivedEventArgs name=args
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage

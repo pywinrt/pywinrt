@@ -1,0 +1,119 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Devices.Pwm.Provider
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Pwm.Provider.IPwmControllerProvider> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IPwmControllerProvider]
+    guid 4936ed59-b494-5128-bc7e-03e630346475
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};{1300593b-e2e3-40a4-b7d9-48dff0377a52})
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Pwm.Provider.IPwmControllerProvider
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IPwmControllerProvider]
+    guid 90389702-f036-56e1-a94f-6d99d52b9578
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};{1300593b-e2e3-40a4-b7d9-48dff0377a52})
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Pwm.Provider.IPwmControllerProvider
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=22 role=current
+            out interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=117 reverse=101 role=get_many
+            fill_array interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Devices.Pwm.Provider.IPwmControllerProvider python_type
+    py _IPwmControllerProvider
+    guid 1300593b-e2e3-40a4-b7d9-48dff0377a52
+    signature {1300593b-e2e3-40a4-b7d9-48dff0377a52}
+    property actual_frequency
+        get get_ActualFrequency slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=43
+            out double return
+    property max_frequency
+        get get_MaxFrequency slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=99
+            out double return
+    property min_frequency
+        get get_MinFrequency slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=121
+            out double return
+    property pin_count
+        get get_PinCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=22
+            out int32 return
+    method acquire_pin
+        method AcquirePin slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=141
+            in int32 name=pin
+    method disable_pin
+        method DisablePin slot=14 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=186
+            in int32 name=pin
+    method enable_pin
+        method EnablePin slot=13 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=173
+            in int32 name=pin
+    method release_pin
+        method ReleasePin slot=12 inputs=1 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=4 reverse=162
+            in int32 name=pin
+    method set_desired_frequency
+        method SetDesiredFrequency slot=8 inputs=1 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=46 reverse=58
+            in double name=frequency
+            out double return
+    method set_pulse_parameters
+        method SetPulseParameters slot=15 inputs=3 outputs=0 declaring=Windows.Devices.Pwm.Provider.IPwmControllerProvider shape=111 reverse=195
+            in int32 name=pin
+            in double name=dutyCycle
+            in boolean name=invertPolarity
+
+interface Windows.Devices.Pwm.Provider.IPwmProvider python_type
+    py _IPwmProvider
+    guid a3301228-52f1-47b0-9349-66ba43d25902
+    signature {a3301228-52f1-47b0-9349-66ba43d25902}
+    method get_controllers
+        method GetControllers slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Pwm.Provider.IPwmProvider shape=4 reverse=22
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IPwmControllerProvider]
+    guid 1a166093-1a7a-5e12-9d38-f892fec3ec66
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};{1300593b-e2e3-40a4-b7d9-48dff0377a52})
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Pwm.Provider.IPwmControllerProvider>
+    argument Windows.Devices.Pwm.Provider.IPwmControllerProvider
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Pwm.Provider.IPwmControllerProvider> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Pwm.Provider.IPwmControllerProvider> shape=117 reverse=66 role=index_of
+            in interface type=Windows.Devices.Pwm.Provider.IPwmControllerProvider name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

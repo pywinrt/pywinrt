@@ -1,0 +1,1005 @@
+#include <pywinrt/base.h>
+#include "_winrt_array.h"
+#include "arrays.h"
+#include "module_state.h"
+#include "numerics-buffer.h"
+#include <winrt/base.h>
+
+namespace py::cpp::_winrt
+{
+    /**
+     * Python wrapper around System.Array type.
+     */
+    struct Array
+    {
+        PyObject_HEAD
+        std::unique_ptr<py::Array> array;
+    };
+
+    PyDoc_STRVAR(Array_doc, "class for wrapped COM array instances");
+
+    /**
+     * Allocates memory for a new System.Array object.
+     * @param [in]  subtype The type to use for allocation.
+     */
+    static Array* Array_Alloc(PyTypeObject* subtype)
+    {
+        auto self = reinterpret_cast<Array*>(subtype->tp_alloc(subtype, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        // call C++ constructors on memory allocated from CPython heap
+        std::construct_at(&self->array);
+
+        return self;
+    }
+
+    /**
+     * Creates a new System.Array object from @p array.
+     * @param [in]  array   A WinRT array such as a COM array.
+     * @returns The new Python wrapper object or @c nullptr on error.
+     */
+    PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
+    {
+        auto const state = get_module_state();
+        if (!state)
+        {
+            return nullptr;
+        }
+
+        auto self = Array_Alloc(state->array_type.get());
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        self->array = std::move(array);
+
+        return reinterpret_cast<PyObject*>(self);
+    }
+
+    /**
+     * Assigns @p array to @p obj if @p obj is a System.Array.
+     * @param [in]  obj     The Python System.Array wrapper object.
+     * @param [in]  array   The WinRT array wrapper.
+     * @returns @c true on success, otherwise returns @c false and sets Python
+     * exception.
+     */
+    bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept
+    {
+        auto const state = get_module_state();
+        if (!state)
+        {
+            return false;
+        }
+
+        if (!Py_IS_TYPE(obj, state->array_type.get()))
+        {
+            {
+                PyErr_SetString(PyExc_TypeError, "argument must be System.Array");
+                return false;
+            }
+        }
+
+        auto const self = reinterpret_cast<Array*>(obj);
+
+        // Elements are only given to an array as it is made. One that has
+        // them could be in use on another thread, which replacing them would
+        // leave reading freed memory.
+        if (self->array)
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "the elements of an Array cannot be replaced");
+            return false;
+        }
+
+        self->array = std::move(array);
+
+        return true;
+    }
+
+    /**
+     * The array behind @p obj, or @c nullptr, with no error set, when @p obj
+     * is not a winrt.system.Array.
+     */
+    py::Array* Array_Get(PyObject* obj) noexcept
+    {
+        auto const state = try_get_module_state();
+        if (!state)
+        {
+            return nullptr;
+        }
+
+        if (!Py_IS_TYPE(obj, state->array_type.get()))
+        {
+            return nullptr;
+        }
+
+        return reinterpret_cast<Array*>(obj)->array.get();
+    }
+
+    /**
+     * The PEP 3118 buffer format among @p annotations, which are the
+     * __metadata__ of an Annotated alias, or a null handle when there is none.
+     *
+     * Each annotation of a winrt.system scalar says which kind of format it is
+     * in _annotation_kind_, and reading that rather than taking the first
+     * string is what tells the buffer format from the struct format: Char16 is
+     * "u" as one and "H" as the other, and both are formats of their own that
+     * name different types.
+     *
+     * @returns @c false with a Python error set.
+     */
+    static bool find_buffer_format(PyObject* annotations, pyobj_handle& format) noexcept
+    {
+        if (!PyTuple_Check(annotations))
+        {
+            return true;
+        }
+
+        for (Py_ssize_t i = 0; i < PyTuple_GET_SIZE(annotations); i++)
+        {
+            auto const annotation = PyTuple_GET_ITEM(annotations, i);
+
+            pyobj_handle kind;
+
+            if (PyObject_GetOptionalAttrString(
+                    annotation, "_annotation_kind_", kind.put())
+                < 0)
+            {
+                return false;
+            }
+
+            if (!kind)
+            {
+                continue;
+            }
+
+            if (!PyUnicode_Check(kind.get()))
+            {
+                continue;
+            }
+
+            if (PyUnicode_CompareWithASCIIString(kind.get(), "buffer_format") != 0)
+            {
+                continue;
+            }
+
+            if (!PyUnicode_Check(annotation))
+            {
+                continue;
+            }
+
+            format = pyobj_handle{Py_NewRef(annotation)};
+
+            return true;
+        }
+
+        return true;
+    }
+
+    static PyObject* Array_tp_new(
+        PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds)
+        {
+            PyErr_SetString(PyExc_TypeError, "keyword arguments are not supported");
+            return nullptr;
+        }
+
+        auto self = Array_Alloc(subtype);
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle self_handle{reinterpret_cast<PyObject*>(self)};
+
+        PyObject* arg0;
+        PyObject* arg1 = nullptr;
+
+        if (!PyArg_UnpackTuple(args, "Array", 1, 2, &arg0, &arg1))
+        {
+            return nullptr;
+        }
+
+        std::unique_ptr<py::Array> array;
+
+        // A winrt.system scalar alias - Annotated[int, BufferFormat("i"), ...]
+        // - names the same element type as the buffer format it carries, so
+        // that format stands in for it here.
+        pyobj_handle annotations;
+
+        if (PyObject_GetOptionalAttrString(arg0, "__metadata__", annotations.put()) < 0)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle buffer_format;
+
+        if (annotations)
+        {
+            if (!find_buffer_format(annotations.get(), buffer_format))
+            {
+                return nullptr;
+            }
+        }
+
+        if (buffer_format)
+        {
+            arg0 = buffer_format.get();
+        }
+
+        if (PyUnicode_Check(arg0))
+        {
+            // Every format string has a type that names the same thing, and
+            // two spellings of one thing is where a format being a buffer
+            // format and a struct format at once came from. A format unwrapped
+            // from an alias just above is not the spelling being deprecated.
+            if (!buffer_format)
+            {
+                if (PyErr_WarnEx(
+                        PyExc_DeprecationWarning,
+                        "passing a format string to Array is deprecated: pass "
+                        "the type instead, such as winrt.system.Int32, bool, "
+                        "str or a projected enum",
+                        1)
+                    < 0)
+                {
+                    return nullptr;
+                }
+            }
+
+            if (PyUnicode_CompareWithASCIIString(arg0, "?") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<bool>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "b") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<int8_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "B") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<uint8_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "h") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<int16_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "H") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<uint16_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "i") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<int32_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "I") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<uint32_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "q") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<int64_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "Q") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<uint64_t>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "f") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<float>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "d") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<double>>();
+            }
+            else if (PyUnicode_CompareWithASCIIString(arg0, "u") == 0)
+            {
+                self->array = std::make_unique<py::ComArray<char16_t>>();
+            }
+            else
+            {
+                PyErr_SetString(PyExc_ValueError, "unsupported format string");
+                return nullptr;
+            }
+        }
+        else if (PyType_Check(arg0))
+        {
+            if (!PyDateTimeAPI)
+            {
+                PyDateTime_IMPORT;
+
+                if (!PyDateTimeAPI)
+                {
+                    return nullptr;
+                }
+            }
+
+            auto const state = get_module_state();
+            if (!state)
+            {
+                return nullptr;
+            }
+
+            auto type = reinterpret_cast<PyTypeObject*>(arg0);
+
+            if (type == &PyBool_Type)
+            {
+                self->array = std::make_unique<py::ComArray<bool>>();
+            }
+            else if (type == &PyUnicode_Type)
+            {
+                self->array = std::make_unique<py::ComArray<winrt::hstring>>();
+            }
+            else if (type == state->uuid_type.get())
+            {
+                self->array = std::make_unique<py::ComArray<winrt::guid>>();
+            }
+            else if (type == PyDateTimeAPI->DateTimeType)
+            {
+                self->array = std::make_unique<
+                    py::ComArray<winrt::Windows::Foundation::DateTime>>();
+            }
+            else if (type == PyDateTimeAPI->DeltaType)
+            {
+                self->array = std::make_unique<
+                    py::ComArray<winrt::Windows::Foundation::TimeSpan>>();
+            }
+            else if (type == state->object_type.get())
+            {
+                self->array = std::make_unique<
+                    py::ComArray<winrt::Windows::Foundation::IInspectable>>();
+            }
+            else if (type == &PyLong_Type)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError,
+                    "int does not say which WinRT integer type: name one with "
+                    "a winrt.system alias such as winrt.system.Int32");
+                return nullptr;
+            }
+            else if (type == &PyFloat_Type)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError,
+                    "float does not say which WinRT floating point type: name "
+                    "one with winrt.system.Single or winrt.system.Double");
+                return nullptr;
+            }
+            else
+            {
+                if (!py::interp::make_array_of(type, self->array))
+                {
+                    return nullptr;
+                }
+
+                if (!self->array)
+                {
+                    PyErr_Format(
+                        PyExc_TypeError,
+                        "cannot use %.100s as type for WinRT array",
+                        type->tp_name);
+                    return nullptr;
+                }
+            }
+        }
+        else
+        {
+            PyErr_SetString(PyExc_TypeError, "first argument must be str or type");
+            return nullptr;
+        }
+
+        if (!arg1)
+        {
+            // no args means empty array
+            return self_handle.detach();
+        }
+
+        if (PyIndex_Check(arg1))
+        {
+            Py_ssize_t count = PyNumber_AsSsize_t(arg1, PyExc_OverflowError);
+
+            if (count == -1 && PyErr_Occurred())
+            {
+                if (!PyErr_ExceptionMatches(PyExc_TypeError))
+                {
+                    return nullptr;
+                }
+
+                PyErr_Clear();
+            }
+            else
+            {
+                if (count < 0)
+                {
+                    PyErr_SetString(PyExc_ValueError, "negative count");
+                    return nullptr;
+                }
+
+                auto size = static_cast<uint32_t>(count);
+
+                if (static_cast<Py_ssize_t>(size) != count)
+                {
+                    PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
+                    return nullptr;
+                }
+
+                if (!self->array->Alloc(size))
+                {
+                    return nullptr;
+                }
+
+                return self_handle.detach();
+            }
+        }
+
+        if (PyObject_CheckBuffer(arg1))
+        {
+            auto const element_shape = self->array->ElementShape();
+
+            if (!element_shape.empty())
+            {
+                if (!py::interp::numerics::check_array_source(
+                        self->array->WinrtElementTypeName(), arg1))
+                {
+                    return nullptr;
+                }
+            }
+
+            py::buffer_view buffer{arg1, PyBUF_FULL_RO};
+            if (!buffer)
+            {
+                return nullptr;
+            }
+
+            auto const& view = buffer.view();
+
+            // An array of numerics structs is also made from the block of
+            // floats it exports.
+            auto elements = py::interp::numerics::block_count(view, element_shape);
+
+            if (elements < 0)
+            {
+                auto format = view.format ? std::basic_string_view(view.format)
+                                          : std::basic_string_view("B");
+
+                // What else it is made from is its named fields, a whole
+                // struct per item, so any other buffer is a float block gone
+                // wrong, such as one of doubles or a flat one.
+                if (!element_shape.empty())
+                {
+                    if (view.itemsize
+                        != static_cast<Py_ssize_t>(self->array->ValueSize()))
+                    {
+                        py::interp::numerics::set_block_error(
+                            view, self->array->WinrtElementTypeName(), element_shape);
+                        return nullptr;
+                    }
+
+                    if (format != self->array->Format())
+                    {
+                        py::interp::numerics::set_block_error(
+                            view, self->array->WinrtElementTypeName(), element_shape);
+                        return nullptr;
+                    }
+                }
+
+                // raised as py::is_buffer_compatible() raises them for an
+                // array a call borrows
+                if (view.ndim != 1)
+                {
+                    PyErr_Format(
+                        PyExc_BufferError,
+                        "requires buffer with ndim == 1, have %d",
+                        view.ndim);
+                    return nullptr;
+                }
+
+                auto const itemsize = static_cast<Py_ssize_t>(self->array->ValueSize());
+
+                if (view.itemsize != itemsize)
+                {
+                    PyErr_Format(
+                        PyExc_BufferError,
+                        "requires buffer with itemsize == %zd, have %zd",
+                        itemsize,
+                        view.itemsize);
+                    return nullptr;
+                }
+
+                if (format != self->array->Format())
+                {
+                    std::string const expected{self->array->Format()};
+                    std::string const actual{format};
+
+                    PyErr_Format(
+                        PyExc_BufferError,
+                        "requires buffer with format == \"%s\", have \"%s\"",
+                        expected.c_str(),
+                        actual.c_str());
+                    return nullptr;
+                }
+
+                elements = view.len / view.itemsize;
+            }
+
+            auto const size = static_cast<uint32_t>(elements);
+
+            if (static_cast<Py_ssize_t>(size) != elements)
+            {
+                PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
+                return nullptr;
+            }
+
+            // Copying the bytes of an element that holds references would
+            // give this array references it does not own, and nothing can
+            // tell whether the pointers in someone else's buffer point at
+            // objects of the element type at all.
+            if (self->array->HoldsReferences())
+            {
+                PyErr_SetString(
+                    PyExc_TypeError,
+                    "cannot copy elements that hold references from a buffer: "
+                    "pass a list or a tuple of them instead");
+                return nullptr;
+            }
+
+            // Fast path for bilitable types.
+
+            if (!self->array->Alloc(size))
+            {
+                return nullptr;
+            }
+
+            if (PyBuffer_ToContiguous(
+                    self->array->Data(),
+                    &view,
+                    self->array->Size() * self->array->ValueSize(),
+                    'C')
+                < 0)
+            {
+                return nullptr;
+            }
+
+            return self_handle.detach();
+        }
+
+        // Any iterable, as list() takes: a list or a tuple as it is, and
+        // anything else made into a list first, which is also what says how
+        // many elements there are.
+        pyobj_handle items{
+            PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1)
+                ? Py_NewRef(arg1)
+                : PySequence_List(arg1)};
+        if (!items)
+        {
+            return nullptr;
+        }
+
+        auto py_size = PySequence_Fast_GET_SIZE(items.get());
+
+        auto size = static_cast<uint32_t>(py_size);
+
+        if (static_cast<Py_ssize_t>(size) != py_size)
+        {
+            PyErr_SetString(PyExc_OverflowError, "count exceeds max size");
+            return nullptr;
+        }
+
+        if (!self->array->Alloc(size))
+        {
+            return nullptr;
+        }
+
+        // Converting an element can run Python code that changes the list,
+        // so each item is taken as it is reached rather than borrowed from
+        // the list's storage. As array.array does, the length is the one the
+        // list had to begin with, and a list that shrank raises IndexError.
+        for (uint32_t i = 0; i < self->array->Size(); i++)
+        {
+            pyobj_handle item{PySequence_GetItem(items.get(), i)};
+            if (!item)
+            {
+                return nullptr;
+            }
+
+            if (!self->array->Set(i, item.get()))
+            {
+                return nullptr;
+            }
+        }
+
+        return self_handle.detach();
+    }
+
+    static void Array_tp_dealloc(Array* self) noexcept
+    {
+        PyTypeObject* tp = Py_TYPE(self);
+
+        std::destroy_at(&self->array);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Array_get_winrt_element_type_name(
+        Array* self, void* /*unused*/) noexcept
+    {
+        auto type = self->array->WinrtElementTypeName();
+        return PyUnicode_FromWideChar(type.data(), type.size());
+    }
+
+    static PyGetSetDef Array_tp_getset[]
+        = {{"_winrt_element_type_name_",
+            reinterpret_cast<getter>(Array_get_winrt_element_type_name),
+            nullptr,
+            PyDoc_STR("Gets the WinRT name of the element type of this array."),
+            nullptr},
+           {}};
+
+    static PyMethodDef Array_tp_methods[]
+        = {{"__class_getitem__",
+            Py_GenericAlias,
+            METH_O | METH_CLASS,
+            PyDoc_STR("See PEP 585")},
+           {}};
+
+    static Py_ssize_t Array_sq_length(Array* self) noexcept
+    {
+        return self->array->Size();
+    }
+
+    PyObject* Array_sq_item(Array* self, Py_ssize_t index) noexcept
+    {
+        WINRT_ASSERT(index >= 0);
+        return self->array->At(static_cast<uint32_t>(index));
+    }
+
+    int Array_sq_ass_item(Array* self, Py_ssize_t index, PyObject* value) noexcept
+    {
+        if (!value)
+        {
+            PyErr_SetString(
+                PyExc_TypeError, "'Array' object doesn't support item deletion");
+            return -1;
+        }
+
+        if (!self->array->Set(index, value))
+        {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    /**
+     * __getitem__, which is an index or a slice.
+     *
+     * A slice is a new array of the same element type holding copies of the
+     * elements it names, which is what slicing a projected vector gives too.
+     */
+    static PyObject* Array_mp_subscript(Array* self, PyObject* key) noexcept
+    {
+        auto const size = static_cast<Py_ssize_t>(self->array->Size());
+
+        if (PySlice_Check(key))
+        {
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+
+            if (PySlice_Unpack(key, &start, &stop, &step) < 0)
+            {
+                return nullptr;
+            }
+
+            auto const length = PySlice_AdjustIndices(size, &start, &stop, step);
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return nullptr;
+            }
+
+            auto slice = self->array->Slice(
+                static_cast<uint32_t>(start), static_cast<uint32_t>(length));
+            if (!slice)
+            {
+                return nullptr;
+            }
+
+            return Array_New(std::move(slice));
+        }
+
+        if (!PyIndex_Check(key))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "indices must be integers or slices, not '%s'",
+                Py_TYPE(key)->tp_name);
+            return nullptr;
+        }
+
+        auto index = PyNumber_AsSsize_t(key, PyExc_IndexError);
+        if (index == -1 && PyErr_Occurred())
+        {
+            return nullptr;
+        }
+
+        if (index < 0)
+        {
+            index += size;
+        }
+
+        if (index < 0)
+        {
+            PyErr_SetString(PyExc_IndexError, "index out of range");
+            return nullptr;
+        }
+
+        if (index >= size)
+        {
+            PyErr_SetString(PyExc_IndexError, "index out of range");
+            return nullptr;
+        }
+
+        return self->array->At(static_cast<uint32_t>(index));
+    }
+
+    /**
+     * Whether @p self and @p other hold equal elements in the same order.
+     *
+     * The element types do not have to match, as with array.array: an array
+     * of Int32 equals an array of Int64 that holds the same numbers.
+     *
+     * @returns -1 with a Python error set.
+     */
+    static int Array_equal(py::Array& self, py::Array& other) noexcept
+    {
+        auto const size = self.Size();
+
+        if (other.Size() != size)
+        {
+            return 0;
+        }
+
+        for (uint32_t i = 0; i < size; i++)
+        {
+            pyobj_handle item{self.At(i)};
+            if (!item)
+            {
+                return -1;
+            }
+
+            pyobj_handle other_item{other.At(i)};
+            if (!other_item)
+            {
+                return -1;
+            }
+
+            auto const equal
+                = PyObject_RichCompareBool(item.get(), other_item.get(), Py_EQ);
+            if (equal != 1)
+            {
+                return equal;
+            }
+        }
+
+        return 1;
+    }
+
+    /**
+     * == and != against another array, which is the only thing an array
+     * equals, as a list equals only a list: an array and a list of the same
+     * elements compare unequal, and list(array) is the spelling that compares
+     * the elements with a list's.
+     */
+    static PyObject* Array_tp_richcompare(Array* self, PyObject* other, int op) noexcept
+    {
+        if (op != Py_EQ && op != Py_NE)
+        {
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+
+        auto const other_array = Array_Get(other);
+        if (!other_array)
+        {
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+
+        auto const equal = Array_equal(*self->array, *other_array);
+        if (equal == -1)
+        {
+            return nullptr;
+        }
+
+        return PyBool_FromLong(op == Py_EQ ? equal : !equal);
+    }
+
+    static PyObject* Array_tp_repr(Array* self) noexcept
+    {
+        auto const type = self->array->WinrtElementTypeName();
+
+        pyobj_handle name{PyUnicode_FromWideChar(type.data(), type.size())};
+        if (!name)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle items{PySequence_List(reinterpret_cast<PyObject*>(self))};
+        if (!items)
+        {
+            return nullptr;
+        }
+
+        return PyUnicode_FromFormat("Array(%U, %R)", name.get(), items.get());
+    }
+
+    static int Array_bf_getbuffer(Array* self, Py_buffer* view, int flags) noexcept
+    {
+        // A buffer keeps the pointer it was given until whoever holds it lets
+        // go, and the exporter is never asked again, so one over a fill array
+        // would still point at the caller's elements after take_back() has
+        // given them back.
+        if (self->array->IsFillArray())
+        {
+            view->obj = nullptr;
+            PyErr_SetString(
+                PyExc_BufferError,
+                "a fill array cannot be exported as a buffer: its elements belong "
+                "to the WinRT caller and go back to it when the call returns, so "
+                "copy it with a slice, or assign its items");
+            return -1;
+        }
+
+        // Writing an element that holds references through a buffer would put
+        // a pointer in the array that nothing owns, so those elements are
+        // written by item assignment, which converts the value.
+        auto const readonly = self->array->HoldsReferences();
+
+        if (readonly)
+        {
+            if ((flags & PyBUF_WRITABLE) == PyBUF_WRITABLE)
+            {
+                view->obj = nullptr;
+                PyErr_SetString(
+                    PyExc_BufferError,
+                    "an array whose elements hold references is not writable "
+                    "as a buffer: assign its items instead");
+                return -1;
+            }
+        }
+
+        // An array of numerics structs is a block of floats with the shape of
+        // its element after its length, which is C order and not Fortran
+        // order; every other array is its elements, one dimension of them.
+        auto const element_shape = self->array->ElementShape();
+        auto const ndim = 1 + static_cast<int>(element_shape.size());
+
+        if (ndim > 1)
+        {
+            if ((flags & PyBUF_F_CONTIGUOUS) == PyBUF_F_CONTIGUOUS)
+            {
+                view->obj = nullptr;
+                PyErr_SetString(
+                    PyExc_BufferError,
+                    "an array of numerics structs is not Fortran contiguous");
+                return -1;
+            }
+        }
+
+        // The shape and the strides live as long as the view does, in one
+        // block that Array_bf_releasebuffer frees.
+        Py_ssize_t* dimensions = nullptr;
+
+        if ((flags & PyBUF_ND) == PyBUF_ND)
+        {
+            dimensions
+                = static_cast<Py_ssize_t*>(PyMem_Malloc(2 * ndim * sizeof(Py_ssize_t)));
+            if (!dimensions)
+            {
+                view->obj = nullptr;
+                PyErr_NoMemory();
+                return -1;
+            }
+        }
+
+        view->readonly = readonly ? 1 : 0;
+
+        // required fields
+        view->obj = Py_NewRef(self);
+        view->buf = reinterpret_cast<void*>(self->array->Data());
+        view->len
+            = static_cast<Py_ssize_t>(self->array->Size()) * self->array->ValueSize();
+        view->itemsize = element_shape.empty()
+                             ? static_cast<Py_ssize_t>(self->array->ValueSize())
+                             : static_cast<Py_ssize_t>(sizeof(float));
+        view->internal = dimensions;
+
+        if ((flags & PyBUF_FORMAT) == PyBUF_FORMAT)
+        {
+            view->format = element_shape.empty()
+                               ? const_cast<char*>(self->array->Format().data())
+                               : const_cast<char*>("f");
+        }
+        else
+        {
+            view->format = nullptr;
+        }
+
+        if (dimensions)
+        {
+            view->ndim = ndim;
+            view->shape = dimensions;
+            view->shape[0] = self->array->Size();
+
+            for (int i = 1; i < ndim; i++)
+            {
+                view->shape[i] = element_shape[i - 1];
+            }
+        }
+        else
+        {
+            view->ndim = 1;
+            view->shape = nullptr;
+        }
+
+        // PyBUF_STRIDES includes PyBUF_ND, so the block is there.
+        if ((flags & PyBUF_STRIDES) == PyBUF_STRIDES)
+        {
+            view->strides = dimensions + ndim;
+
+            auto stride = view->itemsize;
+
+            for (auto i = ndim; i-- > 0;)
+            {
+                view->strides[i] = stride;
+                stride *= view->shape[i];
+            }
+        }
+        else
+        {
+            view->strides = nullptr;
+        }
+
+        view->suboffsets = nullptr;
+
+        self->array->AddExport();
+
+        return 0;
+    }
+
+    static void Array_bf_releasebuffer(Array* self, Py_buffer* view) noexcept
+    {
+        PyMem_Free(view->internal);
+        self->array->RemoveExport();
+    }
+
+    static PyType_Slot Array_type_slots[] = {
+        {Py_tp_doc, const_cast<char*>(Array_doc)},
+        {Py_tp_new, reinterpret_cast<void*>(Array_tp_new)},
+        {Py_tp_dealloc, reinterpret_cast<void*>(Array_tp_dealloc)},
+        {Py_tp_getset, reinterpret_cast<void*>(Array_tp_getset)},
+        {Py_tp_methods, reinterpret_cast<void*>(Array_tp_methods)},
+        {Py_tp_repr, reinterpret_cast<void*>(Array_tp_repr)},
+        {Py_tp_richcompare, reinterpret_cast<void*>(Array_tp_richcompare)},
+        {Py_mp_subscript, reinterpret_cast<void*>(Array_mp_subscript)},
+        {Py_sq_length, reinterpret_cast<void*>(Array_sq_length)},
+        {Py_sq_item, reinterpret_cast<void*>(Array_sq_item)},
+        {Py_sq_ass_item, reinterpret_cast<void*>(Array_sq_ass_item)},
+        {Py_bf_getbuffer, reinterpret_cast<void*>(Array_bf_getbuffer)},
+        {Py_bf_releasebuffer, reinterpret_cast<void*>(Array_bf_releasebuffer)},
+        {},
+    };
+
+    PyType_Spec Array_type_spec = {
+        "winrt.system.Array", sizeof(Array), 0, Py_TPFLAGS_DEFAULT, Array_type_slots};
+
+} // namespace py::cpp::_winrt

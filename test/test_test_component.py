@@ -5,14 +5,17 @@ import ctypes
 import gc
 import sys
 import threading
+import traceback
 import unittest
 import weakref
-from typing import Generic, List, TypedDict, TypeVar
+from typing import Any, Generic, TypedDict, TypeVar
 from uuid import UUID
 
 import test_winrt.testcomponent as tc
 from winrt.system.hresult import (
+    E_BOUNDS,
     E_FAIL,
+    E_ILLEGAL_DELEGATE_ASSIGNMENT,
     WIN32_ERROR_CANCELLED,
     PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION,
 )
@@ -21,25 +24,27 @@ import winrt.windows.foundation as wf
 import winrt.windows.foundation.collections as wfc
 from typing_extensions import override
 
-from test._util import async_test, catch_unraisable
+from ._util import async_test, catch_unraisable
+
+IID_ISTRINGABLE = UUID("96369F54-8EB6-48F0-ABCE-C1B211E627C3")
 
 
 class TestTestComponent(unittest.TestCase):
-    def test_struct_subclass(self):
+    def test_struct_subclass(self) -> None:
         # subclassing a struct type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class s(tc.Blittable):  # type: ignore
                 pass
 
-    def test_class_subclass(self):
+    def test_class_subclass(self) -> None:
         # subclassing a class type is not allowed
         with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
 
             class s(tc.Class):  # type: ignore
                 pass
 
-    def test_composable_subclass(self):
+    def test_composable_subclass(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -49,7 +54,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 0)
         self.assertEqual(c.one(), 1)
 
-    def test_composable_subclass_with_interface(self):
+    def test_composable_subclass_with_interface(self) -> None:
         class C(tc.Override, tc.IRequiredOne):
             @override
             def one(self) -> int:
@@ -64,7 +69,117 @@ class TestTestComponent(unittest.TestCase):
         self.assertIsInstance(c, tc.Override)
         self.assertIsInstance(c, tc.IRequiredOne)
 
-    def test_overriding_new(self):
+    def test_composable_subclass_of_a_composed_class(self) -> None:
+        # Derived derives from Composable and is composable in turn, so a
+        # Python class composed into it has three objects behind it and the
+        # members of both classes.
+        class C(tc.Derived):
+            pass
+
+        c = C()
+
+        self.assertIsInstance(c, tc.Derived)
+        self.assertIsInstance(c, tc.Composable)
+        self.assertEqual(c.value, 0)
+        self.assertEqual(c.one(), 1)
+
+    def test_composed_iids_are_listed_once(self) -> None:
+        # The object composed over lists the overridable interfaces as well,
+        # which the composed object answers itself.
+        class D(tc.DerivedOverride):
+            pass
+
+        iids = list(D()._iids_)
+
+        self.assertEqual(len(iids), len(set(iids)))
+        # IOverrideOverrides and IDerivedOverrideOverrides
+        self.assertIn(UUID("151ca069-60b7-5c26-a3f3-0cf4db7c4a10"), iids)
+        self.assertIn(UUID("29af5e3f-1046-5a3e-88c7-a2eadac91378"), iids)
+
+    def test_composable_runtime_class_name(self) -> None:
+        # C++/WinRT names a composed object after the first interface the
+        # derived object implements itself, so a subclass of a class that
+        # leaves nothing to be overridden has no name of its own.
+        class C(tc.Composable):
+            pass
+
+        class D(tc.Override):
+            pass
+
+        class E(tc.DerivedOverride):
+            pass
+
+        self.assertEqual(tc.TestRunner.expect_object(C()), "")
+        self.assertEqual(
+            tc.TestRunner.expect_object(D()), "TestComponent.IOverrideOverrides"
+        )
+        self.assertEqual(
+            tc.TestRunner.expect_object(E()),
+            "TestComponent.IDerivedOverrideOverrides",
+        )
+
+    def test_declared_runtime_class_name(self) -> None:
+        # A class may say what it is called instead, which is what a XAML
+        # metadata provider needs, and a class derived from it inherits that.
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        class D(C):
+            pass
+
+        class E(C, runtime_class_name="Spam.Ham"):
+            pass
+
+        self.assertEqual(tc.TestRunner.expect_object(C()), "Spam.Eggs")
+        self.assertEqual(C()._runtime_class_name_, "Spam.Eggs")
+        self.assertEqual(tc.TestRunner.expect_object(D()), "Spam.Eggs")
+        self.assertEqual(tc.TestRunner.expect_object(E()), "Spam.Ham")
+
+    def test_declared_runtime_class_name_misspelled(self) -> None:
+        with self.assertRaises(TypeError):
+
+            class _(tc.Composable, runtime_class_nam="Spam.Eggs"):  # pyright: ignore[reportGeneralTypeIssues]
+                pass
+
+    def test_declared_runtime_class_name_must_be_str(self) -> None:
+        with self.assertRaisesRegex(TypeError, "must be str, not int"):
+
+            class _(tc.Composable, runtime_class_name=1):  # pyright: ignore[reportArgumentType]
+                pass
+
+    def test_declared_runtime_class_name_is_not_none(self) -> None:
+        # A class inherits the name of the class it derives from, which None
+        # would seem to take away and could not, so it is refused.
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        with self.assertRaisesRegex(TypeError, "must be str, not NoneType"):
+
+            class _(C, runtime_class_name=None):  # pyright: ignore[reportArgumentType]
+                pass
+
+    def test_declared_runtime_class_name_set_afterwards_must_be_str(self) -> None:
+        class C(tc.Composable, runtime_class_name="Spam.Eggs"):
+            pass
+
+        setattr(C, "_declared_runtime_class_name_", 1)
+
+        with self.assertRaisesRegex(
+            TypeError, "_declared_runtime_class_name_ must be str, not int"
+        ):
+            C()
+
+    def test_implementation_has_no_declared_runtime_class_name(self) -> None:
+        # A Python implementation of an interface is named after the first
+        # interface it implements, as C++/WinRT names one.
+        with self.assertRaises(TypeError):
+
+            class _(wf.IStringable, runtime_class_name="Spam.Eggs"):
+                @override
+                def to_string(self) -> str:
+                    return "spam"
+
+    def test_overriding_new(self) -> None:
         class C(tc.Composable):
             @override
             def __new__(cls):
@@ -76,7 +191,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 2)
         self.assertEqual(c.one(), 1)
 
-    def test_overriding_method(self):
+    def test_overriding_method(self) -> None:
         event = threading.Event()
         base_event = threading.Event()
 
@@ -92,7 +207,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertTrue(event.is_set())
         self.assertFalse(base_event.is_set())
 
-    def test_overriding_and_calling_super(self):
+    def test_overriding_and_calling_super(self) -> None:
         event = threading.Event()
         base_event = threading.Event()
 
@@ -108,6 +223,220 @@ class TestTestComponent(unittest.TestCase):
         c.call_overridable()
         self.assertTrue(event.is_set())
         self.assertTrue(base_event.is_set())
+
+    def test_overriding_methods_of_every_base(self) -> None:
+        # Each class in the chain declares its own overridable interface, and
+        # the composed object answers all of them, not only the one the class
+        # derived from declares.
+        called: list[str] = []
+
+        class C(tc.DerivedOverride):
+            @override
+            def _on_overridable(self) -> None:
+                called.append("base")
+
+            @override
+            def _on_derived_overridable(self) -> None:
+                called.append("derived")
+
+        c = C()
+        c.call_overridable()
+        c.call_derived_overridable()
+
+        self.assertEqual(called, ["base", "derived"])
+
+    def test_a_second_composable_class_is_refused(self) -> None:
+        # The object is composed into the first, so it would implement none of
+        # the second's members.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'C' cannot derive from both '.*Override' and '.*ProtectedMembers', "
+            r"because a class derived from a WinRT class derives from one class, "
+            r"besides the WinRT interfaces it adds$",
+        ):
+
+            class C(tc.Override, tc.ProtectedMembers):  # type: ignore[metaclass]
+                pass
+
+    def test_an_added_interface_is_answered(self) -> None:
+        # Override does not implement IStringable, so the composed object
+        # answers it for the Python class.
+        class C(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "c"
+
+        c = C()
+
+        self.assertIn(IID_ISTRINGABLE, c._iids_)
+        self.assertEqual(c.as_(wf.IStringable).to_string(), "c")
+
+    def test_a_subclass_of_a_subclass_adds_an_interface(self) -> None:
+        class C(tc.Override):
+            pass
+
+        class D(C, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "d"
+
+        d = D()
+
+        self.assertIn(IID_ISTRINGABLE, d._iids_)
+        self.assertEqual(d.as_(wf.IStringable).to_string(), "d")
+
+    def test_a_python_base_is_refused(self) -> None:
+        class Mixin:
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Mixin'"):
+
+            class _(Mixin, tc.Override):
+                pass
+
+    def test_a_second_chain_of_bases_is_refused(self) -> None:
+        # Inheritance is linear, as in C#, and a class of both would have two
+        # base classes.
+        class A(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "a"
+
+        class B(tc.Override, wf.IStringable):
+            @override
+            def to_string(self) -> str:
+                return "b"
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from both '.*A' and '.*B', because a class "
+            r"derived from a WinRT class derives from one class, besides the "
+            r"WinRT interfaces it adds$",
+        ):
+
+            class _(A, B):
+                pass
+
+    def test_a_subclass_of_a_base_class_is_refused(self) -> None:
+        # D is not in the chain from DerivedOverride, so it is a second chain.
+        class D(tc.Override):
+            pass
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from both '.*DerivedOverride' and 'D', because a "
+            r"class derived from a WinRT class derives from one class, besides "
+            r"the WinRT interfaces it adds$",
+        ):
+
+            class _(tc.DerivedOverride, D):
+                pass
+
+    def test_a_generic_class_is_refused(self) -> None:
+        # A WinRT class has no type parameters.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^'_' cannot derive from '(typing\.)?Generic', because a class "
+            r"derived from a WinRT class can add only WinRT interfaces to it$",
+        ):
+
+            class _(tc.Override, Generic[T]):
+                pass
+
+    def test_a_python_base_is_refused_after_a_derived_class(self) -> None:
+        class Mixin:
+            pass
+
+        class D(tc.Override):
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Mixin'"):
+
+            class _(D, Mixin):
+                pass
+
+    def test_a_python_base_is_refused_behind_a_silent_one(self) -> None:
+        # A base whose __init_subclass__() does not call the next one hides the
+        # class statement, so the class is refused when it is first created.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        class C(Silent, tc.Override):
+            pass
+
+        with self.assertRaisesRegex(TypeError, r"^'C' cannot derive from 'Silent'"):
+            C()
+
+    def test_a_silent_base_after_the_class_is_refused_at_once(self) -> None:
+        # The class's own __init_subclass__() comes first in the MRO, so the
+        # class statement is refused.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        with self.assertRaisesRegex(TypeError, r"^'_' cannot derive from 'Silent'"):
+
+            class _(tc.Override, Silent):
+                pass
+
+    def test_a_protected_constructor_does_not_create_its_class(self) -> None:
+        for args in ((), (5,)):
+            with self.subTest(args=args):
+                with self.assertRaisesRegex(
+                    TypeError,
+                    "^'TestComponent.ProtectedMembers' has a protected constructor, "
+                    "so only a class derived from it can be created$",
+                ):
+                    tc.ProtectedMembers(*args)
+
+    def test_a_protected_constructor_composes_a_derived_class(self) -> None:
+        class C(tc.ProtectedMembers):
+            pass
+
+        class D(tc.ProtectedMembers):
+            @override
+            def __new__(cls):
+                return super().__new__(cls, 6)
+
+        self.assertEqual(C()._protected_value, 0)
+        self.assertEqual(C(5)._protected_value, 5)
+        self.assertEqual(D()._protected_value, 6)
+        self.assertIsInstance(C(), tc.ProtectedMembers)
+
+    def test_a_protected_property_and_method(self) -> None:
+        class C(tc.ProtectedMembers):
+            pass
+
+        c = C()
+        c._protected_value = 7
+
+        self.assertEqual(c._protected_value, 7)
+        self.assertEqual(c._protected_method(), 7)
+
+    def test_overriding_a_property(self) -> None:
+        # WinRT reads the property through the overridable interface, so what
+        # it gets is the derived class's own, and the class's own otherwise.
+        class C(tc.ProtectedMembers):
+            @property
+            @override
+            def _overridable_value(self) -> int:
+                return 42
+
+        class D(tc.ProtectedMembers):
+            pass
+
+        # super() reaches the class's own, rather than coming back here
+        class E(tc.ProtectedMembers):
+            @property
+            @override
+            def _overridable_value(self) -> int:
+                return super()._overridable_value + 100
+
+        self.assertEqual(C(3).read_overridable_value(), 42)
+        self.assertEqual(D(3).read_overridable_value(), 3)
+        self.assertEqual(E(3).read_overridable_value(), 103)
+        self.assertEqual(E(3)._overridable_value, 103)
 
     def test_unhandled_exception_in_override(self) -> None:
         class C(tc.Override):
@@ -125,8 +454,10 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
         self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        # the override, which the default hook names in "Exception ignored in"
+        self.assertEqual(exceptions[0].object, c._on_overridable)
 
-    def test_object_round_trip(self):
+    def test_object_round_trip(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -151,7 +482,7 @@ class TestTestComponent(unittest.TestCase):
             "user-created subclass instance should survive round-trip from WinRT-land",
         )
 
-    def test_object_lifetime_py(self):
+    def test_object_lifetime_py(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -166,7 +497,7 @@ class TestTestComponent(unittest.TestCase):
             "object should be collected when no Python or WinRT references exist",
         )
 
-    def test_object_lifetime_winrt(self):
+    def test_object_lifetime_winrt(self) -> None:
         class C(tc.Composable):
             pass
 
@@ -196,22 +527,21 @@ class TestTestComponent(unittest.TestCase):
             wr(), "object should be collected when WinRT references are gone"
         )
 
-    def test_composable_isinstance(self):
+    def test_composable_isinstance(self) -> None:
         d = tc.Derived()
 
         self.assertIsInstance(d, tc.Composable)
         self.assertIsInstance(d, tc.IRequiredOne)
 
-    def test_composable_issubclass(self):
-        self.assertTrue(issubclass(tc.Derived, tc.Composable))  # type: ignore
-        # FIXME: runtime subclass checking for interfaces is not implemented
-        # self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))  # type: ignore
+    def test_composable_issubclass(self) -> None:
+        self.assertTrue(issubclass(tc.Derived, tc.Composable))
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))
 
-    def test_object_equality(self):
+    def test_object_equality(self) -> None:
         c1 = tc.Derived()
         c2 = c1.as_(tc.Composable)
         c3 = tc.Derived()
-        c4 = str()
+        c4 = ""
 
         # these have to be true in order for tests to be valid
         self.assertIsNot(
@@ -239,7 +569,7 @@ class TestTestComponent(unittest.TestCase):
             "WinRT object any any other type should not be equal",
         )
 
-    def test_object_hashable(self):
+    def test_object_hashable(self) -> None:
         c1 = tc.Derived()
         c2 = c1.as_(tc.Composable)
 
@@ -255,7 +585,7 @@ class TestTestComponent(unittest.TestCase):
             "different wrappers of the same WinRT object instance should hash the same",
         )
 
-    def test_struct_new(self):
+    def test_struct_new(self) -> None:
         b = tc.Blittable()
         self.assertEqual(b.a, 0)
 
@@ -276,28 +606,26 @@ class TestTestComponent(unittest.TestCase):
         n = tc.NonBlittable(c=s)
         self.assertEqual(n.c, s)
 
-    def test_struct_hashable(self):
+    def test_struct_hashable(self) -> None:
         b = tc.Blittable()
 
-        # structs are currently not hashable because they are mutable
-        with self.assertRaisesRegex(TypeError, "unhashable type"):
-            hash(b)
+        self.assertEqual(hash(b), hash(tc.Blittable()))
 
-    def test_struct_equality(self):
+    def test_struct_equality(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable()
 
         self.assertEqual(b1, b2)
         self.assertFalse(b1 != b2)
 
-    def test_struct_inequality(self):
+    def test_struct_inequality(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable(1)
 
         self.assertNotEqual(b1, b2)
         self.assertFalse(b1 == b2)
 
-    def test_struct_comparison(self):
+    def test_struct_comparison(self) -> None:
         b1 = tc.Blittable()
         b2 = tc.Blittable()
 
@@ -313,20 +641,20 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "'>=' not supported"):
             b1 >= b2  # type: ignore
 
-    def test_struct_repr(self):
+    def test_struct_repr(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
         r = repr(nb)
 
         self.assertEqual(r, "NonBlittable(a=True, b='b', c='c', d=4)")
         self.assertEqual(eval("tc." + r), nb)
 
-    def test_struct_readonly(self):
+    def test_struct_readonly(self) -> None:
         b = tc.Blittable()
 
         with self.assertRaisesRegex(AttributeError, "is not writable"):
             b.a = 1  # type: ignore
 
-    def test_blittable_default(self):
+    def test_blittable_default(self) -> None:
         b = tc.Blittable()
 
         self.assertEqual(b.a, 0)
@@ -340,7 +668,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(b.i, 0)
         self.assertEqual(b.j, UUID("00000000-0000-0000-0000-000000000000"))
 
-    def test_blittable(self):
+    def test_blittable(self) -> None:
         b = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -356,7 +684,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(b.i, 9)
         self.assertEqual(b.j, UUID("10000000-1000-1000-1000-100000000000"))
 
-    def test_non_blittable_default(self):
+    def test_non_blittable_default(self) -> None:
         nb = tc.NonBlittable()
 
         self.assertIs(nb.a, False)
@@ -364,7 +692,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(nb.c, "")
         self.assertIsNone(nb.d)
 
-    def test_non_blittable(self):
+    def test_non_blittable(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
 
         self.assertIs(nb.a, True)
@@ -372,7 +700,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(nb.c, "c")
         self.assertEqual(nb.d, 4)
 
-    def test_nested_default(self):
+    def test_nested_default(self) -> None:
         n = tc.Nested()
 
         self.assertEqual(n.blittable.a, 0)
@@ -391,7 +719,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(n.non_blittable.c, "")
         self.assertIsNone(n.non_blittable.d)
 
-    def test_nested(self):
+    def test_nested(self) -> None:
         n = tc.Nested(
             tc.Blittable(
                 1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
@@ -415,10 +743,10 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(n.non_blittable.c, "c")
         self.assertEqual(n.non_blittable.d, 4)
 
-    def test_test_runner(self):
+    def test_test_runner(self) -> None:
         tc.TestRunner.test_self()
 
-    def test_dict_to_map(self):
+    def test_dict_to_map(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         # collection3 is one of the few methods that takes an IMap input
@@ -429,9 +757,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertDictEqual(dict(result[0]), arg)
         self.assertDictEqual(dict(result[1]), arg)
 
-        # TODO: test wrong type in dict. currently this will cause an abort
-
-    def test_dict_to_map_view(self):
+    def test_dict_to_map_view(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         # collection4 is one of the few methods that takes an IMapView input
@@ -442,9 +768,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertDictEqual(dict(result[0]), arg)
         self.assertDictEqual(dict(result[1]), arg)
 
-        # TODO: test wrong type in dict. currently this will cause an abort
-
-    def test_list_to_vector(self):
+    def test_list_to_vector(self) -> None:
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()
         # collection5 is one of the few methods that takes an IVector input
@@ -457,7 +781,29 @@ class TestTestComponent(unittest.TestCase):
 
         # TODO: test wrong type in list. currently this will cause an abort
 
-    def test_list_to_vector_view(self):
+    def test_list_to_vector_out_of_range(self) -> None:
+        class ShortSequence:
+            """A sequence that claims to have more items than it does."""
+
+            def __len__(self) -> int:
+                return 3
+
+            def __getitem__(self, index: int) -> str:
+                return ["1", "2"][index]
+
+        tests = tc.TestRunner.make_tests()
+
+        # An index the Python object does not have is the one failure WinRT has
+        # a name for, so it is reported as E_BOUNDS. Everything else a Python
+        # object can raise while WinRT is reading it still goes to the
+        # unraisable hook, as in the vector view test below.
+        with self.assertRaises(OSError) as ctx, catch_unraisable() as exceptions:
+            tests.collection5(ShortSequence())  # type: ignore
+
+        self.assertEqual(ctx.exception.winerror, E_BOUNDS)
+        self.assertEqual(exceptions, [])
+
+    def test_list_to_vector_view(self) -> None:
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()
         # collection6 is one of the few methods that takes an IVectorView input
@@ -479,16 +825,17 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(len(exceptions), 1)
         self.assertEqual(exceptions[0].exc_type, TypeError)
 
-    def test_tuple_to_struct(self):
+    def test_tuple_to_struct(self) -> None:
         test = tc.TestRunner.make_tests()
 
-        # can pass unspecialized tuple as projected struct
-        _, _ = test.param13(
-            (1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-        )
+        # can pass unspecialized tuple as projected struct; the call refuses
+        # two arguments that differ, and hands the struct back twice
+        expected = tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10))
+        result = test.param13((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), expected)
 
-    def test_tuple_to_struct_wrong_arity(self):
+        self.assertEqual(result, (expected, expected))
+
+    def test_tuple_to_struct_wrong_arity(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # passing 9-tuple as 10-field struct results in TypeError
@@ -498,7 +845,7 @@ class TestTestComponent(unittest.TestCase):
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
 
-    def test_tuple_to_struct_wrong_type(self):
+    def test_tuple_to_struct_wrong_type(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # passing wrong type for one of the tuple elements results in TypeError
@@ -508,39 +855,41 @@ class TestTestComponent(unittest.TestCase):
                 tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             )
 
-    def test_tuple_to_struct_nested(self):
+    def test_tuple_to_struct_nested(self) -> None:
         test = tc.TestRunner.make_tests()
 
         # nested structs can also be tuples
-        _, _ = test.param15(
-            ((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), (True, "b", "c", 4)),
-            tc.Nested(
-                tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
-                tc.NonBlittable(True, "b", "c", 4),
-            ),
+        expected = tc.Nested(
+            tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
+            tc.NonBlittable(True, "b", "c", 4),
+        )
+        result = test.param15(
+            ((1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)), (True, "b", "c", 4)), expected
         )
 
+        self.assertEqual(result, (expected, expected))
+
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_bool(self):
+    def test_struct_replace_bool(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, a=False)
         self.assertIs(cpy.a, False)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_str(self):
+    def test_struct_replace_str(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, b="B", c="C")
         self.assertEqual(cpy.b, "B")
         self.assertEqual(cpy.c, "C")
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_ireference(self):
+    def test_struct_replace_ireference(self) -> None:
         orig = tc.NonBlittable(True, "b", "c", 4)
         cpy = copy.replace(orig, d=None)
         self.assertIsNone(cpy.d)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_int(self):
+    def test_struct_replace_int(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -557,7 +906,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(cpy.j, UUID("10000000-1000-1000-1000-100000000000"))
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_float(self):
+    def test_struct_replace_float(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -567,7 +916,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertAlmostEqual(cpy.i, 2.2)
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
-    def test_struct_replace_uuid(self):
+    def test_struct_replace_uuid(self) -> None:
         orig = tc.Blittable(
             1, 2, 3, 4, 5, 6, 7, 8, 9, UUID("10000000-1000-1000-1000-100000000000")
         )
@@ -575,7 +924,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(cpy.a, 1)
         self.assertEqual(cpy.j, UUID("20000000-2000-2000-2000-200000000000"))
 
-    def test_struct_unpack(self):
+    def test_struct_unpack(self) -> None:
         nb = tc.NonBlittable(True, "b", "c", 4)
         a, b, c, d = nb.unpack()
         self.assertIs(a, True)
@@ -583,7 +932,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c, "c")
         self.assertEqual(d, 4)
 
-    def test_struct_unpack_nested(self):
+    def test_struct_unpack_nested(self) -> None:
         n = tc.Nested(
             tc.Blittable(1, 2, 3, 4, 5, 6, 7, 8, 9, UUID(int=10)),
             tc.NonBlittable(True, "b", "c", 4),
@@ -604,25 +953,34 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(y, "c")
         self.assertEqual(z, 4)
 
-    def test_dict_to_iter_of_ikeyvaluepair(self):
+    def test_dict_to_iter_of_ikeyvaluepair(self) -> None:
         arg = {"1": "2", "3": "4"}
         tests = tc.TestRunner.make_tests()
         ret, out = tests.collection2(arg)
         self.assertDictEqual({i.key: i.value for i in ret}, arg)
         self.assertDictEqual({i.key: i.value for i in out}, arg)
 
-    def test_async_action_get_sta(self):
+    def test_init_apartment_refuses_an_unknown_type(self) -> None:
+        with self.assertRaisesRegex(ValueError, "^7 is not a valid ApartmentType$"):
+            wr.init_apartment(7)  # type: ignore[arg-type]
+
+    def test_async_action_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^get\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_action(10).get()
         finally:
             wr.uninit_apartment()
 
-    def test_async_action_get(self):
-        tc.TestRunner.create_async_action(10).get()
+    def test_async_action_get(self) -> None:
+        op = tc.TestRunner.create_async_action(10)
 
-    def test_async_action_get_cancel(self):
+        self.assertIsNone(op.get())
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_action_get_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         op.cancel()
         with self.assertRaises(OSError) as ctx:
@@ -630,103 +988,246 @@ class TestTestComponent(unittest.TestCase):
 
         self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
 
-    def test_async_action_get_error(self):
+    def test_async_action_get_error(self) -> None:
         with self.assertRaises(OSError) as ctx:
             tc.TestRunner.create_async_action_with_error(10, E_FAIL).get()
 
         self.assertEqual(ctx.exception.winerror, E_FAIL)
 
-    def test_async_action_wait_sta(self):
+    def test_async_action_wait_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:
-            with self.assertRaises(RuntimeError):
+            with self.assertRaisesRegex(
+                RuntimeError, r"^wait\(\) cannot block a single-threaded apartment$"
+            ):
                 tc.TestRunner.create_async_action(10).wait(1)
         finally:
             wr.uninit_apartment()
 
-    def test_async_action_wait(self):
+    def test_async_action_wait(self) -> None:
         status = tc.TestRunner.create_async_action(10).wait(1)
         self.assertEqual(status, wf.AsyncStatus.COMPLETED)
 
-    def test_async_action_wait_timeout(self):
+    def test_async_action_wait_timeout(self) -> None:
         status = tc.TestRunner.create_async_action(1000).wait(0.1)
         self.assertEqual(status, wf.AsyncStatus.STARTED)
 
-    def test_async_action_wait_cancel(self):
+    def test_async_action_wait_not_a_duration(self) -> None:
+        # A timeout that is not a positive number of seconds asks for the
+        # status as it stands rather than for a wait. Each one gets its own
+        # operation because a WinRT async object accepts only one completed
+        # handler, so a second wait on a running one is an error.
+        for timeout in (0, -1, float("nan")):
+            with self.subTest(timeout=timeout):
+                op = tc.TestRunner.create_async_action(1000)
+                self.assertEqual(op.wait(timeout), wf.AsyncStatus.STARTED)
+
+    def test_async_action_wait_cancel(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         op.cancel()
         status = op.wait(1)
         self.assertEqual(status, wf.AsyncStatus.CANCELED)
 
-    def test_async_action_wait_error(self):
+    def test_async_action_wait_error(self) -> None:
         status = tc.TestRunner.create_async_action_with_error(10, E_FAIL).wait(1)
         self.assertEqual(status, wf.AsyncStatus.ERROR)
 
-    def test_async_operation_get(self):
+    def test_async_operation_get(self) -> None:
         expected = 1
         actual = tc.TestRunner.create_async_operation(10, expected).get()
         self.assertEqual(expected, actual)
 
+    def test_async_operation_get_sta(self) -> None:
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaisesRegex(
+                RuntimeError, r"^get\(\) cannot block a single-threaded apartment$"
+            ):
+                tc.TestRunner.create_async_operation(10, 1).get()
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_operation_get_cancel(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+        op.cancel()
+        with self.assertRaises(OSError) as ctx:
+            op.get()
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+
+    def test_async_operation_get_error(self) -> None:
+        with self.assertRaises(OSError) as ctx:
+            tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).get()
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+
+    def test_async_operation_wait_sta(self) -> None:
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            with self.assertRaisesRegex(
+                RuntimeError, r"^wait\(\) cannot block a single-threaded apartment$"
+            ):
+                tc.TestRunner.create_async_operation(10, 1).wait(1)
+        finally:
+            wr.uninit_apartment()
+
+    def test_async_operation_wait(self) -> None:
+        status = tc.TestRunner.create_async_operation(10, 1).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_operation_wait_timeout(self) -> None:
+        status = tc.TestRunner.create_async_operation(1000, 1).wait(0.1)
+        self.assertEqual(status, wf.AsyncStatus.STARTED)
+
+    def test_async_operation_wait_cancel(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+        op.cancel()
+        status = op.wait(1)
+        self.assertEqual(status, wf.AsyncStatus.CANCELED)
+
+    def test_async_operation_wait_error(self) -> None:
+        status = tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.ERROR)
+
+    def test_async_action_with_progress_get(self) -> None:
+        op = tc.TestRunner.create_async_action_with_progress(10, [1, 2])
+
+        self.assertIsNone(op.get())
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_action_progress_handler_is_replaced(self) -> None:
+        first: list[int] = []
+        second: list[int] = []
+
+        op = tc.TestRunner.create_async_action_with_progress(10, [1, 2])
+        # https://github.com/microsoft/pyright/issues/11833
+        op.progress = lambda sender, value: first.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
+        op.progress = lambda sender, value: second.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
+        op.get()
+
+        self.assertEqual(first, [])
+        self.assertEqual(second, [1, 2])
+
+    def test_async_action_with_progress_wait(self) -> None:
+        status = tc.TestRunner.create_async_action_with_progress(10, [1, 2]).wait(1)
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
+    def test_async_operation_with_progress_get(self) -> None:
+        expected = 3
+        actual = tc.TestRunner.create_async_operation_with_progress(
+            10, [1, 2], expected
+        ).get()
+        self.assertEqual(expected, actual)
+
+    def test_async_operation_with_progress_wait(self) -> None:
+        status = tc.TestRunner.create_async_operation_with_progress(10, [1, 2], 3).wait(
+            1
+        )
+        self.assertEqual(status, wf.AsyncStatus.COMPLETED)
+
     @async_test
-    async def test_async_action(self):
+    async def test_async_action(self) -> None:
         op = tc.TestRunner.create_async_action(10)
         await op
 
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
     @async_test
-    async def test_async_action_cancel(self):
-        op = tc.TestRunner.create_async_action(500)
+    async def test_async_action_await_twice(self) -> None:
+        op = tc.TestRunner.create_async_action(10)
 
-        with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
-                await op
+        await op
+        await op
 
-        # The Python asyncio.Future propagates the cancellation to the WinRT action.
-        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
-
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
-    @async_test
-    async def test_async_action_cancel_with_shield(self):
-        op = tc.TestRunner.create_async_action(500)
-
-        with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
-                # This makes the behavior explicit and avoids the later exception.
-                await asyncio.shield(op)
-
-        # Makes sense this time because of the shield.
-        self.assertNotEqual(op.status, wf.AsyncStatus.CANCELED)
-
-        # The operation is still running.
-        self.assertEqual(op.status, wf.AsyncStatus.STARTED)
-        await asyncio.sleep(0.5)
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
 
-    @unittest.skipIf(sys.version_info < (3, 11), "requires Python 3.11 or later")
     @async_test
-    async def test_async_action_cancel_with_cancel(self):
-        op = tc.TestRunner.create_async_action(500)
+    async def test_async_action_cancel(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
+                await op
+
+        task = asyncio.create_task(wait_with_timeout())
+
+        try:
+            await self._run_callbacks()
+
+            # The timeout asked the WinRT action to cancel.
+            self.assertEqual(source.cancel_request_count, 1)
+        finally:
+            source.cancel()
 
         with self.assertRaises(asyncio.TimeoutError):
-            async with asyncio.timeout(0.1):
+            await task
+
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+    @async_test
+    async def test_async_action_cancel_with_shield(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        try:
+            with self.assertRaises(asyncio.TimeoutError):
+                async with asyncio.timeout(0):
+                    await asyncio.shield(op)
+
+            await self._run_callbacks()
+
+            # The shield kept the cancellation from reaching the operation,
+            # which is still running.
+            self.assertEqual(source.cancel_request_count, 0)
+            self.assertEqual(op.status, wf.AsyncStatus.STARTED)
+        finally:
+            # Only the source finishes the operation, which the shielded task
+            # is still waiting for.
+            source.complete()
+
+        await self._run_callbacks()
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_action_cancel_with_cancel(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
                 try:
                     await op
                 except asyncio.CancelledError:
+                    # what an app that cancels the operation itself does
                     op.cancel()
                     raise
 
-        # This works since cancel() is effectively synchronous in this particular case.
-        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        task = asyncio.create_task(wait_with_timeout())
 
-        # But apparently the completed callback doesn't come until the timer
-        # is expired?! If we leave this out, we get a unraisable `RuntimeError:
-        # Event loop is closed` later on after the test is done.
-        await asyncio.sleep(0.5)
+        try:
+            await self._run_callbacks()
+
+            # The timeout asked the operation to cancel, and the await goes on
+            # until it has.
+            self.assertEqual(source.cancel_request_count, 1)
+            self.assertFalse(task.done())
+        finally:
+            source.cancel()
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        # Cancelling an operation that has finished changes nothing.
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+        self.assertEqual(errors, [])
 
     @async_test
-    async def test_async_action_error(self):
+    async def test_async_action_error(self) -> None:
         op = tc.TestRunner.create_async_action_with_error(10, E_FAIL)
 
         with self.assertRaises(OSError) as ctx:
@@ -735,11 +1236,11 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(ctx.exception.winerror, E_FAIL)
 
     @async_test
-    async def test_async_action_with_progress(self):
+    async def test_async_action_with_progress(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         def on_progress(op: wf.IAsyncActionWithProgress[int], value: int) -> None:
             actual.append(value)
@@ -753,11 +1254,11 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter(self):
+    async def test_async_action_with_progress_iter(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress(10, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         async for value in WinrtAiter(op):
             actual.append(value)
@@ -767,12 +1268,13 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_cancel(self):
+    async def test_async_action_with_progress_iter_cancel(self) -> None:
         expected = [1, 2, 3]
-        op = tc.TestRunner.create_async_action_with_progress(500, expected)
-        asyncio.get_running_loop().call_later(0.1, op.cancel)
+        # a report every 100 ms, the first of which the cancel comes before
+        op = tc.TestRunner.create_async_action_with_progress(100, expected)
+        asyncio.get_running_loop().call_later(0.02, op.cancel)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(asyncio.CancelledError):
             async for value in WinrtAiter(op):
@@ -783,11 +1285,11 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_cancel2(self):
+    async def test_async_action_with_progress_iter_cancel2(self) -> None:
         expected = [1, 2, 3, 4, 5]
         op = tc.TestRunner.create_async_action_with_progress(100, expected)
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(asyncio.TimeoutError):
             async with (
@@ -803,13 +1305,13 @@ class TestTestComponent(unittest.TestCase):
 
     @unittest.skipIf(sys.version_info < (3, 13), "requires Python 3.13 or later")
     @async_test
-    async def test_async_action_with_progress_iter_error(self):
+    async def test_async_action_with_progress_iter_error(self) -> None:
         expected = [1, 2, 3]
         op = tc.TestRunner.create_async_action_with_progress_with_error(
             10, expected, E_FAIL
         )
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         with self.assertRaises(OSError) as ctx:
             async for value in WinrtAiter(op):
@@ -820,7 +1322,7 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(actual, expected)
 
     @async_test
-    async def test_async_operation(self):
+    async def test_async_operation(self) -> None:
         op = tc.TestRunner.create_async_operation(10, 1)
         result = await op
 
@@ -828,14 +1330,14 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(result, 1)
 
     @async_test
-    async def test_async_operation_with_progress(self):
+    async def test_async_operation_with_progress(self) -> None:
         expected = [1, 2, 3]
         expected_result = 4
         op = tc.TestRunner.create_async_operation_with_progress(
             10, expected, expected_result
         )
 
-        actual: List[int] = []
+        actual: list[int] = []
 
         def on_progress(
             op: wf.IAsyncOperationWithProgress[int, int], value: int
@@ -849,6 +1351,595 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
         self.assertEqual(actual_result, expected_result)
         self.assertListEqual(actual, expected)
+
+    @async_test
+    async def test_async_operation_is_not_a_future(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        # Where asyncio needs a future, it makes a task around the operation.
+        self.assertFalse(asyncio.isfuture(op))
+        task = asyncio.ensure_future(op)
+        self.assertIsInstance(task, asyncio.Task)
+        self.assertEqual(await task, 1)
+
+    @async_test
+    async def test_async_operation_gather(self) -> None:
+        op1 = tc.TestRunner.create_async_operation(10, 1)
+        op2 = tc.TestRunner.create_async_operation(20, 2)
+
+        self.assertEqual(await asyncio.gather(op1, op2), [1, 2])
+
+    def _record_loop_errors(self) -> list[dict[str, Any]]:
+        """
+        Collects what the running loop is asked to report, which is where an
+        error in a done callback goes.
+        """
+        errors: list[dict[str, Any]] = []
+
+        def handler(loop: asyncio.AbstractEventLoop, context: dict[str, Any]) -> None:
+            errors.append(context)
+
+        asyncio.get_running_loop().set_exception_handler(handler)
+
+        return errors
+
+    async def _run_callbacks(self) -> None:
+        """
+        Runs the loop for long enough that a completion delivered from the
+        handler, or a cancellation, reaches the tasks it is for and the tasks
+        that wait for those.
+        """
+        for _ in range(10):
+            await asyncio.sleep(0)
+
+    @async_test
+    async def test_async_operation_gather_timeout(self) -> None:
+        errors = self._record_loop_errors()
+        sources = [tc.AsyncOperationSource() for _ in range(2)]
+        ops = [source.operation for source in sources]
+
+        timeouts: list[asyncio.Timeout] = []
+
+        async def gather() -> list[int]:
+            async with asyncio.timeout(None) as timeout:
+                timeouts.append(timeout)
+                return await asyncio.gather(*ops)
+
+        task = asyncio.create_task(gather())
+
+        # The timeout cancels the gathering future, which cancels the task
+        # around each operation, which asks WinRT to cancel it, and gather
+        # finishes once the operations have. A task cancelled before it has
+        # started never awaits its operation, so the timeout expires once
+        # they are being awaited.
+        try:
+            await self._run_callbacks()
+            self.assertTrue(all(source.has_completed_handler for source in sources))
+            timeouts[0].reschedule(asyncio.get_running_loop().time())
+            await self._run_callbacks()
+            self.assertEqual([s.cancel_request_count for s in sources], [1, 1])
+        finally:
+            # Only the sources finish the operations, and the task does not
+            # end until they have, so a failed assertion has to finish them.
+            for source in sources:
+                source.cancel()
+
+        await self._run_callbacks()
+
+        self.assertTrue(task.done())
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        self.assertEqual([op.status for op in ops], [wf.AsyncStatus.CANCELED] * 2)
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_gather_cancelled(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        # An operation cancelled through cancel() rather than through its task
+        # has failed as far as asyncio is concerned.
+        op.cancel()
+        source.cancel()
+
+        with self.assertRaises(OSError) as ctx:
+            await asyncio.gather(op)
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_gather_return_exceptions(self) -> None:
+        errors = self._record_loop_errors()
+        sources = [tc.AsyncOperationSource() for _ in range(2)]
+        op1, op2 = (source.operation for source in sources)
+
+        op1.cancel()
+        sources[0].cancel()
+        sources[1].complete(2)
+
+        results = await asyncio.gather(op1, op2, return_exceptions=True)
+
+        self.assertIsInstance(results[0], OSError)
+        assert isinstance(results[0], OSError)
+        self.assertEqual(results[0].winerror, WIN32_ERROR_CANCELLED)
+        self.assertEqual(results[1], 2)
+        self.assertEqual(errors, [])
+
+    @async_test
+    async def test_async_operation_shield_timeout(self) -> None:
+        errors = self._record_loop_errors()
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        with self.assertRaises(TimeoutError):
+            async with asyncio.timeout(0):
+                await asyncio.shield(op)
+
+        # The shield keeps the operation from being cancelled.
+        self.assertEqual(source.cancel_request_count, 0)
+
+        source.fail(E_FAIL)
+        await self._run_callbacks()
+        gc.collect()
+
+        # Nothing is left to retrieve the error, so the loop reports it: since
+        # 3.14 the shield does, and before that the task around the operation
+        # does when it is freed.
+        self.assertEqual(op.status, wf.AsyncStatus.ERROR)
+        self.assertEqual(len(errors), 1)
+        self.assertIsInstance(errors[0]["exception"], OSError)
+        self.assertEqual(errors[0]["exception"].winerror, E_FAIL)
+
+    @async_test
+    async def test_async_operation_asyncio_wait(self) -> None:
+        op1 = tc.TestRunner.create_async_operation(10, 1)
+        op2 = tc.TestRunner.create_async_operation(20, 2)
+
+        # A task around each operation is what matches the answers of
+        # asyncio.wait() up with the operations.
+        tasks = [asyncio.ensure_future(op) for op in (op1, op2)]
+        done, pending = await asyncio.wait(tasks)
+
+        self.assertEqual(done, set(tasks))
+        self.assertEqual(pending, set())
+        self.assertEqual({task.result() for task in done}, {1, 2})
+
+    @async_test
+    async def test_async_operation_falsy_result(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 0)
+
+        self.assertEqual(await op, 0)
+
+    @async_test
+    async def test_async_operation_await_twice(self) -> None:
+        op = tc.TestRunner.create_async_operation(10, 1)
+
+        self.assertEqual(await op, 1)
+        self.assertEqual(await op, 1)
+
+    @async_test
+    async def test_async_operation_error_state(self) -> None:
+        op = tc.TestRunner.create_async_operation_with_error(10, 1, E_FAIL)
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, E_FAIL)
+        self.assertEqual(op.status, wf.AsyncStatus.ERROR)
+
+    @async_test
+    async def test_async_operation_cancel_is_winrts(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        # cancel() is IAsyncInfo.Cancel(), a request that WinRT answers by
+        # finishing the operation, which an await then raises for.
+        op.cancel()
+        self.assertEqual(source.cancel_request_count, 1)
+        source.cancel()
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+    @async_test
+    async def test_async_operation_cancelled_by_the_operation(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        # An operation that cancels itself, as Windows does when a device goes
+        # away, has failed rather than been cancelled by Python.
+        source.cancel()
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, WIN32_ERROR_CANCELLED)
+        self.assertEqual(source.cancel_request_count, 0)
+
+    def test_async_info_cancel(self) -> None:
+        source = tc.AsyncActionSource()
+        info = source.operation.as_(wf.IAsyncInfo)
+
+        info.cancel()
+        self.assertEqual(source.cancel_request_count, 1)
+
+        source.complete()
+
+    def test_async_handlers_refuse_none(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.completed = None  # type: ignore[assignment]
+
+        self.assertFalse(source.has_completed_handler)
+        source.complete()
+
+    def test_async_completed_takes_one_handler(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        def handler(sender: wf.IAsyncOperation[int], status: wf.AsyncStatus) -> None:
+            pass
+
+        op.completed = handler
+
+        with self.assertRaises(OSError) as ctx:
+            op.completed = handler
+
+        self.assertEqual(ctx.exception.winerror, E_ILLEGAL_DELEGATE_ASSIGNMENT)
+        source.complete(1)
+
+    def test_async_progress_refuses_none(self) -> None:
+        # A C++/WinRT coroutine, which dereferences a null handler.
+        op = tc.TestRunner.create_async_action_with_progress(0, [])
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.progress = None  # type: ignore[assignment]
+
+        with self.assertRaisesRegex(TypeError, "takes a callable, not None"):
+            op.completed = None  # type: ignore[assignment]
+
+        op.get()
+
+    async def _await_recording_cancellation(
+        self, op: wf.IAsyncAction, seen: list[bool]
+    ) -> None:
+        try:
+            await op
+        except asyncio.CancelledError:
+            seen.append(op.status != wf.AsyncStatus.STARTED)
+            raise
+
+    async def _assert_task_waits_for_the_operation(
+        self,
+        source: tc.AsyncActionSource,
+        op: wf.IAsyncAction,
+        task: asyncio.Task[None],
+    ) -> None:
+        # A task that was resumed by its cancellation alone would be done
+        # within a couple of loop iterations.
+        for _ in range(5):
+            await asyncio.sleep(0)
+
+        self.assertEqual(source.cancel_request_count, 1)
+        self.assertEqual(op.status, wf.AsyncStatus.STARTED)
+        self.assertFalse(task.done())
+
+    @async_test
+    async def test_async_operation_cancel_waits_for_the_operation(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+        seen: list[bool] = []
+
+        async def wait_with_timeout() -> None:
+            async with asyncio.timeout(0):
+                await self._await_recording_cancellation(op, seen)
+
+        task = asyncio.create_task(wait_with_timeout())
+
+        try:
+            await self._assert_task_waits_for_the_operation(source, op, task)
+            self.assertEqual(seen, [])
+        finally:
+            # Only the source finishes the operation, and the task does not
+            # end until it has, so a failed assertion has to finish it too.
+            source.cancel()
+
+        with self.assertRaises(TimeoutError):
+            await task
+
+        # The task was resumed by the operation finishing, not before.
+        self.assertEqual(seen, [True])
+        self.assertEqual(op.status, wf.AsyncStatus.CANCELED)
+
+    @async_test
+    async def test_async_operation_task_cancel_waits_for_the_operation(self) -> None:
+        for cancels in (1, 2):
+            with self.subTest(cancels=cancels):
+                source = tc.AsyncActionSource()
+                op = source.operation
+                seen: list[bool] = []
+
+                task = asyncio.create_task(self._await_recording_cancellation(op, seen))
+                await asyncio.sleep(0)
+
+                for _ in range(cancels):
+                    task.cancel()
+
+                # Cancelling the task twice before it runs is one
+                # cancellation, which asks the operation once.
+                try:
+                    await self._assert_task_waits_for_the_operation(source, op, task)
+                    self.assertEqual(seen, [])
+                finally:
+                    source.cancel()
+
+                with self.assertRaises(asyncio.CancelledError):
+                    await task
+
+                self.assertEqual(seen, [True])
+
+    @async_test
+    async def test_async_operation_second_cancel_gives_up_waiting(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+        seen: list[bool] = []
+
+        task = asyncio.create_task(self._await_recording_cancellation(op, seen))
+        await asyncio.sleep(0)
+        task.cancel()
+
+        try:
+            await self._assert_task_waits_for_the_operation(source, op, task)
+
+            # An operation that never answers the request would keep the task
+            # for good, so cancelling the task again gives up waiting for it
+            # and leaves it running.
+            task.cancel()
+            await self._run_callbacks()
+
+            self.assertTrue(task.cancelled())
+            self.assertEqual(seen, [False])
+            self.assertEqual(op.status, wf.AsyncStatus.STARTED)
+            self.assertEqual(source.cancel_request_count, 1)
+        finally:
+            source.cancel()
+
+    @async_test
+    async def test_async_operation_abandoned_failure_is_reported(self) -> None:
+        for finish in ("fail", "complete", "cancel"):
+            with self.subTest(finish=finish):
+                errors = self._record_loop_errors()
+                source = tc.AsyncActionSource()
+                op = source.operation
+
+                task = asyncio.ensure_future(op)
+                await asyncio.sleep(0)
+                task.cancel()
+                await self._run_callbacks()
+                task.cancel()
+                await self._run_callbacks()
+
+                self.assertTrue(task.cancelled())
+
+                # Nothing waits for the operation any more, so an error goes to
+                # the loop's exception handler, and any other end is what the
+                # cancellation asked for.
+                if finish == "fail":
+                    source.fail(E_FAIL)
+                elif finish == "complete":
+                    source.complete()
+                else:
+                    source.cancel()
+
+                await self._run_callbacks()
+
+                if finish == "fail":
+                    self.assertEqual(len(errors), 1)
+                    self.assertIn("gave up waiting", errors[0]["message"])
+                    self.assertIsInstance(errors[0]["exception"], OSError)
+                    self.assertEqual(errors[0]["exception"].winerror, E_FAIL)
+                else:
+                    self.assertEqual(errors, [])
+
+    def test_async_operation_abandoned_failure_after_its_loop_closed(self) -> None:
+        source = tc.AsyncActionSource()
+        op = source.operation
+        loop = asyncio.new_event_loop()
+        errors: list[dict[str, Any]] = []
+
+        def handler(loop: asyncio.AbstractEventLoop, context: dict[str, Any]) -> None:
+            errors.append(context)
+
+        loop.set_exception_handler(handler)
+
+        async def wait() -> None:
+            await op
+
+        def run_callbacks() -> None:
+            for _ in range(5):
+                loop.run_until_complete(asyncio.sleep(0))
+
+        task = loop.create_task(wait())
+        run_callbacks()
+        task.cancel()
+        run_callbacks()
+        task.cancel()
+        run_callbacks()
+
+        self.assertTrue(task.cancelled())
+
+        loop.close()
+
+        # There is no loop to hand the error to, and the closed loop's
+        # exception handler is asked to report it all the same.
+        source.fail(E_FAIL)
+
+        self.assertEqual(len(errors), 1)
+        self.assertIsInstance(errors[0]["exception"], OSError)
+        self.assertEqual(errors[0]["exception"].winerror, E_FAIL)
+
+    @async_test
+    async def test_async_operation_cancel_ignored(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        task = asyncio.ensure_future(op)
+        await asyncio.sleep(0)
+        task.cancel()
+
+        try:
+            await self._run_callbacks()
+            self.assertEqual(source.cancel_request_count, 1)
+        finally:
+            # An operation that finishes anyway still leaves the task
+            # cancelled, as the task was asked to be.
+            source.complete(1)
+
+        with self.assertRaises(asyncio.CancelledError):
+            await task
+
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+
+    @async_test
+    async def test_async_operation_waits_for_the_handler(self) -> None:
+        source = tc.AsyncOperationSource()
+        source.defers_completed_handler = True
+        op = source.operation
+
+        task = asyncio.ensure_future(op)
+        await asyncio.sleep(0)
+
+        self.assertTrue(source.has_completed_handler)
+
+        source.complete(1)
+        await self._run_callbacks()
+
+        # The status says the operation has finished before its completed
+        # handler has said so, and an await that is waiting for the handler
+        # goes on waiting for it.
+        self.assertEqual(op.status, wf.AsyncStatus.COMPLETED)
+        self.assertFalse(task.done())
+
+        source.invoke_completed_handler()
+
+        self.assertEqual(await task, 1)
+
+    @async_test
+    async def test_async_operation_completed_on_another_thread(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        thread = threading.Thread(target=source.complete, args=(1,))
+
+        task = asyncio.ensure_future(op)
+        await asyncio.sleep(0)
+        thread.start()
+
+        self.assertEqual(await task, 1)
+
+        thread.join()
+
+    @async_test
+    async def test_async_operation_released(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        source.complete(1)
+
+        self.assertEqual(await op, 1)
+
+        # Neither the future nor the completed handler that the operation
+        # keeps holds the operation once it has been awaited. The loop lets go
+        # of the callback that resumed this coroutine one iteration later.
+        del op
+        await asyncio.sleep(0)
+
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_awaited_by_two_tasks(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+
+        # WinRT takes one completed handler, so a second await of a running
+        # operation fails, and a task around it is what two tasks can share.
+        shared = asyncio.ensure_future(op)
+        await asyncio.sleep(0)
+
+        with self.assertRaises(OSError) as ctx:
+            await op
+
+        self.assertEqual(ctx.exception.winerror, E_ILLEGAL_DELEGATE_ASSIGNMENT)
+
+        async def waiter() -> int:
+            return await shared
+
+        tasks = [asyncio.create_task(waiter()) for _ in range(2)]
+        source.complete(1)
+
+        self.assertEqual(await asyncio.gather(*tasks), [1, 1])
+
+    def test_async_operation_completed_after_its_loop_closed(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        loop = asyncio.new_event_loop()
+        # The task is still pending when it is freed, which the loop reports.
+        loop.set_exception_handler(lambda loop, context: None)
+
+        async def wait() -> None:
+            await op
+
+        task = loop.create_task(wait())
+        loop.run_until_complete(asyncio.sleep(0))
+        loop.close()
+
+        self.assertTrue(source.has_completed_handler)
+
+        # The completion has no loop to go to, and the handler lets it go.
+        with catch_unraisable() as unraisable:
+            source.complete(1)
+
+        self.assertEqual(unraisable, [])
+
+        del task, op
+        gc.collect()
+
+        self.assertFalse(source.is_operation_alive)
+
+    @async_test
+    async def test_async_operation_error_raised_afresh(self) -> None:
+        source = tc.AsyncOperationSource()
+        op = source.operation
+        source.fail(E_FAIL)
+
+        errors: list[OSError] = []
+
+        for _ in range(3):
+            try:
+                await op
+            except OSError as error:
+                errors.append(error)
+                # As in CPython's test_future_traceback: the traceback does
+                # not grow with every await.
+                text = "".join(traceback.format_tb(error.__traceback__))
+                self.assertEqual(text.count("await op"), 1)
+
+        # Each one comes from get_results() itself, because a kept exception
+        # would hold the operation through the frames of its traceback.
+        self.assertEqual([e.winerror for e in errors], [E_FAIL] * 3)
+        self.assertIsNot(errors[1], errors[0])
+
+        del op, errors
+        await asyncio.sleep(0)
+
+        self.assertFalse(source.is_operation_alive)
 
 
 T = TypeVar("T")
@@ -880,12 +1971,12 @@ class WinrtAiter(Generic[T]):
             elif status == wf.AsyncStatus.CANCELED:
                 result["exception"] = asyncio.CancelledError()
             elif status == wf.AsyncStatus.ERROR:
-                result["exception"] = ctypes.WinError(op.error_code.value)
+                result["exception"] = ctypes.WinError(op.error_code)
             else:
                 raise RuntimeError("unexpected status")
 
             # FIXME: shutdown() was introduced in 3.13, so we can't use it generally
-            loop.call_soon_threadsafe(queue.shutdown)  # type: ignore [attr-defined]
+            loop.call_soon_threadsafe(queue.shutdown)
 
         self._op.progress = on_progress
         self._op.completed = on_completed
@@ -899,7 +1990,7 @@ class WinrtAiter(Generic[T]):
     async def __anext__(self) -> T:
         try:
             return await self._queue.get()
-        except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+        except asyncio.QueueShutDown:
             # this acts as signal that the operation is done
             pass
 
@@ -924,6 +2015,6 @@ class WinrtAiter(Generic[T]):
         while True:
             try:
                 await self._queue.get()
-            except asyncio.QueueShutDown:  # type: ignore [attr-defined]
+            except asyncio.QueueShutDown:
                 self._result.pop("exception", None)
                 break

@@ -1,0 +1,518 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Web.Http.Filters
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[HttpResponseMessage, HttpProgress]
+    guid 68e4606a-76ec-5816-b2fe-a04ecde4126a
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Web.Http.HttpResponseMessage
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=62 reverse=9
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in struct type=Windows.Web.Http.HttpProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[HttpResponseMessage, HttpProgress]
+    guid beadb572-f9a3-5e93-b6ca-e311b65933fc
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Web.Http.HttpResponseMessage
+    argument Windows.Web.Http.HttpProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.Web.Http.Filters.HttpBaseProtocolFilter activatable python_type closeable
+    py HttpBaseProtocolFilter
+    signature rc(Windows.Web.Http.Filters.HttpBaseProtocolFilter;{71c89b09-e131-4b54-a53c-eb43ff37e9bb})
+    default Windows.Web.Http.Filters.IHttpBaseProtocolFilter
+    requires Windows.Web.Http.Filters.IHttpBaseProtocolFilter
+    requires Windows.Web.Http.Filters.IHttpBaseProtocolFilter2
+    requires Windows.Web.Http.Filters.IHttpBaseProtocolFilter3
+    requires Windows.Web.Http.Filters.IHttpBaseProtocolFilter4
+    requires Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+    requires Windows.Web.Http.Filters.IHttpFilter
+    requires Windows.Foundation.IClosable
+    factory Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property use_proxy
+        get get_UseProxy slot=23 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out boolean return
+        put put_UseProxy slot=24 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in boolean name=value
+    property server_credential
+        get get_ServerCredential slot=21 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ServerCredential slot=22 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property proxy_credential
+        get get_ProxyCredential slot=19 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out class type=Windows.Security.Credentials.PasswordCredential return
+        put put_ProxyCredential slot=20 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in class type=Windows.Security.Credentials.PasswordCredential name=value
+    property max_connections_per_server
+        get get_MaxConnectionsPerServer slot=17 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out uint32 return
+        put put_MaxConnectionsPerServer slot=18 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in uint32 name=value
+    property client_certificate
+        get get_ClientCertificate slot=14 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+        put put_ClientCertificate slot=15 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+    property automatic_decompression
+        get get_AutomaticDecompression slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out boolean return
+        put put_AutomaticDecompression slot=11 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in boolean name=value
+    property allow_ui
+        get get_AllowUI slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out boolean return
+        put put_AllowUI slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in boolean name=value
+    property allow_auto_redirect
+        get get_AllowAutoRedirect slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out boolean return
+        put put_AllowAutoRedirect slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            in boolean name=value
+    property cache_control
+        get get_CacheControl slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out class type=Windows.Web.Http.Filters.HttpCacheControl return
+    property cookie_manager
+        get get_CookieManager slot=13 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out class type=Windows.Web.Http.HttpCookieManager return
+    property ignorable_server_certificate_errors
+        get get_IgnorableServerCertificateErrors slot=16 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property max_version
+        get get_MaxVersion slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 shape=4
+            out enum32 type=Windows.Web.Http.HttpVersion return
+        put put_MaxVersion slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 shape=4
+            in enum32 type=Windows.Web.Http.HttpVersion name=value
+    property cookie_usage_behavior
+        get get_CookieUsageBehavior slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 shape=4
+            out enum32 type=Windows.Web.Http.Filters.HttpCookieUsageBehavior return
+        put put_CookieUsageBehavior slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 shape=4
+            in enum32 type=Windows.Web.Http.Filters.HttpCookieUsageBehavior name=value
+    property user
+        get get_User slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter5 shape=4
+            out class type=Windows.System.User return
+    event server_custom_validation_requested
+        add add_ServerCustomValidationRequested slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Web.Http.Filters.HttpBaseProtocolFilter,Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ServerCustomValidationRequested slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method clear_authentication_cache
+        method ClearAuthenticationCache slot=8 inputs=0 outputs=0 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 shape=0
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method create_for_user static
+        method CreateForUser slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics shape=51 static
+            in class type=Windows.System.User name=user
+            out class type=Windows.Web.Http.Filters.HttpBaseProtocolFilter return
+    method send_request_async
+        method SendRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Filters.IHttpFilter shape=51 reverse=24
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+
+class Windows.Web.Http.Filters.HttpCacheControl python_type
+    py HttpCacheControl
+    signature rc(Windows.Web.Http.Filters.HttpCacheControl;{c77e1cb4-3cea-4eb5-ac85-04e186e63ab7})
+    default Windows.Web.Http.Filters.IHttpCacheControl
+    requires Windows.Web.Http.Filters.IHttpCacheControl
+    property write_behavior
+        get get_WriteBehavior slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpCacheControl shape=4
+            out enum32 type=Windows.Web.Http.Filters.HttpCacheWriteBehavior return
+        put put_WriteBehavior slot=9 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpCacheControl shape=4
+            in enum32 type=Windows.Web.Http.Filters.HttpCacheWriteBehavior name=value
+    property read_behavior
+        get get_ReadBehavior slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpCacheControl shape=4
+            out enum32 type=Windows.Web.Http.Filters.HttpCacheReadBehavior return
+        put put_ReadBehavior slot=7 inputs=1 outputs=0 declaring=Windows.Web.Http.Filters.IHttpCacheControl shape=4
+            in enum32 type=Windows.Web.Http.Filters.HttpCacheReadBehavior name=value
+
+enum Windows.Web.Http.Filters.HttpCacheReadBehavior python_type
+    py HttpCacheReadBehavior
+    signature enum(Windows.Web.Http.Filters.HttpCacheReadBehavior;i4)
+    constant DEFAULT 0
+    constant MOST_RECENT 1
+    constant ONLY_FROM_CACHE 2
+    constant NO_CACHE 3
+
+enum Windows.Web.Http.Filters.HttpCacheWriteBehavior python_type
+    py HttpCacheWriteBehavior
+    signature enum(Windows.Web.Http.Filters.HttpCacheWriteBehavior;i4)
+    constant DEFAULT 0
+    constant NO_CACHE 1
+
+enum Windows.Web.Http.Filters.HttpCookieUsageBehavior python_type
+    py HttpCookieUsageBehavior
+    signature enum(Windows.Web.Http.Filters.HttpCookieUsageBehavior;i4)
+    constant DEFAULT 0
+    constant NO_COOKIES 1
+
+class Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs python_type
+    py HttpServerCustomValidationRequestedEventArgs
+    signature rc(Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs;{3165fe32-e7dd-48b7-a361-939c750e63cc})
+    default Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs
+    requires Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs
+    property request_message
+        get get_RequestMessage slot=6 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out class type=Windows.Web.Http.HttpRequestMessage return
+    property server_certificate
+        get get_ServerCertificate slot=7 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property server_certificate_error_severity
+        get get_ServerCertificateErrorSeverity slot=8 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out enum32 type=Windows.Networking.Sockets.SocketSslErrorSeverity return
+    property server_certificate_errors
+        get get_ServerCertificateErrors slot=9 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    property server_intermediate_certificates
+        get get_ServerIntermediateCertificates slot=10 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> return
+    method get_deferral
+        method GetDeferral slot=12 inputs=0 outputs=1 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+    method reject
+        method Reject slot=11 inputs=0 outputs=0 declaring=Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs shape=0
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[HttpResponseMessage, HttpProgress]
+    guid 5d144364-77d7-5eca-8b09-936a69446652
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Web.Http.HttpResponseMessage;{fee200fb-8664-44e0-95d9-42696199bffc});struct(Windows.Web.Http.HttpProgress;enum(Windows.Web.Http.HttpProgressStage;i4);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u8;pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u8);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Web.Http.HttpResponseMessage
+    argument Windows.Web.Http.HttpProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Web.Http.HttpResponseMessage return
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter
+    guid 71c89b09-e131-4b54-a53c-eb43ff37e9bb
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter2
+    guid 2ec30013-9427-4900-a017-fa7da3b5c9ae
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter3
+    guid d43f4d4c-bd42-43ae-8717-ad2c8f4b2937
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter4
+    guid 9fe36ccf-2983-4893-941f-eb518ca8cef9
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+    guid 416e4993-31e3-4816-bf09-e018ee8dc1f5
+
+interface Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics
+    guid 6d4dee0c-e908-494e-b5a3-1263c9b8242a
+
+interface Windows.Web.Http.Filters.IHttpCacheControl
+    guid c77e1cb4-3cea-4eb5-ac85-04e186e63ab7
+
+interface Windows.Web.Http.Filters.IHttpFilter python_type closeable
+    py _IHttpFilter
+    guid a4cb6dd5-0902-439e-bfd7-e12552b165ce
+    signature {a4cb6dd5-0902-439e-bfd7-e12552b165ce}
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method send_request_async
+        method SendRequestAsync slot=6 inputs=1 outputs=1 declaring=Windows.Web.Http.Filters.IHttpFilter shape=51 reverse=24
+            in class type=Windows.Web.Http.HttpRequestMessage name=request
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> return
+
+interface Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs
+    guid 3165fe32-e7dd-48b7-a361-939c750e63cc
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Certificate]
+    guid 0c7d1423-e8fd-5a91-b55c-8bfbe7ac2d40
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[ChainValidationResult]
+    guid 2628f58f-3f02-54f2-808f-e1117709d6d0
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Certificate]
+    guid 676fc159-f15c-58bd-91a7-28f7e795c756
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[ChainValidationResult]
+    guid 8bcad2b7-0e3b-5eae-bf69-e1f6d9c888f8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[ChainValidationResult]
+    guid d7828cf7-4301-58d3-aab5-06e5eefcf79f
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult>
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=173 role=append
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=117 reverse=101 role=index_of
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=211 role=replace_all
+            pass_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Certificate]
+    guid 963f7013-77c2-51c5-8038-b5bcef633edb
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Cryptography.Certificates.Certificate;{333f740c-04d8-43b3-b278-8c5fcc9be5a0}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate>
+    argument Windows.Security.Cryptography.Certificates.Certificate
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.Certificate> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.Certificate> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Cryptography.Certificates.Certificate return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Cryptography.Certificates.Certificate name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> shape=117 reverse=66 role=index_of
+            in class type=Windows.Security.Cryptography.Certificates.Certificate name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[ChainValidationResult]
+    guid cb383486-c2bc-5756-912d-6a708a07e5bd
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Security.Cryptography.Certificates.ChainValidationResult;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult>
+    argument Windows.Security.Cryptography.Certificates.ChainValidationResult
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Cryptography.Certificates.ChainValidationResult> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> shape=117 reverse=66 role=index_of
+            in enum32 type=Windows.Security.Cryptography.Certificates.ChainValidationResult name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Web.Http.Filters.HttpBaseProtocolFilter,Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[HttpBaseProtocolFilter, HttpServerCustomValidationRequestedEventArgs]
+    guid ed0260c6-41f2-5a04-9a8b-2930d7ff8a9e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Web.Http.Filters.HttpBaseProtocolFilter;{71c89b09-e131-4b54-a53c-eb43ff37e9bb});rc(Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs;{3165fe32-e7dd-48b7-a361-939c750e63cc}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Web.Http.Filters.HttpBaseProtocolFilter
+    argument Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Web.Http.Filters.HttpBaseProtocolFilter name=sender
+            in class type=Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs name=args
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+enum Windows.Networking.Sockets.SocketSslErrorSeverity external
+    py winrt.windows.networking.sockets.SocketSslErrorSeverity
+
+class Windows.Security.Credentials.PasswordCredential external
+    py winrt.windows.security.credentials.PasswordCredential
+
+class Windows.Security.Cryptography.Certificates.Certificate external
+    py winrt.windows.security.cryptography.certificates.Certificate
+
+enum Windows.Security.Cryptography.Certificates.ChainValidationResult external
+    py winrt.windows.security.cryptography.certificates.ChainValidationResult
+
+class Windows.System.User external
+    py winrt.windows.system.User
+
+class Windows.Web.Http.HttpCookieManager external
+    py winrt.windows.web.http.HttpCookieManager
+
+struct Windows.Web.Http.HttpProgress external
+    py winrt.windows.web.http.HttpProgress
+
+class Windows.Web.Http.HttpRequestMessage external
+    py winrt.windows.web.http.HttpRequestMessage
+
+class Windows.Web.Http.HttpResponseMessage external
+    py winrt.windows.web.http.HttpResponseMessage
+
+enum Windows.Web.Http.HttpVersion external
+    py winrt.windows.web.http.HttpVersion

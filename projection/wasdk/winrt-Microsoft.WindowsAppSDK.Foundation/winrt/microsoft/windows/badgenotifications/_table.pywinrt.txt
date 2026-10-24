@@ -1,0 +1,44 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.BadgeNotifications
+
+enum Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph python_type
+    py BadgeNotificationGlyph
+    signature enum(Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph;i4)
+    constant NONE 0
+    constant ACTIVITY 1
+    constant ALARM 2
+    constant ALERT 3
+    constant ATTENTION 4
+    constant AVAILABLE 5
+    constant AWAY 6
+    constant BUSY 7
+    constant ERROR 8
+    constant NEW_MESSAGE 9
+    constant PAUSED 10
+    constant PLAYING 11
+    constant UNAVAILABLE 12
+
+class Microsoft.Windows.BadgeNotifications.BadgeNotificationManager python_type
+    py BadgeNotificationManager
+    signature rc(Microsoft.Windows.BadgeNotifications.BadgeNotificationManager;{11cb6e8f-11ca-53f8-80f6-5330d44ba908})
+    default Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager
+    requires Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager
+    factory Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics
+    property current static
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics shape=4 static
+            out class type=Microsoft.Windows.BadgeNotifications.BadgeNotificationManager return
+    method clear_badge
+        method ClearBadge slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=0
+    method set_badge_as_count
+        method SetBadgeAsCount slot=6 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4
+            in uint32 name=notificationCount
+    method set_badge_as_glyph
+        method SetBadgeAsGlyph slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager shape=4
+            in enum32 type=Microsoft.Windows.BadgeNotifications.BadgeNotificationGlyph name=glyphValue
+
+interface Microsoft.Windows.BadgeNotifications.IBadgeNotificationManager
+    guid 11cb6e8f-11ca-53f8-80f6-5330d44ba908
+
+interface Microsoft.Windows.BadgeNotifications.IBadgeNotificationManagerStatics
+    guid a6e71616-7c9f-5d22-ad1c-f4ab874087b5

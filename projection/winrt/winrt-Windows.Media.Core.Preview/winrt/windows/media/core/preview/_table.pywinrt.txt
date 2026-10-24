@@ -1,0 +1,43 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Media.Core.Preview
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
+
+interface Windows.Media.Core.Preview.ISoundLevelBrokerStatics
+    guid 6a633961-dbed-464c-a09a-33412f5caa3f
+
+class Windows.Media.Core.Preview.SoundLevelBroker static python_type
+    py SoundLevelBroker
+    factory Windows.Media.Core.Preview.ISoundLevelBrokerStatics
+    property sound_level static
+        get get_SoundLevel slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=4 static
+            out enum32 type=Windows.Media.SoundLevel return
+    event sound_level_changed static
+        add add_SoundLevelChanged slot=7 inputs=1 outputs=1 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=51 static
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_SoundLevelChanged slot=8 inputs=1 outputs=0 declaring=Windows.Media.Core.Preview.ISoundLevelBrokerStatics shape=26 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+
+class System.Object external
+    py winrt.system.Object
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+enum Windows.Media.SoundLevel external
+    py winrt.windows.media.SoundLevel

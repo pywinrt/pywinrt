@@ -1,12 +1,13 @@
 # /// script
 # dependencies = [
-#   "winrt-Windows.Foundation.Numerics>=3.1",
-#   "winrt-Windows.System>=3.1",
-#   "winrt-Windows.System.Interop>=3.1",
-#   "winrt-Windows.UI>=3.1",
-#   "winrt-Windows.UI.Composition>=3.1",
-#   "winrt-Windows.UI.Composition.Desktop>=3.1",
-#   "winrt-Windows.UI.Composition.Interop>=3.1",
+#   "winrt-runtime>=4",
+#   "winrt-Windows.Foundation.Numerics",
+#   "winrt-Windows.System",
+#   "winrt-Windows.System.Interop>=4",
+#   "winrt-Windows.UI",
+#   "winrt-Windows.UI.Composition",
+#   "winrt-Windows.UI.Composition.Desktop",
+#   "winrt-Windows.UI.Composition.Interop>=4",
 # ]
 # ///
 
@@ -54,7 +55,7 @@ def add_element(size: float, x: float, y: float) -> None:
     g = randint(0, 255)
     b = randint(0, 255)
 
-    element.brush = compositor.create_color_brush_with_color((255, r, g, b))
+    element.brush = compositor.create_color_brush((255, r, g, b))
     element.size = (size, size)
     element.offset = (x, y, 0)
 

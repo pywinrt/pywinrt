@@ -2,6 +2,16 @@
 
 # winrt-Windows.System.Diagnostics.DevicePortal
 
-Windows Runtime (WinRT) APIs for for the `Windows.System.Diagnostics.DevicePortal` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.System.Diagnostics.DevicePortal` namespace.
 
 This package provides the `winrt.windows.system.diagnostics.deviceportal` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.System.Diagnostics.DevicePortal
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

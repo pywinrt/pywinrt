@@ -1,0 +1,388 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Gaming.Input.ForceFeedback
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[ForceFeedbackLoadEffectResult]
+    guid f8220a41-f738-51e8-89ba-76bbd66158cb
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.Gaming.Input.ForceFeedback.ConditionForceEffect python_type
+    py ConditionForceEffect
+    signature rc(Windows.Gaming.Input.ForceFeedback.ConditionForceEffect;{a17fba0c-2ae4-48c2-8063-eabd0777cb89})
+    default Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IConditionForceEffect
+    factory Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory shape=51
+            in enum32 type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind name=effectKind
+            out class type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffect return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffect shape=4
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind return
+    property gain
+        get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
+            out double return
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=2 reverse=38
+            in double name=value
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
+    method set_parameters
+        method SetParameters slot=7 inputs=7 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IConditionForceEffect shape=282
+            in struct type=Windows.Foundation.Numerics.Vector3 name=direction
+            in single name=positiveCoefficient
+            in single name=negativeCoefficient
+            in single name=maxPositiveMagnitude
+            in single name=maxNegativeMagnitude
+            in single name=deadZone
+            in single name=bias
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
+
+enum Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind python_type
+    py ConditionForceEffectKind
+    signature enum(Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind;i4)
+    constant SPRING 0
+    constant DAMPER 1
+    constant INERTIA 2
+    constant FRICTION 3
+
+class Windows.Gaming.Input.ForceFeedback.ConstantForceEffect activatable python_type
+    py ConstantForceEffect
+    signature rc(Windows.Gaming.Input.ForceFeedback.ConstantForceEffect;{a17fba0c-2ae4-48c2-8063-eabd0777cb89})
+    default Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IConstantForceEffect
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property gain
+        get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
+            out double return
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=2 reverse=38
+            in double name=value
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
+    method set_parameters
+        method SetParameters slot=6 inputs=2 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IConstantForceEffect shape=78
+            in struct type=Windows.Foundation.Numerics.Vector3 name=vector
+            in timespan name=duration
+    method set_parameters_with_envelope
+        method SetParametersWithEnvelope slot=7 inputs=9 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IConstantForceEffect shape=293
+            in struct type=Windows.Foundation.Numerics.Vector3 name=vector
+            in single name=attackGain
+            in single name=sustainGain
+            in single name=releaseGain
+            in timespan name=startDelay
+            in timespan name=attackDuration
+            in timespan name=sustainDuration
+            in timespan name=releaseDuration
+            in uint32 name=repeatCount
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
+
+enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes python_type flags_enum
+    py ForceFeedbackEffectAxes
+    signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes;u4)
+    constant NONE 0x0
+    constant X 0x1
+    constant Y 0x2
+    constant Z 0x4
+
+enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState python_type
+    py ForceFeedbackEffectState
+    signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState;i4)
+    constant STOPPED 0
+    constant RUNNING 1
+    constant PAUSED 2
+    constant FAULTED 3
+
+enum Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult python_type
+    py ForceFeedbackLoadEffectResult
+    signature enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4)
+    constant SUCCEEDED 0
+    constant EFFECT_STORAGE_FULL 1
+    constant EFFECT_NOT_SUPPORTED 2
+
+class Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor python_type
+    py ForceFeedbackMotor
+    signature rc(Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor;{8d3d417c-a5ea-4516-8026-2b00f74ef6e5})
+    default Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor
+    requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor
+    property master_gain
+        get get_MasterGain slot=7 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out double return
+        put put_MasterGain slot=8 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=2
+            in double name=value
+    property are_effects_paused
+        get get_AreEffectsPaused slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out boolean return
+    property is_enabled
+        get get_IsEnabled slot=9 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out boolean return
+    property supported_axes
+        get get_SupportedAxes slot=10 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out enum_u32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes return
+    method load_effect_async
+        method LoadEffectAsync slot=11 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51
+            in interface type=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect name=effect
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> return
+    method pause_all_effects
+        method PauseAllEffects slot=12 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
+    method resume_all_effects
+        method ResumeAllEffects slot=13 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
+    method stop_all_effects
+        method StopAllEffects slot=14 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=0
+    method try_disable_async
+        method TryDisableAsync slot=15 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_enable_async
+        method TryEnableAsync slot=16 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_reset_async
+        method TryResetAsync slot=17 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_unload_effect_async
+        method TryUnloadEffectAsync slot=18 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor shape=51
+            in interface type=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect name=effect
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[ForceFeedbackLoadEffectResult]
+    guid 21f834fc-e845-5ab9-bf85-9534e2397798
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult return
+
+interface Windows.Gaming.Input.ForceFeedback.IConditionForceEffect
+    guid 32d1ea68-3695-4e69-85c0-cd1944189140
+
+interface Windows.Gaming.Input.ForceFeedback.IConditionForceEffectFactory
+    guid 91a99264-1810-4eb6-a773-bfd3b8cddbab
+
+interface Windows.Gaming.Input.ForceFeedback.IConstantForceEffect
+    guid 9bfa0140-f3c7-415c-b068-0f068734bce0
+
+interface Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect python_type
+    py _IForceFeedbackEffect
+    guid a17fba0c-2ae4-48c2-8063-eabd0777cb89
+    signature {a17fba0c-2ae4-48c2-8063-eabd0777cb89}
+    property gain
+        get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
+            out double return
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=2 reverse=38
+            in double name=value
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
+
+interface Windows.Gaming.Input.ForceFeedback.IForceFeedbackMotor
+    guid 8d3d417c-a5ea-4516-8026-2b00f74ef6e5
+
+interface Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect
+    guid 5c5138d7-fc75-4d52-9a0a-efe4cab5fe64
+
+interface Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory
+    guid 6f62eb1a-9851-477b-b318-35ecaa15070f
+
+interface Windows.Gaming.Input.ForceFeedback.IRampForceEffect
+    guid f1f81259-1ca6-4080-b56d-b43f3354d052
+
+class Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect python_type
+    py PeriodicForceEffect
+    signature rc(Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect;{a17fba0c-2ae4-48c2-8063-eabd0777cb89})
+    default Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect
+    factory Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffectFactory shape=51
+            in enum32 type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind name=effectKind
+            out class type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect return
+    property gain
+        get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
+            out double return
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=2 reverse=38
+            in double name=value
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
+    property kind
+        get get_Kind slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=4
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind return
+    method set_parameters
+        method SetParameters slot=7 inputs=5 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=257
+            in struct type=Windows.Foundation.Numerics.Vector3 name=vector
+            in single name=frequency
+            in single name=phase
+            in single name=bias
+            in timespan name=duration
+    method set_parameters_with_envelope
+        method SetParametersWithEnvelope slot=8 inputs=12 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IPeriodicForceEffect shape=302
+            in struct type=Windows.Foundation.Numerics.Vector3 name=vector
+            in single name=frequency
+            in single name=phase
+            in single name=bias
+            in single name=attackGain
+            in single name=sustainGain
+            in single name=releaseGain
+            in timespan name=startDelay
+            in timespan name=attackDuration
+            in timespan name=sustainDuration
+            in timespan name=releaseDuration
+            in uint32 name=repeatCount
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
+
+enum Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind python_type
+    py PeriodicForceEffectKind
+    signature enum(Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind;i4)
+    constant SQUARE_WAVE 0
+    constant SINE_WAVE 1
+    constant TRIANGLE_WAVE 2
+    constant SAWTOOTH_WAVE_UP 3
+    constant SAWTOOTH_WAVE_DOWN 4
+
+class Windows.Gaming.Input.ForceFeedback.RampForceEffect activatable python_type
+    py RampForceEffect
+    signature rc(Windows.Gaming.Input.ForceFeedback.RampForceEffect;{a17fba0c-2ae4-48c2-8063-eabd0777cb89})
+    default Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect
+    requires Windows.Gaming.Input.ForceFeedback.IRampForceEffect
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property gain
+        get get_Gain slot=6 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=22
+            out double return
+        put put_Gain slot=7 inputs=1 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=2 reverse=38
+            in double name=value
+    property state
+        get get_State slot=8 inputs=0 outputs=1 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=4 reverse=62
+            out enum32 type=Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState return
+    method set_parameters
+        method SetParameters slot=6 inputs=3 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IRampForceEffect shape=148
+            in struct type=Windows.Foundation.Numerics.Vector3 name=startVector
+            in struct type=Windows.Foundation.Numerics.Vector3 name=endVector
+            in timespan name=duration
+    method set_parameters_with_envelope
+        method SetParametersWithEnvelope slot=7 inputs=10 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IRampForceEffect shape=296
+            in struct type=Windows.Foundation.Numerics.Vector3 name=startVector
+            in struct type=Windows.Foundation.Numerics.Vector3 name=endVector
+            in single name=attackGain
+            in single name=sustainGain
+            in single name=releaseGain
+            in timespan name=startDelay
+            in timespan name=attackDuration
+            in timespan name=sustainDuration
+            in timespan name=releaseDuration
+            in uint32 name=repeatCount
+    method start
+        method Start slot=9 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=93
+    method stop
+        method Stop slot=10 inputs=0 outputs=0 declaring=Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect shape=0 reverse=117
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3

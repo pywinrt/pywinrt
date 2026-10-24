@@ -1,58 +1,39 @@
-import json
+"""Builds the source distribution of every package that is published.
+
+    python scripts/build-sdist.py
+    python scripts/build-sdist.py --family webview2
+    python scripts/build-sdist.py --package winrt-Windows.Foundation
+
+A source distribution has to build on a machine that has nothing but PyPI, so
+nothing here tells a build where to find something in this checkout: the
+C++/WinRT headers that winrt-runtime and the interop modules compile against
+ride inside the packages that include them, and a projection package's only
+build step is compiling its tables, which the hatchling hook that
+winrt-table-compiler ships does.
+
+A package that redistributes a Microsoft binary carries no copy of it, since
+nothing prebuilt belongs in a source distribution; its build fetches the NuGet
+package instead, and an environment variable names an unpacked copy for a
+machine that cannot reach nuget.org. The variables are set below so that
+building here never goes to the network.
+"""
+
+import argparse
 import os
 import subprocess
-from glob import iglob
-from itertools import chain
-from pathlib import Path
 
-PROJECT_DIR = Path(__file__).parent.parent
+# the packages that are published, and the filters that pick some of them
+import packages
 
-TOOLS_JSON_PATH = PROJECT_DIR / ".config" / "_tools.json"
+packages.set_nuget_environment()
 
-with open(TOOLS_JSON_PATH) as f:
-    tools_json = json.load(f)
+parser = argparse.ArgumentParser(
+    description="Builds the source distribution of every package that is published."
+)
+packages.add_arguments(parser)
+args = parser.parse_args()
 
-
-def versioned_package(package: str) -> str:
-    return f"{package}.{tools_json[package]}"
-
-
-PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
-WEBVIEW2_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.Web.WebView2")
-).resolve()
-MICROSOFT_UI_XAML_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.UI.Xaml")
-).resolve()
-WINDOWS_APP_SDK_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.WindowsAppSDK")
-).resolve()
-
-os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
-os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
-os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
-
-
-try:
-    import winrt_sdk  # noqa: F401
-    import winrt_microsoft_ui_xaml  # noqa: F401
-    import winrt_windows_app_sdk  # noqa: F401
-except ImportError:
-    print(
-        "winrt-sdk, winrt-Microsoft.UI.Xaml and winrt-WindowsAppSDK must be installed first installed in order for build to succeed."
-    )
-    exit(1)
-
-
-for package_path in chain(
-    [os.fspath(PROJECTION_PATH / "winrt-runtime")],
-    iglob(os.fspath(PROJECTION_PATH / "interop" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "interop" / "winui3-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winrt" / "winrt-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winui2" / "winui2-*")),
-    iglob(os.fspath(PROJECTION_PATH / "winui3" / "winui3-*")),
-    iglob(os.fspath(PROJECTION_PATH / "webview2" / "webview2-*")),
-):
+for package in packages.select(args):
     subprocess.check_call(
         [
             "pyproject-build",
@@ -61,6 +42,6 @@ for package_path in chain(
             "--skip-dependency-check",
             "--outdir",
             "wheelhouse",
-            package_path,
+            os.fspath(package.path),
         ],
     )

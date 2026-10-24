@@ -1,0 +1,797 @@
+"""
+The Python types that ``winrt-runtime`` builds from a projection table.
+
+A projection package ships a table and no compiled code, so everything a
+generated extension module used to provide - the classes, the interfaces, the
+structs, and the members bound to them - is made at import time by
+``runtime/src/types.cpp`` and called by ``runtime/src/interp.cpp``. This is what
+checks that what comes out is the same shape as what the thunks were.
+
+``test_table.py`` checks that the generator and the runtime agree about the
+bytes. This checks that the runtime turns those bytes into the projection.
+"""
+
+import copy
+import importlib
+import pickle
+import sys
+import unittest
+import uuid
+import weakref
+from typing import Any
+
+import test_winrt.testcomponent as tc
+import winrt.windows.data.json as wdj
+import winrt.windows.foundation as wf
+import winrt.windows.foundation.collections as wfc
+import winrt.windows.globalization as wg
+import winrt.windows.storage as ws
+import winrt.windows.storage.provider as wsp
+from winrt.system import Array, Int32, Object, Object_Static
+from winrt.system.hresult import E_FAIL
+
+BLITTABLE_FIELDS = (1, 2, 3, 4, 5, 6, 7, 8.0, 9.0, uuid.UUID(int=10))
+
+# The types an interface's instances are returned as, which the stubs do not
+# name, since only the interface is for users.
+TESTS_WRAPPER: type = getattr(tc, "_ITests")
+REQUIRED_ONE_WRAPPER: type = getattr(tc, "_IRequiredOne")
+REQUIRED_TWO_WRAPPER: type = getattr(tc, "_IRequiredTwo")
+
+
+class TestModule(unittest.TestCase):
+    def test_a_type_belongs_to_the_package_that_projects_it(self) -> None:
+        # There is no hidden extension module any more, so a type is created
+        # straight into the public module and says so.
+        self.assertEqual(wf.Uri.__module__, "winrt.windows.foundation")
+        self.assertEqual(tc.Class.__module__, "test_winrt.testcomponent")
+
+    def test_an_interface_is_bound_twice(self) -> None:
+        # The wrapper an instance is returned as, and the public name that
+        # carries the IID and that a Python implementation would derive from.
+        self.assertIsNot(tc.ITests, TESTS_WRAPPER)
+        self.assertEqual(TESTS_WRAPPER.__name__, "_ITests")
+        self.assertEqual(tc.ITests.__name__, "ITests")
+
+    def test_date_time_and_time_span_have_no_struct_type(self) -> None:
+        # They are datetime.datetime and datetime.timedelta wherever they appear.
+        self.assertFalse(hasattr(wf, "DateTime"))
+        self.assertFalse(hasattr(wf, "TimeSpan"))
+
+    def test_reloading_keeps_the_types(self) -> None:
+        before = tc.Class
+        importlib.reload(sys.modules["test_winrt.testcomponent"])
+        self.assertIs(sys.modules["test_winrt.testcomponent"].Class, before)
+
+
+class TestObject(unittest.TestCase):
+    """
+    winrt.system.Object is the type of everything WinRT can hold: a wrapped
+    WinRT object, and a Python implementation of an interface, which does not
+    derive from it.
+    """
+
+    def test_a_wrapped_object_is_one(self) -> None:
+        uri = wf.Uri("https://example.com")
+        self.assertIsInstance(uri, Object)
+        self.assertIsInstance(uri.as_(wf.IStringable), Object)
+        self.assertTrue(issubclass(wf.Uri, Object))
+
+    def test_a_python_implementation_is_one(self) -> None:
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        self.assertIsInstance(Stringable(), Object)
+        self.assertTrue(issubclass(Stringable, Object))
+        self.assertTrue(issubclass(wf.IStringable, Object))
+
+    def test_nothing_else_is_one(self) -> None:
+        self.assertNotIsInstance(wf.Point(1, 2), Object)
+        self.assertNotIsInstance(object(), Object)
+        self.assertFalse(issubclass(wf.Point, Object))
+        self.assertFalse(issubclass(int, Object))
+
+    def test_every_class_has_the_public_metaclass(self) -> None:
+        # what the type hints name, through winrt.system
+        self.assertIs(type(Object), Object_Static)
+        self.assertIsInstance(wf.Uri, Object_Static)
+        self.assertIsInstance(wf.IStringable, Object_Static)
+
+    def test_only_a_python_class_is_weakly_referenced(self) -> None:
+        # the same WinRT object can come back as another wrapper, so a weak
+        # reference to a wrapper would not follow the object
+        with self.assertRaises(TypeError):
+            weakref.ref(wf.Uri("https://example.com"))
+
+        class Derived(tc.Composable):
+            pass
+
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        for obj in (Derived(), Stringable()):
+            with self.subTest(obj=obj):
+                self.assertIs(weakref.ref(obj)(), obj)
+
+
+class TestClasses(unittest.TestCase):
+    def test_activation(self) -> None:
+        self.assertIsInstance(tc.Class(), tc.Class)
+
+    def test_a_class_that_cannot_be_activated(self) -> None:
+        # The stubs refuse these calls as well, which is what the ignores check.
+        with self.assertRaisesRegex(
+            TypeError, "cannot create 'TestComponent.TestRunner' instances"
+        ):
+            tc.TestRunner()  # type: ignore[call-arg]
+
+        with self.assertRaisesRegex(
+            TypeError, "cannot create 'Windows.Foundation.GuidHelper' instances"
+        ):
+            wf.GuidHelper()  # type: ignore[call-arg]
+
+    def test_a_constructor_takes_no_keywords(self) -> None:
+        # The stubs refuse the call as well, which is what the ignore checks.
+        with self.assertRaisesRegex(TypeError, "keyword arguments are not supported"):
+            wf.Uri(uri="https://example.com/")  # type: ignore[call-overload]
+
+    def test_from_is_a_deprecated_alias_of_query_interface_(self) -> None:
+        uri = wf.Uri("https://example.com")
+        # _from is not in the type hints
+        classes: tuple[Any, ...] = (wf.IStringable, wf.Uri, Object)
+
+        for cls in classes:
+            with self.subTest(cls=cls):
+                with self.assertWarns(DeprecationWarning):
+                    seen: object = cls._from(uri)
+
+                fresh: object = cls._query_interface_(uri)
+                self.assertIs(type(seen), type(fresh))
+                self.assertEqual(seen, uri)
+
+    def test_a_member_of_a_required_interface(self) -> None:
+        # Class implements IRequiredOne, which is not its default interface, so
+        # reaching one() queries for it.
+        self.assertEqual(tc.Class().one(), 1)
+
+    def test_runtime_types_are_named_for_their_module(self) -> None:
+        # Object, its metaclass and Array are named for the module they are
+        # imported from, which is what reprs and error messages show.
+        for cls in (Object, Object_Static, Array):
+            with self.subTest(cls=cls):
+                self.assertEqual(cls.__module__, "winrt.system")
+
+        self.assertEqual(repr(Object), "<class 'winrt.system.Object'>")
+
+        with self.assertRaisesRegex(TypeError, "'winrt.system.Array' and 'int'"):
+            Array(Int32, [1]) + 1  # type: ignore
+
+    def test_as_object(self) -> None:
+        uri = wf.Uri("http://example.com/")
+        obj = uri.as_(Object)
+
+        # IInspectable, which is what a winrt.system.Object holds
+        self.assertIs(type(obj), Object)
+        self.assertTrue(obj == uri)
+        self.assertEqual(obj._runtime_class_name_, "Windows.Foundation.Uri")
+        self.assertEqual(obj.as_(wf.Uri).to_string(), "http://example.com/")
+
+    def test_equality_is_identity(self) -> None:
+        uri = wf.Uri("http://example.com/")
+
+        # the same object, held by a wrapper of another of its interfaces
+        self.assertTrue(uri == uri.as_(wf.IStringable))
+        self.assertFalse(uri != uri.as_(wf.IStringable))
+
+        # an object of its own, whatever it holds
+        self.assertFalse(uri == wf.Uri("http://example.com/"))
+        self.assertTrue(uri != wf.Uri("http://example.com/"))
+
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "http://example.com/"
+
+        # nothing that is not a wrapper holds a WinRT object already
+        for other in (None, "http://example.com/", Stringable()):
+            with self.subTest(other=other):
+                self.assertFalse(uri == other)
+                self.assertTrue(uri != other)
+
+        class EqualToAnything:
+            def __eq__(self, other: object) -> bool:
+                return True
+
+            def __ne__(self, other: object) -> bool:
+                return False
+
+        # which is left to answer for itself, as Python's own types do
+        self.assertTrue(uri == EqualToAnything())
+        self.assertFalse(uri != EqualToAnything())
+
+    def test_a_wrapper_is_made_each_time_an_object_is_read(self) -> None:
+        # Two reads of one object are two wrappers, which are equal and hash
+        # the same but are not the same Python object.
+        properties = wfc.PropertySet()
+        properties.insert("uri", wf.Uri("http://example.com/"))
+
+        first = properties.lookup("uri")
+        second = properties.lookup("uri")
+
+        self.assertIsNot(first, second)
+        self.assertEqual(first, second)
+        self.assertEqual(hash(first), hash(second))
+
+    def test_as_and_isinstance(self) -> None:
+        instance = tc.Class()
+
+        self.assertIsInstance(instance.as_(tc.IRequiredOne), REQUIRED_ONE_WRAPPER)
+        self.assertIsInstance(instance, tc.IRequiredOne)
+        self.assertNotIsInstance(instance, tc.IRequiredTwo)
+
+    def test_isinstance_agrees_with_as(self) -> None:
+        # A class does not derive from its interfaces, so isinstance() asks the
+        # object, and it has to give the answer as_() gets. A Python
+        # implementation derives from one interface and implements the ones it
+        # requires as well.
+        class Four(tc.IRequiredFour):
+            def one(self) -> int:
+                return 1
+
+            def two(self) -> int:
+                return 2
+
+            def three(self) -> int:
+                return 3
+
+            def four(self) -> int:
+                return 4
+
+        for instance in (tc.Class(), tc.Composable(), Four()):
+            for interface in (
+                tc.IRequiredOne,
+                tc.IRequiredTwo,
+                tc.IRequiredThree,
+                tc.IRequiredFour,
+                wf.IStringable,
+            ):
+                with self.subTest(instance=type(instance), interface=interface):
+                    try:
+                        instance.as_(interface)
+                    except OSError:
+                        implemented = False
+                    else:
+                        implemented = True
+
+                    self.assertEqual(isinstance(instance, interface), implemented)
+
+    def test_isinstance_with_a_bare_generic_interface(self) -> None:
+        # Only an instance of a parameterized interface has an IID to ask for.
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            isinstance(wdj.JsonArray(), wfc.IVector)
+
+        with self.assertRaisesRegex(TypeError, "parameterized generic"):
+            isinstance(wdj.JsonArray(), wfc.IIterable[int])  # type: ignore[misc]
+
+    def test_isinstance_with_a_python_implementation(self) -> None:
+        class Impl(wf.IStringable):
+            def to_string(self) -> str:
+                return "impl"
+
+        self.assertIsInstance(Impl(), Impl)
+        self.assertNotIsInstance(wf.Uri("http://example.com"), Impl)
+
+    def test_issubclass_of_an_interface(self) -> None:
+        # A class does not derive from its interfaces in Python either, so the
+        # table answers, the way the stubs spell the bases.
+        self.assertTrue(issubclass(wf.Uri, wf.IStringable))
+        self.assertTrue(issubclass(tc.Class, tc.IRequiredOne))
+        self.assertFalse(issubclass(tc.Class, tc.IRequiredTwo))
+        self.assertFalse(issubclass(tc.Class, wf.IStringable))
+
+    def test_issubclass_through_a_base_class(self) -> None:
+        # Derived lists only its own interface; the rest are Composable's.
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredFour))
+        self.assertTrue(issubclass(tc.Derived, tc.IRequiredOne))
+
+    def test_issubclass_of_a_required_interface(self) -> None:
+        self.assertTrue(issubclass(tc.IRequiredTwo, tc.IRequiredOne))
+        self.assertFalse(issubclass(tc.IRequiredOne, tc.IRequiredTwo))
+
+    def test_issubclass_of_the_wrapper_type(self) -> None:
+        # The underscored type an instance is returned as is the interface.
+        self.assertTrue(issubclass(REQUIRED_ONE_WRAPPER, tc.IRequiredOne))
+        self.assertTrue(issubclass(REQUIRED_TWO_WRAPPER, tc.IRequiredOne))
+
+    def test_issubclass_of_something_else(self) -> None:
+        self.assertFalse(issubclass(tc.Blittable, tc.IRequiredOne))
+        self.assertFalse(issubclass(int, tc.IRequiredOne))
+        # The metaclass that carries the statics implements nothing.
+        self.assertFalse(issubclass(type(wf.Uri), wf.IStringable))
+
+    def test_issubclass_with_a_python_implementation(self) -> None:
+        class Impl(wf.IStringable):
+            def to_string(self) -> str:
+                return "impl"
+
+        self.assertTrue(issubclass(Impl, wf.IStringable))
+        self.assertFalse(issubclass(Impl, wf.IClosable))
+        self.assertFalse(issubclass(wf.Uri, Impl))
+
+    def test_issubclass_with_a_bare_generic_interface(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            issubclass(wdj.JsonArray, wfc.IIterable)
+
+        with self.assertRaisesRegex(TypeError, "parameterized generic"):
+            issubclass(wdj.JsonArray, wfc.IVector[wdj.IJsonValue])  # type: ignore[misc]
+
+    def test_issubclass_agrees_with_isinstance(self) -> None:
+        instance = tc.Class()
+
+        for interface in (
+            tc.IRequiredOne,
+            tc.IRequiredTwo,
+            tc.IRequiredThree,
+            tc.IRequiredFour,
+        ):
+            with self.subTest(interface=interface):
+                self.assertEqual(
+                    issubclass(type(instance), interface),
+                    isinstance(instance, interface),
+                )
+
+    def test_as_something_with_no_query_interface(self) -> None:
+        uri = wf.Uri("http://example.com/")
+
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) takes a WinRT class or interface, not 'int'"
+        ):
+            uri.as_(int)  # type: ignore
+
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) takes a WinRT class or interface, not a 'str'"
+        ):
+            uri.as_("IStringable")  # type: ignore
+
+    def test_as_something_with_no_query_interface_by_its_qualified_name(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, "
+            r"not 'winrt.windows.foundation.AsyncStatus'",
+        ):
+            wf.Uri("http://example.com/").as_(wf.AsyncStatus)  # type: ignore
+
+    def test_as_an_instance(self) -> None:
+        # An instance finds its class's _query_interface_(), but it names no type.
+        uri = wf.Uri("http://example.com/")
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, "
+            r"not a 'winrt.windows.foundation.Uri'",
+        ):
+            uri.as_(uri)  # type: ignore
+
+    def test_as_a_bare_generic_interface(self) -> None:
+        # as isinstance() says it
+        with self.assertRaisesRegex(TypeError, "takes type arguments"):
+            wdj.JsonArray().as_(wfc.IVector)  # pyright: ignore[reportUnknownArgumentType]
+
+    def test_as_a_parameterized_interface(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError, r"as_\(\) cannot take a parameterized interface"
+        ):
+            wdj.JsonArray().as_(wfc.IVector[wdj.IJsonValue])
+
+    def test_as_a_parameterized_type(self) -> None:
+        # Only an interface is said to be one.
+        with self.assertRaisesRegex(
+            TypeError,
+            r"as_\(\) takes a WinRT class or interface, not a 'types.GenericAlias'",
+        ):
+            wdj.JsonArray().as_(list[int])  # type: ignore
+
+    def test_as_an_interface_the_object_does_not_implement(self) -> None:
+        with self.assertRaises(OSError):
+            tc.Class().as_(tc.IRequiredTwo)
+
+    def test_a_property_reads_and_writes(self) -> None:
+        instance = tc.Composable()
+
+        self.assertEqual(instance.value, 0)
+        instance.value = 7
+        self.assertEqual(instance.value, 7)
+
+    def test_a_property_cannot_be_deleted(self) -> None:
+        # the stubs declare no deleter, so pyright refuses these too
+        with self.assertRaises(AttributeError):
+            del tc.Composable().value  # pyright: ignore[reportAttributeAccessIssue]
+
+        with self.assertRaises(AttributeError):
+            del wf.Uri("https://example.com/").host  # pyright: ignore[reportAttributeAccessIssue]
+
+    def test_a_keyword_name_gets_an_underscore(self) -> None:
+        # CurrencyIdentifiers.TRY, the Turkish lira
+        self.assertEqual(wg.CurrencyIdentifiers.try_, "TRY")
+        self.assertFalse(hasattr(wg.CurrencyIdentifiers, "try"))
+
+    def test_a_derived_class_reaches_its_base(self) -> None:
+        instance = tc.Derived()
+
+        self.assertIsInstance(instance, tc.Composable)
+        self.assertEqual(instance.one(), 1)
+        self.assertEqual(instance.value, 0)
+
+    def test_a_static_method(self) -> None:
+        self.assertEqual(tc.TestRunner.create_time_span(1500).total_seconds(), 1.5)
+
+    def test_a_static_method_that_returns_an_object(self) -> None:
+        self.assertIsInstance(wdj.JsonValue.create_number_value(1.0), wdj.JsonValue)
+
+    def test_an_object_from_another_package(self) -> None:
+        # The parameter's type lives in a package the table only names, so the
+        # type registry has to find it before the call can be made.
+        self.assertEqual(wf.Uri("http://example.com/a?b=c").host, "example.com")
+
+    def test_a_failing_hresult_becomes_an_exception(self) -> None:
+        value = wdj.JsonValue.create_number_value(1.0)
+
+        with self.assertRaises(OSError):
+            value.get_string()
+
+
+class TestMembers(unittest.TestCase):
+    def setUp(self) -> None:
+        self.tests = tc.TestRunner.make_tests()
+
+    def test_a_method_with_no_arguments_and_no_result(self) -> None:
+        self.assertIsNone(self.tests.simple())
+
+    def test_a_method_with_several_outputs(self) -> None:
+        self.assertEqual(self.tests.param7(42), (42, 42))
+
+    def test_a_string_argument(self) -> None:
+        self.assertEqual(self.tests.param12("hello"), ("hello", "hello"))
+
+    def test_a_flags_argument_with_bit_31_set(self) -> None:
+        # A flags enum is an unsigned 32 bit integer, so its top bit is a flag
+        # like any other.
+        info = wsp.StorageProviderSyncRootInfo()
+        policy = (
+            wsp.StorageProviderInSyncPolicy.PRESERVE_INSYNC_FOR_SYNC_ENGINE
+            | wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME
+        )
+
+        info.in_sync_policy = policy
+        self.assertEqual(info.in_sync_policy, policy)
+
+    def test_a_flags_argument_out_of_range(self) -> None:
+        info = wsp.StorageProviderSyncRootInfo()
+
+        with self.assertRaises(ValueError):
+            info.in_sync_policy = -1  # type: ignore[assignment]
+
+        with self.assertRaises(OverflowError):
+            info.in_sync_policy = 2**32  # type: ignore[assignment]
+
+    def test_a_flags_argument_that_is_an_index_object(self) -> None:
+        class Index:
+            def __index__(self) -> int:
+                return int(wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME)
+
+        info = wsp.StorageProviderSyncRootInfo()
+
+        info.in_sync_policy = Index()  # type: ignore[assignment]
+        self.assertEqual(
+            info.in_sync_policy, wsp.StorageProviderInSyncPolicy.FILE_CREATION_TIME
+        )
+
+    def test_the_wrong_number_of_arguments(self) -> None:
+        with self.assertRaises(TypeError):
+            self.tests.param7(1, 2)  # type: ignore[call-arg]
+
+    def test_keyword_arguments_are_refused(self) -> None:
+        with self.assertRaises(TypeError):
+            self.tests.param7(a=1)  # type: ignore[call-arg]
+
+    def test_a_descriptor_names_itself(self) -> None:
+        # the members of a wrapper type are built from the table, and the stubs
+        # do not name the type
+        descriptor = getattr(TESTS_WRAPPER, "simple")
+
+        self.assertEqual(descriptor.__name__, "simple")
+        self.assertIs(descriptor.__objclass__, TESTS_WRAPPER)
+
+    def test_a_descriptor_refuses_another_type(self) -> None:
+        with self.assertRaises(TypeError):
+            TESTS_WRAPPER.simple(tc.Class())  # type: ignore[attr-defined]
+
+    def test_an_overload_is_chosen_by_argument_count(self) -> None:
+        obj = wdj.JsonObject.parse('{ "spam": "eggs" }')
+
+        self.assertEqual(obj.get_named_string("spam"), "eggs")
+        self.assertEqual(obj.get_named_string("ham", "sausage"), "sausage")
+
+
+class TestEnums(unittest.TestCase):
+    # A newer Windows can hand back a value the projection was generated
+    # without, which is a member with no name rather than a ValueError.
+
+    def test_a_value_with_no_member(self) -> None:
+        status = wf.AsyncStatus(99)
+
+        self.assertIsInstance(status, wf.AsyncStatus)
+        self.assertEqual(status, 99)
+        self.assertEqual(status.name, "99")
+        self.assertEqual(status.value, 99)
+        self.assertEqual(repr(status), "<AsyncStatus: 99>")
+        self.assertEqual(str(status), "99")
+
+    def test_a_value_with_no_member_is_not_one_of_the_members(self) -> None:
+        # Not checked with `in`, which Python 3.11 refuses for a plain int and
+        # 3.12 answers by calling the enum.
+        members = list(wf.AsyncStatus)
+
+        status = wf.AsyncStatus(99)
+
+        self.assertNotIn(status, members)
+        self.assertEqual(list(wf.AsyncStatus), members)
+        self.assertNotIn(99, wf.AsyncStatus._value2member_map_)
+
+    def test_a_value_with_no_member_read_from_winrt(self) -> None:
+        # The runtime makes an enum value by calling the enum with the integer,
+        # wherever the value comes from.
+        a = Array(wf.AsyncStatus, 1)
+        with memoryview(a) as m:
+            m[0] = 99
+
+        self.assertEqual(repr(a[0]), "<AsyncStatus: 99>")
+
+    def test_a_value_with_no_member_pickles(self) -> None:
+        status = wf.AsyncStatus(99)
+
+        self.assertEqual(pickle.loads(pickle.dumps(status)), status)
+
+    def test_a_value_with_no_member_is_a_plain_number(self) -> None:
+        # Made from another enum's member, it holds the number rather than that
+        # member.
+        status = wf.AsyncStatus(wf.PropertyType.OTHER_TYPE_ARRAY)
+
+        self.assertIs(type(status.value), int)
+        self.assertEqual(status.name, str(int(wf.PropertyType.OTHER_TYPE_ARRAY)))
+
+    def test_a_value_with_no_member_is_not_found_by_name(self) -> None:
+        with self.assertRaises(KeyError):
+            wf.AsyncStatus["99"]
+
+    def test_a_member_is_still_the_member(self) -> None:
+        self.assertIs(wf.AsyncStatus(1), wf.AsyncStatus.COMPLETED)
+
+    def test_a_value_out_of_range_is_refused(self) -> None:
+        for value in (2**31, -(2**31) - 1):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                wf.AsyncStatus(value)
+
+        with self.assertRaises(ValueError):
+            wf.AsyncStatus("1")  # type: ignore[arg-type]
+
+    def test_a_flags_enum_keeps_a_bit_with_no_member(self) -> None:
+        attributes = ws.FileAttributes(0x10000 | ws.FileAttributes.READ_ONLY)
+
+        self.assertEqual(attributes, 0x10001)
+        self.assertIn(ws.FileAttributes.READ_ONLY, attributes)
+
+
+class TestStructs(unittest.TestCase):
+    """
+    A struct is the one value the runtime lays out itself, because the table
+    says what its fields are and never where they sit: a pointer is not the
+    same width on every architecture one table serves. The offsets the reader
+    computes are checked against ``struct.calcsize`` in ``test_table.py``; what
+    is checked here is that a value written through those offsets comes back
+    unchanged from WinRT, which no arithmetic can fake.
+    """
+
+    def test_positional_fields(self) -> None:
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+
+        self.assertEqual(value.a, 1)
+        self.assertEqual(value.i, 9.0)
+        self.assertEqual(value.j, uuid.UUID(int=10))
+
+    def test_keyword_fields(self) -> None:
+        self.assertEqual(tc.Blittable(a=1, b=2), tc.Blittable(1, 2))
+
+    def test_fields_left_out_are_zero(self) -> None:
+        self.assertEqual(tc.Blittable().a, 0)
+
+    def test_an_unknown_field(self) -> None:
+        with self.assertRaises(TypeError):
+            tc.Blittable(nope=1)  # type: ignore[call-arg]
+
+    def test_equality_with_a_tuple(self) -> None:
+        self.assertEqual(tc.Blittable(*BLITTABLE_FIELDS), BLITTABLE_FIELDS)
+
+    def test_repr(self) -> None:
+        self.assertTrue(repr(tc.Blittable()).startswith("Blittable(a=0, "))
+
+    def test_hash(self) -> None:
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+
+        # a struct equals the tuple of its fields, so it hashes as that tuple
+        self.assertEqual(hash(value), hash(tc.Blittable(*BLITTABLE_FIELDS)))
+        self.assertEqual(hash(value), hash(BLITTABLE_FIELDS))
+        self.assertEqual(len({value, tc.Blittable(*BLITTABLE_FIELDS)}), 1)
+        self.assertEqual({value: "one"}[tc.Blittable(*BLITTABLE_FIELDS)], "one")
+
+    def test_hash_of_a_nested_struct(self) -> None:
+        value = tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))
+
+        self.assertEqual(
+            hash(value),
+            hash(tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))),
+        )
+
+    def test_a_copy_is_the_struct_itself(self) -> None:
+        value = tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))
+
+        self.assertIs(copy.copy(value), value)
+        self.assertIs(copy.deepcopy(value), value)
+
+        # what it is for: copying something that holds a struct
+        holder = {"nested": [value], "point": wf.Point(1, 2)}
+        self.assertEqual(copy.deepcopy(holder), holder)
+
+    def test_a_struct_does_not_pickle(self) -> None:
+        with self.assertRaises(TypeError):
+            pickle.dumps(wf.Point(1, 2))
+
+    def test_match_by_keyword(self) -> None:
+        match tc.NonBlittable(a=True, c="hi"):
+            case tc.NonBlittable(a=True, c=c):
+                self.assertEqual(c, "hi")
+            case _:
+                self.fail("the pattern should match")
+
+    def test_match_by_position(self) -> None:
+        self.assertEqual(tc.NonBlittable.__match_args__, ("a", "b", "c", "d"))
+
+        match tc.NonBlittable(True, "x", "hi"):
+            case tc.NonBlittable(True, b, "hi"):
+                self.assertEqual(b, "x")
+            case _:
+                self.fail("the pattern should match")
+
+    def test_replace(self) -> None:
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+        replaced = value.__replace__(a=99)
+
+        self.assertEqual(replaced.a, 99)
+        self.assertEqual(replaced.b, value.b)
+        self.assertEqual(value.a, 1)
+
+    def test_a_round_trip_through_winrt(self) -> None:
+        tests = tc.TestRunner.make_tests()
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+
+        self.assertEqual(tests.param13(value, value), (value, value))
+
+    def test_a_tuple_in_place_of_a_struct(self) -> None:
+        tests = tc.TestRunner.make_tests()
+
+        self.assertEqual(
+            tests.param13(BLITTABLE_FIELDS, BLITTABLE_FIELDS),
+            (tc.Blittable(*BLITTABLE_FIELDS), tc.Blittable(*BLITTABLE_FIELDS)),
+        )
+
+    def test_a_tuple_of_the_wrong_length(self) -> None:
+        tests = tc.TestRunner.make_tests()
+        value = tc.Blittable(*BLITTABLE_FIELDS)
+
+        with self.assertRaises(TypeError):
+            tests.param13(BLITTABLE_FIELDS[:-1], value)  # type: ignore[arg-type]
+
+
+class TestIntegerStructs(unittest.TestCase):
+    """
+    Two WinRT structs hold one integer each and are projected as subclasses of
+    ``int`` rather than as wrappers with a field in them, which is how the
+    table's ``hresult`` and ``event_token`` codes differ from ``int32`` and
+    ``int64``: the ABI is the integer and the Python value is an instance of
+    the type the record names, the way an enum works.
+    """
+
+    def failed(self) -> wf.IAsyncAction:
+        action = tc.TestRunner.create_async_action_with_error(10, E_FAIL)
+
+        with self.assertRaises(OSError):
+            action.get()
+
+        return action
+
+    def test_an_hresult_is_an_int(self) -> None:
+        self.assertTrue(issubclass(wf.HResult, int))
+        self.assertTrue(issubclass(wf.EventRegistrationToken, int))
+
+    def test_an_output_comes_back_as_the_type(self) -> None:
+        error_code = self.failed().error_code
+
+        self.assertIsInstance(error_code, wf.HResult)
+        self.assertEqual(error_code, E_FAIL)
+
+    def test_an_hresult_is_the_signed_form_of_either(self) -> None:
+        # an HRESULT is written as the unsigned 0x8XXXXXXX and read back as a
+        # negative int32, and both make the one value WinRT hands back
+        self.assertEqual(wf.HResult(0x80004005), E_FAIL)
+        self.assertEqual(wf.HResult(E_FAIL), E_FAIL)
+        self.assertEqual(wf.HResult(0x80004005), self.failed().error_code)
+        self.assertIsInstance(wf.HResult(0x80004005), wf.HResult)
+
+    def test_an_hresult_takes_one_integer(self) -> None:
+        # what an Int32 parameter takes, rather than everything int() does
+        cases: list[tuple[Any, ...]] = [(), ("0x80004005", 16), (1.5,), ("1",)]
+
+        for args in cases:
+            with self.subTest(args=args), self.assertRaises(TypeError):
+                wf.HResult(*args)
+
+        with self.assertRaises(TypeError):
+            wf.HResult(value=1)  # type: ignore[call-arg]
+
+    def test_an_hresult_does_not_take_more_than_32_bits(self) -> None:
+        for value in (2**32, -(2**31) - 1, 2**64):
+            with (
+                self.subTest(value=value),
+                self.assertRaisesRegex(OverflowError, "does not fit in an HRESULT"),
+            ):
+                wf.HResult(value)
+
+    def test_an_input_takes_a_plain_int(self) -> None:
+        # E_FAIL is a plain int and the parameter is an HRESULT, which is what
+        # the action above was asked for.
+        self.assertEqual(self.failed().error_code, E_FAIL)
+
+    def test_an_event_token_comes_back_as_the_type(self) -> None:
+        obj = tc.Override()
+        token = obj.add_overridable_called(lambda s, e: None)
+
+        self.assertIsInstance(token, wf.EventRegistrationToken)
+
+        # and goes back as the integer it is
+        obj.remove_overridable_called(int(token))  # type: ignore[arg-type]
+
+    def test_an_event_token_cannot_be_created(self) -> None:
+        # WinRT issues one from add_<event>(), and there is nothing to make one
+        # from, but one is still read back from WinRT as the type
+        with self.assertRaisesRegex(TypeError, "cannot create"):
+            wf.EventRegistrationToken(1)  # type: ignore[arg-type]
+
+        self.assertIsInstance(
+            Array(wf.EventRegistrationToken, 1)[0], wf.EventRegistrationToken
+        )
+
+    def test_an_event_token_cannot_be_copied(self) -> None:
+        # whatever added the handler is the one owner of its registration
+        obj = tc.Override()
+        token = obj.add_overridable_called(lambda s, e: None)
+        self.addCleanup(obj.remove_overridable_called, token)
+
+        for copier in (copy.copy, copy.deepcopy, pickle.dumps):
+            with (
+                self.subTest(copier.__name__),
+                self.assertRaisesRegex(TypeError, "cannot pickle"),
+            ):
+                copier(token)
+
+    def test_the_field_the_type_used_to_have(self) -> None:
+        error_code = self.failed().error_code
+
+        with self.assertWarns(DeprecationWarning):
+            value = error_code.value  # type: ignore[deprecated]
+
+        self.assertEqual(value, E_FAIL)
+
+
+if __name__ == "__main__":
+    unittest.main()

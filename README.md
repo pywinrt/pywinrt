@@ -20,10 +20,11 @@ uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/mai
 
 ```python
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.11"
 # dependencies = [
-#   "winrt-runtime",
+#   "winrt-runtime>=4",
 #   "winrt-Windows.Foundation",
+#   "winrt-Windows.Media.Core",
 #   "winrt-Windows.Media.SpeechSynthesis",
 #   "winrt-Windows.Media.Playback",
 #   "winrt-Windows.Storage",
@@ -34,6 +35,7 @@ uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/refs/heads/mai
 import asyncio
 
 from winrt.system import Object
+from winrt.windows.media.core import MediaSource
 from winrt.windows.media.speechsynthesis import SpeechSynthesizer
 from winrt.windows.media.playback import MediaPlayer, MediaPlayerAudioCategory
 
@@ -51,7 +53,7 @@ async def main():
     player = MediaPlayer()
     player.audio_category = MediaPlayerAudioCategory.SPEECH
 
-    player.set_stream_source(stream)
+    player.source = MediaSource.create_from_stream(stream, stream.content_type)
     player.add_media_ended(on_media_ended)
     player.play()
 
@@ -78,6 +80,7 @@ This repository contains:
 - 🗓️ **January 2022 - August 2023**: Community released updates as [winsdk](https://pypi.org/project/winsdk).
 - 🗓️ **Starting September 2023**: Bindings are now modular and published by the community as separate packages, one per Windows SDK namespace. The top-level namespace has reverted from `winsdk` to the original `winrt`.
 - 🗓️ **Starting March 2025**: Additional top-level namespaces `winui2` and `winui3` added for projections of Window UI toolkits.
+- 🗓️ **Starting with v4.0**: The Windows App SDK and WebView2 projections moved back to the `winrt` top-level namespace, leaving `winui2` as the only other one, and the Windows App SDK is published one package per NuGet component.
 
 ## ⚙️ PyWinRT.exe
 

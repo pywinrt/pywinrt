@@ -1,0 +1,162 @@
+# `winrt.runtime.interop` module
+
+Various functions for interoperating with Win32 and COM.
+
+## Writing an interop module
+
+A compiled module that wraps a COM or Win32 interop API shares no C ABI with
+`winrt-runtime` and includes none of its headers. It exchanges WinRT objects
+with the runtime as *interface pointer capsules*, the
+[`InterfaceCapsule`](#interfacecapsule) type below. The four functions below
+and that type are the whole contract, and the interop packages of PyWinRT use
+them the same way. A Windows interop interface that acts for a runtime class,
+such as *IGraphicsCaptureItemInterop*, is implemented by the class's activation
+factory, which the runtime gets:
+
+```python
+from uuid import UUID
+
+import winrt.runtime.interop as _runtime
+import my_interop._native as _native
+from winrt.windows.graphics.capture import GraphicsCaptureItem
+
+_IID_IGRAPHICSCAPTUREITEMINTEROP = UUID("3628e81b-3cac-4c60-b7f4-23ce0e0c3356")
+
+
+def create_for_window(hwnd: int, /) -> GraphicsCaptureItem:
+    factory = _runtime.get_activation_factory(
+        GraphicsCaptureItem, _IID_IGRAPHICSCAPTUREITEMINTEROP
+    )
+
+    return _runtime.wrap_interface(
+        _native.create_for_window(factory, hwnd), GraphicsCaptureItem
+    )
+```
+
+### A type that `as_()` takes
+
+`obj.as_(cls)` returns `cls._query_interface_(obj)`, which every projected
+class and interface defines. A Python class that defines it too is taken by
+`as_()` as a projected type is, which is how an interop module offers a COM
+interface that is not WinRT and so has no projection. The class method asks the
+object for the interface with [`as_interface()`](#as_interface), raising
+`OSError` as it does for an object without it, and returns an instance of the
+class holding the capsule. A type checker then types the result of `as_()` as
+that class.
+
+For a component of your own, declare its interfaces in IDL instead.
+[Its projection](../versioning.md#projections-of-your-own-components) then
+defines `_query_interface_()` for them, as for any projected interface.
+
+## `InterfaceCapsule`
+
+```python
+InterfaceCapsule = NewType("InterfaceCapsule", CapsuleType)
+```
+
+A [capsule](https://docs.python.org/3/c-api/capsule.html) named
+`"winrt.interface"` that holds one reference to a COM interface, which its
+destructor releases. A compiled interop module's stub declares it for every
+capsule its functions take or return, so that a type checker tells it apart
+from any other capsule.
+
+!!! version-added "Added in version 4.0"
+
+## `as_interface`
+
+```python
+as_interface(obj: Object | None, iid: UUID | type[Object], /) -> InterfaceCapsule | None
+```
+
+An interface of a WinRT object, as an interface pointer capsule, or `None` for
+`None`.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `obj` | [`Object`](system.md#object) | A WinRT object, or a Python implementation of a projected interface. |
+| `iid` | `uuid.UUID` or `type` | The IID of the interface to query for, or a projected interface or runtime class, which stands for the interface an instance of it holds: the interface itself, or the class's default interface. |
+
+Raises `OSError` if the object does not implement the interface and
+`TypeError` if `iid` is a type that is neither a projected interface nor a
+runtime class. A parameterized interface such as `IVector` has no IID of its
+own until it is given type arguments, so it is named by a `uuid.UUID`.
+
+!!! version-added "Added in version 4.0"
+
+## `get_activation_factory`
+
+```python
+get_activation_factory(cls: type[Object], iid: UUID | type[Object], /) -> InterfaceCapsule
+```
+
+An interface of the activation factory of a runtime class, as an interface
+pointer capsule. A class's static members and constructors are reached through
+its activation factory, and so are the Windows interop interfaces that act for
+it. The runtime gets the factory as it does for a static member, so a call that
+is the first WinRT call in a process works.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `cls` | `type` | A projected runtime class, a static class included. |
+| `iid` | `uuid.UUID` or `type` | The IID of the interface to query the factory for, or a projected interface. |
+
+Raises `OSError` if the class is not registered or its factory does not
+implement the interface, and `TypeError` if `cls` is not a runtime class or if
+`iid` is a runtime class, or a Python subclass of a composable one, rather than
+an interface.
+
+!!! version-added "Added in version 4.0"
+
+## `wrap_interface`
+
+```python
+wrap_interface(capsule: InterfaceCapsule | None, type: type[T] | str, /) -> T | None
+```
+
+The WinRT object an interface pointer capsule holds, as a projected type, or
+`None` for `None`. The capsule keeps its own reference.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `capsule` | [`InterfaceCapsule`](#interfacecapsule) | An interface pointer capsule. |
+| `type` | `type` or `str` | The projected interface or runtime class to wrap the object as, or the qualified name it is bound to, such as `"winrt.windows.foundation.Uri"`. |
+
+Raises `OSError` if the object does not implement the interface that an
+instance of `type` holds.
+
+!!! version-added "Added in version 4.0"
+
+## `hresult_error`
+
+```python
+hresult_error(hresult: typing.SupportsIndex, error_info: InterfaceCapsule | None = None, /) -> OSError
+```
+
+The exception that a WinRT call which failed with `hresult` raises, for an
+interop module to raise in turn.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `hresult` | `typing.SupportsIndex` | The failure `HRESULT`, signed or unsigned. |
+| `error_info` | [`InterfaceCapsule`](#interfacecapsule) | An interface pointer capsule holding the *IErrorInfo* that the failed call left on the thread, or `None`. Its message is used when it is about the same `HRESULT`. |
+
+!!! version-added "Added in version 4.0"
+
+## `initialize_with_window`
+
+```python
+initialize_with_window(obj: Object, hwnd: typing.SupportsIndex, /) -> None
+```
+
+Provide an owner window to a Windows Runtime (WinRT) object used in a desktop application.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `obj` | [`Object`](system.md#object) | A WinRT object that implements *IInitializeWithWindow* interface. |
+| `hwnd` | `typing.SupportsIndex` | The handle of the window to be used as the owner window. |
+
+!!! version-added "Added in version 3.0"
+
+!!! seealso "See also"
+
+    [Microsoft docs](https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize)

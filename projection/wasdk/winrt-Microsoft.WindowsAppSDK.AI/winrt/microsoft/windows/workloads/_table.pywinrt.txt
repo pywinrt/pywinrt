@@ -1,0 +1,10 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.Workloads
+
+enum Microsoft.Windows.Workloads.WorkloadPriority python_type
+    py WorkloadPriority
+    signature enum(Microsoft.Windows.Workloads.WorkloadPriority;i4)
+    constant UNDEFINED 0
+    constant BACKGROUND 1
+    constant FOREGROUND 9

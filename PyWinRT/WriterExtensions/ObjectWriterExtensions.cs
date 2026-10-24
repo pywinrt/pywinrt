@@ -4,6 +4,32 @@ using Mono.Cecil;
 
 static class ObjectWriterExtensions
 {
+    /// <summary>
+    /// Writes the __new__ of a class with no constructor, public or protected,
+    /// which the runtime refuses to create, as it refuses a Python class
+    /// derived from one.
+    /// </summary>
+    /// <remarks>
+    /// Without it, the class would have a callable __new__ from object or from
+    /// its base class, though a WinRT constructor is not inherited. A parameter
+    /// that no argument can be given for is what both mypy and pyright refuse a
+    /// call for: neither refuses the call for a NoReturn return, and mypy does
+    /// not refuse it for typeshed's <c>__new__: None</c>. Self rather than
+    /// NoReturn keeps the code after a refused call checked. The docstring is
+    /// what an editor shows for the call.
+    /// </remarks>
+    static void WriteNoConstructor(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine("def __new__(cls, _: typing.Never, /) -> typing.Self:");
+        w.Indent++;
+        w.WriteLine(
+            type.IsStatic
+                ? "\"\"\"A class of static members only, so there is nothing to create.\"\"\""
+                : "\"\"\"WinRT gives this class no constructor; an instance comes from a method or property that returns one.\"\"\""
+        );
+        w.Indent--;
+    }
+
     public static void WritePythonClassTyping(
         this IndentedTextWriter w,
         ProjectedType type,
@@ -16,7 +42,7 @@ static class ObjectWriterExtensions
 
         if (type.PyRequiresMetaclass)
         {
-            var baseType = "winrt._winrt.IInspectable_Static";
+            var baseType = "winrt.system.Object_Static";
 
             if (type.Type.BaseType is TypeReference b && b.Namespace != "System")
             {
@@ -34,27 +60,101 @@ static class ObjectWriterExtensions
 
             var hasMembers = false;
 
-            foreach (var method in type.Methods.Where(m => m.IsStatic))
+            // pyright checks the keywords of a class statement against the
+            // metaclass's __new__ when the metaclass declares one, and
+            // ABCMeta's, which Object_Static inherits in the stubs, takes any
+            // keyword, so the runtime_class_name keyword that
+            // __init_subclass__ takes below is declared here as well.
+            if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
             {
-                if (type.Methods.Count(m => m.Name == method.Name) > 1)
-                {
-                    w.WriteLine("@typing.overload");
-                }
-
-                if (
-                    type.IsComposable
-                    && !method.IsOverridable
-                    && method.IsExclusiveTo
-                    // mypy rule: @typing.final can only be applied to the first overload
-                    && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
-                )
-                {
-                    w.WriteLine("@typing.final");
-                }
-
-                w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap, "cls");
+                w.WriteLine(
+                    $"def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> {type.Name}_Static: ..."
+                );
 
                 hasMembers = true;
+            }
+
+            foreach (var group in type.MethodGroups.Where(g => g.IsStatic))
+            {
+                // The stubs declare Object_Static as an ABCMeta,
+                // so a static register() is an incompatible override of
+                // ABCMeta.register(), which is not there at run time. mypy
+                // reports an overloaded method on its first decorator and
+                // pyright on its last definition. A method that is not
+                // overloaded is one line, where pyright honors mypy's ignore.
+                var shadowsAbcMeta = group.PyName == "register";
+                var mypyIgnore = shadowsAbcMeta ? "  # type: ignore[override]" : "";
+                var pyrightIgnore = shadowsAbcMeta
+                    ? "  # pyright: ignore[reportIncompatibleMethodOverride]"
+                    : "";
+
+                foreach (var method in group.Overloads)
+                {
+                    if (group.IsOverloaded)
+                    {
+                        w.WriteLine(
+                            $"@typing.overload{(method == group.Overloads[0] ? mypyIgnore : "")}"
+                        );
+                    }
+
+                    if (
+                        type.IsComposable
+                        && !group.IsOverridable
+                        && method.IsExclusiveTo
+                        // mypy rule: @typing.final can only be applied to the first overload
+                        && method == group.Overloads[0]
+                    )
+                    {
+                        w.WriteLine("@typing.final");
+                    }
+
+                    w.WritePythonMethodTyping(
+                        method,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        "cls",
+                        ignoreComment: group.IsOverloaded
+                            ? method == group.Overloads[^1]
+                                ? pyrightIgnore
+                                : ""
+                            : mypyIgnore
+                    );
+
+                    hasMembers = true;
+                }
+
+                foreach (var alias in group.Aliases)
+                {
+                    foreach (var method in alias.Methods)
+                    {
+                        if (alias.Methods.Count > 1)
+                        {
+                            w.WriteLine("@typing.overload");
+                        }
+
+                        if (
+                            type.IsComposable
+                            && !group.IsOverridable
+                            && method.IsExclusiveTo
+                            // mypy rule: @typing.final can only be applied to the first overload
+                            && method == alias.Methods[0]
+                        )
+                        {
+                            w.WriteLine("@typing.final");
+                        }
+
+                        w.WritePythonMethodTyping(
+                            method,
+                            ns,
+                            nullabilityMap,
+                            packageMap,
+                            "cls",
+                            aliasPyName: alias.PyName,
+                            aliasTarget: group.PyName
+                        );
+                    }
+                }
             }
 
             foreach (var evt in type.Events.Where(e => e.IsStatic))
@@ -85,7 +185,7 @@ static class ObjectWriterExtensions
 
             if (!hasMembers)
             {
-                w.WriteLine("pass");
+                w.WriteLine("...");
             }
 
             w.Indent--;
@@ -96,14 +196,6 @@ static class ObjectWriterExtensions
 
         if (type.Category == Category.Interface)
         {
-            // This is to make mypy happy so that we have to import it in the
-            // __init__.py files. It is just used internally though, so not
-            // doing full typing.
-            w.WriteLine("@typing.final");
-            w.WriteLine($"class {type.PyWrapperTypeName}: ...");
-            w.WriteBlankLine();
-
-            // This is the type users will actually use.
             w.WritePythonImplementsInterfaceTyping(type, ns, nullabilityMap, packageMap);
             return;
         }
@@ -112,7 +204,7 @@ static class ObjectWriterExtensions
 
         if (type.IsPyMapping)
         {
-            var method = type.Methods.Single(m => m.Name == "Lookup");
+            var method = type.GetMethod("Lookup", 1);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -134,16 +226,16 @@ static class ObjectWriterExtensions
 
             if (type.IsPyMutableMapping)
             {
-                collection = $", winrt._winrt.MutableMapping[{keyType}, {valueType}]";
+                collection = $", _cabc.MutableMapping[{keyType}, {valueType}]";
             }
             else
             {
-                collection = $", winrt._winrt.Mapping[{keyType}, {valueType}]";
+                collection = $", _cabc.Mapping[{keyType}, {valueType}]";
             }
         }
         else if (type.IsPySequence)
         {
-            var method = type.Methods.Single(m => m.Name == "GetAt");
+            var method = type.GetMethod("GetAt", 1);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -157,15 +249,15 @@ static class ObjectWriterExtensions
 
             if (type.IsPyMutableSequence)
             {
-                collection = $", winrt._winrt.MutableSequence[{elementType}]";
+                collection = $", _cabc.MutableSequence[{elementType}]";
             }
             else
             {
-                collection = $", winrt._winrt.Sequence[{elementType}]";
+                collection = $", _cabc.Sequence[{elementType}]";
             }
         }
 
-        var interfaceTypes = type.Interfaces.Where(i => !i.IsPythonCollection());
+        var interfaceTypes = type.Interfaces.Where(i => !i.IsPythonCollection);
 
         if (type.Category == Category.Interface)
         {
@@ -182,28 +274,31 @@ static class ObjectWriterExtensions
             )
         );
 
-        var generic = "";
-
-        // typing.Generic is redundant when there is a collection type
-        if (type.IsGeneric && string.IsNullOrEmpty(collection))
-        {
-            generic =
-                $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns, new TypeRefNullabilityInfo(p), packageMap)))}]";
-        }
-
         if (!type.IsComposable)
         {
             w.WriteLine("@typing.final");
         }
 
-        w.WriteLine(
-            $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns, new TypeRefNullabilityInfo(type.Type.BaseType), packageMap) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
-        );
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
+        // Every interface derives from winrt.system.Object in the stubs, so
+        // Object comes after a class's interfaces: ahead of them is an order no
+        // MRO allows.
+        var bases = type.Type.BaseType is { FullName: not "System.Object" } explicitBase
+            ? explicitBase.ToPyTypeName(ns, new TypeRefNullabilityInfo(explicitBase), packageMap)
+                + interfaces
+                + collection
+            : $"{interfaces}{collection}, winrt.system.Object"[2..];
+
+        w.WriteLine($"class {type.Name}{type.Type.PyTypeParameters}({bases}{metaclass}):");
         w.Indent++;
 
         if (type.IsStatic)
         {
-            w.WriteLine("pass");
+            w.WriteNoConstructor(type);
             w.Indent--;
             w.WriteBlankLine();
             return;
@@ -217,22 +312,38 @@ static class ObjectWriterExtensions
             didWriteLine = true;
         }
 
-        if (type.IsPyCloseable)
+        // A Python class derived from a composable class is the only kind of
+        // class Python can make a runtime class of, so the name its instances
+        // give WinRT is taken there rather than by winrt.system.Object, which
+        // an implementation of an interface derives from too. A composable
+        // class only derives from another, so the first in a hierarchy is
+        // where it is declared.
+        if (type.IsComposable && type.Type.BaseType is null or { FullName: "System.Object" })
         {
-            w.WriteLine("def __enter__(self: Self) -> Self: ...");
             w.WriteLine(
-                "def __exit__(self, exc_type: typing.Optional[typing.Type[BaseException]], exc_value: typing.Optional[BaseException], traceback: typing.Optional[types.TracebackType]) -> None: ..."
+                "def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ..."
             );
             didWriteLine = true;
         }
 
-        if (type.IsPyStringable)
+        if (type.IsPyCloseable)
         {
-            w.WriteLine("def __str__(self) -> str: ...");
+            w.WriteLine("def __enter__(self) -> typing.Self: ...");
+            w.WriteLine(
+                "def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ..."
+            );
             didWriteLine = true;
         }
 
         if (type.IsPyBuffer)
+        {
+            w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+            w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
+            w.WriteLine("def __len__(self) -> int: ...");
+            didWriteLine = true;
+        }
+
+        if (type.IsPyMemoryBuffer)
         {
             w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
             w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
@@ -264,7 +375,13 @@ static class ObjectWriterExtensions
         }
         else if (type.IsPySequence)
         {
-            w.WriteSeqPythonSpecialMethods(type, ns, nullabilityMap, packageMap);
+            w.WriteSeqPythonSpecialMethods(
+                type,
+                ns,
+                nullabilityMap,
+                packageMap,
+                isMutable: type.IsPyMutableSequence
+            );
 
             if (type.IsPyMutableSequence)
             {
@@ -283,15 +400,16 @@ static class ObjectWriterExtensions
             var nextType = prop.Property.PropertyType.ToPyTypeName(
                 ns,
                 nullabilityInfo.Return.Type,
-                packageMap
+                packageMap,
+                useBufferProtocol: false
             );
-            w.WriteLine("def __iter__(self: Self) -> Self: ...");
+            w.WriteLine("def __iter__(self) -> typing.Self: ...");
             w.WriteLine($"def __next__(self) -> {nextType}: ...");
             didWriteLine = true;
         }
         else if (type.IsPyIterable)
         {
-            var method = type.Methods.Single(m => m.Name == "First");
+            var method = type.GetMethod("First", 0);
             var nullabilityInfo = nullabilityMap.GetValueOrDefault(
                 method.Signature,
                 new MethodNullabilityInfo(method.Method)
@@ -307,7 +425,7 @@ static class ObjectWriterExtensions
             // so scrape it from the iter type.
             var elementType = iterType[(iterType.IndexOf('[', StringComparison.Ordinal) + 1)..^1];
 
-            w.WriteLine($"def __iter__(self) -> typing.Iterator[{elementType}]: ...");
+            w.WriteLine($"def __iter__(self) -> _cabc.Iterator[{elementType}]: ...");
             didWriteLine = true;
         }
 
@@ -319,10 +437,11 @@ static class ObjectWriterExtensions
                 new MethodNullabilityInfo(ctor.Method)
             );
 
-            if (ctor.Method.Parameters.Any(p => p.IsPythonInParam()))
+            // positional-only, as the runtime takes no keywords
+            if (ctor.Method.Parameters.Any(p => p.IsPythonInParam))
             {
                 paramList =
-                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap)}"))}";
+                    $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns, nullabilityInfo.Parameters[p.Index].Type, packageMap)}"))}, /";
             }
 
             if (type.Constructors.Count(m => m.Name == ctor.Name) > 1)
@@ -330,35 +449,103 @@ static class ObjectWriterExtensions
                 w.WriteLine("@typing.overload");
             }
 
-            w.WriteLine($"def __new__(cls: typing.Type[Self]{paramList}) -> Self: ...");
+            // a deprecated class already reports its instantiation
+            if (ctor.IsDeprecated && !type.IsDeprecated)
+            {
+                w.WriteDeprecated(ctor.DeprecatedMessage);
+            }
+
+            // A type checker cannot be told that a protected constructor is
+            // for a derived class only, so the docstring, which an editor
+            // shows for the call, says so instead.
+            if (ctor.IsProtected)
+            {
+                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self:");
+                w.Indent++;
+                w.WriteLine(
+                    $"\"\"\"{type.Name}'s constructor is protected: derive a class from it and create that.\"\"\""
+                );
+                w.Indent--;
+            }
+            else
+            {
+                w.WriteLine($"def __new__(cls{paramList}) -> typing.Self: ...");
+            }
+
             didWriteLine = true;
         }
 
-        foreach (var method in type.Methods.Where(m => !m.IsStatic))
+        if (type.Constructors.Count == 0)
         {
-            if (type.Methods.Count(m => m.Name == method.Name) > 1)
-            {
-                w.WriteLine("@typing.overload");
-            }
-
-            if (
-                type.IsComposable
-                && !method.IsOverridable
-                && method.IsExclusiveTo
-                // mypy rule: @typing.final can only be applied to the first overload
-                && method == type.Methods.FirstOrDefault(m => m.Name == method.Name, method)
-            )
-            {
-                // HACK: There are a couple of problematic methods. Subclasses of
-                // DependencyObject like to override SetValue with a different
-                // parameter type. Subclasses of FlyoutBase like to override ShowAt.
-                var typeIgnore = method.IsProblematicOverride() ? "  # type: ignore[misc]" : "";
-
-                w.WriteLine($"@typing.final{typeIgnore}");
-            }
-
-            w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap);
+            w.WriteNoConstructor(type);
             didWriteLine = true;
+        }
+
+        foreach (var group in type.MethodGroups.Where(g => !g.IsStatic))
+        {
+            foreach (var method in group.StubOverloads)
+            {
+                if (group.IsOverloaded)
+                {
+                    w.WriteLine("@typing.overload");
+                }
+
+                if (
+                    type.IsComposable
+                    && !group.IsOverridable
+                    && method.IsExclusiveTo
+                    // mypy rule: @typing.final can only be applied to the first overload
+                    && method == group.StubOverloads[0]
+                )
+                {
+                    // HACK: There are a couple of problematic methods. Subclasses of
+                    // DependencyObject like to override SetValue with a different
+                    // parameter type. Subclasses of FlyoutBase like to override ShowAt.
+                    var typeIgnore = method.IsProblematicOverride ? "  # type: ignore[misc]" : "";
+
+                    w.WriteLine($"@typing.final{typeIgnore}");
+                }
+
+                w.WritePythonMethodTyping(method, ns, nullabilityMap, packageMap);
+                didWriteLine = true;
+            }
+
+            foreach (var alias in group.Aliases)
+            {
+                foreach (var method in alias.Methods)
+                {
+                    if (alias.Methods.Count > 1)
+                    {
+                        w.WriteLine("@typing.overload");
+                    }
+
+                    if (
+                        type.IsComposable
+                        && !group.IsOverridable
+                        && method.IsExclusiveTo
+                        // mypy rule: @typing.final can only be applied to the first overload
+                        && method == alias.Methods[0]
+                    )
+                    {
+                        var typeIgnore = method.IsProblematicOverride
+                            ? "  # type: ignore[misc]"
+                            : "";
+
+                        w.WriteLine($"@typing.final{typeIgnore}");
+                    }
+
+                    w.WritePythonMethodTyping(
+                        method,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        aliasPyName: alias.PyName,
+                        aliasTarget: group.PyName
+                    );
+
+                    didWriteLine = true;
+                }
+            }
         }
 
         foreach (var evt in type.Events.Where(e => !e.IsStatic))
@@ -388,121 +575,10 @@ static class ObjectWriterExtensions
 
         if (!didWriteLine)
         {
-            w.WriteLine("pass");
+            w.WriteLine("...");
         }
 
         w.Indent--;
         w.WriteBlankLine();
-    }
-
-    public static void WriteComposableTypeImpl(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteLine($"struct PyWinrt{type.Name};");
-        w.WriteLine(
-            $"using BasePyWinrt{type.Name} = {type.CppWinrtType}T<PyWinrt{type.Name}, py::IPywinrtObject>;"
-        );
-        w.WriteBlankLine();
-
-        w.WriteLine($"struct PyWinrt{type.Name} : py::py_obj_ref, BasePyWinrt{type.Name}");
-        w.WriteBlock(
-            () =>
-            {
-                foreach (var ctor in type.Constructors)
-                {
-                    var paramList = string.Join(
-                        ", ",
-                        ctor.Method.Parameters.Select(p =>
-                                $"{p.ParameterType.ToCppTypeName()} {p.Name}"
-                            )
-                            .Prepend("PyObject* py_obj")
-                    );
-                    var argList = string.Join(", ", ctor.Method.Parameters.Select(p => p.Name));
-
-                    w.WriteLine(
-                        $"PyWinrt{type.Name}({paramList}) : py::py_obj_ref(py_obj), BasePyWinrt{type.Name}({argList}) {{}}"
-                    );
-                }
-
-                w.WriteBlankLine();
-                w.WriteLine("int32_t __stdcall GetPyObject(PyObject*& obj) override");
-                w.WriteBlock(() =>
-                {
-                    w.WriteLine("obj = py::py_obj_ref::get_py_obj();");
-                    w.WriteLine("return 0;");
-                });
-
-                w.WriteBlankLine();
-                w.WriteLine(
-                    "int32_t __stdcall GetComposableInner(winrt::Windows::Foundation::IInspectable& inner) override"
-                );
-                w.WriteBlock(() =>
-                {
-                    if (type.IsComposable)
-                    {
-                        w.WriteLine("inner = m_inner;");
-                        w.WriteLine("return winrt::impl::error_ok;");
-                    }
-                    else
-                    {
-                        w.WriteLine("return winrt::impl::error_not_implemented;");
-                    }
-                });
-
-                w.WriteBlankLine();
-                w.WriteLine(
-                    $"static void toggle_reference(PyWinrt{type.Name}* instance, bool is_last_reference)"
-                );
-                w.WriteBlock(
-                    () =>
-                        w.WriteLine(
-                            "py::py_obj_ref::toggle_reference(instance, is_last_reference);"
-                        )
-                );
-
-                w.WriteBlankLine();
-                w.WriteLine(
-                    "int32_t query_interface_tearoff(winrt::guid const& id, void** result) const noexcept override"
-                );
-                w.WriteBlock(
-                    () => w.WriteLine("return py::py_obj_ref::query_interface_tearoff(id, result);")
-                );
-
-                w.WriteBlankLine();
-                w.WriteLine("std::vector<winrt::guid> get_iids_tearoff() const noexcept override");
-                w.WriteBlock(() => w.WriteLine("return py::py_obj_ref::get_iids_tearoff();"));
-
-                foreach (var method in type.Methods.Where(m => m.IsOverridable))
-                {
-                    w.WriteBlankLine();
-
-                    var returnType = method.Method.ReturnType.ToCppTypeName();
-                    var paramList = string.Join(
-                        ", ",
-                        method.Method.Parameters.Select(p => p.ToDelegateParam())
-                    );
-
-                    w.WriteLine($"{returnType} {method.CppName}({paramList})");
-                    w.WriteBlock(
-                        () =>
-                            w.WriteDelegateInvoke(
-                                method.Method,
-                                "method.get()",
-                                () =>
-                                {
-                                    w.WriteLine("py::pyobj_handle self{get_py_obj()};");
-                                    w.WriteBlankLine();
-                                    w.WriteLine(
-                                        $"py::pyobj_handle method{{PyObject_GetAttrString(self.get(), \"{method.PyName}\")}};"
-                                    );
-                                    w.WriteLine("if (!method)");
-                                    w.WriteBlock(() => w.WriteLine("throw python_exception();"));
-                                    w.WriteBlankLine();
-                                }
-                            )
-                    );
-                }
-            },
-            ";"
-        );
     }
 }

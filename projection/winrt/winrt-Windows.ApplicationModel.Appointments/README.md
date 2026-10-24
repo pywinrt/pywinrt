@@ -2,6 +2,16 @@
 
 # winrt-Windows.ApplicationModel.Appointments
 
-Windows Runtime (WinRT) APIs for for the `Windows.ApplicationModel.Appointments` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.ApplicationModel.Appointments` namespace.
 
 This package provides the `winrt.windows.applicationmodel.appointments` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.ApplicationModel.Appointments
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

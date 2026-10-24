@@ -1,0 +1,635 @@
+"""
+The version every PyWinRT distribution is published with.
+
+Nothing here builds or installs anything: the scheme is arithmetic on
+strings, and what has to hold of it is that the strings a release writes sort
+and resolve the way the packaging plan says they do. So the conversions are
+checked against ``packaging``, which is what pip resolves with, rather than
+against a second copy of the rules written out by hand.
+"""
+
+import ast
+import json
+import tempfile
+import textwrap
+import unittest
+from pathlib import Path
+from unittest import mock
+
+from packaging.requirements import Requirement
+from packaging.specifiers import SpecifierSet
+from packaging.version import Version
+
+from scripts import versions
+
+
+class NuGetToPep440(unittest.TestCase):
+    """
+    Converting an upstream NuGet version to the one PyWinRT publishes.
+    """
+
+    def test_release_version_is_unchanged(self) -> None:
+        # both schemes spell a release the same way, however many segments it
+        # has, so nothing about these is rewritten
+        self.assertEqual(versions.nuget_to_pep440("2.8.7"), "2.8.7")
+        self.assertEqual(versions.nuget_to_pep440("10.0.26100.4188"), "10.0.26100.4188")
+        self.assertEqual(versions.nuget_to_pep440("1.7.250513003"), "1.7.250513003")
+
+    def test_prerelease_labels_become_phases(self) -> None:
+        self.assertEqual(versions.nuget_to_pep440("1.8.0-experimental1"), "1.8.0a1")
+        self.assertEqual(versions.nuget_to_pep440("1.8.0-preview2"), "1.8.0b2")
+        self.assertEqual(versions.nuget_to_pep440("1.8.0-prerelease.3"), "1.8.0rc3")
+
+    def test_prerelease_label_without_a_number_is_the_zeroth(self) -> None:
+        # PEP 440 reads a phase with no number as zero, so writing the zero
+        # out changes nothing and leaves the version in its normal form
+        self.assertEqual(versions.nuget_to_pep440("1.8.0-preview"), "1.8.0b0")
+        self.assertEqual(Version("1.8.0b0"), Version("1.8.0b"))
+
+    def test_prereleases_sort_the_way_upstream_ships_them(self) -> None:
+        self.assertEqual(
+            sorted(
+                Version(versions.nuget_to_pep440(v))
+                for v in [
+                    "1.8.0",
+                    "1.8.0-prerelease.1",
+                    "1.8.0-experimental1",
+                    "1.8.0-preview1",
+                ]
+            ),
+            [Version(v) for v in ["1.8.0a1", "1.8.0b1", "1.8.0rc1", "1.8.0"]],
+        )
+
+    def test_an_unconvertible_version_is_refused(self) -> None:
+        # a version PEP 440 reads differently from the way NuGet meant it
+        # would sort wrongly on PyPI without anything saying so, so a spelling
+        # this has not been taught stops the generation instead
+        for version in ["1.8.0-alpha", "1.8.0-preview1+build7", "", "next"]:
+            with self.subTest(version=version):
+                with self.assertRaises(ValueError):
+                    versions.nuget_to_pep440(version)
+
+
+class CompatibilityGeneration(unittest.TestCase):
+    """
+    The one number that the ABI major, the table format major, the runtime's
+    own major and the epoch of every other family all are.
+    """
+
+    def test_the_tree_agrees_on_it(self) -> None:
+        # compatibility_generation() raises if the three sources disagree,
+        # which is the whole of its job; this is the case that says the tree
+        # in front of us is one of the ones it accepts
+        generation = versions.compatibility_generation()
+
+        self.assertEqual(Version(versions.runtime_version()).major, generation)
+        self.assertEqual(versions.runtime_table_format()[0], generation)
+
+    def test_every_family_carries_it_as_an_epoch(self) -> None:
+        generation = versions.compatibility_generation()
+
+        for family, version in versions.family_versions().items():
+            with self.subTest(family=family):
+                self.assertEqual(Version(version).epoch, generation)
+
+    def test_the_epoch_sorts_above_everything_published_before_it(self) -> None:
+        # 3.2.1 is the last release of the previous scheme, where a projection
+        # package carried the generator's version and no epoch
+        for version in versions.family_versions().values():
+            with self.subTest(version=version):
+                self.assertGreater(Version(version), Version("3.2.1"))
+
+    def test_the_epoch_sorts_below_the_next_generation(self) -> None:
+        generation = versions.compatibility_generation()
+
+        for version in versions.family_versions().values():
+            with self.subTest(version=version):
+                self.assertLess(Version(version), Version(f"{generation + 1}!0"))
+
+
+class RuntimeRequirement(unittest.TestCase):
+    """
+    The requirement every projection package carries, and the one upper bound
+    in PyWinRT's metadata besides the ~= between Windows App SDK components.
+    """
+
+    def setUp(self) -> None:
+        self.generation = versions.compatibility_generation()
+        self.runtime_version = versions.runtime_version()
+        self.specifier = SpecifierSet(
+            versions.runtime_requirement(f"{self.generation}.0.0").removeprefix(
+                "winrt-runtime"
+            )
+        )
+
+    def test_the_runtime_of_this_tree_satisfies_it(self) -> None:
+        self.assertIn(self.runtime_version, self.specifier)
+
+    def test_the_floor_is_the_one_the_package_needs(self) -> None:
+        # a fix to the runtime does not raise the requirement of a package
+        # that needs nothing it added
+        with mock.patch.object(
+            versions, "runtime_version", return_value=f"{self.generation}.0.5"
+        ):
+            self.assertEqual(
+                versions.runtime_requirement(f"{self.generation}.0.0"),
+                f"winrt-runtime>={self.generation}.0.0,<{self.generation + 1}",
+            )
+
+    def test_a_floor_this_tree_has_not_reached_is_refused(self) -> None:
+        with self.assertRaisesRegex(
+            RuntimeError, "later than the runtime of this tree"
+        ):
+            versions.runtime_requirement(f"{self.generation}.99.0")
+
+    def test_a_floor_of_another_generation_is_refused(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "not of generation"):
+            versions.runtime_requirement("3.2.1")
+
+    def test_a_later_runtime_of_this_generation_satisfies_it(self) -> None:
+        self.assertIn(f"{self.generation}.99.99", self.specifier)
+
+    def test_an_earlier_runtime_does_not(self) -> None:
+        self.assertNotIn("3.2.1", self.specifier)
+
+    def test_the_next_generation_does_not(self) -> None:
+        # the cap is here because this refusal is known rather than guessed: a
+        # package of one generation is refused by the runtime of the next, and
+        # without it pip would upgrade the runtime on its own into that error
+        self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
+
+
+class CallShapeCensus(unittest.TestCase):
+    """
+    The census a table's shape ids mean something in, and the runtime release
+    that first has each revision of it.
+    """
+
+    def setUp(self) -> None:
+        self.census = json.loads(versions.SHAPES_PATH.read_text(encoding="utf-8"))
+
+    def test_the_tree_passes(self) -> None:
+        versions.check_census()
+
+    def test_another_lineage_is_refused(self) -> None:
+        # what PyWinRT.exe writes when it finds no shapes.json to extend
+        self.census["lineage"] = "00000000-0000-0000-0000-000000000000"
+
+        with self.assertRaisesRegex(RuntimeError, "restore it from git"):
+            self.check()
+
+    def test_a_census_the_runtime_was_not_built_from_is_refused(self) -> None:
+        self.census["revision"] += 1
+        self.census["revisions"].append(dict(self.census["revisions"][-1]))
+
+        with self.assertRaisesRegex(RuntimeError, "generate the projection again"):
+            self.check()
+
+    def test_a_revision_in_no_release_is_refused(self) -> None:
+        self.census["revisions"][-1]["runtime"] = None
+
+        with self.assertRaisesRegex(RuntimeError, "in no winrt-runtime release yet"):
+            self.check()
+
+    def test_a_revision_in_a_later_runtime_than_the_tree_is_refused(self) -> None:
+        self.census["revisions"][-1]["runtime"] = (
+            f"{versions.compatibility_generation()}.99.0"
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "set runtime/version.txt"):
+            self.check()
+
+    def test_a_revision_in_an_earlier_runtime_than_the_one_before_is_refused(
+        self,
+    ) -> None:
+        generation = versions.compatibility_generation()
+        self.census["revisions"][0]["runtime"] = f"{generation}.0.1"
+        self.census["revisions"][1]["runtime"] = f"{generation}.0.0"
+
+        with (
+            mock.patch.object(
+                versions, "runtime_version", return_value=f"{generation}.0.1"
+            ),
+            self.assertRaisesRegex(RuntimeError, "an earlier revision is in"),
+        ):
+            self.check()
+
+    def test_a_revision_of_another_generation_is_refused(self) -> None:
+        self.census["revisions"][0]["runtime"] = "3.2.1"
+
+        with self.assertRaisesRegex(RuntimeError, "not of generation"):
+            self.check()
+
+    def test_a_runtime_that_is_not_a_release_is_refused_by_name(self) -> None:
+        self.census["revisions"][0]["runtime"] = "4.0.0rc1"
+
+        with self.assertRaisesRegex(ValueError, "'4.0.0rc1' is not a release"):
+            self.check()
+
+    def check(self) -> None:
+        """
+        Runs check_census() on the census this test has changed, with the
+        header and every other file of the tree as they are.
+        """
+        path = Path(self.enterContext(tempfile.TemporaryDirectory())) / "shapes.json"
+        path.write_text(json.dumps(self.census), encoding="utf-8")
+
+        with mock.patch.object(versions, "SHAPES_PATH", path):
+            versions.check_census()
+
+
+class TableCompilerRequirement(unittest.TestCase):
+    """
+    What a projection package asks of the compiler that builds its tables.
+
+    It is a build requirement, so it never reaches a wheel, and it is the
+    only requirement in PyWinRT's metadata whose floor is not the version of
+    the thing in this tree.
+    """
+
+    def setUp(self) -> None:
+        self.generation = versions.compatibility_generation()
+        self.specifier = SpecifierSet(
+            versions.table_compiler_requirement().removeprefix("winrt-table-compiler")
+        )
+
+    def test_the_compiler_of_this_tree_satisfies_it(self) -> None:
+        self.assertIn(versions.table_compiler_version(), self.specifier)
+
+    def test_the_floor_is_the_generation_and_not_the_runtime_version(self) -> None:
+        # a compiler writes the table format, which does not move when the
+        # runtime is patched, so a runtime fix must not oblige us to publish
+        # a compiler with nothing in it changed
+        self.assertIn(f"{self.generation}.0.0", self.specifier)
+
+    def test_the_previous_generation_does_not(self) -> None:
+        self.assertNotIn(f"{self.generation - 1}.99.99", self.specifier)
+
+    def test_the_next_generation_does_not(self) -> None:
+        # the same known incompatibility the runtime requirement is capped
+        # for: that compiler writes a table this generation cannot read
+        self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
+
+
+class FamilyRequirement(unittest.TestCase):
+    """
+    What one package says about another that its types name.
+    """
+
+    def setUp(self) -> None:
+        self.version = versions.family_versions()["winrt"]
+        self.pinned = self.specifier(self.version, pinned=True)
+        self.floor = self.specifier(self.version, pinned=False)
+
+    def specifier(self, version: str, pinned: bool) -> SpecifierSet:
+        requirement = Requirement(
+            versions.family_requirement("winrt-Windows.Foundation", version, pinned)
+        )
+
+        return requirement.specifier
+
+    def test_the_pin_admits_the_version_it_was_written_for(self) -> None:
+        self.assertIn(self.version, self.pinned)
+
+    def test_the_pin_admits_a_re_release_of_that_version(self) -> None:
+        # .postN is PyWinRT re-releasing one upstream version, which is why
+        # #137 rejected == for these
+        self.assertIn(f"{self.version}.post1", self.pinned)
+
+    def test_the_pin_refuses_the_next_upstream_version(self) -> None:
+        upstream = Version(self.version)
+        later = f"{upstream.epoch}!{upstream.release[0] + 1}.0"
+
+        self.assertNotIn(later, self.pinned)
+
+    def test_the_floor_admits_the_next_upstream_version(self) -> None:
+        upstream = Version(self.version)
+        later = f"{upstream.epoch}!{upstream.release[0] + 1}.0"
+
+        self.assertIn(later, self.floor)
+
+    def test_the_floor_refuses_the_previous_generation(self) -> None:
+        # an epoch is what keeps the two apart without an upper bound
+        self.assertNotIn("3.2.1", self.floor)
+
+    def test_a_prerelease_pin_admits_only_that_prerelease(self) -> None:
+        # ~= cannot follow a phase with another number, and the members of a
+        # set are released together, so a preview pins its own preview
+        pinned = self.specifier("4!2.6.0b1", pinned=True)
+        pinned.prereleases = True
+
+        self.assertIn("4!2.6.0b1", pinned)
+        self.assertIn("4!2.6.0b1.post1", pinned)
+        self.assertNotIn("4!2.6.0b2", pinned)
+        self.assertNotIn("4!2.6.0", pinned)
+
+
+class ReleaseTags(unittest.TestCase):
+    """
+    The tag that releases one unit.
+
+    A unit is a family of generated packages or a single package written by
+    hand, so the tag has to say which one it releases and at which version,
+    and the workflow has to be able to read the first back out of it and
+    check the second against the tree.
+    """
+
+    def test_every_published_unit_has_one(self) -> None:
+        self.assertEqual(
+            sorted(versions.release_tags()), sorted(versions.published_versions())
+        )
+
+    def test_the_runtime_is_released_before_anything_that_requires_it(self) -> None:
+        # the order published_versions() is in is the order a release goes
+        # in, and every other package depends on winrt-runtime
+        self.assertEqual(
+            next(iter(versions.published_versions())), versions.RUNTIME_FAMILY
+        )
+
+    def test_a_package_written_by_hand_is_versioned_without_an_epoch(self) -> None:
+        # its version says what changed in that package rather than which
+        # upstream release it was generated from, so there is no epoch to
+        # sort above - only the 3.x versions it follows on PyPI
+        for path in versions.version_files():
+            with self.subTest(unit=path.parent.name):
+                version = Version(versions.read_version(path))
+
+                self.assertEqual(version.epoch, 0)
+                self.assertGreater(version, Version("3.2.1"))
+
+    def test_every_version_written_by_hand_is_of_this_generation(self) -> None:
+        generation = versions.compatibility_generation()
+
+        for path in versions.version_files():
+            with self.subTest(unit=path.parent.name):
+                self.assertEqual(Version(versions.read_version(path)).major, generation)
+
+    def test_the_test_component_is_not_released(self) -> None:
+        self.assertIn("test-winrt", versions.family_versions())
+        self.assertNotIn("test-winrt", versions.published_versions())
+
+    def test_the_tag_carries_the_version_the_unit_is_published_with(self) -> None:
+        for unit, version in versions.published_versions().items():
+            with self.subTest(unit=unit):
+                tag = versions.release_tags()[unit]
+
+                self.assertTrue(tag.startswith(f"{versions.TAG_PREFIX}/{unit}/"))
+                self.assertEqual(Version(self.spelled_version(tag)), Version(version))
+
+    def test_the_epoch_is_spelled_without_a_character_a_shell_would_eat(self) -> None:
+        for unit, tag in versions.release_tags().items():
+            with self.subTest(unit=unit):
+                self.assertNotIn("!", tag.rpartition("/")[2])
+
+    @staticmethod
+    def spelled_version(tag: str) -> str:
+        """
+        The PEP 440 version that a release tag spells as [e<epoch>]v<version>.
+        """
+        epoch, _, release = tag.rpartition("/")[2].partition("v")
+
+        return f"{epoch.removeprefix('e')}!{release}" if epoch else release
+
+    def test_a_tag_names_the_unit_it_releases(self) -> None:
+        for unit, tag in versions.release_tags().items():
+            with self.subTest(unit=unit):
+                self.assertEqual(versions.unit_of_tag(tag), unit)
+
+    def test_a_tag_at_a_version_this_tree_does_not_publish_is_refused(self) -> None:
+        # the point of matching rather than parsing: a tag pushed at the
+        # wrong commit, or copied from another unit, releases nothing
+        with self.assertRaises(ValueError):
+            versions.unit_of_tag("wheels/runtime/v1.2.3")
+
+    def test_a_tag_that_names_no_unit_is_refused(self) -> None:
+        with self.assertRaises(ValueError):
+            versions.unit_of_tag("wheels/v3.2.1")
+
+
+class FamilyReleasedInterop(unittest.TestCase):
+    """
+    The version of an interop package that is released with a family, and of
+    a fix to it released between two pins.
+    """
+
+    name = "winrt-Microsoft.WindowsAppRuntime.Bootstrap"
+
+    def test_the_app_sdk_interop_modules_are_released_with_it(self) -> None:
+        for name in (
+            "winrt-Microsoft.UI.Interop",
+            "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
+        ):
+            with self.subTest(name=name):
+                self.assertEqual(versions.interop_release(name), "wasdk")
+                self.assertEqual(
+                    versions.interop_version(name), versions.family_versions()["wasdk"]
+                )
+                self.assertNotIn(name, versions.published_versions())
+
+    def test_a_fix_is_a_unit_of_its_own_until_the_pin_moves(self) -> None:
+        fix = f"{versions.family_versions()['wasdk']}.1"
+        self.add_fix(fix)
+
+        self.assertEqual(versions.interop_release(self.name), self.name)
+        self.assertEqual(versions.interop_version(self.name), fix)
+        self.assertEqual(versions.published_versions()[self.name], fix)
+
+    def test_a_fix_left_behind_by_the_pin_is_refused(self) -> None:
+        self.add_fix("4!1.0.0.1")
+
+        with self.assertRaisesRegex(RuntimeError, "delete it"):
+            versions.interop_version(self.name)
+
+    def test_a_fix_sorts_between_the_release_it_fixes_and_the_next(self) -> None:
+        self.assertLess(Version("4!2.5.1"), Version("4!2.5.1.1"))
+        self.assertLess(Version("4!2.5.1.1"), Version("4!2.5.1.2"))
+        self.assertLess(Version("4!2.5.1.2"), Version("4!2.5.2"))
+
+    def test_a_fix_is_a_fourth_number(self) -> None:
+        versions.check_fix_version("4!2.5.1.1", "4!2.5.1")
+        versions.check_fix_version("4!2.5.1.12", "4!2.5.1")
+
+        for version in ("4!2.5.1", "4!2.5.1.0", "4!2.5.1.post1", "4!2.5.0.1"):
+            with self.subTest(version=version):
+                with self.assertRaises(ValueError):
+                    versions.check_fix_version(version, "4!2.5.1")
+
+    def test_a_prerelease_takes_no_fix(self) -> None:
+        # a fourth number goes before the phase, so 4!2.6.0.1b1 would sort
+        # above the final 4!2.6.0, and 4!2.6.0b1.1 is not a version at all
+        self.assertGreater(Version("4!2.6.0.1b1"), Version("4!2.6.0"))
+
+        with self.assertRaises(ValueError):
+            versions.check_fix_version("4!2.6.0.1b1", "4!2.6.0b1")
+
+    def test_a_family_of_four_numbers_takes_no_fix(self) -> None:
+        # the fourth number would be upstream's own
+        with self.assertRaises(ValueError):
+            versions.check_fix_version("4!1.0.4191.47.1", "4!1.0.4191.47")
+
+    def add_fix(self, fix: str) -> None:
+        """
+        Puts the interop directory, for the rest of the test, in one that holds
+        the bootstrap with a version.txt for a fix.
+        """
+        root = Path(self.enterContext(tempfile.TemporaryDirectory())) / "interop"
+        (root / self.name).mkdir(parents=True)
+        (root / self.name / "version.txt").write_text(fix, encoding="utf-8")
+
+        self.enterContext(mock.patch.object(versions, "INTEROP_PATH", root))
+
+
+class WindowsSdkMetadataPath(unittest.TestCase):
+    """
+    Where the Windows SDK .winmd files are in the unpacked NuGet package,
+    which follows the pin.
+    """
+
+    def setUp(self) -> None:
+        self.tools = Path(self.enterContext(tempfile.TemporaryDirectory()))
+        self.enterContext(mock.patch.object(versions, "TOOLS_PATH", self.tools))
+        self.enterContext(
+            mock.patch.object(
+                versions,
+                "nuget_package_versions",
+                lambda: {"Microsoft.Windows.SDK.CPP": "10.0.28000.2705"},
+            )
+        )
+
+    def test_the_directory_is_the_sdk_version_with_the_last_number_0(self) -> None:
+        expected = (
+            self.tools
+            / "Microsoft.Windows.SDK.CPP.10.0.28000.2705"
+            / "c"
+            / "References"
+            / "10.0.28000.0"
+        )
+        expected.mkdir(parents=True)
+
+        self.assertEqual(versions.windows_sdk_metadata_path(), expected)
+
+    def test_a_package_without_it_is_refused(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "fetch-tools"):
+            versions.windows_sdk_metadata_path()
+
+
+class InteropRuntimeRequirement(unittest.TestCase):
+    """
+    What an interop package requires of the runtime: the newest runtime that a
+    function it calls first shipped in, so that a fix to it does not force a
+    runtime upgrade on someone who keeps an older one.
+    """
+
+    def setUp(self) -> None:
+        self.generation = versions.compatibility_generation()
+
+    def test_calling_nothing_new_requires_the_generation(self) -> None:
+        self.assertEqual(
+            versions.interop_runtime_requirement(["as_interface"]),
+            f"winrt-runtime>={self.generation}.0.0,<{self.generation + 1}",
+        )
+
+    def test_the_newest_function_it_calls_sets_the_floor(self) -> None:
+        functions = {
+            "older": f"{self.generation}.1.0",
+            "newer": f"{self.generation}.2.0",
+        }
+
+        with (
+            mock.patch.dict(versions.RUNTIME_FUNCTIONS, functions),
+            mock.patch.object(
+                versions, "runtime_version", return_value=f"{self.generation}.3.0"
+            ),
+        ):
+            requirement = versions.interop_runtime_requirement(["older", "newer"])
+
+        specifier = SpecifierSet(requirement.removeprefix("winrt-runtime"))
+
+        self.assertIn(f"{self.generation}.2.0", specifier)
+        self.assertNotIn(f"{self.generation}.1.0", specifier)
+
+    def test_an_unlisted_function_is_refused(self) -> None:
+        with self.assertRaises(RuntimeError):
+            versions.interop_runtime_requirement(["not_a_runtime_function"])
+
+    def test_a_function_newer_than_this_tree_is_refused(self) -> None:
+        # listing it with the version it will ship in, before the runtime
+        # carries that version, would require a runtime nobody can install
+        with mock.patch.dict(
+            versions.RUNTIME_FUNCTIONS, {"unreleased": f"{self.generation}.99.0"}
+        ):
+            with self.assertRaises(RuntimeError):
+                versions.interop_runtime_requirement(["unreleased"])
+
+    def test_every_listed_function_is_one_the_runtime_exports(self) -> None:
+        interop = versions.RUNTIME_PATH / "python" / "winrt" / "runtime" / "interop.py"
+        exported = next(
+            ast.literal_eval(node.value)
+            for node in ast.parse(interop.read_text(encoding="utf-8")).body
+            if isinstance(node, ast.Assign)
+            and any(
+                isinstance(target, ast.Name) and target.id == "__all__"
+                for target in node.targets
+            )
+        )
+
+        self.assertLessEqual(set(versions.RUNTIME_FUNCTIONS), set(exported))
+
+    def test_every_way_of_importing_the_runtime_is_seen(self) -> None:
+        with tempfile.TemporaryDirectory() as root:
+            module = Path(root) / "winrt" / "a" / "interop" / "__init__.py"
+            module.parent.mkdir(parents=True)
+            module.write_text(
+                textwrap.dedent(
+                    """
+                    import winrt._winrt
+                    import winrt._winrt as _runtime
+                    from winrt import _winrt
+                    from winrt import _winrt as _other
+                    from winrt._winrt import direct
+                    import winrt.runtime.interop
+                    import winrt.runtime.interop as _interop
+                    from winrt.runtime import interop
+                    from winrt.runtime import interop as _public
+                    from winrt.runtime.interop import public_direct
+
+                    winrt._winrt.plain()
+                    _runtime.aliased()
+                    _winrt.from_winrt()
+                    _other.from_winrt_aliased()
+                    winrt.runtime.interop.public_plain()
+                    _interop.public_aliased()
+                    interop.from_runtime()
+                    _public.from_runtime_aliased()
+                    """
+                ),
+                encoding="utf-8",
+            )
+
+            called = versions.runtime_functions_called(Path(root))
+
+        self.assertLessEqual(
+            {
+                "plain",
+                "aliased",
+                "from_winrt",
+                "from_winrt_aliased",
+                "direct",
+                "public_plain",
+                "public_aliased",
+                "from_runtime",
+                "from_runtime_aliased",
+                "public_direct",
+            },
+            called,
+        )
+        # interop.h raises through hresult_error() in every module
+        self.assertIn("hresult_error", called)
+
+    def test_every_interop_package_calls_only_listed_functions(self) -> None:
+        for package in sorted(versions.INTEROP_PATH.glob("winrt-*")):
+            with self.subTest(package=package.name):
+                self.assertLessEqual(
+                    versions.runtime_functions_called(package),
+                    set(versions.RUNTIME_FUNCTIONS),
+                )

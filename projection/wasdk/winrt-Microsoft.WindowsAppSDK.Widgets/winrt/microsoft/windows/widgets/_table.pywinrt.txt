@@ -1,0 +1,10 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.Widgets
+
+enum Microsoft.Windows.Widgets.WidgetSize python_type
+    py WidgetSize
+    signature enum(Microsoft.Windows.Widgets.WidgetSize;i4)
+    constant SMALL 0
+    constant MEDIUM 1
+    constant LARGE 2

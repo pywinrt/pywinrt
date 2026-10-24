@@ -1,0 +1,1013 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.UI.Text.Core
+
+class Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs python_type
+    py CoreTextCompositionCompletedEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs;{1f34ebb6-b79f-4121-a5e7-fda9b8616e30})
+    default Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs
+    requires Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs
+    property composition_segments
+        get get_CompositionSegments slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> return
+    property is_canceled
+        get get_IsCanceled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs shape=4
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.UI.Text.Core.CoreTextCompositionSegment python_type
+    py CoreTextCompositionSegment
+    signature rc(Windows.UI.Text.Core.CoreTextCompositionSegment;{776c6bd9-4ead-4da7-8f47-3a88b523cc34})
+    default Windows.UI.Text.Core.ICoreTextCompositionSegment
+    requires Windows.UI.Text.Core.ICoreTextCompositionSegment
+    property preconversion_string
+        get get_PreconversionString slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionSegment shape=4
+            out string return
+    property range
+        get get_Range slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionSegment shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+
+class Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs python_type
+    py CoreTextCompositionStartedEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs;{276b16a9-64e7-4ab0-bc4b-a02d73835bfb})
+    default Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs
+    requires Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs
+    property is_canceled
+        get get_IsCanceled slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs shape=4
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.UI.Text.Core.CoreTextEditContext python_type
+    py CoreTextEditContext
+    signature rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2})
+    default Windows.UI.Text.Core.ICoreTextEditContext
+    requires Windows.UI.Text.Core.ICoreTextEditContext
+    requires Windows.UI.Text.Core.ICoreTextEditContext2
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            in string name=value
+    property is_read_only
+        get get_IsReadOnly slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            out boolean return
+        put put_IsReadOnly slot=11 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            in boolean name=value
+    property input_scope
+        get get_InputScope slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextInputScope return
+        put put_InputScope slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            in enum32 type=Windows.UI.Text.Core.CoreTextInputScope name=value
+    property input_pane_display_policy
+        get get_InputPaneDisplayPolicy slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy return
+        put put_InputPaneDisplayPolicy slot=13 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=4
+            in enum32 type=Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy name=value
+    event composition_completed
+        add add_CompositionCompleted slot=28 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_CompositionCompleted slot=29 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event composition_started
+        add add_CompositionStarted slot=26 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_CompositionStarted slot=27 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event focus_removed
+        add add_FocusRemoved slot=30 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_FocusRemoved slot=31 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event format_updating
+        add add_FormatUpdating slot=24 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_FormatUpdating slot=25 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event layout_requested
+        add add_LayoutRequested slot=18 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_LayoutRequested slot=19 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event selection_requested
+        add add_SelectionRequested slot=16 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_SelectionRequested slot=17 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event selection_updating
+        add add_SelectionUpdating slot=22 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_SelectionUpdating slot=23 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event text_requested
+        add add_TextRequested slot=14 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextTextRequestedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_TextRequested slot=15 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event text_updating
+        add add_TextUpdating slot=20 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_TextUpdating slot=21 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    event notify_focus_leave_completed
+        add add_NotifyFocusLeaveCompleted slot=6 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextEditContext2 shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_NotifyFocusLeaveCompleted slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext2 shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    method notify_focus_enter
+        method NotifyFocusEnter slot=32 inputs=0 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=0
+    method notify_focus_leave
+        method NotifyFocusLeave slot=33 inputs=0 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=0
+    method notify_layout_changed
+        method NotifyLayoutChanged slot=36 inputs=0 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=0
+    method notify_selection_changed
+        method NotifySelectionChanged slot=35 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=22
+            in struct type=Windows.UI.Text.Core.CoreTextRange name=selection
+    method notify_text_changed
+        method NotifyTextChanged slot=34 inputs=3 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextEditContext shape=163
+            in struct type=Windows.UI.Text.Core.CoreTextRange name=modifiedRange
+            in int32 name=newLength
+            in struct type=Windows.UI.Text.Core.CoreTextRange name=newSelection
+
+class Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs python_type
+    py CoreTextFormatUpdatingEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs;{7310bd33-b4a8-43b1-b37b-0724d4aca7ab})
+    default Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs
+    requires Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs
+    property result
+        get get_Result slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextFormatUpdatingResult return
+        put put_Result slot=13 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            in enum32 type=Windows.UI.Text.Core.CoreTextFormatUpdatingResult name=value
+    property background_color
+        get get_BackgroundColor slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out reference type=Windows.Foundation.IReference<Windows.UI.ViewManagement.UIElementType> return
+    property is_canceled
+        get get_IsCanceled slot=14 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out boolean return
+    property range
+        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    property reason
+        get get_Reason slot=11 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextFormatUpdatingReason return
+    property text_color
+        get get_TextColor slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out reference type=Windows.Foundation.IReference<Windows.UI.ViewManagement.UIElementType> return
+    property underline_color
+        get get_UnderlineColor slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out reference type=Windows.Foundation.IReference<Windows.UI.ViewManagement.UIElementType> return
+    property underline_type
+        get get_UnderlineType slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out reference type=Windows.Foundation.IReference<Windows.UI.Text.UnderlineType> return
+    method get_deferral
+        method GetDeferral slot=15 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.UI.Text.Core.CoreTextFormatUpdatingReason python_type
+    py CoreTextFormatUpdatingReason
+    signature enum(Windows.UI.Text.Core.CoreTextFormatUpdatingReason;i4)
+    constant NONE 0
+    constant COMPOSITION_UNCONVERTED 1
+    constant COMPOSITION_CONVERTED 2
+    constant COMPOSITION_TARGET_UNCONVERTED 3
+    constant COMPOSITION_TARGET_CONVERTED 4
+
+enum Windows.UI.Text.Core.CoreTextFormatUpdatingResult python_type
+    py CoreTextFormatUpdatingResult
+    signature enum(Windows.UI.Text.Core.CoreTextFormatUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+
+enum Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy python_type
+    py CoreTextInputPaneDisplayPolicy
+    signature enum(Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy;i4)
+    constant AUTOMATIC 0
+    constant MANUAL 1
+
+enum Windows.UI.Text.Core.CoreTextInputScope python_type
+    py CoreTextInputScope
+    signature enum(Windows.UI.Text.Core.CoreTextInputScope;i4)
+    constant DEFAULT 0
+    constant URL 1
+    constant FILE_PATH 2
+    constant FILE_NAME 3
+    constant EMAIL_USER_NAME 4
+    constant EMAIL_ADDRESS 5
+    constant USER_NAME 6
+    constant PERSONAL_FULL_NAME 7
+    constant PERSONAL_NAME_PREFIX 8
+    constant PERSONAL_GIVEN_NAME 9
+    constant PERSONAL_MIDDLE_NAME 10
+    constant PERSONAL_SURNAME 11
+    constant PERSONAL_NAME_SUFFIX 12
+    constant ADDRESS 13
+    constant ADDRESS_POSTAL_CODE 14
+    constant ADDRESS_STREET 15
+    constant ADDRESS_STATE_OR_PROVINCE 16
+    constant ADDRESS_CITY 17
+    constant ADDRESS_COUNTRY_NAME 18
+    constant ADDRESS_COUNTRY_SHORT_NAME 19
+    constant CURRENCY_AMOUNT_AND_SYMBOL 20
+    constant CURRENCY_AMOUNT 21
+    constant DATE 22
+    constant DATE_MONTH 23
+    constant DATE_DAY 24
+    constant DATE_YEAR 25
+    constant DATE_MONTH_NAME 26
+    constant DATE_DAY_NAME 27
+    constant NUMBER 29
+    constant SINGLE_CHARACTER 30
+    constant PASSWORD 31
+    constant TELEPHONE_NUMBER 32
+    constant TELEPHONE_COUNTRY_CODE 33
+    constant TELEPHONE_AREA_CODE 34
+    constant TELEPHONE_LOCAL_NUMBER 35
+    constant TIME 36
+    constant TIME_HOUR 37
+    constant TIME_MINUTE_OR_SECOND 38
+    constant NUMBER_FULL_WIDTH 39
+    constant ALPHANUMERIC_HALF_WIDTH 40
+    constant ALPHANUMERIC_FULL_WIDTH 41
+    constant CURRENCY_CHINESE 42
+    constant BOPOMOFO 43
+    constant HIRAGANA 44
+    constant KATAKANA_HALF_WIDTH 45
+    constant KATAKANA_FULL_WIDTH 46
+    constant HANJA 47
+    constant HANGUL_HALF_WIDTH 48
+    constant HANGUL_FULL_WIDTH 49
+    constant SEARCH 50
+    constant FORMULA 51
+    constant SEARCH_INCREMENTAL 52
+    constant CHINESE_HALF_WIDTH 53
+    constant CHINESE_FULL_WIDTH 54
+    constant NATIVE_SCRIPT 55
+    constant TEXT 57
+    constant CHAT 58
+    constant NAME_OR_PHONE_NUMBER 59
+    constant EMAIL_USER_NAME_OR_ADDRESS 60
+    constant PRIVATE 61
+    constant MAPS 62
+    constant PASSWORD_NUMERIC 63
+    constant FORMULA_NUMBER 67
+    constant CHAT_WITHOUT_EMOJI 68
+    constant DIGITS 28
+    constant PIN_NUMERIC 64
+    constant PIN_ALPHANUMERIC 65
+
+class Windows.UI.Text.Core.CoreTextLayoutBounds python_type
+    py CoreTextLayoutBounds
+    signature rc(Windows.UI.Text.Core.CoreTextLayoutBounds;{e972c974-4436-4917-80d0-a525e4ca6780})
+    default Windows.UI.Text.Core.ICoreTextLayoutBounds
+    requires Windows.UI.Text.Core.ICoreTextLayoutBounds
+    property text_bounds
+        get get_TextBounds slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutBounds shape=4
+            out struct type=Windows.Foundation.Rect return
+        put put_TextBounds slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextLayoutBounds shape=8
+            in struct type=Windows.Foundation.Rect name=value
+    property control_bounds
+        get get_ControlBounds slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutBounds shape=4
+            out struct type=Windows.Foundation.Rect return
+        put put_ControlBounds slot=9 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextLayoutBounds shape=8
+            in struct type=Windows.Foundation.Rect name=value
+
+class Windows.UI.Text.Core.CoreTextLayoutRequest python_type
+    py CoreTextLayoutRequest
+    signature rc(Windows.UI.Text.Core.CoreTextLayoutRequest;{2555a8cc-51fd-4f03-98bf-ac78174d68e0})
+    default Windows.UI.Text.Core.ICoreTextLayoutRequest
+    requires Windows.UI.Text.Core.ICoreTextLayoutRequest
+    requires Windows.UI.Text.Core.ICoreTextLayoutRequest2
+    property is_canceled
+        get get_IsCanceled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequest shape=4
+            out boolean return
+    property layout_bounds
+        get get_LayoutBounds slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequest shape=4
+            out class type=Windows.UI.Text.Core.CoreTextLayoutBounds return
+    property range
+        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequest shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    property layout_bounds_visual_pixels
+        get get_LayoutBoundsVisualPixels slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequest2 shape=4
+            out class type=Windows.UI.Text.Core.CoreTextLayoutBounds return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequest shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs python_type
+    py CoreTextLayoutRequestedEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs;{b1dc6ae0-9a7b-4e9e-a566-4a6b5f8ad676})
+    default Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs
+    requires Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs shape=4
+            out class type=Windows.UI.Text.Core.CoreTextLayoutRequest return
+
+struct Windows.UI.Text.Core.CoreTextRange python_type
+    py CoreTextRange
+    signature struct(Windows.UI.Text.Core.CoreTextRange;i4;i4)
+    field start_caret_position StartCaretPosition int32
+    field end_caret_position EndCaretPosition int32
+
+class Windows.UI.Text.Core.CoreTextSelectionRequest python_type
+    py CoreTextSelectionRequest
+    signature rc(Windows.UI.Text.Core.CoreTextSelectionRequest;{f0a70403-208b-4301-883c-74ca7485fd8d})
+    default Windows.UI.Text.Core.ICoreTextSelectionRequest
+    requires Windows.UI.Text.Core.ICoreTextSelectionRequest
+    property selection
+        get get_Selection slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionRequest shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+        put put_Selection slot=7 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextSelectionRequest shape=22
+            in struct type=Windows.UI.Text.Core.CoreTextRange name=value
+    property is_canceled
+        get get_IsCanceled slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionRequest shape=4
+            out boolean return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionRequest shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs python_type
+    py CoreTextSelectionRequestedEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs;{13c6682b-f614-421a-8f4b-9ec8a5a37fcd})
+    default Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs
+    requires Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs shape=4
+            out class type=Windows.UI.Text.Core.CoreTextSelectionRequest return
+
+class Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs python_type
+    py CoreTextSelectionUpdatingEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs;{d445839f-fe7f-4bd5-8a26-0922c1b3e639})
+    default Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs
+    requires Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs
+    property result
+        get get_Result slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextSelectionUpdatingResult return
+        put put_Result slot=8 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs shape=4
+            in enum32 type=Windows.UI.Text.Core.CoreTextSelectionUpdatingResult name=value
+    property is_canceled
+        get get_IsCanceled slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs shape=4
+            out boolean return
+    property selection
+        get get_Selection slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    method get_deferral
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.UI.Text.Core.CoreTextSelectionUpdatingResult python_type
+    py CoreTextSelectionUpdatingResult
+    signature enum(Windows.UI.Text.Core.CoreTextSelectionUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+
+class Windows.UI.Text.Core.CoreTextServicesConstants static python_type
+    py CoreTextServicesConstants
+    factory Windows.UI.Text.Core.ICoreTextServicesStatics
+    property hidden_character static
+        get get_HiddenCharacter slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextServicesStatics shape=4 static
+            out char16 return
+
+class Windows.UI.Text.Core.CoreTextServicesManager python_type
+    py CoreTextServicesManager
+    signature rc(Windows.UI.Text.Core.CoreTextServicesManager;{c2507d83-6e0a-4a8a-bdf8-1948874854ba})
+    default Windows.UI.Text.Core.ICoreTextServicesManager
+    requires Windows.UI.Text.Core.ICoreTextServicesManager
+    factory Windows.UI.Text.Core.ICoreTextServicesManagerStatics
+    property input_language
+        get get_InputLanguage slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextServicesManager shape=4
+            out class type=Windows.Globalization.Language return
+    event input_language_changed
+        add add_InputLanguageChanged slot=7 inputs=1 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextServicesManager shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextServicesManager,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_InputLanguageChanged slot=8 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextServicesManager shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=cookie
+    method create_edit_context
+        method CreateEditContext slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextServicesManager shape=4
+            out class type=Windows.UI.Text.Core.CoreTextEditContext return
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextServicesManagerStatics shape=4 static
+            out class type=Windows.UI.Text.Core.CoreTextServicesManager return
+
+class Windows.UI.Text.Core.CoreTextTextRequest python_type
+    py CoreTextTextRequest
+    signature rc(Windows.UI.Text.Core.CoreTextTextRequest;{50d950a9-f51e-4cc1-8ca1-e6346d1a61be})
+    default Windows.UI.Text.Core.ICoreTextTextRequest
+    requires Windows.UI.Text.Core.ICoreTextTextRequest
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextRequest shape=4
+            out string return
+        put put_Text slot=8 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextTextRequest shape=4
+            in string name=value
+    property is_canceled
+        get get_IsCanceled slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextRequest shape=4
+            out boolean return
+    property range
+        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextRequest shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    method get_deferral
+        method GetDeferral slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextRequest shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class Windows.UI.Text.Core.CoreTextTextRequestedEventArgs python_type
+    py CoreTextTextRequestedEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextTextRequestedEventArgs;{f096a2d0-41c6-4c02-8b1a-d953b00cabb3})
+    default Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs
+    requires Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs
+    property request
+        get get_Request slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs shape=4
+            out class type=Windows.UI.Text.Core.CoreTextTextRequest return
+
+class Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs python_type
+    py CoreTextTextUpdatingEventArgs
+    signature rc(Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs;{eea7918d-cc2b-4f03-8ff6-02fd217db450})
+    default Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs
+    requires Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs
+    property result
+        get get_Result slot=10 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out enum32 type=Windows.UI.Text.Core.CoreTextTextUpdatingResult return
+        put put_Result slot=11 inputs=1 outputs=0 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            in enum32 type=Windows.UI.Text.Core.CoreTextTextUpdatingResult name=value
+    property input_language
+        get get_InputLanguage slot=9 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out class type=Windows.Globalization.Language return
+    property is_canceled
+        get get_IsCanceled slot=12 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out boolean return
+    property new_selection
+        get get_NewSelection slot=8 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    property range
+        get get_Range slot=6 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out struct type=Windows.UI.Text.Core.CoreTextRange return
+    property text
+        get get_Text slot=7 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out string return
+    method get_deferral
+        method GetDeferral slot=13 inputs=0 outputs=1 declaring=Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.UI.Text.Core.CoreTextTextUpdatingResult python_type
+    py CoreTextTextUpdatingResult
+    signature enum(Windows.UI.Text.Core.CoreTextTextUpdatingResult;i4)
+    constant SUCCEEDED 0
+    constant FAILED 1
+
+interface Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs
+    guid 1f34ebb6-b79f-4121-a5e7-fda9b8616e30
+
+interface Windows.UI.Text.Core.ICoreTextCompositionSegment
+    guid 776c6bd9-4ead-4da7-8f47-3a88b523cc34
+
+interface Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs
+    guid 276b16a9-64e7-4ab0-bc4b-a02d73835bfb
+
+interface Windows.UI.Text.Core.ICoreTextEditContext
+    guid bf6608af-4041-47c3-b263-a918eb5eaef2
+
+interface Windows.UI.Text.Core.ICoreTextEditContext2
+    guid b1867dbb-083b-49e1-b281-2b35d62bf466
+
+interface Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs
+    guid 7310bd33-b4a8-43b1-b37b-0724d4aca7ab
+
+interface Windows.UI.Text.Core.ICoreTextLayoutBounds
+    guid e972c974-4436-4917-80d0-a525e4ca6780
+
+interface Windows.UI.Text.Core.ICoreTextLayoutRequest
+    guid 2555a8cc-51fd-4f03-98bf-ac78174d68e0
+
+interface Windows.UI.Text.Core.ICoreTextLayoutRequest2
+    guid 676de624-cd3d-4bcd-bf01-7f7110954511
+
+interface Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs
+    guid b1dc6ae0-9a7b-4e9e-a566-4a6b5f8ad676
+
+interface Windows.UI.Text.Core.ICoreTextSelectionRequest
+    guid f0a70403-208b-4301-883c-74ca7485fd8d
+
+interface Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs
+    guid 13c6682b-f614-421a-8f4b-9ec8a5a37fcd
+
+interface Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs
+    guid d445839f-fe7f-4bd5-8a26-0922c1b3e639
+
+interface Windows.UI.Text.Core.ICoreTextServicesManager
+    guid c2507d83-6e0a-4a8a-bdf8-1948874854ba
+
+interface Windows.UI.Text.Core.ICoreTextServicesManagerStatics
+    guid 1520a388-e2cf-4d65-aeb9-b32d86fe39b9
+
+interface Windows.UI.Text.Core.ICoreTextServicesStatics
+    guid 91859a46-eccf-47a4-8ae7-098a9c6fbb15
+
+interface Windows.UI.Text.Core.ICoreTextTextRequest
+    guid 50d950a9-f51e-4cc1-8ca1-e6346d1a61be
+
+interface Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs
+    guid f096a2d0-41c6-4c02-8b1a-d953b00cabb3
+
+interface Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs
+    guid eea7918d-cc2b-4f03-8ff6-02fd217db450
+
+interface Windows.Foundation.Collections.IIterable<Windows.UI.Text.Core.CoreTextCompositionSegment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[CoreTextCompositionSegment]
+    guid 38372bd2-d3fe-5ad2-9d39-d166b68e78e7
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.UI.Text.Core.CoreTextCompositionSegment;{776c6bd9-4ead-4da7-8f47-3a88b523cc34}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.UI.Text.Core.CoreTextCompositionSegment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[CoreTextCompositionSegment]
+    guid 39b4528d-2370-57fa-b5d4-b5a2079a7cea
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.UI.Text.Core.CoreTextCompositionSegment;{776c6bd9-4ead-4da7-8f47-3a88b523cc34}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.UI.Text.Core.CoreTextCompositionSegment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=22 role=current
+            out class type=Windows.UI.Text.Core.CoreTextCompositionSegment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.UI.Text.Core.CoreTextCompositionSegment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.IReference<Windows.UI.Text.UnderlineType> concrete
+    py winrt.windows.foundation._IReference[UnderlineType]
+    guid 1b63ec17-7b2b-59fe-ab9d-b60ea4f9c9b8
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.UI.Text.UnderlineType;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.UI.Text.UnderlineType
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.UI.Text.UnderlineType> shape=4 reverse=22 role=value
+            out enum32 type=Windows.UI.Text.UnderlineType return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReference<Windows.UI.ViewManagement.UIElementType> concrete
+    py winrt.windows.foundation._IReference[UIElementType]
+    guid e17e08c9-7deb-51d1-8487-334eb3fe4691
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};enum(Windows.UI.ViewManagement.UIElementType;i4))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.UI.ViewManagement.UIElementType
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.UI.ViewManagement.UIElementType> shape=4 reverse=22 role=value
+            out enum32 type=Windows.UI.ViewManagement.UIElementType return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[CoreTextCompositionSegment]
+    guid 214b64ff-cf4d-5dd4-932a-7bc66e69036e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.UI.Text.Core.CoreTextCompositionSegment;{776c6bd9-4ead-4da7-8f47-3a88b523cc34}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.UI.Text.Core.CoreTextCompositionSegment>
+    argument Windows.UI.Text.Core.CoreTextCompositionSegment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.UI.Text.Core.CoreTextCompositionSegment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.UI.Text.Core.CoreTextCompositionSegment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.UI.Text.Core.CoreTextCompositionSegment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.UI.Text.Core.CoreTextCompositionSegment> shape=117 reverse=66 role=index_of
+            in class type=Windows.UI.Text.Core.CoreTextCompositionSegment name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, Object]
+    guid ef53b467-c472-5b59-a827-38adc3a9d326
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextCompositionCompletedEventArgs]
+    guid a2d7059e-68ed-5260-8d8e-1dcf3d25d663
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs;{1f34ebb6-b79f-4121-a5e7-fda9b8616e30}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextCompositionStartedEventArgs]
+    guid e671d625-5b59-57e6-a92e-40009507853a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs;{276b16a9-64e7-4ab0-bc4b-a02d73835bfb}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextFormatUpdatingEventArgs]
+    guid 3e4ef599-4cc2-5248-bf2d-13f17613b0a6
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs;{7310bd33-b4a8-43b1-b37b-0724d4aca7ab}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextLayoutRequestedEventArgs]
+    guid 1a5f5596-561c-57f6-a4ff-cb85013c6544
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs;{b1dc6ae0-9a7b-4e9e-a566-4a6b5f8ad676}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextSelectionRequestedEventArgs]
+    guid 882e51e1-f4a3-57e5-9392-6a8c38579181
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs;{13c6682b-f614-421a-8f4b-9ec8a5a37fcd}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextSelectionUpdatingEventArgs]
+    guid 6b140a40-d461-555a-b6eb-5dbb8e2101e5
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs;{d445839f-fe7f-4bd5-8a26-0922c1b3e639}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextTextRequestedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextTextRequestedEventArgs]
+    guid c7e08176-4134-50b7-bc73-729e9f9ad22a
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextTextRequestedEventArgs;{f096a2d0-41c6-4c02-8b1a-d953b00cabb3}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextTextRequestedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextTextRequestedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextEditContext,Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextEditContext, CoreTextTextUpdatingEventArgs]
+    guid fd896a84-df7c-50d5-9167-58f616bddb6e
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextEditContext;{bf6608af-4041-47c3-b263-a918eb5eaef2});rc(Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs;{eea7918d-cc2b-4f03-8ff6-02fd217db450}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextEditContext
+    argument Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextEditContext name=sender
+            in class type=Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.UI.Text.Core.CoreTextServicesManager,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[CoreTextServicesManager, Object]
+    guid 112fb01d-260a-51c6-9198-5db3e6e9ef3d
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.UI.Text.Core.CoreTextServicesManager;{c2507d83-6e0a-4a8a-bdf8-1948874854ba});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.UI.Text.Core.CoreTextServicesManager
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.UI.Text.Core.CoreTextServicesManager name=sender
+            in object name=args
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+class Windows.Globalization.Language external
+    py winrt.windows.globalization.Language
+
+enum Windows.UI.Text.UnderlineType external
+    py winrt.windows.ui.text.UnderlineType
+
+enum Windows.UI.ViewManagement.UIElementType external
+    py winrt.windows.ui.viewmanagement.UIElementType

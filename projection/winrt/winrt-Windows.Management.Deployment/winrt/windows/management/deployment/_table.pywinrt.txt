@@ -1,0 +1,2343 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Management.Deployment
+
+enum Windows.Management.Deployment.AddPackageByAppInstallerOptions python_type flags_enum
+    py AddPackageByAppInstallerOptions
+    signature enum(Windows.Management.Deployment.AddPackageByAppInstallerOptions;u4)
+    constant NONE 0x0
+    constant INSTALL_ALL_RESOURCES 0x20
+    constant FORCE_TARGET_APP_SHUTDOWN 0x40
+    constant REQUIRED_CONTENT_GROUP_ONLY 0x100
+    constant LIMIT_TO_EXISTING_PACKAGES 0x200
+
+class Windows.Management.Deployment.AddPackageOptions activatable python_type
+    py AddPackageOptions
+    signature rc(Windows.Management.Deployment.AddPackageOptions;{05cee018-f68f-422b-95a4-66679ec77fc0})
+    default Windows.Management.Deployment.IAddPackageOptions
+    requires Windows.Management.Deployment.IAddPackageOptions
+    requires Windows.Management.Deployment.IAddPackageOptions2
+    requires Windows.Management.Deployment.IAddPackageOptions3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property target_volume
+        get get_TargetVolume slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out class type=Windows.Management.Deployment.PackageVolume return
+        put put_TargetVolume slot=8 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in class type=Windows.Management.Deployment.PackageVolume name=value
+    property stub_package_option
+        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out enum32 type=Windows.Management.Deployment.StubPackageOption return
+        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in enum32 type=Windows.Management.Deployment.StubPackageOption name=value
+    property stage_in_place
+        get get_StageInPlace slot=30 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_StageInPlace slot=31 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property retain_files_on_failure
+        get get_RetainFilesOnFailure slot=28 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_RetainFilesOnFailure slot=29 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property required_content_group_only
+        get get_RequiredContentGroupOnly slot=26 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_RequiredContentGroupOnly slot=27 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property install_all_resources
+        get get_InstallAllResources slot=24 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_InstallAllResources slot=25 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property force_update_from_any_version
+        get get_ForceUpdateFromAnyVersion slot=22 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_ForceUpdateFromAnyVersion slot=23 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property force_target_app_shutdown
+        get get_ForceTargetAppShutdown slot=20 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_ForceTargetAppShutdown slot=21 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property force_app_shutdown
+        get get_ForceAppShutdown slot=18 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_ForceAppShutdown slot=19 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property external_location_uri
+        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property developer_mode
+        get get_DeveloperMode slot=16 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_DeveloperMode slot=17 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property defer_registration_when_packages_are_in_use
+        get get_DeferRegistrationWhenPackagesAreInUse slot=34 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_DeferRegistrationWhenPackagesAreInUse slot=35 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property allow_unsigned
+        get get_AllowUnsigned slot=32 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out boolean return
+        put put_AllowUnsigned slot=33 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            in boolean name=value
+    property dependency_package_uris
+        get get_DependencyPackageUris slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property optional_package_family_names
+        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property optional_package_uris
+        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property related_package_uris
+        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property limit_to_existing_packages
+        get get_LimitToExistingPackages slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions2 shape=4
+            out boolean return
+        put put_LimitToExistingPackages slot=8 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions2 shape=4
+            in boolean name=value
+    property expected_digests
+        get get_ExpectedDigests slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
+    property package_operation_priority
+        get get_PackageOperationPriority slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAddPackageOptions3 shape=4
+            out enum32 type=Windows.Management.Deployment.PackageOperationPriority return
+        put put_PackageOperationPriority slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAddPackageOptions3 shape=4
+            in enum32 type=Windows.Management.Deployment.PackageOperationPriority name=value
+
+class Windows.Management.Deployment.AppInstallerManager python_type
+    py AppInstallerManager
+    signature rc(Windows.Management.Deployment.AppInstallerManager;{e7ee21c3-2103-53ee-9b18-68afeab0033d})
+    default Windows.Management.Deployment.IAppInstallerManager
+    requires Windows.Management.Deployment.IAppInstallerManager
+    factory Windows.Management.Deployment.IAppInstallerManagerStatics
+    method clear_auto_update_settings
+        method ClearAutoUpdateSettings slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAppInstallerManager shape=4
+            in string name=packageFamilyName
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAppInstallerManagerStatics shape=4 static
+            out class type=Windows.Management.Deployment.AppInstallerManager return
+    method get_for_system static
+        method GetForSystem slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAppInstallerManagerStatics shape=4 static
+            out class type=Windows.Management.Deployment.AppInstallerManager return
+    method pause_auto_updates_until
+        method PauseAutoUpdatesUntil slot=8 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IAppInstallerManager shape=64
+            in string name=packageFamilyName
+            in datetime name=dateTime
+    method set_auto_update_settings
+        method SetAutoUpdateSettings slot=6 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IAppInstallerManager shape=51
+            in string name=packageFamilyName
+            in class type=Windows.Management.Deployment.AutoUpdateSettingsOptions name=appInstallerInfo
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UInt64]
+    guid ee8aeb02-fb00-51fa-8f57-32583ea241f9
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};u8)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.UInt64
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.UInt64> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[PackageVolume]]
+    guid 721241c2-0b83-594a-9b61-ce7f1492c415
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Deployment.PackageVolume> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[PackageVolume]
+    guid 35fee361-6cea-5e5c-8eda-34b3f22df4e7
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Management.Deployment.PackageVolume
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[DeploymentResult, DeploymentProgress]
+    guid f1b926d1-1796-597a-9bea-6c6449d03eef
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Management.Deployment.DeploymentResult;{2563b9ae-b77d-4c1f-8a7b-20e6ad515ef3});struct(Windows.Management.Deployment.DeploymentProgress;enum(Windows.Management.Deployment.DeploymentProgressState;i4);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Management.Deployment.DeploymentResult
+    argument Windows.Management.Deployment.DeploymentProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=61 reverse=8
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> name=asyncInfo
+            in struct type=Windows.Management.Deployment.DeploymentProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[DeploymentResult, DeploymentProgress]
+    guid 6e1c7129-61e0-5d88-9fd4-f3ce65a05719
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Management.Deployment.DeploymentResult;{2563b9ae-b77d-4c1f-8a7b-20e6ad515ef3});struct(Windows.Management.Deployment.DeploymentProgress;enum(Windows.Management.Deployment.DeploymentProgressState;i4);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Management.Deployment.DeploymentResult
+    argument Windows.Management.Deployment.DeploymentProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.Management.Deployment.AutoUpdateSettingsOptions activatable python_type
+    py AutoUpdateSettingsOptions
+    signature rc(Windows.Management.Deployment.AutoUpdateSettingsOptions;{67491d87-35e1-512a-8968-1ae88d1be6d3})
+    default Windows.Management.Deployment.IAutoUpdateSettingsOptions
+    requires Windows.Management.Deployment.IAutoUpdateSettingsOptions
+    factory Windows.Management.Deployment.IAutoUpdateSettingsOptionsStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property version
+        get get_Version slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out struct type=Windows.ApplicationModel.PackageVersion return
+        put put_Version slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=30
+            in struct type=Windows.ApplicationModel.PackageVersion name=value
+    property update_blocks_activation
+        get get_UpdateBlocksActivation slot=16 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_UpdateBlocksActivation slot=17 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property show_prompt
+        get get_ShowPrompt slot=14 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_ShowPrompt slot=15 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property on_launch
+        get get_OnLaunch slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_OnLaunch slot=11 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property is_auto_repair_enabled
+        get get_IsAutoRepairEnabled slot=22 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_IsAutoRepairEnabled slot=23 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property hours_between_update_checks
+        get get_HoursBetweenUpdateChecks slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out uint32 return
+        put put_HoursBetweenUpdateChecks slot=13 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in uint32 name=value
+    property force_update_from_any_version
+        get get_ForceUpdateFromAnyVersion slot=20 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_ForceUpdateFromAnyVersion slot=21 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property automatic_background_task
+        get get_AutomaticBackgroundTask slot=18 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out boolean return
+        put put_AutomaticBackgroundTask slot=19 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in boolean name=value
+    property app_installer_uri
+        get get_AppInstallerUri slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_AppInstallerUri slot=9 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property dependency_package_uris
+        get get_DependencyPackageUris slot=26 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property optional_package_uris
+        get get_OptionalPackageUris slot=27 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property repair_uris
+        get get_RepairUris slot=25 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property update_uris
+        get get_UpdateUris slot=24 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    method create_from_app_installer_info static
+        method CreateFromAppInstallerInfo slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IAutoUpdateSettingsOptionsStatics shape=51 static
+            in class type=Windows.ApplicationModel.AppInstallerInfo name=appInstallerInfo
+            out class type=Windows.Management.Deployment.AutoUpdateSettingsOptions return
+
+class Windows.Management.Deployment.CreateSharedPackageContainerOptions activatable python_type
+    py CreateSharedPackageContainerOptions
+    signature rc(Windows.Management.Deployment.CreateSharedPackageContainerOptions;{c2ab6ece-f664-5c8e-a4b3-2a33276d3dde})
+    default Windows.Management.Deployment.ICreateSharedPackageContainerOptions
+    requires Windows.Management.Deployment.ICreateSharedPackageContainerOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property force_app_shutdown
+        get get_ForceAppShutdown slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerOptions shape=4
+            out boolean return
+        put put_ForceAppShutdown slot=8 inputs=1 outputs=0 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerOptions shape=4
+            in boolean name=value
+    property create_collision_option
+        get get_CreateCollisionOption slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerOptions shape=4
+            out enum32 type=Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions return
+        put put_CreateCollisionOption slot=10 inputs=1 outputs=0 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerOptions shape=4
+            in enum32 type=Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions name=value
+    property members
+        get get_Members slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> return
+
+class Windows.Management.Deployment.CreateSharedPackageContainerResult python_type
+    py CreateSharedPackageContainerResult
+    signature rc(Windows.Management.Deployment.CreateSharedPackageContainerResult;{ce8810bf-151c-5707-b936-497e564afc7a})
+    default Windows.Management.Deployment.ICreateSharedPackageContainerResult
+    requires Windows.Management.Deployment.ICreateSharedPackageContainerResult
+    property container
+        get get_Container slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerResult shape=4
+            out class type=Windows.Management.Deployment.SharedPackageContainer return
+    property extended_error
+        get get_ExtendedError slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ICreateSharedPackageContainerResult shape=4
+            out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
+
+class Windows.Management.Deployment.DeleteSharedPackageContainerOptions activatable python_type
+    py DeleteSharedPackageContainerOptions
+    signature rc(Windows.Management.Deployment.DeleteSharedPackageContainerOptions;{9d81865f-986e-5138-8b5d-384d8e66ed6c})
+    default Windows.Management.Deployment.IDeleteSharedPackageContainerOptions
+    requires Windows.Management.Deployment.IDeleteSharedPackageContainerOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property force_app_shutdown
+        get get_ForceAppShutdown slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerOptions shape=4
+            out boolean return
+        put put_ForceAppShutdown slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerOptions shape=4
+            in boolean name=value
+    property all_users
+        get get_AllUsers slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerOptions shape=4
+            out boolean return
+        put put_AllUsers slot=9 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerOptions shape=4
+            in boolean name=value
+
+class Windows.Management.Deployment.DeleteSharedPackageContainerResult python_type
+    py DeleteSharedPackageContainerResult
+    signature rc(Windows.Management.Deployment.DeleteSharedPackageContainerResult;{35398884-5736-517b-85bc-e598c81ab284})
+    default Windows.Management.Deployment.IDeleteSharedPackageContainerResult
+    requires Windows.Management.Deployment.IDeleteSharedPackageContainerResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeleteSharedPackageContainerResult shape=4
+            out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
+
+enum Windows.Management.Deployment.DeploymentOptions python_type flags_enum
+    py DeploymentOptions
+    signature enum(Windows.Management.Deployment.DeploymentOptions;u4)
+    constant NONE 0x0
+    constant FORCE_APPLICATION_SHUTDOWN 0x1
+    constant DEVELOPMENT_MODE 0x2
+    constant INSTALL_ALL_RESOURCES 0x20
+    constant FORCE_TARGET_APPLICATION_SHUTDOWN 0x40
+    constant REQUIRED_CONTENT_GROUP_ONLY 0x100
+    constant FORCE_UPDATE_FROM_ANY_VERSION 0x40000
+    constant RETAIN_FILES_ON_FAILURE 0x200000
+    constant STAGE_IN_PLACE 0x400000
+
+struct Windows.Management.Deployment.DeploymentProgress python_type
+    py DeploymentProgress
+    signature struct(Windows.Management.Deployment.DeploymentProgress;enum(Windows.Management.Deployment.DeploymentProgressState;i4);u4)
+    field state state enum32 type=Windows.Management.Deployment.DeploymentProgressState
+    field percentage percentage uint32
+
+enum Windows.Management.Deployment.DeploymentProgressState python_type
+    py DeploymentProgressState
+    signature enum(Windows.Management.Deployment.DeploymentProgressState;i4)
+    constant QUEUED 0
+    constant PROCESSING 1
+
+class Windows.Management.Deployment.DeploymentResult python_type
+    py DeploymentResult
+    signature rc(Windows.Management.Deployment.DeploymentResult;{2563b9ae-b77d-4c1f-8a7b-20e6ad515ef3})
+    default Windows.Management.Deployment.IDeploymentResult
+    requires Windows.Management.Deployment.IDeploymentResult
+    requires Windows.Management.Deployment.IDeploymentResult2
+    property activity_id
+        get get_ActivityId slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult shape=4
+            out guid return
+    property error_text
+        get get_ErrorText slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult shape=4
+            out string return
+    property extended_error_code
+        get get_ExtendedErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property is_registered
+        get get_IsRegistered slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IDeploymentResult2 shape=4
+            out boolean return
+
+class Windows.Management.Deployment.FindSharedPackageContainerOptions activatable python_type
+    py FindSharedPackageContainerOptions
+    signature rc(Windows.Management.Deployment.FindSharedPackageContainerOptions;{b40fc8fe-8384-54cc-817d-ae09d3b6a606})
+    default Windows.Management.Deployment.IFindSharedPackageContainerOptions
+    requires Windows.Management.Deployment.IFindSharedPackageContainerOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property package_family_name
+        get get_PackageFamilyName slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IFindSharedPackageContainerOptions shape=4
+            out string return
+        put put_PackageFamilyName slot=9 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IFindSharedPackageContainerOptions shape=4
+            in string name=value
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IFindSharedPackageContainerOptions shape=4
+            out string return
+        put put_Name slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IFindSharedPackageContainerOptions shape=4
+            in string name=value
+
+interface Windows.Management.Deployment.IAddPackageOptions
+    guid 05cee018-f68f-422b-95a4-66679ec77fc0
+
+interface Windows.Management.Deployment.IAddPackageOptions2
+    guid ee515828-bf33-40f7-84af-1b6fad2919d7
+
+interface Windows.Management.Deployment.IAddPackageOptions3
+    guid cba622a7-aa31-45ab-8b88-40d08b0a8b27
+
+interface Windows.Management.Deployment.IAppInstallerManager
+    guid e7ee21c3-2103-53ee-9b18-68afeab0033d
+
+interface Windows.Management.Deployment.IAppInstallerManagerStatics
+    guid c95a6ed5-fc59-5336-9b2e-2b07c5e61434
+
+interface Windows.Foundation.IAsyncOperation<System.UInt64> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UInt64]
+    guid 2a70d630-0767-5f0a-a1c2-deb08126e26e
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};u8)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.UInt64
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.UInt64> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.UInt64> shape=4 reverse=62 role=get_results
+            out uint64 return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[PackageVolume]]
+    guid 1e357e07-d337-5c07-ae06-900c1b9a77c1
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[PackageVolume]
+    guid 0315edb6-dc58-51cc-a519-44901ad2cf15
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Management.Deployment.PackageVolume
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Deployment.PackageVolume> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Management.Deployment.PackageVolume> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> shape=4 reverse=62 role=get_results
+            out class type=Windows.Management.Deployment.PackageVolume return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[DeploymentResult, DeploymentProgress]
+    guid 5a97aab7-b6ea-55ac-a5dc-d5b164d94e94
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Management.Deployment.DeploymentResult;{2563b9ae-b77d-4c1f-8a7b-20e6ad515ef3});struct(Windows.Management.Deployment.DeploymentProgress;enum(Windows.Management.Deployment.DeploymentProgressState;i4);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Management.Deployment.DeploymentResult
+    argument Windows.Management.Deployment.DeploymentProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Management.Deployment.DeploymentResult return
+
+interface Windows.Management.Deployment.IAutoUpdateSettingsOptions
+    guid 67491d87-35e1-512a-8968-1ae88d1be6d3
+
+interface Windows.Management.Deployment.IAutoUpdateSettingsOptionsStatics
+    guid 887b337d-0c05-54d0-bd49-3bb7a2c084cb
+
+interface Windows.Management.Deployment.ICreateSharedPackageContainerOptions
+    guid c2ab6ece-f664-5c8e-a4b3-2a33276d3dde
+
+interface Windows.Management.Deployment.ICreateSharedPackageContainerResult
+    guid ce8810bf-151c-5707-b936-497e564afc7a
+
+interface Windows.Management.Deployment.IDeleteSharedPackageContainerOptions
+    guid 9d81865f-986e-5138-8b5d-384d8e66ed6c
+
+interface Windows.Management.Deployment.IDeleteSharedPackageContainerResult
+    guid 35398884-5736-517b-85bc-e598c81ab284
+
+interface Windows.Management.Deployment.IDeploymentResult
+    guid 2563b9ae-b77d-4c1f-8a7b-20e6ad515ef3
+
+interface Windows.Management.Deployment.IDeploymentResult2
+    guid fc0e715c-5a01-4bd7-bcf1-381c8c82e04a
+
+interface Windows.Management.Deployment.IFindSharedPackageContainerOptions
+    guid b40fc8fe-8384-54cc-817d-ae09d3b6a606
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Package]
+    guid 69ad6aa7-0c49-5f27-a5eb-ef4d59467b6d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.ApplicationModel.Package
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[Uri, String]]
+    guid 52129c53-b03d-59b3-a27e-b0385643e9fe
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Uri]
+    guid b0d63b78-78ad-5e31-b6d8-e32a0e16c447
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Uri
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageUserInformation> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageUserInformation]
+    guid 341348b9-52c8-5b57-9e91-f19f2a05b188
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Deployment.PackageUserInformation;{f6383423-fa09-4cbc-9055-15ca275e2e7e}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Deployment.PackageUserInformation
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageUserInformation> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageVolume> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[PackageVolume]
+    guid a6199162-b163-56a1-9980-db0c3f4e9284
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Deployment.PackageVolume
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SharedPackageContainer]
+    guid 68a1862f-3ffa-58ec-89a9-5dfeb6d7433d
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Deployment.SharedPackageContainer;{177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Deployment.SharedPackageContainer
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[SharedPackageContainerMember]
+    guid 250d357d-d93f-5603-8c84-3d325bb319ee
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Management.Deployment.SharedPackageContainerMember;{fe0d0438-43c9-5426-b89c-f79bf85ddff4}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Management.Deployment.SharedPackageContainerMember
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Package]
+    guid 0217f069-025c-5ee6-a87f-e782e3b623ae
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.ApplicationModel.Package
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=22 role=current
+            out class type=Windows.ApplicationModel.Package return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[Uri, String]]
+    guid 0c11a982-9f05-557f-b3e8-3737b26830d1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Uri]
+    guid 1c157d0f-5efe-5cec-bbd6-0c6ce9af07a5
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Uri
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=22 role=current
+            out class type=Windows.Foundation.Uri return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageUserInformation]
+    guid 75660566-ae43-5858-ada6-d57ddae90277
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Deployment.PackageUserInformation;{f6383423-fa09-4cbc-9055-15ca275e2e7e}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Deployment.PackageUserInformation
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Deployment.PackageUserInformation return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Deployment.PackageUserInformation name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageUserInformation> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[PackageVolume]
+    guid a8d5b736-4e68-5ef1-9f07-f06837988c73
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Deployment.PackageVolume
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Deployment.PackageVolume return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Deployment.PackageVolume name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SharedPackageContainer]
+    guid 01c05337-1d58-5f96-8290-b38f1cb0b6f3
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Deployment.SharedPackageContainer;{177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Deployment.SharedPackageContainer
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Deployment.SharedPackageContainer return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainer name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[SharedPackageContainerMember]
+    guid 7b7526e6-1569-5879-9924-1dac1df3a48f
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Management.Deployment.SharedPackageContainerMember;{fe0d0438-43c9-5426-b89c-f79bf85ddff4}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Management.Deployment.SharedPackageContainerMember
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=22 role=current
+            out class type=Windows.Management.Deployment.SharedPackageContainerMember return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainerMember name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[Uri, String]
+    guid f1fe0d5e-8449-5479-875f-17daeb0027f0
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument Windows.Foundation.Uri
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> shape=4 reverse=22 role=pair_key
+            out class type=Windows.Foundation.Uri return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String> shape=4 reverse=43 role=pair_value
+            out string return
+
+interface Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[Uri, String]
+    guid 4c522071-01da-5f85-9d52-29952578a301
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>>
+    argument Windows.Foundation.Uri
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=0 reverse=159 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=99 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=51 reverse=65 role=has_key
+            in class type=Windows.Foundation.Uri name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=117 reverse=125 role=insert
+            in class type=Windows.Foundation.Uri name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=51 reverse=24 role=lookup
+            in class type=Windows.Foundation.Uri name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> shape=4 reverse=141 role=remove
+            in class type=Windows.Foundation.Uri name=key
+
+interface Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[Uri, String]
+    guid 87530605-8bd4-5f0a-85f1-751e8bd20446
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc});string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>>
+    argument Windows.Foundation.Uri
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<Windows.Foundation.Uri,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=65 role=has_key
+            in class type=Windows.Foundation.Uri name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=24 role=lookup
+            in class type=Windows.Foundation.Uri name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<Windows.Foundation.Uri,System.String> name=second
+
+interface Windows.Management.Deployment.IPackageAllUserProvisioningOptions
+    guid da35aa22-1de0-5d3e-99ff-d24f3118bf5e
+
+interface Windows.Management.Deployment.IPackageAllUserProvisioningOptions2
+    guid b9e3cab5-2d97-579f-9368-d10bb4d4542b
+
+interface Windows.Management.Deployment.IPackageManager
+    guid 9a7d4b65-5e8f-4fc7-a2e5-7f6925cb8b53
+
+interface Windows.Management.Deployment.IPackageManager10
+    guid a7d7d07e-2e66-4093-aed5-e093ed87b3bb
+
+interface Windows.Management.Deployment.IPackageManager11
+    guid 12950b24-c77e-4ea7-8859-325318074e15
+
+interface Windows.Management.Deployment.IPackageManager12
+    guid 5d233adf-f9e3-4d96-b40d-96788e39539f
+
+interface Windows.Management.Deployment.IPackageManager2
+    guid f7aad08d-0840-46f2-b5d8-cad47693a095
+
+interface Windows.Management.Deployment.IPackageManager3
+    guid daad9948-36f1-41a7-9188-bc263e0dcb72
+
+interface Windows.Management.Deployment.IPackageManager4
+    guid 3c719963-bab6-46bf-8ff7-da4719230ae6
+
+interface Windows.Management.Deployment.IPackageManager5
+    guid 711f3117-1afd-4313-978c-9bb6e1b864a7
+
+interface Windows.Management.Deployment.IPackageManager6
+    guid 0847e909-53cd-4e4f-832e-57d180f6e447
+
+interface Windows.Management.Deployment.IPackageManager7
+    guid f28654f4-2ba7-4b80-88d6-be15f9a23fba
+
+interface Windows.Management.Deployment.IPackageManager8
+    guid b8575330-1298-4ee2-80ee-7f659c5d2782
+
+interface Windows.Management.Deployment.IPackageManager9
+    guid 1aa79035-cc71-4b2e-80a6-c7041d8579a7
+
+interface Windows.Management.Deployment.IPackageManagerDebugSettings
+    guid 1a611683-a988-4fcf-8f0f-ce175898e8eb
+
+interface Windows.Management.Deployment.IPackageUserInformation
+    guid f6383423-fa09-4cbc-9055-15ca275e2e7e
+
+interface Windows.Management.Deployment.IPackageVolume
+    guid cf2672c3-1a40-4450-9739-2ace2e898853
+
+interface Windows.Management.Deployment.IPackageVolume2
+    guid 46abcf2e-9dd4-47a2-ab8c-c6408349bcd8
+
+interface Windows.Management.Deployment.IRegisterPackageOptions
+    guid 677112a7-50d4-496c-8415-0602b4c6d3bf
+
+interface Windows.Management.Deployment.IRegisterPackageOptions2
+    guid 3dfa9743-86ff-4a11-bc93-434eb6be3a0b
+
+interface Windows.Management.Deployment.IRemovePackageOptions
+    guid 13cf01f3-c450-4f7c-a5a3-5e3c631b7462
+
+interface Windows.Management.Deployment.IRemovePackageOptions2
+    guid 3fcc61e5-22c5-423b-b4b4-cf10bb50830c
+
+interface Windows.Management.Deployment.ISharedPackageContainer
+    guid 177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17
+
+interface Windows.Management.Deployment.ISharedPackageContainerManager
+    guid be353068-1ef7-5ac8-ab3f-0b9f612f0274
+
+interface Windows.Management.Deployment.ISharedPackageContainerManagerStatics
+    guid 2ef56348-838a-5f55-a89e-1198a2c627e6
+
+interface Windows.Management.Deployment.ISharedPackageContainerMember
+    guid fe0d0438-43c9-5426-b89c-f79bf85ddff4
+
+interface Windows.Management.Deployment.ISharedPackageContainerMemberFactory
+    guid 49b0ceeb-498f-5a62-b738-b3ca0d436704
+
+interface Windows.Management.Deployment.IStagePackageOptions
+    guid 0b110c9c-b95d-4c56-bd36-6d656800d06b
+
+interface Windows.Management.Deployment.IStagePackageOptions2
+    guid 990c4ccc-6226-4192-ba92-79875fce0d9c
+
+interface Windows.Management.Deployment.IStagePackageOptions3
+    guid ce392e55-1743-4945-ad43-9e5add4be96d
+
+interface Windows.Management.Deployment.IUpdateSharedPackageContainerOptions
+    guid 80672e83-7194-59f9-b5b9-daa5375f130a
+
+interface Windows.Management.Deployment.IUpdateSharedPackageContainerResult
+    guid aa407df7-c72d-5458-aea3-4645b6a8ee99
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
+
+interface Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Package]
+    guid d1bb509e-6989-5c69-b1ff-d1702fe8aca3
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package>
+    argument Windows.ApplicationModel.Package
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=173 role=append
+            in class type=Windows.ApplicationModel.Package name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Package return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=117 reverse=101 role=index_of
+            in class type=Windows.ApplicationModel.Package name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Package name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=211 role=replace_all
+            pass_array class type=Windows.ApplicationModel.Package name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.ApplicationModel.Package name=value
+
+interface Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[Uri]
+    guid 0d82bd8d-fe62-5d67-a7b9-7886dd75bc4e
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
+    argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=173 role=append
+            in class type=Windows.Foundation.Uri name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=117 reverse=101 role=index_of
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=211 role=replace_all
+            pass_array class type=Windows.Foundation.Uri name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Foundation.Uri name=value
+
+interface Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SharedPackageContainer]
+    guid 42135abf-1929-5d3b-a972-e822f516aebc
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Management.Deployment.SharedPackageContainer;{177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer>
+    argument Windows.Management.Deployment.SharedPackageContainer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=173 role=append
+            in class type=Windows.Management.Deployment.SharedPackageContainer name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Deployment.SharedPackageContainer return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainer name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=117 reverse=101 role=index_of
+            in class type=Windows.Management.Deployment.SharedPackageContainer name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Management.Deployment.SharedPackageContainer name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=51 reverse=211 role=replace_all
+            pass_array class type=Windows.Management.Deployment.SharedPackageContainer name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Management.Deployment.SharedPackageContainer name=value
+
+interface Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[SharedPackageContainerMember]
+    guid 45787bb3-2770-5086-9546-511141ef7289
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Management.Deployment.SharedPackageContainerMember;{fe0d0438-43c9-5426-b89c-f79bf85ddff4}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember>
+    argument Windows.Management.Deployment.SharedPackageContainerMember
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=173 role=append
+            in class type=Windows.Management.Deployment.SharedPackageContainerMember name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Deployment.SharedPackageContainerMember return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainerMember name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=117 reverse=101 role=index_of
+            in class type=Windows.Management.Deployment.SharedPackageContainerMember name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Management.Deployment.SharedPackageContainerMember name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=51 reverse=211 role=replace_all
+            pass_array class type=Windows.Management.Deployment.SharedPackageContainerMember name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Management.Deployment.SharedPackageContainerMember name=value
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Package]
+    guid 0263c4d4-195c-5dc5-a7ca-6806ceca420b
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.ApplicationModel.Package;{163c792f-bd75-413c-bf23-b1fe7b95d825}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package>
+    argument Windows.ApplicationModel.Package
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.Package> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.ApplicationModel.Package return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.ApplicationModel.Package name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.Package> shape=117 reverse=66 role=index_of
+            in class type=Windows.ApplicationModel.Package name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Uri]
+    guid 4b8385bd-a2cd-5ff1-bf74-7ea580423e50
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Foundation.Uri;{9e365e57-48b2-4160-956f-c7385120bbfc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri>
+    argument Windows.Foundation.Uri
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Uri> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Foundation.Uri return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Foundation.Uri name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> shape=117 reverse=66 role=index_of
+            in class type=Windows.Foundation.Uri name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[PackageVolume]
+    guid 50b5715a-f077-53d1-896d-b132c48701f4
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageVolume>
+    argument Windows.Management.Deployment.PackageVolume
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageVolume> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.PackageVolume> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Deployment.PackageVolume return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Deployment.PackageVolume name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Deployment.PackageVolume name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SharedPackageContainer]
+    guid fbd55a40-1e67-5761-9542-1a3e7cb4b7d9
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Deployment.SharedPackageContainer;{177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer>
+    argument Windows.Management.Deployment.SharedPackageContainer
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainer> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainer> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Deployment.SharedPackageContainer return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainer name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainer> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Deployment.SharedPackageContainer name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[SharedPackageContainerMember]
+    guid 430cca14-916e-583d-a944-c2b283be1de1
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Management.Deployment.SharedPackageContainerMember;{fe0d0438-43c9-5426-b89c-f79bf85ddff4}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember>
+    argument Windows.Management.Deployment.SharedPackageContainerMember
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.SharedPackageContainerMember> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Management.Deployment.SharedPackageContainerMember> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Management.Deployment.SharedPackageContainerMember return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Management.Deployment.SharedPackageContainerMember name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.SharedPackageContainerMember> shape=117 reverse=66 role=index_of
+            in class type=Windows.Management.Deployment.SharedPackageContainerMember name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Management.Deployment.PackageAllUserProvisioningOptions activatable python_type
+    py PackageAllUserProvisioningOptions
+    signature rc(Windows.Management.Deployment.PackageAllUserProvisioningOptions;{da35aa22-1de0-5d3e-99ff-d24f3118bf5e})
+    default Windows.Management.Deployment.IPackageAllUserProvisioningOptions
+    requires Windows.Management.Deployment.IPackageAllUserProvisioningOptions
+    requires Windows.Management.Deployment.IPackageAllUserProvisioningOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property optional_package_family_names
+        get get_OptionalPackageFamilyNames slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageAllUserProvisioningOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property projection_order_package_family_names
+        get get_ProjectionOrderPackageFamilyNames slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageAllUserProvisioningOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property defer_automatic_registration
+        get get_DeferAutomaticRegistration slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageAllUserProvisioningOptions2 shape=4
+            out boolean return
+        put put_DeferAutomaticRegistration slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IPackageAllUserProvisioningOptions2 shape=4
+            in boolean name=value
+
+enum Windows.Management.Deployment.PackageInstallState python_type
+    py PackageInstallState
+    signature enum(Windows.Management.Deployment.PackageInstallState;i4)
+    constant NOT_INSTALLED 0
+    constant STAGED 1
+    constant INSTALLED 2
+    constant PAUSED 6
+
+class Windows.Management.Deployment.PackageManager activatable python_type
+    py PackageManager
+    signature rc(Windows.Management.Deployment.PackageManager;{9a7d4b65-5e8f-4fc7-a2e5-7f6925cb8b53})
+    default Windows.Management.Deployment.IPackageManager
+    requires Windows.Management.Deployment.IPackageManager
+    requires Windows.Management.Deployment.IPackageManager2
+    requires Windows.Management.Deployment.IPackageManager3
+    requires Windows.Management.Deployment.IPackageManager4
+    requires Windows.Management.Deployment.IPackageManager5
+    requires Windows.Management.Deployment.IPackageManager6
+    requires Windows.Management.Deployment.IPackageManager7
+    requires Windows.Management.Deployment.IPackageManager8
+    requires Windows.Management.Deployment.IPackageManager9
+    requires Windows.Management.Deployment.IPackageManager10
+    requires Windows.Management.Deployment.IPackageManager11
+    requires Windows.Management.Deployment.IPackageManager12
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property debug_settings
+        get get_DebugSettings slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager5 shape=4
+            out class type=Windows.Management.Deployment.PackageManagerDebugSettings return
+    method add_package_async
+        method AddPackageAsync slot=6 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=195
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method AddPackageAsync slot=7 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=239
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method AddPackageAsync slot=6 inputs=6 outputs=1 declaring=Windows.Management.Deployment.IPackageManager5 shape=278 default_overload
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=externalPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method AddPackageAsync slot=9 inputs=7 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=286
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=options
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=packageUrisToInstall
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=relatedPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method add_package_by_app_installer_file_async
+        method AddPackageByAppInstallerFileAsync slot=7 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=195
+            in class type=Windows.Foundation.Uri name=appInstallerFileUri
+            in enum_u32 type=Windows.Management.Deployment.AddPackageByAppInstallerOptions name=options
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method add_package_by_uri_async
+        method AddPackageByUriAsync slot=7 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=117
+            in class type=Windows.Foundation.Uri name=packageUri
+            in class type=Windows.Management.Deployment.AddPackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method add_package_volume_async
+        method AddPackageVolumeAsync slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in string name=packageStorePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Management.Deployment.PackageVolume> return
+    method cleanup_package_for_user_async
+        method CleanupPackageForUserAsync slot=18 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=117
+            in string name=packageName
+            in string name=userSecurityId
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method clear_package_status
+        method ClearPackageStatus slot=8 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in string name=packageFullName
+            in enum_u32 type=Windows.Management.Deployment.PackageStatus name=status
+    method deprovision_package_for_all_users_async
+        method DeprovisionPackageForAllUsersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager8 shape=51
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method find_package
+        method FindPackage slot=17 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=packageFullName
+            out class type=Windows.ApplicationModel.Package return
+    method find_package_for_user
+        method FindPackageForUser slot=21 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=117
+            in string name=userSecurityId
+            in string name=packageFullName
+            out class type=Windows.ApplicationModel.Package return
+    method find_package_volume
+        method FindPackageVolume slot=10 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in string name=volumeName
+            out class type=Windows.Management.Deployment.PackageVolume return
+    method find_package_volumes
+        method FindPackageVolumes slot=11 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=4
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageVolume> return
+    method find_packages
+        method FindPackages slot=11 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=4
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackages slot=19 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackages slot=13 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=117
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+    method find_packages_for_user
+        method FindPackagesForUser slot=12 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=userSecurityId
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesForUser slot=20 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=117
+            in string name=userSecurityId
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesForUser slot=14 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=195
+            in string name=userSecurityId
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+    method find_packages_for_user_with_package_types
+        method FindPackagesForUserWithPackageTypes slot=10 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=117
+            in string name=userSecurityId
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesForUserWithPackageTypes slot=14 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=195
+            in string name=userSecurityId
+            in string name=packageFamilyName
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesForUserWithPackageTypes slot=12 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=239
+            in string name=userSecurityId
+            in string name=packageName
+            in string name=packagePublisher
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+    method find_packages_with_package_types
+        method FindPackagesWithPackageTypes slot=9 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=51
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesWithPackageTypes slot=13 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=117
+            in string name=packageFamilyName
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+        method FindPackagesWithPackageTypes slot=11 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=195
+            in string name=packageName
+            in string name=packagePublisher
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.Package> return
+    method find_provisioned_packages
+        method FindProvisionedPackages slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_users
+        method FindUsers slot=15 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.Collections.IIterable<Windows.Management.Deployment.PackageUserInformation> return
+    method get_default_package_volume
+        method GetDefaultPackageVolume slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=4
+            out class type=Windows.Management.Deployment.PackageVolume return
+    method get_package_stub_preference
+        method GetPackageStubPreference slot=12 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=51
+            in string name=packageFamilyName
+            out enum32 type=Windows.Management.Deployment.PackageStubPreference return
+    method get_package_volumes_async
+        method GetPackageVolumesAsync slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageManager4 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Management.Deployment.PackageVolume>> return
+    method is_package_removal_pending
+        method IsPackageRemovalPending slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager12 shape=51
+            in string name=packageFullName
+            out boolean return
+    method is_package_removal_pending_by_uri
+        method IsPackageRemovalPendingByUri slot=8 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager12 shape=51
+            in class type=Windows.Foundation.Uri name=packageUri
+            out boolean return
+    method is_package_removal_pending_by_uri_for_user
+        method IsPackageRemovalPendingByUriForUser slot=9 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager12 shape=117
+            in class type=Windows.Foundation.Uri name=packageUri
+            in string name=userSecurityId
+            out boolean return
+    method is_package_removal_pending_for_user
+        method IsPackageRemovalPendingForUser slot=7 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager12 shape=117
+            in string name=packageFullName
+            in string name=userSecurityId
+            out boolean return
+    method move_package_to_volume_async
+        method MovePackageToVolumeAsync slot=13 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=195
+            in string name=packageFullName
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method provision_package_for_all_users_async
+        method ProvisionPackageForAllUsersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=51
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method ProvisionPackageForAllUsersAsync slot=6 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager10 shape=117
+            in string name=mainPackageFamilyName
+            in class type=Windows.Management.Deployment.PackageAllUserProvisioningOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method register_package_async
+        method RegisterPackageAsync slot=10 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=195
+            in class type=Windows.Foundation.Uri name=manifestUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method RegisterPackageAsync slot=9 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=239
+            in class type=Windows.Foundation.Uri name=manifestUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=appDataVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method register_package_by_family_name_async
+        method RegisterPackageByFamilyNameAsync slot=8 inputs=5 outputs=1 declaring=Windows.Management.Deployment.IPackageManager5 shape=267
+            in string name=mainPackageFamilyName
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=dependencyPackageFamilyNames
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=appDataVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method register_package_by_full_name_async
+        method RegisterPackageByFullNameAsync slot=8 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=195
+            in string name=mainPackageFullName
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=dependencyPackageFullNames
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method register_package_by_uri_async
+        method RegisterPackageByUriAsync slot=9 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=117
+            in class type=Windows.Foundation.Uri name=manifestUri
+            in class type=Windows.Management.Deployment.RegisterPackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method register_packages_by_full_name_async
+        method RegisterPackagesByFullNameAsync slot=10 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=117
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=packageFullNames
+            in class type=Windows.Management.Deployment.RegisterPackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method remove_package_async
+        method RemovePackageAsync slot=8 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method RemovePackageAsync slot=6 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=117
+            in string name=packageFullName
+            in enum_u32 type=Windows.Management.Deployment.RemovalOptions name=removalOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method remove_package_by_uri_async
+        method RemovePackageByUriAsync slot=6 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager11 shape=117
+            in class type=Windows.Foundation.Uri name=packageUri
+            in class type=Windows.Management.Deployment.RemovePackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method remove_package_volume_async
+        method RemovePackageVolumeAsync slot=14 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in class type=Windows.Management.Deployment.PackageVolume name=volume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method request_add_package_async
+        method RequestAddPackageAsync slot=11 inputs=6 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=278
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=relatedPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method RequestAddPackageAsync slot=6 inputs=7 outputs=1 declaring=Windows.Management.Deployment.IPackageManager7 shape=286
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=relatedPackageUris
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=packageUrisToInstall
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method request_add_package_by_app_installer_file_async
+        method RequestAddPackageByAppInstallerFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=195
+            in class type=Windows.Foundation.Uri name=appInstallerFileUri
+            in enum_u32 type=Windows.Management.Deployment.AddPackageByAppInstallerOptions name=options
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method set_default_package_volume
+        method SetDefaultPackageVolume slot=15 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IPackageManager3 shape=4
+            in class type=Windows.Management.Deployment.PackageVolume name=volume
+    method set_package_state
+        method SetPackageState slot=16 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IPackageManager shape=51
+            in string name=packageFullName
+            in enum32 type=Windows.Management.Deployment.PackageState name=packageState
+    method set_package_status
+        method SetPackageStatus slot=16 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in string name=packageFullName
+            in enum_u32 type=Windows.Management.Deployment.PackageStatus name=status
+    method set_package_stub_preference
+        method SetPackageStubPreference slot=11 inputs=2 outputs=0 declaring=Windows.Management.Deployment.IPackageManager9 shape=51
+            in string name=packageFamilyName
+            in enum32 type=Windows.Management.Deployment.PackageStubPreference name=useStub
+    method set_package_volume_offline_async
+        method SetPackageVolumeOfflineAsync slot=17 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in class type=Windows.Management.Deployment.PackageVolume name=packageVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method set_package_volume_online_async
+        method SetPackageVolumeOnlineAsync slot=18 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=51
+            in class type=Windows.Management.Deployment.PackageVolume name=packageVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method stage_package_async
+        method StagePackageAsync slot=9 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=117
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method StagePackageAsync slot=7 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=195
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method StagePackageAsync slot=19 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=239
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method StagePackageAsync slot=7 inputs=6 outputs=1 declaring=Windows.Management.Deployment.IPackageManager5 shape=278 default_overload
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=externalPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method StagePackageAsync slot=10 inputs=7 outputs=1 declaring=Windows.Management.Deployment.IPackageManager6 shape=286
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=options
+            in class type=Windows.Management.Deployment.PackageVolume name=targetVolume
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.String> name=optionalPackageFamilyNames
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=packageUrisToInstall
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=relatedPackageUris
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method stage_package_by_uri_async
+        method StagePackageByUriAsync slot=8 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager9 shape=117
+            in class type=Windows.Foundation.Uri name=packageUri
+            in class type=Windows.Management.Deployment.StagePackageOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method stage_user_data_async
+        method StageUserDataAsync slot=15 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageManager2 shape=51
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+        method StageUserDataAsync slot=20 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageManager3 shape=117
+            in string name=packageFullName
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+    method update_package_async
+        method UpdatePackageAsync slot=7 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManager shape=195
+            in class type=Windows.Foundation.Uri name=packageUri
+            in parameterized type=Windows.Foundation.Collections.IIterable<Windows.Foundation.Uri> name=dependencyPackageUris
+            in enum_u32 type=Windows.Management.Deployment.DeploymentOptions name=deploymentOptions
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Management.Deployment.DeploymentResult,Windows.Management.Deployment.DeploymentProgress> return
+
+class Windows.Management.Deployment.PackageManagerDebugSettings python_type
+    py PackageManagerDebugSettings
+    signature rc(Windows.Management.Deployment.PackageManagerDebugSettings;{1a611683-a988-4fcf-8f0f-ce175898e8eb})
+    default Windows.Management.Deployment.IPackageManagerDebugSettings
+    requires Windows.Management.Deployment.IPackageManagerDebugSettings
+    method set_content_group_state_async
+        method SetContentGroupStateAsync slot=6 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageManagerDebugSettings shape=195
+            in class type=Windows.ApplicationModel.Package name=package
+            in string name=contentGroupName
+            in enum32 type=Windows.ApplicationModel.PackageContentGroupState name=state
+            out interface type=Windows.Foundation.IAsyncAction return
+        method SetContentGroupStateAsync slot=7 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageManagerDebugSettings shape=238
+            in class type=Windows.ApplicationModel.Package name=package
+            in string name=contentGroupName
+            in enum32 type=Windows.ApplicationModel.PackageContentGroupState name=state
+            in double name=completionPercentage
+            out interface type=Windows.Foundation.IAsyncAction return
+
+enum Windows.Management.Deployment.PackageOperationPriority python_type
+    py PackageOperationPriority
+    signature enum(Windows.Management.Deployment.PackageOperationPriority;i4)
+    constant LOW 0
+    constant NORMAL 1
+    constant HIGH 2
+
+enum Windows.Management.Deployment.PackageState python_type
+    py PackageState
+    signature enum(Windows.Management.Deployment.PackageState;i4)
+    constant NORMAL 0
+    constant LICENSE_INVALID 1
+    constant MODIFIED 2
+    constant TAMPERED 3
+
+enum Windows.Management.Deployment.PackageStatus python_type flags_enum
+    py PackageStatus
+    signature enum(Windows.Management.Deployment.PackageStatus;u4)
+    constant OK 0x0
+    constant LICENSE_ISSUE 0x1
+    constant MODIFIED 0x2
+    constant TAMPERED 0x4
+    constant DISABLED 0x8
+
+enum Windows.Management.Deployment.PackageStubPreference python_type
+    py PackageStubPreference
+    signature enum(Windows.Management.Deployment.PackageStubPreference;i4)
+    constant FULL 0
+    constant STUB 1
+
+enum Windows.Management.Deployment.PackageTypes python_type flags_enum
+    py PackageTypes
+    signature enum(Windows.Management.Deployment.PackageTypes;u4)
+    constant NONE 0x0
+    constant MAIN 0x1
+    constant FRAMEWORK 0x2
+    constant RESOURCE 0x4
+    constant BUNDLE 0x8
+    constant XAP 0x10
+    constant OPTIONAL 0x20
+    constant ALL 0xFFFFFFFF
+
+class Windows.Management.Deployment.PackageUserInformation python_type
+    py PackageUserInformation
+    signature rc(Windows.Management.Deployment.PackageUserInformation;{f6383423-fa09-4cbc-9055-15ca275e2e7e})
+    default Windows.Management.Deployment.IPackageUserInformation
+    requires Windows.Management.Deployment.IPackageUserInformation
+    property install_state
+        get get_InstallState slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageUserInformation shape=4
+            out enum32 type=Windows.Management.Deployment.PackageInstallState return
+    property user_security_id
+        get get_UserSecurityId slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageUserInformation shape=4
+            out string return
+
+class Windows.Management.Deployment.PackageVolume python_type
+    py PackageVolume
+    signature rc(Windows.Management.Deployment.PackageVolume;{cf2672c3-1a40-4450-9739-2ace2e898853})
+    default Windows.Management.Deployment.IPackageVolume
+    requires Windows.Management.Deployment.IPackageVolume
+    requires Windows.Management.Deployment.IPackageVolume2
+    property is_offline
+        get get_IsOffline slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out boolean return
+    property is_system_volume
+        get get_IsSystemVolume slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out boolean return
+    property mount_point
+        get get_MountPoint slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out string return
+    property name
+        get get_Name slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out string return
+    property package_store_path
+        get get_PackageStorePath slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out string return
+    property supports_hard_links
+        get get_SupportsHardLinks slot=11 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out boolean return
+    property is_appx_install_supported
+        get get_IsAppxInstallSupported slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume2 shape=4
+            out boolean return
+    property is_full_trust_package_supported
+        get get_IsFullTrustPackageSupported slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume2 shape=4
+            out boolean return
+    method find_package
+        method FindPackage slot=18 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=51
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_package_for_user
+        method FindPackageForUser slot=25 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=117
+            in string name=userSecurityId
+            in string name=packageFullName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_packages
+        method FindPackages slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackages slot=14 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=51
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackages slot=13 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=117
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_packages_for_user
+        method FindPackagesForUser slot=19 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=51
+            in string name=userSecurityId
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesForUser slot=21 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=117
+            in string name=userSecurityId
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesForUser slot=20 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=195
+            in string name=userSecurityId
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_packages_for_user_with_package_types
+        method FindPackagesForUserWithPackageTypes slot=22 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=117
+            in string name=userSecurityId
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesForUserWithPackageTypes slot=24 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=195
+            in string name=userSecurityId
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesForUserWithPackageTypes slot=23 inputs=4 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=239
+            in string name=userSecurityId
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method find_packages_with_package_types
+        method FindPackagesWithPackageTypes slot=15 inputs=1 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=51
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesWithPackageTypes slot=17 inputs=2 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=117
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            in string name=packageFamilyName
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+        method FindPackagesWithPackageTypes slot=16 inputs=3 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume shape=195
+            in enum_u32 type=Windows.Management.Deployment.PackageTypes name=packageTypes
+            in string name=packageName
+            in string name=packagePublisher
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package> return
+    method get_available_space_async
+        method GetAvailableSpaceAsync slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IPackageVolume2 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.UInt64> return
+
+class Windows.Management.Deployment.RegisterPackageOptions activatable python_type
+    py RegisterPackageOptions
+    signature rc(Windows.Management.Deployment.RegisterPackageOptions;{677112a7-50d4-496c-8415-0602b4c6d3bf})
+    default Windows.Management.Deployment.IRegisterPackageOptions
+    requires Windows.Management.Deployment.IRegisterPackageOptions
+    requires Windows.Management.Deployment.IRegisterPackageOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property stage_in_place
+        get get_StageInPlace slot=22 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_StageInPlace slot=23 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property install_all_resources
+        get get_InstallAllResources slot=20 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_InstallAllResources slot=21 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property force_update_from_any_version
+        get get_ForceUpdateFromAnyVersion slot=18 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_ForceUpdateFromAnyVersion slot=19 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property force_target_app_shutdown
+        get get_ForceTargetAppShutdown slot=16 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_ForceTargetAppShutdown slot=17 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property force_app_shutdown
+        get get_ForceAppShutdown slot=14 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_ForceAppShutdown slot=15 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property external_location_uri
+        get get_ExternalLocationUri slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_ExternalLocationUri slot=11 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property developer_mode
+        get get_DeveloperMode slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_DeveloperMode slot=13 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property defer_registration_when_packages_are_in_use
+        get get_DeferRegistrationWhenPackagesAreInUse slot=26 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_DeferRegistrationWhenPackagesAreInUse slot=27 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property app_data_volume
+        get get_AppDataVolume slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out class type=Windows.Management.Deployment.PackageVolume return
+        put put_AppDataVolume slot=8 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in class type=Windows.Management.Deployment.PackageVolume name=value
+    property allow_unsigned
+        get get_AllowUnsigned slot=24 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out boolean return
+        put put_AllowUnsigned slot=25 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            in boolean name=value
+    property dependency_package_uris
+        get get_DependencyPackageUris slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property optional_package_family_names
+        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property expected_digests
+        get get_ExpectedDigests slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRegisterPackageOptions2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
+
+enum Windows.Management.Deployment.RemovalOptions python_type flags_enum
+    py RemovalOptions
+    signature enum(Windows.Management.Deployment.RemovalOptions;u4)
+    constant NONE 0x0
+    constant PRESERVE_APPLICATION_DATA 0x1000
+    constant PRESERVE_ROAMABLE_APPLICATION_DATA 0x80
+    constant DEFER_REMOVAL_WHEN_PACKAGES_ARE_IN_USE 0x2000
+    constant REMOVE_FOR_ALL_USERS 0x80000
+
+class Windows.Management.Deployment.RemovePackageOptions activatable python_type
+    py RemovePackageOptions
+    signature rc(Windows.Management.Deployment.RemovePackageOptions;{13cf01f3-c450-4f7c-a5a3-5e3c631b7462})
+    default Windows.Management.Deployment.IRemovePackageOptions
+    requires Windows.Management.Deployment.IRemovePackageOptions
+    requires Windows.Management.Deployment.IRemovePackageOptions2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property remove_for_all_users
+        get get_RemoveForAllUsers slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            out boolean return
+        put put_RemoveForAllUsers slot=11 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            in boolean name=value
+    property preserve_roamable_application_data
+        get get_PreserveRoamableApplicationData slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            out boolean return
+        put put_PreserveRoamableApplicationData slot=9 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            in boolean name=value
+    property preserve_application_data
+        get get_PreserveApplicationData slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            out boolean return
+        put put_PreserveApplicationData slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRemovePackageOptions shape=4
+            in boolean name=value
+    property defer_removal_when_packages_are_in_use
+        get get_DeferRemovalWhenPackagesAreInUse slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IRemovePackageOptions2 shape=4
+            out boolean return
+        put put_DeferRemovalWhenPackagesAreInUse slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IRemovePackageOptions2 shape=4
+            in boolean name=value
+
+class Windows.Management.Deployment.SharedPackageContainer python_type
+    py SharedPackageContainer
+    signature rc(Windows.Management.Deployment.SharedPackageContainer;{177f1aa9-151e-5ef7-b1d9-2fba0b4b0d17})
+    default Windows.Management.Deployment.ISharedPackageContainer
+    requires Windows.Management.Deployment.ISharedPackageContainer
+    property id
+        get get_Id slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainer shape=4
+            out string return
+    property name
+        get get_Name slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainer shape=4
+            out string return
+    method get_members
+        method GetMembers slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainer shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainerMember> return
+    method remove_package_family
+        method RemovePackageFamily slot=9 inputs=2 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainer shape=117
+            in string name=packageFamilyName
+            in class type=Windows.Management.Deployment.UpdateSharedPackageContainerOptions name=options
+            out class type=Windows.Management.Deployment.UpdateSharedPackageContainerResult return
+    method reset_data
+        method ResetData slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainer shape=4
+            out class type=Windows.Management.Deployment.UpdateSharedPackageContainerResult return
+
+enum Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions python_type
+    py SharedPackageContainerCreationCollisionOptions
+    signature enum(Windows.Management.Deployment.SharedPackageContainerCreationCollisionOptions;i4)
+    constant FAIL_IF_EXISTS 0
+    constant MERGE_WITH_EXISTING 1
+    constant REPLACE_EXISTING 2
+
+class Windows.Management.Deployment.SharedPackageContainerManager python_type
+    py SharedPackageContainerManager
+    signature rc(Windows.Management.Deployment.SharedPackageContainerManager;{be353068-1ef7-5ac8-ab3f-0b9f612f0274})
+    default Windows.Management.Deployment.ISharedPackageContainerManager
+    requires Windows.Management.Deployment.ISharedPackageContainerManager
+    factory Windows.Management.Deployment.ISharedPackageContainerManagerStatics
+    method create_container
+        method CreateContainer slot=6 inputs=2 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManager shape=117
+            in string name=name
+            in class type=Windows.Management.Deployment.CreateSharedPackageContainerOptions name=options
+            out class type=Windows.Management.Deployment.CreateSharedPackageContainerResult return
+    method delete_container
+        method DeleteContainer slot=7 inputs=2 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManager shape=117
+            in string name=id
+            in class type=Windows.Management.Deployment.DeleteSharedPackageContainerOptions name=options
+            out class type=Windows.Management.Deployment.DeleteSharedPackageContainerResult return
+    method find_containers
+        method FindContainers slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManager shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> return
+        method FindContainers slot=10 inputs=1 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManager shape=51
+            in class type=Windows.Management.Deployment.FindSharedPackageContainerOptions name=options
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Management.Deployment.SharedPackageContainer> return
+    method get_container
+        method GetContainer slot=8 inputs=1 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManager shape=51
+            in string name=id
+            out class type=Windows.Management.Deployment.SharedPackageContainer return
+    method get_default static
+        method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManagerStatics shape=4 static
+            out class type=Windows.Management.Deployment.SharedPackageContainerManager return
+    method get_for_provisioning static
+        method GetForProvisioning slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManagerStatics shape=4 static
+            out class type=Windows.Management.Deployment.SharedPackageContainerManager return
+    method get_for_user static
+        method GetForUser slot=7 inputs=1 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerManagerStatics shape=51 static
+            in string name=userSid
+            out class type=Windows.Management.Deployment.SharedPackageContainerManager return
+
+class Windows.Management.Deployment.SharedPackageContainerMember python_type
+    py SharedPackageContainerMember
+    signature rc(Windows.Management.Deployment.SharedPackageContainerMember;{fe0d0438-43c9-5426-b89c-f79bf85ddff4})
+    default Windows.Management.Deployment.ISharedPackageContainerMember
+    requires Windows.Management.Deployment.ISharedPackageContainerMember
+    factory Windows.Management.Deployment.ISharedPackageContainerMemberFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerMemberFactory shape=51
+            in string name=packageFamilyName
+            out class type=Windows.Management.Deployment.SharedPackageContainerMember return
+    property package_family_name
+        get get_PackageFamilyName slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.ISharedPackageContainerMember shape=4
+            out string return
+
+enum Windows.Management.Deployment.SharedPackageContainerOperationStatus python_type
+    py SharedPackageContainerOperationStatus
+    signature enum(Windows.Management.Deployment.SharedPackageContainerOperationStatus;i4)
+    constant SUCCESS 0
+    constant BLOCKED_BY_POLICY 1
+    constant ALREADY_EXISTS 2
+    constant PACKAGE_FAMILY_EXISTS_IN_ANOTHER_CONTAINER 3
+    constant NOT_FOUND 4
+    constant UNKNOWN_FAILURE 5
+
+class Windows.Management.Deployment.StagePackageOptions activatable python_type
+    py StagePackageOptions
+    signature rc(Windows.Management.Deployment.StagePackageOptions;{0b110c9c-b95d-4c56-bd36-6d656800d06b})
+    default Windows.Management.Deployment.IStagePackageOptions
+    requires Windows.Management.Deployment.IStagePackageOptions
+    requires Windows.Management.Deployment.IStagePackageOptions2
+    requires Windows.Management.Deployment.IStagePackageOptions3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property target_volume
+        get get_TargetVolume slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out class type=Windows.Management.Deployment.PackageVolume return
+        put put_TargetVolume slot=8 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in class type=Windows.Management.Deployment.PackageVolume name=value
+    property stub_package_option
+        get get_StubPackageOption slot=14 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out enum32 type=Windows.Management.Deployment.StubPackageOption return
+        put put_StubPackageOption slot=15 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in enum32 type=Windows.Management.Deployment.StubPackageOption name=value
+    property stage_in_place
+        get get_StageInPlace slot=24 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_StageInPlace slot=25 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property required_content_group_only
+        get get_RequiredContentGroupOnly slot=22 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_RequiredContentGroupOnly slot=23 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property install_all_resources
+        get get_InstallAllResources slot=20 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_InstallAllResources slot=21 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property force_update_from_any_version
+        get get_ForceUpdateFromAnyVersion slot=18 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_ForceUpdateFromAnyVersion slot=19 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property external_location_uri
+        get get_ExternalLocationUri slot=12 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out class type=Windows.Foundation.Uri return
+        put put_ExternalLocationUri slot=13 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in class type=Windows.Foundation.Uri name=value
+    property developer_mode
+        get get_DeveloperMode slot=16 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_DeveloperMode slot=17 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property allow_unsigned
+        get get_AllowUnsigned slot=26 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out boolean return
+        put put_AllowUnsigned slot=27 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            in boolean name=value
+    property dependency_package_uris
+        get get_DependencyPackageUris slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property optional_package_family_names
+        get get_OptionalPackageFamilyNames slot=9 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property optional_package_uris
+        get get_OptionalPackageUris slot=10 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property related_package_uris
+        get get_RelatedPackageUris slot=11 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> return
+    property expected_digests
+        get get_ExpectedDigests slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<Windows.Foundation.Uri,System.String> return
+    property package_operation_priority
+        get get_PackageOperationPriority slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IStagePackageOptions3 shape=4
+            out enum32 type=Windows.Management.Deployment.PackageOperationPriority return
+        put put_PackageOperationPriority slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IStagePackageOptions3 shape=4
+            in enum32 type=Windows.Management.Deployment.PackageOperationPriority name=value
+
+enum Windows.Management.Deployment.StubPackageOption python_type
+    py StubPackageOption
+    signature enum(Windows.Management.Deployment.StubPackageOption;i4)
+    constant DEFAULT 0
+    constant INSTALL_FULL 1
+    constant INSTALL_STUB 2
+    constant USE_PREFERENCE 3
+
+class Windows.Management.Deployment.UpdateSharedPackageContainerOptions activatable python_type
+    py UpdateSharedPackageContainerOptions
+    signature rc(Windows.Management.Deployment.UpdateSharedPackageContainerOptions;{80672e83-7194-59f9-b5b9-daa5375f130a})
+    default Windows.Management.Deployment.IUpdateSharedPackageContainerOptions
+    requires Windows.Management.Deployment.IUpdateSharedPackageContainerOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property require_packages_present
+        get get_RequirePackagesPresent slot=8 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerOptions shape=4
+            out boolean return
+        put put_RequirePackagesPresent slot=9 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerOptions shape=4
+            in boolean name=value
+    property force_app_shutdown
+        get get_ForceAppShutdown slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerOptions shape=4
+            out boolean return
+        put put_ForceAppShutdown slot=7 inputs=1 outputs=0 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerOptions shape=4
+            in boolean name=value
+
+class Windows.Management.Deployment.UpdateSharedPackageContainerResult python_type
+    py UpdateSharedPackageContainerResult
+    signature rc(Windows.Management.Deployment.UpdateSharedPackageContainerResult;{aa407df7-c72d-5458-aea3-4645b6a8ee99})
+    default Windows.Management.Deployment.IUpdateSharedPackageContainerResult
+    requires Windows.Management.Deployment.IUpdateSharedPackageContainerResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerResult shape=4
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Management.Deployment.IUpdateSharedPackageContainerResult shape=4
+            out enum32 type=Windows.Management.Deployment.SharedPackageContainerOperationStatus return
+
+class System.String external
+    py winrt.system.String
+
+class System.UInt64 external
+    py winrt.system.UInt64
+
+class Windows.ApplicationModel.AppInstallerInfo external
+    py winrt.windows.applicationmodel.AppInstallerInfo
+
+class Windows.ApplicationModel.Package external
+    py winrt.windows.applicationmodel.Package
+
+enum Windows.ApplicationModel.PackageContentGroupState external
+    py winrt.windows.applicationmodel.PackageContentGroupState
+
+struct Windows.ApplicationModel.PackageVersion external
+    py winrt.windows.applicationmodel.PackageVersion
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

@@ -1,0 +1,3 @@
+from winrt.runtime.interop import InterfaceCapsule
+
+def get_for_window(factory: InterfaceCapsule, window: int, /) -> InterfaceCapsule: ...

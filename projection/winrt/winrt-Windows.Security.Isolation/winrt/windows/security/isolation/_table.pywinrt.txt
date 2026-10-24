@@ -1,0 +1,1392 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Security.Isolation
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IsolatedWindowsEnvironmentLaunchFileResult]
+    guid 940ee865-8c8c-5b6b-88f6-a0371f58b386
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult;{685d4176-f6e0-4569-b1aa-215c0ff5b257}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IsolatedWindowsEnvironmentPostMessageResult]
+    guid 34a084e3-dea5-5e5b-8d86-a31584e74893
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult;{0dfa28fa-2ef0-4d8f-b341-3171b2df93b1}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IsolatedWindowsEnvironmentShareFileResult]
+    guid 8baca361-2935-5255-84dc-1c854f4fef69
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult;{aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IsolatedWindowsEnvironmentShareFolderResult]
+    guid 555c4bca-d35b-5e94-b8e5-a7e3c44bd1c1
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult;{556ba72e-ca9d-4211-b143-1cedc86eb2fe}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IsolatedWindowsEnvironmentStartProcessResult]
+    guid 0687867c-5e3f-53bb-91c0-cc931948d524
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult;{8fa1dc2f-57da-4bb5-9c06-fa072d2032e2}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[Boolean, IsolatedWindowsEnvironmentSignInProgress]
+    guid 75620fb8-3a60-5676-8dd6-d8f700a2fcdc
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};b1;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument System.Boolean
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> name=asyncInfo
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationProgressHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> concrete
+    py winrt.windows.foundation.AsyncOperationProgressHandler[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]
+    guid 417f9026-1750-5e97-b6c9-fb2dadd61a0b
+    signature pinterface({55690902-0aab-421a-8778-f8ce5026d758};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e});struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4))
+    base Windows.Foundation.AsyncOperationProgressHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=61 reverse=8
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> name=asyncInfo
+            in struct type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress name=progressInfo
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[Boolean, IsolatedWindowsEnvironmentSignInProgress]
+    guid e55295a4-d669-5922-bf42-bbe7eaeb4596
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};b1;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument System.Boolean
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> concrete
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]
+    guid 6c4e60b8-ed93-5e10-96c5-fafadb68ff31
+    signature pinterface({e85df41d-6aa7-46e3-a8e2-f009d840c627};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e});struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4))
+    base Windows.Foundation.AsyncOperationWithProgressCompletedHandler
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Security.Isolation.HostMessageReceivedCallback python_type
+    py HostMessageReceivedCallback
+    guid faf26ffa-8ce1-4cc1-b278-322d31a5e4a3
+    signature delegate({faf26ffa-8ce1-4cc1-b278-322d31a5e4a3})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=94 reverse=15
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IsolatedWindowsEnvironmentLaunchFileResult]
+    guid af891fa2-3f89-5e5b-a72b-df936bb1ad45
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult;{685d4176-f6e0-4569-b1aa-215c0ff5b257}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IsolatedWindowsEnvironmentPostMessageResult]
+    guid 3e167db0-7983-5329-83a0-0477763cc4cb
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult;{0dfa28fa-2ef0-4d8f-b341-3171b2df93b1}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IsolatedWindowsEnvironmentShareFileResult]
+    guid 76ce76bf-ec05-513d-843f-79af1766e490
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult;{aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IsolatedWindowsEnvironmentShareFolderResult]
+    guid 89424ded-b21a-55ad-9d4a-8e53f15464a2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult;{556ba72e-ca9d-4211-b143-1cedc86eb2fe}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IsolatedWindowsEnvironmentStartProcessResult]
+    guid 7ccbc39f-2baa-5747-a988-ffa38f14a446
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult;{8fa1dc2f-57da-4bb5-9c06-fa072d2032e2}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> shape=4 reverse=62 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[Boolean, IsolatedWindowsEnvironmentSignInProgress]
+    guid 3342214c-85a9-5729-b0f1-fc667640078a
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};b1;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> shape=4 reverse=121 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperationWithProgress[IsolatedWindowsEnvironmentCreateResult, IsolatedWindowsEnvironmentCreateProgress]
+    guid df32b4b4-4508-594a-830b-b46ced2a4ae0
+    signature pinterface({b5d036d7-e297-498f-ba60-0289e76e23dd};rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e});struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4))
+    base Windows.Foundation.IAsyncOperationWithProgress
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress
+    property progress
+        get get_Progress slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> shape=4 reverse=43
+            out delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+        put put_Progress slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationProgressHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> name=handler
+    property completed
+        get get_Completed slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> shape=4 reverse=99 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+        put put_Completed slot=8 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> shape=4 reverse=62
+            in delegate type=Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> shape=4 reverse=121 role=get_results
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult return
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    guid 41d24597-c328-4467-b37f-4dfc6f60b6bc
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment2
+    guid 2d365f39-88bd-4ab4-93cf-7e2bcef337c0
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment3
+    guid cb7fc7d2-d06e-4c26-8ada-dacdaaad03f5
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironment4
+    guid 11e3701a-dd9e-4f1b-812c-4020f307f93c
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    guid ef9a5e58-dcd7-45c2-9c85-ab642a715e8e
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2
+    guid a547dbc7-61d4-4fb8-ab5c-edefa3d388ad
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory
+    guid 1aca93e7-e804-454d-8466-f9897c20b0f6
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    guid 4d5ae1ef-029f-4101-8c35-fe91bf9cd5f0
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2
+    guid 4eeb8dec-ad5d-4b0a-b754-f36c3d46d684
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics
+    guid 2c0e22c7-05a0-517a-b81c-6ee8790c381f
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    guid 685d4176-f6e0-4569-b1aa-215c0ff5b257
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    guid b71d98f7-61f0-4008-b207-0bf9eb2d76f2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2
+    guid 10d7cc31-8b8f-4b9d-b22c-617103b55b08
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3
+    guid 98d5aa23-161f-4cd9-8a9c-269b30122b0d
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    guid f888ec22-e8cf-56c0-b1df-90af4ad80e84
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    guid 6dab9451-6169-55df-8f51-790e99d7277d
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics
+    guid 10951754-204b-5ec9-9de3-df792d074a61
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    guid 0dfa28fa-2ef0-4d8f-b341-3171b2df93b1
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    guid a858c3ef-8172-4f10-af93-cbe60af88d09
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    guid c9190ed8-0fd0-4946-bb88-117a60737b61
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    guid aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    guid c405eb7d-7053-4f6a-9b87-746846ed19b2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    guid 556ba72e-ca9d-4211-b143-1cedc86eb2fe
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    guid 8fa1dc2f-57da-4bb5-9c06-fa072d2032e2
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    guid ebdb3cab-7a3a-4524-a0f4-f96e284d33cd
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    guid 8a9c75ae-69ba-4001-96fc-19a02703b340
+
+interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2
+    guid b0bdd5dd-91d7-481e-94f2-2a5a6bdf9383
+
+interface Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
+    guid 06e444bb-53c0-4889-8fa3-53592e37cf21
+
+interface Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
+    guid 55ef9ebc-0444-42ad-832d-1b89c089d1ca
+
+interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[Object]
+    guid 092b849b-60b1-52be-a44a-6fe8e933cbe4
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterable
+    argument System.Object
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+
+interface Windows.Foundation.Collections.IIterable<System.String> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[String]
+    guid e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};string)
+    base Windows.Foundation.Collections.IIterable
+    argument System.String
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironment> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IsolatedWindowsEnvironment]
+    guid 37505de7-601e-5c17-a7f5-1a6ac4b91b03
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironment
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IsolatedWindowsEnvironmentHostError]
+    guid e2c0cc79-8015-5196-8b32-7a0887a091bd
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> return
+
+interface Windows.Foundation.Collections.IIterator<System.Object> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[Object]
+    guid 44a94f2d-04f8-5091-b336-be7892dd10be
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IIterator
+    argument System.Object
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=22 role=current
+            out object return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=117 reverse=101 role=get_many
+            fill_array object name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.Object> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<System.String> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[String]
+    guid 8c304ebb-6615-50a4-8829-879ecd443236
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};string)
+    base Windows.Foundation.Collections.IIterator
+    argument System.String
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=22 role=current
+            out string return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=117 reverse=101 role=get_many
+            fill_array string name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<System.String> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IsolatedWindowsEnvironment]
+    guid db2f28c7-4c44-5c53-b01b-4381a8ce9800
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironment
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=22 role=current
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Security.Isolation.IsolatedWindowsEnvironment name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IsolatedWindowsEnvironmentHostError]
+    guid 63675c12-3214-5510-82d9-cb807ff89bc8
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=22 role=current
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=117 reverse=101 role=get_many
+            fill_array enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVector<System.String> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[String]
+    guid 98b9acc1-4b56-532e-ac73-03d5291cca90
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};string)
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=173 role=append
+            in string name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<System.String> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<System.String> shape=117 reverse=101 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in string name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=211 role=replace_all
+            pass_array string name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<System.String> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in string name=value
+
+interface Windows.Foundation.Collections.IVectorView<System.Object> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[Object]
+    guid a6487363-b074-5c60-ab16-866dce4ee54d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};cinterface(IInspectable))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.Object>
+    argument System.Object
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.Object> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.Object> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out object return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array object name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.Object> shape=117 reverse=66 role=index_of
+            in object name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<System.String> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[String]
+    guid 2f13c006-a03a-5f69-b090-75a43e33423e
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};string)
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<System.String>
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<System.String> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<System.String> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out string return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array string name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<System.String> shape=117 reverse=66 role=index_of
+            in string name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IsolatedWindowsEnvironment]
+    guid 74f0ee08-295b-5b41-93cb-10c4b7a7a56c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironment>
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironment
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironment> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Security.Isolation.IsolatedWindowsEnvironment name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> shape=117 reverse=66 role=index_of
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironment name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[IsolatedWindowsEnvironmentHostError]
+    guid a830f621-a4ae-5f5c-a003-985fe3e01e51
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError>
+    argument Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> shape=117 reverse=66 role=index_of
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironment python_type
+    py IsolatedWindowsEnvironment
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironment;{41d24597-c328-4467-b37f-4dfc6f60b6bc})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment2
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment3
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironment4
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 deprecated
+            out string return
+    method change_priority
+        method ChangePriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment4 shape=4 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=Priority
+    method create_async static
+        method CreateAsync slot=6 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+        method CreateAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=117 static deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions name=options
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult,Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress> return
+    method find_by_owner_id static
+        method FindByOwnerId slot=9 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
+            in string name=environmentOwnerId
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironment> return
+    method get_by_id static
+        method GetById slot=8 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory shape=51 static deprecated
+            in string name=environmentId
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    method get_user_info
+        method GetUserInfo slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=4 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo return
+    method launch_file_with_ui_async
+        method LaunchFileWithUIAsync slot=11 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 deprecated
+            in string name=appExePath
+            in string name=argumentsTemplate
+            in string name=filePath
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
+        method LaunchFileWithUIAsync slot=12 inputs=4 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=239 deprecated
+            in string name=appExePath
+            in string name=argumentsTemplate
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult> return
+    method post_message_to_receiver_async
+        method PostMessageToReceiverAsync slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment2 shape=177 deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
+        method PostMessageToReceiverAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment2 shape=231 deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IIterable<System.Object> name=message
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult> return
+    method register_message_receiver
+        method RegisterMessageReceiver slot=15 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=94 deprecated
+            in guid name=receiverId
+            in delegate type=Windows.Security.Isolation.MessageReceivedCallback name=messageReceivedCallback
+    method share_file_async
+        method ShareFileAsync slot=7 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=117 deprecated
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
+        method ShareFileAsync slot=8 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment3 shape=195 deprecated
+            in string name=filePath
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions name=options
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult> return
+    method share_folder_async
+        method ShareFolderAsync slot=9 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=117 deprecated
+            in string name=hostFolder
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
+        method ShareFolderAsync slot=10 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 deprecated
+            in string name=hostFolder
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions name=requestOptions
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult> return
+    method start_process_silently_async
+        method StartProcessSilentlyAsync slot=7 inputs=3 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=195 deprecated
+            in string name=hostExePath
+            in string name=arguments
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator name=activator
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
+        method StartProcessSilentlyAsync slot=8 inputs=4 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=239 deprecated
+            in string name=hostExePath
+            in string name=arguments
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator name=activator
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult> return
+    method terminate_async
+        method TerminateAsync slot=13 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=4 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+        method TerminateAsync slot=14 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=51 deprecated
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters name=telemetryParameters
+            out interface type=Windows.Foundation.IAsyncAction return
+    method unregister_message_receiver
+        method UnregisterMessageReceiver slot=16 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironment shape=33 deprecated
+            in guid name=receiverId
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator python_type
+    py IsolatedWindowsEnvironmentActivator
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentActivator;i4)
+    constant SYSTEM 0
+    constant USER 1
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats python_type flags_enum
+    py IsolatedWindowsEnvironmentAllowedClipboardFormats
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats;u4)
+    constant NONE 0x0
+    constant TEXT 0x1
+    constant IMAGE 0x2
+    constant RTF 0x4
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters python_type flags_enum
+    py IsolatedWindowsEnvironmentAvailablePrinters
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters;u4)
+    constant NONE 0x0
+    constant LOCAL 0x1
+    constant NETWORK 0x2
+    constant SYSTEM_PRINT_TO_PDF 0x4
+    constant SYSTEM_PRINT_TO_XPS 0x8
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections python_type flags_enum
+    py IsolatedWindowsEnvironmentClipboardCopyPasteDirections
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections;u4)
+    constant NONE 0x0
+    constant HOST_TO_ISOLATED_WINDOWS_ENVIRONMENT 0x1
+    constant ISOLATED_WINDOWS_ENVIRONMENT_TO_HOST 0x2
+
+struct Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress python_type
+    py IsolatedWindowsEnvironmentCreateProgress
+    signature struct(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateProgress;enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4);u4)
+    field state State enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState
+    field percent_complete PercentComplete uint32
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult python_type
+    py IsolatedWindowsEnvironmentCreateResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult;{ef9a5e58-dcd7-45c2-9c85-ab642a715e8e})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2
+    property environment
+        get get_Environment slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironment return
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus return
+    method change_creation_priority
+        method ChangeCreationPriority slot=6 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2 shape=4 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=priority
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus python_type
+    py IsolatedWindowsEnvironmentCreateStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus;i4)
+    constant SUCCESS 0
+    constant FAILURE_BY_POLICY 1
+    constant UNKNOWN_FAILURE 2
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority python_type
+    py IsolatedWindowsEnvironmentCreationPriority
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority;i4)
+    constant LOW 0
+    constant NORMAL 1
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentFile python_type
+    py IsolatedWindowsEnvironmentFile
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentFile;{4d5ae1ef-029f-4101-8c35-fe91bf9cd5f0})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2
+    property host_path
+        get get_HostPath slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=4 deprecated
+            out string return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=4 deprecated
+            out guid return
+    property guest_path
+        get get_GuestPath slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 shape=4 deprecated
+            out string return
+    property is_read_only
+        get get_IsReadOnly slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2 shape=4 deprecated
+            out boolean return
+    method close
+        method Close slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile shape=0 deprecated
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentHost static python_type
+    py IsolatedWindowsEnvironmentHost
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics
+    property host_errors static
+        get get_HostErrors slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics shape=4 static deprecated
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError> return
+    property is_ready static
+        get get_IsReady slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentHostStatics shape=4 static deprecated
+            out boolean return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError python_type
+    py IsolatedWindowsEnvironmentHostError
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError;i4)
+    constant ADMIN_POLICY_IS_DISABLED_OR_NOT_PRESENT 0
+    constant FEATURE_NOT_INSTALLED 1
+    constant HARDWARE_REQUIREMENTS_NOT_MET 2
+    constant REBOOT_REQUIRED 3
+    constant UNKNOWN_ERROR 4
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult python_type
+    py IsolatedWindowsEnvironmentLaunchFileResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileResult;{685d4176-f6e0-4569-b1aa-215c0ff5b257})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property file
+        get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentLaunchFileResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus python_type
+    py IsolatedWindowsEnvironmentLaunchFileStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FILE_NOT_FOUND 3
+    constant TIMED_OUT 4
+    constant ALREADY_SHARED_WITH_CONFLICTING_OPTIONS 5
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions activatable python_type
+    py IsolatedWindowsEnvironmentOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOptions;{b71d98f7-61f0-4008-b207-0bf9eb2d76f2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property persist_user_profile
+        get get_PersistUserProfile slot=17 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out boolean return
+        put put_PersistUserProfile slot=18 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in boolean name=value
+    property environment_owner_id
+        get get_EnvironmentOwnerId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out string return
+        put put_EnvironmentOwnerId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in string name=value
+    property clipboard_copy_paste_directions
+        get get_ClipboardCopyPasteDirections slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections return
+        put put_ClipboardCopyPasteDirections slot=11 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections name=value
+    property available_printers
+        get get_AvailablePrinters slot=12 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters return
+        put put_AvailablePrinters slot=13 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters name=value
+    property allowed_clipboard_formats
+        get get_AllowedClipboardFormats slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormats slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    property allow_graphics_hardware_acceleration
+        get get_AllowGraphicsHardwareAcceleration slot=19 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out boolean return
+        put put_AllowGraphicsHardwareAcceleration slot=20 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in boolean name=value
+    property allow_camera_and_microphone_access
+        get get_AllowCameraAndMicrophoneAccess slot=21 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out boolean return
+        put put_AllowCameraAndMicrophoneAccess slot=22 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            in boolean name=value
+    property shared_folder_name_in_environment
+        get get_SharedFolderNameInEnvironment slot=15 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out string return
+    property shared_host_folder_path
+        get get_SharedHostFolderPath slot=14 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=4 deprecated
+            out string return
+    property window_annotation_override
+        get get_WindowAnnotationOverride slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2 shape=4 deprecated
+            out string return
+        put put_WindowAnnotationOverride slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions2 shape=4 deprecated
+            in string name=value
+    property creation_priority
+        get get_CreationPriority slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority return
+        put put_CreationPriority slot=11 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            in enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority name=value
+    property allowed_clipboard_formats_to_host
+        get get_AllowedClipboardFormatsToHost slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormatsToHost slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    property allowed_clipboard_formats_to_environment
+        get get_AllowedClipboardFormatsToEnvironment slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            out enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats return
+        put put_AllowedClipboardFormatsToEnvironment slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions3 shape=4 deprecated
+            in enum_u32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats name=value
+    method share_host_folder_for_untrusted_items
+        method ShareHostFolderForUntrustedItems slot=16 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOptions shape=51 deprecated
+            in string name=SharedHostFolderPath
+            in string name=ShareFolderNameInEnvironment
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistration static python_type
+    py IsolatedWindowsEnvironmentOwnerRegistration
+    factory Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics
+    method register static
+        method Register slot=6 inputs=2 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=117 static deprecated
+            in string name=ownerName
+            in class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData name=ownerRegistrationData
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult return
+    method unregister static
+        method Unregister slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationStatics shape=4 static deprecated
+            in string name=ownerName
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData activatable python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationData
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData;{f888ec22-e8cf-56c0-b1df-90af4ad80e84})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property activation_file_extensions
+        get get_ActivationFileExtensions slot=9 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property processes_runnable_as_system
+        get get_ProcessesRunnableAsSystem slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property processes_runnable_as_user
+        get get_ProcessesRunnableAsUser slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+    property shareable_folders
+        get get_ShareableFolders slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationData shape=4 deprecated
+            out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult;{6dab9451-6169-55df-8f51-790e99d7277d})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentOwnerRegistrationResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus python_type
+    py IsolatedWindowsEnvironmentOwnerRegistrationStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus;i4)
+    constant SUCCESS 0
+    constant INVALID_ARGUMENT 1
+    constant ACCESS_DENIED 2
+    constant INSUFFICIENT_MEMORY 3
+    constant UNKNOWN_FAILURE 4
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult python_type
+    py IsolatedWindowsEnvironmentPostMessageResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageResult;{0dfa28fa-2ef0-4d8f-b341-3171b2df93b1})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentPostMessageResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus python_type
+    py IsolatedWindowsEnvironmentPostMessageStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentPostMessageStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess python_type
+    py IsolatedWindowsEnvironmentProcess
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess;{a858c3ef-8172-4f10-af93-cbe60af88d09})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess
+    property exit_code
+        get get_ExitCode slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
+            out uint32 return
+    property state
+        get get_State slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState return
+    method wait_for_exit
+        method WaitForExit slot=8 inputs=0 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=0 deprecated
+    method wait_for_exit_async
+        method WaitForExitAsync slot=10 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
+            out interface type=Windows.Foundation.IAsyncAction return
+    method wait_for_exit_with_timeout
+        method WaitForExitWithTimeout slot=9 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentProcess shape=4 deprecated
+            in uint32 name=timeoutMilliseconds
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState python_type
+    py IsolatedWindowsEnvironmentProcessState
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProcessState;i4)
+    constant RUNNING 1
+    constant ABORTED 2
+    constant COMPLETED 3
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState python_type
+    py IsolatedWindowsEnvironmentProgressState
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentProgressState;i4)
+    constant QUEUED 0
+    constant PROCESSING 1
+    constant COMPLETED 2
+    constant CREATING 3
+    constant RETRYING 4
+    constant STARTING 5
+    constant FINALIZING 6
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions activatable python_type
+    py IsolatedWindowsEnvironmentShareFileRequestOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions;{c9190ed8-0fd0-4946-bb88-117a60737b61})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allow_write
+        get get_AllowWrite slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions shape=4 deprecated
+            out boolean return
+        put put_AllowWrite slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileRequestOptions shape=4 deprecated
+            in boolean name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult python_type
+    py IsolatedWindowsEnvironmentShareFileResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult;{aec7caa7-9ac6-4bf5-8b91-5c1adf0d7d00})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property file
+        get get_File slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentFile return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFileResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus python_type
+    py IsolatedWindowsEnvironmentShareFileStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant ALREADY_SHARED_WITH_CONFLICTING_OPTIONS 3
+    constant FILE_NOT_FOUND 4
+    constant ACCESS_DENIED 5
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions activatable python_type
+    py IsolatedWindowsEnvironmentShareFolderRequestOptions
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions;{c405eb7d-7053-4f6a-9b87-746846ed19b2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property allow_write
+        get get_AllowWrite slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions shape=4 deprecated
+            out boolean return
+        put put_AllowWrite slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderRequestOptions shape=4 deprecated
+            in boolean name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult python_type
+    py IsolatedWindowsEnvironmentShareFolderResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderResult;{556ba72e-ca9d-4211-b143-1cedc86eb2fe})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentShareFolderResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus python_type
+    py IsolatedWindowsEnvironmentShareFolderStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFolderStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FOLDER_NOT_FOUND 3
+    constant ACCESS_DENIED 4
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress python_type
+    py IsolatedWindowsEnvironmentSignInProgress
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress;i4)
+    constant CONNECTING 0
+    constant CONNECTED 1
+    constant AUTHENTICATING 2
+    constant SETTING_UP_ACCOUNT 3
+    constant FINALIZING 4
+    constant COMPLETED 5
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult python_type
+    py IsolatedWindowsEnvironmentStartProcessResult
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessResult;{8fa1dc2f-57da-4bb5-9c06-fa072d2032e2})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult
+    property extended_error
+        get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 deprecated
+            out hresult type=Windows.Foundation.HResult return
+    property process
+        get get_Process slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 deprecated
+            out class type=Windows.Security.Isolation.IsolatedWindowsEnvironmentProcess return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentStartProcessResult shape=4 deprecated
+            out enum32 type=Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus return
+
+enum Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus python_type
+    py IsolatedWindowsEnvironmentStartProcessStatus
+    signature enum(Windows.Security.Isolation.IsolatedWindowsEnvironmentStartProcessStatus;i4)
+    constant SUCCESS 0
+    constant UNKNOWN_FAILURE 1
+    constant ENVIRONMENT_UNAVAILABLE 2
+    constant FILE_NOT_FOUND 3
+    constant APP_NOT_REGISTERED 4
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters activatable python_type
+    py IsolatedWindowsEnvironmentTelemetryParameters
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters;{ebdb3cab-7a3a-4524-a0f4-f96e284d33cd})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property correlation_id
+        get get_CorrelationId slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters shape=4 deprecated
+            out guid return
+        put put_CorrelationId slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentTelemetryParameters shape=33 deprecated
+            in guid name=value
+
+class Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo python_type
+    py IsolatedWindowsEnvironmentUserInfo
+    signature rc(Windows.Security.Isolation.IsolatedWindowsEnvironmentUserInfo;{8a9c75ae-69ba-4001-96fc-19a02703b340})
+    default Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo
+    requires Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2
+    property environment_user_name
+        get get_EnvironmentUserName slot=7 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 deprecated
+            out string return
+    property environment_user_sid
+        get get_EnvironmentUserSid slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 deprecated
+            out string return
+    method try_wait_for_sign_in_async
+        method TryWaitForSignInAsync slot=8 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo shape=4 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method try_wait_for_sign_in_with_progress_async
+        method TryWaitForSignInWithProgressAsync slot=6 inputs=0 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsEnvironmentUserInfo2 shape=4 deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperationWithProgress<System.Boolean,Windows.Security.Isolation.IsolatedWindowsEnvironmentSignInProgress> return
+
+class Windows.Security.Isolation.IsolatedWindowsHostMessenger static python_type
+    py IsolatedWindowsHostMessenger
+    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics
+    factory Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2
+    method get_file_id static
+        method GetFileId slot=7 inputs=1 outputs=1 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=51 static deprecated
+            in string name=filePath
+            out guid return
+    method post_message_to_receiver static
+        method PostMessageToReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics shape=94 static deprecated
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+    method register_host_message_receiver static
+        method RegisterHostMessageReceiver slot=6 inputs=2 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=94 static deprecated
+            in guid name=receiverId
+            in delegate type=Windows.Security.Isolation.HostMessageReceivedCallback name=hostMessageReceivedCallback
+    method unregister_host_message_receiver static
+        method UnregisterHostMessageReceiver slot=7 inputs=1 outputs=0 declaring=Windows.Security.Isolation.IIsolatedWindowsHostMessengerStatics2 shape=33 static deprecated
+            in guid name=receiverId
+
+delegate Windows.Security.Isolation.MessageReceivedCallback python_type
+    py MessageReceivedCallback
+    guid f5b4c8ff-1d9d-4995-9fea-4d15257c0757
+    signature delegate({f5b4c8ff-1d9d-4995-9fea-4d15257c0757})
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=94 reverse=15
+            in guid name=receiverId
+            in parameterized type=Windows.Foundation.Collections.IVectorView<System.Object> name=message
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Object external
+    py winrt.system.Object
+
+class System.String external
+    py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+delegate Windows.Foundation.AsyncOperationProgressHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationProgressHandler
+    guid 55690902-0aab-421a-8778-f8ce5026d758
+
+delegate Windows.Foundation.AsyncOperationWithProgressCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationWithProgressCompletedHandler
+    guid e85df41d-6aa7-46e3-a8e2-f009d840c627
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IAsyncOperationWithProgress external parameterized
+    py winrt.windows.foundation._IAsyncOperationWithProgress
+    guid b5d036d7-e297-498f-ba60-0289e76e23dd
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

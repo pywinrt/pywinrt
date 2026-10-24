@@ -1,0 +1,66 @@
+{
+  // One configuration for Pylance and for the pyright run in
+  // .github/workflows/lint.yaml, so that the editor checks the same thing as
+  // CI does. Pylance ignores the python.analysis settings once this file
+  // exists, so what it needs is here too.
+
+  // Every top-level directory starting with "_" is build output: _build holds
+  // the CMake build trees, _install the install prefixes, _tools the downloaded
+  // packages. Together they are ~13000 Python files, which is what drives
+  // Pylance and the extension host into the gigabytes, so none of it is
+  // analysed. The first three patterns are pyright's own defaults, which
+  // setting this key would otherwise replace; "**/.*" is what covers
+  // .mypy_cache and .ruff_cache. "**/build" is what setuptools leaves next to a
+  // package it built.
+  //
+  // The projection and interop packages are checked as installed, merged into
+  // one tree, by pyrightconfig.lint.json: an interop package is a subpackage
+  // of a projection package, so from the source tree each of them is a second
+  // copy of a module that imports resolve to elsewhere.
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*",
+    "_*/**",
+    "**/build",
+    "projection/**",
+    "interop/*/winrt/**"
+  ],
+
+  // The packages merged as they are installed, which scripts/merge-packages.py
+  // copies from the source tree into _typing for the build and the lint job, as
+  // it does for mypy. Excluding a directory above only keeps it out of the
+  // workspace scan: imports still resolve through an extra path, so completion
+  // sees just the packages the code actually imports.
+  "extraPaths": ["_typing"],
+
+  // the newest released Python, so that a check does not depend on which
+  // interpreter runs pyright, as mypy.ini does
+  "pythonVersion": "3.14",
+  "pythonPlatform": "Windows",
+
+  // Strict as the top-level mode, because an execution environment's rule
+  // overrides are honored only then, not for the paths of a "strict" list.
+  "typeCheckingMode": "strict",
+
+  // PyInstaller, which only samples/winui2/build.py imports, is not installed;
+  // its stubs are bundled with pyright, which is all a check needs.
+  "reportMissingModuleSource": "none",
+
+  "executionEnvironments": [
+    // The tests check what the runtime does, including isinstance() answers a
+    // type checker already knows and the wrapper types behind the public names.
+    {
+      "root": "test",
+      "reportUnnecessaryIsInstance": "none",
+      "reportUnnecessaryComparison": "none",
+      "reportPrivateUsage": "none"
+    },
+    // The scripts import each other as top-level modules, and their tests
+    // import them through the scripts package. They use no WinRT types.
+    {
+      "root": "scripts",
+      "extraPaths": ["."]
+    }
+  ]
+}

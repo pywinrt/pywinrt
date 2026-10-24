@@ -1,0 +1,35 @@
+{
+  // The projection and interop packages as they are installed: merged into one
+  // tree, which is what an interop package needs, being a subpackage of a
+  // projection package. scripts/merge-packages.py copies them into _typing,
+  // and the lint job in .github/workflows/lint.yaml runs pyright with this
+  // file; everything else is in pyrightconfig.json, which Pylance reads.
+  "extends": "pyrightconfig.json",
+
+  "include": ["_typing"],
+  "exclude": ["**/__pycache__"],
+
+  // Not even the merged tree on extraPaths: pyright treats a package found
+  // there as local code, and holds only one found through the interpreter's
+  // sys.path, where the lint job's .pth file puts _typing, to what its modules
+  // export.
+  "extraPaths": [],
+
+  "executionEnvironments": [
+    // The generated stubs refer to the deprecated types and members WinRT
+    // still has. A property of a PEP 695 generic class whose type refers back
+    // to the class is reported as redeclared until
+    // https://github.com/microsoft/pyright/issues/11835 is fixed.
+    // TODO: a stub imports winrt.system and every namespace its types and
+    // their inherited interfaces refer to, whether it uses them or not.
+    // Choose them from the written stub, as its standard library imports are,
+    // then remove reportUnusedImport.
+    {
+      "root": "_typing",
+      "reportDeprecated": "none",
+      "reportRedeclaration": "none",
+      "reportFunctionMemberAccess": "none",
+      "reportUnusedImport": "none"
+    }
+  ]
+}

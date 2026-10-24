@@ -1,0 +1,2 @@
+# the headers are not installed, but building from the sdist needs them
+recursive-include src *.h

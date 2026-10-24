@@ -1,0 +1,66 @@
+name: lint
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+      - next
+    paths:
+      - .github/workflows/lint.yaml
+      - mypy.ini
+      - ruff.toml
+      - pyrightconfig.json
+      - pyrightconfig.lint.json
+      - samples/requirements-dev.txt
+      - '**/*.py'
+      - '**/*.pyi'
+  pull_request:
+    paths:
+      - .github/workflows/lint.yaml
+      - mypy.ini
+      - ruff.toml
+      - pyrightconfig.json
+      - pyrightconfig.lint.json
+      - samples/requirements-dev.txt
+      - '**/*.py'
+      - '**/*.pyi'
+
+jobs:
+  lint:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # the rules and the files they apply to are in ruff.toml, so that the
+      # editor checks the same thing as CI does
+      - name: Run ruff
+        run: pipx run ruff check
+      - name: Check formatting
+        run: pipx run ruff format --check
+      # into _typing, which mypy.ini and both pyright configurations name
+      - name: merge packages
+        run: python scripts/merge-packages.py
+      # the packages and the path to them are in mypy.ini, so that the
+      # editor checks the same thing as CI does
+      - name: Run mypy
+        run: pipx run mypy
+      # what the checked code imports besides winrt, so that pyright resolves
+      # it: the samples' dependencies, and the build backends that the build
+      # hook and the generated setup.py files extend; and _typing, as if it
+      # were installed, which the last line checks, since pyright resolves the
+      # merged packages without it and only stops checking their exports
+      - name: Install what the checked code imports
+        run: |
+          python -m venv _install/pyright-venv
+          _install/pyright-venv/Scripts/python -m pip install -r samples/requirements-dev.txt hatchling setuptools
+          Set-Content _install/pyright-venv/Lib/site-packages/_typing.pth "$PWD\_typing"
+          _install/pyright-venv/Scripts/python -c "import sys; assert r'$PWD\_typing' in sys.path, sys.path"
+      # the settings are in pyrightconfig.json, which the editor reads too
+      - name: Run pyright
+        run: pipx run pyright --pythonpath _install/pyright-venv/Scripts/python.exe
+      # the projection and interop packages merged as installed, which
+      # pyrightconfig.lint.json says how to check
+      - name: Run pyright over the merged packages
+        run: pipx run pyright -p pyrightconfig.lint.json --pythonpath _install/pyright-venv/Scripts/python.exe

@@ -2,6 +2,16 @@
 
 # winrt-Windows.Graphics.Printing.ProtectedPrint
 
-Windows Runtime (WinRT) APIs for for the `Windows.Graphics.Printing.ProtectedPrint` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Graphics.Printing.ProtectedPrint` namespace.
 
 This package provides the `winrt.windows.graphics.printing.protectedprint` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.Graphics.Printing.ProtectedPrint
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

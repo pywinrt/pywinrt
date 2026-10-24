@@ -2,6 +2,16 @@
 
 # winrt-Windows.Web.UI
 
-Windows Runtime (WinRT) APIs for for the `Windows.Web.UI` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Web.UI` namespace.
 
 This package provides the `winrt.windows.web.ui` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.Web.UI
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

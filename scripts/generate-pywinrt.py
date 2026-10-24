@@ -1,8 +1,10 @@
 import json
 import pathlib
-import re
 import subprocess
 import sys
+
+import app_sdk
+import versions
 
 REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
 
@@ -17,75 +19,67 @@ def versioned_package(package: str) -> str:
 
 
 PROJECTION_PATH = REPO_ROOT_PATH / "projection"
+RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
+# The ABI call shape census, which every run merges into and which the runtime
+# compiles the trampolines from. See runtime/src/table-format.md.
+RUNTIME_SRC_PATH = RUNTIME_PATH / "src"
 
-DOTNET: list[str] = []
-PYWINRT_EXE: str | pathlib.Path
+# must match <TargetFramework> in PyWinRT/PyWinRT.csproj
+PYWINRT_TFM = "net10.0"
+PYWINRT_BUILD_PATH = REPO_ROOT_PATH / "PyWinRT" / "bin"
 
-if "--dotnet" in sys.argv:
-    DOTNET.append("dotnet")
-    PYWINRT_EXE = "pywinrt"
 
-    subprocess.check_call(DOTNET + ["tool", "list", "PyWinRT"])
+def find_pywinrt() -> pathlib.Path:
+    """
+    The PyWinRT this run uses: the one built in this repository, the Debug
+    build with --debug.
+    """
+    if "--debug" in sys.argv:
+        exe = PYWINRT_BUILD_PATH / "Debug" / PYWINRT_TFM / "PyWinRT.exe"
 
-elif "--debug" in sys.argv:
-    PYWINRT_EXE = (
-        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Debug" / "net8.0" / "PyWinRT.exe"
-    )
+        if not exe.exists():
+            raise RuntimeError(
+                "PyWinRT.exe not found. Please run `dotnet build PyWinRT`"
+            )
 
-    if not PYWINRT_EXE.exists():
-        raise RuntimeError("PyWinRT.exe not found. Please run `dotnet build PyWinRT`")
-else:
-    PYWINRT_EXE = (
-        REPO_ROOT_PATH / "PyWinRT" / "bin" / "Release" / "net8.0" / "PyWinRT.exe"
-    )
+        return exe
 
-    if not PYWINRT_EXE.exists():
+    exe = PYWINRT_BUILD_PATH / "Release" / PYWINRT_TFM / "PyWinRT.exe"
+
+    if not exe.exists():
         raise RuntimeError(
             "PyWinRT.exe not found. Please run `dotnet build PyWinRT -c Release`"
         )
 
+    return exe
+
+
+PYWINRT_EXE = find_pywinrt()
+
 
 # generate code for windows sdk
 
-MINIMAL_NAMESPACES = [
-    "Windows.Data.Json",
-    "Windows.Devices.Geolocation",
-    "Windows.Foundation",
-    "Windows.Graphics.Capture",
-    "Windows.Graphics.DirectX",
-    "Windows.Storage.Streams",
-]
-WINDOWS_SDK = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.Windows.SDK.CPP")
-    / "c"
-    / "References"
-    / "10.0.26100.0"
-)
-SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
+WINDOWS_SDK = versions.windows_sdk_metadata_path()
 WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
 
-include_args: list[str] = []
-
-if "--minimal" in sys.argv:
-    for ns in MINIMAL_NAMESPACES:
-        include_args.extend(["-include", ns])
-
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "winrt",
-        "--header-path",
-        SDK_PACKAGE_PATH,
         "--nullability-json",
         WINDOWS_SDK_NULLABILITY_JSON_PATH,
+        # The Windows SDK is the only family that keeps the deprecated names
+        # its methods had in pywinrt v3.x. The Windows App SDK and WebView2
+        # were published under the winui3 and webview2 prefixes then, so code
+        # written for them has to be edited anyway, and WinUI 2 is not expected
+        # to have users.
+        "--legacy-method-aliases",
     ]
-    + include_args
 )
 
 # generate code for WebView2
@@ -99,19 +93,28 @@ WEBVIEW2_PACKAGE_METADATA = (
 )
 WEBVIEW2_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "webview2.json"
 
+# The one namespace here is published in a distribution named after the NuGet
+# package it came from rather than after itself, the way the App SDK components
+# are: the package is what the family is versioned by, and a second namespace in
+# a later release would belong to the same distribution.
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "webview2",
         "--nullability-json",
         WEBVIEW2_NULLABILITY_JSON_PATH,
-        "--component-dlls",
+        # Microsoft.Web.WebView2.Core.dll is architecture-specific and the
+        # projection is not, so the .dll is redistributed in a package of its
+        # own that this one imports. See scripts/generate-pyproject.py.
+        "--dll-package",
+        "winrt.microsoft.web.webview2.dll",
     ]
 )
 
@@ -124,79 +127,60 @@ MICROSOFT_UI_XAML_PACKAGE_METADATA = (
     / "lib"
     / "uap10.0"
 )
-MICROSOFT_UI_XAML_PACKAGE_PATH = (
-    PROJECTION_PATH
-    / "winrt-Microsoft.UI.Xaml"
-    / "src"
-    / "winrt_microsoft_ui_xaml"
-    / "pywinrt"
-)
 MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "microsoft.ui.xaml.json"
 )
 
+# The six namespaces here are published in one distribution named after the
+# NuGet package they came from rather than one each, the way the App SDK
+# components are: the package is what the family is versioned by, so they are
+# generated and released together.
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
-        f"winui2;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
+        f"winui2;Microsoft.UI.Xaml;{MICROSOFT_UI_XAML_PACKAGE_METADATA}",
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "winui2",
-        "--header-path",
-        MICROSOFT_UI_XAML_PACKAGE_PATH,
         "--nullability-json",
         MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH,
     ]
 )
 
-# generate code for windows app sdk (winui3)
+# generate code for windows app sdk
 
-WINDOWS_APP_SDK_PACKAGE_METADATA = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.WindowsAppSDK")
-    / "lib"
-    / "uap10.0"
-)
-WINDOWS_APP_SDK_PACKAGE_METADATA2 = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.WindowsAppSDK")
-    / "lib"
-    / "uap10.0.18362"
-)
-WINDOWS_APP_SDK_PACKAGE_PATH = (
-    PROJECTION_PATH
-    / "winrt-WindowsAppSDK"
-    / "src"
-    / "winrt_windows_app_sdk"
-    / "pywinrt"
-)
+# Each component is published as a distribution of its own, so the input says
+# which one a namespace belongs to; the generator groups them and splits out
+# any namespace more than one component contributes to.
+WINDOWS_APP_SDK_INPUTS = [
+    arg
+    for distribution, path in app_sdk.metadata_inputs()
+    for arg in ("--input", f"winrt;{distribution};{path}")
+]
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
     REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
 )
 
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA}",
-        "--input",
-        f"winui3;{WINDOWS_APP_SDK_PACKAGE_METADATA2}",
+    ]
+    + WINDOWS_APP_SDK_INPUTS
+    + [
         "--reference",
-        f"webview2;{WEBVIEW2_PACKAGE_METADATA}",
+        f"winrt;Microsoft.Web.WebView2;{WEBVIEW2_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "winui3",
-        "--header-path",
-        WINDOWS_APP_SDK_PACKAGE_PATH,
+        PROJECTION_PATH / "wasdk",
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
     ]
@@ -216,13 +200,14 @@ TEST_PACKAGE_METADATA = (
 TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-winrt.json"
 
 subprocess.check_call(
-    DOTNET
-    + [
+    [
         PYWINRT_EXE,
         "--input",
         f"test-winrt;{TEST_PACKAGE_METADATA}",
         "--reference",
         f"winrt;{WINDOWS_SDK}",
+        "--emit-shapes",
+        RUNTIME_SRC_PATH,
         "--output",
         PROJECTION_PATH / "test-winrt",
         "--nullability-json",
@@ -230,14 +215,3 @@ subprocess.check_call(
         "--component-dlls",
     ]
 )
-
-# create version.txt for winrt-runtime package to keep it in sync with PyWinRT.exe
-
-runtime_version = subprocess.check_output([PYWINRT_EXE, "--version"], text=True).split(
-    "+"
-)[0]  # trim git version suffix
-
-assert re.match(r"^\d+\.\d+\.\d+$", runtime_version)
-
-with open(PROJECTION_PATH / "winrt-runtime" / "version.txt", "w", newline="\n") as f:
-    f.write(runtime_version)

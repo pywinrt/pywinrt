@@ -2,6 +2,16 @@
 
 # test-winrt-TestComponent
 
-Windows Runtime (WinRT) APIs for for the `test-winrt-TestComponent` namespace.
+Windows Runtime (WinRT) APIs for the `TestComponent` namespace.
 
 This package provides the `test_winrt.testcomponent` module.
+
+The WinRT APIs in it are those of version 1.6.1 of the
+`PyWinRT.TestWinRT` NuGet package.
+
+```
+pip install test-winrt-TestComponent
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

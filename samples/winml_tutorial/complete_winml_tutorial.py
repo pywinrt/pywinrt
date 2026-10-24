@@ -10,7 +10,8 @@ import functools
 import os
 import time
 from pathlib import Path
-from typing import Any, Callable, Coroutine, Iterable, Sequence, TypeVar, cast
+from typing import Any, TypeVar, cast
+from collections.abc import Callable, Coroutine, Iterable, Sequence
 
 import winrt.windows.ai.machinelearning as winml
 from winrt.windows.graphics.imaging import BitmapDecoder
@@ -89,7 +90,7 @@ def bind_model(
     binding = winml.LearningModelBinding(session)
     image_feature_value = winml.ImageFeatureValue.create_from_video_frame(image_frame)
     binding.bind("data_0", image_feature_value)
-    shape = winml.TensorFloat.create2([1, 1000, 1, 1])
+    shape = winml.TensorFloat.create([1, 1000, 1, 1])
     binding.bind("softmaxout_1", shape)
     return session, binding
 

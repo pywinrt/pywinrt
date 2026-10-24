@@ -1,0 +1,601 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.Windows.AppNotifications
+
+class Microsoft.Windows.AppNotifications.AppNotification python_type
+    py AppNotification
+    signature rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667})
+    default Microsoft.Windows.AppNotifications.IAppNotification
+    requires Microsoft.Windows.AppNotifications.IAppNotification
+    factory Microsoft.Windows.AppNotifications.IAppNotificationFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationFactory shape=51
+            in string name=payload
+            out class type=Microsoft.Windows.AppNotifications.AppNotification return
+    property tag
+        get get_Tag slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out string return
+        put put_Tag slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in string name=value
+    property suppress_display
+        get get_SuppressDisplay slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out boolean return
+        put put_SuppressDisplay slot=21 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in boolean name=value
+    property progress
+        get get_Progress slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData return
+        put put_Progress slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=value
+    property priority
+        get get_Priority slot=18 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out enum32 type=Microsoft.Windows.AppNotifications.AppNotificationPriority return
+        put put_Priority slot=19 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in enum32 type=Microsoft.Windows.AppNotifications.AppNotificationPriority name=value
+    property group
+        get get_Group slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out string return
+        put put_Group slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in string name=value
+    property expires_on_reboot
+        get get_ExpiresOnReboot slot=16 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out boolean return
+        put put_ExpiresOnReboot slot=17 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            in boolean name=value
+    property expiration
+        get get_Expiration slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out datetime return
+        put put_Expiration slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=26
+            in datetime name=value
+    property id
+        get get_Id slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out uint32 return
+    property payload
+        get get_Payload slot=11 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotification shape=4
+            out string return
+
+class Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs python_type
+    py AppNotificationActivatedEventArgs
+    signature rc(Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs;{7a8afaf9-31cb-51d5-82be-db6bd5878b77})
+    default Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs
+    requires Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs
+    requires Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2
+    property argument
+        get get_Argument slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4
+            out string return
+    property user_input
+        get get_UserInput slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+    property arguments
+        get get_Arguments slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2 shape=4
+            out parameterized type=Windows.Foundation.Collections.IMap<System.String,System.String> return
+
+class Microsoft.Windows.AppNotifications.AppNotificationManager python_type
+    py AppNotificationManager
+    signature rc(Microsoft.Windows.AppNotifications.AppNotificationManager;{55129688-b4bd-550b-ae6b-c24061954d91})
+    default Microsoft.Windows.AppNotifications.IAppNotificationManager
+    requires Microsoft.Windows.AppNotifications.IAppNotificationManager
+    requires Microsoft.Windows.AppNotifications.IAppNotificationManager2
+    factory Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics
+    factory Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2
+    property setting
+        get get_Setting slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
+            out enum32 type=Microsoft.Windows.AppNotifications.AppNotificationSetting return
+    property default static
+        get get_Default slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics shape=4 static
+            out class type=Microsoft.Windows.AppNotifications.AppNotificationManager return
+    event notification_invoked
+        add add_NotificationInvoked slot=9 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Microsoft.Windows.AppNotifications.AppNotificationManager,Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_NotificationInvoked slot=10 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_all_async
+        method GetAllAsync slot=20 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> return
+    method is_supported static
+        method IsSupported slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2 shape=4 static
+            out boolean return
+    method register
+        method Register slot=6 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
+        method Register slot=6 inputs=2 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager2 shape=51
+            in string name=displayName
+            in class type=Windows.Foundation.Uri name=iconUri
+    method remove_all_async
+        method RemoveAllAsync slot=19 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+    method remove_by_group_async
+        method RemoveByGroupAsync slot=18 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
+            in string name=group
+            out interface type=Windows.Foundation.IAsyncAction return
+    method remove_by_id_async
+        method RemoveByIdAsync slot=15 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
+            in uint32 name=notificationId
+            out interface type=Windows.Foundation.IAsyncAction return
+    method remove_by_tag_and_group_async
+        method RemoveByTagAndGroupAsync slot=17 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=117
+            in string name=tag
+            in string name=group
+            out interface type=Windows.Foundation.IAsyncAction return
+    method remove_by_tag_async
+        method RemoveByTagAsync slot=16 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=51
+            in string name=tag
+            out interface type=Windows.Foundation.IAsyncAction return
+    method show
+        method Show slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=4
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=notification
+    method unregister
+        method Unregister slot=7 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
+    method unregister_all
+        method UnregisterAll slot=8 inputs=0 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=0
+    method update_async
+        method UpdateAsync slot=13 inputs=2 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=117
+            in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=data
+            in string name=tag
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> return
+        method UpdateAsync slot=12 inputs=3 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationManager shape=195
+            in class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData name=data
+            in string name=tag
+            in string name=group
+            out parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> return
+
+enum Microsoft.Windows.AppNotifications.AppNotificationPriority python_type
+    py AppNotificationPriority
+    signature enum(Microsoft.Windows.AppNotifications.AppNotificationPriority;i4)
+    constant DEFAULT 0
+    constant HIGH 1
+
+class Microsoft.Windows.AppNotifications.AppNotificationProgressData python_type
+    py AppNotificationProgressData
+    signature rc(Microsoft.Windows.AppNotifications.AppNotificationProgressData;{4debfac0-809d-55cb-b879-924821876b97})
+    default Microsoft.Windows.AppNotifications.IAppNotificationProgressData
+    requires Microsoft.Windows.AppNotifications.IAppNotificationProgressData
+    factory Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory
+    constructor -
+        ctor .ctor slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory shape=51
+            in uint32 name=sequenceNumber
+            out class type=Microsoft.Windows.AppNotifications.AppNotificationProgressData return
+    property value_string_override
+        get get_ValueStringOverride slot=12 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            out string return
+        put put_ValueStringOverride slot=13 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            in string name=value
+    property value
+        get get_Value slot=10 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            out double return
+        put put_Value slot=11 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=2
+            in double name=value
+    property title
+        get get_Title slot=8 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            out string return
+        put put_Title slot=9 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            in string name=value
+    property status
+        get get_Status slot=14 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            out string return
+        put put_Status slot=15 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            in string name=value
+    property sequence_number
+        get get_SequenceNumber slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            out uint32 return
+        put put_SequenceNumber slot=7 inputs=1 outputs=0 declaring=Microsoft.Windows.AppNotifications.IAppNotificationProgressData shape=4
+            in uint32 name=value
+
+enum Microsoft.Windows.AppNotifications.AppNotificationProgressResult python_type
+    py AppNotificationProgressResult
+    signature enum(Microsoft.Windows.AppNotifications.AppNotificationProgressResult;i4)
+    constant SUCCEEDED 0
+    constant APP_NOTIFICATION_NOT_FOUND 1
+    constant UNSUPPORTED 2
+
+enum Microsoft.Windows.AppNotifications.AppNotificationSetting python_type
+    py AppNotificationSetting
+    signature enum(Microsoft.Windows.AppNotifications.AppNotificationSetting;i4)
+    constant ENABLED 0
+    constant DISABLED_FOR_APPLICATION 1
+    constant DISABLED_FOR_USER 2
+    constant DISABLED_BY_GROUP_POLICY 3
+    constant DISABLED_BY_MANIFEST 4
+    constant UNSUPPORTED 5
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AppNotificationProgressResult]
+    guid 566f5620-c1d5-526f-a898-ba7d0da3a56d
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Microsoft.Windows.AppNotifications.AppNotificationProgressResult;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Microsoft.Windows.AppNotifications.AppNotificationProgressResult
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVector[AppNotification]]
+    guid fc00bf73-ae70-537b-a702-a85a20bbd714
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Microsoft.Windows.AppNotifications.IAppNotification
+    guid 373a6917-4116-5657-936a-15f99afdd667
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs
+    guid 7a8afaf9-31cb-51d5-82be-db6bd5878b77
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationActivatedEventArgs2
+    guid 52c06b9b-2c50-5037-9416-a3be47b9d5bd
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationFactory
+    guid 9ffee485-184a-5c65-87a9-c1d94469dbe7
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationManager
+    guid 55129688-b4bd-550b-ae6b-c24061954d91
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationManager2
+    guid 38ba268d-e0c7-522e-a79d-8a29dcdd7135
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics
+    guid 6cfc0d8d-84a3-5592-b4c6-e3e7e7c680e4
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationManagerStatics2
+    guid 6eb42a35-e82f-5732-98f1-129705602f2e
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationProgressData
+    guid 4debfac0-809d-55cb-b879-924821876b97
+
+interface Microsoft.Windows.AppNotifications.IAppNotificationProgressDataFactory
+    guid c08e4a0f-3a75-55d6-8c3e-14f03ae46046
+
+interface Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AppNotificationProgressResult]
+    guid aa739d3f-d458-5d30-b292-de6d52979eb4
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Microsoft.Windows.AppNotifications.AppNotificationProgressResult;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Microsoft.Windows.AppNotifications.AppNotificationProgressResult
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Microsoft.Windows.AppNotifications.AppNotificationProgressResult> shape=4 reverse=62 role=get_results
+            out enum32 type=Microsoft.Windows.AppNotifications.AppNotificationProgressResult return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVector[AppNotification]]
+    guid 704700c2-f4a1-5edd-871a-d0ba8b9b4c59
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> return
+
+interface Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AppNotification]
+    guid b6fdba11-96fd-5160-b282-52a393823d51
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667}))
+    base Windows.Foundation.Collections.IIterable
+    argument Microsoft.Windows.AppNotifications.AppNotification
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[IKeyValuePair[String, String]]
+    guid e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+
+interface Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AppNotification]
+    guid 450e1195-001f-58ff-a652-aabd9bcda5c0
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667}))
+    base Windows.Foundation.Collections.IIterator
+    argument Microsoft.Windows.AppNotifications.AppNotification
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=22 role=current
+            out class type=Microsoft.Windows.AppNotifications.AppNotification return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> shape=117 reverse=101 role=get_many
+            fill_array class type=Microsoft.Windows.AppNotifications.AppNotification name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[IKeyValuePair[String, String]]
+    guid 05eb86f1-7140-5517-b88d-cbaebe57e6b1
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=current
+            out parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=117 reverse=101 role=get_many
+            fill_array parameterized type=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> concrete
+    py winrt.windows.foundation.collections._IKeyValuePair[String, String]
+    guid 60310303-49c5-52e6-abc6-a9b36eccc716
+    signature pinterface({02b51929-c1c4-4a7e-8940-0312b5c18500};string;string)
+    base Windows.Foundation.Collections.IKeyValuePair
+    argument System.String
+    argument System.String
+    property key
+        get get_Key slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=22 role=pair_key
+            out string return
+    property value
+        get get_Value slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IKeyValuePair<System.String,System.String> shape=4 reverse=43 role=pair_value
+            out string return
+
+interface Windows.Foundation.Collections.IMap<System.String,System.String> concrete iterable mapping mutable_mapping
+    py winrt.windows.foundation.collections._IMap[String, String]
+    guid f6d1f700-49c2-52ae-8154-826f9908773c
+    signature pinterface({3c2925fe-8519-45c1-aa79-197b6718c1c1};string;string)
+    base Windows.Foundation.Collections.IMap
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method clear
+        method Clear slot=12 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=0 reverse=159 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method get_view
+        method GetView slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=99 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method insert
+        method Insert slot=10 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=117 reverse=125 role=insert
+            in string name=key
+            in string name=value
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method remove
+        method Remove slot=11 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IMap<System.String,System.String> shape=4 reverse=141 role=remove
+            in string name=key
+
+interface Windows.Foundation.Collections.IMapView<System.String,System.String> concrete iterable mapping
+    py winrt.windows.foundation.collections._IMapView[String, String]
+    guid ac7f26f2-feb7-5b2a-8ac4-345bc62caede
+    signature pinterface({e480ce40-a338-4ada-adcf-272272e48cb9};string;string)
+    base Windows.Foundation.Collections.IMapView
+    requires Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>
+    argument System.String
+    argument System.String
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>> return
+    method has_key
+        method HasKey slot=8 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=65 role=has_key
+            in string name=key
+            out boolean return
+    method lookup
+        method Lookup slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=24 role=lookup
+            in string name=key
+            out string return
+    method split
+        method Split slot=9 inputs=0 outputs=2 declaring=Windows.Foundation.Collections.IMapView<System.String,System.String> shape=51 reverse=100 role=split
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=first
+            out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.String> name=second
+
+interface Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[AppNotification]
+    guid de618ddb-bebc-5c93-91fe-ebd890df7cb7
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification>
+    argument Microsoft.Windows.AppNotifications.AppNotification
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=173 role=append
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AppNotifications.AppNotification return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AppNotifications.AppNotification name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=117 reverse=101 role=index_of
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=51 reverse=211 role=replace_all
+            pass_array class type=Microsoft.Windows.AppNotifications.AppNotification name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Microsoft.Windows.AppNotifications.AppNotification> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=value
+
+interface Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AppNotification]
+    guid e645c6bd-e8e3-5b12-8b95-963bac29f974
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Microsoft.Windows.AppNotifications.AppNotification;{373a6917-4116-5657-936a-15f99afdd667}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification>
+    argument Microsoft.Windows.AppNotifications.AppNotification
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Microsoft.Windows.AppNotifications.AppNotification> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Microsoft.Windows.AppNotifications.AppNotification> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Microsoft.Windows.AppNotifications.AppNotification return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Microsoft.Windows.AppNotifications.AppNotification name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Microsoft.Windows.AppNotifications.AppNotification> shape=117 reverse=66 role=index_of
+            in class type=Microsoft.Windows.AppNotifications.AppNotification name=value
+            out uint32 name=index
+            out boolean return
+
+delegate Windows.Foundation.TypedEventHandler<Microsoft.Windows.AppNotifications.AppNotificationManager,Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[AppNotificationManager, AppNotificationActivatedEventArgs]
+    guid 9909b0b0-ef99-5bce-97c8-78190d411b61
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Microsoft.Windows.AppNotifications.AppNotificationManager;{55129688-b4bd-550b-ae6b-c24061954d91});rc(Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs;{7a8afaf9-31cb-51d5-82be-db6bd5878b77}))
+    base Windows.Foundation.TypedEventHandler
+    argument Microsoft.Windows.AppNotifications.AppNotificationManager
+    argument Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Microsoft.Windows.AppNotifications.AppNotificationManager name=sender
+            in class type=Microsoft.Windows.AppNotifications.AppNotificationActivatedEventArgs name=args
+
+class System.String external
+    py winrt.system.String
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IKeyValuePair external parameterized
+    py winrt.windows.foundation.collections._IKeyValuePair
+    guid 02b51929-c1c4-4a7e-8940-0312b5c18500
+
+interface Windows.Foundation.Collections.IMap external parameterized
+    py winrt.windows.foundation.collections._IMap
+    guid 3c2925fe-8519-45c1-aa79-197b6718c1c1
+
+interface Windows.Foundation.Collections.IMapView external parameterized
+    py winrt.windows.foundation.collections._IMapView
+    guid e480ce40-a338-4ada-adcf-272272e48cb9
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

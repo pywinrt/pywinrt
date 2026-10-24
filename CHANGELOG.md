@@ -2,7 +2,38 @@
 
 # Changelog
 
-## [Unreleased]
+From v4.0 on, each part of PyWinRT that is released on its own has a changelog
+of its own, which is what the `Changelog` link of each of its packages points
+at:
+
+- [`winrt-runtime`](runtime/CHANGELOG.md), which every package runs on
+- [`winrt-table-compiler`](table/CHANGELOG.md)
+- [The Windows SDK packages](projection/winrt/CHANGELOG.md), `winrt-Windows.*`
+- [The Windows App SDK packages](projection/wasdk/CHANGELOG.md), with
+  `winrt-Microsoft.UI.Interop` and the bootstrap module
+- [WinUI 2](projection/winui2/CHANGELOG.md), `winui2-Microsoft.UI.Xaml`
+- [WebView2](projection/webview2/CHANGELOG.md), with
+  `winrt-Microsoft.Web.WebView2.Dll`
+- [`winrt-Windows.Graphics.Capture.Interop`][capture]
+- [`winrt-Windows.Graphics.DirectX.Direct3D11.Interop`][direct3d11]
+- [`winrt-Windows.Media.Interop`][media]
+- [`winrt-Windows.System.Interop`][system]
+- [`winrt-Windows.UI.Composition.Interop`][composition]
+- [`winrt-Windows.UI.Xaml.Hosting.Interop`][xaml-hosting]
+- [The `PyWinRT` code generator](PyWinRT/CHANGELOG.md), on NuGet
+
+The [4.0 release notes][4.0] describe what changed in PyWinRT as a whole.
+
+[capture]: interop/winrt-Windows.Graphics.Capture.Interop/CHANGELOG.md
+[direct3d11]: interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop/CHANGELOG.md
+[media]: interop/winrt-Windows.Media.Interop/CHANGELOG.md
+[system]: interop/winrt-Windows.System.Interop/CHANGELOG.md
+[composition]: interop/winrt-Windows.UI.Composition.Interop/CHANGELOG.md
+[xaml-hosting]: interop/winrt-Windows.UI.Xaml.Hosting.Interop/CHANGELOG.md
+[4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
+
+The releases below are those before v4.0, when every package was released
+together and carried the same version.
 
 ## [v3.2.1] - 2025-06-06
 
@@ -396,7 +427,6 @@ package only.
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v3.2.1...HEAD
 [v3.2.1]: https://github.com/pywinrt/pywinrt/compare/v3.2.0...v3.2.1
 [v3.2.0]: https://github.com/pywinrt/pywinrt/compare/v3.1.0...v3.2.0
 [v3.1.0]: https://github.com/pywinrt/pywinrt/compare/v3.0.0...v3.1.0

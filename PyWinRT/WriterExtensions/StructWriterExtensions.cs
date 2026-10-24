@@ -10,6 +10,12 @@ static class StructWriterExtensions
         IReadOnlyDictionary<string, string> packageMap
     )
     {
+        if (type.IsPyInteger)
+        {
+            w.WritePythonIntegerTyping(type);
+            return;
+        }
+
         var metaclass = "";
 
         if (type.PyRequiresMetaclass)
@@ -18,17 +24,17 @@ static class StructWriterExtensions
             w.WriteLine($"class {type.Name}_Static(type):");
             w.Indent++;
 
-            var pass = true;
+            var isEmpty = true;
 
-            if (type.Type.IsCustomNumeric())
+            if (type.Type.IsCustomNumeric)
             {
-                w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
-                w.WriteNumberCommonValuesPyTyping(type, ref pass);
+                w.WriteNumberFactoryFunctionPyTyping(type, ref isEmpty);
+                w.WriteNumberCommonValuesPyTyping(type, ref isEmpty);
             }
 
-            if (pass)
+            if (isEmpty)
             {
-                w.WriteLine("pass");
+                w.WriteLine("...");
             }
 
             w.Indent--;
@@ -38,8 +44,18 @@ static class StructWriterExtensions
         }
 
         w.WriteLine("@typing.final");
+
+        if (type.IsDeprecated)
+        {
+            w.WriteDeprecated(type.DeprecatedMessage);
+        }
+
         w.WriteLine($"class {type.Name}{metaclass}:");
         w.Indent++;
+
+        var matchArgs = type.Type.Fields.Select(f => $"\"{f.Name.ToPythonIdentifier()}\"").ToList();
+        var trailingComma = matchArgs.Count == 1 ? "," : "";
+        w.WriteLine($"__match_args__ = ({string.Join(", ", matchArgs)}{trailingComma})");
 
         foreach (var field in type.Type.Fields)
         {
@@ -49,19 +65,23 @@ static class StructWriterExtensions
             );
         }
 
+        // A field is given as a parameter is, so it takes what an input
+        // parameter of its type takes: a tuple of a struct's fields, and a
+        // plain int for an HResult.
         w.WriteLine(
-            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap)} = {f.FieldType.GetDefaultPyValue(ns, packageMap)}"))}) -> {type.Name}: ..."
+            $"def __new__(cls, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, useStructTupleUnion: true)} = {f.FieldType.GetDefaultPyValueForStub(ns, packageMap)}"))}) -> {type.Name}: ..."
         );
 
         w.WriteLine($"def __replace__(self, /, **changes: typing.Any) -> {type.Name}: ...");
 
-        if (type.Type.IsCustomNumeric())
+        if (type.Type.IsCustomNumeric)
         {
             if (type.Name != "Plane")
             {
                 w.WriteNumberSlotMethodsPyTyping(type);
             }
 
+            w.WriteNumberBufferPyTyping(type);
             w.WriteNumberMethodPyTyping(type);
         }
 
@@ -76,326 +96,52 @@ static class StructWriterExtensions
         w.WriteBlankLine();
     }
 
-    public static void WriteStruct(
-        this IndentedTextWriter w,
-        ProjectedType type,
-        QualifiedNamespace ns,
-        string moduleSuffix
-    )
+    /// <summary>
+    /// Writes the typing of a WinRT struct that is one integer, which is
+    /// projected as a subclass of <c>int</c> rather than as a wrapper with one
+    /// field in it.
+    /// </summary>
+    private static void WritePythonIntegerTyping(this IndentedTextWriter w, ProjectedType type)
     {
-        w.WriteLine($"// ----- {type.Name} struct --------------------");
-        w.WriteBlankLine();
-        w.WriteStructFromTuple(type);
-        w.WriteStructConstructor(type);
-        w.WriteDeallocFunction(type);
+        w.WriteLine("@typing.final");
 
-        if (type.Type.IsCustomNumeric())
+        if (type.IsDeprecated)
         {
-            w.WriteNumberFactoryFunctionMethodDefs(type);
-            w.WriteNumberCommonValueMethods(type);
-            w.WriteNumberMethods(type);
+            w.WriteDeprecated(type.DeprecatedMessage);
         }
 
-        w.WriteBlankLine();
-        w.WriteAssignArrayMethod(type);
-        w.WriteBlankLine();
-        w.WriteStructReplaceMethod(type);
+        w.WriteLine($"class {type.Name}(int):");
+        w.Indent++;
 
-        if (type.Type.Fields.Count > 1)
+        // HResult takes one integer, a code in either the signed or the
+        // unsigned form, as an Int32 parameter does, not what int() takes.
+        // EventRegistrationToken is issued by WinRT and cannot be created,
+        // which a parameter no argument fits says to both mypy and pyright, as
+        // for a class with no constructor.
+        if (type.Type.Fields is [{ FieldType.FullName: "System.Int32" }])
         {
-            w.WriteBlankLine();
-            w.WriteStructUnpackMethod(type);
+            w.WriteLine("def __new__(cls, value: typing.SupportsIndex, /) -> typing.Self: ...");
         }
-
-        w.WriteMethodTable(type);
+        else
+        {
+            w.WriteLine("def __new__(cls, _: typing.Never, /) -> typing.Self:");
+            w.Indent++;
+            w.WriteLine(
+                "\"\"\"WinRT issues a token from add_<event>(), so there is nothing to create one from.\"\"\""
+            );
+            w.Indent--;
+        }
 
         foreach (var field in type.Type.Fields)
         {
-            w.WriteStructGetFunction(type, field);
+            w.WriteLine(
+                $"@deprecated(\"{type.Name}.{field.Name.ToPythonIdentifier()} is deprecated, the value is the {type.Name} itself\")"
+            );
+            w.WriteLine("@_property");
+            w.WriteLine($"def {field.Name.ToPythonIdentifier()}(self) -> int: ...");
         }
 
-        w.WriteGetSetTable(type);
-
-        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
-        {
-            w.WriteBlankLine();
-            w.WriteNumberSlotMethods(type);
-        }
-
-        w.WriteStructEqualityMethods(type);
-        w.WriteStructRepr(type);
-        w.WriteTypeSlotTable(type);
-        w.WriteTypeSpec(type, ns, moduleSuffix);
-
-        if (type.PyRequiresMetaclass)
-        {
-            w.WriteMetaclass(type, ns, moduleSuffix);
-        }
-    }
-
-    static void WriteStructFromTuple(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteLine($"{type.CppWinrtType} {type.Name}_from_tuple(PyObject* tuple)");
-        w.WriteBlock(() =>
-        {
-            w.WriteLine($"if (PyTuple_GET_SIZE(tuple) != {type.Type.Fields.Count})");
-            w.WriteBlock(() =>
-            {
-                w.WriteLine("PyErr_SetString(PyExc_TypeError, \"Incorrect number of fields\");");
-                w.WriteLine("throw python_exception();");
-            });
-            w.WriteBlankLine();
-
-            w.WriteLine($"{type.CppWinrtType} result{{}};");
-            w.WriteBlankLine();
-
-            for (var i = 0; i < type.Type.Fields.Count; i++)
-            {
-                var field = type.Type.Fields[i];
-                w.WriteLine(
-                    $"result.{field.ToWinrtFieldName()} = py::convert_to<{field.FieldType.ToCppTypeName()}>(tuple, {i});"
-                );
-            }
-
-            w.WriteBlankLine();
-            w.WriteLine("return result;");
-        });
-    }
-
-    static void WriteStructConstructor(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"PyObject* _new_{type.Name}(PyTypeObject* subclass, PyObject* args, PyObject* kwds) noexcept"
-        );
-        w.WriteBlock(() =>
-        {
-            w.WriteLine($"pyobj_handle self_obj{{(subclass->tp_alloc(subclass, 0))}};");
-
-            w.WriteLine("if (!self_obj)");
-            w.WriteBlock(() => w.WriteLine("return nullptr;"));
-            w.WriteBlankLine();
-            w.WriteLine(
-                $"auto self = reinterpret_cast<winrt_struct_wrapper<{type.CppWinrtType}>*>(self_obj.get());"
-            );
-            w.WriteLine("std::construct_at(&self->obj);");
-            w.WriteBlankLine();
-            w.WriteLine("auto tuple_size = PyTuple_GET_SIZE(args);");
-            w.WriteLine("if ((tuple_size == 0) && (!kwds))");
-            w.WriteBlock(() =>
-            {
-                w.WriteLine("return self_obj.detach();");
-            });
-            w.WriteBlankLine();
-
-            foreach (var field in type.Type.Fields)
-            {
-                w.WriteLine($"{field.FieldType.ToStructFieldType()} _{field.Name}{{}};");
-            }
-
-            w.WriteBlankLine();
-            w.WriteLine(
-                $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
-            );
-            w.WriteLine(
-                $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|{type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
-            );
-            w.WriteBlock(() => w.WriteLine("return nullptr;"));
-            w.WriteBlankLine();
-            w.WriteTryCatch(() =>
-            {
-                foreach (var field in type.Type.Fields)
-                {
-                    w.WriteLine(
-                        $"self->obj.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer()};"
-                    );
-                }
-                w.WriteBlankLine();
-                w.WriteLine("return self_obj.detach();");
-            });
-        });
-    }
-
-    static void WriteStructGetFunction(
-        this IndentedTextWriter w,
-        ProjectedType type,
-        FieldDefinition field
-    )
-    {
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"static PyObject* {type.Name}_get_{field.Name}({type.CppPyWrapperType}* self, void* /*unused*/) noexcept"
-        );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
-                {
-                    w.WriteLine($"return py::convert(self->obj.{field.ToWinrtFieldName()});");
-                })
-        );
-    }
-
-    static void WriteStructEqualityMethods(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteBlankLine();
-        w.WriteLine(
-            $"static PyObject* _richcompare_{type.Name}({type.CppPyWrapperType}* self, PyObject* other, int op) noexcept"
-        );
-        w.WriteBlock(() =>
-        {
-            w.WriteTryCatch(() =>
-            {
-                w.WriteLine($"auto _other = py::convert_to<{type.CppWinrtType}>(other);");
-                w.WriteBlankLine();
-                w.WriteLine("if (op == Py_EQ)");
-                w.WriteBlock(() =>
-                {
-                    w.WriteLine("if (self->obj == _other)");
-                    w.WriteBlock(() => w.WriteLine("Py_RETURN_TRUE;"));
-                    w.WriteBlankLine();
-                    w.WriteLine("Py_RETURN_FALSE;");
-                });
-                w.WriteBlankLine();
-                w.WriteLine("if (op == Py_NE)");
-                w.WriteBlock(() =>
-                {
-                    w.WriteLine("if (self->obj != _other)");
-                    w.WriteBlock(() => w.WriteLine("Py_RETURN_TRUE;"));
-                    w.WriteBlankLine();
-                    w.WriteLine("Py_RETURN_FALSE;");
-                });
-                w.WriteBlankLine();
-                w.WriteLine("Py_RETURN_NOTIMPLEMENTED;");
-            });
-        });
-    }
-
-    private static void WriteStructRepr(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteBlankLine();
-        w.WriteLine($"static PyObject* _repr_{type.Name}(PyObject* self) noexcept");
-        w.WriteBlock(() =>
-        {
-            foreach (var field in type.Type.Fields)
-            {
-                w.WriteLine(
-                    $"py::pyobj_handle {field.Name}{{PyObject_GetAttrString(self, \"{field.Name.ToPythonIdentifier()}\")}};"
-                );
-
-                w.WriteLine($"if (!{field.Name})");
-                w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                w.WriteBlankLine();
-            }
-
-            w.WriteLine(
-                $"return PyUnicode_FromFormat(\"{type.Name}({string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}=%R"))})\"{string.Join("", type.Type.Fields.Select(f => $", {f.Name}.get()"))});"
-            );
-        });
-    }
-
-    private static void WriteStructReplaceMethod(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteLine(
-            $"PyObject* _replace_{type.Name}({type.CppPyWrapperType}* self, PyObject* args, PyObject* kwds) noexcept"
-        );
-        w.WriteBlock(
-            () =>
-                w.WriteTryCatch(() =>
-                {
-                    foreach (var field in type.Type.Fields)
-                    {
-                        w.WriteLine(
-                            $"{field.FieldType.ToStructFieldType()} _{field.Name}{{{field.ToStructFieldPreInitializer()}}};"
-                        );
-                    }
-
-                    w.WriteBlankLine();
-                    w.WriteLine(
-                        $"static const char* kwlist[] = {{{type.Type.ToStructFieldKeywordList()}nullptr}};"
-                    );
-                    w.WriteLine(
-                        $"if (!PyArg_ParseTupleAndKeywords(args, kwds, \"|${type.Type.ToStructFieldFormat()}\", const_cast<char**>(kwlist){type.Type.ToStructFieldParseParameterList()}))"
-                    );
-                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                    w.WriteBlankLine();
-
-                    w.WriteLine($"auto copy = self->obj;");
-
-                    foreach (var field in type.Type.Fields)
-                    {
-                        w.WriteLine(
-                            $"copy.{field.ToWinrtFieldName()} = {field.ToStructFieldInitializer(replace: true)};"
-                        );
-                    }
-                    w.WriteBlankLine();
-                    w.WriteLine($"return convert(copy);");
-                })
-        );
-    }
-
-    private static void WriteStructUnpackMethod(this IndentedTextWriter w, ProjectedType type)
-    {
-        w.WriteLine(
-            $"PyObject* unpack_{type.Name}({type.CppPyWrapperType}* self, PyObject* /*unused*/) noexcept"
-        );
-        w.WriteBlock(() =>
-        {
-            if (type.Type.Fields.Any(f => f.FieldType.IsStruct()))
-            {
-                w.WriteLine("py::pyobj_handle unpack_str{PyUnicode_InternFromString(\"unpack\")};");
-                w.WriteLine("if (!unpack_str)");
-                w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                w.WriteBlankLine();
-            }
-
-            foreach (var field in type.Type.Fields)
-            {
-                w.WriteLine(
-                    $"py::pyobj_handle {field.Name}{{convert(self->obj.{field.ToWinrtFieldName()})}};"
-                );
-                w.WriteLine($"if (!{field.Name})");
-                w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                w.WriteBlankLine();
-
-                if (field.FieldType.IsStruct())
-                {
-                    w.WriteLine(
-                        $"{field.Name}.attach(PyObject_CallMethodNoArgs({field.Name}.get(), unpack_str.get()));"
-                    );
-                    w.WriteLine($"if (!{field.Name})");
-                    w.WriteBlock(() => w.WriteLine("return nullptr;"));
-                    w.WriteBlankLine();
-                }
-            }
-
-            w.WriteLine($"pyobj_handle tuple{{PyTuple_New({type.Type.Fields.Count})}};");
-            w.WriteLine("if (!tuple)");
-            w.WriteBlock(() => w.WriteLine("return nullptr;"));
-            w.WriteBlankLine();
-
-            foreach (var (i, field) in type.Type.Fields.Select((f, i) => (i, f)))
-            {
-                w.WriteLine($"PyTuple_SET_ITEM(tuple.get(), {i}, {field.Name}.detach());");
-            }
-
-            w.WriteBlankLine();
-            w.WriteLine("return tuple.detach();");
-        });
-    }
-
-    public static void WriteStructBufferFormat(this IndentedTextWriter w, ProjectedType type)
-    {
-        var fmt = string.Join(
-            "",
-            type.Type.Fields.Select(f =>
-                $"{f.ToStructBufferFormat()}:{f.Name.ToPythonIdentifier()}:"
-            )
-        );
-
-        w.WriteLine($"template<>");
-        w.WriteLine(
-            $"inline constexpr const char* buffer_format<{type.CppWinrtType}> = \"T{{{fmt}}}\";"
-        );
+        w.Indent--;
         w.WriteBlankLine();
     }
 }

@@ -1,0 +1,910 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Graphics.Display
+
+class Windows.Graphics.Display.AdvancedColorInfo python_type
+    py AdvancedColorInfo
+    signature rc(Windows.Graphics.Display.AdvancedColorInfo;{8797dcfb-b229-4081-ae9a-2cc85e34ad6a})
+    default Windows.Graphics.Display.IAdvancedColorInfo
+    requires Windows.Graphics.Display.IAdvancedColorInfo
+    property blue_primary
+        get get_BluePrimary slot=9 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out struct type=Windows.Foundation.Point return
+    property current_advanced_color_kind
+        get get_CurrentAdvancedColorKind slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out enum32 type=Windows.Graphics.Display.AdvancedColorKind return
+    property green_primary
+        get get_GreenPrimary slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out struct type=Windows.Foundation.Point return
+    property max_average_full_frame_luminance_in_nits
+        get get_MaxAverageFullFrameLuminanceInNits slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out single return
+    property max_luminance_in_nits
+        get get_MaxLuminanceInNits slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out single return
+    property min_luminance_in_nits
+        get get_MinLuminanceInNits slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out single return
+    property red_primary
+        get get_RedPrimary slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out struct type=Windows.Foundation.Point return
+    property sdr_white_level_in_nits
+        get get_SdrWhiteLevelInNits slot=14 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out single return
+    property white_point
+        get get_WhitePoint slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=4
+            out struct type=Windows.Foundation.Point return
+    method is_advanced_color_kind_available
+        method IsAdvancedColorKindAvailable slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51
+            in enum32 type=Windows.Graphics.Display.AdvancedColorKind name=kind
+            out boolean return
+    method is_hdr_metadata_format_currently_supported
+        method IsHdrMetadataFormatCurrentlySupported slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IAdvancedColorInfo shape=51
+            in enum32 type=Windows.Graphics.Display.HdrMetadataFormat name=format
+            out boolean return
+
+enum Windows.Graphics.Display.AdvancedColorKind python_type
+    py AdvancedColorKind
+    signature enum(Windows.Graphics.Display.AdvancedColorKind;i4)
+    constant STANDARD_DYNAMIC_RANGE 0
+    constant WIDE_COLOR_GAMUT 1
+    constant HIGH_DYNAMIC_RANGE 2
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IRandomAccessStream]
+    guid 398c4183-793d-5b00-819b-4aef92485e94
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Storage.Streams.IRandomAccessStream
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+class Windows.Graphics.Display.BrightnessOverride python_type
+    py BrightnessOverride
+    signature rc(Windows.Graphics.Display.BrightnessOverride;{96c9621a-c143-4392-bedd-4a7e9574c8fd})
+    default Windows.Graphics.Display.IBrightnessOverride
+    requires Windows.Graphics.Display.IBrightnessOverride
+    factory Windows.Graphics.Display.IBrightnessOverrideStatics
+    property brightness_level
+        get get_BrightnessLevel slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
+            out double return
+    property is_override_active
+        get get_IsOverrideActive slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
+            out boolean return
+    property is_supported
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=4
+            out boolean return
+    event brightness_level_changed
+        add add_BrightnessLevelChanged slot=18 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_BrightnessLevelChanged slot=19 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event is_override_active_changed
+        add add_IsOverrideActiveChanged slot=16 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_IsOverrideActiveChanged slot=17 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event is_supported_changed
+        add add_IsSupportedChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_IsSupportedChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_default_for_system static
+        method GetDefaultForSystem slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 static
+            out class type=Windows.Graphics.Display.BrightnessOverride return
+    method get_for_current_view static
+        method GetForCurrentView slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=4 static
+            out class type=Windows.Graphics.Display.BrightnessOverride return
+    method get_level_for_scenario
+        method GetLevelForScenario slot=11 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
+            in enum32 type=Windows.Graphics.Display.DisplayBrightnessScenario name=scenario
+            out double return
+    method save_for_system_async static
+        method SaveForSystemAsync slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideStatics shape=51 static
+            in class type=Windows.Graphics.Display.BrightnessOverride name=value
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_brightness_level
+        method SetBrightnessLevel slot=9 inputs=2 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=46
+            in double name=brightnessLevel
+            in enum_u32 type=Windows.Graphics.Display.DisplayBrightnessOverrideOptions name=options
+    method set_brightness_scenario
+        method SetBrightnessScenario slot=10 inputs=2 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=51
+            in enum32 type=Windows.Graphics.Display.DisplayBrightnessScenario name=scenario
+            in enum_u32 type=Windows.Graphics.Display.DisplayBrightnessOverrideOptions name=options
+    method start_override
+        method StartOverride slot=12 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0
+    method stop_override
+        method StopOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IBrightnessOverride shape=0
+
+class Windows.Graphics.Display.BrightnessOverrideSettings python_type
+    py BrightnessOverrideSettings
+    signature rc(Windows.Graphics.Display.BrightnessOverrideSettings;{d112ab2a-7604-4dba-bcf8-4b6f49502cb0})
+    default Windows.Graphics.Display.IBrightnessOverrideSettings
+    requires Windows.Graphics.Display.IBrightnessOverrideSettings
+    factory Windows.Graphics.Display.IBrightnessOverrideSettingsStatics
+    property desired_level
+        get get_DesiredLevel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4
+            out double return
+    property desired_nits
+        get get_DesiredNits slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettings shape=4
+            out single return
+    method create_from_display_brightness_override_scenario static
+        method CreateFromDisplayBrightnessOverrideScenario slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettingsStatics shape=51 static
+            in enum32 type=Windows.Graphics.Display.DisplayBrightnessOverrideScenario name=overrideScenario
+            out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
+    method create_from_level static
+        method CreateFromLevel slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettingsStatics shape=46 static
+            in double name=level
+            out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
+    method create_from_nits static
+        method CreateFromNits slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IBrightnessOverrideSettingsStatics shape=40 static
+            in single name=nits
+            out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
+
+class Windows.Graphics.Display.ColorOverrideSettings python_type
+    py ColorOverrideSettings
+    signature rc(Windows.Graphics.Display.ColorOverrideSettings;{fbefa134-4a81-4c4d-a5b6-7d1b5c4bd00b})
+    default Windows.Graphics.Display.IColorOverrideSettings
+    requires Windows.Graphics.Display.IColorOverrideSettings
+    factory Windows.Graphics.Display.IColorOverrideSettingsStatics
+    property desired_display_color_override_scenario
+        get get_DesiredDisplayColorOverrideScenario slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettings shape=4
+            out enum32 type=Windows.Graphics.Display.DisplayColorOverrideScenario return
+    method create_from_display_color_override_scenario static
+        method CreateFromDisplayColorOverrideScenario slot=6 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IColorOverrideSettingsStatics shape=51 static
+            in enum32 type=Windows.Graphics.Display.DisplayColorOverrideScenario name=overrideScenario
+            out class type=Windows.Graphics.Display.ColorOverrideSettings return
+
+enum Windows.Graphics.Display.DisplayBrightnessOverrideOptions python_type flags_enum
+    py DisplayBrightnessOverrideOptions
+    signature enum(Windows.Graphics.Display.DisplayBrightnessOverrideOptions;u4)
+    constant NONE 0x0
+    constant USE_DIMMED_POLICY_WHEN_BATTERY_IS_LOW 0x1
+
+enum Windows.Graphics.Display.DisplayBrightnessOverrideScenario python_type
+    py DisplayBrightnessOverrideScenario
+    signature enum(Windows.Graphics.Display.DisplayBrightnessOverrideScenario;i4)
+    constant IDLE_BRIGHTNESS 0
+    constant BARCODE_READING_BRIGHTNESS 1
+    constant FULL_BRIGHTNESS 2
+
+enum Windows.Graphics.Display.DisplayBrightnessScenario python_type
+    py DisplayBrightnessScenario
+    signature enum(Windows.Graphics.Display.DisplayBrightnessScenario;i4)
+    constant DEFAULT_BRIGHTNESS 0
+    constant IDLE_BRIGHTNESS 1
+    constant BARCODE_READING_BRIGHTNESS 2
+    constant FULL_BRIGHTNESS 3
+
+enum Windows.Graphics.Display.DisplayColorOverrideScenario python_type
+    py DisplayColorOverrideScenario
+    signature enum(Windows.Graphics.Display.DisplayColorOverrideScenario;i4)
+    constant ACCURATE 0
+
+class Windows.Graphics.Display.DisplayEnhancementOverride python_type
+    py DisplayEnhancementOverride
+    signature rc(Windows.Graphics.Display.DisplayEnhancementOverride;{429594cf-d97a-4b02-a428-5c4292f7f522})
+    default Windows.Graphics.Display.IDisplayEnhancementOverride
+    requires Windows.Graphics.Display.IDisplayEnhancementOverride
+    factory Windows.Graphics.Display.IDisplayEnhancementOverrideStatics
+    property color_override_settings
+        get get_ColorOverrideSettings slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            out class type=Windows.Graphics.Display.ColorOverrideSettings return
+        put put_ColorOverrideSettings slot=7 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            in class type=Windows.Graphics.Display.ColorOverrideSettings name=value
+    property brightness_override_settings
+        get get_BrightnessOverrideSettings slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            out class type=Windows.Graphics.Display.BrightnessOverrideSettings return
+        put put_BrightnessOverrideSettings slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            in class type=Windows.Graphics.Display.BrightnessOverrideSettings name=value
+    property can_override
+        get get_CanOverride slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            out boolean return
+    property is_override_active
+        get get_IsOverrideActive slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            out boolean return
+    event can_override_changed
+        add add_CanOverrideChanged slot=15 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_CanOverrideChanged slot=16 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event display_enhancement_override_capabilities_changed
+        add add_DisplayEnhancementOverrideCapabilitiesChanged slot=19 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DisplayEnhancementOverrideCapabilitiesChanged slot=20 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event is_override_active_changed
+        add add_IsOverrideActiveChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_IsOverrideActiveChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_current_display_enhancement_override_capabilities
+        method GetCurrentDisplayEnhancementOverrideCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=4
+            out class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities return
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideStatics shape=4 static
+            out class type=Windows.Graphics.Display.DisplayEnhancementOverride return
+    method request_override
+        method RequestOverride slot=13 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0
+    method stop_override
+        method StopOverride slot=14 inputs=0 outputs=0 declaring=Windows.Graphics.Display.IDisplayEnhancementOverride shape=0
+
+class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities python_type
+    py DisplayEnhancementOverrideCapabilities
+    signature rc(Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities;{457060de-ee5a-47b7-9918-1e51e812ccc8})
+    default Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities
+    requires Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities
+    property is_brightness_control_supported
+        get get_IsBrightnessControlSupported slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
+            out boolean return
+    property is_brightness_nits_control_supported
+        get get_IsBrightnessNitsControlSupported slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
+            out boolean return
+    method get_supported_nit_ranges
+        method GetSupportedNitRanges slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities shape=4
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> return
+
+class Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs python_type
+    py DisplayEnhancementOverrideCapabilitiesChangedEventArgs
+    signature rc(Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs;{db61e664-15fa-49da-8b77-07dbd2af585d})
+    default Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
+    requires Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
+    property capabilities
+        get get_Capabilities slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs shape=4
+            out class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities return
+
+class Windows.Graphics.Display.DisplayInformation python_type
+    py DisplayInformation
+    signature rc(Windows.Graphics.Display.DisplayInformation;{bed112ae-adc3-4dc9-ae65-851f4d7d4799})
+    default Windows.Graphics.Display.IDisplayInformation
+    requires Windows.Graphics.Display.IDisplayInformation
+    requires Windows.Graphics.Display.IDisplayInformation2
+    requires Windows.Graphics.Display.IDisplayInformation3
+    requires Windows.Graphics.Display.IDisplayInformation4
+    requires Windows.Graphics.Display.IDisplayInformation5
+    factory Windows.Graphics.Display.IDisplayInformationStatics
+    property current_orientation
+        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+    property logical_dpi
+        get get_LogicalDpi slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out single return
+    property native_orientation
+        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+    property raw_dpi_x
+        get get_RawDpiX slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out single return
+    property raw_dpi_y
+        get get_RawDpiY slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out single return
+    property resolution_scale
+        get get_ResolutionScale slot=10 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out enum32 type=Windows.Graphics.Display.ResolutionScale return
+    property stereo_enabled
+        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out boolean return
+    property raw_pixels_per_view_pixel
+        get get_RawPixelsPerViewPixel slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation2 shape=4
+            out double return
+    property diagonal_size_in_inches
+        get get_DiagonalSizeInInches slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation3 shape=4
+            out reference type=Windows.Foundation.IReference<System.Double> return
+    property screen_height_in_raw_pixels
+        get get_ScreenHeightInRawPixels slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4
+            out uint32 return
+    property screen_width_in_raw_pixels
+        get get_ScreenWidthInRawPixels slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation4 shape=4
+            out uint32 return
+    property auto_rotation_preferences static
+        get get_AutoRotationPreferences slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_AutoRotationPreferences slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    event color_profile_changed
+        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event dpi_changed
+        add add_DpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event orientation_changed
+        add add_OrientationChanged slot=8 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_OrientationChanged slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event stereo_enabled_changed
+        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event advanced_color_info_changed
+        add add_AdvancedColorInfoChanged slot=7 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=51
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_AdvancedColorInfoChanged slot=8 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event display_contents_invalidated static
+        add add_DisplayContentsInvalidated slot=9 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=51 static
+            in delegate type=Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DisplayContentsInvalidated slot=10 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=26 static
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_advanced_color_info
+        method GetAdvancedColorInfo slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation5 shape=4
+            out class type=Windows.Graphics.Display.AdvancedColorInfo return
+    method get_color_profile_async
+        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformation shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+    method get_for_current_view static
+        method GetForCurrentView slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayInformationStatics shape=4 static
+            out class type=Windows.Graphics.Display.DisplayInformation return
+
+enum Windows.Graphics.Display.DisplayOrientations python_type flags_enum
+    py DisplayOrientations
+    signature enum(Windows.Graphics.Display.DisplayOrientations;u4)
+    constant NONE 0x0
+    constant LANDSCAPE 0x1
+    constant PORTRAIT 0x2
+    constant LANDSCAPE_FLIPPED 0x4
+    constant PORTRAIT_FLIPPED 0x8
+
+class Windows.Graphics.Display.DisplayProperties static python_type
+    py DisplayProperties
+    factory Windows.Graphics.Display.IDisplayPropertiesStatics
+    property auto_rotation_preferences static
+        get get_AutoRotationPreferences slot=8 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+        put put_AutoRotationPreferences slot=9 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            in enum_u32 type=Windows.Graphics.Display.DisplayOrientations name=value
+    property current_orientation static
+        get get_CurrentOrientation slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+    property logical_dpi static
+        get get_LogicalDpi slot=13 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out single return
+    property native_orientation static
+        get get_NativeOrientation slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out enum_u32 type=Windows.Graphics.Display.DisplayOrientations return
+    property resolution_scale static
+        get get_ResolutionScale slot=12 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out enum32 type=Windows.Graphics.Display.ResolutionScale return
+    property stereo_enabled static
+        get get_StereoEnabled slot=16 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out boolean return
+    event color_profile_changed static
+        add add_ColorProfileChanged slot=20 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
+            in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_ColorProfileChanged slot=21 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event display_contents_invalidated static
+        add add_DisplayContentsInvalidated slot=22 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
+            in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_DisplayContentsInvalidated slot=23 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event logical_dpi_changed static
+        add add_LogicalDpiChanged slot=14 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
+            in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_LogicalDpiChanged slot=15 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event orientation_changed static
+        add add_OrientationChanged slot=10 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
+            in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_OrientationChanged slot=11 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event stereo_enabled_changed static
+        add add_StereoEnabledChanged slot=17 inputs=1 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=51 static deprecated
+            in delegate type=Windows.Graphics.Display.DisplayPropertiesEventHandler name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_StereoEnabledChanged slot=18 inputs=1 outputs=0 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=26 static deprecated
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method get_color_profile_async static
+        method GetColorProfileAsync slot=19 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayPropertiesStatics shape=4 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> return
+
+delegate Windows.Graphics.Display.DisplayPropertiesEventHandler python_type
+    py DisplayPropertiesEventHandler
+    guid dbdd8b01-f1a1-46d1-9ee3-543bcc995980
+    signature delegate({dbdd8b01-f1a1-46d1-9ee3-543bcc995980})
+    method -
+        method Invoke slot=3 inputs=1 outputs=0 shape=4 reverse=1
+            in object name=sender
+
+class Windows.Graphics.Display.DisplayServices python_type
+    py DisplayServices
+    signature rc(Windows.Graphics.Display.DisplayServices;{1b54f32b-890d-5747-bd26-fdbdeb0c8a71})
+    default Windows.Graphics.Display.IDisplayServices
+    requires Windows.Graphics.Display.IDisplayServices
+    factory Windows.Graphics.Display.IDisplayServicesStatics
+    method find_all static
+        method FindAll slot=6 inputs=0 outputs=1 declaring=Windows.Graphics.Display.IDisplayServicesStatics shape=51 static
+            receive_array struct type=Windows.Graphics.DisplayId return
+
+enum Windows.Graphics.Display.HdrMetadataFormat python_type
+    py HdrMetadataFormat
+    signature enum(Windows.Graphics.Display.HdrMetadataFormat;i4)
+    constant HDR10 0
+    constant HDR10_PLUS 1
+
+interface Windows.Graphics.Display.IAdvancedColorInfo
+    guid 8797dcfb-b229-4081-ae9a-2cc85e34ad6a
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IRandomAccessStream]
+    guid 430ecece-1418-5d19-81b2-5ddb381603cc
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{905a0fe1-bc53-11df-8c49-001e4fc686da})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Storage.Streams.IRandomAccessStream
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Streams.IRandomAccessStream> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Storage.Streams.IRandomAccessStream return
+
+interface Windows.Graphics.Display.IBrightnessOverride
+    guid 96c9621a-c143-4392-bedd-4a7e9574c8fd
+
+interface Windows.Graphics.Display.IBrightnessOverrideSettings
+    guid d112ab2a-7604-4dba-bcf8-4b6f49502cb0
+
+interface Windows.Graphics.Display.IBrightnessOverrideSettingsStatics
+    guid d487dc90-6f74-440b-b383-5fe96cf00b0f
+
+interface Windows.Graphics.Display.IBrightnessOverrideStatics
+    guid 03a7b9ed-e1f1-4a68-a11f-946ad8ce5393
+
+interface Windows.Graphics.Display.IColorOverrideSettings
+    guid fbefa134-4a81-4c4d-a5b6-7d1b5c4bd00b
+
+interface Windows.Graphics.Display.IColorOverrideSettingsStatics
+    guid b068e05f-c41f-4ac9-afab-827ab6248f9a
+
+interface Windows.Graphics.Display.IDisplayEnhancementOverride
+    guid 429594cf-d97a-4b02-a428-5c4292f7f522
+
+interface Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilities
+    guid 457060de-ee5a-47b7-9918-1e51e812ccc8
+
+interface Windows.Graphics.Display.IDisplayEnhancementOverrideCapabilitiesChangedEventArgs
+    guid db61e664-15fa-49da-8b77-07dbd2af585d
+
+interface Windows.Graphics.Display.IDisplayEnhancementOverrideStatics
+    guid cf5b7ec1-9791-4453-b013-29b6f778e519
+
+interface Windows.Graphics.Display.IDisplayInformation
+    guid bed112ae-adc3-4dc9-ae65-851f4d7d4799
+
+interface Windows.Graphics.Display.IDisplayInformation2
+    guid 4dcd0021-fad1-4b8e-8edf-775887b8bf19
+
+interface Windows.Graphics.Display.IDisplayInformation3
+    guid db15011d-0f09-4466-8ff3-11de9a3c929a
+
+interface Windows.Graphics.Display.IDisplayInformation4
+    guid c972ce2f-1242-46be-b536-e1aafe9e7acf
+
+interface Windows.Graphics.Display.IDisplayInformation5
+    guid 3a5442dc-2cde-4a8d-80d1-21dc5adcc1aa
+
+interface Windows.Graphics.Display.IDisplayInformationStatics
+    guid c6a02a6c-d452-44dc-ba07-96f3c6adf9d1
+
+interface Windows.Graphics.Display.IDisplayPropertiesStatics
+    guid 6937ed8d-30ea-4ded-8271-4553ff02f68a
+
+interface Windows.Graphics.Display.IDisplayServices
+    guid 1b54f32b-890d-5747-bd26-fdbdeb0c8a71
+
+interface Windows.Graphics.Display.IDisplayServicesStatics
+    guid dc2096bf-730a-5560-b461-91c13d692e0c
+
+interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Display.NitRange> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[NitRange]
+    guid 7fb7a783-ce2d-552d-bee3-bc1442db0409
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};struct(Windows.Graphics.Display.NitRange;f4;f4;f4))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Graphics.Display.NitRange
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Display.NitRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[NitRange]
+    guid 6be92993-d069-5a99-b9e8-200cf5c8a060
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};struct(Windows.Graphics.Display.NitRange;f4;f4;f4))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Graphics.Display.NitRange
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> shape=4 reverse=22 role=current
+            out struct type=Windows.Graphics.Display.NitRange return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> shape=117 reverse=101 role=get_many
+            fill_array struct type=Windows.Graphics.Display.NitRange name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.IReference<System.Double> concrete
+    py winrt.windows.foundation._IReference[Double]
+    guid 2f2d6c29-5473-5f3e-92e7-96572bb990e2
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f8)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Double
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Double> shape=4 reverse=22 role=value
+            out double return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[NitRange]
+    guid cc8ef226-50c1-5efa-98c4-1043d0bf5b35
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};struct(Windows.Graphics.Display.NitRange;f4;f4;f4))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Graphics.Display.NitRange>
+    argument Windows.Graphics.Display.NitRange
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Graphics.Display.NitRange> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Graphics.Display.NitRange> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out struct type=Windows.Graphics.Display.NitRange return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array struct type=Windows.Graphics.Display.NitRange name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Graphics.Display.NitRange> shape=146 reverse=74 role=index_of
+            in struct type=Windows.Graphics.Display.NitRange name=value
+            out uint32 name=index
+            out boolean return
+
+struct Windows.Graphics.Display.NitRange python_type
+    py NitRange
+    signature struct(Windows.Graphics.Display.NitRange;f4;f4;f4)
+    field min_nits MinNits single
+    field max_nits MaxNits single
+    field step_size_nits StepSizeNits single
+
+enum Windows.Graphics.Display.ResolutionScale python_type
+    py ResolutionScale
+    signature enum(Windows.Graphics.Display.ResolutionScale;i4)
+    constant INVALID 0
+    constant SCALE100_PERCENT 100
+    constant SCALE120_PERCENT 120
+    constant SCALE125_PERCENT 125
+    constant SCALE140_PERCENT 140
+    constant SCALE150_PERCENT 150
+    constant SCALE160_PERCENT 160
+    constant SCALE175_PERCENT 175
+    constant SCALE180_PERCENT 180
+    constant SCALE200_PERCENT 200
+    constant SCALE225_PERCENT 225
+    constant SCALE250_PERCENT 250
+    constant SCALE300_PERCENT 300
+    constant SCALE350_PERCENT 350
+    constant SCALE400_PERCENT 400
+    constant SCALE450_PERCENT 450
+    constant SCALE500_PERCENT 500
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.BrightnessOverride,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[BrightnessOverride, Object]
+    guid a460214e-6620-521d-9cb9-a0a0f732ce90
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Display.BrightnessOverride;{96c9621a-c143-4392-bedd-4a7e9574c8fd});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Graphics.Display.BrightnessOverride
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Display.BrightnessOverride name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayEnhancementOverride, Object]
+    guid 3247b54b-7f00-5555-81df-afae022f0796
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Display.DisplayEnhancementOverride;{429594cf-d97a-4b02-a428-5c4292f7f522});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Graphics.Display.DisplayEnhancementOverride
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Display.DisplayEnhancementOverride name=sender
+            in object name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayEnhancementOverride,Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayEnhancementOverride, DisplayEnhancementOverrideCapabilitiesChangedEventArgs]
+    guid 7e61af14-3e29-5039-92ee-3f2472b99e43
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Display.DisplayEnhancementOverride;{429594cf-d97a-4b02-a428-5c4292f7f522});rc(Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs;{db61e664-15fa-49da-8b77-07dbd2af585d}))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Graphics.Display.DisplayEnhancementOverride
+    argument Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Display.DisplayEnhancementOverride name=sender
+            in class type=Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs name=args
+
+delegate Windows.Foundation.TypedEventHandler<Windows.Graphics.Display.DisplayInformation,System.Object> concrete
+    py winrt.windows.foundation.TypedEventHandler[DisplayInformation, Object]
+    guid 86c4f619-67b6-51c7-b30d-d8cf13625327
+    signature pinterface({9de1c534-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.Graphics.Display.DisplayInformation;{bed112ae-adc3-4dc9-ae65-851f4d7d4799});cinterface(IInspectable))
+    base Windows.Foundation.TypedEventHandler
+    argument Windows.Graphics.Display.DisplayInformation
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in class type=Windows.Graphics.Display.DisplayInformation name=sender
+            in object name=args
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Double external
+    py winrt.system.Double
+
+class System.Object external
+    py winrt.system.Object
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+delegate Windows.Foundation.TypedEventHandler external parameterized
+    py winrt.windows.foundation.TypedEventHandler
+    guid 9de1c534-6ae1-11e0-84e1-18a905bcc53f
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+struct Windows.Graphics.DisplayId external
+    py winrt.windows.graphics.DisplayId
+
+interface Windows.Storage.Streams.IRandomAccessStream external
+    py winrt.windows.storage.streams._IRandomAccessStream
+    guid 905a0fe1-bc53-11df-8c49-001e4fc686da

@@ -1,54 +1,101 @@
-import json
+"""Builds the wheels of every package that is published.
+
+There are two halves, built by different tools for different reasons, and
+with no arguments both of them are built:
+
+    python scripts/build-bdist.py
+    python scripts/build-bdist.py --pure
+    python scripts/build-bdist.py --compiled --only cp314-win_amd64
+
+A release publishes one family at a time, so either half can be narrowed to
+one family or to packages named outright:
+
+    python scripts/build-bdist.py --family webview2
+    python scripts/build-bdist.py --package winrt-Windows.Foundation
+
+A projection package is data and winrt-table-compiler is pure Python, so each
+of them is one py3-none-any wheel built once - that is the pure half. It needs
+winrt-table-compiler *installed* rather than merely importable, because
+hatchling finds the hook that compiles the tables through the entry point in
+its metadata. The packages that redistribute a component .dll are in that half
+too, since nothing in them is compiled either; what is in them is built for
+one architecture, so each is three py3-none-win_* wheels rather than one
+py3-none-any wheel. Nothing in the half needs a compiler.
+
+winrt-runtime and the eight hand-written interop modules do compile, so they
+are what is left of the cibuildwheel build per Python and architecture.
+Every argument other than the ones above is passed to cibuildwheel.
+"""
+
+import argparse
 import os
 import shutil
 import subprocess
-import sys
-from itertools import chain
-from pathlib import Path
 
-PROJECT_DIR = Path(__file__).parent.parent
+# the packages that are published, and the filters that pick some of them
+import packages
 
-TOOLS_JSON_PATH = PROJECT_DIR / ".config" / "_tools.json"
+# The architectures a .dll package is built for, spelled the way
+# sysconfig.get_platform() does.
+PLAT_NAMES = ["win32", "win-amd64", "win-arm64"]
 
-with open(TOOLS_JSON_PATH) as f:
-    tools_json = json.load(f)
+packages.set_nuget_environment()
+
+parser = argparse.ArgumentParser(
+    description="Builds the wheels of every package that is published."
+)
+half = parser.add_mutually_exclusive_group()
+half.add_argument(
+    "--pure",
+    action="store_true",
+    help="build only the wheels that are built without a compiler",
+)
+half.add_argument(
+    "--compiled",
+    action="store_true",
+    help="build only the wheels that cibuildwheel builds",
+)
+packages.add_arguments(parser)
+args, cibuildwheel_args = parser.parse_known_args()
+
+selected = packages.select(args)
 
 
-def versioned_package(package: str) -> str:
-    return f"{package}.{tools_json[package]}"
-
-
-PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
-WEBVIEW2_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.Web.WebView2")
-).resolve()
-MICROSOFT_UI_XAML_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.UI.Xaml")
-).resolve()
-WINDOWS_APP_SDK_PATH = (
-    PROJECT_DIR / "_tools" / versioned_package("Microsoft.WindowsAppSDK")
-).resolve()
-
-os.environ["WEBVIEW2_PATH"] = os.fspath(WEBVIEW2_PATH)
-os.environ["MICROSOFT_UI_XAML_PATH"] = os.fspath(MICROSOFT_UI_XAML_PATH)
-os.environ["WINDOWS_APP_SDK_PATH"] = os.fspath(WINDOWS_APP_SDK_PATH)
-
-for package_path in chain(
-    [PROJECTION_PATH / "winrt-runtime"],
-    (PROJECTION_PATH / "interop").glob("winrt-*"),
-    (PROJECTION_PATH / "interop").glob("winui3-*"),
-    (PROJECTION_PATH / "webview2").glob("webview2-*"),
-    (PROJECTION_PATH / "winui2").glob("winui2-*"),
-    (PROJECTION_PATH / "winui3").glob("winui3-*"),
-    (PROJECTION_PATH / "winrt").glob("winrt-*"),
-):
+def build_wheel(package: packages.Package) -> None:
     subprocess.check_call(
         [
-            "cibuildwheel",
-            os.fspath(package_path),
-        ]
-        + (sys.argv[1:] or ["--platform", "windows"])
+            "pyproject-build",
+            "--wheel",
+            "--no-isolation",
+            "--skip-dependency-check",
+            "--outdir",
+            "wheelhouse",
+            os.fspath(package.path),
+        ],
     )
 
-    # Build directories are 10s of MBs and will cause CI to run out of space!
-    shutil.rmtree(package_path / "build")
+
+if not args.compiled:
+    for package in selected:
+        if package.build is packages.Build.ANY:
+            build_wheel(package)
+        elif package.build is packages.Build.REDIST:
+            for plat_name in PLAT_NAMES:
+                os.environ["PYWINRT_PLAT_NAME"] = plat_name
+
+                build_wheel(package)
+
+            del os.environ["PYWINRT_PLAT_NAME"]
+
+if not args.pure:
+    for package in selected:
+        if package.build is not packages.Build.COMPILED:
+            continue
+
+        subprocess.check_call(
+            ["cibuildwheel", os.fspath(package.path)]
+            + (cibuildwheel_args or ["--platform", "windows"])
+        )
+
+        # Build directories are 10s of MBs and will cause CI to run out of space!
+        shutil.rmtree(package.path / "build")

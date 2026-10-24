@@ -1,0 +1,255 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Devices.Adc
+
+class Windows.Devices.Adc.AdcChannel python_type closeable
+    py AdcChannel
+    signature rc(Windows.Devices.Adc.AdcChannel;{040bf414-2588-4a56-abef-73a260acc60a})
+    default Windows.Devices.Adc.IAdcChannel
+    requires Windows.Devices.Adc.IAdcChannel
+    requires Windows.Foundation.IClosable
+    property controller
+        get get_Controller slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
+            out class type=Windows.Devices.Adc.AdcController return
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method read_ratio
+        method ReadRatio slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
+            out double return
+    method read_value
+        method ReadValue slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcChannel shape=4
+            out int32 return
+
+enum Windows.Devices.Adc.AdcChannelMode python_type
+    py AdcChannelMode
+    signature enum(Windows.Devices.Adc.AdcChannelMode;i4)
+    constant SINGLE_ENDED 0
+    constant DIFFERENTIAL 1
+
+class Windows.Devices.Adc.AdcController python_type
+    py AdcController
+    signature rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})
+    default Windows.Devices.Adc.IAdcController
+    requires Windows.Devices.Adc.IAdcController
+    factory Windows.Devices.Adc.IAdcControllerStatics
+    factory Windows.Devices.Adc.IAdcControllerStatics2
+    property channel_mode
+        get get_ChannelMode slot=10 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
+            out enum32 type=Windows.Devices.Adc.AdcChannelMode return
+        put put_ChannelMode slot=11 inputs=1 outputs=0 declaring=Windows.Devices.Adc.IAdcController shape=4
+            in enum32 type=Windows.Devices.Adc.AdcChannelMode name=value
+    property channel_count
+        get get_ChannelCount slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
+            out int32 return
+    property max_value
+        get get_MaxValue slot=9 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
+            out int32 return
+    property min_value
+        get get_MinValue slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
+            out int32 return
+    property resolution_in_bits
+        get get_ResolutionInBits slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=4
+            out int32 return
+    method get_controllers_async static
+        method GetControllersAsync slot=6 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics shape=51 static
+            in interface type=Windows.Devices.Adc.Provider.IAdcProvider name=provider
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> return
+    method get_default_async static
+        method GetDefaultAsync slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Adc.IAdcControllerStatics2 shape=4 static
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> return
+    method is_channel_mode_supported
+        method IsChannelModeSupported slot=12 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51
+            in enum32 type=Windows.Devices.Adc.AdcChannelMode name=channelMode
+            out boolean return
+    method open_channel
+        method OpenChannel slot=13 inputs=1 outputs=1 declaring=Windows.Devices.Adc.IAdcController shape=51
+            in int32 name=channelNumber
+            out class type=Windows.Devices.Adc.AdcChannel return
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Adc.AdcController> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[AdcController]
+    guid baf66488-202f-5d51-b05e-18606c46b808
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Devices.Adc.AdcController
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVectorView[AdcController]]
+    guid 7c4038c8-d920-53c7-a5d6-a976070d7637
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Devices.Adc.IAdcChannel
+    guid 040bf414-2588-4a56-abef-73a260acc60a
+
+interface Windows.Devices.Adc.IAdcController
+    guid 2a76e4b0-a896-4219-86b6-ea8cdce98f56
+
+interface Windows.Devices.Adc.IAdcControllerStatics
+    guid cce98e0c-01f8-4891-bc3b-be53ef279ca4
+
+interface Windows.Devices.Adc.IAdcControllerStatics2
+    guid a2b93b1d-977b-4f5a-a5fe-a6abaffe6484
+
+interface Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[AdcController]
+    guid 69420262-35c9-583f-a40e-c2694562c9e2
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Devices.Adc.AdcController
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Adc.AdcController> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Devices.Adc.AdcController> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Devices.Adc.AdcController> shape=4 reverse=62 role=get_results
+            out class type=Windows.Devices.Adc.AdcController return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVectorView[AdcController]]
+    guid 1b0cddfb-d255-5a93-bcb9-de2047a3e4f3
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56})))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController>> shape=4 reverse=62 role=get_results
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> return
+
+interface Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.AdcController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[AdcController]
+    guid 4e478aad-4861-5758-b64b-5b4f28d8f86e
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Devices.Adc.AdcController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.AdcController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[AdcController]
+    guid a10b62c1-a014-5335-8867-747fcab16005
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Devices.Adc.AdcController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> shape=4 reverse=22 role=current
+            out class type=Windows.Devices.Adc.AdcController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Devices.Adc.AdcController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[AdcController]
+    guid 27547dc1-376e-5ce4-a246-34f210c8443c
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Devices.Adc.AdcController;{2a76e4b0-a896-4219-86b6-ea8cdce98f56}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.AdcController>
+    argument Windows.Devices.Adc.AdcController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Devices.Adc.AdcController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Devices.Adc.AdcController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Devices.Adc.AdcController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Devices.Adc.AdcController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Devices.Adc.AdcController> shape=117 reverse=66 role=index_of
+            in class type=Windows.Devices.Adc.AdcController name=value
+            out uint32 name=index
+            out boolean return
+
+interface Windows.Devices.Adc.Provider.IAdcProvider external
+    py winrt.windows.devices.adc.provider._IAdcProvider
+    guid 28953668-9359-4c57-bc88-e275e81638c9
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56

@@ -1,9 +1,9 @@
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.11"
 # dependencies = [
 #   "comtypes",
 #   "rich",
-#   "winrt-runtime>=3.2",
+#   "winrt-runtime>=4",
 #   "winrt-Windows.Data.Xml.Dom",
 #   "winrt-Windows.Foundation",
 #   "winrt-Windows.Foundation.Collections",
@@ -47,14 +47,14 @@ from winrt.windows.ui.notifications import (
 # with a Windows message loop.
 sys.coinit_flags = 0  # type: ignore
 
-from comtypes import (  # noqa: E402
+from comtypes import (  # noqa: E402  # pyright: ignore[reportMissingTypeStubs]
     CLSCTX_LOCAL_SERVER,
-    COMMETHOD,
+    COMMETHOD,  # pyright: ignore[reportUnknownVariableType]
     GUID,
     COMObject,
     IUnknown,
 )
-from comtypes.server.localserver import (  # noqa: E402
+from comtypes.server.localserver import (  # noqa: E402  # pyright: ignore[reportMissingTypeStubs]
     REGCLS_MULTIPLEUSE,
     ClassFactory,
     run as run_local_server,
@@ -133,7 +133,7 @@ class NotificationActivationHandler(COMObject):
         self,
         appUserModelId: str,
         invokedArgs: str,
-        data: "ctypes._Pointer[NOTIFICATION_USER_INPUT_DATA]",
+        data: "ctypes._Pointer[NOTIFICATION_USER_INPUT_DATA]",  # pyright: ignore[reportPrivateUsage]
         count: int,
     ):
         try:
@@ -210,7 +210,7 @@ def remove_registry_keys():
 
 def show_toast():
     manager = ToastNotificationManager.get_default()
-    toaster = manager.create_toast_notifier_with_id(APP_USER_MODULE_ID)
+    toaster = manager.create_toast_notifier(APP_USER_MODULE_ID)
 
     # https://learn.microsoft.com/en-us/uwp/schemas/tiles/toastschema/schema-root
     xml = XmlDocument()
@@ -278,7 +278,7 @@ def interactive_prompt():
 
 def uninstall():
     manager = ToastNotificationManager.get_default()
-    notifier = manager.create_toast_notifier_with_id(APP_USER_MODULE_ID)
+    notifier = manager.create_toast_notifier(APP_USER_MODULE_ID)
 
     # Remove any scheduled notifications that haven't been shown yet. Do
     # this first to avoid race condition with clearing history.
@@ -286,7 +286,7 @@ def uninstall():
         notifier.remove_from_schedule(n)
 
     # Remove any notifications that might currently exist.
-    manager.history.clear_with_id(APP_USER_MODULE_ID)
+    manager.history.clear(APP_USER_MODULE_ID)
 
     remove_registry_keys()
 

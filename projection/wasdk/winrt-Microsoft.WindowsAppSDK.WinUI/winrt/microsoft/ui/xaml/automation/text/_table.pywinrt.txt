@@ -1,0 +1,20 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Microsoft.UI.Xaml.Automation.Text
+
+enum Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint python_type
+    py TextPatternRangeEndpoint
+    signature enum(Microsoft.UI.Xaml.Automation.Text.TextPatternRangeEndpoint;i4)
+    constant START 0
+    constant END 1
+
+enum Microsoft.UI.Xaml.Automation.Text.TextUnit python_type
+    py TextUnit
+    signature enum(Microsoft.UI.Xaml.Automation.Text.TextUnit;i4)
+    constant CHARACTER 0
+    constant FORMAT 1
+    constant WORD 2
+    constant LINE 3
+    constant PARAGRAPH 4
+    constant PAGE 5
+    constant DOCUMENT 6

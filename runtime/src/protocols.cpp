@@ -1,0 +1,1794 @@
+// The Python protocols a projected type implements.
+//
+// Every slot here is the same two steps: take the member whose role in the
+// table says it stands for this operation, and call it. What makes that worth
+// a file of its own is that the mapping from a Python operation to a WinRT
+// member is a convention rather than anything either side writes down - a
+// Python mapping's __getitem__ is IMap<K, V>::Lookup, and raises KeyError
+// where WinRT fails with E_BOUNDS - and that convention used to be spread over
+// the generated code of every collection type in the projection.
+
+#include <Python.h>
+
+#include <pywinrt/base.h>
+
+#include "_winrt_buffer.h"
+#include "arrays.h"
+#include "async.h"
+#include "interp.h"
+#include "module_state.h"
+#include "objects.h"
+#include "protocols.h"
+#include "runtime.h"
+#include "types.h"
+
+namespace py::interp
+{
+    namespace
+    {
+        /**
+         * What the table built for @p self, which is where the members behind
+         * its protocol slots are.
+         */
+        type_entry* entry_of(PyObject* self) noexcept
+        {
+            auto const info = find_type_entry(Py_TYPE(self));
+            if (!info)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' is not a projected type",
+                    Py_TYPE(self)->tp_name);
+            }
+
+            return info;
+        }
+
+        /**
+         * Calls the member behind a protocol slot.
+         *
+         * @param member The member the type entry named, which is @c nullptr
+         * when the type does not have one, as a read-only collection has no
+         * SetAt.
+         */
+        PyObject* call_protocol(
+            member_desc* member,
+            char const* operation,
+            PyObject* self,
+            PyObject* const* args,
+            Py_ssize_t nargs) noexcept
+        {
+            if (!member)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' does not support %s",
+                    Py_TYPE(self)->tp_name,
+                    operation);
+                return nullptr;
+            }
+
+            auto const overload = select_overload(*member, nargs);
+            if (!overload)
+            {
+                return nullptr;
+            }
+
+            return call_member(*member, *overload, abi_of(self), args, nargs);
+        }
+
+        /**
+         * Takes the pending exception if it is the E_BOUNDS by which WinRT
+         * reports a key or a position the collection does not have.
+         *
+         * That is an OSError by the time it gets here. Anything else really
+         * did fail and is left pending.
+         *
+         * @returns Whether it was E_BOUNDS, in which case no exception is left
+         * pending.
+         */
+        bool take_out_of_bounds() noexcept
+        {
+            if (!PyErr_ExceptionMatches(PyExc_OSError))
+            {
+                return false;
+            }
+
+            pyobj_handle raised{take_raised_exception()};
+
+            pyobj_handle winerror{PyObject_GetAttrString(raised.get(), "winerror")};
+            if (!winerror)
+            {
+                PyErr_Clear();
+            }
+
+            auto const hresult = winerror ? PyLong_AsLong(winerror.get()) : 0;
+
+            if (hresult == winrt::impl::error_out_of_bounds)
+            {
+                return true;
+            }
+
+            restore_raised_exception(raised.detach());
+
+            return false;
+        }
+
+        /**
+         * Replaces the pending exception with the KeyError that a Python
+         * mapping raises for a key it does not have, if it is WinRT's way of
+         * saying so.
+         */
+        void set_key_error(PyObject* key) noexcept
+        {
+            if (take_out_of_bounds())
+            {
+                PyErr_SetObject(PyExc_KeyError, key);
+            }
+        }
+
+        /**
+         * Replaces the pending exception with the IndexError that a Python
+         * sequence raises for a position it does not have, if it is WinRT's
+         * way of saying so.
+         */
+        void set_index_error() noexcept
+        {
+            if (take_out_of_bounds())
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+            }
+        }
+
+        // ----- sequences --------------------------------------------------
+
+        Py_ssize_t protocol_length(PyObject* self) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return -1;
+            }
+
+            pyobj_handle size{
+                call_protocol(info->protocol.size, "len()", self, nullptr, 0)};
+            if (!size)
+            {
+                return -1;
+            }
+
+            return PyLong_AsSsize_t(size.get());
+        }
+
+        PyObject* sequence_item(PyObject* self, Py_ssize_t index) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            // A WinRT vector counts its elements in a uint32_t, so there is
+            // nothing to ask it for outside that range. CPython has already
+            // added the length to a negative index given to this slot, and
+            // what is still negative is before the first element.
+            if (index < 0)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return nullptr;
+            }
+
+            if (static_cast<uint64_t>(index) > UINT32_MAX)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return nullptr;
+            }
+
+            // An index this slot was given as a number goes to GetAt() as
+            // one; a GetAt() the direct path does not describe keeps whatever
+            // the ordinary path makes of it.
+            bool direct{};
+
+            auto* const direct_item = call_indexed(
+                info->protocol.get_at,
+                abi_of(self),
+                static_cast<uint32_t>(index),
+                direct);
+
+            if (direct)
+            {
+                if (!direct_item)
+                {
+                    set_index_error();
+                }
+
+                return direct_item;
+            }
+
+            pyobj_handle position{PyLong_FromSsize_t(index)};
+            if (!position)
+            {
+                return nullptr;
+            }
+
+            PyObject* args[] = {position.get()};
+
+            pyobj_handle item{
+                call_protocol(info->protocol.get_at, "indexing", self, args, 1)};
+            if (!item)
+            {
+                set_index_error();
+                return nullptr;
+            }
+
+            return item.detach();
+        }
+
+        /**
+         * The elements a slice names, which a WinRT vector reads with GetMany
+         * in one call into an array the caller lends it.
+         *
+         * The answer is that array - a winrt.system.Array rather than a list -
+         * which is what a slice of a projected vector has always been.
+         */
+        PyObject* sequence_slice(
+            type_entry& info, PyObject* self, PyObject* key) noexcept
+        {
+            if (!info.protocol.get_many)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' does not support slicing",
+                    Py_TYPE(self)->tp_name);
+                return nullptr;
+            }
+
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return nullptr;
+            }
+
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+            Py_ssize_t length{};
+
+            if (PySlice_GetIndicesEx(key, size, &start, &stop, &step, &length) < 0)
+            {
+                return nullptr;
+            }
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return nullptr;
+            }
+
+            auto const overload = select_overload(*info.protocol.get_many, 2);
+            if (!overload)
+            {
+                return nullptr;
+            }
+
+            // The elements parameter is the one the caller lends, and its
+            // descriptor is what says what the array holds.
+            arg_desc* elements{};
+
+            for (uint16_t i = 0; i < overload->arg_count; i++)
+            {
+                if (overload->args[i].category == table::param_category::fill_array)
+                {
+                    elements = &overload->args[i];
+                    break;
+                }
+            }
+
+            if (!elements)
+            {
+                PyErr_SetString(
+                    PyExc_TypeError, "GetMany does not take an array to fill");
+                return nullptr;
+            }
+
+            pyobj_handle items{new_array(
+                *info.protocol.get_many->owner,
+                *elements,
+                static_cast<uint32_t>(length))};
+            if (!items)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle first{PyLong_FromSsize_t(start)};
+            if (!first)
+            {
+                return nullptr;
+            }
+
+            PyObject* args[] = {first.get(), items.get()};
+
+            pyobj_handle count{
+                call_protocol(info.protocol.get_many, "slicing", self, args, 2)};
+            if (!count)
+            {
+                return nullptr;
+            }
+
+            auto const filled = PyLong_AsSsize_t(count.get());
+            if (filled == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            if (filled != length)
+            {
+                PyErr_Format(
+                    PyExc_RuntimeError,
+                    "GetMany filled %zd of the %zd elements the slice names",
+                    filled,
+                    length);
+                return nullptr;
+            }
+
+            return items.detach();
+        }
+
+        /**
+         * The position that an index given to a mapping slot of a sequence
+         * names.
+         *
+         * CPython counts a negative index from the end only for the sequence
+         * slots, and the mapping slots, which also take a slice, are given the
+         * key as it was written.
+         *
+         * @returns Whether there is a position, which is still negative for an
+         * index before the first element.
+         */
+        bool sequence_position(
+            PyObject* self, PyObject* key, Py_ssize_t& position) noexcept
+        {
+            if (!PyIndex_Check(key))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "indices must be integers or slices, not '%s'",
+                    Py_TYPE(key)->tp_name);
+                return false;
+            }
+
+            pyobj_handle index{PyNumber_Index(key)};
+            if (!index)
+            {
+                return false;
+            }
+
+            position = PyNumber_AsSsize_t(index.get(), PyExc_IndexError);
+            if (position == -1 && PyErr_Occurred())
+            {
+                return false;
+            }
+
+            if (position < 0)
+            {
+                auto const size = protocol_length(self);
+                if (size == -1)
+                {
+                    return false;
+                }
+
+                position += size;
+            }
+
+            return true;
+        }
+
+        /**
+         * __getitem__ of a sequence, which is an index or a slice.
+         */
+        PyObject* sequence_subscript(PyObject* self, PyObject* key) noexcept
+        {
+            if (PySlice_Check(key))
+            {
+                auto const info = entry_of(self);
+                if (!info)
+                {
+                    return nullptr;
+                }
+
+                return sequence_slice(*info, self, key);
+            }
+
+            Py_ssize_t position{};
+            if (!sequence_position(self, key, position))
+            {
+                return nullptr;
+            }
+
+            return sequence_item(self, position);
+        }
+
+        int sequence_assign(PyObject* self, Py_ssize_t index, PyObject* value) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return -1;
+            }
+
+            // As in sequence_item(), CPython has already added the length to
+            // a negative index, and a vector has no position outside the range
+            // of a uint32_t.
+            if (index < 0)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return -1;
+            }
+
+            if (static_cast<uint64_t>(index) > UINT32_MAX)
+            {
+                PyErr_SetString(PyExc_IndexError, "index out of range");
+                return -1;
+            }
+
+            pyobj_handle position{PyLong_FromSsize_t(index)};
+            if (!position)
+            {
+                return -1;
+            }
+
+            if (!value)
+            {
+                PyObject* args[] = {position.get()};
+                pyobj_handle removed{
+                    call_protocol(info->protocol.remove_at, "del", self, args, 1)};
+                if (!removed)
+                {
+                    set_index_error();
+                    return -1;
+                }
+
+                return 0;
+            }
+
+            PyObject* args[] = {position.get(), value};
+            pyobj_handle assigned{
+                call_protocol(info->protocol.set_at, "assignment", self, args, 2)};
+            if (!assigned)
+            {
+                set_index_error();
+                return -1;
+            }
+
+            return 0;
+        }
+
+        /**
+         * Replaces or deletes the elements a slice names, which a WinRT vector
+         * does one element at a time: SetAt() where the slice and the new
+         * elements overlap, then InsertAt() for the new elements left over or
+         * RemoveAt() for the old ones.
+         *
+         * As with a list, the new elements may be more or fewer than the slice
+         * names. Unlike a list, an element that fails to convert leaves the
+         * elements before it written.
+         *
+         * @param value What to assign, or @c nullptr to delete the elements.
+         */
+        int sequence_assign_slice(
+            type_entry& info, PyObject* self, PyObject* key, PyObject* value) noexcept
+        {
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return -1;
+            }
+
+            Py_ssize_t start{};
+            Py_ssize_t stop{};
+            Py_ssize_t step{};
+            Py_ssize_t length{};
+
+            if (PySlice_GetIndicesEx(key, size, &start, &stop, &step, &length) < 0)
+            {
+                return -1;
+            }
+
+            if (step != 1)
+            {
+                PyErr_SetString(
+                    PyExc_NotImplementedError,
+                    "slices with step other than 1 are not implemented");
+                return -1;
+            }
+
+            // All of it is read before any element changes, which is what
+            // makes assigning a vector, or a generator reading it, to a slice
+            // of itself work.
+            pyobj_handle items;
+            Py_ssize_t count{};
+
+            if (value)
+            {
+                items.attach(PySequence_List(value));
+                if (!items)
+                {
+                    return -1;
+                }
+
+                count = PyList_GET_SIZE(items.get());
+            }
+
+            auto const operation = value ? "slice assignment" : "slice deletion";
+
+            for (Py_ssize_t i = 0; i < count; i++)
+            {
+                pyobj_handle position{PyLong_FromSsize_t(start + i)};
+                if (!position)
+                {
+                    return -1;
+                }
+
+                PyObject* args[] = {position.get(), PyList_GET_ITEM(items.get(), i)};
+                pyobj_handle assigned{call_protocol(
+                    i < length ? info.protocol.set_at : info.protocol.insert_at,
+                    operation,
+                    self,
+                    args,
+                    2)};
+                if (!assigned)
+                {
+                    set_index_error();
+                    return -1;
+                }
+            }
+
+            // From the last, so that each removal moves fewer elements.
+            for (auto i = start + length - 1; i >= start + count; i--)
+            {
+                pyobj_handle position{PyLong_FromSsize_t(i)};
+                if (!position)
+                {
+                    return -1;
+                }
+
+                PyObject* args[] = {position.get()};
+                pyobj_handle removed{
+                    call_protocol(info.protocol.remove_at, operation, self, args, 1)};
+                if (!removed)
+                {
+                    set_index_error();
+                    return -1;
+                }
+            }
+
+            return 0;
+        }
+
+        /**
+         * __setitem__ and __delitem__ of a sequence, which take an index or a
+         * slice.
+         */
+        int sequence_assign_subscript(
+            PyObject* self, PyObject* key, PyObject* value) noexcept
+        {
+            if (PySlice_Check(key))
+            {
+                auto const info = entry_of(self);
+                if (!info)
+                {
+                    return -1;
+                }
+
+                return sequence_assign_slice(*info, self, key, value);
+            }
+
+            Py_ssize_t position{};
+            if (!sequence_position(self, key, position))
+            {
+                return -1;
+            }
+
+            return sequence_assign(self, position, value);
+        }
+
+        /**
+         * insert() of a mutable sequence, which InsertAt() does not do by
+         * itself: a negative position counts from the end, and one outside
+         * the sequence inserts at the nearer end.
+         */
+        PyObject* sequence_insert(
+            PyObject* self, PyObject* const* args, Py_ssize_t nargs) noexcept
+        {
+            if (nargs != 2)
+            {
+                PyErr_Format(
+                    PyExc_TypeError, "insert expected 2 arguments, got %zd", nargs);
+                return nullptr;
+            }
+
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle index{PyNumber_Index(args[0])};
+            if (!index)
+            {
+                return nullptr;
+            }
+
+            // With no exception to raise, an index too large for a Py_ssize_t
+            // comes back as the nearer limit, which the clamping below then
+            // brings inside the sequence.
+            auto position = PyNumber_AsSsize_t(index.get(), nullptr);
+            if (position == -1 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            auto const size = protocol_length(self);
+            if (size == -1)
+            {
+                return nullptr;
+            }
+
+            if (position < 0)
+            {
+                position += size;
+            }
+
+            if (position < 0)
+            {
+                position = 0;
+            }
+
+            if (position > size)
+            {
+                position = size;
+            }
+
+            pyobj_handle at{PyLong_FromSsize_t(position)};
+            if (!at)
+            {
+                return nullptr;
+            }
+
+            PyObject* insert_args[] = {at.get(), args[1]};
+            pyobj_handle inserted{call_protocol(
+                info->protocol.insert_at, "insert()", self, insert_args, 2)};
+            if (!inserted)
+            {
+                set_index_error();
+                return nullptr;
+            }
+
+            Py_RETURN_NONE;
+        }
+
+        PyMethodDef mutable_sequence_methods[]
+            = {{"insert",
+                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(sequence_insert)),
+                METH_FASTCALL,
+                nullptr},
+               {}};
+
+        // ----- mappings ---------------------------------------------------
+
+        PyObject* mapping_subscript(PyObject* self, PyObject* key) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            PyObject* args[] = {key};
+            pyobj_handle value{
+                call_protocol(info->protocol.lookup, "lookup", self, args, 1)};
+            if (!value)
+            {
+                set_key_error(key);
+                return nullptr;
+            }
+
+            return value.detach();
+        }
+
+        int mapping_assign(PyObject* self, PyObject* key, PyObject* value) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return -1;
+            }
+
+            if (!value)
+            {
+                PyObject* args[] = {key};
+                pyobj_handle removed{
+                    call_protocol(info->protocol.remove, "del", self, args, 1)};
+
+                if (!removed)
+                {
+                    set_key_error(key);
+                    return -1;
+                }
+
+                return 0;
+            }
+
+            PyObject* args[] = {key, value};
+            pyobj_handle inserted{
+                call_protocol(info->protocol.insert, "assignment", self, args, 2)};
+
+            return inserted ? 0 : -1;
+        }
+
+        int mapping_contains(PyObject* self, PyObject* key) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return -1;
+            }
+
+            PyObject* args[] = {key};
+            pyobj_handle answer{
+                call_protocol(info->protocol.has_key, "'in'", self, args, 1)};
+            if (!answer)
+            {
+                return -1;
+            }
+
+            return PyObject_IsTrue(answer.get());
+        }
+
+        // ----- iteration --------------------------------------------------
+
+        PyObject* iterable_iter(PyObject* self) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            return call_protocol(info->protocol.first, "iteration", self, nullptr, 0);
+        }
+
+        /**
+         * iter() of a mapping, which yields keys.
+         *
+         * WinRT iterates a map as key-value pairs, so what First() hands back
+         * is wrapped in the runtime's own iterator, which takes the key of each
+         * pair.
+         */
+        PyObject* mapping_iter(PyObject* self) noexcept
+        {
+            pyobj_handle pairs{iterable_iter(self)};
+            if (!pairs)
+            {
+                return nullptr;
+            }
+
+            return wrap_mapping_iter(pairs.get());
+        }
+
+        PyObject* iterator_iter(PyObject* self) noexcept
+        {
+            return Py_NewRef(self);
+        }
+
+        /**
+         * next() of an iterator.
+         *
+         * A WinRT iterator starts on its first item and is advanced after the
+         * item is taken, so the end of the iteration is HasCurrent saying no,
+         * which is a null return with no exception set.
+         */
+        PyObject* iterator_next(PyObject* self) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            // The three members take nothing and hand back one value each, so
+            // where the table describes them the way IIterator<T> always does
+            // they are called in one crossing rather than three. A table that
+            // describes them some other way is answered below.
+            bool fused{};
+
+            auto* const item = call_iterator_step(*info, abi_of(self), fused);
+
+            if (fused)
+            {
+                return item;
+            }
+
+            pyobj_handle has_current{call_protocol(
+                info->protocol.has_current, "iteration", self, nullptr, 0)};
+            if (!has_current)
+            {
+                return nullptr;
+            }
+
+            if (!PyObject_IsTrue(has_current.get()))
+            {
+                return nullptr;
+            }
+
+            pyobj_handle current{
+                call_protocol(info->protocol.current, "iteration", self, nullptr, 0)};
+            if (!current)
+            {
+                return nullptr;
+            }
+
+            pyobj_handle moved{
+                call_protocol(info->protocol.move_next, "iteration", self, nullptr, 0)};
+            if (!moved)
+            {
+                return nullptr;
+            }
+
+            return current.detach();
+        }
+
+        // ----- IStringable ------------------------------------------------
+
+        PyObject* stringable_str(PyObject* self) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            return call_protocol(info->protocol.to_string, "str()", self, nullptr, 0);
+        }
+
+        // ----- awaitables -------------------------------------------------
+
+        /// The argument buffer set_completed() passes the handler in.
+        constexpr size_t completed_buffer_size = sizeof(void*);
+
+        /**
+         * Hands an async object the completed handler that the waiter is
+         * about to wait on.
+         *
+         * The GIL is not held, so nothing here may touch Python: the argument
+         * is one interface pointer, which goes into the buffer by hand rather
+         * than through a conversion. Nor can it raise, so the setter was
+         * checked by can_set_completed() before the wait began.
+         */
+        int32_t set_completed(void* context, void* async, void* handler) noexcept
+        {
+            auto const member = static_cast<member_desc*>(context);
+            auto const overload = &member->overloads[member->count - 1];
+
+            winrt::com_ptr<::IUnknown> queried;
+
+            if (overload->iface)
+            {
+                void* iface{};
+                auto const hr = static_cast<::IUnknown*>(async)->QueryInterface(
+                    *static_cast<winrt::guid const*>(overload->iface), &iface);
+                if (hr != 0)
+                {
+                    return hr;
+                }
+
+                queried.attach(static_cast<::IUnknown*>(iface));
+            }
+
+            auto const instance
+                = queried ? queried.get() : static_cast<::IUnknown*>(async);
+
+            alignas(std::max_align_t) uint8_t args[completed_buffer_size]{};
+            WINRT_ASSERT(overload->args[0].offset + sizeof(handler) <= sizeof(args));
+            std::memcpy(args + overload->args[0].offset, &handler, sizeof(handler));
+
+            auto const vtable = *reinterpret_cast<void* const* const*>(instance);
+
+            return overload->shape->invoke(vtable[overload->slot], instance, args);
+        }
+
+        /**
+         * Whether the setter of @p completed is the call set_completed() makes:
+         * one delegate, in a buffer no larger than the one it passes.
+         *
+         * A table generated against a census with no trampoline for the
+         * setter's shape leaves it with none.
+         */
+        bool can_set_completed(member_desc const& completed) noexcept
+        {
+            auto const& setter = completed.overloads[completed.count - 1];
+
+            if (!setter.shape)
+            {
+                return false;
+            }
+
+            if (setter.arg_count != 1)
+            {
+                return false;
+            }
+
+            if (setter.args[0].code != table::type_code::delegate)
+            {
+                return false;
+            }
+
+            if (setter.args[0].category != table::param_category::in)
+            {
+                return false;
+            }
+
+            if (setter.shape->buffer_size > completed_buffer_size)
+            {
+                return false;
+            }
+
+            return setter.args[0].offset + sizeof(void*) <= setter.shape->buffer_size;
+        }
+
+        /**
+         * The IID of the completed handler of an async object, which is the
+         * type of the value its Completed property takes.
+         */
+        void const* completed_handler_iid(member_desc const& completed) noexcept
+        {
+            auto const& setter = completed.overloads[completed.count - 1];
+            auto const type = setter.args[0].type;
+
+            if (type == table::no_ref)
+            {
+                return nullptr;
+            }
+
+            return completed.owner->table->type(type).guid();
+        }
+
+        /**
+         * Waits for @p self to finish and returns the status of the wait.
+         * @p operation is the call that waits, which an error names.
+         *
+         * @returns @c false with a Python error set if the wait could not be
+         * made at all.
+         */
+        bool wait_for_async(
+            type_entry const& info,
+            PyObject* self,
+            char const* operation,
+            uint32_t timeout_ms,
+            int32_t& status) noexcept
+        {
+            auto const completed = info.protocol.completed;
+            if (!completed)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' cannot be waited for",
+                    Py_TYPE(self)->tp_name);
+                return false;
+            }
+
+            auto const iid = completed_handler_iid(*completed);
+            if (!iid)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "the table names no completed handler for '%s'",
+                    Py_TYPE(self)->tp_name);
+                return false;
+            }
+
+            if (!can_set_completed(*completed))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' cannot be waited for, because this winrt-runtime cannot "
+                    "call the setter of its Completed property",
+                    Py_TYPE(self)->tp_name);
+                return false;
+            }
+
+            if (set_sta_blocking_wait_error(operation))
+            {
+                return false;
+            }
+
+            auto const abi = abi_of(self);
+
+            {
+                auto _gil = release_gil();
+                status = async_wait_for(abi, timeout_ms, iid, set_completed, completed);
+            }
+
+            return true;
+        }
+
+        PyObject* async_get(PyObject* self, PyObject* /*unused*/) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            int32_t status{};
+
+            if (!wait_for_async(*info, self, "get()", async_wait_forever, status))
+            {
+                return nullptr;
+            }
+
+            try
+            {
+                check_async_get(status);
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+
+            if (!info->protocol.get_results)
+            {
+                Py_RETURN_NONE;
+            }
+
+            return call_protocol(info->protocol.get_results, "get()", self, nullptr, 0);
+        }
+
+        PyObject* async_wait(PyObject* self, PyObject* arg) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            auto const timeout = PyFloat_AsDouble(arg);
+            if (timeout == -1.0 && PyErr_Occurred())
+            {
+                return nullptr;
+            }
+
+            int32_t status{};
+
+            if (!wait_for_async(
+                    *info, self, "wait()", async_timeout_ms(timeout), status))
+            {
+                return nullptr;
+            }
+
+            try
+            {
+                check_async_wait(status);
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return nullptr;
+            }
+
+            // The status is an AsyncStatus, and the member that reports one is
+            // the Status property, so its return value is what says which
+            // Python enum to build.
+            auto const reported = info->protocol.status;
+            if (!reported)
+            {
+                return PyLong_FromLong(status);
+            }
+
+            auto& arg_of_status = reported->overloads[0].args[0];
+
+            return convert_out(*reported->owner, arg_of_status, &status);
+        }
+
+        PyMethodDef async_methods[]
+            = {{"get", async_get, METH_NOARGS, nullptr},
+               {"wait", async_wait, METH_O, nullptr},
+               {}};
+
+        // ----- closeables -------------------------------------------------
+
+        PyObject* closeable_enter(PyObject* self, PyObject* /*unused*/) noexcept
+        {
+            return Py_NewRef(self);
+        }
+
+        PyObject* closeable_exit(
+            PyObject* self, PyObject* const* /*args*/, Py_ssize_t /*nargs*/) noexcept
+        {
+            auto const info = entry_of(self);
+            if (!info)
+            {
+                return nullptr;
+            }
+
+            // The three arguments say how the block ended, and Close takes the
+            // object down either way, so none of them is read. Returning None
+            // rather than a true value is what lets an exception propagate.
+            pyobj_handle closed{call_protocol(
+                info->protocol.close,
+                "the context manager protocol",
+                self,
+                nullptr,
+                0)};
+            if (!closed)
+            {
+                return nullptr;
+            }
+
+            Py_RETURN_NONE;
+        }
+
+        PyMethodDef closeable_methods[]
+            = {{"__enter__", closeable_enter, METH_NOARGS, nullptr},
+               {"__exit__",
+                reinterpret_cast<PyCFunction>(reinterpret_cast<void*>(closeable_exit)),
+                METH_FASTCALL,
+                nullptr},
+               {}};
+
+        // ----- buffers ----------------------------------------------------
+
+        /**
+         * Fills in @p view over @p size bytes at @p data, which @p self owns.
+         *
+         * @param read_only The bytes belong to an object that promises never
+         * to change, so the view refuses a writer.
+         */
+        int fill_buffer_view(
+            PyObject* self,
+            Py_buffer* view,
+            int flags,
+            void* data,
+            uint32_t size,
+            bool read_only = false) noexcept
+        {
+            return PyBuffer_FillInfo(
+                view,
+                self,
+                data,
+                static_cast<Py_ssize_t>(size),
+                read_only ? 1 : 0,
+                flags);
+        }
+
+        /**
+         * The object @p self wraps, to be asked for the buffer interface a
+         * caller needs: a class wrapper holds its default interface, which
+         * need not be that one.
+         */
+        winrt::Windows::Foundation::IInspectable object_of(PyObject* self)
+        {
+            winrt::Windows::Foundation::IInspectable object;
+            winrt::copy_from_abi(object, abi_of(self));
+            return object;
+        }
+
+        /**
+         * __buffer__ of an IBuffer.
+         *
+         * This is the one protocol a table cannot describe. Where the bytes
+         * start comes from IBufferByteAccess, and from IMemoryBufferByteAccess
+         * for the other kind of buffer below - plain COM interfaces that the
+         * metadata does not mention, so no member and no role can stand for
+         * them. C++/WinRT holds both IIDs and uses them in data(), so both
+         * halves of a buffer are read through it rather than through the
+         * table, and all a type record says is which of the two shapes the
+         * type has.
+         */
+        int ibuffer_view(PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                auto const object = object_of(self);
+
+                uint8_t* data{};
+                uint32_t size{};
+                bool read_only{};
+
+                {
+                    auto _gil = release_gil();
+                    auto const buffer
+                        = object.as<winrt::Windows::Storage::Streams::IBuffer>();
+                    data = buffer.data();
+                    size = buffer.Length();
+                    read_only = is_read_only_python_buffer(buffer);
+                }
+
+                return fill_buffer_view(self, view, flags, data, size, read_only);
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * The COM identity of the object @p abi points at, which every
+         * wrapper of it shares. Borrowed, since the caller's own reference
+         * keeps the object alive.
+         */
+        void* identity_of(void* abi)
+        {
+            winrt::com_ptr<::IUnknown> identity;
+
+            // IUnknown is answered by a proxy itself, so this is no call into
+            // another apartment.
+            winrt::check_hresult(
+                static_cast<::IUnknown*>(abi)->QueryInterface(
+                    winrt::guid_of<winrt::Windows::Foundation::IUnknown>(),
+                    identity.put_void()));
+
+            return identity.get();
+        }
+
+        /**
+         * Counts one more buffer exported from the object whose identity is
+         * @p identity.
+         */
+        void remember_export(void* identity)
+        {
+            auto const s = py::cpp::_winrt::get_module_state();
+            if (!s)
+            {
+                throw python_exception();
+            }
+
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            s->buffer_exports[identity]++;
+        }
+
+        /**
+         * Counts one buffer fewer exported from the object whose identity is
+         * @p identity.
+         */
+        void forget_export(void* identity) noexcept
+        {
+            auto const s = py::cpp::_winrt::try_get_module_state();
+            if (!s)
+            {
+                return;
+            }
+
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            auto const found = s->buffer_exports.find(identity);
+            if (found == s->buffer_exports.end())
+            {
+                return;
+            }
+
+            if (--found->second == 0)
+            {
+                s->buffer_exports.erase(found);
+            }
+        }
+
+        /**
+         * __buffer__ of an IMemoryBufferReference, whose length is its
+         * Capacity.
+         *
+         * Closing the reference frees the memory once its IMemoryBuffer is
+         * closed or released too, so each export is counted, and may_close()
+         * refuses to close the reference while one is outstanding. An IBuffer
+         * has no Close, and a view holds the object, so its exports need no
+         * count.
+         */
+        int memory_buffer_view(PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                auto const object = object_of(self);
+
+                uint8_t* data{};
+                uint32_t size{};
+
+                {
+                    auto _gil = release_gil();
+                    auto const reference
+                        = object
+                              .as<winrt::Windows::Foundation::IMemoryBufferReference>();
+                    data = reference.data();
+                    size = reference.Capacity();
+                }
+
+                auto const identity = identity_of(abi_of(self));
+                remember_export(identity);
+
+                if (fill_buffer_view(self, view, flags, data, size) < 0)
+                {
+                    forget_export(identity);
+                    return -1;
+                }
+
+                view->internal = identity;
+                return 0;
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * __release_buffer__ of an IMemoryBufferReference.
+         */
+        void memory_buffer_release(PyObject* /*self*/, Py_buffer* view) noexcept
+        {
+            forget_export(view->internal);
+        }
+
+        /**
+         * Closes and lets go of the reference @p abi, which an export of the
+         * IMemoryBuffer @p self created, without the GIL. A release cannot
+         * raise, so a failure to close is reported as unraisable.
+         */
+        void close_own_reference(PyObject* self, void* abi) noexcept
+        {
+            winrt::Windows::Foundation::IMemoryBufferReference reference{nullptr};
+            winrt::attach_abi(reference, abi);
+
+            winrt::hresult failure;
+
+            {
+                auto _gil = release_gil();
+
+                try
+                {
+                    reference.Close();
+                }
+                catch (...)
+                {
+                    failure = winrt::to_hresult();
+                }
+
+                reference = nullptr;
+            }
+
+            if (failure == 0)
+            {
+                return;
+            }
+
+            try
+            {
+                winrt::throw_hresult(failure);
+            }
+            catch (...)
+            {
+                to_PyErr();
+            }
+
+            PyErr_WriteUnraisable(self);
+        }
+
+        /**
+         * __buffer__ of an IMemoryBuffer.
+         *
+         * Its memory is reached through an IMemoryBufferReference, and closing
+         * one frees the memory once the buffer is closed or released too. So
+         * each export creates a reference that only the view can reach, and
+         * closes it when the view is released: the memory stays for as long
+         * as the view, whatever is done with the buffer meanwhile.
+         */
+        int memory_buffer_owner_view(
+            PyObject* self, Py_buffer* view, int flags) noexcept
+        {
+            try
+            {
+                auto const object = object_of(self);
+
+                winrt::Windows::Foundation::IMemoryBufferReference reference{nullptr};
+                uint8_t* data{};
+                uint32_t size{};
+
+                {
+                    auto _gil = release_gil();
+                    reference = object.as<winrt::Windows::Foundation::IMemoryBuffer>()
+                                    .CreateReference();
+                    data = reference.data();
+                    size = reference.Capacity();
+                }
+
+                auto const abi = winrt::detach_abi(reference);
+
+                if (fill_buffer_view(self, view, flags, data, size) < 0)
+                {
+                    close_own_reference(self, abi);
+                    return -1;
+                }
+
+                view->internal = abi;
+                return 0;
+            }
+            catch (...)
+            {
+                view->obj = nullptr;
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * __release_buffer__ of an IMemoryBuffer.
+         */
+        void memory_buffer_owner_release(PyObject* self, Py_buffer* view) noexcept
+        {
+            close_own_reference(self, view->internal);
+        }
+
+        /**
+         * len() of an IBuffer, which is the length of its buffer view.
+         */
+        Py_ssize_t ibuffer_length(PyObject* self) noexcept
+        {
+            try
+            {
+                auto const object = object_of(self);
+
+                auto _gil = release_gil();
+                return static_cast<Py_ssize_t>(
+                    object.as<winrt::Windows::Storage::Streams::IBuffer>().Length());
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * len() of an IMemoryBufferReference, which is the length of its
+         * buffer view.
+         */
+        Py_ssize_t memory_buffer_length(PyObject* self) noexcept
+        {
+            try
+            {
+                auto const object = object_of(self);
+
+                auto _gil = release_gil();
+                return static_cast<Py_ssize_t>(
+                    object.as<winrt::Windows::Foundation::IMemoryBufferReference>()
+                        .Capacity());
+            }
+            catch (...)
+            {
+                to_PyErr();
+                return -1;
+            }
+        }
+
+        /**
+         * Whether @p record says the type implements @p flag.
+         */
+        bool implements(table::type_view const& record, uint32_t flag) noexcept
+        {
+            return (record.flags() & flag) != 0;
+        }
+
+        /**
+         * Adds every method in a NULL terminated table to @p type.
+         */
+        bool add_methods(PyTypeObject* type, PyMethodDef* methods) noexcept
+        {
+            for (auto* method = methods; method->ml_name; method++)
+            {
+                pyobj_handle descriptor{PyDescr_NewMethod(type, method)};
+                if (!descriptor)
+                {
+                    return false;
+                }
+
+                if (PyObject_SetAttrString(
+                        reinterpret_cast<PyObject*>(type),
+                        method->ml_name,
+                        descriptor.get())
+                    == -1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    } // namespace
+
+    /**
+     * Works out which member stands for each Python operation.
+     *
+     * The table gives each member a role, so this is only a matter of sorting
+     * them: what makes GetAt the member behind v[i] is that IVector<T>
+     * declares it, and the generator is where that is known. A type reached
+     * through a class rather than through the interface itself has the same
+     * roles on its own members, because they are the same members.
+     */
+    void find_protocol_members(type_entry& entry) noexcept
+    {
+        for (uint16_t i = 0; i < entry.member_count; i++)
+        {
+            auto& member = entry.members[i];
+
+            for (uint16_t j = 0; j < member.count; j++)
+            {
+                switch (member.overloads[j].role)
+                {
+                case table::member_role::none:
+                // The members that only the other direction calls: what
+                // WinRT asks a Python list or dict standing in for a
+                // collection, which pycollections.cpp reads off the role
+                // itself rather than through a type's protocol.
+                case table::member_role::get_view:
+                case table::member_role::index_of:
+                case table::member_role::append:
+                case table::member_role::remove_at_end:
+                case table::member_role::clear:
+                case table::member_role::replace_all:
+                case table::member_role::split:
+                case table::member_role::pair_key:
+                case table::member_role::pair_value:
+                    continue;
+                case table::member_role::size:
+                    entry.protocol.size = &member;
+                    break;
+                case table::member_role::get_at:
+                    entry.protocol.get_at = &member;
+                    break;
+                case table::member_role::get_many:
+                    entry.protocol.get_many = &member;
+                    break;
+                case table::member_role::set_at:
+                    entry.protocol.set_at = &member;
+                    break;
+                case table::member_role::remove_at:
+                    entry.protocol.remove_at = &member;
+                    break;
+                case table::member_role::insert_at:
+                    entry.protocol.insert_at = &member;
+                    break;
+                case table::member_role::first:
+                    entry.protocol.first = &member;
+                    break;
+                case table::member_role::current:
+                    entry.protocol.current = &member;
+                    break;
+                case table::member_role::has_current:
+                    entry.protocol.has_current = &member;
+                    break;
+                case table::member_role::move_next:
+                    entry.protocol.move_next = &member;
+                    break;
+                case table::member_role::lookup:
+                    entry.protocol.lookup = &member;
+                    break;
+                case table::member_role::has_key:
+                    entry.protocol.has_key = &member;
+                    break;
+                case table::member_role::insert:
+                    entry.protocol.insert = &member;
+                    break;
+                case table::member_role::remove:
+                    entry.protocol.remove = &member;
+                    break;
+                case table::member_role::status:
+                    entry.protocol.status = &member;
+                    break;
+                case table::member_role::completed:
+                    entry.protocol.completed = &member;
+                    break;
+                case table::member_role::get_results:
+                    entry.protocol.get_results = &member;
+                    break;
+                case table::member_role::to_string:
+                    entry.protocol.to_string = &member;
+                    break;
+                case table::member_role::value:
+                    entry.protocol.value = &member;
+                    break;
+                case table::member_role::close:
+                    entry.protocol.close = &member;
+                    break;
+                }
+            }
+        }
+    }
+
+    /**
+     * Appends the type slots of the protocols @p record says the type
+     * implements, which a type spec needs before the type exists.
+     */
+    void add_protocol_slots(
+        table::type_view const& record, std::vector<PyType_Slot>& slots)
+    {
+        if (implements(record, table::type_flags::mapping))
+        {
+            slots.push_back({Py_mp_length, reinterpret_cast<void*>(protocol_length)});
+            slots.push_back(
+                {Py_mp_subscript, reinterpret_cast<void*>(mapping_subscript)});
+            slots.push_back(
+                {Py_sq_contains, reinterpret_cast<void*>(mapping_contains)});
+            slots.push_back({Py_tp_iter, reinterpret_cast<void*>(mapping_iter)});
+
+            if (implements(record, table::type_flags::mutable_mapping))
+            {
+                slots.push_back(
+                    {Py_mp_ass_subscript, reinterpret_cast<void*>(mapping_assign)});
+            }
+        }
+        else if (implements(record, table::type_flags::sequence))
+        {
+            slots.push_back({Py_sq_length, reinterpret_cast<void*>(protocol_length)});
+            slots.push_back({Py_sq_item, reinterpret_cast<void*>(sequence_item)});
+            slots.push_back(
+                {Py_mp_subscript, reinterpret_cast<void*>(sequence_subscript)});
+            slots.push_back({Py_tp_iter, reinterpret_cast<void*>(iterable_iter)});
+
+            if (implements(record, table::type_flags::mutable_sequence))
+            {
+                slots.push_back(
+                    {Py_sq_ass_item, reinterpret_cast<void*>(sequence_assign)});
+                slots.push_back(
+                    {Py_mp_ass_subscript,
+                     reinterpret_cast<void*>(sequence_assign_subscript)});
+            }
+        }
+        else if (implements(record, table::type_flags::iterator))
+        {
+            slots.push_back({Py_tp_iter, reinterpret_cast<void*>(iterator_iter)});
+            slots.push_back({Py_tp_iternext, reinterpret_cast<void*>(iterator_next)});
+        }
+        else if (implements(record, table::type_flags::iterable))
+        {
+            slots.push_back({Py_tp_iter, reinterpret_cast<void*>(iterable_iter)});
+        }
+
+        if (implements(record, table::type_flags::stringable))
+        {
+            slots.push_back({Py_tp_str, reinterpret_cast<void*>(stringable_str)});
+        }
+
+        if (implements(record, table::type_flags::awaitable))
+        {
+            slots.push_back({Py_am_await, reinterpret_cast<void*>(await_async)});
+        }
+
+        if (implements(record, table::type_flags::buffer))
+        {
+            // Which of the two the type is decides both where the bytes
+            // come from and what says how many there are, so it picks the
+            // slots rather than being asked again on every call.
+            auto const ibuffer = implements(record, table::type_flags::buffer_length);
+
+            slots.push_back(
+                {Py_bf_getbuffer,
+                 ibuffer ? reinterpret_cast<void*>(ibuffer_view)
+                         : reinterpret_cast<void*>(memory_buffer_view)});
+
+            if (!ibuffer)
+            {
+                slots.push_back(
+                    {Py_bf_releasebuffer,
+                     reinterpret_cast<void*>(memory_buffer_release)});
+            }
+
+            // A collection's len() counts its elements, which it has from the
+            // collection protocol above.
+            if (!implements(record, table::type_flags::mapping)
+                && !implements(record, table::type_flags::sequence))
+            {
+                slots.push_back(
+                    {Py_sq_length,
+                     ibuffer ? reinterpret_cast<void*>(ibuffer_length)
+                             : reinterpret_cast<void*>(memory_buffer_length)});
+            }
+        }
+        else if (implements(record, table::type_flags::memory_buffer))
+        {
+            slots.push_back(
+                {Py_bf_getbuffer, reinterpret_cast<void*>(memory_buffer_owner_view)});
+            slots.push_back(
+                {Py_bf_releasebuffer,
+                 reinterpret_cast<void*>(memory_buffer_owner_release)});
+        }
+    }
+
+    /**
+     * Whether the object @p abi points at may be closed, which it may not
+     * while a buffer of it is exported: the buffer points at memory that
+     * closing it can free. So, as closing an mmap does, closing it raises
+     * BufferError, whichever wrapper of the object the close is called on.
+     *
+     * @returns @c false with BufferError set when it may not be closed.
+     */
+    bool may_close(void* abi) noexcept
+    {
+        auto const s = py::cpp::_winrt::try_get_module_state();
+        if (!s)
+        {
+            return true;
+        }
+
+        auto exported = false;
+
+        try
+        {
+            py::cpp::_winrt::state_guard guard{s->cache_lock};
+            if (s->buffer_exports.empty())
+            {
+                return true;
+            }
+
+            exported = s->buffer_exports.contains(identity_of(abi));
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return false;
+        }
+
+        if (exported)
+        {
+            PyErr_SetString(
+                PyExc_BufferError,
+                "cannot close an IMemoryBufferReference while a buffer of it is "
+                "exported");
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Sets the attributes of the protocols that are methods rather than slots:
+     * insert() on a mutable sequence, get() and wait() on an awaitable, and the
+     * context manager that closes an IClosable at the end of a with statement.
+     */
+    bool bind_protocol_methods(table::type_view const& record, PyTypeObject* type)
+    {
+        // A mapping takes precedence over a sequence, as in
+        // add_protocol_slots().
+        if (!implements(record, table::type_flags::mapping))
+        {
+            if (implements(record, table::type_flags::mutable_sequence))
+            {
+                if (!add_methods(type, mutable_sequence_methods))
+                {
+                    return false;
+                }
+            }
+        }
+
+        if (implements(record, table::type_flags::awaitable))
+        {
+            if (!add_methods(type, async_methods))
+            {
+                return false;
+            }
+        }
+
+        if (implements(record, table::type_flags::closeable))
+        {
+            if (!add_methods(type, closeable_methods))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+} // namespace py::interp

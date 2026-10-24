@@ -1,0 +1,30 @@
+version: 2
+updates:
+  # The workflows pin every action to a commit SHA, with the version in a
+  # trailing comment. That makes a run reproducible, but it also freezes the
+  # pins, so something has to unfreeze them: dependabot bumps the SHA and
+  # rewrites the comment to match.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    # one pull request a month for all of them, rather than one per action
+    groups:
+      actions:
+        patterns:
+          - "*"
+  # The build tools that the release workflows and Read the Docs install are
+  # pinned too, so that a release is built with what was tested, and a monthly
+  # pull request of their own unfreezes them. Only these two directories are
+  # read, so the requirements.txt that each package's packaging is generated
+  # with is left to scripts/generate-pyproject.py.
+  - package-ecosystem: pip
+    directories:
+      - /
+      - /docs
+    schedule:
+      interval: monthly
+    groups:
+      build-tools:
+        patterns:
+          - "*"

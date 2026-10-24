@@ -1,0 +1,142 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.ApplicationModel.Calls.Provider
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[Boolean]
+    guid c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};b1)
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument System.Boolean
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+interface Windows.Foundation.IAsyncOperation<System.Boolean> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[Boolean]
+    guid cdb5efb3-5788-509d-9be1-71ccb8a3362a
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};b1)
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument System.Boolean
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<System.Boolean> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<System.Boolean> shape=4 reverse=62 role=get_results
+            out boolean return
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    guid 20613479-0ef9-4454-871c-afb66a14b6a5
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2
+    guid 04c7e980-9ac2-4768-b536-b68da4957d02
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3
+    guid 49330fb4-d1a7-43a2-aeee-c07b6dbaf068
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics
+    guid ccfc5a0a-9af7-6149-39d0-e076fcce1395
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
+    guid 8bf3ee3f-40f4-4380-8c7c-aea2c9b8dd7a
+
+interface Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3
+    guid 2ed69764-a6e3-50f0-b76a-d67cb39bdfde
+
+class Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin activatable python_type
+    py PhoneCallOrigin
+    signature rc(Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin;{20613479-0ef9-4454-871c-afb66a14b6a5})
+    default Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2
+    requires Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property location
+        get get_Location slot=10 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            out string return
+        put put_Location slot=11 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            in string name=value
+    property category_description
+        get get_CategoryDescription slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            out string return
+        put put_CategoryDescription slot=9 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            in string name=value
+    property category
+        get get_Category slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            out string return
+        put put_Category slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin shape=4 deprecated
+            in string name=value
+    property display_name
+        get get_DisplayName slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2 shape=4 deprecated
+            out string return
+        put put_DisplayName slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin2 shape=4 deprecated
+            in string name=value
+    property display_picture
+        get get_DisplayPicture slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3 shape=4 deprecated
+            out class type=Windows.Storage.StorageFile return
+        put put_DisplayPicture slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOrigin3 shape=4 deprecated
+            in class type=Windows.Storage.StorageFile name=value
+
+class Windows.ApplicationModel.Calls.Provider.PhoneCallOriginManager static python_type
+    py PhoneCallOriginManager
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2
+    factory Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3
+    property is_current_app_active_call_origin_app static
+        get get_IsCurrentAppActiveCallOriginApp slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=4 static deprecated
+            out boolean return
+    property is_supported static
+        get get_IsSupported slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics3 shape=4 static deprecated
+            out boolean return
+    method request_set_as_active_call_origin_app_async static
+        method RequestSetAsActiveCallOriginAppAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics2 shape=4 static deprecated
+            out parameterized type=Windows.Foundation.IAsyncOperation<System.Boolean> return
+    method set_call_origin static
+        method SetCallOrigin slot=8 inputs=2 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=94 static deprecated
+            in guid name=requestId
+            in class type=Windows.ApplicationModel.Calls.Provider.PhoneCallOrigin name=callOrigin
+    method show_phone_call_origin_settings_ui static
+        method ShowPhoneCallOriginSettingsUI slot=7 inputs=0 outputs=0 declaring=Windows.ApplicationModel.Calls.Provider.IPhoneCallOriginManagerStatics shape=0 static deprecated
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler external parameterized
+    py winrt.windows.foundation.AsyncOperationCompletedHandler
+    guid fcdcf02c-e5d8-4478-915a-4d90b74b83a5
+
+enum Windows.Foundation.AsyncStatus external
+    py winrt.windows.foundation.AsyncStatus
+
+struct Windows.Foundation.HResult external
+    py winrt.windows.foundation.HResult
+
+interface Windows.Foundation.IAsyncInfo external
+    py winrt.windows.foundation._IAsyncInfo
+    guid 00000036-0000-0000-c000-000000000046
+
+interface Windows.Foundation.IAsyncOperation external parameterized
+    py winrt.windows.foundation._IAsyncOperation
+    guid 9fc2b0bb-e446-44e2-aa61-9cab8f636af2
+
+class Windows.Storage.StorageFile external
+    py winrt.windows.storage.StorageFile

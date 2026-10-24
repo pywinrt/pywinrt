@@ -24,16 +24,19 @@ Once Nuget is installed, run:
 
 ### For linting
 
-- Black
+- Ruff
+- mypy
+- pyright
 - ClangFormat
+- CSharpier (`dotnet tool restore`)
 
 ## Building PyWinRT.exe
 
-Building this tool requires .NET 8.0 SDK.
+Building this tool requires .NET 10.0 SDK.
 
     dotnet build PyWinRT -c Release
 
-The resulting executable will be `PyWinRT\bin\Release\net8.0\PyWinRT.exe`.
+The resulting executable will be `PyWinRT\bin\Release\net10.0\PyWinRT.exe`.
 
 
 ## Regenerating the projection
@@ -42,19 +45,51 @@ Once a local build of `PyWinRT.exe` is built, it can be used to update
 the generated files of the projection. This requires that the Windows SDK is
 installed either via the Visual Studio Installer or standalone.
 
-    py .\scripts\generate-python.py
+    py .\scripts\generate-pywinrt.py
+
+The generator also merges the census of ABI call shapes it takes while it runs
+into `runtime/src/shapes.json`, and writes the trampolines that `winrt-runtime`
+compiles from it to `runtime/src/shapes-generated.h`. Both are committed, and a
+run may only append to the census; `runtime/src/table-format.md` describes the
+table format and the census.
 
 Some additional files are also generated instead by:
 
     py .\scripts\generate-pyproject.py
 
+## Moving the Windows App SDK pin
+
+The Windows App SDK is a metapackage over component packages that are
+published separately, and `.config/_tools.json` records the version of each
+one. Do not edit those by hand: Microsoft's own build refuses a project that
+references a set of components it did not ship together, so the set belongs to
+a release rather than to us. Run
+
+    py .\scripts\resolve-wasdk.py
+
+which resolves the newest stable release, takes the component set from its
+nuspec, checks it against the list the Runtime component carries, and writes
+the result. Then fetch and regenerate as above.
+
+## Generating the C++/WinRT headers
+
+`winrt-runtime` and `winrt-Microsoft.UI.Interop` are the only things here that
+are compiled against C++/WinRT; the other interop modules are written against
+raw COM. The headers are generated from the NuGet packages and committed, like
+the rest of the generated tree, so this has to be run whenever
+`.config/_tools.json` changes or a module starts including another namespace:
+
+    py .\scripts\generate-cppwinrt.py
+
+Each package carries the headers it includes. `winrt-runtime` carries what
+`pywinrt/base.h` includes, in `runtime/src/include/cppwinrt`, and an interop
+module carries the whole closure of the namespaces it includes in a `cppwinrt`
+directory of its own. Either way they are found at the same place whether the
+module is built here or from its source distribution, and neither is installed.
+
 ## Regenerating other upstream code
 
 Normally this is not needed unless we need to pull in changes from upstream.
-
-If the CppWinRT version is updated, run:
-
-    py .\scripts\generate-cppwinrt.py
 
 If the pythoncapi compat headers are updated, run:
 
@@ -64,25 +99,112 @@ If the pythoncapi compat headers are updated, run:
 
 In a Visual Studio command prompt, run:
 
-    cmake -S projection -B _build/test-projection -G Ninja -DPYWINRT_FULL_PROJECTION=OFF
-    cmake --build _build/test-projection
-    cmake --install _build/test-projection --prefix _build/test-install
+    cmake -S . -B _build/projection -G Ninja -DPython3_EXECUTABLE=C:\path\to\python_d.exe
+    cmake --build _build/projection
+    cmake --install _build/projection --prefix _install/projection
 
-Note: if using MINGW, add the following to the first command:
+Name the interpreter the tests will run under, as CI does: without
+`Python3_EXECUTABLE`, CMake builds against the first Python it finds, which may
+be another version, or one installed without the debug libraries that a debug
+build links against. `python_d.exe` comes from the installer on python.org
+with "Download debug binaries" selected (Modify adds them to an existing
+install); the Python install manager's runtimes have no debug build. `py -0p`,
+or `py list` with the install manager, lists the installed Pythons and their
+paths.
+
+Note: if using MINGW, put the following in place of `-DPython3_EXECUTABLE`
+in the first command:
 
     -DPython3_ROOT_DIR=${MINGW_PREFIX} -DCMAKE_BUILD_TYPE=Release
 
 Once the projection has been built (see above), tests can be run. The default
 build uses the debug configuration, so that means we _must_ use `python_d.exe`
-instead of `python.exe`. You can use `py -0p` to find the Python installation
-path if Python is not in `PATH` already.
+instead of `python.exe`.
 
-    $env:PYTHONPATH="_build/test-install"
+    $env:PYTHONPATH="_install/projection"
     python_d.exe -X dev -m unittest
 
 If using MSYS2 shell for MINGW, this can be simplified to:
 
-    PYTHONPATH=_build/test-install python -X dev -m unittest
+    PYTHONPATH=_install/projection python -X dev -m unittest
+
+The free-threaded build of Python needs a tree of its own, because its
+extension modules are built against a different ABI. Adding the following to
+the first command picks `python314t.lib` instead:
+
+    -DPython3_FIND_ABI="ANY;ANY;ANY;ON"
+
+Install that tree to its own prefix and run the tests with `python3.14t_d.exe`.
+`test/test_threads.py` is the part of the suite that is written for it: its
+threads run at the same time only when there is no GIL.
+
+## Linting
+
+The rules and the files they apply to are in `ruff.toml` and `mypy.ini`, so an
+editor checks the same thing as the `lint` job in `.github/workflows/lint.yaml`
+does:
+
+    uvx ruff check
+
+mypy reads the packages from one directory, `_typing`, and they are generated
+into several, so `scripts/merge-packages.py` copies them together as they would
+be installed. Every CMake build runs it, and so does the lint job; to refresh
+`_typing` without a build, run it yourself:
+
+    py .\scripts\merge-packages.py
+    uvx mypy
+
+The mypy extension of VS Code bundles a mypy and a `typing_extensions` of its
+own, which can be too old for the stubs: as of October 2026, version 2026.6.0
+of the extension bundles mypy 1.15.0 and `typing_extensions` 4.12.2, and the
+stubs use `TypeForm`, which `typing_extensions` 4.13.0 added, so it reports
+errors the lint job does not. Set
+`"mypy-type-checker.importStrategy": "fromEnvironment"` and select a virtual
+environment with a current mypy as the interpreter it runs under.
+
+pyright, and Pylance with it, reads `pyrightconfig.json`. The lint job also
+checks the merged packages with `pyrightconfig.lint.json`; an editor shows a
+file under `projection/` or `interop/*/winrt/` as it is in the source tree,
+where an interop package is a second copy of a module, so the lint job is the
+authority for those files. Both runs need what the checked code imports,
+`samples/requirements-dev.txt`, `hatchling` and `setuptools`, installed in the
+environment pyright is pointed at, which is the interpreter selected in the
+editor or the one given with `--pythonpath`. The lint job also puts `_typing`
+on that environment's path with a `.pth` file, so that the second run checks
+the merged packages as installed ones, which includes that a module exports
+what the stubs import from it:
+
+    py -m venv _install\pyright-venv
+    _install\pyright-venv\Scripts\python -m pip install -r samples\requirements-dev.txt hatchling setuptools
+    Set-Content _install\pyright-venv\Lib\site-packages\_typing.pth "$PWD\_typing"
+    _install\pyright-venv\Scripts\python -c "import sys; assert r'$PWD\_typing' in sys.path, sys.path"
+    uvx pyright --pythonpath _install\pyright-venv\Scripts\python.exe
+    uvx pyright -p pyrightconfig.lint.json --pythonpath _install\pyright-venv\Scripts\python.exe
+
+That environment is for analysis only: with `_typing` on its path, `import
+winrt` finds stubs and pure-Python modules with no extension module behind
+them, so run nothing from it and install no `winrt-*` package into it. The
+tests run on their own interpreters with an install tree on `PYTHONPATH`, as
+above. As the editor's interpreter it gives no more than any environment with
+those packages: the editor reads `pyrightconfig.json`, which finds `_typing`
+through `extraPaths` with any interpreter, and pyright treats what it finds
+there as local code, so only the lint job's second run checks what the
+packages export.
+
+## Building the documentation
+
+The documentation in `docs/` is built by [Zensical](https://zensical.org/),
+configured by `zensical.toml`, at the version pinned in `docs/requirements.txt`,
+which is the one Read the Docs installs:
+
+    py -m venv .venv
+    .venv\Scripts\python -m pip install -r docs/requirements.txt
+    .venv\Scripts\zensical build --strict
+
+The site is written to `_site/`. `--strict` fails the build on a link to a page
+or an anchor that does not exist, as the Read the Docs build does.
+`zensical serve` serves it at <http://localhost:8000/> and rebuilds it on
+every change.
 
 ## Building the Nuget package
 
@@ -92,18 +214,143 @@ To build the nuget package for the `PyWinRT.exe` tool.
 
 ## Building Python wheels
 
-To build Python wheels of the projection packages:
+A projection package is data, so its wheel is `py3-none-any` and is built once.
+`winrt-runtime` and the interop modules are compiled, so cibuildwheel builds
+theirs for each version of Python and each target architecture. With no
+arguments, both halves are built:
 
     py .\scripts\build-bdist.py
 
-To only build for a specific Python and target architecture:
+Either half can be built on its own, and any other argument is passed on to
+cibuildwheel:
 
-    py .\scripts\build-bdist.py --only cp312-win_amd64
+    py .\scripts\build-bdist.py --pure
+    py .\scripts\build-bdist.py --compiled --only cp312-win_amd64
+
+The pure half needs `winrt-table-compiler` installed rather than merely
+importable, because hatchling finds the hook that compiles the tables through
+the entry point in its metadata.
+
+A release also needs the source distributions:
+
+    py .\scripts\build-sdist.py
+
+Both scripts build every package that is published unless they are told to
+narrow it. `--family` builds everything built against one upstream, including
+the interop modules, and `--package` names distributions outright:
+
+    py .\scripts\build-bdist.py --family webview2
+    py .\scripts\build-sdist.py --package winrt-Windows.Foundation
+
+`--tag` builds what one release tag publishes, which is narrower than
+`--family`: it is how the workflow builds a release, and it fails on a tag
+whose version is not the one the tree carries.
+
+    py .\scripts\build-sdist.py --tag wheels/winrt-Windows.System.Interop/v4.0.0
+
+## Releasing
+
+A release publishes one *unit* rather than everything, and a unit is named
+after the directory its sources are in. There are two kinds.
+
+A family of generated packages — `winrt`, `winui2`, `wasdk` and `webview2`,
+the directories under `projection/` — is released on its upstream's schedule
+and takes its version from the NuGet package its metadata came from, which
+`.config/_tools.json` pins. A package that goes with a family is released with
+it and has its version too: the package under `redist/` that redistributes a
+family's `.dll`, such as `winrt-Microsoft.Web.WebView2.Dll` with `webview2`,
+and an interop module that compiles against a family other than the Windows
+SDK (below). Moving a pin is a change of its own, made the way the sections
+above describe.
+
+A package written by hand has no upstream release to follow, so it keeps its
+own `version.txt` and is released on its own: `runtime`, `table` and each
+directory under `interop/` that compiles against the Windows SDK alone. Bump
+one when that package changes, in semver, keeping the major — it is the
+compatibility generation, and the build refuses a tree whose hand-written
+versions disagree about it. Moving a pin does *not* bump these: a new Windows
+SDK leaves an interop module alone unless something it compiles against
+actually changed, which the diff shows because those packages carry the
+headers they compile.
+
+An interop module that compiles against any other family is released with
+that family and has its version, since that family's release is what its users
+choose: today `interop/winrt-Microsoft.UI.Interop` and
+`interop/winrt-Microsoft.WindowsAppRuntime.Bootstrap`, with `wasdk`. The
+bootstrap would have to be anyway, because its wheel carries
+`Microsoft.WindowsAppRuntime.Bootstrap.dll` out of the pin and loads that
+release by default, so moving the pin changes it. `FAMILY_RELEASED_INTEROP` in
+`scripts/versions.py` lists each such module with its family, and the build
+refuses one that is not listed. They have no `version.txt`. To release a fix to
+one between two pins, add one holding the family's version with a fourth number
+on the end, such as `4!2.5.1.1`: that makes it a unit of its own, with a tag of
+its own. When the pin next moves, `generate-pyproject.py` refuses the file until
+it is deleted, and the package goes back to being released with the family. A
+fix cannot follow a preview of the family, since a fourth number would sort
+above the final release.
+
+An interop package requires the newest `winrt-runtime` that one of the
+`winrt.runtime.interop` functions it calls first shipped in, not the runtime of
+the tree, so that a fix to it can be installed without upgrading the runtime.
+`RUNTIME_FUNCTIONS` in `scripts/versions.py` records that version for each
+function. Adding a function for the interop packages to call means exporting it
+from `winrt.runtime.interop`, listing it there with the version it first ships
+in, and bumping `runtime/version.txt` to that version in the same change:
+`generate-pyproject.py` refuses a call to a function that is not listed, and a
+listed version the runtime has not reached.
+
+Either way, regenerate the packaging afterwards so that every package carries
+the version it is published with:
+
+    py .\scripts\generate-pyproject.py
+
+Then print the tag that releases each unit and push the one you mean:
+
+    py .\scripts\release-tags.py
+
+    git push origin wheels/webview2/e4v1.0.4191.47
+
+A version in a tag carries a `v`, and the epoch goes in front of that as
+`e4`, since a literal `!` is a history expansion in a shell. The tag has to
+carry the version the tree already carries: the build refuses a tag that
+names anything else rather than publishing a version nobody asked for.
+
+Pushing the tag runs `.github/workflows/wheels.yaml`, which builds that unit
+and uploads it to PyPI. Release `runtime` before anything else and `winrt`
+before the units that depend on it, because a compiled wheel's import test
+installs the packages it depends on; `release-tags.py` prints them in that
+order.
+
+The same workflow can be started by hand, which is how everything else is
+done:
+
+- `family` and `packages` are the build filters above. `family` groups by the
+  upstream a package was built against, so it is wider than a release: it
+  covers the interop modules built against a family, which a release of that
+  family leaves alone.
+- `publish` says where the result is uploaded, and is `none` by default. A
+  `none` run is a compile test of a branch, and it is what builds the
+  wheelhouse a release candidate is tested from; `testpypi` is the dry run
+  that proves the token path.
+- `python` builds for one interpreter only, which back-fills wheels for a new
+  CPython without a version change: the packages that are already published
+  keep their versions and only the missing builds are uploaded.
 
 
 ## Profiling
 
-To measure performance, create a `RelWithDebInfo` build of the projection and
+`perf/dispatch.py` measures what it costs to call a projected member at all,
+which is the number that a change to the runtime is judged by. Its docstring
+has the commands and the cautions that come with reading a single row.
+
+It needs a `Release` build, which is compiled with link time optimization, the
+same as the wheels are, so it takes noticeably longer to link than the other
+configurations and it is what users run. Turning that off to compare against is
+an edit to the top-level `CMakeLists.txt`: passing
+`-DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=OFF` does nothing, because the
+plain `set()` there shadows the cache variable.
+
+To find where the time goes, create a `RelWithDebInfo` build of the projection
 and install it, e.g. in `_install/perf`.
 
 Download the `PerfView.exe` tool from <https://github.com/microsoft/perfview>

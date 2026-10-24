@@ -1,0 +1,54 @@
+# WARNING: Please don't edit this file. It was automatically generated.
+
+[build-system]
+requires = ["setuptools>=78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winrt-Windows.UI.Composition.Interop"
+description = "Creates a DesktopWindowTarget that shows a composition visual tree in a window."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Typing :: Typed",
+]
+dynamic = ["version", "dependencies"]
+requires-python = ">=3.11"
+
+[project.urls]
+Documentation = "https://pywinrt.readthedocs.io"
+Repository = "https://github.com/pywinrt/pywinrt"
+Changelog = "https://github.com/pywinrt/pywinrt/blob/main/interop/winrt-Windows.UI.Composition.Interop/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { file = "version.txt" }
+dependencies = { file = "requirements.txt" }
+
+[tool.setuptools.packages.find]
+include = ["winrt*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.pyi", "py.typed"]
+
+[tool.cibuildwheel]
+# don't build for PyPy
+skip = "pp*"
+# suppress warnings about ARM64 testing
+test-skip = "*-win_arm64"
+test-command = "python -c \"import winrt._winrt_windows_ui_composition_interop\""
+
+[tool.cibuildwheel.windows]
+archs = ["x86", "AMD64", "ARM64"]
+# nothing here is copied in after the build, so there is no repair step
+repair-wheel-command = ""

@@ -2,6 +2,16 @@
 
 # winrt-Windows.Data.Html
 
-Windows Runtime (WinRT) APIs for for the `Windows.Data.Html` namespace.
+Windows Runtime (WinRT) APIs for the `Windows.Data.Html` namespace.
 
 This package provides the `winrt.windows.data.html` module.
+
+The WinRT APIs in it are those of version 10.0.28000.2705 of the
+`Microsoft.Windows.SDK.CPP` NuGet package.
+
+```
+pip install winrt-Windows.Data.Html
+```
+
+Other WinRT namespaces are packages of their own, so install the package of
+each namespace your code imports from.

@@ -1,35 +1,24 @@
 using System.CodeDom.Compiler;
+using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using Mono.Cecil;
 
 static class FileWriters
 {
-    public static void WriteBaseFiles(DirectoryInfo path)
-    {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        // just one file so far, the version header
-
-        w.WriteLicense();
-        w.WriteBlankLine();
-        w.WriteLine("#pragma once");
-        w.WriteLine($"#define PYWINRT_VERSION \"{PyWinRT.VersionString}\"");
-
-        sw.WriteFileIfChanged(path, "pywinrt_version.h");
-    }
-
-    internal static void WriteNamespaceFiles(
+    internal static NamespaceDependencies? WriteNamespaceFiles(
         DirectoryInfo outputPath,
-        DirectoryInfo? headerPath,
         QualifiedNamespace ns,
-        NamespaceNullabilityInfo nullabilityInfo,
+        string distribution,
+        Func<NamespaceNullabilityInfo> getNullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IEnumerable<TypeDefinition> typeDefinitions,
-        bool componentDlls
+        bool componentDlls,
+        string? dllPackage,
+        bool legacyMethodAliases,
+        Census census
     )
     {
-        var nsPackageName = $"{ns.PyPackage}-{ns.Namespace}";
+        var nsPackageName = $"{ns.PyPackage}-{distribution}";
         var nsPackageDir = new DirectoryInfo(Path.Combine(outputPath.FullName, nsPackageName));
         var rootDir = new DirectoryInfo(Path.Combine(nsPackageDir.FullName, ns.PyPackageModule));
         var nsDir = rootDir;
@@ -40,9 +29,7 @@ static class FileWriters
             nsDir = new DirectoryInfo(Path.Combine(nsDir.FullName, segment));
         }
 
-        var headerDir = headerPath ?? new DirectoryInfo(Path.Combine(rootDir.FullName, "pywinrt"));
-
-        var members = new Members(typeDefinitions);
+        var members = new Members(typeDefinitions, legacyMethodAliases);
 
         if (
             !members
@@ -53,8 +40,12 @@ static class FileWriters
                 .Any()
         )
         {
-            return;
+            return null;
         }
+
+        // NB: this may block until the nullability info has been loaded, so
+        // it is deferred until after the (independent) analysis of the types.
+        var nullabilityInfo = getNullabilityInfo();
 
         foreach (var type in members.Classes.Concat(members.Interfaces).Concat(members.Delegates))
         {
@@ -71,309 +62,299 @@ static class FileWriters
                 .Select(m => new KeyValuePair<string, MethodNullabilityInfo>(m.Signature, m))
         ).AsReadOnly();
 
-        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 0);
-        WriteNamespaceCpp(nsPackageDir, ns, packageMap, members, componentDlls, 1);
-        WriteNamespaceH(headerDir, ns, packageMap, members, componentDlls);
-        WriteNamespaceDunderInitPy(nsDir, ns, nullabilityMap, packageMap, members, componentDlls);
-        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 0);
-        WriteNamespacePyi(rootDir, ns, nullabilityMap, packageMap, members, 1);
-        WriteDepsJson(nsPackageDir, packageMap, members);
+        // Warm the caches that are shared by the writers below so that they
+        // are read-only while the writers run in parallel.
+        members.GetReferencedNamespaces(
+            packageMap,
+            includeDelegates: true,
+            includeInheritedInterfaces: true
+        );
+        members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true);
+
+        var censusRevision = 0;
+        IEnumerable<string> namesReleases = [];
+
+        // The generated files are independent of each other, so write them
+        // in parallel. This helps the largest namespaces, which would
+        // otherwise be the last ones still running at the end.
+        Parallel.Invoke(
+            () =>
+                namesReleases = WriteNamespaceDunderInitPy(
+                    nsDir,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    members,
+                    componentDlls,
+                    dllPackage
+                ),
+            () => WriteNamespacePyi(nsDir, ns, nullabilityMap, packageMap, members),
+            () =>
+                censusRevision = TableWriter.Write(
+                    nsDir,
+                    ns,
+                    packageMap,
+                    nullabilityMap,
+                    members,
+                    census
+                )
+        );
+
+        // Several namespaces may be published in one distribution, so what
+        // each of them depends on is handed back and written once the whole
+        // run is done rather than into a file they would race for.
+        //
+        // The interfaces a class implements are bases of its stub, so their
+        // namespaces are referenced too, but only referenced: importing the
+        // module does not import them, which only a base class requires.
+        return new NamespaceDependencies(
+            ns.Namespace,
+            members.GetRequiredNamespaces(packageMap),
+            members.GetReferencedNamespaces(
+                packageMap,
+                includeDelegates: true,
+                includeInheritedInterfaces: true
+            ),
+            censusRevision,
+            RuntimeReleases.Newest([
+                census.Revisions[censusRevision - 1].Runtime,
+                RuntimeReleases.TableFormat,
+                .. namesReleases,
+            ])
+        );
     }
 
-    private static void WriteDepsJson(
-        DirectoryInfo nsPackageDir,
-        IReadOnlyDictionary<string, string> packageMap,
-        Members members
+    /// <summary>
+    /// Writes the deps.json of one distribution.
+    /// </summary>
+    /// <remarks>
+    /// It names the namespaces the distribution provides and the other
+    /// distributions its types hand back, rather than namespaces, because a
+    /// distribution is what the packaging script turns into a requirement.
+    /// What the distribution provides itself is left out of both lists.
+    /// </remarks>
+    internal static void WriteDepsJson(
+        DirectoryInfo packageDir,
+        Census census,
+        int censusRevision,
+        string? runtime,
+        IReadOnlyCollection<string> namespaces,
+        IReadOnlyCollection<string> required,
+        IReadOnlyCollection<string> referenced
     )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        void writeList(string name, IReadOnlyCollection<string> items, string end)
+        {
+            w.WriteLine($"\"{name}\": [");
+            w.Indent++;
+
+            foreach (var (item, isLast) in items.Select((n, i) => (n, i == items.Count - 1)))
+            {
+                w.WriteLine($"\"{item}\"{(isLast ? "" : ",")}");
+            }
+
+            w.Indent--;
+            w.WriteLine($"]{end}");
+        }
 
         w.WriteBlock(() =>
         {
-            w.Write("\"pywinrt\": ");
-            w.WriteBlock(() => w.WriteLine($"\"version\": \"{PyWinRT.VersionString}\""), ",");
-            w.WriteLine("\"required\": [");
-            w.Indent++;
-            var requiredNamespaces = members.GetRequiredNamespaces(packageMap);
-            foreach (
-                var (ns, isLast) in requiredNamespaces.Select(
-                    (n, i) => (n, i == requiredNamespaces.Count - 1)
-                )
-            )
-            {
-                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
-            }
-            w.Indent--;
-            w.WriteLine("],");
-            w.WriteLine("\"referenced\": [");
-            w.Indent++;
-            var referencedNamespaces = members.GetReferencedNamespaces(
-                packageMap,
-                includeDelegates: true
+            // The table format the tables are written to, so that packaging
+            // tooling can read the runtime requirement without reading one.
+            // The same pair heads every table itself.
+            w.Write("\"table_format\": ");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine($"\"major\": {TableWriter.FormatMajor},");
+                    w.WriteLine($"\"minor\": {TableWriter.FormatMinor}");
+                },
+                ","
             );
-            foreach (
-                var (ns, isLast) in referencedNamespaces.Select(
-                    (n, i) => (n, i == referencedNamespaces.Count - 1)
-                )
-            )
-            {
-                w.WriteLine($"\"{ns.PyPackage}-{ns.Namespace}\"{(isLast ? "" : ",")}");
-            }
-            w.Indent--;
-            w.WriteLine("]");
+
+            // The census the tables name their members' call shapes in, and
+            // the newest revision of it any of them needs.
+            w.Write("\"census\": ");
+            w.WriteBlock(
+                () =>
+                {
+                    w.WriteLine($"\"lineage\": \"{census.Lineage}\",");
+                    w.WriteLine($"\"revision\": {censusRevision}");
+                },
+                ","
+            );
+
+            // The first winrt-runtime release that has everything the package
+            // needs of it - the table format, the census revision and the
+            // names its modules use - which is null while the census names no
+            // release of that revision.
+            w.WriteLine($"\"runtime\": {(runtime is null ? "null" : $"\"{runtime}\"")},");
+            writeList("namespaces", namespaces, ",");
+            writeList("required", required, ",");
+            writeList("referenced", referenced, "");
         });
 
-        sw.WriteFileIfChanged(nsPackageDir, "deps.json");
+        sw.WriteFileIfChanged(packageDir, "deps.json");
     }
 
-    private static void WriteNamespacePyi(
-        DirectoryInfo nsWinrtDir,
-        QualifiedNamespace ns,
-        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
-        IReadOnlyDictionary<string, string> packageMap,
+    /// <summary>
+    /// Writes the <c>__all__</c> of a namespace, which is every name it binds.
+    /// </summary>
+    private static void WriteAll(
+        this IndentedTextWriter w,
         Members members,
-        int dependencyDepth
+        IEnumerable<ProjectedType> allExtensionTypes
     )
     {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-        bool didWriteClass = false;
+        w.WriteLine("__all__ = [");
+        w.Indent++;
 
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-
-        w.WriteLine("import datetime");
-        w.WriteLine("import sys");
-        w.WriteLine("import types");
-        w.WriteLine("import typing");
-        w.WriteLine("import uuid as _uuid");
-        w.WriteLine("from builtins import property as _property");
-
-        if (members.Interfaces.Count != 0)
+        foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
         {
-            w.WriteLine("from abc import abstractmethod");
+            w.WriteLine($"\"{type.Name}\",");
         }
 
-        w.WriteBlankLine();
-        w.WriteLine("import winrt._winrt");
-        w.WriteLine("import winrt.system");
+        w.Indent--;
+        w.WriteLine("]");
+    }
 
-        var referencedNamespaces = members.GetReferencedNamespaces(
-            packageMap,
-            includeInheritedInterfaces: true
-        );
-
-        foreach (var rns in referencedNamespaces)
+    /// <summary>
+    /// Writes the enums of a namespace as Python enum classes, for the stub.
+    /// </summary>
+    /// <remarks>
+    /// The constants are in the table and the runtime builds the class, so
+    /// this is not what defines an enum. What it is for is
+    /// <c>__init__.pyi</c>, which a type checker reads instead of the module
+    /// and so has to spell out everything the module binds.
+    /// </remarks>
+    private static void WriteEnums(this IndentedTextWriter w, Members members)
+    {
+        foreach (var type in members.Enums)
         {
-            w.WriteLine($"import {rns.PyModuleName} as {rns.PyModuleAlias}");
-        }
+            w.WriteBlankLine();
 
-        w.WriteBlankLine();
-
-        // handle circular dependencies by importing sibling modules of the same namespace
-        for (int depth = 0; depth < 2; depth++)
-        {
-            if (depth == dependencyDepth)
+            if (type.IsDeprecated)
             {
-                // don't import this module to itself
-                continue;
+                w.WriteDeprecated(type.DeprecatedMessage);
             }
 
-            var dependencyTypes = members
-                .Structs.Where(s => !s.Type.IsCustomizedStruct())
-                .Concat(members.Classes)
-                .Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == depth);
+            w.WriteLine(
+                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute ? "IntFlag" : "IntEnum")}):"
+            );
 
-            if (!dependencyTypes.Any())
-            {
-                // nothing to import
-                continue;
-            }
-
-            var suffix = depth == 0 ? "" : $"_{depth + 1}";
-            w.WriteLine($"from {ns.PyPackage}.{ns.NsModuleName}{suffix} import (");
             w.Indent++;
 
-            foreach (var type in dependencyTypes)
+            foreach (var field in type.Type.Fields)
             {
-                w.WriteLine($"{type.PyWrapperTypeName},");
-
-                if (type.Category == Category.Interface)
+                if (field.Constant is not null)
                 {
-                    w.WriteLine($"{type.Name},");
+                    var value = type.Type.HasFlagsAttribute
+                        ? $"0x{field.Constant:X}"
+                        : field.Constant.ToString();
+                    w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
+
+                    // PEP 702 has no way to mark an enum member deprecated, so
+                    // the message goes where an editor shows it on hover
+                    if (field.GetDeprecatedAttribute() is CustomAttribute deprecated)
+                    {
+                        var message = (
+                            $"Deprecated: {deprecated.ConstructorArguments[0].Value as string}"
+                        ).ToPythonStringLiteral()[1..^1];
+
+                        w.WriteLine($"\"\"\"{message}\"\"\"");
+                    }
                 }
             }
 
             w.Indent--;
-            w.WriteLine(")");
-            w.WriteBlankLine();
         }
-
-        if (members.Enums.Count != 0)
-        {
-            w.WriteLine(
-                $"from {ns.PyModuleName} import {string.Join(", ", members.Enums.Select(e => e.Name))}"
-            );
-        }
-
-        if (members.Delegates.Count != 0)
-        {
-            w.WriteLine(
-                $"from {ns.PyModuleName} import {string.Join(", ", members.Delegates.Select(d => d.Name))}"
-            );
-        }
-
-        if (members.Enums.Count != 0 || members.Delegates.Count != 0)
-        {
-            w.WriteBlankLine();
-        }
-
-        w.WriteLine("Self = typing.TypeVar('Self')");
-
-        foreach (
-            var type in members
-                .Interfaces.SelectMany(i => i.Type.GenericParameters.Select(p => p.Name))
-                .Distinct()
-                .Order()
-        )
-        {
-            w.WriteLine($"{type} = typing.TypeVar('{type}')");
-        }
-
-        w.WriteBlankLine();
-
-        foreach (
-            var type in members.Structs.Where(s =>
-                !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
-            )
-        )
-        {
-            w.WritePythonStructTyping(type, ns.Namespace, packageMap);
-            didWriteClass = true;
-        }
-
-        foreach (
-            var type in members
-                .Classes.Concat(members.Interfaces)
-                .Where(t => t.CircularDependencyDepth == dependencyDepth)
-        )
-        {
-            w.WritePythonClassTyping(type, ns.Namespace, nullabilityMap, packageMap);
-            didWriteClass = true;
-        }
-
-        // only write extra files if we wrote at least one class
-        if (dependencyDepth != 0 && !didWriteClass)
-        {
-            return;
-        }
-
-        var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
-        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.NsModuleName}{moduleSuffix}.pyi");
     }
 
-    private static void WriteNamespaceDunderInitPy(
-        DirectoryInfo nsDir,
+    /// <summary>
+    /// Writes the delegates of a namespace as <c>typing.Callable</c> aliases.
+    /// </summary>
+    /// <param name="forStub">
+    /// Whether this is <c>__init__.pyi</c> rather than <c>__init__.py</c>. A
+    /// stub is read and not executed, so it declares each alias with a
+    /// <c>type</c> statement, which scopes a generic delegate's parameters to
+    /// the alias, and names a type from another namespace directly. The
+    /// aliases in <c>__init__.py</c> are assignments evaluated when the module
+    /// is imported, and it only imports those namespaces while type checking -
+    /// not every package a namespace refers to is necessarily installed - so
+    /// there the names are quoted.
+    /// </param>
+    /// <remarks>
+    /// A delegate is a Python callable, so what the projection binds is the
+    /// signature it has to have.
+    /// </remarks>
+    private static void WriteDelegateAliases(
+        this IndentedTextWriter w,
         QualifiedNamespace ns,
+        Members members,
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         IReadOnlyDictionary<string, string> packageMap,
-        Members members,
-        bool componentDlls
+        bool forStub
     )
     {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        w.WriteLicense("#");
-        w.WriteBlankLine();
-
-        if (members.Enums.Count != 0)
+        foreach (var type in members.Delegates)
         {
-            w.WriteLine("import enum");
-        }
-
-        if (members.Delegates.Count != 0)
-        {
-            w.WriteLine("import typing");
-            w.WriteLine("import uuid as _uuid");
-        }
-
-        if (members.Enums.Count != 0 || members.Delegates.Count != 0)
-        {
-            w.WriteBlankLine();
-        }
-
-        var allExtensionTypes = members
-            .Structs.Where(s => !s.Type.IsCustomizedStruct())
-            .Concat(members.Classes)
-            .Concat(members.Interfaces);
-
-        if (componentDlls || allExtensionTypes.Any(t => t.IsPySequence || t.IsPyMapping))
-        {
-            w.WriteLine("import winrt.runtime._internals");
-        }
-
-        w.WriteLine("import winrt.system");
-
-        for (int depth = 0; depth < 2; depth++)
-        {
-            var dependencyModuleTypes = allExtensionTypes.Where(t =>
-                t.CircularDependencyDepth == depth
+            var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
+            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
+                invoke.ToString(),
+                new MethodNullabilityInfo(invoke)
             );
-            var suffix = depth == 0 ? "" : $"_{depth + 1}";
+            var paramTypes = invoke
+                .Parameters.Where(p => p.IsPythonInParam)
+                .Select(p =>
+                    p.ToPyCallbackInParamTyping(
+                        ns.Namespace,
+                        nullabilityInfo.Parameters[p.Index].Type,
+                        packageMap,
+                        quoteImportedTypes: !forStub
+                    )
+                );
 
-            if (dependencyModuleTypes.Any())
-            {
-                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
-                w.Indent++;
+            // The runtime ignores what a handler for a delegate with no outputs
+            // hands back, so it may return anything, which is how typeshed
+            // types a callback whose result is not used. The widened typing of
+            // the other outputs is for the type checker, which reads the stub;
+            // in __init__.py a union with a quoted name would raise TypeError
+            // at import time.
+            var returnTyping =
+                invoke.ReturnType.FullName == "System.Void"
+                && !invoke.Parameters.Any(p => p.IsPythonOutParam)
+                    ? "object"
+                : forStub
+                    ? invoke.ToPyCallbackReturnTyping(ns.Namespace, nullabilityInfo, packageMap)
+                : invoke.ToPyReturnTyping(
+                    ns.Namespace,
+                    nullabilityInfo,
+                    packageMap,
+                    quoteImportedTypes: true
+                );
 
-                foreach (var type in dependencyModuleTypes)
-                {
-                    w.WriteLine($"{type.PyWrapperTypeName},");
+            var declaration = forStub ? $"type {type.Name}{type.Type.PyTypeParameters}" : type.Name;
 
-                    if (type.Category == Category.Interface)
-                    {
-                        w.WriteLine($"{type.Name},");
-                    }
-                }
-
-                w.Indent--;
-                w.WriteLine(")");
-            }
-
-            // REVISIT: Composable classes also have to inherit metaclass, so we need to
-            // make these accessible. For now though, they are only available as type
-            // hints and can't actually be imported at runtime. In the future, if we
-            // allow subclassing in Python, we can change this.
-
-            var composableTypes = dependencyModuleTypes.Where(t => t.IsComposable);
-            if (composableTypes.Any())
-            {
-                w.WriteLine("from typing import TYPE_CHECKING");
-                w.WriteLine("if TYPE_CHECKING:");
-                w.Indent++;
-                w.WriteLine($"from {ns.PyPackageModule}.{ns.NsModuleName}{suffix} import (");
-                w.Indent++;
-
-                foreach (var type in composableTypes)
-                {
-                    w.WriteLine($"{type.Name}_Static,");
-                }
-
-                w.Indent--;
-                w.WriteLine(")");
-                w.Indent--;
-            }
+            w.WriteLine(
+                $"{declaration} = typing.Callable[[{string.Join(", ", paramTypes)}], {returnTyping}]"
+            );
         }
+    }
 
-        // Since not all packages may be installed, delegates can't safely
-        // import their parameter types at runtime. So we conditionally import
-        // them when type checking is enabled and quote the types to avoid
-        // to avoid runtime errors.
-
-        var delegateReferencedNamespaces = new SortedSet<QualifiedNamespace>(
+    /// <summary>
+    /// The namespaces other than <paramref name="ns"/> that the delegates of
+    /// <paramref name="members"/> name in their signatures.
+    /// </summary>
+    private static SortedSet<QualifiedNamespace> GetDelegateReferencedNamespaces(
+        this Members members,
+        IReadOnlyDictionary<string, string> packageMap,
+        QualifiedNamespace ns
+    )
+    {
+        return new SortedSet<QualifiedNamespace>(
             members.Delegates.SelectMany(d =>
             {
                 var method = d.Type.Methods.Single(m => m.Name == "Invoke");
@@ -392,6 +373,199 @@ static class FileWriters
                     .Where(n => n != ns && n.Namespace != "System");
             })
         );
+    }
+
+    /// <summary>
+    /// Writes the type stub of a namespace, which sits beside its
+    /// <c>__init__.py</c> as <c>__init__.pyi</c>.
+    /// </summary>
+    /// <remarks>
+    /// This is the inline-stub layout that PEP 561 describes and that type
+    /// checkers prefer over the <c>.py</c>. It is also the only layout a
+    /// projection package can have: the module used to re-export an extension
+    /// module's contents, and the stub went beside that extension module, but
+    /// the types come from the table now and there is no second module to
+    /// describe. So a stub has to say everything the module has - the enums
+    /// the runtime builds and the delegate aliases <c>__init__.py</c> defines
+    /// included - because a type checker reads the stub instead of the module
+    /// and not as well as it.
+    /// </remarks>
+    private static void WriteNamespacePyi(
+        DirectoryInfo nsDir,
+        QualifiedNamespace ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
+        Members members
+    )
+    {
+        // The stdlib imports depend on what the type hints below turn out
+        // to use, so the rest of the file is written first and the imports
+        // are prepended once we can see it.
+        using var bodySw = new StringWriter();
+        using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
+
+        var allExtensionTypes = members
+            .Structs.Where(s => !s.Type.IsCustomizedStruct)
+            .Concat(members.Classes)
+            .Concat(members.Interfaces);
+
+        w.WriteLine("import winrt.system");
+
+        var referencedNamespaces = new SortedSet<QualifiedNamespace>(
+            members.GetReferencedNamespaces(packageMap, includeInheritedInterfaces: true)
+        );
+        referencedNamespaces.UnionWith(members.GetDelegateReferencedNamespaces(packageMap, ns));
+
+        foreach (var rns in referencedNamespaces)
+        {
+            w.WriteLine($"import {rns.PyModuleName} as {rns.PyModuleAlias}");
+        }
+
+        w.WriteBlankLine();
+        w.WriteAll(members, allExtensionTypes);
+
+        w.WriteEnums(members);
+        w.WriteBlankLine();
+
+        foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct))
+        {
+            w.WritePythonStructTyping(type, ns.Namespace, packageMap);
+        }
+
+        foreach (var type in members.Classes.Concat(members.Interfaces))
+        {
+            w.WritePythonClassTyping(type, ns.Namespace, nullabilityMap, packageMap);
+        }
+
+        w.WriteDelegateAliases(ns, members, nullabilityMap, packageMap, forStub: true);
+
+        var body = bodySw.ToString();
+
+        using var sw = new StringWriter();
+        using var hw = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        hw.WriteLicense("#");
+        hw.WriteBlankLine();
+
+        var wroteImports = hw.WriteStdlibImports(body);
+
+        if (members.Interfaces.Count != 0)
+        {
+            hw.WriteLine("from abc import abstractmethod");
+            wroteImports = true;
+        }
+
+        if (body.Contains("@deprecated(", StringComparison.Ordinal))
+        {
+            hw.WriteLine("from typing_extensions import deprecated");
+            wroteImports = true;
+        }
+
+        if (wroteImports)
+        {
+            hw.WriteBlankLine();
+        }
+
+        hw.Write(body);
+
+        sw.WriteFileIfChanged(nsDir, "__init__.pyi");
+    }
+
+    /// <summary>
+    /// Writes the <c>import</c> lines for the standard library modules that
+    /// <paramref name="body"/> actually refers to.
+    /// </summary>
+    /// <returns><c>true</c> if any import was written.</returns>
+    private static bool WriteStdlibImports(this IndentedTextWriter w, string body)
+    {
+        var wroteAny = false;
+
+        // collections.abc is aliased because WinRT has members named
+        // "collections" that would shadow the module inside a class body.
+        if (body.Contains("_cabc."))
+        {
+            wroteAny = true;
+            w.WriteLine("import collections.abc as _cabc");
+        }
+
+        if (body.Contains("datetime."))
+        {
+            wroteAny = true;
+            w.WriteLine("import datetime");
+        }
+
+        if (body.Contains("enum."))
+        {
+            wroteAny = true;
+            w.WriteLine("import enum");
+        }
+
+        if (body.Contains("_os."))
+        {
+            wroteAny = true;
+            w.WriteLine("import os as _os");
+        }
+
+        if (body.Contains("types."))
+        {
+            wroteAny = true;
+            w.WriteLine("import types");
+        }
+
+        if (body.Contains("typing."))
+        {
+            wroteAny = true;
+            w.WriteLine("import typing");
+        }
+
+        if (body.Contains("_uuid."))
+        {
+            wroteAny = true;
+            w.WriteLine("import uuid as _uuid");
+        }
+
+        if (body.Contains("_property"))
+        {
+            wroteAny = true;
+            w.WriteLine("from builtins import property as _property");
+        }
+
+        return wroteAny;
+    }
+
+    /// <returns>
+    /// The releases that first have the runtime names the module uses.
+    /// </returns>
+    private static IEnumerable<string> WriteNamespaceDunderInitPy(
+        DirectoryInfo nsDir,
+        QualifiedNamespace ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
+        Members members,
+        bool componentDlls,
+        string? dllPackage
+    )
+    {
+        // The stdlib imports depend on what the delegate type aliases below
+        // turn out to use, so the rest of the file is written first and the
+        // imports are prepended once we can see it.
+        using var bodySw = new StringWriter();
+        using var w = new IndentedTextWriter(bodySw) { NewLine = "\n" };
+
+        var allExtensionTypes = members
+            .Structs.Where(s => !s.Type.IsCustomizedStruct)
+            .Concat(members.Classes)
+            .Concat(members.Interfaces);
+
+        w.WriteLine("import winrt.runtime._internals");
+        w.WriteLine("import winrt.system");
+
+        // Since not all packages may be installed, delegates can't safely
+        // import their parameter types at runtime. So we conditionally import
+        // them when type checking is enabled and quote the types to avoid
+        // to avoid runtime errors.
+
+        var delegateReferencedNamespaces = members.GetDelegateReferencedNamespaces(packageMap, ns);
 
         if (delegateReferencedNamespaces.Count > 0)
         {
@@ -407,25 +581,37 @@ static class FileWriters
             w.Indent--;
         }
 
+        // The classes, interfaces and structs of this namespace are built from
+        // the table beside this file rather than imported from an extension
+        // module, so this has to come before anything below that names one.
+        w.WriteBlankLine();
+        w.WriteLine("winrt.runtime._internals.load_projection(__spec__)");
+
+        // The component .dlls are beside this file. The handle
+        // os.add_dll_directory() returns would take the directory off the
+        // search path again if it were closed, so it is held by the module.
         if (componentDlls)
         {
             w.WriteBlankLine();
-            w.WriteLine(
-                "_dll_search_path_cookie_ = winrt.runtime._internals.register_dll_search_path(__file__)"
-            );
+            w.WriteLine("_dll_search_path_cookie_ = _os.add_dll_directory(");
+            w.Indent++;
+            w.WriteLine("_os.path.dirname(_os.path.abspath(__file__))");
+            w.Indent--;
+            w.WriteLine(")");
+        }
+
+        // The component .dlls are redistributed in a distribution of their
+        // own, which puts them on the DLL search path as it is imported. That
+        // has to happen before the first type here is activated, and this is
+        // the only module the user is expected to import.
+        if (!string.IsNullOrEmpty(dllPackage))
+        {
+            w.WriteBlankLine();
+            w.WriteLine($"import {dllPackage}");
         }
 
         w.WriteBlankLine();
-        w.WriteLine($"__all__ = [");
-        w.Indent++;
-
-        foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
-        {
-            w.WriteLine($"\"{type.Name}\",");
-        }
-
-        w.Indent--;
-        w.WriteLine("]");
+        w.WriteAll(members, allExtensionTypes);
 
         foreach (
             var type in members
@@ -435,29 +621,6 @@ static class FileWriters
         )
         {
             w.WriteLine($"{type} = typing.TypeVar('{type}')");
-        }
-
-        foreach (var type in members.Enums)
-        {
-            w.WriteBlankLine();
-            w.WriteLine(
-                $"class {type.Name}(enum.{(type.Type.HasFlagsAttribute() ? "IntFlag" : "IntEnum")}):"
-            );
-
-            w.Indent++;
-
-            foreach (var field in type.Type.Fields)
-            {
-                if (field.Constant is not null)
-                {
-                    var value = type.Type.HasFlagsAttribute()
-                        ? $"0x{field.Constant:X}"
-                        : field.Constant.ToString();
-                    w.WriteLine($"{field.Name.ToPythonConstant()} = {value}");
-                }
-            }
-
-            w.Indent--;
         }
 
         w.WriteBlankLine();
@@ -486,262 +649,55 @@ static class FileWriters
             }
         }
 
-        foreach (var type in members.Delegates)
+        // HResult and EventRegistrationToken were projected as structs with
+        // one field in pywinrt v3.x, and are the integer itself now, so the
+        // name that field had still reads it.
+        foreach (var type in allExtensionTypes.Where(t => t.IsPyInteger))
         {
-            var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
-            var nullabilityInfo = nullabilityMap.GetValueOrDefault(
-                invoke.ToString(),
-                new MethodNullabilityInfo(invoke)
-            );
-            var paramTypes = invoke
-                .Parameters.Where(p => p.IsPythonInParam())
-                .Select(p =>
-                    p.ToPyCallbackInParamTyping(
-                        ns.Namespace,
-                        nullabilityInfo.Parameters[p.Index].Type,
-                        packageMap,
-                        quoteImportedTypes: true
-                    )
+            foreach (var field in type.Type.Fields)
+            {
+                w.WriteLine(
+                    $"winrt.runtime._internals.alias_field({type.Name}, \"{field.Name.ToPythonIdentifier()}\")"
                 );
-
-            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
-            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
-            // of the TestComponent modules since most callbacks only return None or bool.
-            w.WriteLine(
-                $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns.Namespace, nullabilityInfo, packageMap, quoteImportedTypes: true)}]"
-            );
+            }
         }
+
+        // Methods that were renamed in pywinrt v3.0 are still callable by the
+        // name they had then, with a deprecation warning.
+        foreach (var type in allExtensionTypes)
+        {
+            foreach (var group in type.MethodGroups)
+            {
+                foreach (var alias in group.Aliases)
+                {
+                    var function = group.IsStatic ? "alias_static_method" : "alias_method";
+
+                    w.WriteLine(
+                        $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.PyName}\", \"{group.PyName}\")"
+                    );
+                }
+            }
+        }
+
+        w.WriteDelegateAliases(ns, members, nullabilityMap, packageMap, forStub: false);
+
+        var body = bodySw.ToString();
+
+        using var sw = new StringWriter();
+        using var hw = new IndentedTextWriter(sw) { NewLine = "\n" };
+
+        hw.WriteLicense("#");
+        hw.WriteBlankLine();
+
+        if (hw.WriteStdlibImports(body))
+        {
+            hw.WriteBlankLine();
+        }
+
+        hw.Write(body);
 
         sw.WriteFileIfChanged(nsDir, "__init__.py");
-    }
 
-    private static void WriteNamespaceH(
-        DirectoryInfo headerDir,
-        QualifiedNamespace ns,
-        IReadOnlyDictionary<string, string> packageMap,
-        Members members,
-        bool componentDlls
-    )
-    {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-
-        var referencedNamespaces = members.GetReferencedNamespaces(
-            packageMap,
-            includeDelegates: true
-        );
-
-        w.WriteLicense();
-        w.WriteBlankLine();
-        w.WriteLine("#pragma once");
-        w.WriteLine();
-        w.WriteLine("#include \"pybase.h\"");
-        w.WriteLine(
-            $"static_assert(winrt::check_version(PYWINRT_VERSION, \"{PyWinRT.VersionString}\"), \"Mismatched Py/WinRT headers.\");"
-        );
-
-        foreach (var rns in referencedNamespaces)
-        {
-            w.WriteLine($"#include <winrt/{rns.Namespace}.h>");
-        }
-
-        w.WriteBlankLine();
-        w.WriteLine($"#include <winrt/{ns.Namespace}.h>");
-        w.WriteBlankLine();
-
-        w.WriteLine($"namespace py::proj::{ns.Namespace.ToCppNamespace()}");
-        w.WriteBlock(() =>
-        {
-            foreach (
-                var (i, iface) in members
-                    .Interfaces.Where(i => i.IsGeneric)
-                    .Select((iface, i) => (i, iface))
-            )
-            {
-                if (i > 0)
-                {
-                    w.WriteBlankLine();
-                }
-
-                w.WriteGenericInterfaceDecl(iface);
-            }
-        });
-
-        w.WriteBlankLine();
-        w.WriteLine("namespace py");
-        w.WriteBlock(() =>
-        {
-            foreach (var type in members.Enums)
-            {
-                w.WriteEnumBufferFormat(type);
-            }
-
-            foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-            {
-                w.WriteStructBufferFormat(type);
-            }
-
-            foreach (
-                var type in members
-                    .Enums.Concat(members.Classes)
-                    .Concat(members.Interfaces)
-                    .Concat(members.Structs)
-            )
-            {
-                w.WritePyTypeSpecializationStruct(type, ns);
-            }
-        });
-
-        foreach (var rns in referencedNamespaces)
-        {
-            w.WriteBlankLine();
-            w.WriteLine($"#if __has_include(\"py.{rns.Namespace}.h\")");
-            w.WriteLine($"#include \"py.{rns.Namespace}.h\"");
-            w.WriteLine("#endif");
-        }
-
-        w.WriteBlankLine();
-        w.WriteLine($"namespace py::impl::{ns.Namespace.ToCppNamespace()}");
-        w.WriteBlock(() =>
-        {
-            var n = 0;
-
-            foreach (var del in members.Delegates)
-            {
-                if (n++ > 0)
-                {
-                    w.WriteBlankLine();
-                }
-
-                w.WriteDelegateCallableWrapper(del);
-            }
-
-            foreach (var iface in members.Interfaces.Where(i => i.IsGeneric))
-            {
-                if (n++ > 0)
-                {
-                    w.WriteBlankLine();
-                }
-
-                w.WriteGenericInterfaceImpl(iface, componentDlls);
-            }
-        });
-
-        w.WriteBlankLine();
-        w.WriteLine($"namespace py::wrapper::{ns.Namespace.ToCppNamespace()}");
-        w.WriteBlock(() =>
-        {
-            foreach (
-                var type in members
-                    .Classes.Concat(members.Interfaces)
-                    .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-            )
-            {
-                w.WritePythonWrapperAlias(type);
-            }
-        });
-
-        w.WriteBlankLine();
-        w.WriteLine("namespace py");
-        w.WriteBlock(() =>
-        {
-            foreach (var type in members.Interfaces.Where(i => i.IsGeneric))
-            {
-                w.WriteGenericInterfaceTypeMapper(type);
-            }
-
-            foreach (var type in members.Delegates)
-            {
-                w.WriteDelegateTypeMapper(type);
-            }
-        });
-
-        sw.WriteFileIfChanged(headerDir, $"py.{ns.Namespace}.h");
-    }
-
-    private static void WriteNamespaceCpp(
-        DirectoryInfo nsPackageDir,
-        QualifiedNamespace ns,
-        IReadOnlyDictionary<string, string> packageMap,
-        Members members,
-        bool componentDlls,
-        int dependencyDepth
-    )
-    {
-        using var sw = new StringWriter();
-        using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
-        bool didWriteClass = false;
-
-        var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
-
-        w.WriteLicense();
-        w.WriteBlankLine();
-
-        w.WriteLine($"#include \"py.{ns.Namespace}.h\"");
-        w.WriteBlankLine();
-
-        w.WriteLine($"namespace py::cpp::{ns.Namespace.ToCppNamespace()}");
-        w.WriteBlock(
-            () =>
-            {
-                var i = 0;
-
-                foreach (
-                    var t in members
-                        .Classes.Concat(members.Interfaces)
-                        .Where(t => t.CircularDependencyDepth == dependencyDepth)
-                )
-                {
-                    if (i++ > 0)
-                    {
-                        w.WriteBlankLine();
-                    }
-
-                    w.WriteInspectableType(t, componentDlls, ns, moduleSuffix);
-
-                    if (t.Category == Category.Interface)
-                    {
-                        w.WriteBlankLine();
-                        w.WriteImplementsInterfaceImpl(t, ns, moduleSuffix);
-                    }
-
-                    didWriteClass = true;
-                }
-
-                foreach (
-                    var t in members.Structs.Where(s =>
-                        !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
-                    )
-                )
-                {
-                    if (i++ > 0)
-                    {
-                        w.WriteBlankLine();
-                    }
-
-                    w.WriteStruct(t, ns, moduleSuffix);
-                    didWriteClass = true;
-                }
-
-                if (i++ > 0)
-                {
-                    w.WriteBlankLine();
-                }
-
-                w.WriteNamespaceInitialization(ns, moduleSuffix);
-            },
-            $" // py::cpp::{ns.Namespace.ToCppNamespace()}"
-        );
-        w.WriteBlankLine();
-
-        w.WriteNamespaceModuleInitFunction(ns, packageMap, members, dependencyDepth, moduleSuffix);
-
-        // only write extra modules if we wrote at least one class
-        if (dependencyDepth != 0 && !didWriteClass)
-        {
-            return;
-        }
-
-        sw.WriteFileIfChanged(nsPackageDir, $"py.{ns.Namespace}{moduleSuffix}.cpp");
+        return RuntimeReleases.OfNamesIn(body);
     }
 }

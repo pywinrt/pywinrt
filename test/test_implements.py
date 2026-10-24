@@ -1,0 +1,366 @@
+"""
+A Python object that implements WinRT interfaces.
+
+The public name of a projected interface is bound to an abstract type, and a
+Python class that derives from one is saying it implements that interface. What
+WinRT is handed when such an object is passed to it is a COM object with a
+tearoff per interface, and these check that calls arrive at the Python object
+through them.
+"""
+
+import gc
+import unittest
+import uuid
+import weakref
+from typing import Any
+
+import test_winrt.testcomponent as tc
+import winrt.windows.foundation as wf
+import winrt.windows.foundation.collections as wfc
+from winrt.system import Array, Object
+from winrt.system.hresult import PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION
+
+from ._util import catch_unraisable
+
+
+class One(tc.IRequiredOne):
+    def one(self) -> int:
+        return 1
+
+
+class Four(tc.IRequiredFour):
+    def one(self) -> int:
+        return 1
+
+    def two(self) -> int:
+        return 2
+
+    def three(self) -> int:
+        return 3
+
+    def four(self) -> int:
+        return 4
+
+
+class TestImplements(unittest.TestCase):
+    def test_method(self) -> None:
+        self.assertEqual(tc.Composable.expect_required_one(One()), 1)
+
+    def test_required_interfaces(self) -> None:
+        # IRequiredFour requires the other three, and each of them is a WinRT
+        # interface of its own with a vtable of its own: the object has to
+        # answer all four, and each method sits in the same slot of a
+        # different vtable.
+        obj = Four()
+
+        self.assertEqual(tc.Composable.expect_required_one(obj), 1)
+        self.assertEqual(tc.Composable.expect_required_two(obj), 2)
+        self.assertEqual(tc.Composable.expect_required_three(obj), 3)
+        self.assertEqual(tc.Composable.expect_required_four(obj), 4)
+
+    def test_isinstance(self) -> None:
+        self.assertIsInstance(One(), tc.IRequiredOne)
+        self.assertNotIsInstance(object(), tc.IRequiredOne)
+
+    def test_held_by_a_winrt_collection(self) -> None:
+        class Stringable(wf.IStringable):
+            def to_string(self) -> str:
+                return "hello"
+
+        obj = Stringable()
+
+        vector = tc.TestRunner.create_stringable_vector()
+        vector.append(obj)
+
+        self.assertEqual(len(vector), 1)
+        # Read back out of the collection it is the object that went in, for
+        # the same reason as the round trip below.
+        self.assertIs(vector[0], obj)
+
+    def test_round_trip_as_object(self) -> None:
+        # Passed where WinRT wants an IInspectable and read back, the same
+        # Python object comes out, because the object that stands for it
+        # answers py::IPywinrtObject.
+        obj = One()
+
+        properties = wfc.PropertySet()
+        # a Python object that implements a WinRT interface is not a wrapper
+        properties.insert("one", obj)
+
+        self.assertIs(properties.lookup("one"), obj)
+
+    def test_runtime_class_name(self) -> None:
+        # An object that is not a runtime class answers with the name of the
+        # first interface it implements, which is what C++/WinRT does.
+        self.assertEqual(
+            tc.TestRunner.expect_object(One()),
+            "TestComponent.IRequiredOne",
+        )
+
+    def test_object_members(self) -> None:
+        # An implementation is a WinRT object as a wrapper is, so it has
+        # Object's members, which answer what WinRT is told about it.
+        obj = Four()
+
+        self.assertIs(obj.as_(tc.IRequiredTwo), obj)
+        self.assertIs(obj.as_(Object), obj)
+
+        with self.assertRaises(OSError):
+            obj.as_(wf.IStringable)
+
+        self.assertEqual(obj._runtime_class_name_, "TestComponent.IRequiredFour")
+
+        # the first interface among the class's bases names it
+        class StringableFirst(wf.IStringable, wf.IClosable):
+            def to_string(self) -> str:
+                return ""
+
+            def close(self) -> None:
+                pass
+
+        class ClosableFirst(wf.IClosable, wf.IStringable):
+            def to_string(self) -> str:
+                return ""
+
+            def close(self) -> None:
+                pass
+
+        self.assertEqual(
+            StringableFirst()._runtime_class_name_, "Windows.Foundation.IStringable"
+        )
+        self.assertEqual(
+            ClosableFirst()._runtime_class_name_, "Windows.Foundation.IClosable"
+        )
+        # the IIDs of IRequiredOne, IRequiredTwo, IRequiredThree and
+        # IRequiredFour
+        self.assertLessEqual(
+            {
+                uuid.UUID("9cdefee9-59a9-5329-a7f3-5935d9ca2711"),
+                uuid.UUID("3a307125-2148-532d-b79b-e8cddf5ca862"),
+                uuid.UUID("541f26d9-3083-50ae-9f32-26f924403688"),
+                uuid.UUID("afbf8d43-f3fa-5093-8d16-05d0e3598a5e"),
+            },
+            set(obj._iids_),
+        )
+
+    def test_property(self) -> None:
+        class Value(wf.IPropertyValue):
+            @property
+            def type(self) -> wf.PropertyType:
+                return wf.PropertyType.STRING
+
+            @property
+            def is_numeric_scalar(self) -> bool:
+                return False
+
+            def get_string(self) -> str:
+                return "hi"
+
+        # WinRT only ever calls the members this implements
+        seen = wf.IPropertyValue._query_interface_(Value())  # type: ignore[abstract]
+
+        self.assertEqual(seen.type, wf.PropertyType.STRING)
+        self.assertFalse(seen.is_numeric_scalar)
+        self.assertEqual(seen.get_string(), "hi")
+
+    def test_property_setter_taking_a_delegate(self) -> None:
+        # The one member shape that goes both ways at once: WinRT writes an
+        # attribute of the Python object, and what it writes is a delegate,
+        # which comes back to Python as a callable that invokes it.
+        class Action(wf.IAsyncAction):
+            def __init__(self) -> None:
+                self.handler: Any = None
+
+            @property
+            def completed(self) -> Any:
+                return self.handler
+
+            @completed.setter
+            def completed(self, value: Any) -> None:
+                self.handler = value
+
+            def get_results(self) -> None:
+                return None
+
+        action = Action()  # type: ignore[abstract]
+        seen = wf.IAsyncAction._query_interface_(action)
+
+        status: list[wf.AsyncStatus] = []
+        # https://github.com/microsoft/pyright/issues/11833
+        seen.completed = lambda sender, value: status.append(value)  # pyright: ignore[reportAttributeAccessIssue, reportUnknownLambdaType, reportUnknownArgumentType]
+
+        self.assertIsNotNone(action.handler)
+
+        action.handler(seen, wf.AsyncStatus.COMPLETED)
+
+        self.assertEqual(status, [wf.AsyncStatus.COMPLETED])
+        # https://github.com/microsoft/pyright/issues/11833, narrowed to the lambda
+        self.assertIsNotNone(seen.completed)  # pyright: ignore[reportUnknownMemberType, reportUnknownArgumentType]
+
+    def test_missing_method_is_unraisable(self) -> None:
+        class Incomplete(tc.IRequiredOne):
+            pass
+
+        # leaving one() out is the point of the test
+        obj = Incomplete()  # type: ignore[abstract]
+
+        with (
+            self.assertRaisesRegex(OSError, "Unraisable Python exception") as ctx,
+            catch_unraisable() as exceptions,
+        ):
+            tc.Composable.expect_required_one(obj)
+
+        self.assertEqual(ctx.exception.winerror, PYWINRT_E_UNRAISABLE_PYTHON_EXCEPTION)
+        self.assertIsInstance(exceptions[0].exc_value, AttributeError)
+        # there is no method to name, so the object is named
+        self.assertIs(exceptions[0].object, obj)
+
+    def test_an_attribute_that_is_not_callable_is_not_named(self) -> None:
+        class NotCallable(tc.IRequiredOne):
+            one = 1  # type: ignore[assignment]
+
+        obj = NotCallable()
+
+        with self.assertRaises(OSError), catch_unraisable() as exceptions:
+            tc.Composable.expect_required_one(obj)
+
+        self.assertIsInstance(exceptions[0].exc_value, TypeError)
+        # the attribute is no method to name, so the object is named
+        self.assertIs(exceptions[0].object, obj)
+
+    def test_a_method_that_raises_is_named(self) -> None:
+        class Failing(tc.IRequiredOne):
+            def one(self) -> int:
+                raise RuntimeError("test")
+
+        obj = Failing()
+
+        with self.assertRaises(OSError), catch_unraisable() as exceptions:
+            tc.Composable.expect_required_one(obj)
+
+        self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        self.assertEqual(exceptions[0].object, obj.one)
+
+    def test_a_property_setter_that_raises_is_named(self) -> None:
+        # Awaiting an action, as async1() does, sets its completed handler.
+        # The setter is named rather than the property, whose repr() names
+        # neither the class nor the property.
+        class Action(wf.IAsyncAction):
+            @property
+            def status(self) -> wf.AsyncStatus:
+                return wf.AsyncStatus.STARTED
+
+            @property
+            def completed(self) -> Any:
+                return None
+
+            @completed.setter
+            def completed(self, value: Any) -> None:
+                raise RuntimeError("test")
+
+            def get_results(self) -> None:
+                return None
+
+        tests = tc.TestRunner.make_tests()
+
+        with catch_unraisable() as exceptions:
+            tests.async1(Action(), False)  # type: ignore[abstract]
+
+        self.assertIsInstance(exceptions[0].exc_value, RuntimeError)
+        self.assertIs(exceptions[0].object, Action.__dict__["completed"].fset)
+
+    def test_object_is_released(self) -> None:
+        obj = One()
+        ref = weakref.ref(obj)
+
+        properties = wfc.PropertySet()
+        # a Python object that implements a WinRT interface is not a wrapper
+        properties.insert("one", obj)
+
+        del obj
+        gc.collect()
+        self.assertIsNotNone(ref(), "the collection should still hold the object")
+
+        properties.clear()
+        del properties
+        gc.collect()
+        self.assertIsNone(ref())
+
+    def test_object_is_released_by_an_array(self) -> None:
+        # An array lets go of its elements without the GIL, which the object
+        # that stands for a Python one takes back to let go of it.
+        for element_type in (Object, tc.IRequiredOne):
+            with self.subTest(element_type=element_type.__name__):
+                replaced, kept = One(), One()
+                replaced_ref, kept_ref = weakref.ref(replaced), weakref.ref(kept)
+
+                array: Array[Any] = Array(element_type, [replaced])
+                array[0] = kept
+
+                del replaced, kept
+                gc.collect()
+                self.assertIsNone(replaced_ref(), "the element replaced")
+                self.assertIsNotNone(kept_ref(), "the array should hold it")
+
+                del array
+                gc.collect()
+                self.assertIsNone(kept_ref(), "the element of an array let go of")
+
+    def test_abstract_type_is_not_instantiable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "abstract class IStringable"):
+            wf.IStringable()  # type: ignore[abstract]
+
+    def test_abstract_parameterized_type_is_not_instantiable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "abstract class IIterable"):
+            wfc.IIterable[int]()  # type: ignore[abstract]
+
+    def test_parameterized_interface_is_not_implementable(self) -> None:
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(wfc.IVector[int]):
+                pass
+
+    def test_parameterized_interface_is_not_implementable_with_a_composable(
+        self,
+    ) -> None:
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(tc.Composable, wfc.IIterable[int]):
+                pass
+
+    def test_parameterized_interface_is_not_implementable_behind_a_mixin(
+        self,
+    ) -> None:
+        # A mixin whose __init_subclass__() does not call the next one hides the
+        # class statement from every base after it, so only the interface not
+        # being a base type refuses this one.
+        class Silent:
+            def __init_subclass__(cls) -> None:
+                pass
+
+        with self.assertRaisesRegex(TypeError, "not an acceptable base type"):
+
+            class _(Silent, wfc.IIterable[int]):
+                pass
+
+    def test_subclass_takes_no_arguments_without_init(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes no arguments"):
+            One(1)  # type: ignore[call-arg]
+
+    def test_subclass_with_init_takes_its_arguments(self) -> None:
+        class Named(wf.IStringable):
+            def __init__(self, name: str) -> None:
+                self.name = name
+
+            def to_string(self) -> str:
+                return self.name
+
+        self.assertEqual(Named("hi").to_string(), "hi")
+
+    def test_not_an_interface(self) -> None:
+        with self.assertRaisesRegex(TypeError, "expected a WinRT object"):
+            tc.Composable.expect_required_one(object())  # type: ignore
+
+
+if __name__ == "__main__":
+    unittest.main()

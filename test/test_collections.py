@@ -1,8 +1,10 @@
 import asyncio
 import collections.abc
+import sys
 import unittest
-from typing import cast
+from typing import Any, cast
 
+import test_winrt.testcomponent as tc
 import winrt.windows.foundation.collections as wfc
 from winrt.system import Object, box_string, unbox_string
 
@@ -10,7 +12,7 @@ from ._util import async_test
 
 
 class TestCollectionsStringMap(unittest.TestCase):
-    def test_string_map(self):
+    def test_string_map(self) -> None:
         m = wfc.StringMap()
         m.insert("hello", "world")
 
@@ -29,7 +31,7 @@ class TestCollectionsStringMap(unittest.TestCase):
         with self.assertRaises(OSError):
             m.remove("hello")
 
-    def test_string_map_is_mapping(self):
+    def test_string_map_is_mapping(self) -> None:
         m = wfc.StringMap()
 
         self.assertIsInstance(m, collections.abc.Mapping)
@@ -77,11 +79,54 @@ class TestCollectionsStringMap(unittest.TestCase):
 
         self.assertEqual(m.popitem(), ("hello", "world"))
 
-        with self.assertRaises(KeyError):
+        with self.assertRaisesRegex(KeyError, r"^'popitem\(\): map is empty'$"):
             m.popitem()
 
+    def test_a_map_has_no_hash(self) -> None:
+        # it compares by content, as a dict does, and two equal maps are
+        # different objects
+        a = wfc.StringMap()
+        a["hello"] = "world"
+        b = wfc.StringMap()
+        b["hello"] = "world"
+
+        self.assertEqual(a, b)
+
+        for m in (a, a.get_view()):
+            with self.subTest(m=m):
+                with self.assertRaises(TypeError):
+                    hash(m)
+
+    def test_a_key_of_another_type_is_refused(self) -> None:
+        # as os.environ does, even where a dict would answer False or None
+        m = wfc.StringMap()
+        m["hello"] = "world"
+        key: Any = 5
+
+        for name, call in (
+            ("in", lambda: key in m),
+            ("[]", lambda: m[key]),
+            ("get", lambda: m.get(key)),
+            ("pop", lambda: m.pop(key, None)),
+        ):
+            with self.subTest(name=name):
+                with self.assertRaises(TypeError):
+                    call()
+
+    def test_key_iterator_lets_go_of_the_pairs(self) -> None:
+        m = wfc.StringMap()
+        m["hello"] = "world"
+
+        keys = iter(m)
+        pairs = cast(Any, keys)._iter
+        held = sys.getrefcount(pairs)
+
+        del keys
+
+        self.assertEqual(sys.getrefcount(pairs), held - 1)
+
     @async_test
-    async def test_string_map_changed_event(self):
+    async def test_string_map_changed_event(self) -> None:
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 
@@ -113,7 +158,7 @@ class TestCollectionsStringMap(unittest.TestCase):
 
 
 class TestCollectionsPropertySet(unittest.TestCase):
-    def test_value_set(self):
+    def test_value_set(self) -> None:
         m = wfc.PropertySet()
         m.insert("hello", box_string("world"))
 
@@ -132,7 +177,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
         with self.assertRaises(OSError):
             m.remove("hello")
 
-    def test_test_property_set_is_mapping(self):
+    def test_test_property_set_is_mapping(self) -> None:
         m = wfc.PropertySet()
         self.assertFalse(m, "Empty set should be falsy")
 
@@ -188,5 +233,111 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
         self.assertIsNotNone(m.popitem())
 
-        with self.assertRaises(KeyError):
+        with self.assertRaisesRegex(KeyError, r"^'popitem\(\): map is empty'$"):
             m.popitem()
+
+    def test_property_set_is_a_mutable_mapping(self) -> None:
+        # the type checkers check the call
+        def keys(m: collections.abc.MutableMapping[str, Object]) -> list[str]:
+            return list(m)
+
+        m = wfc.PropertySet()
+        m["hello"] = box_string("world")
+
+        self.assertEqual(keys(m), ["hello"])
+
+
+class TestCollectionsVector(unittest.TestCase):
+    def setUp(self) -> None:
+        self.vector = tc.TestRunner.create_string_vector()
+        self.vector.extend(["a", "b"])
+
+    def test_negative_index_counts_from_the_end(self) -> None:
+        self.assertEqual(self.vector[-1], "b")
+        self.assertEqual(self.vector[-2], "a")
+
+    def test_negative_index_out_of_range(self) -> None:
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            self.vector[-3]
+
+    def test_index_out_of_range(self) -> None:
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            self.vector[2]
+
+        # past what a vector can count, and past what a 32-bit Py_ssize_t
+        # holds, which CPython refuses with a message of its own
+        with self.assertRaises(IndexError):
+            self.vector[2**32]
+
+    def test_view_index(self) -> None:
+        view, _ = tc.TestRunner.make_tests().collection6(["a", "b"])
+
+        self.assertEqual(view[-1], "b")
+
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            view[-3]
+
+        with self.assertRaisesRegex(IndexError, "index out of range"):
+            view[2]
+
+    def test_reversed(self) -> None:
+        self.assertEqual(list(reversed(self.vector)), ["b", "a"])
+
+    def test_index_and_remove_of_a_missing_value(self) -> None:
+        self.assertEqual(self.vector.index("b"), 1)
+
+        with self.assertRaisesRegex(ValueError, r"^index\(x\): x not in vector$"):
+            self.vector.index("z")
+
+        with self.assertRaisesRegex(ValueError, r"^remove\(x\): x not in vector$"):
+            self.vector.remove("z")
+
+        self.vector.remove("a")
+        self.assertEqual(list(self.vector), ["b"])
+
+    def test_view_index_of_a_missing_value(self) -> None:
+        view, _ = tc.TestRunner.make_tests().collection6(["a", "b"])
+
+        with self.assertRaisesRegex(ValueError, r"^index\(x\): x not in vector$"):
+            view.index("z")
+
+    def test_negative_index_assign_and_del(self) -> None:
+        self.vector[-1] = "z"
+        self.assertEqual(list(self.vector), ["a", "z"])
+
+        del self.vector[-2]
+        self.assertEqual(list(self.vector), ["z"])
+
+    def test_assign_and_del_out_of_range(self) -> None:
+        for index in (2, -3):
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                self.vector[index] = "z"
+
+            with self.assertRaisesRegex(IndexError, "index out of range"):
+                del self.vector[index]
+
+        # as in test_index_out_of_range()
+        with self.assertRaises(IndexError):
+            self.vector[2**32] = "z"
+
+        with self.assertRaises(IndexError):
+            del self.vector[2**32]
+
+        self.assertEqual(list(self.vector), ["a", "b"])
+
+    def test_insert(self) -> None:
+        self.vector.insert(1, "x")
+        self.assertEqual(list(self.vector), ["a", "x", "b"])
+
+    def test_insert_negative_index_counts_from_the_end(self) -> None:
+        self.vector.insert(-1, "x")
+        self.assertEqual(list(self.vector), ["a", "x", "b"])
+
+    def test_insert_takes_no_keywords(self) -> None:
+        with self.assertRaisesRegex(TypeError, "takes no keyword arguments"):
+            self.vector.insert(index=1, value="x")  # type: ignore[call-arg]
+
+    def test_insert_out_of_range_inserts_at_the_nearer_end(self) -> None:
+        self.vector.insert(-100, "x")
+        self.vector.insert(100, "y")
+        self.assertEqual(list(self.vector), ["x", "a", "b", "y"])

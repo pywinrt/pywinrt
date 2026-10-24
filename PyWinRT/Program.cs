@@ -4,12 +4,10 @@ using System.CommandLine.Builder;
 using System.CommandLine.Help;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Diagnostics;
 using Mono.Cecil;
 
-var inputOption = new Option<(string, string)[]>(
+var inputOption = new Option<InputSpec[]>(
     "--input",
     CommandReader.ParseSpec,
     default,
@@ -20,7 +18,7 @@ var inputOption = new Option<(string, string)[]>(
     ArgumentHelpName = "spec",
 };
 
-var referenceOption = new Option<(string, string)[]>(
+var referenceOption = new Option<InputSpec[]>(
     "--reference",
     CommandReader.ParseSpec,
     default,
@@ -28,7 +26,7 @@ var referenceOption = new Option<(string, string)[]>(
 )
 {
     Arity = ArgumentArity.ZeroOrMore,
-    ArgumentHelpName = "spec"
+    ArgumentHelpName = "spec",
 };
 
 var outputOption = new Option<DirectoryInfo>(
@@ -38,7 +36,7 @@ var outputOption = new Option<DirectoryInfo>(
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
-    ArgumentHelpName = "path"
+    ArgumentHelpName = "path",
 };
 
 var includeOption = new Option<string[]>(
@@ -59,15 +57,32 @@ var excludeOption = new Option<string[]>(
     ArgumentHelpName = "prefix",
 };
 
-var headerPathOption = new Option<DirectoryInfo?>("--header-path", "Install headers in custom path")
+var nullabilityJsonPathOption = new Option<FileInfo?>(
+    "--nullability-json",
+    "Nullability information JSON file"
+)
 {
     Arity = ArgumentArity.ZeroOrOne,
     ArgumentHelpName = "path",
 };
 
-var nullabilityJsonPathOption = new Option<FileInfo?>(
-    "--nullability-json",
-    "Nullability information JSON file"
+var shapesOption = new Option<FileInfo?>(
+    "--shapes",
+    "The ABI call shape census (shapes.json) that the tables name their members' call "
+        + "shapes out of. Defaults to the copy that ships beside this tool, which is the "
+        + "census the matching winrt-runtime was built from."
+)
+{
+    Arity = ArgumentArity.ZeroOrOne,
+    ArgumentHelpName = "path",
+};
+
+var emitShapesOption = new Option<DirectoryInfo?>(
+    "--emit-shapes",
+    "Directory holding the ABI call shape census (shapes.json) and the trampoline "
+        + "instantiations (shapes-generated.h) that this run merges into, which is how a "
+        + "census gains a shape. A projection generated this way needs a winrt-runtime "
+        + "built from the same directory. With --verbose, the merged census is reported."
 )
 {
     Arity = ArgumentArity.ZeroOrOne,
@@ -79,6 +94,20 @@ var componentDllsOption = new Option<bool>(
     "Set this flag when generating projection for user components that will ship with the required .dlls in the Python package"
 );
 
+var dllPackageOption = new Option<string>(
+    "--dll-package",
+    "The Python module of the distribution that redistributes the component .dlls, when they ship in a package of their own rather than in this one"
+)
+{
+    ArgumentHelpName = "module",
+};
+
+var legacyMethodAliasesOption = new Option<bool>(
+    "--legacy-method-aliases",
+    "Give each method that pywinrt v3.x projected under another name a deprecated alias with "
+        + "that name. Only a projection that pywinrt v3.x published has code that calls them."
+);
+
 var verboseOption = new Option<bool>("--verbose", "Show detailed progress information");
 
 var rootCommand = new RootCommand("Generate Python projection for Windows Runtime types");
@@ -87,9 +116,12 @@ rootCommand.AddOption(referenceOption);
 rootCommand.AddOption(outputOption);
 rootCommand.AddOption(includeOption);
 rootCommand.AddOption(excludeOption);
-rootCommand.AddOption(headerPathOption);
 rootCommand.AddOption(nullabilityJsonPathOption);
+rootCommand.AddOption(shapesOption);
+rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
+rootCommand.AddOption(dllPackageOption);
+rootCommand.AddOption(legacyMethodAliasesOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
@@ -99,45 +131,87 @@ rootCommand.SetHandler(
         var types = new List<TypeDefinition>();
         var packageMap = new Dictionary<string, string>();
 
+        // Which distribution the namespaces of each metadata file are
+        // published in, when the input says so. Keyed like packageMap, by the
+        // name of the module the types come from.
+        var distributionMap = new Dictionary<string, string>();
+
         var input = invocationContext.ParseResult.GetValueForOption(inputOption)!;
         var reference = invocationContext.ParseResult.GetValueForOption(referenceOption)!;
         var output = invocationContext.ParseResult.GetValueForOption(outputOption)!;
         var include = invocationContext.ParseResult.GetValueForOption(includeOption)!;
         var exclude = invocationContext.ParseResult.GetValueForOption(excludeOption)!;
-        var headerPath = invocationContext.ParseResult.GetValueForOption(headerPathOption);
         var nullabilityInfoPath = invocationContext.ParseResult.GetValueForOption(
             nullabilityJsonPathOption
         );
+        var shapes = invocationContext.ParseResult.GetValueForOption(shapesOption);
+        var emitShapes = invocationContext.ParseResult.GetValueForOption(emitShapesOption);
         var componentDlls = invocationContext.ParseResult.GetValueForOption(componentDllsOption);
+        var dllPackage = invocationContext.ParseResult.GetValueForOption(dllPackageOption);
+        var legacyMethodAliases = invocationContext.ParseResult.GetValueForOption(
+            legacyMethodAliasesOption
+        );
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         var inputPackage = default(string);
+        var stopwatch = Stopwatch.StartNew();
 
-        foreach (var (file, package) in input)
+        // The nullability info file can be large, so start loading it right
+        // away in parallel with everything else. It isn't needed until the
+        // generated files are written.
+        var nullabilityLoadTime = TimeSpan.Zero;
+        var nullabilityFileTask = Task.Run(() =>
+        {
+            var nullabilityStopwatch = Stopwatch.StartNew();
+            var nullabilityFile = NullabilityInfoFile.Load(nullabilityInfoPath);
+            nullabilityLoadTime = nullabilityStopwatch.Elapsed;
+            return nullabilityFile;
+        });
+
+        // Reading the metadata files is independent of each other, so it can
+        // be done in parallel, but registration must be done in order.
+        var inputAssemblies = input
+            .AsParallel()
+            .AsOrdered()
+            .Select(spec =>
+                AssemblyDefinition.ReadAssembly(
+                    spec.File,
+                    new ReaderParameters { MetadataResolver = resolver }
+                )
+            )
+            .ToList();
+
+        var referenceAssemblies = reference
+            .AsParallel()
+            .AsOrdered()
+            .Select(spec =>
+                AssemblyDefinition.ReadAssembly(
+                    spec.File,
+                    new ReaderParameters { MetadataResolver = resolver }
+                )
+            )
+            .ToList();
+
+        foreach (var (spec, assembly) in input.Zip(inputAssemblies))
         {
             if (inputPackage is null)
             {
-                inputPackage = package;
+                inputPackage = spec.Package;
             }
-            else if (inputPackage != package)
+            else if (inputPackage != spec.Package)
             {
                 throw new Exception("All input packages must be the same python package");
             }
 
-            var assembly = AssemblyDefinition.ReadAssembly(
-                file,
-                new ReaderParameters { MetadataResolver = resolver }
-            );
-
             resolver.Register(assembly);
-            packageMap.Add(assembly.Modules.Single().Name, package);
 
-            types.AddRange(
-                assembly
-                    .MainModule.Types.Where(TypeExtensions.IsWindowsRuntime)
-                    .Where(t => !t.IsExclusiveTo())
-                    .Where(t => Filter.Includes(t.FullName, include, exclude))
-            );
+            var module = assembly.Modules.Single().Name;
+            packageMap.Add(module, spec.Package);
+
+            if (spec.Distribution is not null)
+            {
+                distributionMap.Add(module, spec.Distribution);
+            }
         }
 
         if (inputPackage is null)
@@ -145,23 +219,132 @@ rootCommand.SetHandler(
             throw new Exception("At least one input package is required");
         }
 
-        foreach (var (file, package) in reference)
+        foreach (var (spec, assembly) in reference.Zip(referenceAssemblies))
         {
-            var assembly = AssemblyDefinition.ReadAssembly(
-                file,
-                new ReaderParameters { MetadataResolver = resolver }
-            );
-
             resolver.Register(assembly);
-            packageMap.Add(assembly.Modules.Single().Name, package);
 
-            if (package == inputPackage)
+            var module = assembly.Modules.Single().Name;
+
+            // A reference names types that someone else projects, so one
+            // metadata file is an input or a reference and never both. The
+            // package it belongs to says nothing about that, and is often
+            // this run's own: every family in the PyWinRT tree but WinUI 2
+            // publishes into winrt.
+            if (packageMap.ContainsKey(module))
             {
                 throw new Exception(
-                    $"Reference package ({package}) must not match input package for {file}"
+                    $"{module} is an input of this run, so it cannot be a reference"
+                        + $" as well ({spec.File})"
+                );
+            }
+
+            packageMap.Add(module, spec.Package);
+        }
+
+        var loadTime = stopwatch.Elapsed;
+        stopwatch.Restart();
+
+        if (shapes is not null && emitShapes is not null)
+        {
+            throw new Exception(
+                "--shapes and --emit-shapes name different censuses: --shapes reads one, "
+                    + "and --emit-shapes reads and extends the one in its directory"
+            );
+        }
+
+        Census census;
+
+        if (emitShapes is null)
+        {
+            // A table names a member's call shape by an id, and an id means
+            // what the census that issued it says it means. So a run that does
+            // not also build the trampolines reads a census someone else wrote
+            // and never assigns an id of its own: the default is the copy that
+            // ships beside this tool, which is the one the matching
+            // winrt-runtime was built from.
+            var file =
+                shapes ?? new FileInfo(Path.Combine(AppContext.BaseDirectory, "shapes.json"));
+
+            if (!file.Exists)
+            {
+                throw new Exception(
+                    $"there is no ABI call shape census at {file.FullName}: the tables name "
+                        + "the call shapes of their members by id, and the ids are assigned by "
+                        + "the census that the winrt-runtime being generated against was built "
+                        + "from. It ships beside the tool in the PyWinRT NuGet package, and in "
+                        + "the PyWinRT source tree at runtime/src/shapes.json; name one with "
+                        + "--shapes, or build a winrt-runtime of your own with --emit-shapes"
+                );
+            }
+
+            census = Census.Load(file);
+
+            // The census is read rather than extended, so a component that
+            // makes a call it does not cover is told which shape that is here,
+            // rather than when the member is first used. Taking the census
+            // costs one metadata walk and is what makes the report complete.
+            var needed = new ShapeCensus().Take(
+                inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
+            );
+
+            if (census.ReportMissing(needed, Console.Error) > 0)
+            {
+                Console.Error.WriteLine(
+                    "warning: those members are still projected, but using one raises. Add a "
+                        + "member of each shape above to https://github.com/pywinrt/testwinrt "
+                        + "and the next winrt-runtime release will cover it."
                 );
             }
         }
+        else
+        {
+            // The trampolines that call WinRT are compiled into winrt-runtime
+            // once for the whole tree, so the census reads every type of every
+            // input, including the interfaces that are exclusive to a runtime
+            // class and are therefore never projected as a Python type but are
+            // still what a call goes through. No run can see all of the
+            // metadata at once - WinUI 2 and the Windows App SDK both define
+            // Microsoft.UI.Xaml.Controls - so each one merges what it found
+            // into the census file, which also holds the shape ids and is why
+            // they are stable.
+            var fragment = new ShapeCensus().Take(
+                inputAssemblies.SelectMany(a => a.MainModule.Types).Where(t => t.IsWindowsRuntime)
+            );
+
+            census = Census.LoadOrCreate(
+                new FileInfo(Path.Combine(emitShapes.FullName, "shapes.json"))
+            );
+
+            // The family a fragment belongs to is the directory this run
+            // writes into - see Census.Families for why it is not the package.
+            census.Merge(output.Name, fragment);
+            census.Save(emitShapes, "shapes.json");
+            census.WriteShapesHeader(emitShapes, "shapes-generated.h");
+        }
+
+        if (verbose)
+        {
+            census.WriteReport(Console.Out);
+            Console.WriteLine();
+        }
+
+        var censusTime = stopwatch.Elapsed;
+        stopwatch.Restart();
+
+        var tasks = new List<Task<NamespaceDependencies?>>();
+
+        foreach (var assembly in inputAssemblies)
+        {
+            types.AddRange(
+                assembly
+                    .MainModule.Types.Where(t => t.IsWindowsRuntime)
+                    .Where(t => !t.IsExclusiveTo)
+                    .Where(t => Filter.Includes(t.FullName, include, exclude))
+            );
+        }
+
+        var filterTime = stopwatch.Elapsed;
+        stopwatch.Restart();
 
         if (verbose)
         {
@@ -180,87 +363,231 @@ rootCommand.SetHandler(
             Console.WriteLine($"Output: {output.FullName}");
             Console.WriteLine($"Include: {string.Join(";", include)}");
             Console.WriteLine($"Exclude: {string.Join(";", exclude)}");
-            Console.WriteLine($"Header Path: {headerPath?.FullName ?? "<default>"}");
+            Console.WriteLine($"Loaded metadata in {loadTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine($"Took the shape census in {censusTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine($"Filtered types in {filterTime.TotalMilliseconds:F0} ms");
         }
 
-        var tasks = new List<Task>();
+        // Which distribution each namespace is published in. A namespace whose
+        // types all come from metadata of one distribution belongs to it; one
+        // that several contribute to is published on its own instead, and each
+        // of them depends on it. That rule is what keeps a namespace from
+        // being owned by two distributions at once, and it needs no list to
+        // maintain: the metadata says which case a namespace is in.
+        var distributions = new Dictionary<QualifiedNamespace, string>();
 
-        // if we are building the base projection (not user components),
-        // then emit some extra files
-        if (reference.Length == 0)
+        // A namespace this run only references is published by whoever projects
+        // it, and where that is not one distribution per namespace there is
+        // nothing in the metadata to say so, so the reference has to. Without
+        // it the fall-back below is the Windows SDK's layout, which would name
+        // a distribution that does not exist.
+        foreach (var (spec, assembly) in reference.Zip(referenceAssemblies))
         {
+            if (spec.Distribution is null)
+            {
+                continue;
+            }
+
+            foreach (var type in assembly.MainModule.Types.Where(t => t.IsWindowsRuntime))
+            {
+                distributions[new QualifiedNamespace(spec.Package, type.Namespace)] =
+                    spec.Distribution;
+            }
+        }
+
+        foreach (
+            var group in types.GroupBy(t => t.Namespace).OrderBy(g => g.Key, StringComparer.Ordinal)
+        )
+        {
+            var ns = new QualifiedNamespace(inputPackage, group.Key);
+            var owners = group
+                .Select(t => distributionMap.GetValueOrDefault(t.Module.Name))
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+
+            if (owners is [string only])
+            {
+                distributions[ns] = only;
+                continue;
+            }
+
+            // Either the input says nothing about distributions, in which case
+            // every namespace is published on its own, or it does and this one
+            // is contributed by more than one. Saying so matters: it is a
+            // layout the packaging has to cope with rather than notice.
+            distributions[ns] = group.Key;
+
+            if (distributionMap.Count > 0)
+            {
+                Console.WriteLine(
+                    $"note: {group.Key} is contributed by "
+                        + string.Join(", ", owners.Select(o => o ?? "no distribution"))
+                        + ", so it is published on its own"
+                );
+            }
+        }
+
+        var namespaceTimes = new ConcurrentBag<(string Namespace, TimeSpan Elapsed)>();
+
+        // Generation is pipelined: the metadata for each namespace is
+        // preloaded on this thread (see ModulePreloader for why) and then the
+        // namespace is handed off to the thread pool to be generated while
+        // the next namespace is being preloaded. The largest namespaces are
+        // started first so that they are not left running alone at the end
+        // after all of the smaller ones are done.
+        var preloader = new ModulePreloader();
+
+        // The preloading on this thread gates the whole pipeline, so give it
+        // priority over the thread pool threads that generate the code.
+        var priority = Thread.CurrentThread.Priority;
+        Thread.CurrentThread.Priority = ThreadPriority.AboveNormal;
+
+        foreach (
+            var group in types
+                .GroupBy(t => t.Namespace)
+                .Select(g => g.ToList())
+                .OrderByDescending(g =>
+                    g.Sum(t => t.GetCategory() is Category.Class or Category.Interface ? 4 : 1)
+                )
+        )
+        {
+            var groupNamespace = group[0].Namespace;
+
+            preloader.Preload(group);
+
             tasks.Add(
                 Task.Run(() =>
                 {
-                    FileWriters.WriteBaseFiles(headerPath ?? output);
-                })
-            );
-        }
+                    var nsStopwatch = Stopwatch.StartNew();
 
-        var oldNullabilityInfo = default(List<NamespaceNullabilityInfo>);
-
-        if (nullabilityInfoPath is not null && nullabilityInfoPath.Exists)
-        {
-            using var stream = nullabilityInfoPath.OpenRead();
-            oldNullabilityInfo = JsonSerializer.Deserialize<List<NamespaceNullabilityInfo>>(
-                stream,
-                new JsonSerializerOptions
-                {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
-                }
-            );
-        }
-
-        if (oldNullabilityInfo is null)
-        {
-            oldNullabilityInfo = new();
-        }
-
-        var nullabilityInfo = new ConcurrentDictionary<string, NamespaceNullabilityInfo>(
-            oldNullabilityInfo.ToDictionary(i => i.Namespace)
-        );
-
-        foreach (var group in types.GroupBy(t => t.Namespace))
-        {
-            tasks.Add(
-                Task.Run(() =>
-                {
-                    FileWriters.WriteNamespaceFiles(
+                    var dependencies = FileWriters.WriteNamespaceFiles(
                         output,
-                        headerPath,
-                        new QualifiedNamespace(inputPackage, group.Key),
-                        nullabilityInfo.GetOrAdd(
-                            group.Key,
-                            _ => new NamespaceNullabilityInfo(group.Key, [])
-                        ),
+                        new QualifiedNamespace(inputPackage, groupNamespace),
+                        distributions[new QualifiedNamespace(inputPackage, groupNamespace)],
+                        () => nullabilityFileTask.Result.GetOrAdd(groupNamespace),
                         packageMap,
                         group,
-                        componentDlls
+                        componentDlls,
+                        dllPackage,
+                        legacyMethodAliases,
+                        census
                     );
+
+                    namespaceTimes.Add((groupNamespace, nsStopwatch.Elapsed));
+
+                    return dependencies;
                 })
             );
         }
+
+        var preloadTime = stopwatch.Elapsed;
+        Thread.CurrentThread.Priority = priority;
 
         await Task.WhenAll(tasks);
 
+        // One deps.json per distribution, now that every namespace in it has
+        // been generated. What a package says about another package is said
+        // in distributions, so the namespaces this one provides drop out of
+        // both lists rather than becoming a requirement on itself.
+        var written = new HashSet<string>(StringComparer.Ordinal);
+
+        string distributionOf(QualifiedNamespace ns) =>
+            $"{ns.PyPackage}-{distributions.GetValueOrDefault(ns, ns.Namespace)}";
+
+        foreach (
+            var distribution in tasks
+                .Select(t => t.Result)
+                .OfType<NamespaceDependencies>()
+                .GroupBy(d => distributions[new QualifiedNamespace(inputPackage, d.Namespace)])
+        )
+        {
+            var name = $"{inputPackage}-{distribution.Key}";
+            var provided = distribution.Select(d => d.Namespace).ToHashSet(StringComparer.Ordinal);
+
+            SortedSet<string> names(Func<NamespaceDependencies, IEnumerable<QualifiedNamespace>> of)
+            {
+                var result = new SortedSet<string>(StringComparer.Ordinal);
+
+                foreach (var ns in distribution.SelectMany(of))
+                {
+                    if (ns.PyPackage == inputPackage && provided.Contains(ns.Namespace))
+                    {
+                        continue;
+                    }
+
+                    result.Add(distributionOf(ns));
+                }
+
+                return result;
+            }
+
+            FileWriters.WriteDepsJson(
+                new DirectoryInfo(Path.Combine(output.FullName, name)),
+                census,
+                distribution.Max(d => d.CensusRevision),
+                RuntimeReleases.Newest(distribution.Select(d => d.Runtime)),
+                [.. provided.Order(StringComparer.Ordinal)],
+                names(d => d.Required),
+                names(d => d.Referenced)
+            );
+
+            written.Add(name);
+        }
+
+        // A namespace that upstream withdrew, or one that moved into another
+        // distribution, leaves behind a directory that nothing writes any
+        // more, and it is published from this tree until someone notices.
+        // A deps.json is what marks a directory as one of ours, and a run that
+        // was told to generate part of the projection is in no position to say
+        // what the rest of it should be.
+        if (include.Length == 0 && exclude.Length == 0 && output.Exists)
+        {
+            foreach (var dir in output.EnumerateDirectories($"{inputPackage}-*"))
+            {
+                if (written.Contains(dir.Name))
+                {
+                    continue;
+                }
+
+                if (!File.Exists(Path.Combine(dir.FullName, "deps.json")))
+                {
+                    continue;
+                }
+
+                Console.WriteLine($"note: removing {dir.Name}, which nothing generates now");
+                dir.Delete(recursive: true);
+            }
+        }
+
+        var nullabilityFile = await nullabilityFileTask;
+
+        if (verbose)
+        {
+            Console.WriteLine($"Preloaded metadata in {preloadTime.TotalMilliseconds:F0} ms");
+            Console.WriteLine(
+                $"Loaded nullability info in {nullabilityLoadTime.TotalMilliseconds:F0} ms (in parallel)"
+            );
+            Console.WriteLine($"Generated projection in {stopwatch.ElapsedMilliseconds} ms");
+            Console.WriteLine("Slowest namespaces:");
+
+            foreach (var (ns, elapsed) in namespaceTimes.OrderByDescending(t => t.Elapsed).Take(10))
+            {
+                Console.WriteLine($"    {ns}: {elapsed.TotalMilliseconds:F0} ms");
+            }
+
+            stopwatch.Restart();
+        }
+
         if (nullabilityInfoPath is not null)
         {
-            using var stream = nullabilityInfoPath.Create();
+            NullabilityJson.Write(nullabilityInfoPath, nullabilityFile.ToSortedList());
+        }
 
-            JsonSerializer.Serialize(
-                stream,
-                nullabilityInfo
-                    .OrderBy(i => i.Key, StringComparer.Ordinal)
-                    .Select(i => i.Value)
-                    .ToList(),
-                new JsonSerializerOptions
-                {
-                    WriteIndented = true,
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
-                    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-                }
+        if (verbose)
+        {
+            Console.WriteLine($"Wrote nullability info in {stopwatch.ElapsedMilliseconds} ms");
+            Console.WriteLine(
+                $"GC: gen0 {GC.CollectionCount(0)}, gen1 {GC.CollectionCount(1)}, gen2 {GC.CollectionCount(2)}, total pause {GC.GetTotalPauseDuration().TotalMilliseconds:F0} ms, allocated {GC.GetTotalAllocatedBytes() / (1024 * 1024)} MB"
             );
         }
     }

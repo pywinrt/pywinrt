@@ -1,0 +1,288 @@
+#include "interop.h"
+// before MddBootstrap.h, which reads the release it expects from it
+#include "version_info.h"
+
+#include <windows.h>
+
+// MddBootstrap.h calls std::abort() without including <cstdlib>.
+#include <cstdlib>
+
+#include <MddBootstrap.h>
+
+#include <memory>
+#include <string_view>
+
+// https://learn.microsoft.com/en-us/windows/apps/api-reference/bootstrapper-cpp-api/microsoft.windows.applicationmodel.dynamicdependency.bootstrap/microsoft.windows.applicationmodel.dynamicdependency.bootstrap#functions-in-themicrosoftwindowsapplicationmodeldynamicdependencybootstrap-namespace
+namespace
+{
+    using namespace ::Microsoft::Windows::ApplicationModel::DynamicDependency::
+        Bootstrap;
+
+    struct ShutdownObject
+    {
+        PyObject_HEAD;
+        unique_mddbootstrapshutdown shutdown;
+    };
+
+    /// Undoes what initialize() did, unless that has been done already.
+    void shut_down(ShutdownObject& self) noexcept
+    {
+        if (!self.shutdown)
+        {
+            return;
+        }
+
+        // It removes the package dependency, which may be a call into the
+        // Dynamic Dependency Lifetime Manager in its own process.
+        interop::gil_released const guard;
+        self.shutdown.reset();
+    }
+
+    static void shutdown_dealloc(ShutdownObject* self) noexcept;
+
+    static PyObject* initialize(PyObject* module, PyObject* args) noexcept
+    {
+        uint32_t major_minor_version;
+        PyObject* version_tag_obj;
+        uint64_t min_version;
+        InitializeOptions options;
+
+        if (!PyArg_ParseTuple(
+                args,
+                "IOKI:initialize",
+                &major_minor_version,
+                &version_tag_obj,
+                &min_version,
+                &options))
+        {
+            return nullptr;
+        }
+
+        wchar_t* version_tag{};
+
+        if (!Py_IsNone(version_tag_obj))
+        {
+            version_tag = PyUnicode_AsWideCharString(version_tag_obj, nullptr);
+            if (!version_tag)
+            {
+                return nullptr;
+            }
+        }
+
+        std::unique_ptr<wchar_t, decltype(&PyMem_Free)> version_tag_owner{
+            version_tag, &PyMem_Free};
+
+        auto const shutdown_type = PyObject_GetAttrString(module, "Shutdown");
+        if (!shutdown_type)
+        {
+            return nullptr;
+        }
+
+        auto const shutdown = PyObject_CallNoArgs(shutdown_type);
+        Py_DECREF(shutdown_type);
+        if (!shutdown)
+        {
+            return nullptr;
+        }
+
+        // Shutdown is a module attribute, which anything can rebind, so what
+        // calling it made is only a ShutdownObject if it is of the type this
+        // module made, which is the one type with this deallocator.
+        if (Py_TYPE(shutdown)->tp_dealloc
+            != reinterpret_cast<destructor>(shutdown_dealloc))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "Shutdown() made a %s, not a Shutdown object",
+                Py_TYPE(shutdown)->tp_name);
+            Py_DECREF(shutdown);
+            return nullptr;
+        }
+
+        HRESULT hr{};
+
+        {
+            // It may start the Dynamic Dependency Lifetime Manager in a
+            // process of its own, and may show UI and wait for the user.
+            interop::gil_released const guard;
+            hr = InitializeNoThrow(
+                major_minor_version, version_tag, min_version, options);
+        }
+
+        if (FAILED(hr))
+        {
+            Py_DECREF(shutdown);
+            return interop::set_hresult_error(hr);
+        }
+
+        reinterpret_cast<ShutdownObject*>(shutdown)->shutdown.reset(
+            reinterpret_cast<details::mddbootstrapshutdown_t*>(1));
+
+        return shutdown;
+    }
+
+    static PyMethodDef module_methods[]{
+        {"initialize", initialize, METH_VARARGS, nullptr}, {}};
+
+    PyDoc_STRVAR(module_doc, "APIs for bootstrapping Windows App SDK framework.");
+
+    static PyObject* shutdown_new(
+        PyTypeObject* subtype, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<ShutdownObject*>(subtype->tp_alloc(subtype, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        // call C++ constructors on memory allocated from CPython heap
+        std::construct_at(&self->shutdown);
+
+        return reinterpret_cast<PyObject*>(self);
+    }
+
+    static void shutdown_dealloc(ShutdownObject* self) noexcept
+    {
+        PyTypeObject* tp = Py_TYPE(self);
+
+        if (self->shutdown)
+        {
+#if PY_VERSION_HEX < 0x030C0000
+            PyObject *error_type, *error_value, *error_traceback;
+
+            PyErr_Fetch(&error_type, &error_value, &error_traceback);
+#else
+            auto const error = PyErr_GetRaisedException();
+#endif
+
+            if (PyErr_WarnEx(
+                    PyExc_RuntimeWarning,
+                    "Shutdown object was not called before being garbage collected.",
+                    1)
+                == -1)
+            {
+                PyErr_WriteUnraisable(reinterpret_cast<PyObject*>(self));
+            }
+
+#if PY_VERSION_HEX < 0x030C0000
+            PyErr_Restore(error_type, error_value, error_traceback);
+#else
+            if (error)
+            {
+                PyErr_SetRaisedException(error);
+            }
+#endif
+
+            shut_down(*self);
+        }
+
+        std::destroy_at(&self->shutdown);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* shutdown_call(PyObject* self, PyObject* /*unused*/) noexcept
+    {
+        shut_down(*reinterpret_cast<ShutdownObject*>(self));
+
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* shutdown_identity(PyObject* self, PyObject* /*unused*/) noexcept
+    {
+        Py_INCREF(self);
+        return self;
+    }
+
+    static PyMethodDef shutdown_methods[]{
+        {"__enter__",
+         reinterpret_cast<PyCFunction>(shutdown_identity),
+         METH_NOARGS,
+         nullptr},
+        {"__exit__",
+         reinterpret_cast<PyCFunction>(shutdown_call),
+         METH_VARARGS,
+         nullptr},
+        {}};
+
+    static PyType_Slot shutdown_slots[]{
+        {Py_tp_new, reinterpret_cast<void*>(shutdown_new)},
+        {Py_tp_dealloc, reinterpret_cast<void*>(shutdown_dealloc)},
+        {Py_tp_call, reinterpret_cast<void*>(shutdown_call)},
+        {Py_tp_methods, reinterpret_cast<void*>(shutdown_methods)},
+        {}};
+
+    static PyType_Spec shutdown_type_spec{
+        "winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap.Shutdown",
+        sizeof(ShutdownObject),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        shutdown_slots};
+
+    static int module_exec(PyObject* module) noexcept
+    {
+        if (PyModule_AddStringConstant(
+                module,
+                "RELEASE_VERSION",
+                std::string_view(WINDOWSAPPSDK_RELEASE_VERSION_TAG).empty()
+                    ? Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
+                          WINDOWSAPPSDK_RELEASE_MINOR)
+                    : Py_STRINGIFY(WINDOWSAPPSDK_RELEASE_MAJOR) "." Py_STRINGIFY(
+                          WINDOWSAPPSDK_RELEASE_MINOR) "-" WINDOWSAPPSDK_RELEASE_VERSION_TAG)
+            == -1)
+        {
+            return -1;
+        }
+
+        if (PyModule_AddStringConstant(
+                module, "RUNTIME_VERSION", WINDOWSAPPSDK_RUNTIME_VERSION_DOTQUADSTRING)
+            == -1)
+        {
+            return -1;
+        }
+
+        auto const shutdown_type
+            = PyType_FromModuleAndSpec(module, &shutdown_type_spec, nullptr);
+        if (!shutdown_type)
+        {
+            return -1;
+        }
+
+        auto const added
+            = PyModule_AddType(module, reinterpret_cast<PyTypeObject*>(shutdown_type));
+        Py_DECREF(shutdown_type);
+
+        return added;
+    }
+
+    static PyModuleDef_Slot module_slots[]{
+        {Py_mod_exec, reinterpret_cast<void*>(module_exec)},
+#ifdef Py_mod_multiple_interpreters
+        // A failure is raised through winrt-runtime, which refuses any
+        // interpreter but the main one.
+        {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
+#endif
+#ifdef Py_mod_gil
+        {Py_mod_gil, Py_MOD_GIL_NOT_USED},
+#endif
+        {}};
+
+    static PyModuleDef module_def
+        = {PyModuleDef_HEAD_INIT,
+           "_winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap",
+           module_doc,
+           0,
+           module_methods,
+           module_slots,
+           nullptr,
+           nullptr,
+           nullptr};
+} // namespace
+
+PyMODINIT_FUNC
+PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependency_bootstrap(
+    void) noexcept
+{
+    return PyModuleDef_Init(&module_def);
+}

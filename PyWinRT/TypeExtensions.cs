@@ -1,329 +1,63 @@
-using System.Diagnostics.CodeAnalysis;
+using System.Collections.Concurrent;
 using System.Text;
 using Mono.Cecil;
-using Mono.Collections.Generic;
 
 static class TypeExtensions
 {
-    public static bool IsExclusiveTo(this TypeDefinition type)
+    extension(TypeDefinition type)
     {
-        return type.CustomAttributes.Any(a =>
-            a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
-        );
-    }
+        public bool IsExclusiveTo =>
+            type.CustomAttributes.Any(a =>
+                a.AttributeType.FullName == "Windows.Foundation.Metadata.ExclusiveToAttribute"
+            );
 
-    public static bool IsWindowsRuntime(this TypeDefinition type)
-    {
-        return type.Attributes.HasFlag(TypeAttributes.WindowsRuntime);
-    }
+        public bool IsWindowsRuntime => type.Attributes.HasFlag(TypeAttributes.WindowsRuntime);
 
-    public static bool IsDelegate(this TypeDefinition type)
-    {
-        return type.BaseType?.FullName == "System.MulticastDelegate";
-    }
+        public bool IsDelegate => type.BaseType?.FullName == "System.MulticastDelegate";
 
-    /// <summary>
-    /// Indicates that C++/WinRT treats <paramref name="type"/> as a different
-    /// struct than direct bindings.
-    /// </summary>
-    public static bool IsCustomizedStruct(this TypeDefinition type)
-    {
+        /// <summary>
+        /// Indicates that C++/WinRT treats <paramref name="type"/> as a different
+        /// struct than direct bindings.
+        /// </summary>
         // FIXME: add EventRegistrationToken and HResult
-        return type.FullName == "Windows.Foundation.DateTime"
+        public bool IsCustomizedStruct =>
+            type.FullName == "Windows.Foundation.DateTime"
             || type.FullName == "Windows.Foundation.TimeSpan";
     }
 
-    public static string ToStructFieldType(this TypeReference type) =>
+    extension(TypeDefinition type)
+    {
+        public bool IsStaticClass =>
+            type.GetCategory() == Category.Class
+            && type.Attributes.HasFlag(TypeAttributes.Abstract);
+
+        /// <summary>
+        /// The PEP 695 type parameter list a stub declares a generic type
+        /// with, such as <c>[K, V]</c>, or nothing for a type that is not
+        /// generic. A stub is read and not executed, so it can use the syntax
+        /// whatever the runtime floor is, and the parameters are then scoped
+        /// to the type rather than module-level TypeVars.
+        /// </summary>
+        public string PyTypeParameters =>
+            type.HasGenericParameters
+                ? $"[{string.Join(", ", type.GenericParameters.Select(p => p.Name))}]"
+                : "";
+    }
+
+    /// <summary>
+    /// Formats <paramref name="type"/> the way WinRT metadata names it, for use
+    /// in error messages.
+    /// </summary>
+    public static string ToWinRtName(this TypeReference type) =>
         type switch
         {
-            GenericInstanceType gen
-                => gen.ElementType.FullName switch
-                {
-                    "Windows.Foundation.IReference`1" => "PyObject*",
-                    _ => throw new NotImplementedException(),
-                },
-            // NB: Boolean needs to be int for Python compatibility, C++ bool is wrong size
-            { FullName: "System.Boolean" } => "int",
-            { FullName: "System.SByte" } => "int8_t",
-            { FullName: "System.Byte" } => "uint8_t",
-            { FullName: "System.Int16" } => "int16_t",
-            { FullName: "System.UInt16" } => "uint16_t",
-            { FullName: "System.Int32" } => "int32_t",
-            { FullName: "System.UInt32" } => "uint32_t",
-            { FullName: "System.Int64" } => "int64_t",
-            { FullName: "System.UInt64" } => "uint64_t",
-            { FullName: "System.Single" } => "float",
-            { FullName: "System.Double" } => "double",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" }
-                => "PyObject*",
-            { IsValueType: true }
-                => type.Resolve() switch
-                {
-                    TypeDefinition t
-                        => t switch
-                        {
-                            { IsEnum: true } => t.HasFlagsAttribute() ? "uint32_t" : "int32_t",
-                            _ => $"PyObject*"
-                        }
-                },
-            _ => throw new NotImplementedException(),
-        };
-
-    public static string ToWinrtFieldName(this FieldDefinition field)
-    {
-        if (
-            (
-                field.DeclaringType.Namespace == "Windows.Foundation"
-                && (
-                    field.DeclaringType.Name == "HResult"
-                    || field.DeclaringType.Name == "EventRegistrationToken"
-                )
-            ) || field.DeclaringType.IsCustomNumeric()
-        )
-        {
-            return field.Name.ToLowerInvariant();
-        }
-
-        return field.Name;
-    }
-
-    public static string ToStructFieldKeywordList(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append($"\"{field.Name.ToPythonIdentifier()}\", ");
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructBufferFormat(this FieldDefinition field)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen
-                => gen.ElementType.FullName switch
-                {
-                    "Windows.Foundation.IReference`1" => "P",
-                    _ => throw new NotImplementedException(),
-                },
-            { FullName: "System.Boolean" } => "?",
-            { FullName: "System.Char" } => "u",
-            { FullName: "System.SByte" } => "b",
-            { FullName: "System.Byte" } => "B",
-            { FullName: "System.Int16" } => "h",
-            { FullName: "System.UInt16" } => "H",
-            { FullName: "System.Int32" } => "i",
-            { FullName: "System.UInt32" } => "I",
-            { FullName: "System.Int64" } => "q",
-            { FullName: "System.UInt64" } => "Q",
-            { FullName: "System.Single" } => "f",
-            { FullName: "System.Double" } => "d",
-            { FullName: "System.String" } => "P",
-            { FullName: "System.Guid" } => "T{I2H8B}",
-            { IsValueType: true }
-                => field.FieldType.Resolve() switch
-                {
-                    TypeDefinition t
-                        => t switch
-                        {
-                            { IsEnum: true } => t.HasFlagsAttribute() ? "I" : "i",
-                            _
-                                => $"T{{{ string.Join(
-            "",
-            t.Fields.Select(f =>
-                $"{f.ToStructBufferFormat()}:{f.Name.ToPythonIdentifier()}:"
-            )
-        )}}}",
-                        }
-                },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static string ToStructFieldFormat(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append(
-                field.FieldType switch
-                {
-                    GenericInstanceType gen
-                        => gen.ElementType.FullName switch
-                        {
-                            "Windows.Foundation.IReference`1" => "O",
-                            _ => throw new NotImplementedException(),
-                        },
-                    { FullName: "System.Boolean" } => "p",
-                    { FullName: "System.SByte" } => "b",
-                    { FullName: "System.Byte" } => "B",
-                    { FullName: "System.Int16" } => "h",
-                    { FullName: "System.UInt16" } => "H",
-                    { FullName: "System.Int32" } => "i",
-                    { FullName: "System.UInt32" } => "I",
-                    { FullName: "System.Int64" } => "L",
-                    { FullName: "System.UInt64" } => "K",
-                    { FullName: "System.Single" } => "f",
-                    { FullName: "System.Double" } => "d",
-                    { FullName: "System.Char" }
-                    or { FullName: "System.String" }
-                    or { FullName: "System.Guid" }
-                        => "O",
-                    { IsValueType: true }
-                        => field.FieldType.Resolve() switch
-                        {
-                            TypeDefinition t
-                                => t switch
-                                {
-                                    { IsEnum: true } => t.HasFlagsAttribute() ? "I" : "i",
-                                    _ => "O"
-                                }
-                        },
-                    _ => throw new NotImplementedException(),
-                }
-            );
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructFieldParseParameterList(this TypeDefinition type)
-    {
-        var sb = new StringBuilder();
-
-        foreach (var field in type.Fields)
-        {
-            sb.Append($", &_{field.Name}");
-        }
-
-        return sb.ToString();
-    }
-
-    public static string ToStructFieldPreInitializer(this FieldDefinition field)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen
-                => gen.ElementType.FullName switch
-                {
-                    "Windows.Foundation.IReference`1" => "",
-                    _ => throw new NotImplementedException(),
-                },
-            { FullName: "System.Boolean" }
-            or { FullName: "System.SByte" }
-            or { FullName: "System.Byte" }
-            or { FullName: "System.Int16" }
-            or { FullName: "System.UInt16" }
-            or { FullName: "System.Int32" }
-            or { FullName: "System.UInt32" }
-            or { FullName: "System.Int64" }
-            or { FullName: "System.UInt64" }
-            or { FullName: "System.Single" }
-            or { FullName: "System.Double" }
-                => $"self->obj.{field.ToWinrtFieldName()}",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" }
-                => "",
-            { IsValueType: true }
-                => field.FieldType.Resolve() switch
-                {
-                    { IsEnum: true }
-                        => $"static_cast<{field.FieldType.ToStructFieldType()}>(self->obj.{field.ToWinrtFieldName()})",
-                    _ => "",
-                },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static string ToStructFieldInitializer(this FieldDefinition field, bool replace = false)
-    {
-        return field.FieldType switch
-        {
-            GenericInstanceType gen
-                => gen.ElementType.FullName switch
-                {
-                    "Windows.Foundation.IReference`1"
-                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
-                    _ => throw new NotImplementedException(),
-                },
-            { FullName: "System.Boolean" }
-            or { FullName: "System.SByte" }
-            or { FullName: "System.Byte" }
-            or { FullName: "System.Int16" }
-            or { FullName: "System.UInt16" }
-            or { FullName: "System.Int32" }
-            or { FullName: "System.UInt32" }
-            or { FullName: "System.Int64" }
-            or { FullName: "System.UInt64" }
-            or { FullName: "System.Single" }
-            or { FullName: "System.Double" }
-                => $"_{field.Name}",
-            { FullName: "System.Char" }
-            or { FullName: "System.String" }
-            or { FullName: "System.Guid" }
-                => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}",
-            { IsValueType: true }
-                => field.FieldType.Resolve() switch
-                {
-                    { IsEnum: true }
-                        => $"static_cast<{field.FieldType.ToCppTypeName()}>(_{field.Name})",
-                    _
-                        => $"_{field.Name} ? py::convert_to<{field.FieldType.ToCppTypeName()}>(_{field.Name}) : {(replace ? $"self->obj.{field.ToWinrtFieldName()}" : $"{field.FieldType.ToCppTypeName()}{{}}")}"
-                },
-            _ => throw new NotImplementedException(),
-        };
-    }
-
-    public static bool IsStaticClass(this TypeDefinition type) =>
-        type.GetCategory() == Category.Class && type.Attributes.HasFlag(TypeAttributes.Abstract);
-
-    public static string ToParameterList(this Collection<ParameterDefinition> parameters) =>
-        string.Join(", ", parameters.Select(ToParamName));
-
-    public static string ToParamName(this ParameterDefinition param) => $"param{param.Index}";
-
-    public static string ToCppTypeName(
-        this TypeReference type,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
-    ) =>
-        type switch
-        {
-            GenericParameter p => map is null ? type.Name : map[p].ToCppTypeName(),
-            GenericInstanceType gen
-                => $"winrt::{gen.Namespace.ToCppNamespace()}::{gen.Name.ToNonGeneric()}<{string.Join(", ", gen.GenericArguments.Select(p => p.ToCppTypeName(map)))}>",
-            ByReferenceType byRef => byRef.ElementType.ToCppTypeName(map),
-            OptionalModifierType opt => opt.ElementType.ToCppTypeName(map),
-            ArrayType t => t.ElementType.ToCppTypeName(map),
-            { FullName: "System.Void" } => "void",
-            { FullName: "System.Boolean" } => "bool",
-            { FullName: "System.SByte" } => "int8_t",
-            { FullName: "System.Byte" } => "uint8_t",
-            { FullName: "System.Char" } => "char16_t",
-            { FullName: "System.Double" } => "double",
-            { FullName: "System.Int16" } => "int16_t",
-            { FullName: "System.Int32" } => "int32_t",
-            { FullName: "System.Int64" } => "int64_t",
-            { FullName: "System.Single" } => "float",
-            { FullName: "System.UInt16" } => "uint16_t",
-            { FullName: "System.UInt32" } => "uint32_t",
-            { FullName: "System.UInt64" } => "uint64_t",
-            { FullName: "System.String" } => "winrt::hstring",
-            { FullName: "System.Guid" } => "winrt::guid",
-            { FullName: "System.Object" } => "winrt::Windows::Foundation::IInspectable",
-            { FullName: "Windows.Foundation.EventRegistrationToken" } => "winrt::event_token",
-            { FullName: "Windows.Foundation.HResult" } => "winrt::hresult",
-            { Namespace: "Windows.Foundation.Numerics" } when type.IsCustomNumeric(out var cppName)
-                => $"winrt::{type.Namespace.ToCppNamespace()}::{cppName}",
-            { HasGenericParameters: true }
-                => $"winrt::{type.Namespace.ToCppNamespace()}::{type.Name.ToNonGeneric()}<{string.Join(", ", type.GenericParameters.Select(p => p.ToCppTypeName(map)))}>",
-            _ => $"winrt::{type.FullName.ToCppNamespace()}"
+            GenericParameter param => param.Name,
+            GenericInstanceType generic => $"{generic.Namespace}.{generic.Name.ToNonGeneric()}"
+                + $"<{string.Join(", ", generic.GenericArguments.Select(ToWinRtName))}>",
+            { FullName: "System.String" } => "String",
+            { FullName: "System.Object" } => "Object",
+            { FullName: "System.Guid" } => "Guid",
+            _ => type.FullName,
         };
 
     public static string GetDefaultPyValue(
@@ -347,25 +81,41 @@ static class TypeExtensions
             { FullName: "System.UInt64" } => "0",
             { FullName: "System.String" } => "\"\"",
             { FullName: "System.Guid" } => "_uuid.UUID(int=0)",
-            { FullName: "Windows.Foundation.DateTime" }
-                => "datetime.datetime(1601, 1, 1, tzinfo=datetime.timezone.utc)",
+            { FullName: "Windows.Foundation.DateTime" } =>
+                "datetime.datetime(1601, 1, 1, tzinfo=datetime.UTC)",
             { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta(0)",
             GenericInstanceType gen
-                when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
-                => "None",
-            { IsValueType: true }
-                => type.Resolve() switch
+                when gen.ElementType.FullName == "Windows.Foundation.IReference`1" => "None",
+            { IsValueType: true } => type.Resolve() switch
+            {
+                TypeDefinition t => t switch
                 {
-                    TypeDefinition t
-                        => t switch
-                        {
-                            { IsEnum: true }
-                                => $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type), packageMap)}(0)",
-                            _
-                                => $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type), packageMap)}()",
-                        }
+                    { IsEnum: true } =>
+                        $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type), packageMap)}(0)",
+                    _ => $"{type.ToPyTypeName(ns, new TypeRefNullabilityInfo(type), packageMap)}()",
                 },
+            },
             _ => throw new NotImplementedException(),
+        };
+
+    /// <summary>
+    /// Gets the default value of <paramref name="type"/> as a type stub
+    /// spells it.
+    /// </summary>
+    /// <remarks>
+    /// A stub is read and not executed, so a default that is not a literal is
+    /// written as <c>...</c>, which is how a stub says that a parameter has a
+    /// default without naming the value.
+    /// </remarks>
+    public static string GetDefaultPyValueForStub(
+        this TypeReference type,
+        string ns,
+        IReadOnlyDictionary<string, string> packageMap
+    ) =>
+        type.GetDefaultPyValue(ns, packageMap) switch
+        {
+            var value and ("False" or "0" or "\"\"" or "None") => value,
+            _ => "...",
         };
 
     public static string ToPyTypeName(
@@ -378,111 +128,171 @@ static class TypeExtensions
         bool usePythonCollectionTypes = true,
         bool useStructTupleUnion = false,
         bool useKeyValuePairIterMappingUnion = false,
-        bool isUnpack = false
+        bool isUnpack = false,
+        bool useBufferProtocol = true,
+        bool isFillBuffer = false
     ) =>
         string.Format(
             (nullabilityInfo.AllowNull || nullabilityInfo.MaybeNull)
-                ? "typing.Optional[{0}]"
+                // PEP 604 unions are only safe where the annotation is not
+                // evaluated. quoteImportedTypes marks the one place that is
+                // evaluated - the delegate type aliases in __init__.py - where
+                // `"module.Type" | None` would raise TypeError at import time.
+                ? quoteImportedTypes
+                    ? "typing.Optional[{0}]"
+                    : "{0} | None"
                 : "{0}",
             type switch
             {
-                GenericParameter p
-                    => map is null
-                        ? type.Name
-                        : map[p]
-                            .ToPyTypeName(
-                                ns,
-                                new TypeRefNullabilityInfo(map[p]),
-                                packageMap,
-                                default,
-                                quoteImportedTypes
-                            ),
+                GenericParameter p => map is null
+                    ? type.Name
+                    : map[p]
+                        .ToPyTypeName(
+                            ns,
+                            new TypeRefNullabilityInfo(map[p]),
+                            packageMap,
+                            default,
+                            quoteImportedTypes,
+                            useBufferProtocol: useBufferProtocol
+                        ),
+                // a nullability rule by type; the rules by member are in
+                // NullabilityRules
                 GenericInstanceType gen
-                    when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
-                    => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                    when gen.ElementType.FullName == "Windows.Foundation.IReference`1" =>
+                    $"{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)} | None",
                 GenericInstanceType gen
                     when useKeyValuePairIterMappingUnion
                         && usePythonCollectionTypes
                         && gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
                         && gen.GenericArguments[0] is GenericInstanceType gen2
                         && gen2.ElementType.FullName
-                            == "Windows.Foundation.Collections.IKeyValuePair`2"
-                    => $"typing.Union[typing.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes)))}], {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}]",
-                GenericInstanceType gen
-                    when usePythonCollectionTypes
-                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-                    => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
-                GenericInstanceType gen
-                    when usePythonCollectionTypes
-                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-                    => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                            == "Windows.Foundation.Collections.IKeyValuePair`2" =>
+                    $"_cabc.Mapping[{string.Join(", ", gen2.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![0].Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}] | {type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion)}",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
                         && gen.ElementType.FullName
-                            == "Windows.Foundation.Collections.IVectorView`1"
-                    => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes)}]",
+                            == "Windows.Foundation.Collections.IIterable`1" =>
+                    $"_cabc.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
-                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-                    => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1" =>
+                    $"_cabc.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
                     when usePythonCollectionTypes
-                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-                    => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes)))}]",
+                        && gen.ElementType.FullName
+                            == "Windows.Foundation.Collections.IVectorView`1" =>
+                    $"_cabc.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, nullabilityInfo.Args![0], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)}]",
                 GenericInstanceType gen
-                    => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
-                ByReferenceType t
-                    => t.ElementType.ToPyTypeName(
-                        ns,
-                        nullabilityInfo,
-                        packageMap,
-                        map,
-                        quoteImportedTypes
-                    ),
-                OptionalModifierType t
-                    => t.ElementType.ToPyTypeName(
-                        ns,
-                        nullabilityInfo,
-                        packageMap,
-                        map,
-                        quoteImportedTypes
-                    ),
-                ArrayType t
-                    => t.ElementType.ToPyTypeName(
-                        ns,
-                        nullabilityInfo,
-                        packageMap,
-                        map,
-                        quoteImportedTypes
-                    ),
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2" =>
+                    $"_cabc.MutableMapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}]",
+                GenericInstanceType gen
+                    when usePythonCollectionTypes
+                        && gen.ElementType.FullName
+                            == "Windows.Foundation.Collections.IMapView`2" =>
+                    $"_cabc.Mapping[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, quoteImportedTypes, useBufferProtocol: useBufferProtocol)))}]",
+                GenericInstanceType gen =>
+                    $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select((p, i) => p.ToPyTypeName(ns, nullabilityInfo.Args![i], packageMap, map, useBufferProtocol: useBufferProtocol)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
+                // An [in] struct that the metadata spells `T& modopt(IsConst)`,
+                // passed by reference, takes what one passed by value does.
+                ByReferenceType t => t.ElementType.ToPyTypeName(
+                    ns,
+                    nullabilityInfo,
+                    packageMap,
+                    map,
+                    quoteImportedTypes,
+                    usePythonCollectionTypes,
+                    useStructTupleUnion,
+                    useKeyValuePairIterMappingUnion
+                ),
+                OptionalModifierType t => t.ElementType.ToPyTypeName(
+                    ns,
+                    nullabilityInfo,
+                    packageMap,
+                    map,
+                    quoteImportedTypes,
+                    usePythonCollectionTypes,
+                    useStructTupleUnion,
+                    useKeyValuePairIterMappingUnion
+                ),
+                ArrayType t => t.ElementType.ToPyTypeName(
+                    ns,
+                    nullabilityInfo,
+                    packageMap,
+                    map,
+                    quoteImportedTypes
+                ),
                 { FullName: "System.Void" } => "None",
                 { FullName: "System.Boolean" } => "bool",
-                { FullName: "System.SByte" } => "winrt.system.Int8",
-                { FullName: "System.Byte" } => "winrt.system.UInt8",
+                // Where a caller passes an integer, the runtime takes any
+                // object with __index__(), as a parameter of the standard
+                // library takes a typing.SupportsIndex.
+                {
+                    FullName: "System.SByte"
+                        or "System.Byte"
+                        or "System.Int16"
+                        or "System.UInt16"
+                        or "System.Int32"
+                        or "System.UInt32"
+                        or "System.Int64"
+                        or "System.UInt64"
+                } => useStructTupleUnion
+                    ? $"{ToPyIntegerName(type.FullName)} | typing.SupportsIndex"
+                    : ToPyIntegerName(type.FullName),
                 { FullName: "System.Char" } => "winrt.system.Char16",
                 { FullName: "System.Double" } => "winrt.system.Double",
-                { FullName: "System.Int16" } => "winrt.system.Int16",
-                { FullName: "System.Int32" } => "winrt.system.Int32",
-                { FullName: "System.Int64" } => "winrt.system.Int64",
                 { FullName: "System.Single" } => "winrt.system.Single",
-                { FullName: "System.UInt16" } => "winrt.system.UInt16",
-                { FullName: "System.UInt32" } => "winrt.system.UInt32",
-                { FullName: "System.UInt64" } => "winrt.system.UInt64",
                 { FullName: "System.String" } => "str",
                 { FullName: "System.Guid" } => "_uuid.UUID",
                 { FullName: "System.Object" } => "winrt.system.Object",
                 { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
                 { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
-                { FullName: "Windows.Storage.Streams.IBuffer" } when usePythonCollectionTypes
-                    => "winrt.system.Buffer",
-                { IsValueType: true } when isUnpack && !type.Resolve().IsEnum
-                    => type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes, isUnpack: true),
-                { IsValueType: true } when useStructTupleUnion && !type.Resolve().IsEnum
-                    => $"typing.Union[{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)}, {type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes)}]",
-                _
-                    => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
+                // Any Python buffer is taken where an IBuffer goes in, and
+                // what comes out is the projected IBuffer, which is one too.
+                // WinRT only reads one that goes in, except a parameter that
+                // BufferRules says it writes into.
+                { FullName: "Windows.Storage.Streams.IBuffer" }
+                    when usePythonCollectionTypes && useBufferProtocol => isFillBuffer
+                    ? "winrt.system.WriteableBuffer"
+                    : "winrt.system.ReadableBuffer",
+                // The integer structs are int subclasses, so neither is unpacked
+                // into a tuple or accepted as one. An HRESULT is also accepted as
+                // a plain int, which is what the winrt.system.hresult constants
+                // are; an event token is only ever one that add_<event>() gave.
+                { FullName: "Windows.Foundation.HResult" } when useStructTupleUnion =>
+                    $"{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)} | int",
+                { IsValueType: true }
+                    when isUnpack
+                        && !type.Resolve().IsEnum
+                        && !ProjectedType.IsPyIntegerType(type.FullName) => type.ToPyTupleTyping(
+                    ns,
+                    packageMap,
+                    quoteImportedTypes,
+                    isUnpack: true
+                ),
+                { IsValueType: true }
+                    when useStructTupleUnion
+                        && !type.Resolve().IsEnum
+                        && !ProjectedType.IsPyIntegerType(type.FullName) =>
+                    $"{type.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes, usePythonCollectionTypes, useStructTupleUnion: false)} | {type.ToPyTupleTyping(ns, packageMap, quoteImportedTypes)}",
+                _ =>
+                    $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.GetQualifiedNamespace(packageMap).PyModuleAlias}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             }
         );
+
+    private static string ToPyIntegerName(string fullName) =>
+        fullName switch
+        {
+            "System.SByte" => "winrt.system.Int8",
+            "System.Byte" => "winrt.system.UInt8",
+            "System.Int16" => "winrt.system.Int16",
+            "System.UInt16" => "winrt.system.UInt16",
+            "System.Int32" => "winrt.system.Int32",
+            "System.UInt32" => "winrt.system.UInt32",
+            "System.Int64" => "winrt.system.Int64",
+            "System.UInt64" => "winrt.system.UInt64",
+            _ => throw new ArgumentException($"{fullName} is not an integer type"),
+        };
 
     public static string ToPyTupleTyping(
         this TypeReference type,
@@ -491,7 +301,7 @@ static class TypeExtensions
         bool quoteImportedTypes = false,
         bool isUnpack = false
     ) =>
-        $"typing.Tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, default, quoteImportedTypes, useStructTupleUnion: !isUnpack, isUnpack: isUnpack)))}]";
+        $"tuple[{string.Join(", ", type.Resolve().Fields.Select(f => f.FieldType.ToPyTypeName(ns, new TypeRefNullabilityInfo(f.FieldType), packageMap, default, quoteImportedTypes, useStructTupleUnion: !isUnpack, isUnpack: isUnpack)))}]";
 
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
@@ -499,32 +309,32 @@ static class TypeExtensions
         TypeRefNullabilityInfo nullabilityInfo,
         IReadOnlyDictionary<string, string> packageMap,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
-        bool quoteImportedTypes = false
+        bool quoteImportedTypes = false,
+        bool isFillBuffer = false
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.In
-                => param.ParameterType.ToPyTypeName(
-                    ns,
-                    nullabilityInfo,
-                    packageMap,
-                    map,
-                    quoteImportedTypes,
-                    useStructTupleUnion: true,
-                    useKeyValuePairIterMappingUnion: true
-                ),
-            ParamCategory.PassArray
-                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
-            ParamCategory.FillArray
-                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
-            ParamCategory.ReceiveArray
-                => param.ParameterType.ToPyTypeName(
-                    ns,
-                    nullabilityInfo,
-                    packageMap,
-                    map,
-                    quoteImportedTypes
-                ),
+            ParamCategory.In => param.ParameterType.ToPyTypeName(
+                ns,
+                nullabilityInfo,
+                packageMap,
+                map,
+                quoteImportedTypes,
+                useStructTupleUnion: true,
+                useKeyValuePairIterMappingUnion: true,
+                isFillBuffer: isFillBuffer
+            ),
+            ParamCategory.PassArray =>
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}] | winrt.system.ReadableBuffer",
+            ParamCategory.FillArray =>
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}] | winrt.system.WriteableBuffer",
+            ParamCategory.ReceiveArray => param.ParameterType.ToPyTypeName(
+                ns,
+                nullabilityInfo,
+                packageMap,
+                map,
+                quoteImportedTypes
+            ),
             _ => throw new NotImplementedException(),
         };
 
@@ -552,27 +362,25 @@ static class TypeExtensions
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.In
-                => param.ParameterType.ToPyTypeName(
-                    ns,
-                    nullabilityInfo,
-                    packageMap,
-                    map,
-                    quoteImportedTypes
-                ),
+            ParamCategory.In => param.ParameterType.ToPyTypeName(
+                ns,
+                nullabilityInfo,
+                packageMap,
+                map,
+                quoteImportedTypes,
+                useBufferProtocol: false
+            ),
             // REVISIT: Do we need a different type hint for the winrt::array_view wrapper?
             // REVISIT: Do we want separate types for read-only arrays (PassArray)?
-            ParamCategory.PassArray
-            or ParamCategory.FillArray
-                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}]",
-            ParamCategory.ReceiveArray
-                => param.ParameterType.ToPyTypeName(
-                    ns,
-                    nullabilityInfo,
-                    packageMap,
-                    map,
-                    quoteImportedTypes
-                ),
+            ParamCategory.PassArray or ParamCategory.FillArray =>
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}]",
+            ParamCategory.ReceiveArray => param.ParameterType.ToPyTypeName(
+                ns,
+                nullabilityInfo,
+                packageMap,
+                map,
+                quoteImportedTypes
+            ),
             _ => throw new NotImplementedException(),
         };
 
@@ -586,18 +394,74 @@ static class TypeExtensions
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.Out
-                => param.ParameterType.ToPyTypeName(
-                    ns,
-                    nullabilityInfo,
-                    packageMap,
-                    map,
-                    quoteImportedTypes
-                ),
-            ParamCategory.ReceiveArray
-                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}]",
+            ParamCategory.Out => param.ParameterType.ToPyTypeName(
+                ns,
+                nullabilityInfo,
+                packageMap,
+                map,
+                quoteImportedTypes,
+                useBufferProtocol: false
+            ),
+            ParamCategory.ReceiveArray =>
+                $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, nullabilityInfo, packageMap, map, quoteImportedTypes)}]",
             _ => throw new NotImplementedException(),
         };
+
+    /// <summary>
+    /// Gets the Python type hint for what a handler of a WinRT delegate returns.
+    /// </summary>
+    /// <remarks>
+    /// What a handler returns is an input to the runtime, as the arguments of a
+    /// call are, so each output takes what a parameter of its type takes: a
+    /// tuple for a struct, a Python collection, any buffer for an array.
+    /// </remarks>
+    public static string ToPyCallbackReturnTyping(
+        this MethodDefinition method,
+        string ns,
+        MethodNullabilityInfo nullabilityInfo,
+        IReadOnlyDictionary<string, string> packageMap,
+        bool quoteImportedTypes = false
+    )
+    {
+        string Output(TypeReference type, TypeRefNullabilityInfo nullability, bool isArray) =>
+            isArray
+                ? $"winrt.system.Array[{type.ToPyTypeName(ns, nullability, packageMap, default, quoteImportedTypes)}] | winrt.system.ReadableBuffer"
+                : type.ToPyTypeName(
+                    ns,
+                    nullability,
+                    packageMap,
+                    default,
+                    quoteImportedTypes,
+                    useStructTupleUnion: true,
+                    useKeyValuePairIterMappingUnion: true
+                );
+
+        var outputs = method
+            .Parameters.Where(p => p.IsPythonOutParam)
+            .Select(p =>
+                Output(
+                    p.ParameterType,
+                    nullabilityInfo.Parameters[p.Index].Type,
+                    p.GetCategory() == ParamCategory.ReceiveArray
+                )
+            )
+            .ToList();
+
+        if (method.ReturnType.FullName != "System.Void")
+        {
+            outputs.Insert(
+                0,
+                Output(method.ReturnType, nullabilityInfo.Return.Type, method.ReturnType.IsArray)
+            );
+        }
+
+        return outputs.Count switch
+        {
+            0 => "None",
+            1 => outputs[0],
+            _ => $"tuple[{string.Join(", ", outputs)}]",
+        };
+    }
 
     public static string ToPyReturnTyping(
         this MethodDefinition method,
@@ -610,7 +474,7 @@ static class TypeExtensions
     {
         var returnType = "None";
         var outParams = method
-            .Parameters.Where(p => p.IsPythonOutParam())
+            .Parameters.Where(p => p.IsPythonOutParam)
             .Select(p =>
                 p.ToPyOutParamTyping(
                     ns,
@@ -640,7 +504,8 @@ static class TypeExtensions
                         nullabilityInfo.Return.Type,
                         packageMap,
                         map,
-                        quoteImportedTypes
+                        quoteImportedTypes,
+                        useBufferProtocol: false
                     )
                 );
             }
@@ -652,89 +517,90 @@ static class TypeExtensions
         }
         else if (outParams.Count > 1)
         {
-            returnType = $"typing.Tuple[{string.Join(", ", outParams)}]";
+            returnType = $"tuple[{string.Join(", ", outParams)}]";
         }
 
         return returnType;
     }
 
-    public static Func<int, string> ToConvertToArgs(this MethodDefinition method) =>
-        method.GetArgumentConvention() switch
-        {
-            ArgumentConvention.Single => (_) => "arg",
-            ArgumentConvention.Variable => (i) => $"args, {i}",
-            _ => throw new NotImplementedException(),
-        };
-
-    public static bool IsInParam(this ParameterDefinition param) =>
-        param.GetCategory() == ParamCategory.In || param.GetCategory() == ParamCategory.PassArray;
-
-    public static bool IsPythonInParam(this ParameterDefinition param) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In => true,
-            ParamCategory.Out => false,
-            ParamCategory.PassArray => true,
-            ParamCategory.FillArray => true,
-            ParamCategory.ReceiveArray => false,
-            _ => throw new NotImplementedException(),
-        };
-
-    public static bool IsPythonOutParam(this ParameterDefinition param) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In => false,
-            ParamCategory.Out => true,
-            ParamCategory.PassArray => false,
-            ParamCategory.FillArray => false,
-            ParamCategory.ReceiveArray => true,
-            _ => throw new NotImplementedException(),
-        };
-
-    public static string ToDelegateParam(
-        this ParameterDefinition param,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default
-    ) =>
-        param.GetCategory() switch
-        {
-            ParamCategory.In
-                => param.ParameterType switch
-                {
-                    GenericParameter gen
-                        => map is null
-                            ? $"winrt::impl::param_type<{gen.Name}> const& {param.ToParamName()}"
-                            : $"{map[gen].ToCppTypeName(map)} const& {param.ToParamName()}",
-                    { IsValueType: true }
-                        => $"{param.ParameterType.ToCppTypeName(map)} {param.ToParamName()}",
-                    _ => $"{param.ParameterType.ToCppTypeName(map)} const& {param.ToParamName()}"
-                },
-            ParamCategory.Out => $"{param.ParameterType.ToCppTypeName(map)}& {param.ToParamName()}",
-            ParamCategory.PassArray
-                => $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)} const> {param.ToParamName()}",
-            ParamCategory.FillArray
-                => $"winrt::array_view<{param.ParameterType.ToCppTypeName(map)}> {param.ToParamName()}",
-            ParamCategory.ReceiveArray
-                => $"winrt::com_array<{param.ParameterType.ToCppTypeName(map)}>& {param.ToParamName()}",
-            _ => throw new NotImplementedException(),
-        };
-
-    public static bool ImplementsInterface(this TypeDefinition type, string interfaceName)
+    extension(ParameterDefinition param)
     {
-        if (type.FullName == interfaceName)
-        {
-            return true;
-        }
+        public bool IsPythonInParam =>
+            param.GetCategory() switch
+            {
+                ParamCategory.In => true,
+                ParamCategory.Out => false,
+                ParamCategory.PassArray => true,
+                ParamCategory.FillArray => true,
+                ParamCategory.ReceiveArray => false,
+                _ => throw new NotImplementedException(),
+            };
 
-        return type.Interfaces.Any(i =>
-            i.InterfaceType.Resolve().ImplementsInterface(interfaceName)
-        );
+        public bool IsPythonOutParam =>
+            param.GetCategory() switch
+            {
+                ParamCategory.In => false,
+                ParamCategory.Out => true,
+                ParamCategory.PassArray => false,
+                ParamCategory.FillArray => false,
+                ParamCategory.ReceiveArray => true,
+                _ => throw new NotImplementedException(),
+            };
     }
 
-    static bool ImplementsIAsyncInfo(this TypeDefinition type) =>
-        type.ImplementsInterface("Windows.Foundation.IAsyncInfo");
+    private static readonly ConcurrentDictionary<
+        TypeDefinition,
+        HashSet<string>
+    > implementedInterfaceNames = new(
+        Environment.ProcessorCount * 4,
+        1 << 14,
+        ReferenceEqualityComparer.Instance
+    );
 
-    public static bool HasFlagsAttribute(this TypeDefinition type) =>
-        type.CustomAttributes.Any(a => a.AttributeType.FullName == "System.FlagsAttribute");
+    /// <summary>
+    /// Gets the full names of <paramref name="type"/> and all interfaces it
+    /// implements, directly or indirectly.
+    /// </summary>
+    /// <remarks>
+    /// The result is cached since this is queried many times per type.
+    /// </remarks>
+    private static HashSet<string> GetImplementedInterfaceNames(TypeDefinition type)
+    {
+        if (implementedInterfaceNames.TryGetValue(type, out var names))
+        {
+            return names;
+        }
+
+        names = [type.FullName];
+
+        foreach (var iface in type.Interfaces)
+        {
+            names.UnionWith(GetImplementedInterfaceNames(iface.InterfaceType.Resolve()));
+        }
+
+        return implementedInterfaceNames.GetOrAdd(type, names);
+    }
+
+    /// <summary>
+    /// Gets the WinRT <c>DeprecatedAttribute</c> of <paramref name="provider"/>,
+    /// or <c>null</c> if it has none.
+    /// </summary>
+    public static CustomAttribute? GetDeprecatedAttribute(this ICustomAttributeProvider provider) =>
+        provider.CustomAttributes.SingleOrDefault(a =>
+            a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
+        );
+
+    public static bool ImplementsInterface(this TypeDefinition type, string interfaceName) =>
+        GetImplementedInterfaceNames(type).Contains(interfaceName);
+
+    extension(TypeDefinition type)
+    {
+        internal bool ImplementsIAsyncInfo =>
+            type.ImplementsInterface("Windows.Foundation.IAsyncInfo");
+
+        public bool HasFlagsAttribute =>
+            type.CustomAttributes.Any(a => a.AttributeType.FullName == "System.FlagsAttribute");
+    }
 
     static readonly IReadOnlyDictionary<string, string> CustomNumerics = new Dictionary<
         string,
@@ -750,18 +616,11 @@ static class TypeExtensions
         { "Vector4", "float4" },
     };
 
-    public static bool IsCustomNumeric(this TypeReference type) =>
-        type.Namespace == "Windows.Foundation.Numerics" && CustomNumerics.ContainsKey(type.Name);
-
-    public static bool IsCustomNumeric(
-        this TypeReference type,
-        [NotNullWhen(true)] out string? cppName
-    )
+    extension(TypeReference type)
     {
-        cppName = default;
-
-        return type.Namespace == "Windows.Foundation.Numerics"
-            && CustomNumerics.TryGetValue(type.Name, out cppName);
+        public bool IsCustomNumeric =>
+            type.Namespace == "Windows.Foundation.Numerics"
+            && CustomNumerics.ContainsKey(type.Name);
     }
 
     private enum Mark
@@ -778,52 +637,27 @@ static class TypeExtensions
         public int GetHashCode(TypeDefinition obj) => obj.FullName.GetHashCode();
     }
 
-    public static IEnumerable<ProjectedType> OrderByDependency(
-        this IEnumerable<ProjectedType> types
-    )
+    /// <summary>
+    /// Resolves <paramref name="type"/> to a type definition or returns
+    /// <c>null</c> if it cannot be resolved (e.g. fundamental types).
+    /// </summary>
+    public static TypeDefinition? TryResolve(this TypeReference? type)
     {
+        if (type is null)
         {
-            // depth-first search
-            var marked = types.ToDictionary(i => i.Type, _ => Mark.Unmarked, new TypeComparer());
-            var sorted = new List<TypeDefinition>();
-
-            void visit(TypeDefinition type)
-            {
-                marked.TryAdd(type, Mark.Unmarked);
-
-                switch (marked[type])
-                {
-                    case Mark.Permanent:
-                        return;
-                    case Mark.Temporary:
-                        throw new InvalidOperationException("Cyclic dependency detected");
-                }
-
-                marked[type] = Mark.Temporary;
-
-                if (type.BaseType.FullName != "System.Object")
-                {
-                    visit(type.BaseType.Resolve());
-                }
-
-                marked[type] = Mark.Permanent;
-                sorted.Add(type);
-            }
-
-            while (marked.Values.Any(m => m != Mark.Permanent))
-            {
-                visit(marked.First(m => m.Value == Mark.Unmarked).Key);
-            }
-
-            return types.OrderBy(t => sorted.IndexOf(t.Type));
+            return null;
         }
-    }
 
-    private static TypeDefinition? TryResolve(TypeReference type)
-    {
+        // Fast path: avoid the cost of throwing and catching exceptions for
+        // unresolvable types, e.g. System.Object base types.
+        if (type.Module?.MetadataResolver is MetadataResolver resolver)
+        {
+            return resolver.TryResolve(type);
+        }
+
         try
         {
-            return type?.Resolve();
+            return type.Resolve();
         }
         catch
         {
@@ -831,120 +665,127 @@ static class TypeExtensions
         }
     }
 
-    public static int GetCircularDependencyDepth(this TypeReference type)
+    extension(ProjectedMethod method)
     {
-        var depth = 0;
-        var isInOwnNamespace = true;
-        var dependsOnOwnSubmodule = false;
-
-        for (
-            var current = TryResolve(type);
-            current != null;
-            current = TryResolve(current.BaseType)
-        )
+        public bool IsProblematicOverride
         {
-            var wasInOwnNamespace = isInOwnNamespace;
-            isInOwnNamespace = current.Namespace == type.Namespace;
-
-            if (isInOwnNamespace && !wasInOwnNamespace)
+            get
             {
-                depth++;
-            }
+                if (method.Method.Name == "SetValue")
+                {
+                    for (
+                        var baseType = method.Method.DeclaringType.BaseType;
+                        baseType is not null;
+                        baseType = TryResolve(baseType)?.BaseType
+                    )
+                    {
+                        if (
+                            (
+                                baseType.Namespace == "Microsoft.UI.Xaml"
+                                || baseType.Namespace == "Windows.UI.Xaml"
+                            )
+                            && baseType.Name == "DependencyObject"
+                        )
+                        {
+                            return true;
+                        }
+                    }
+                }
 
-            if (current.Namespace.StartsWith(type.Namespace + ".", StringComparison.Ordinal))
-            {
-                dependsOnOwnSubmodule = true;
+                if (method.Method.Name == "ShowAt")
+                {
+                    for (
+                        var baseType = method.Method.DeclaringType.BaseType;
+                        baseType is not null;
+                        baseType = TryResolve(baseType)?.BaseType
+                    )
+                    {
+                        if (
+                            (
+                                baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
+                                || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
+                            )
+                            && baseType.Name == "FlyoutBase"
+                        )
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
             }
         }
 
-        if (depth == 0 && dependsOnOwnSubmodule)
-        {
-            depth++;
-        }
-
-        return depth;
+        /// <summary>
+        /// The mypy error codes that have to be silenced where this method is
+        /// declared in a type stub, or <c>null</c> when there are none.
+        /// </summary>
+        /// <remarks>
+        /// SetValue is both an incompatible override and an override of a
+        /// member that the base class declares final, while ShowAt is only an
+        /// incompatible override.
+        /// </remarks>
+        public string? OverrideIgnoreCodes =>
+            method.IsProblematicOverride
+                ? method.Method.Name == "SetValue"
+                    ? "misc,override"
+                    : "override"
+                : null;
     }
 
-    public static bool IsProblematicOverride(this ProjectedMethod method)
+    extension(TypeReference type)
     {
-        if (method.Method.Name == "SetValue")
-        {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
-            {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml"
-                        || baseType.Namespace == "Windows.UI.Xaml"
-                    )
-                    && baseType.Name == "DependencyObject"
-                )
-                {
-                    return true;
-                }
-            }
-        }
+        /// <summary>
+        /// Tests if type is one of the special interfaces that is projected as
+        /// standard Python collection type.
+        /// </summary>
+        public bool IsPythonCollection =>
+            type is GenericInstanceType gen
+            && (
+                gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+                || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+            );
 
-        if (method.Method.Name == "ShowAt")
-        {
-            for (
-                var baseType = method.Method.DeclaringType.BaseType;
-                baseType is not null;
-                baseType = TryResolve(baseType)?.BaseType
-            )
-            {
-                if (
-                    (
-                        baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
-                        || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
-                    )
-                    && baseType.Name == "FlyoutBase"
-                )
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    /// <summary>
-    /// Tests if type is one of the special interfaces that is projected as
-    /// standard Python collection type.
-    /// </summary>
-    public static bool IsPythonCollection(this TypeReference type) =>
-        type is GenericInstanceType gen
-        && (
-            gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-            || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-        );
-
-    public static bool IsStruct(this TypeReference type)
-    {
-        try
-        {
-            return type.Resolve().GetCategory() == Category.Struct;
-        }
-        catch
-        {
+        public bool IsStruct =>
             // if we can't resolve, then it is a fundamental type, so not a struct
-            return false;
-        }
+            TryResolve(type)?.GetCategory() == Category.Struct;
     }
+
+    private static readonly ConcurrentDictionary<
+        TypeReference,
+        QualifiedNamespace
+    > qualifiedNamespaces = new(
+        Environment.ProcessorCount * 4,
+        1 << 14,
+        ReferenceEqualityComparer.Instance
+    );
 
     public static QualifiedNamespace GetQualifiedNamespace(
         this TypeReference type,
         IReadOnlyDictionary<string, string> packageMap
-    ) =>
-        new(
-            type.Namespace == "System" ? "winrt" : packageMap[type.Resolve().Module.Name],
-            type.Namespace
+    )
+    {
+        // NB: Mono.Cecil shares TypeReference instances for the same metadata
+        // row within a module, so the element type is a good cache key. Generic
+        // instances are distinct objects, so we use the element type instead.
+        var elementType = type.GetElementType();
+
+        if (qualifiedNamespaces.TryGetValue(elementType, out var ns))
+        {
+            return ns;
+        }
+
+        ns = new(
+            elementType.Namespace == "System"
+                ? "winrt"
+                : packageMap[elementType.Resolve().Module.Name],
+            elementType.Namespace
         );
+
+        return qualifiedNamespaces.GetOrAdd(elementType, ns);
+    }
 }

@@ -1,0 +1,488 @@
+from abc import ABCMeta
+import asyncio
+from importlib.machinery import ModuleSpec
+import os
+from collections.abc import (
+    Callable,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Sequence,
+)
+from enum import IntEnum
+from pathlib import Path
+import sys
+from typing import Any, Self, TypeVar, Protocol, TYPE_CHECKING, cast
+import warnings
+
+# NB: have to import Object from here instead of winrt.system to avoid circular import issues.
+from winrt._winrt import (
+    load_projection as _load_projection,
+    Object,
+)
+
+# Unfortunately, we can't import at runtime because of circular imports.
+if TYPE_CHECKING:
+    from winrt.windows.foundation import AsyncStatus
+
+
+#: The file a projection package keeps its namespace's table in, beside the
+#: ``__init__.py`` that loads it. It is part of the table format, which
+#: ``runtime/src/table-format.md`` is the contract for; winrt-table-compiler
+#: spells it for itself, as the two ends of the format spell the magic and the
+#: record sizes for themselves.
+TABLE_NAME = "_table.pywinrt"
+
+
+def load_projection(spec: ModuleSpec) -> None:
+    """
+    Creates the Python types of one WinRT namespace from its projection table.
+
+    A projection package ships a table rather than an extension module, so this
+    is what its ``__init__.py`` calls before anything else: the runtime reads
+    the table beside it and builds the classes, interfaces and structs straight
+    into the module. Everything after that line - the enums, the delegate
+    aliases, the protocol mixins - is ordinary Python that expects them to be
+    there.
+
+    Args:
+        spec: The module's own ``__spec__``, which says where it was loaded
+            from and therefore where its table is.
+    """
+    if not spec.origin:
+        raise ImportError(f"{spec.name} was not loaded from a file")
+
+    table = os.fspath(Path(spec.origin).parent / TABLE_NAME)
+
+    try:
+        _load_projection(sys.modules[spec.name], table)
+    except OSError as error:
+        # The table is opened and mapped, so a missing or unreadable one
+        # arrives here as an OSError that says only what the operating system
+        # said - no file name, no module. That is nearly always a package
+        # whose module was copied without the data file beside it, which is
+        # what a freezer does when nothing tells it about the table, so the
+        # message has to name both and say what kind of thing is missing.
+        raise ImportError(
+            f"{spec.name} could not read its projection table, which a"
+            " projection package carries beside the module that loads it."
+            f" Reading {table} failed: {error}",
+            name=spec.name,
+            path=table,
+        ) from error
+
+
+class WinrtIntEnum(IntEnum):
+    """
+    The base of every projected WinRT enum that is not a set of flags.
+
+    A newer version of Windows can hand back a value that the projection was
+    generated without, so a value with no member of its own makes a member
+    of its own, rather than a ``ValueError`` that fails the call it came from,
+    as ``IntFlag`` keeps a bit it has no member for. Such a member equals its
+    number, is named with it, as in ``"99"``, which no member name can be, and
+    does not appear when the enum is iterated.
+    """
+
+    @classmethod
+    def _missing_(cls, value: object) -> Self | None:
+        # A WinRT enum that is not a set of flags is a signed 32-bit integer,
+        # so a value WinRT could not hold is still refused.
+        if not isinstance(value, int) or not -(2**31) <= value < 2**31:
+            return None
+
+        # A bool, or a member of another enum, is made the plain number that
+        # every member holds.
+        number = int(value)
+
+        member = int.__new__(cls, number)
+        member._name_ = str(number)
+        member._value_ = number
+        return member
+
+    def __repr__(self) -> str:
+        if self._name_ not in type(self)._member_map_:
+            return f"<{type(self).__name__}: {self._value_!r}>"
+
+        return super().__repr__()
+
+
+# Staged deprecation of the method names that pywinrt v3.x used for overloaded
+# methods. DeprecationWarning is aimed at developers of code that uses pywinrt.
+# In a future release, this will become FutureWarning, which is shown to end
+# users as well, and after that the aliases will be removed.
+# https://docs.python.org/3/library/exceptions.html#DeprecationWarning
+#
+# NB: The calls to the functions below are generated. See the note on the
+# aliases in PyWinRT/Projection/ProjectedType.cs for everything that has to be
+# removed when the aliases go away.
+_LEGACY_METHOD_WARNING: type[Warning] = DeprecationWarning
+
+
+def _add_alias(target: type, owner: type, alias: str, name: str) -> None:
+    # a real attribute of the type always wins over an alias
+    if alias in vars(target):
+        return
+
+    def method(self: Any, *args: Any) -> Any:
+        warnings.warn(
+            f"{owner.__name__}.{alias}() is deprecated, use {name}() instead",
+            _LEGACY_METHOD_WARNING,
+            stacklevel=2,
+        )
+        return getattr(self, name)(*args)
+
+    method.__name__ = alias
+    method.__qualname__ = f"{owner.__name__}.{alias}"
+    method.__doc__ = f"Deprecated alias of ``{name}()``."
+
+    setattr(target, alias, method)
+
+
+def alias_method(typ: type, alias: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a method to a projected type.
+
+    Args:
+        typ: The projected type.
+        alias: The name the method had in pywinrt v3.x.
+        name: The name of the method now.
+    """
+    _add_alias(typ, typ, alias, name)
+
+
+def alias_static_method(typ: type, alias: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a static method to a projected type.
+
+    Args:
+        typ: The projected type.
+        alias: The name the method had in pywinrt v3.x.
+        name: The name of the method now.
+    """
+    # static methods are implemented by the metaclass of the projected type
+    _add_alias(type(typ), typ, alias, name)
+
+
+def alias_field(typ: type, name: str) -> None:
+    """
+    Adds a deprecated property for the one field a projected type used to have.
+
+    A WinRT struct that holds a single integer - an HRESULT, an event token -
+    is projected as a subclass of ``int`` rather than as a wrapper, so the
+    value is the object itself. Reading the field by the name it had in
+    pywinrt v3.x still works and warns.
+
+    Args:
+        typ: The projected type.
+        name: The name the field had.
+    """
+
+    def field(self: Any) -> Any:
+        warnings.warn(
+            f"{typ.__name__}.{name} is deprecated, "
+            f"the value is the {typ.__name__} itself",
+            _LEGACY_METHOD_WARNING,
+            stacklevel=2,
+        )
+        return int(self)
+
+    field.__name__ = name
+    field.__qualname__ = f"{typ.__name__}.{name}"
+    field.__doc__ = f"Deprecated: the value is the {typ.__name__} itself."
+
+    setattr(typ, name, property(field))
+
+
+# NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
+# so we have to implement the protocols like this instead.
+# https://github.com/python/cpython/issues/103968#issuecomment-1589928055
+
+
+def _register(abc_type: type, typ: type) -> None:
+    """
+    Registers typ as a virtual subclass of abc_type.
+
+    The collections.abc types are ABCMeta instances at run time, but typeshed
+    derives most of them from typing.Protocol without saying so, which leaves
+    pyright without their register() method.
+    """
+    cast(ABCMeta, abc_type).register(typ)
+
+
+def _sequence_index(
+    self: Sequence[Any], value: Any, start: int = 0, stop: int = sys.maxsize
+) -> int:
+    """
+    Sequence.index(), with a message like the one list.index() gives rather
+    than none at all. It names a vector rather than the type, which may be a
+    wrapper such as _IVector[String] that the user never sees.
+    """
+    try:
+        return Sequence[Any].index(self, value, start, stop)
+    except ValueError:
+        raise ValueError("index(x): x not in vector") from None
+
+
+def _mutable_sequence_remove(self: MutableSequence[Any], value: Any) -> None:
+    """
+    MutableSequence.remove(), with a message like the one list.remove() gives.
+    """
+    try:
+        index = Sequence[Any].index(self, value)
+    except ValueError:
+        raise ValueError("remove(x): x not in vector") from None
+
+    del self[index]
+
+
+def _mutable_mapping_popitem(self: MutableMapping[Any, Any]) -> tuple[Any, Any]:
+    """
+    MutableMapping.popitem(), with a message like the one dict.popitem() gives.
+    """
+    try:
+        key = next(iter(self))
+    except StopIteration:
+        raise KeyError("popitem(): map is empty") from None
+
+    value = self[key]
+    del self[key]
+    return key, value
+
+
+def mixin_sequence(typ: type) -> None:
+    """
+    Adds missing Python mapping methods to types that implement IVectorView and
+    registers the type as a Sequence.
+    """
+    # mixin methods
+    if not hasattr(typ, "index"):
+        setattr(typ, "index", _sequence_index)
+
+    if not hasattr(typ, "count"):
+        setattr(typ, "count", Sequence[Any].count)
+
+    if not hasattr(typ, "__contains__"):
+        setattr(typ, "__contains__", Sequence[Any].__contains__)
+
+    if not hasattr(typ, "__iter__"):
+        setattr(typ, "__iter__", Sequence[Any].__iter__)
+
+    if not hasattr(typ, "__reversed__"):
+        setattr(typ, "__reversed__", Sequence[Any].__reversed__)
+
+    _register(Sequence, typ)
+
+
+def mixin_mutable_sequence(typ: type) -> None:
+    """
+    Adds missing Python mapping methods to types that implement IVector and
+    registers the type as a MutableSequence.
+    """
+    mixin_sequence(typ)
+
+    # mixin methods
+    if not hasattr(typ, "append"):
+        setattr(typ, "append", MutableSequence[Any].append)
+
+    if not hasattr(typ, "clear"):
+        setattr(typ, "clear", MutableSequence[Any].clear)
+
+    if not hasattr(typ, "extend"):
+        setattr(typ, "extend", MutableSequence[Any].extend)
+
+    if not hasattr(typ, "reverse"):
+        setattr(typ, "reverse", MutableSequence[Any].reverse)
+
+    if not hasattr(typ, "pop"):
+        setattr(typ, "pop", MutableSequence[Any].pop)
+
+    if not hasattr(typ, "remove"):
+        setattr(typ, "remove", _mutable_sequence_remove)
+
+    if not hasattr(typ, "__iadd__"):
+        setattr(typ, "__iadd__", MutableSequence[Any].__iadd__)
+
+    _register(MutableSequence, typ)
+
+
+def mixin_mapping(typ: type) -> None:
+    """
+    Adds missing Python mapping methods to types that implement IMapView and
+    registers the type as a Mapping.
+    """
+    # mixin methods
+    if not hasattr(typ, "keys"):
+        setattr(typ, "keys", Mapping[Any, Any].keys)
+
+    if not hasattr(typ, "items"):
+        setattr(typ, "items", Mapping[Any, Any].items)
+
+    if not hasattr(typ, "values"):
+        setattr(typ, "values", Mapping[Any, Any].values)
+
+    if not hasattr(typ, "get"):
+        setattr(typ, "get", Mapping[Any, Any].get)
+
+    if not hasattr(typ, "__contains__"):
+        setattr(typ, "__contains__", Mapping[Any, Any].__contains__)
+
+    # HACK: Version check works around inheritance anomaly caused by hacky
+    # metaclass inheritance implementation in runtime.cpp. This works as long
+    # as we don't change the projection to implement rich comparison methods
+    # on mapping types.
+
+    if (
+        typ.__eq__ == object.__eq__
+        or typ.__eq__ == Object.__eq__
+        or sys.version_info < (3, 12)
+    ):
+        setattr(typ, "__eq__", Mapping[Any, Any].__eq__)
+        # Equal maps are different objects, so an identity hash would break
+        # hash(a) == hash(b) for a == b. A class derived from Mapping is
+        # unhashable for the same reason.
+        setattr(typ, "__hash__", None)
+
+    if (
+        typ.__ne__ == object.__ne__
+        or typ.__ne__ == Object.__ne__
+        or sys.version_info < (3, 12)
+    ):
+        setattr(typ, "__ne__", Mapping[Any, Any].__ne__)
+
+    _register(Mapping, typ)
+
+
+def mixin_mutable_mapping(typ: type) -> None:
+    """
+    Adds missing Python mapping methods to types that implement IMap and
+    registers the type as a MutableMapping.
+    """
+    mixin_mapping(typ)
+
+    # mixin methods
+    if not hasattr(typ, "clear"):
+        setattr(typ, "clear", MutableMapping[Any, Any].clear)
+
+    if not hasattr(typ, "pop"):
+        setattr(typ, "pop", MutableMapping[Any, Any].pop)
+        # private-name-mangled attribute :-(
+        setattr(
+            typ,
+            "_MutableMapping__marker",
+            getattr(MutableMapping, "_MutableMapping__marker"),
+        )
+
+    if not hasattr(typ, "popitem"):
+        setattr(typ, "popitem", _mutable_mapping_popitem)
+
+    if not hasattr(typ, "setdefault"):
+        setattr(typ, "setdefault", MutableMapping[Any, Any].setdefault)
+
+    if not hasattr(typ, "update"):
+        setattr(typ, "update", MutableMapping[Any, Any].update)
+
+    _register(MutableMapping, typ)
+
+
+T = TypeVar("T")
+
+
+# MyPy wants covariant T but Pylance wants invariant. Invariant seems correct.
+class AsyncOp(Protocol[T]):  # type: ignore [misc]
+    """
+    Protocol that matches the four async interfaces.
+    """
+
+    def cancel(self) -> None: ...
+    @property
+    def status(self) -> "AsyncStatus": ...
+    def get_results(self) -> T: ...
+    @property
+    def completed(self) -> Callable[[Self, "AsyncStatus"], None]: ...
+    @completed.setter
+    def completed(self, value: Callable[[Self, "AsyncStatus"], None]) -> None: ...
+
+
+async def wrap_async(op: AsyncOp[T]) -> T:
+    """
+    What ``await`` of an async operation runs.
+
+    An operation that has finished already is answered from
+    ``get_results()``. Otherwise the completed handler wakes the coroutine,
+    and the status, which can read ``COMPLETED`` before the handler has run,
+    is not asked again.
+
+    Cancelling the task asks WinRT to cancel the operation and goes on
+    waiting, so that nothing is left running behind a task that has moved on,
+    and the cancellation is raised once the operation has finished. Cancelling
+    the task again while it waits for that gives up waiting, and if the
+    operation then fails, the error goes to the loop's exception handler, as
+    an error that nothing retrieved from a future does.
+    """
+    from winrt.windows.foundation import AsyncStatus
+
+    if op.status != AsyncStatus.STARTED:
+        return op.get_results()
+
+    loop = asyncio.get_running_loop()
+    event = asyncio.Event()
+    abandoned = False
+
+    def report(finished: AsyncOp[T]) -> None:
+        try:
+            finished.get_results()
+        except Exception as error:
+            loop.call_exception_handler(
+                {
+                    "message": "async operation failed after the task "
+                    "awaiting it gave up waiting for it",
+                    "exception": error,
+                    "operation": finished,
+                }
+            )
+
+    def deliver(finished: AsyncOp[T], status: "AsyncStatus") -> None:
+        if not abandoned:
+            event.set()
+        elif status == AsyncStatus.ERROR:
+            report(finished)
+
+    # WinRT keeps the handler for as long as the operation exists, and the
+    # event reaches this coroutine and so the operation, through the task
+    # waiting for it. The handler lets go of what it delivers to when it runs,
+    # which breaks that cycle even when there is no loop left to deliver on.
+    pending: Callable[[AsyncOp[T], AsyncStatus], None] | None = deliver
+
+    def completed(finished: AsyncOp[T], status: "AsyncStatus") -> None:
+        nonlocal pending
+        delivery, pending = pending, None
+
+        if delivery is None:
+            return
+
+        try:
+            loop.call_soon_threadsafe(delivery, finished, status)
+        except RuntimeError:
+            # The loop is closed. A task left waiting is reported by asyncio
+            # when it is freed, so only an error that nothing will wait for
+            # is reported here, which a closed loop can still be asked to do.
+            if abandoned and status == AsyncStatus.ERROR:
+                report(finished)
+
+    op.completed = completed
+
+    try:
+        await event.wait()
+    except asyncio.CancelledError:
+        op.cancel()
+
+        try:
+            await event.wait()
+        except asyncio.CancelledError:
+            abandoned = True
+            raise
+
+        raise
+
+    return op.get_results()

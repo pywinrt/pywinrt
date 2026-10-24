@@ -1,60 +1,56 @@
 # /// script
 # dependencies = [
 #   "typing-extensions>=4.5",
-#   "webview2-Microsoft.Web.Webview2.Core>=3.1",
-#   "winrt-runtime>=3.1",
-#   "winrt-Windows.Foundation>=3.1",
-#   "winrt-Windows.Foundation.Collections>=3.1",
-#   "winrt-Windows.UI.Xaml.Interop>=3.1",
-#   "winui3-Microsoft.UI.Xaml>=3.1",
-#   "winui3-Microsoft.UI.Xaml.Controls>=3.1",
-#   "winui3-Microsoft.UI.Xaml.Markup>=3.1",
-#   "winui3-Microsoft.UI.Xaml.XamlTypeInfo>=3.1",
-#   "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap>=3.1",
+#   "winrt-runtime>=4",
+#   "winrt-Microsoft.Web.WebView2",
+#   "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
+#   "winrt-Microsoft.WindowsAppSDK.WinUI",
+#   "winrt-Windows.Foundation",
+#   "winrt-Windows.Foundation.Collections",
+#   "winrt-Windows.UI.Xaml.Interop",
 # ]
 # ///
 
 import atexit
 import tempfile
 from ctypes import WinError
-from typing import Tuple, Union
 
 from typing_extensions import override
-from webview2.microsoft.web.webview2.core import CoreWebView2Environment
-from winrt.runtime import ApartmentType, init_apartment
-from winrt.system import Array
-from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
-from winrt.windows.ui.xaml.interop import TypeKind, TypeName
-from winui3.microsoft.ui.xaml import (
+from winrt.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
     LaunchActivatedEventArgs,
     Window,
 )
-from winui3.microsoft.ui.xaml.controls import (
+from winrt.microsoft.ui.xaml.controls import (
     CoreWebView2InitializedEventArgs,
     Grid,
     WebView2,
     XamlControlsResources,
 )
-from winui3.microsoft.ui.xaml.markup import (
+from winrt.microsoft.ui.xaml.markup import (
     IXamlMetadataProvider,
     IXamlType,
     XamlReader,
     XmlnsDefinition,
 )
-from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
-from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+from winrt.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
+from winrt.microsoft.web.webview2.core import CoreWebView2Environment
+from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )
+from winrt.runtime import ApartmentType, init_apartment
+from winrt.system import Array
+from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
     # This can be useful debugging issues when the WebView2 control fails to
     # initialize (in which case, it will appear as empty black box).
-    if args.exception.value:
-        print("Initialization failed", WinError(args.exception.value))
+    if args.exception:
+        print("Initialization failed", WinError(args.exception))
 
 
 _XAML = """
@@ -70,8 +66,7 @@ _XAML = """
         </Grid.ColumnDefinitions>
 
         <WebView2 Name="webview" Grid.Row="1" Grid.ColumnSpan="2"
-            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-            Source="https://pywinrt.readthedocs.io/en/latest/"/>
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
 """
@@ -107,9 +102,7 @@ class App(Application, IXamlMetadataProvider):
 
         def on_env(op: IAsyncOperation[CoreWebView2Environment], status: AsyncStatus):
             if status == AsyncStatus.ERROR:
-                print(
-                    "create_with_options_async failed:", WinError(op.error_code.value)
-                )
+                print("create_with_options_async failed:", WinError(op.error_code))
                 return
 
             if status != AsyncStatus.COMPLETED:
@@ -117,18 +110,24 @@ class App(Application, IXamlMetadataProvider):
 
             env = op.get_results()
 
-            ensure_op = webview.ensure_core_webview2_with_environment_async(env)
+            ensure_op = webview.ensure_core_webview2_async(env)
 
             def on_ensure(op: IAsyncAction, status: AsyncStatus):
                 if status == AsyncStatus.ERROR:
                     print(
                         "ensure_core_webview2_async failed:",
-                        WinError(op.error_code.value),
+                        WinError(op.error_code),
                     )
                     return
 
                 if status != AsyncStatus.COMPLETED:
                     return
+
+                # Setting Source before this point would have initialized the
+                # control with the default environment instead of this one.
+                webview.core_webview2.navigate(
+                    "https://pywinrt.readthedocs.io/en/latest/"
+                )
 
                 # Don't show the window until ready to avoid black box
                 window.activate()
@@ -138,7 +137,7 @@ class App(Application, IXamlMetadataProvider):
         env_op.completed = on_env
 
     @override
-    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
+    def get_xaml_type(self, type: TypeName | tuple[str, TypeKind]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override

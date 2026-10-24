@@ -1,0 +1,1113 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.Media.Devices.Core
+
+class Windows.Media.Devices.Core.CameraIntrinsics python_type
+    py CameraIntrinsics
+    signature rc(Windows.Media.Devices.Core.CameraIntrinsics;{0aa6ed32-6589-49da-afde-594270ca0aac})
+    default Windows.Media.Devices.Core.ICameraIntrinsics
+    requires Windows.Media.Devices.Core.ICameraIntrinsics
+    requires Windows.Media.Devices.Core.ICameraIntrinsics2
+    factory Windows.Media.Devices.Core.ICameraIntrinsicsFactory
+    constructor -
+        ctor .ctor slot=6 inputs=6 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsicsFactory shape=283
+            in struct type=Windows.Foundation.Numerics.Vector2 name=focalLength
+            in struct type=Windows.Foundation.Numerics.Vector2 name=principalPoint
+            in struct type=Windows.Foundation.Numerics.Vector3 name=radialDistortion
+            in struct type=Windows.Foundation.Numerics.Vector2 name=tangentialDistortion
+            in uint32 name=imageWidth
+            in uint32 name=imageHeight
+            out class type=Windows.Media.Devices.Core.CameraIntrinsics return
+    property focal_length
+        get get_FocalLength slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out struct type=Windows.Foundation.Numerics.Vector2 return
+    property image_height
+        get get_ImageHeight slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out uint32 return
+    property image_width
+        get get_ImageWidth slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out uint32 return
+    property principal_point
+        get get_PrincipalPoint slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out struct type=Windows.Foundation.Numerics.Vector2 return
+    property radial_distortion
+        get get_RadialDistortion slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    property tangential_distortion
+        get get_TangentialDistortion slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=4
+            out struct type=Windows.Foundation.Numerics.Vector2 return
+    property undistorted_projection_transform
+        get get_UndistortedProjectionTransform slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=4
+            out struct type=Windows.Foundation.Numerics.Matrix4x4 return
+    method distort_point
+        method DistortPoint slot=7 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79
+            in struct type=Windows.Foundation.Point name=input
+            out struct type=Windows.Foundation.Point return
+    method distort_points
+        method DistortPoints slot=8 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195
+            pass_array struct type=Windows.Foundation.Point name=inputs
+            fill_array struct type=Windows.Foundation.Point name=results
+    method project_many_onto_frame
+        method ProjectManyOntoFrame slot=14 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195
+            pass_array struct type=Windows.Foundation.Numerics.Vector3 name=coordinates
+            fill_array struct type=Windows.Foundation.Point name=results
+    method project_onto_frame
+        method ProjectOntoFrame slot=12 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=76
+            in struct type=Windows.Foundation.Numerics.Vector3 name=coordinate
+            out struct type=Windows.Foundation.Point return
+    method undistort_point
+        method UndistortPoint slot=9 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=79
+            in struct type=Windows.Foundation.Point name=input
+            out struct type=Windows.Foundation.Point return
+    method undistort_points
+        method UndistortPoints slot=10 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics2 shape=195
+            pass_array struct type=Windows.Foundation.Point name=inputs
+            fill_array struct type=Windows.Foundation.Point name=results
+    method unproject_at_unit_depth
+        method UnprojectAtUnitDepth slot=13 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=79
+            in struct type=Windows.Foundation.Point name=pixelCoordinate
+            out struct type=Windows.Foundation.Numerics.Vector2 return
+    method unproject_pixels_at_unit_depth
+        method UnprojectPixelsAtUnitDepth slot=15 inputs=2 outputs=0 declaring=Windows.Media.Devices.Core.ICameraIntrinsics shape=195
+            pass_array struct type=Windows.Foundation.Point name=pixelCoordinates
+            fill_array struct type=Windows.Foundation.Numerics.Vector2 name=results
+
+class Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper python_type closeable
+    py DepthCorrelatedCoordinateMapper
+    signature rc(Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper;{f95d89fb-8af0-4cb0-926d-696866e5046a})
+    default Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper
+    requires Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper
+    requires Windows.Foundation.IClosable
+    method close
+        method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
+    method map_point
+        method MapPoint slot=8 inputs=3 outputs=1 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=221
+            in struct type=Windows.Foundation.Point name=sourcePoint
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=targetCoordinateSystem
+            in class type=Windows.Media.Devices.Core.CameraIntrinsics name=targetCameraIntrinsics
+            out struct type=Windows.Foundation.Point return
+    method map_points
+        method MapPoints slot=9 inputs=4 outputs=0 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=267
+            pass_array struct type=Windows.Foundation.Point name=sourcePoints
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=targetCoordinateSystem
+            in class type=Windows.Media.Devices.Core.CameraIntrinsics name=targetCameraIntrinsics
+            fill_array struct type=Windows.Foundation.Point name=results
+    method unproject_point
+        method UnprojectPoint slot=6 inputs=2 outputs=1 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=151
+            in struct type=Windows.Foundation.Point name=sourcePoint
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=targetCoordinateSystem
+            out struct type=Windows.Foundation.Numerics.Vector3 return
+    method unproject_points
+        method UnprojectPoints slot=7 inputs=3 outputs=0 declaring=Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper shape=239
+            pass_array struct type=Windows.Foundation.Point name=sourcePoints
+            in class type=Windows.Perception.Spatial.SpatialCoordinateSystem name=targetCoordinateSystem
+            fill_array struct type=Windows.Foundation.Numerics.Vector3 name=results
+
+class Windows.Media.Devices.Core.FrameControlCapabilities python_type
+    py FrameControlCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameControlCapabilities;{a8ffae60-4e9e-4377-a789-e24c4ae7e544})
+    default Windows.Media.Devices.Core.IFrameControlCapabilities
+    requires Windows.Media.Devices.Core.IFrameControlCapabilities
+    requires Windows.Media.Devices.Core.IFrameControlCapabilities2
+    property exposure
+        get get_Exposure slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
+            out class type=Windows.Media.Devices.Core.FrameExposureCapabilities return
+    property exposure_compensation
+        get get_ExposureCompensation slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
+            out class type=Windows.Media.Devices.Core.FrameExposureCompensationCapabilities return
+    property focus
+        get get_Focus slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
+            out class type=Windows.Media.Devices.Core.FrameFocusCapabilities return
+    property iso_speed
+        get get_IsoSpeed slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
+            out class type=Windows.Media.Devices.Core.FrameIsoSpeedCapabilities return
+    property photo_confirmation_supported
+        get get_PhotoConfirmationSupported slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities shape=4
+            out boolean return
+    property flash
+        get get_Flash slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameControlCapabilities2 shape=4
+            out class type=Windows.Media.Devices.Core.FrameFlashCapabilities return
+
+class Windows.Media.Devices.Core.FrameController activatable python_type
+    py FrameController
+    signature rc(Windows.Media.Devices.Core.FrameController;{c16459d9-baef-4052-9177-48aff2af7522})
+    default Windows.Media.Devices.Core.IFrameController
+    requires Windows.Media.Devices.Core.IFrameController
+    requires Windows.Media.Devices.Core.IFrameController2
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property photo_confirmation_enabled
+        get get_PhotoConfirmationEnabled slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            out reference type=Windows.Foundation.IReference<System.Boolean> return
+        put put_PhotoConfirmationEnabled slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            in reference type=Windows.Foundation.IReference<System.Boolean> name=value
+    property exposure_compensation_control
+        get get_ExposureCompensationControl slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            out class type=Windows.Media.Devices.Core.FrameExposureCompensationControl return
+    property exposure_control
+        get get_ExposureControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            out class type=Windows.Media.Devices.Core.FrameExposureControl return
+    property focus_control
+        get get_FocusControl slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            out class type=Windows.Media.Devices.Core.FrameFocusControl return
+    property iso_speed_control
+        get get_IsoSpeedControl slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController shape=4
+            out class type=Windows.Media.Devices.Core.FrameIsoSpeedControl return
+    property flash_control
+        get get_FlashControl slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameController2 shape=4
+            out class type=Windows.Media.Devices.Core.FrameFlashControl return
+
+class Windows.Media.Devices.Core.FrameExposureCapabilities python_type
+    py FrameExposureCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameExposureCapabilities;{bdbe9ce3-3985-4e72-97c2-0590d61307a1})
+    default Windows.Media.Devices.Core.IFrameExposureCapabilities
+    requires Windows.Media.Devices.Core.IFrameExposureCapabilities
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
+            out timespan return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
+            out timespan return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
+            out timespan return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCapabilities shape=4
+            out boolean return
+
+class Windows.Media.Devices.Core.FrameExposureCompensationCapabilities python_type
+    py FrameExposureCompensationCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameExposureCompensationCapabilities;{b988a823-8065-41ee-b04f-722265954500})
+    default Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities
+    requires Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
+            out single return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
+            out single return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
+            out single return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities shape=4
+            out boolean return
+
+class Windows.Media.Devices.Core.FrameExposureCompensationControl python_type
+    py FrameExposureCompensationControl
+    signature rc(Windows.Media.Devices.Core.FrameExposureCompensationControl;{e95896c9-f7f9-48ca-8591-a26531cb1578})
+    default Windows.Media.Devices.Core.IFrameExposureCompensationControl
+    requires Windows.Media.Devices.Core.IFrameExposureCompensationControl
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4
+            out reference type=Windows.Foundation.IReference<System.Single> return
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureCompensationControl shape=4
+            in reference type=Windows.Foundation.IReference<System.Single> name=value
+
+class Windows.Media.Devices.Core.FrameExposureControl python_type
+    py FrameExposureControl
+    signature rc(Windows.Media.Devices.Core.FrameExposureControl;{b1605a61-ffaf-4752-b621-f5b6f117f432})
+    default Windows.Media.Devices.Core.IFrameExposureControl
+    requires Windows.Media.Devices.Core.IFrameExposureControl
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
+            out reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
+            in reference type=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> name=value
+    property auto
+        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
+            out boolean return
+        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameExposureControl shape=4
+            in boolean name=value
+
+class Windows.Media.Devices.Core.FrameFlashCapabilities python_type
+    py FrameFlashCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameFlashCapabilities;{bb9341a2-5ebe-4f62-8223-0e2b05bfbbd0})
+    default Windows.Media.Devices.Core.IFrameFlashCapabilities
+    requires Windows.Media.Devices.Core.IFrameFlashCapabilities
+    property power_supported
+        get get_PowerSupported slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
+            out boolean return
+    property red_eye_reduction_supported
+        get get_RedEyeReductionSupported slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
+            out boolean return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashCapabilities shape=4
+            out boolean return
+
+class Windows.Media.Devices.Core.FrameFlashControl python_type
+    py FrameFlashControl
+    signature rc(Windows.Media.Devices.Core.FrameFlashControl;{75d5f6c7-bd45-4fab-9375-45ac04b332c2})
+    default Windows.Media.Devices.Core.IFrameFlashControl
+    requires Windows.Media.Devices.Core.IFrameFlashControl
+    property red_eye_reduction
+        get get_RedEyeReduction slot=10 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            out boolean return
+        put put_RedEyeReduction slot=11 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            in boolean name=value
+    property power_percent
+        get get_PowerPercent slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            out single return
+        put put_PowerPercent slot=13 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=1
+            in single name=value
+    property mode
+        get get_Mode slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            out enum32 type=Windows.Media.Devices.Core.FrameFlashMode return
+        put put_Mode slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            in enum32 type=Windows.Media.Devices.Core.FrameFlashMode name=value
+    property auto
+        get get_Auto slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            out boolean return
+        put put_Auto slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFlashControl shape=4
+            in boolean name=value
+
+enum Windows.Media.Devices.Core.FrameFlashMode python_type
+    py FrameFlashMode
+    signature enum(Windows.Media.Devices.Core.FrameFlashMode;i4)
+    constant DISABLE 0
+    constant ENABLE 1
+    constant GLOBAL 2
+
+class Windows.Media.Devices.Core.FrameFocusCapabilities python_type
+    py FrameFocusCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameFocusCapabilities;{7b25cd58-01c0-4065-9c40-c1a721425c1a})
+    default Windows.Media.Devices.Core.IFrameFocusCapabilities
+    requires Windows.Media.Devices.Core.IFrameFocusCapabilities
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
+            out uint32 return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
+            out uint32 return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
+            out uint32 return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusCapabilities shape=4
+            out boolean return
+
+class Windows.Media.Devices.Core.FrameFocusControl python_type
+    py FrameFocusControl
+    signature rc(Windows.Media.Devices.Core.FrameFocusControl;{272df1d0-d912-4214-a67b-e38a8d48d8c6})
+    default Windows.Media.Devices.Core.IFrameFocusControl
+    requires Windows.Media.Devices.Core.IFrameFocusControl
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Value slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameFocusControl shape=4
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+
+class Windows.Media.Devices.Core.FrameIsoSpeedCapabilities python_type
+    py FrameIsoSpeedCapabilities
+    signature rc(Windows.Media.Devices.Core.FrameIsoSpeedCapabilities;{16bdff61-6df6-4ac9-b92a-9f6ecd1ad2fa})
+    default Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities
+    requires Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities
+    property max
+        get get_Max slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
+            out uint32 return
+    property min
+        get get_Min slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
+            out uint32 return
+    property step
+        get get_Step slot=9 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
+            out uint32 return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities shape=4
+            out boolean return
+
+class Windows.Media.Devices.Core.FrameIsoSpeedControl python_type
+    py FrameIsoSpeedControl
+    signature rc(Windows.Media.Devices.Core.FrameIsoSpeedControl;{1a03efed-786a-4c75-a557-7ab9a85f588c})
+    default Windows.Media.Devices.Core.IFrameIsoSpeedControl
+    requires Windows.Media.Devices.Core.IFrameIsoSpeedControl
+    property value
+        get get_Value slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
+            out reference type=Windows.Foundation.IReference<System.UInt32> return
+        put put_Value slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
+            in reference type=Windows.Foundation.IReference<System.UInt32> name=value
+    property auto
+        get get_Auto slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
+            out boolean return
+        put put_Auto slot=7 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IFrameIsoSpeedControl shape=4
+            in boolean name=value
+
+interface Windows.Media.Devices.Core.ICameraIntrinsics
+    guid 0aa6ed32-6589-49da-afde-594270ca0aac
+
+interface Windows.Media.Devices.Core.ICameraIntrinsics2
+    guid 0cdaa447-0798-4b4d-839f-c5ec414db27a
+
+interface Windows.Media.Devices.Core.ICameraIntrinsicsFactory
+    guid c0ddc486-2132-4a34-a659-9bfe2a055712
+
+interface Windows.Media.Devices.Core.IDepthCorrelatedCoordinateMapper
+    guid f95d89fb-8af0-4cb0-926d-696866e5046a
+
+interface Windows.Media.Devices.Core.IFrameControlCapabilities
+    guid a8ffae60-4e9e-4377-a789-e24c4ae7e544
+
+interface Windows.Media.Devices.Core.IFrameControlCapabilities2
+    guid ce9b0464-4730-440f-bd3e-efe8a8f230a8
+
+interface Windows.Media.Devices.Core.IFrameController
+    guid c16459d9-baef-4052-9177-48aff2af7522
+
+interface Windows.Media.Devices.Core.IFrameController2
+    guid 00d3bc75-d87c-485b-8a09-5c358568b427
+
+interface Windows.Media.Devices.Core.IFrameExposureCapabilities
+    guid bdbe9ce3-3985-4e72-97c2-0590d61307a1
+
+interface Windows.Media.Devices.Core.IFrameExposureCompensationCapabilities
+    guid b988a823-8065-41ee-b04f-722265954500
+
+interface Windows.Media.Devices.Core.IFrameExposureCompensationControl
+    guid e95896c9-f7f9-48ca-8591-a26531cb1578
+
+interface Windows.Media.Devices.Core.IFrameExposureControl
+    guid b1605a61-ffaf-4752-b621-f5b6f117f432
+
+interface Windows.Media.Devices.Core.IFrameFlashCapabilities
+    guid bb9341a2-5ebe-4f62-8223-0e2b05bfbbd0
+
+interface Windows.Media.Devices.Core.IFrameFlashControl
+    guid 75d5f6c7-bd45-4fab-9375-45ac04b332c2
+
+interface Windows.Media.Devices.Core.IFrameFocusCapabilities
+    guid 7b25cd58-01c0-4065-9c40-c1a721425c1a
+
+interface Windows.Media.Devices.Core.IFrameFocusControl
+    guid 272df1d0-d912-4214-a67b-e38a8d48d8c6
+
+interface Windows.Media.Devices.Core.IFrameIsoSpeedCapabilities
+    guid 16bdff61-6df6-4ac9-b92a-9f6ecd1ad2fa
+
+interface Windows.Media.Devices.Core.IFrameIsoSpeedControl
+    guid 1a03efed-786a-4c75-a557-7ab9a85f588c
+
+interface Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController> concrete iterable
+    py winrt.windows.foundation.collections._IIterable[FrameController]
+    guid bd8eeadc-2dd9-5ad8-ac5d-f3b13b94b9c2
+    signature pinterface({faa585ea-6214-4217-afda-7f46de5869b3};rc(Windows.Media.Devices.Core.FrameController;{c16459d9-baef-4052-9177-48aff2af7522}))
+    base Windows.Foundation.Collections.IIterable
+    argument Windows.Media.Devices.Core.FrameController
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> return
+
+interface Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> concrete iterable iterator
+    py winrt.windows.foundation.collections._IIterator[FrameController]
+    guid 1440dc88-63ff-5a01-bb93-390c76742488
+    signature pinterface({6a79e863-4300-459a-9966-cbb660963ee1};rc(Windows.Media.Devices.Core.FrameController;{c16459d9-baef-4052-9177-48aff2af7522}))
+    base Windows.Foundation.Collections.IIterator
+    argument Windows.Media.Devices.Core.FrameController
+    property current
+        get get_Current slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=4 reverse=22 role=current
+            out class type=Windows.Media.Devices.Core.FrameController return
+    property has_current
+        get get_HasCurrent slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=4 reverse=43 role=has_current
+            out boolean return
+    method get_many
+        method GetMany slot=9 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=117 reverse=101 role=get_many
+            fill_array class type=Windows.Media.Devices.Core.FrameController name=items
+            out uint32 return
+    method move_next
+        method MoveNext slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> shape=4 reverse=62 role=move_next
+            out boolean return
+
+interface Windows.Foundation.IReference<System.Boolean> concrete
+    py winrt.windows.foundation._IReference[Boolean]
+    guid 3c00fd60-2950-5939-a21a-2d12c5a01b8a
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};b1)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Boolean
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Boolean> shape=4 reverse=22 role=value
+            out boolean return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReference<System.Single> concrete
+    py winrt.windows.foundation._IReference[Single]
+    guid 719cc2ba-3e76-5def-9f1a-38d85a145ea8
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};f4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.Single
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.Single> shape=4 reverse=22 role=value
+            out single return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReference<System.UInt32> concrete
+    py winrt.windows.foundation._IReference[UInt32]
+    guid 513ef3af-e784-5325-a91e-97c2b8111cf3
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};u4)
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument System.UInt32
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<System.UInt32> shape=4 reverse=22 role=value
+            out uint32 return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Foundation.IReference<Windows.Foundation.TimeSpan> concrete
+    py winrt.windows.foundation._IReference[TimeSpan]
+    guid 604d0c4c-91de-5c2a-935f-362f13eaf800
+    signature pinterface({61c17706-2d65-11e0-9ae8-d48564015472};struct(Windows.Foundation.TimeSpan;i8))
+    base Windows.Foundation.IReference
+    requires Windows.Foundation.IPropertyValue
+    argument Windows.Foundation.TimeSpan
+    property value
+        get get_Value slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IReference<Windows.Foundation.TimeSpan> shape=4 reverse=22 role=value
+            out timespan return
+    property is_numeric_scalar
+        get get_IsNumericScalar slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=43
+            out boolean return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=22
+            out enum32 type=Windows.Foundation.PropertyType return
+    method get_boolean
+        method GetBoolean slot=18 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=218
+            out boolean return
+    method get_boolean_array
+        method GetBooleanArray slot=36 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=297
+            receive_array boolean name=value
+    method get_char16
+        method GetChar16 slot=17 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=210
+            out char16 return
+    method get_char16_array
+        method GetChar16Array slot=35 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=293
+            receive_array char16 name=value
+    method get_date_time
+        method GetDateTime slot=21 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=232
+            out datetime return
+    method get_date_time_array
+        method GetDateTimeArray slot=40 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=313
+            receive_array datetime name=value
+    method get_double
+        method GetDouble slot=16 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=202
+            out double return
+    method get_double_array
+        method GetDoubleArray slot=34 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=289
+            receive_array double name=value
+    method get_guid
+        method GetGuid slot=20 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=228
+            out guid return
+    method get_guid_array
+        method GetGuidArray slot=39 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=308
+            receive_array guid name=value
+    method get_inspectable_array
+        method GetInspectableArray slot=38 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=303
+            receive_array object name=value
+    method get_int16
+        method GetInt16 slot=9 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=99
+            out int16 return
+    method get_int16_array
+        method GetInt16Array slot=27 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=260
+            receive_array int16 name=value
+    method get_int32
+        method GetInt32 slot=11 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=141
+            out int32 return
+    method get_int32_array
+        method GetInt32Array slot=29 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=267
+            receive_array int32 name=value
+    method get_int64
+        method GetInt64 slot=13 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=173
+            out int64 return
+    method get_int64_array
+        method GetInt64Array slot=31 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=274
+            receive_array int64 name=value
+    method get_point
+        method GetPoint slot=23 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=242
+            out struct type=Windows.Foundation.Point return
+    method get_point_array
+        method GetPointArray slot=42 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=320
+            receive_array struct type=Windows.Foundation.Point name=value
+    method get_rect
+        method GetRect slot=25 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=252
+            out struct type=Windows.Foundation.Rect return
+    method get_rect_array
+        method GetRectArray slot=44 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=327
+            receive_array struct type=Windows.Foundation.Rect name=value
+    method get_single
+        method GetSingle slot=15 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=194
+            out single return
+    method get_single_array
+        method GetSingleArray slot=33 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=286
+            receive_array single name=value
+    method get_size
+        method GetSize slot=24 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=247
+            out struct type=Windows.Foundation.Size return
+    method get_size_array
+        method GetSizeArray slot=43 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=323
+            receive_array struct type=Windows.Foundation.Size name=value
+    method get_string
+        method GetString slot=19 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=223
+            out string return
+    method get_string_array
+        method GetStringArray slot=37 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=300
+            receive_array string name=value
+    method get_time_span
+        method GetTimeSpan slot=22 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=237
+            out timespan return
+    method get_time_span_array
+        method GetTimeSpanArray slot=41 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=317
+            receive_array timespan name=value
+    method get_uint16
+        method GetUInt16 slot=10 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=121
+            out uint16 return
+    method get_uint16_array
+        method GetUInt16Array slot=28 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=264
+            receive_array uint16 name=value
+    method get_uint32
+        method GetUInt32 slot=12 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=162
+            out uint32 return
+    method get_uint32_array
+        method GetUInt32Array slot=30 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=271
+            receive_array uint32 name=value
+    method get_uint64
+        method GetUInt64 slot=14 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=186
+            out uint64 return
+    method get_uint64_array
+        method GetUInt64Array slot=32 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=281
+            receive_array uint64 name=value
+    method get_uint8
+        method GetUInt8 slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=4 reverse=62
+            out uint8 return
+    method get_uint8_array
+        method GetUInt8Array slot=26 inputs=0 outputs=1 declaring=Windows.Foundation.IPropertyValue shape=51 reverse=256
+            receive_array uint8 name=value
+
+interface Windows.Media.Devices.Core.IVariablePhotoSequenceController
+    guid 7fbff880-ed8c-43fd-a7c3-b35809e4229a
+
+interface Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> concrete iterable sequence mutable_sequence
+    py winrt.windows.foundation.collections._IVector[FrameController]
+    guid 1c8f8276-b89a-5093-a1ed-af49dfb72a89
+    signature pinterface({913337e9-11a1-4345-a3a2-4e7f956e222d};rc(Windows.Media.Devices.Core.FrameController;{c16459d9-baef-4052-9177-48aff2af7522}))
+    base Windows.Foundation.Collections.IVector
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController>
+    argument Windows.Media.Devices.Core.FrameController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=4 reverse=43 role=size
+            out uint32 return
+    method append
+        method Append slot=13 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=4 reverse=173 role=append
+            in class type=Windows.Media.Devices.Core.FrameController name=value
+    method clear
+        method Clear slot=15 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=0 reverse=193 role=clear
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Devices.Core.FrameController return
+    method get_many
+        method GetMany slot=16 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=195 reverse=205 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Devices.Core.FrameController name=items
+            out uint32 return
+    method get_view
+        method GetView slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=4 reverse=62 role=get_view
+            out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> return
+    method index_of
+        method IndexOf slot=9 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=117 reverse=101 role=index_of
+            in class type=Windows.Media.Devices.Core.FrameController name=value
+            out uint32 name=index
+            out boolean return
+    method insert_at
+        method InsertAt slot=11 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=51 reverse=144 role=insert_at
+            in uint32 name=index
+            in class type=Windows.Media.Devices.Core.FrameController name=value
+    method remove_at
+        method RemoveAt slot=12 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=4 reverse=162 role=remove_at
+            in uint32 name=index
+    method remove_at_end
+        method RemoveAtEnd slot=14 inputs=0 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=0 reverse=185 role=remove_at_end
+    method replace_all
+        method ReplaceAll slot=17 inputs=1 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=51 reverse=211 role=replace_all
+            pass_array class type=Windows.Media.Devices.Core.FrameController name=items
+    method set_at
+        method SetAt slot=10 inputs=2 outputs=0 declaring=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> shape=51 reverse=124 role=set_at
+            in uint32 name=index
+            in class type=Windows.Media.Devices.Core.FrameController name=value
+
+interface Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> concrete iterable sequence
+    py winrt.windows.foundation.collections._IVectorView[FrameController]
+    guid fcd6a2a3-b6ff-5572-912b-99ebaf95165d
+    signature pinterface({bbe1fa4c-b0e3-4583-baef-1f1b2e483e56};rc(Windows.Media.Devices.Core.FrameController;{c16459d9-baef-4052-9177-48aff2af7522}))
+    base Windows.Foundation.Collections.IVectorView
+    requires Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController>
+    argument Windows.Media.Devices.Core.FrameController
+    property size
+        get get_Size slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=4 reverse=43 role=size
+            out uint32 return
+    method first
+        method First slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.Collections.IIterable<Windows.Media.Devices.Core.FrameController> shape=4 reverse=22 role=first
+            out parameterized type=Windows.Foundation.Collections.IIterator<Windows.Media.Devices.Core.FrameController> return
+    method get_at
+        method GetAt slot=6 inputs=1 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=51 reverse=24 role=get_at
+            in uint32 name=index
+            out class type=Windows.Media.Devices.Core.FrameController return
+    method get_many
+        method GetMany slot=9 inputs=2 outputs=1 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=195 reverse=102 role=get_many
+            in uint32 name=startIndex
+            fill_array class type=Windows.Media.Devices.Core.FrameController name=items
+            out uint32 return
+    method index_of
+        method IndexOf slot=8 inputs=1 outputs=2 declaring=Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.Core.FrameController> shape=117 reverse=66 role=index_of
+            in class type=Windows.Media.Devices.Core.FrameController name=value
+            out uint32 name=index
+            out boolean return
+
+class Windows.Media.Devices.Core.VariablePhotoSequenceController python_type
+    py VariablePhotoSequenceController
+    signature rc(Windows.Media.Devices.Core.VariablePhotoSequenceController;{7fbff880-ed8c-43fd-a7c3-b35809e4229a})
+    default Windows.Media.Devices.Core.IVariablePhotoSequenceController
+    requires Windows.Media.Devices.Core.IVariablePhotoSequenceController
+    property photos_per_second_limit
+        get get_PhotosPerSecondLimit slot=8 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out single return
+        put put_PhotosPerSecondLimit slot=9 inputs=1 outputs=0 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=1
+            in single name=value
+    property desired_frame_controllers
+        get get_DesiredFrameControllers slot=13 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out parameterized type=Windows.Foundation.Collections.IVector<Windows.Media.Devices.Core.FrameController> return
+    property frame_capabilities
+        get get_FrameCapabilities slot=12 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out class type=Windows.Media.Devices.Core.FrameControlCapabilities return
+    property max_photos_per_second
+        get get_MaxPhotosPerSecond slot=7 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out single return
+    property supported
+        get get_Supported slot=6 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out boolean return
+    method get_current_frame_rate
+        method GetCurrentFrameRate slot=11 inputs=0 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=4
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+    method get_highest_concurrent_frame_rate
+        method GetHighestConcurrentFrameRate slot=10 inputs=1 outputs=1 declaring=Windows.Media.Devices.Core.IVariablePhotoSequenceController shape=51
+            in interface type=Windows.Media.MediaProperties.IMediaEncodingProperties name=captureProperties
+            out class type=Windows.Media.MediaProperties.MediaRatio return
+
+class System.Boolean external
+    py winrt.system.Boolean
+
+class System.Single external
+    py winrt.system.Single
+
+class System.UInt32 external
+    py winrt.system.UInt32
+
+interface Windows.Foundation.IClosable external
+    py winrt.windows.foundation._IClosable
+    guid 30d5a829-7fa4-4026-83bb-d75bae4ea99e
+
+interface Windows.Foundation.IPropertyValue external
+    py winrt.windows.foundation._IPropertyValue
+    guid 4bd682dd-7554-40e9-9a9b-82654ede7e62
+
+interface Windows.Foundation.IReference external parameterized
+    py winrt.windows.foundation._IReference
+    guid 61c17706-2d65-11e0-9ae8-d48564015472
+
+struct Windows.Foundation.Point external
+    py winrt.windows.foundation.Point
+
+enum Windows.Foundation.PropertyType external
+    py winrt.windows.foundation.PropertyType
+
+struct Windows.Foundation.Rect external
+    py winrt.windows.foundation.Rect
+
+struct Windows.Foundation.Size external
+    py winrt.windows.foundation.Size
+
+struct Windows.Foundation.TimeSpan external
+    py winrt.windows.foundation.TimeSpan
+
+interface Windows.Foundation.Collections.IIterable external parameterized
+    py winrt.windows.foundation.collections._IIterable
+    guid faa585ea-6214-4217-afda-7f46de5869b3
+
+interface Windows.Foundation.Collections.IIterator external parameterized
+    py winrt.windows.foundation.collections._IIterator
+    guid 6a79e863-4300-459a-9966-cbb660963ee1
+
+interface Windows.Foundation.Collections.IVector external parameterized
+    py winrt.windows.foundation.collections._IVector
+    guid 913337e9-11a1-4345-a3a2-4e7f956e222d
+
+interface Windows.Foundation.Collections.IVectorView external parameterized
+    py winrt.windows.foundation.collections._IVectorView
+    guid bbe1fa4c-b0e3-4583-baef-1f1b2e483e56
+
+struct Windows.Foundation.Numerics.Matrix4x4 external
+    py winrt.windows.foundation.numerics.Matrix4x4
+
+struct Windows.Foundation.Numerics.Vector2 external
+    py winrt.windows.foundation.numerics.Vector2
+
+struct Windows.Foundation.Numerics.Vector3 external
+    py winrt.windows.foundation.numerics.Vector3
+
+interface Windows.Media.MediaProperties.IMediaEncodingProperties external
+    py winrt.windows.media.mediaproperties._IMediaEncodingProperties
+    guid b4002af6-acd4-4e5a-a24b-5d7498a8b8c4
+
+class Windows.Media.MediaProperties.MediaRatio external
+    py winrt.windows.media.mediaproperties.MediaRatio
+
+class Windows.Perception.Spatial.SpatialCoordinateSystem external
+    py winrt.windows.perception.spatial.SpatialCoordinateSystem

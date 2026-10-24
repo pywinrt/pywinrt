@@ -1,42 +1,39 @@
 # /// script
 # dependencies = [
 #   "typing-extensions>=4.5",
-#   "winrt-runtime>=3.1",
-#   "winrt-Windows.Foundation>=3.1",
-#   "winrt-Windows.Foundation.Collections>=3.1",
-#   "winrt-Windows.UI.Xaml.Interop>=3.1",
-#   "winui3-Microsoft.UI.Xaml>=3.1",
-#   "winui3-Microsoft.UI.Xaml.Controls>=3.1",
-#   "winui3-Microsoft.UI.Xaml.Markup>=3.1",
-#   "winui3-Microsoft.UI.Xaml.XamlTypeInfo>=3.1",
-#   "winui3-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap>=3.1",
+#   "winrt-runtime>=4",
+#   "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
+#   "winrt-Microsoft.WindowsAppSDK.WinUI",
+#   "winrt-Windows.Foundation",
+#   "winrt-Windows.Foundation.Collections",
+#   "winrt-Windows.UI.Xaml.Interop",
 # ]
 # ///
 
-from typing import Tuple, Union
 
 from typing_extensions import override
-from winrt.system import Array
-from winrt.windows.ui.xaml.interop import TypeKind, TypeName
-from winui3.microsoft.ui.xaml import (
+from winrt.microsoft.ui.xaml import (
     Application,
     ApplicationInitializationCallbackParams,
     FrameworkElement,
     LaunchActivatedEventArgs,
     Window,
 )
-from winui3.microsoft.ui.xaml.controls import Button, XamlControlsResources
-from winui3.microsoft.ui.xaml.markup import (
+from winrt.microsoft.ui.xaml.controls import Button, XamlControlsResources
+from winrt.microsoft.ui.xaml.markup import (
     IXamlMetadataProvider,
     IXamlType,
     XamlReader,
     XmlnsDefinition,
 )
-from winui3.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
-from winui3.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+from winrt.microsoft.ui.xaml.xamltypeinfo import XamlControlsXamlMetaDataProvider
+from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
     InitializeOptions,
     initialize,
 )
+from winrt.runtime import ApartmentType, init_apartment
+from winrt.system import Array
+from winrt.windows.ui.xaml.interop import TypeKind, TypeName
 
 # XAML can be inline like this or saved in a separate file. Or you can do
 # everything programmatically if you rather.
@@ -79,7 +76,7 @@ class App(Application, IXamlMetadataProvider):
         window.activate()
 
     @override
-    def get_xaml_type(self, type: Union[TypeName, Tuple[str, TypeKind]]) -> IXamlType:
+    def get_xaml_type(self, type: TypeName | tuple[str, TypeKind]) -> IXamlType:
         return self._provider.get_xaml_type(type)
 
     @override
@@ -96,6 +93,9 @@ def init(_: ApplicationInitializationCallbackParams) -> None:
     # to keep a reference to it.
     App()
 
+
+# The thread that runs the user interface has to be a single-threaded apartment.
+init_apartment(ApartmentType.SINGLE_THREADED)
 
 # This is the main entry point for the application. To use the Windows App SDK
 # outside of a packaged app, you have to bootstrap it using the initialize
