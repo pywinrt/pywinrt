@@ -45,46 +45,23 @@ import packages
 # sysconfig.get_platform() does.
 PLAT_NAMES = ["win32", "win-amd64", "win-arm64"]
 
-packages.set_nuget_environment()
 
-parser = argparse.ArgumentParser(
-    description="Builds the wheels of every package that is published."
-)
-half = parser.add_mutually_exclusive_group()
-half.add_argument(
-    "--pure",
-    action="store_true",
-    help="build only the wheels that are built without a compiler",
-)
-half.add_argument(
-    "--compiled",
-    action="store_true",
-    help="build only the wheels that cibuildwheel builds",
-)
-parser.add_argument(
-    "--plan",
-    action="store_true",
-    help="print pure=true|false and compiled=true|false, the halves that have"
-    " a package to build, and trusted=true|false|mixed, whether its units"
-    " upload with trusted publishing, as GitHub Actions output lines, and"
-    " build nothing",
-)
-packages.add_arguments(parser)
-args, cibuildwheel_args = parser.parse_known_args()
-
-selected = packages.select(args)
-
-if args.plan:
+def plan(selected: list[packages.Package]) -> dict[str, str]:
+    """
+    What --plan answers for a build of @p selected: whether each half has a
+    package to build, as pure and compiled, and whether its units upload
+    with trusted publishing, as trusted, which is mixed when they disagree.
+    """
     builds = {package.build for package in selected}
     pure = bool(builds & {packages.Build.ANY, packages.Build.REDIST})
     compiled = packages.Build.COMPILED in builds
     trusted = {package.release in packages.TRUSTED_PUBLISHING for package in selected}
 
-    print(f"pure={str(pure).lower()}")
-    print(f"compiled={str(compiled).lower()}")
-    print(f"trusted={'mixed' if len(trusted) > 1 else str(True in trusted).lower()}")
-
-    raise SystemExit
+    return {
+        "pure": str(pure).lower(),
+        "compiled": str(compiled).lower(),
+        "trusted": "mixed" if len(trusted) > 1 else str(True in trusted).lower(),
+    }
 
 
 def build_wheel(package: packages.Package) -> None:
@@ -101,27 +78,68 @@ def build_wheel(package: packages.Package) -> None:
     )
 
 
-if not args.compiled:
-    for package in selected:
-        if package.build is packages.Build.ANY:
-            build_wheel(package)
-        elif package.build is packages.Build.REDIST:
-            for plat_name in PLAT_NAMES:
-                os.environ["PYWINRT_PLAT_NAME"] = plat_name
+def main() -> None:
+    packages.set_nuget_environment()
 
+    parser = argparse.ArgumentParser(
+        description="Builds the wheels of every package that is published."
+    )
+    half = parser.add_mutually_exclusive_group()
+    half.add_argument(
+        "--pure",
+        action="store_true",
+        help="build only the wheels that are built without a compiler",
+    )
+    half.add_argument(
+        "--compiled",
+        action="store_true",
+        help="build only the wheels that cibuildwheel builds",
+    )
+    parser.add_argument(
+        "--plan",
+        action="store_true",
+        help="print pure=true|false and compiled=true|false, the halves that have"
+        " a package to build, and trusted=true|false|mixed, whether its units"
+        " upload with trusted publishing, as GitHub Actions output lines, and"
+        " build nothing",
+    )
+    packages.add_arguments(parser)
+    args, cibuildwheel_args = parser.parse_known_args()
+
+    selected = packages.select(args)
+
+    if args.plan:
+        for name, value in plan(selected).items():
+            print(f"{name}={value}")
+
+        return
+
+    if not args.compiled:
+        for package in selected:
+            if package.build is packages.Build.ANY:
                 build_wheel(package)
+            elif package.build is packages.Build.REDIST:
+                for plat_name in PLAT_NAMES:
+                    os.environ["PYWINRT_PLAT_NAME"] = plat_name
 
-            del os.environ["PYWINRT_PLAT_NAME"]
+                    build_wheel(package)
 
-if not args.pure:
-    for package in selected:
-        if package.build is not packages.Build.COMPILED:
-            continue
+                del os.environ["PYWINRT_PLAT_NAME"]
 
-        subprocess.check_call(
-            ["cibuildwheel", os.fspath(package.path)]
-            + (cibuildwheel_args or ["--platform", "windows"])
-        )
+    if not args.pure:
+        for package in selected:
+            if package.build is not packages.Build.COMPILED:
+                continue
 
-        # Build directories are 10s of MBs and will cause CI to run out of space!
-        shutil.rmtree(package.path / "build")
+            subprocess.check_call(
+                ["cibuildwheel", os.fspath(package.path)]
+                + (cibuildwheel_args or ["--platform", "windows"])
+            )
+
+            # Build directories are 10s of MBs and will cause CI to run out of
+            # space!
+            shutil.rmtree(package.path / "build")
+
+
+if __name__ == "__main__":
+    main()
