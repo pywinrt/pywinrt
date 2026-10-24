@@ -1,0 +1,23 @@
+# Creates one PyPI project from a pending trusted publisher, which PyPI does
+# without its limit on new projects. Lives on this branch alone, for the 4.0.0
+# release, and is deleted with it.
+name: create-projects
+on:
+  push:
+    branches: [pypi-create-projects]
+permissions: {}
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    permissions:
+      # the token exchange that turns the pending publisher into a project
+      id-token: write
+    steps:
+      - name: exchange the OIDC token
+        run: |
+          oidc=$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=pypi" | jq -r .value)
+          curl -sS -o response.json -X POST https://pypi.org/_/oidc/mint-token \
+            -d "{\"token\":\"$oidc\"}"
+          jq 'del(.token)' response.json
+          jq -e .success response.json > /dev/null
