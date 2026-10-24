@@ -100,18 +100,23 @@ def notes(changelog: Path, version: str) -> str:
     return section + ("\n\n" + "\n".join(used) if used else "") + "\n"
 
 
-parser = argparse.ArgumentParser(
-    description="Prints the GitHub release of one release tag."
-)
-parser.add_argument("tag", help="the tag the release is for")
-parser.add_argument(
-    "--title", action="store_true", help="print the title instead of the notes"
-)
-args = parser.parse_args()
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Prints the GitHub release of one release tag."
+    )
+    parser.add_argument("tag", help="the tag the release is for")
+    parser.add_argument(
+        "--title", action="store_true", help="print the title instead of the notes"
+    )
+    args = parser.parse_args()
 
-title, version, path = release_of(args.tag)
+    title, version, path = release_of(args.tag)
 
-if args.title:
-    print(f"{title} {version}")
-else:
-    sys.stdout.write(notes(path / "CHANGELOG.md", version))
+    if args.title:
+        print(f"{title} {version}")
+    else:
+        sys.stdout.write(notes(path / "CHANGELOG.md", version))
+
+
+if __name__ == "__main__":
+    main()
