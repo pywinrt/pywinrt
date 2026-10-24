@@ -82,18 +82,19 @@ namespace py::interp
                 return nullptr;
             }
 
+            void* abi{};
+            if (!self->member->is_static && !(abi = instance_abi(instance)))
+            {
+                return nullptr;
+            }
+
             auto const overload = select_overload(*self->member, nargs - 1);
             if (!overload)
             {
                 return nullptr;
             }
 
-            return call_member(
-                *self->member,
-                *overload,
-                self->member->is_static ? nullptr : abi_of(instance),
-                args + 1,
-                nargs - 1);
+            return call_member(*self->member, *overload, abi, args + 1, nargs - 1);
         }
 
         PyObject* method_descr_get(
@@ -211,18 +212,20 @@ namespace py::interp
         PyObject* property_get(PyObject* self, void* closure) noexcept
         {
             auto const member = static_cast<member_desc*>(closure);
+
+            void* abi{};
+            if (!member->is_static && !(abi = instance_abi(self)))
+            {
+                return nullptr;
+            }
+
             auto const overload = select_overload(*member, 0);
             if (!overload)
             {
                 return nullptr;
             }
 
-            return call_member(
-                *member,
-                *overload,
-                member->is_static ? nullptr : abi_of(self),
-                nullptr,
-                0);
+            return call_member(*member, *overload, abi, nullptr, 0);
         }
 
         int property_set(PyObject* self, PyObject* value, void* closure) noexcept
@@ -236,18 +239,19 @@ namespace py::interp
                 return -1;
             }
 
+            void* abi{};
+            if (!member->is_static && !(abi = instance_abi(self)))
+            {
+                return -1;
+            }
+
             auto const overload = select_overload(*member, 1);
             if (!overload)
             {
                 return -1;
             }
 
-            pyobj_handle result{call_member(
-                *member,
-                *overload,
-                member->is_static ? nullptr : abi_of(self),
-                &value,
-                1)};
+            pyobj_handle result{call_member(*member, *overload, abi, &value, 1)};
 
             return result ? 0 : -1;
         }

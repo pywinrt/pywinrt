@@ -297,6 +297,7 @@ def add_package_dependency(package_family_name: str) -> str:
 # _on_launched() is never called and main() does the setup that would go there.
 class App(Application, IXamlMetadataProvider):
     def __init__(self) -> None:
+        super().__init__()
         self._provider = XamlControlsXamlMetaDataProvider()
 
     @override

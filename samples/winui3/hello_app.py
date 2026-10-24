@@ -51,6 +51,7 @@ XAML = """
 # implemented on the Application class, so always include this.
 class App(Application, IXamlMetadataProvider):
     def __init__(self) -> None:
+        super().__init__()
         self._provider = XamlControlsXamlMetaDataProvider()
 
     @override
