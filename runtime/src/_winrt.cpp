@@ -520,6 +520,14 @@ namespace py::cpp::_winrt
     static Py_hash_t Object_hash(
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
+        // A Python object derived from a composable class holds nothing until
+        // its __init__() has composed it, and hashing it then would give a
+        // hash that changes when it is composed.
+        if (!py::interp::instance_abi(reinterpret_cast<PyObject*>(self)))
+        {
+            return -1;
+        }
+
         return static_cast<Py_hash_t>(
             std::hash<winrt::Windows::Foundation::IInspectable>{}(self->obj));
     }

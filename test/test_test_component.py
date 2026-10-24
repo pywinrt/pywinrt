@@ -550,6 +550,27 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(c.value, 5)
         self.assertEqual(c.one(), 1)
 
+    def test_a_derived_class_hashes_once_composed(self) -> None:
+        # A hash taken before super().__init__() would change when the object
+        # is composed, so there is none until then.
+        test = self
+        hashes: list[int] = []
+
+        class C(tc.Composable):
+            @override
+            def __init__(self) -> None:
+                with test.assertRaisesRegex(
+                    RuntimeError, "holds no WinRT object until its __init__"
+                ):
+                    hash(self)
+
+                super().__init__()
+                hashes.append(hash(self))
+
+        c = C()
+        self.assertEqual(hashes, [hash(c)])
+        self.assertIn(c, {c})
+
     def test_a_derived_class_whose_init_keeps_python_state_only(self) -> None:
         class C(tc.ProtectedMembers):
             @override
