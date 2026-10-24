@@ -13,18 +13,30 @@ updates:
       actions:
         patterns:
           - "*"
+    # a release is proposed once it has been out for two weeks, so that a bad
+    # one has been noticed first; security updates are not held back
+    cooldown:
+      default-days: 14
   # The build tools that the release workflows and Read the Docs install are
   # pinned too, so that a release is built with what was tested, and a monthly
-  # pull request of their own unfreezes them. Only these two directories are
-  # read, so the requirements.txt that each package's packaging is generated
-  # with is left to scripts/generate-pyproject.py.
+  # pull request of their own unfreezes them.
   - package-ecosystem: pip
     directories:
       - /
       - /docs
+    # Dependabot reads the requirements.txt files below these directories as
+    # well, and those are what the published packages require: the runtime's
+    # floors are written by hand, and the interop packages' by
+    # scripts/generate-pyproject.py. Version updates leave them alone;
+    # security updates do not read this list, so they still reach them.
+    exclude-paths:
+      - "runtime/**"
+      - "interop/**"
     schedule:
       interval: monthly
     groups:
       build-tools:
         patterns:
           - "*"
+    cooldown:
+      default-days: 14
