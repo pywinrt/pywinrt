@@ -571,6 +571,108 @@ class TestTestComponent(unittest.TestCase):
         self.assertEqual(hashes, [hash(c)])
         self.assertIn(c, {c})
 
+    def test_a_derived_class_has_no_runtime_class_name_before_composed(self) -> None:
+        test = self
+
+        class C(tc.Composable):
+            @override
+            def __init__(self) -> None:
+                with test.assertRaisesRegex(
+                    RuntimeError, "holds no WinRT object until its __init__"
+                ):
+                    self._runtime_class_name_
+
+                super().__init__()
+
+        self.assertIsInstance(C()._runtime_class_name_, str)
+
+    def test_a_derived_class_has_no_events_before_composed(self) -> None:
+        test = self
+        message = "holds no WinRT object until its __init__"
+        token = tc.Override().add_overridable_called(lambda s, e: None)
+        called: list[bool] = []
+
+        class C(tc.Override):
+            @override
+            def __init__(self) -> None:
+                with test.assertRaisesRegex(RuntimeError, message):
+                    self.add_overridable_called(lambda s, e: None)
+                with test.assertRaisesRegex(RuntimeError, message):
+                    self.remove_overridable_called(token)
+
+                super().__init__()
+                self.token = self.add_overridable_called(
+                    lambda s, e: called.append(True)
+                )
+
+        c = C()
+        c.call_overridable()
+        self.assertEqual(called, [True])
+
+        c.remove_overridable_called(c.token)
+        c.call_overridable()
+        self.assertEqual(called, [True])
+
+    def test_a_weak_reference_taken_before_composed(self) -> None:
+        # Composing the object does not break a weak reference to it, and the
+        # pair is collected with the Python object as a reference taken
+        # afterwards says.
+        refs: list[weakref.ReferenceType[Any]] = []
+
+        class C(tc.Override):
+            @override
+            def __init__(self) -> None:
+                refs.append(weakref.ref(self))
+                super().__init__()
+
+        c = C()
+        self.assertIs(refs[0](), c)
+
+        del c
+        gc.collect()
+        self.assertIsNone(refs[0]())
+
+    def test_a_derived_class_whose_init_raises_after_composing_it(self) -> None:
+        refs: list[weakref.ReferenceType[Any]] = []
+
+        class C(tc.Override):
+            @override
+            def __init__(self) -> None:
+                super().__init__()
+                refs.append(weakref.ref(self))
+                raise ValueError("spam")
+
+        with self.assertRaisesRegex(ValueError, "spam"):
+            C()
+
+        gc.collect()
+        self.assertIsNone(refs[0]())
+
+    def test_a_derived_class_made_by_new_is_composed_by_init(self) -> None:
+        # Only a call to the class composes an instance whose __init__ returns
+        # without calling super().__init__(), so one made by __new__ by hand
+        # stays uncomposed.
+        class C(tc.Composable):
+            @override
+            def __init__(self, init: int) -> None:
+                super().__init__(init)
+
+        c = C.__new__(C)
+        c.__init__(5)  # type: ignore[misc]
+        self.assertEqual(c.value, 5)
+
+        class D(tc.Composable):
+            @override
+            def __init__(self, init: int) -> None:
+                self.init = init
+
+        d = D.__new__(D)
+        d.__init__(6)  # type: ignore[misc]
+        self.assertEqual(d.init, 6)
+
+        with self.assertRaisesRegex(RuntimeError, "holds no WinRT object"):
+            d.value
+
     def test_a_derived_class_whose_init_keeps_python_state_only(self) -> None:
         class C(tc.ProtectedMembers):
             @override
