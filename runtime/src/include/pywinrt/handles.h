@@ -33,7 +33,11 @@ namespace py
      * From Python 3.15, PyThreadState_EnsureFromView() (PEP 788) makes the
      * check and the attach one step. Before that they are two, so a thread
      * that passes the check just as another starts finalizing still attaches
-     * to an interpreter that is going away.
+     * to an interpreter that is going away. on_thread_exit() in handles.cpp
+     * takes the same two steps on a thread that is exiting, inside
+     * LdrShutdownThread(), where the attach then hangs the thread (3.14) or
+     * re-enters thread exit (3.12, 3.13). That needs finalization to start
+     * during the thread's exit, a window of milliseconds.
      *
      * On a thread Python has not seen, which is most threads WinRT calls back
      * on, the guard first gives the thread a thread state of its own: see
