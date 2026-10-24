@@ -334,18 +334,35 @@ before the units that depend on it, because a compiled wheel's import test
 installs the packages it depends on; `release-tags.py` prints them in that
 order.
 
+The upload authenticates one of two ways, and `build-bdist.py --plan` answers
+`trusted=true|false` for a tag. `winui2`, `webview2` and `wasdk`, the units
+in `TRUSTED_PUBLISHING` in `scripts/packages.py`, upload with PyPI trusted
+publishing: each of their projects names `wheels.yaml` as its publisher, so a
+project new to PyPI needs its pending publisher created there before the tag
+is pushed. Every other unit — `runtime`, `table`, `winrt` and the six interop
+modules that compile against the Windows SDK — uploads with the account's
+token, the `PYPI_API_TOKEN` secret. One upload authenticates one way, so a
+run whose units are on both sides is refused before anything is uploaded.
+PyPI also lets the account create only a few new projects a day, about four
+in 2026, so a tag that adds many names can be refused partway through the
+upload. Once the limit resets, re-run the run's `publish` job rather than
+pushing the tag again: it uploads the same files, and PyPI accepts a file it
+already has when the bytes are the same.
+
 The `PyWinRT` tool on NuGet carries no version in the tree. Pushing
 `nuget/PyWinRT/v<version>` runs `.github/workflows/publish-nuget.yaml`, which
 packs the tool with that version and pushes it with NuGet trusted publishing.
 
-Once the upload is done, either workflow creates the tag's GitHub release,
-whose notes are the section of the unit's changelog that the tag's version
-heads. `scripts/release-notes.py` prints them:
+Once the upload is done, the `release` job of either workflow creates the
+tag's GitHub release, whose notes are the section of the unit's changelog
+that the tag's version heads. The Windows SDK family's release is marked
+latest and no other is. `scripts/release-notes.py` prints the notes for any
+tag `release-tags.py` prints, and `--title` prints the release's title:
 
-    py .\scripts\release-notes.py wheels/runtime/v4.0.0
+    py .\scripts\release-notes.py wheels/runtime/v4.0.2
 
 The same workflow can be started by hand, which is how everything else is
-done:
+done. Such a run creates no GitHub release, whatever it publishes:
 
 - `family` and `packages` are the build filters above. `family` groups by the
   upstream a package was built against, so it is wider than a release: it
@@ -354,7 +371,8 @@ done:
 - `publish` says where the result is uploaded, and is `none` by default. A
   `none` run is a compile test of a branch, and it is what builds the
   wheelhouse a release candidate is tested from; `testpypi` is the dry run
-  that proves the token path.
+  that proves the token path, and carries the test token whichever way the
+  unit publishes on PyPI.
 - `python` builds for one interpreter only, which back-fills wheels for a new
   CPython without a version change: the packages that are already published
   keep their versions and only the missing builds are uploaded.
