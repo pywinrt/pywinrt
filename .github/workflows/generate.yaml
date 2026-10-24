@@ -28,6 +28,8 @@ on:
       - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
+      # but not a changelog, which is written by hand and read by no generator
+      - '!**/CHANGELOG.md'
   pull_request:
     paths:
       - .github/workflows/generate.yaml
@@ -49,6 +51,8 @@ on:
       - scripts/packages.py
       - scripts/pyproject_templates.py
       - scripts/versions.py
+      # but not a changelog, which is written by hand and read by no generator
+      - '!**/CHANGELOG.md'
 
 jobs:
   generate:
