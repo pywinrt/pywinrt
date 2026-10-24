@@ -12,6 +12,7 @@
         "Windows.UI.Core"
     ],
     "required": [
+        "winrt-Windows.Foundation"
     ],
     "referenced": [
         "winrt-Windows.Foundation",

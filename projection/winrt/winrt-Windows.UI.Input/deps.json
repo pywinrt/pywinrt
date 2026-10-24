@@ -12,6 +12,7 @@
         "Windows.UI.Input"
     ],
     "required": [
+        "winrt-Windows.Foundation"
     ],
     "referenced": [
         "winrt-Windows.Devices.Haptics",

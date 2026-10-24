@@ -12,6 +12,7 @@
         "Windows.UI.Input.Preview.Text"
     ],
     "required": [
+        "winrt-Windows.UI"
     ],
     "referenced": [
         "winrt-Windows.Foundation",

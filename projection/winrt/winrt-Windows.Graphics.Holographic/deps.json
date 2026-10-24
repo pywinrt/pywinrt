@@ -12,6 +12,7 @@
         "Windows.Graphics.Holographic"
     ],
     "required": [
+        "winrt-Windows.Foundation.Numerics"
     ],
     "referenced": [
         "winrt-Windows.Foundation",
