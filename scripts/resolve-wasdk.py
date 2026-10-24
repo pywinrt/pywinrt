@@ -1,25 +1,26 @@
 """
-Resolves the current stable Windows App SDK and writes it into _tools.json.
+Resolves the Windows App SDK release that .config/upstream/upstream.csproj
+pins and writes it into _tools.json.
 
 The App SDK is an empty metapackage over a set of component packages, each
 with a version of its own, and the components are what carry the winmd files
 this projection is generated from. Which components belong to a release is
-therefore something to read from the release rather than to type: this asks
-NuGet for the newest stable Microsoft.WindowsAppSDK, takes the set from its
-nuspec, and checks it against the list the Runtime component carries, which is
+therefore something to read from the release rather than to type: this takes
+the set from the nuspec of the Microsoft.WindowsAppSDK that upstream.csproj
+pins, and checks it against the list the Runtime component carries, which is
 what Microsoft's own build refuses a mismatched reference against.
 
-Run this to move the App SDK pin. Editing the component versions by hand would
-be assembling a set Microsoft does not ship together.
+Run this after moving the App SDK pin in upstream.csproj. Editing the
+component versions by hand would be assembling a set Microsoft does not ship
+together.
 """
 
 import json
 import xml.etree.ElementTree as ET
 
-from packaging.version import Version
-
 import app_sdk
 import nuget
+import versions
 
 META_PACKAGE = "Microsoft.WindowsAppSDK"
 
@@ -60,7 +61,7 @@ def referenced_components(runtime_version: str) -> dict[str, str]:
 
 
 def main() -> None:
-    meta_version = max(nuget.stable_versions(META_PACKAGE), key=Version)
+    meta_version = versions.upstream_pins()["wasdk"]
     print(f"{META_PACKAGE} {meta_version}")
 
     components = nuget.dependencies(META_PACKAGE, meta_version)

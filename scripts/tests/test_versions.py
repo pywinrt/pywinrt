@@ -159,6 +159,58 @@ class RuntimeRequirement(unittest.TestCase):
         self.assertNotIn(f"{self.generation + 1}.0.0", self.specifier)
 
 
+class UpstreamPins(unittest.TestCase):
+    """
+    The pins Dependabot moves in upstream.csproj, and the copy of them in
+    .config/_tools.json that everything else reads.
+    """
+
+    def setUp(self) -> None:
+        self.project = versions.UPSTREAM_PINS_PATH.read_text(encoding="utf-8")
+
+    def test_the_tree_agrees(self) -> None:
+        versions.check_upstream_pins()
+
+    def test_every_published_family_is_pinned(self) -> None:
+        self.assertEqual(
+            set(versions.upstream_pins()),
+            set(versions.NUGET_PACKAGES) - versions.UNPUBLISHED_FAMILIES,
+        )
+
+    def test_a_pin_the_copy_lacks_is_refused(self) -> None:
+        self.move_pin("Microsoft.Web.WebView2", "1.0.9999.1")
+
+        with self.assertRaisesRegex(
+            RuntimeError,
+            r"pins Microsoft\.Web\.WebView2 at 1\.0\.9999\.1 .* copy it into",
+        ):
+            self.check()
+
+    def test_the_app_sdk_is_moved_with_its_components(self) -> None:
+        self.move_pin("Microsoft.WindowsAppSDK", "9.9.9")
+
+        with self.assertRaisesRegex(RuntimeError, "scripts/resolve-wasdk.py"):
+            self.check()
+
+    def move_pin(self, package: str, version: str) -> None:
+        reference = f'<PackageReference Include="{package}" Version="'
+        start = self.project.index(reference) + len(reference)
+        end = self.project.index('"', start)
+        self.project = self.project[:start] + version + self.project[end:]
+
+    def check(self) -> None:
+        """
+        Runs check_upstream_pins() on the project this test has changed, with
+        .config/_tools.json as it is.
+        """
+        directory = Path(self.enterContext(tempfile.TemporaryDirectory()))
+        path = directory / "upstream.csproj"
+        path.write_text(self.project, encoding="utf-8")
+
+        with mock.patch.object(versions, "UPSTREAM_PINS_PATH", path):
+            versions.check_upstream_pins()
+
+
 class CallShapeCensus(unittest.TestCase):
     """
     The census a table's shape ids mean something in, and the runtime release

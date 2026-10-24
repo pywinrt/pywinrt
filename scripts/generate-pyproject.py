@@ -176,6 +176,10 @@ HUBS = frozenset(
     }
 )
 
+# a family's pin is moved in upstream.csproj, and everything below reads the
+# copy of it in .config/_tools.json
+versions.check_upstream_pins()
+
 # What each package is published with. A version says which metadata the
 # package was generated from rather than which generator read it, so these
 # come from the upstream each family tracks and from the hand-maintained

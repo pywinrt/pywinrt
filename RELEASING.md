@@ -4,13 +4,15 @@ The Windows App SDK is a metapackage over component packages that are
 published separately, and `.config/_tools.json` records the version of each
 one. Do not edit those by hand: Microsoft's own build refuses a project that
 references a set of components it did not ship together, so the set belongs to
-a release rather than to us. Run
+a release rather than to us. Move the metapackage's pin in
+`.config/upstream/upstream.csproj`, where Dependabot proposes each new release,
+and run
 
     py .\scripts\resolve-wasdk.py
 
-which resolves the newest stable release, takes the component set from its
-nuspec, checks it against the list the Runtime component carries, and writes
-the result. Then fetch and regenerate as `CONTRIBUTING.md` describes.
+which takes the component set from that release's nuspec, checks it against
+the list the Runtime component carries, and writes the result. Then fetch and
+regenerate as `CONTRIBUTING.md` describes.
 
 ## Building the Nuget package
 

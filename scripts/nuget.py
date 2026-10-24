@@ -3,12 +3,11 @@ The little bit of NuGet that the tooling here reads directly.
 
 scripts/fetch-tools.ps1 installs packages with nuget.exe, which is the right
 tool for a package that is going to be unpacked whole. What is left over is
-asking the feed what exists and reading one file out of a package that is too
-big to download for it, and that is what this is for.
+asking the feed what a release depends on and reading one file out of a
+package that is too big to download for it, and that is what this is for.
 """
 
 import io
-import json
 import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
@@ -79,16 +78,6 @@ def package_url(package: str, version: str, suffix: str) -> str:
     name = package.lower()
 
     return f"{FLAT_CONTAINER}/{name}/{version}/{name}{suffix}"
-
-
-def stable_versions(package: str) -> list[str]:
-    """
-    Every version of @p package that carries no prerelease label.
-    """
-    with urllib.request.urlopen(f"{FLAT_CONTAINER}/{package.lower()}/index.json") as f:
-        versions = json.load(f)
-
-    return [v for v in versions["versions"] if "-" not in v]
 
 
 def dependencies(package: str, version: str) -> dict[str, str]:

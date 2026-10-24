@@ -14,12 +14,14 @@ computes into the packaging of each package.
 import ast
 import json
 import re
+import xml.etree.ElementTree as ET
 from collections.abc import Iterable
 from pathlib import Path
 
 REPO_PATH = Path(__file__).parent.parent
 
 TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
+UPSTREAM_PINS_PATH = REPO_PATH / ".config" / "upstream" / "upstream.csproj"
 TOOLS_PATH = REPO_PATH / "_tools"
 RUNTIME_PATH = REPO_PATH / "runtime"
 RUNTIME_VERSION_PATH = RUNTIME_PATH / "version.txt"
@@ -380,6 +382,55 @@ def nuget_versions() -> dict[str, str]:
     # KeyError here means a family names a NuGet package that fetch-tools.ps1
     # does not download
     return {family: tools[nuget] for family, nuget in NUGET_PACKAGES.items()}
+
+
+def upstream_pins() -> dict[str, str]:
+    """
+    The version of each published family's NuGet package that
+    .config/upstream/upstream.csproj pins, keyed the way NUGET_PACKAGES is.
+
+    Dependabot proposes a new upstream release by moving a package reference
+    in that project, so that is where a family's pin is moved, and
+    .config/_tools.json, which everything else reads, carries a copy of it.
+    """
+    project = ET.parse(UPSTREAM_PINS_PATH).getroot()
+    references = {
+        reference.attrib["Include"]: reference.attrib["Version"]
+        for reference in project.iter("PackageReference")
+    }
+
+    # KeyError here means a family that is published is not in the project,
+    # so nothing would propose its next release
+    return {
+        family: references[nuget]
+        for family, nuget in NUGET_PACKAGES.items()
+        if family not in UNPUBLISHED_FAMILIES
+    }
+
+
+def check_upstream_pins() -> None:
+    """
+    Checks that .config/_tools.json carries the pin of each published family
+    that upstream.csproj has.
+    """
+    tools = nuget_versions()
+    project = ".config/upstream/upstream.csproj"
+
+    for family, version in upstream_pins().items():
+        package = NUGET_PACKAGES[family]
+
+        if tools[family] == version:
+            continue
+
+        if family == "wasdk":
+            how = "move it with scripts/resolve-wasdk.py, which resolves the components"
+        else:
+            how = "copy it into .config/_tools.json"
+
+        raise RuntimeError(
+            f"{project} pins {package} at {version} and .config/_tools.json at"
+            f" {tools[family]}; {how}, then generate the projection again"
+        )
 
 
 def family_versions() -> dict[str, str]:
