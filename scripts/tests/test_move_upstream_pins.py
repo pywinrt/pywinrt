@@ -9,6 +9,7 @@ in a temporary directory put in place of the tree.
 import importlib.util
 import sys
 import tempfile
+import textwrap
 import unittest
 from pathlib import Path
 from types import ModuleType
@@ -183,3 +184,106 @@ class FamilyReport(unittest.TestCase):
         )
 
         self.assertTrue(any("pending publisher" in line for line in lines))
+
+
+class ChangelogWithUpdate(unittest.TestCase):
+    """
+    The line a moved pin adds to its family's changelog.
+    """
+
+    HEAD = "# Changelog\n\nWhat changed.\n\n"
+
+    RELEASED = textwrap.dedent(
+        """\
+        ## [4!1.0.4314.35] - 2026-10-24
+
+        ### Changed
+        - Updated WebView2 to 1.0.4314.35, from 1.0.4191.47.
+
+        [4.0]: https://example.test/4.0/
+        """
+    )
+
+    LINE = (
+        "- Updated WebView2 to [1.0.4400.1][WebView2 1.0.4400.1], from 1.0.4314.35.\n"
+    )
+
+    DEFINITION = "[WebView2 1.0.4400.1]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.4400.1\n"
+
+    def update(self, changelog: str, version: str = "1.0.4400.1") -> str:
+        return move_upstream_pins.changelog_with_update(
+            changelog, "webview2", "1.0.4314.35", version
+        )
+
+    def test_a_section_is_started_above_the_newest_release(self) -> None:
+        self.assertEqual(
+            self.update(self.HEAD + self.RELEASED),
+            self.HEAD
+            + "## [Unreleased]\n\n### Changed\n"
+            + self.LINE
+            + "\n"
+            + self.RELEASED
+            + self.DEFINITION,
+        )
+
+    def test_the_line_goes_first_under_changed(self) -> None:
+        unreleased = "## [Unreleased]\n\n### Changed\n- Something else.\n\n"
+
+        self.assertEqual(
+            self.update(self.HEAD + unreleased + self.RELEASED),
+            self.HEAD
+            + "## [Unreleased]\n\n### Changed\n"
+            + self.LINE
+            + "- Something else.\n\n"
+            + self.RELEASED
+            + self.DEFINITION,
+        )
+
+    def test_changed_goes_after_added(self) -> None:
+        unreleased = (
+            "## [Unreleased]\n\n### Added\n- A thing.\n\n### Fixed\n- A bug.\n\n"
+        )
+
+        self.assertEqual(
+            self.update(self.HEAD + unreleased + self.RELEASED),
+            self.HEAD
+            + "## [Unreleased]\n\n### Added\n- A thing.\n\n### Changed\n"
+            + self.LINE
+            + "\n### Fixed\n- A bug.\n\n"
+            + self.RELEASED
+            + self.DEFINITION,
+        )
+
+    def test_an_unreleased_move_is_replaced_from_where_it_started(self) -> None:
+        once = self.update(self.HEAD + self.RELEASED)
+        twice = move_upstream_pins.changelog_with_update(
+            once, "webview2", "1.0.4400.1", "1.0.4500.2"
+        )
+
+        self.assertIn(
+            "- Updated WebView2 to [1.0.4500.2][WebView2 1.0.4500.2],"
+            " from 1.0.4314.35.\n",
+            twice,
+        )
+        self.assertNotIn("1.0.4400.1", twice)
+        self.assertEqual(twice.count("Updated WebView2 to ["), 1)
+
+    def test_running_again_changes_nothing(self) -> None:
+        once = self.update(self.HEAD + self.RELEASED)
+
+        self.assertEqual(
+            move_upstream_pins.changelog_with_update(
+                once, "webview2", "1.0.4400.1", "1.0.4400.1"
+            ),
+            once,
+        )
+
+    def test_the_first_definition_is_set_apart(self) -> None:
+        released = self.RELEASED.replace("\n[4.0]: https://example.test/4.0/\n", "")
+
+        self.assertTrue(
+            self.update(self.HEAD + released).endswith(
+                "- Updated WebView2 to 1.0.4314.35, from 1.0.4191.47.\n\n"
+                + self.DEFINITION
+            )
+        )

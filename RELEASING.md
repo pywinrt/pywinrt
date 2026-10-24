@@ -29,11 +29,12 @@ since the commit was pushed with the workflow's token. Before merging:
   `winrt-runtime` compiles.
 
 Merge with "Rebase and merge", which keeps the pin and the regeneration as two
-commits. Merging releases nothing. To release the family, add a dated section
-for its new version to the family's changelog, with "Updated WebView2 to
-1.0.4314.35, from 1.0.4191.47." or the like and whatever API the release
-added, then push the tag that `release-tags.py` prints, as Releasing below
-describes.
+commits. Merging releases nothing. The regeneration has already added a line
+such as "Updated WebView2 to 1.0.4314.35, from 1.0.4191.47." under
+`[Unreleased]` in the family's changelog, linked to upstream's notes on the
+release. To release the family, add whatever API the release added, name the
+section after the family's new version and date it, then push the tag that
+`release-tags.py` prints, as Releasing below describes.
 
 If the regeneration fails, the comment links the run, and the pull request
 moves the pin alone. The usual cause is a release that uses a call shape the

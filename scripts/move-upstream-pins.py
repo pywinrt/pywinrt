@@ -10,14 +10,17 @@ Dependabot when it proposes a new release, or by hand. Everything else reads
 the copy of the pins in .config/_tools.json, so for each pin that differs from
 the committed copy this writes the copy - for the Windows App SDK with the
 components of that release - and deletes the fixes the family's last release
-left behind, which a moved pin makes meaningless. Then it fetches the packages
-and generates everything from them again, and says in Markdown what the
-change would release, for the pull request that carries it.
+left behind, which a moved pin makes meaningless. It says so under
+[Unreleased] in the family's changelog, with a link to upstream's notes on the
+release. Then it fetches the packages and generates everything from them
+again, and says in Markdown what the change would release, for the pull
+request that carries it.
 """
 
 import argparse
 import json
 import math
+import re
 import subprocess
 import sys
 import urllib.error
@@ -39,6 +42,31 @@ SCRIPTS_PATH = versions.REPO_PATH / "scripts"
 # publishes no figure, and a release that adds more is refused partway
 # through until the next day.
 NEW_PROJECTS_PER_DAY = 4
+
+# What a family's changelog calls its upstream, keyed the way
+# versions.NUGET_PACKAGES is.
+UPSTREAM_NAMES = {
+    "winrt": "the Windows SDK",
+    "winui2": "WinUI 2",
+    "wasdk": "the Windows App SDK",
+    "webview2": "WebView2",
+}
+
+# Where upstream says what a release changed. The App SDK and WinUI 2 publish
+# a GitHub release for each, and the other two do not, so for them it is the
+# release's page on NuGet, which points on to whatever notes there are.
+UPSTREAM_NOTES = {
+    "winrt": "https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/{version}",
+    "winui2": "https://github.com/microsoft/microsoft-ui-xaml/releases/tag/v{version}",
+    "wasdk": "https://github.com/microsoft/WindowsAppSDK/releases/tag/v{version}",
+    "webview2": "https://www.nuget.org/packages/Microsoft.Web.WebView2/{version}",
+}
+
+# The heading of the section a changelog collects changes in before they are
+# released, and what ends a section: the next heading, or the link
+# definitions at the bottom of the file.
+UNRELEASED = re.compile(r"^## \[Unreleased\]\n", re.MULTILINE)
+SECTION_END = re.compile(r"^## \[|^\[[^\]]+\]: ", re.MULTILINE)
 
 
 def committed_tools() -> dict[str, str]:
@@ -147,6 +175,65 @@ def on_pypi(distribution: str) -> bool:
             return False
 
         raise
+
+
+def changelog_with_update(
+    changelog: str, family: str, previous: str, version: str
+) -> str:
+    """
+    @p changelog with a line under [Unreleased] saying that @p family moved
+    from upstream's release @p previous to @p version, linked to upstream's
+    notes on it.
+
+    A line from an earlier move that has not been released yet is replaced
+    rather than added to, keeping the release it moved from, so that the
+    changelog says what the family's next release changes.
+    """
+    name = UPSTREAM_NAMES[family]
+    label = f"{name.removeprefix('the ')} {version}"
+
+    if not UNRELEASED.search(changelog):
+        # above the newest release
+        newest = SECTION_END.search(changelog)
+        at = newest.start() if newest else len(changelog)
+        changelog = changelog[:at] + "## [Unreleased]\n\n" + changelog[at:]
+
+    unreleased = UNRELEASED.search(changelog)
+    assert unreleased is not None
+    end = SECTION_END.search(changelog, unreleased.end())
+    stop = end.start() if end else len(changelog)
+    section = changelog[unreleased.end() : stop]
+    earlier = re.search(
+        rf"^- Updated {re.escape(name)} to \[[^\]]+\]\[([^\]]+)\], from (\S+)\.\n",
+        section,
+        re.MULTILINE,
+    )
+    start = earlier[2] if earlier else previous
+    line = f"- Updated {name} to [{version}][{label}], from {start}.\n"
+
+    if earlier:
+        section = section[: earlier.start()] + line + section[earlier.end() :]
+    elif changed := re.search(r"^### Changed\n", section, re.MULTILINE):
+        section = section[: changed.end()] + line + section[changed.end() :]
+    else:
+        # Keep a Changelog puts Changed after Added
+        added = re.search(r"^### Added\n(?:- .*\n)*\n?", section, re.MULTILINE)
+        at = added.end() if added else len(section) - len(section.lstrip("\n"))
+        section = section[:at] + "### Changed\n" + line + "\n" + section[at:]
+
+    changelog = changelog[: unreleased.end()] + section + changelog[stop:]
+
+    if earlier:
+        definition = re.compile(rf"^\[{re.escape(earlier[1])}\]: .*\n", re.MULTILINE)
+        changelog = definition.sub("", changelog)
+
+    url = UPSTREAM_NOTES[family].format(version=version)
+
+    # beside the other link definitions, or as the first of them
+    if not re.search(r"^\[[^\]]+\]: .*\n\Z", changelog, re.MULTILINE):
+        changelog += "\n"
+
+    return changelog + f"[{label}]: {url}\n"
 
 
 def regenerate() -> None:
@@ -310,9 +397,18 @@ def main() -> None:
     tools = tools_with_pins(versions.nuget_package_versions(), moved)
     versions.TOOLS_JSON_PATH.write_bytes((json.dumps(tools, indent=4) + "\n").encode())
 
-    for family in moved:
+    for family, version in moved.items():
         for path in stale_fixes(family):
             path.unlink(missing_ok=True)
+
+        package = versions.NUGET_PACKAGES[family]
+        path = versions.PROJECTION_PATH / family / "CHANGELOG.md"
+        changelog = path.read_bytes().decode()
+        path.write_bytes(
+            changelog_with_update(
+                changelog, family, committed[package], version
+            ).encode()
+        )
 
     regenerate()
 
