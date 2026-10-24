@@ -29,6 +29,27 @@ namespace py::interp
         return *reinterpret_cast<void**>(reinterpret_cast<uint8_t*>(self) + abi_offset);
     }
 
+    void set_not_composed_error(PyObject* self) noexcept;
+
+    /**
+     * The ABI pointer @p self holds, to call an instance member on, or
+     * @c nullptr with a Python error set when it holds none, which an instance
+     * of a Python class derived from a composable one does until its
+     * __init__() has called the WinRT class's.
+     */
+    inline void* instance_abi(PyObject* self) noexcept
+    {
+        auto const abi = abi_of(self);
+        if (!abi)
+        {
+            set_not_composed_error(self);
+        }
+
+        return abi;
+    }
+
+    bool compose_after_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
+
     /**
      * The name every interface pointer capsule carries. A capsule of this
      * name holds one reference to a COM interface, which its destructor

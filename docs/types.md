@@ -289,6 +289,31 @@ panel = StackingPanel()
 
     Deriving from a class whose constructor is protected.
 
+A subclass with an `__init__` of its own takes the arguments that `__init__`
+declares, keywords included, as any Python class does. Its WinRT object is
+made when `__init__` calls `super().__init__()`, whose arguments choose the
+constructor, and until then the object has no WinRT members to use: using one
+raises [`RuntimeError`][RuntimeError]. A subclass without an `__init__` passes
+the arguments of the call to the constructor, and so does one whose `__init__`
+returns without calling `super().__init__()`, once it has returned: an
+`__init__` that only keeps Python state of its own needs no call to the base
+class.
+
+```python
+class TimelinePanel(Panel):
+    def __init__(self, min_column_width=180, spacing=10):
+        super().__init__()
+        self.min_column_width = min_column_width
+        self.spacing = spacing
+
+
+panel = TimelinePanel(spacing=12)
+```
+
+The type hints declare the constructors of a class as `__new__`, so a type
+checker that checks a call against `__new__` as well as `__init__`, as pyright
+does, still refuses arguments that only the subclass's `__init__` takes.
+
 WinRT asks such an object for its runtime class name, which by default is the
 name of the first overridable interface its class implements, or nothing when
 the class has none. A XAML metadata provider looks types up by that name, so a

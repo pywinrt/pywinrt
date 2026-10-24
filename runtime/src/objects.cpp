@@ -179,10 +179,9 @@ namespace py::interp
             throw python_exception();
         }
 
-        auto const abi = abi_of(obj);
+        auto const abi = instance_abi(obj);
         if (!abi)
         {
-            PyErr_SetString(PyExc_RuntimeError, "the object holds nothing");
             throw python_exception();
         }
 
@@ -213,6 +212,20 @@ namespace py::interp
         }
 
         return result;
+    }
+
+    /**
+     * Says that @p self holds no WinRT object, as an instance of a Python
+     * class derived from a composable one does until its __init__() has
+     * composed it.
+     */
+    void set_not_composed_error(PyObject* self) noexcept
+    {
+        PyErr_Format(
+            PyExc_RuntimeError,
+            "'%s' object holds no WinRT object until its __init__() calls "
+            "super().__init__()",
+            Py_TYPE(self)->tp_name);
     }
 
     namespace
@@ -298,19 +311,73 @@ namespace py::interp
             return nullptr;
         }
 
+        int class_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
+
+        /**
+         * Composes @p self, an instance of a Python class derived from the
+         * composable class @p info that holds nothing yet, with the
+         * constructor overload that takes @p args.
+         */
+        bool compose_with(PyObject* self, type_entry& info, PyObject* args) noexcept
+        {
+            auto const overload
+                = select_overload(*info.constructor, PyTuple_GET_SIZE(args));
+
+            if (!overload)
+            {
+                return false;
+            }
+
+            return compose_into(
+                self,
+                info,
+                *info.constructor,
+                *overload,
+                tuple_items(args),
+                PyTuple_GET_SIZE(args));
+        }
+
         PyObject* class_new(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
         {
+            auto const info = class_entry_of(type);
+
+            // A Python class with an __init__ of its own takes the arguments
+            // that __init__ declares, as any Python class does, so it is
+            // class_init(), which its __init__ reaches through super(), that
+            // composes it, with the arguments given there, or else
+            // compose_after_init(), with the arguments of the call, once
+            // __init__ has returned without doing so.
+            if (info && type != info->py_type && type->tp_init != class_init)
+            {
+                return type->tp_alloc(type, 0);
+            }
+
             if (kwds && PyDict_GET_SIZE(kwds) != 0)
             {
                 set_invalid_kwd_args_error();
                 return nullptr;
             }
 
-            auto const info = class_entry_of(type);
             if (!info || !info->constructor)
             {
                 set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
                 return nullptr;
+            }
+
+            if (type != info->py_type)
+            {
+                pyobj_handle self{type->tp_alloc(type, 0)};
+                if (!self)
+                {
+                    return nullptr;
+                }
+
+                if (!compose_with(self.get(), *info, args))
+                {
+                    return nullptr;
+                }
+
+                return self.detach();
             }
 
             auto const overload
@@ -319,17 +386,6 @@ namespace py::interp
             if (!overload)
             {
                 return nullptr;
-            }
-
-            if (type != info->py_type)
-            {
-                return make_composed_object(
-                    type,
-                    *info,
-                    *info->constructor,
-                    *overload,
-                    tuple_items(args),
-                    PyTuple_GET_SIZE(args));
             }
 
             if (overload->is_protected)
@@ -348,6 +404,48 @@ namespace py::interp
                 nullptr,
                 tuple_items(args),
                 PyTuple_GET_SIZE(args));
+        }
+
+        /**
+         * __init__() of a composable class. The arguments of a call to the
+         * class went to the constructor already, in class_new(), unless the
+         * class called is a Python one with an __init__ of its own, which
+         * calls this one through super() with the arguments for the
+         * constructor instead.
+         */
+        int class_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept
+        {
+            auto* const type = Py_TYPE(self);
+
+            if (type->tp_init == class_init)
+            {
+                return 0;
+            }
+
+            if (abi_of(self))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "'%s' object is already composed into a WinRT object, so "
+                    "it cannot be initialized again",
+                    type->tp_name);
+                return -1;
+            }
+
+            if (kwds && PyDict_GET_SIZE(kwds) != 0)
+            {
+                set_invalid_kwd_args_error();
+                return -1;
+            }
+
+            auto const info = class_entry_of(type);
+            if (!info || !info->constructor)
+            {
+                set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
+                return -1;
+            }
+
+            return compose_with(self, *info, args) ? 0 : -1;
         }
 
         /**
@@ -547,6 +645,82 @@ namespace py::interp
              PyDoc_STR("See PEP 585")},
             {}};
     } // namespace
+
+    /**
+     * Composes @p self, an instance of a Python class derived from a
+     * composable one whose __init__() has returned without composing it, with
+     * the arguments of the call, @p args and @p kwds, as class_new() composes
+     * an instance of a class without an __init__ of its own. An object that
+     * is composed already, or that is no such instance, is left as it is.
+     *
+     * @returns @c true, or @c false with a Python error set.
+     */
+    bool compose_after_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept
+    {
+        auto* const type = Py_TYPE(self);
+
+        auto const info = class_entry_of(type);
+        if (!info)
+        {
+            return true;
+        }
+
+        if (info->category != table::category::class_)
+        {
+            return true;
+        }
+
+        if (type == info->py_type)
+        {
+            return true;
+        }
+
+        if (abi_of(self))
+        {
+            return true;
+        }
+
+        if (kwds && PyDict_GET_SIZE(kwds) != 0)
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "%s.__init__() did not call super().__init__(), and a call with "
+                "keyword arguments fits no constructor of '%s'",
+                type->tp_name,
+                info->winrt_name);
+            return false;
+        }
+
+        if (!info->constructor)
+        {
+            set_invalid_activation_error(info->winrt_name);
+            return false;
+        }
+
+        auto const overload
+            = select_overload(*info->constructor, PyTuple_GET_SIZE(args));
+
+        if (!overload)
+        {
+            PyErr_Clear();
+            PyErr_Format(
+                PyExc_TypeError,
+                "%s.__init__() did not call super().__init__(), and a call with "
+                "%zd arguments fits no constructor of '%s'",
+                type->tp_name,
+                PyTuple_GET_SIZE(args),
+                info->winrt_name);
+            return false;
+        }
+
+        return compose_into(
+            self,
+            *info,
+            *info->constructor,
+            *overload,
+            tuple_items(args),
+            PyTuple_GET_SIZE(args));
+    }
 
     /**
      * Creates the Python type of an interface, and the abstract type its public
@@ -793,6 +967,11 @@ namespace py::interp
         }
 
         slots.push_back({Py_tp_new, reinterpret_cast<void*>(class_new)});
+
+        if (composable)
+        {
+            slots.push_back({Py_tp_init, reinterpret_cast<void*>(class_init)});
+        }
         slots.push_back(
             {Py_tp_getset,
              reinterpret_cast<void*>(keep_getsets(proj, collected.instance_getsets))});

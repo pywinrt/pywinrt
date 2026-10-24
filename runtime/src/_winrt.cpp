@@ -322,9 +322,32 @@ namespace py::cpp::_winrt
             nullptr},
            {}};
 
+    /**
+     * __call__ of every projected class: what type's does, and then, for a
+     * Python class derived from a composable one whose __init__() returned
+     * without composing the instance, composing it with the call's arguments.
+     */
+    static PyObject* Object_Static_call(
+        PyObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        py::pyobj_handle self{PyType_Type.tp_call(type, args, kwds)};
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        if (!py::interp::compose_after_init(self.get(), args, kwds))
+        {
+            return nullptr;
+        }
+
+        return self.detach();
+    }
+
     static PyType_Slot Object_Static_type_slots[]
         = {{Py_tp_base, reinterpret_cast<void*>(&PyType_Type)},
            {Py_tp_methods, reinterpret_cast<void*>(Object_Static_methods)},
+           {Py_tp_call, reinterpret_cast<void*>(Object_Static_call)},
            {}};
 
     static PyType_Spec Object_Static_type_spec
@@ -377,6 +400,11 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
         void* /*unused*/) noexcept
     {
+        if (!py::interp::instance_abi(reinterpret_cast<PyObject*>(self)))
+        {
+            return nullptr;
+        }
+
         return py::interp::iids_of(self->obj);
     }
 
@@ -388,6 +416,11 @@ namespace py::cpp::_winrt
         py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
         void* /*unused*/) noexcept
     {
+        if (!py::interp::instance_abi(reinterpret_cast<PyObject*>(self)))
+        {
+            return nullptr;
+        }
+
         return py::interp::runtime_class_name_of(self->obj);
     }
 
@@ -466,6 +499,13 @@ namespace py::cpp::_winrt
         // itself, and Python falls back on identity if it does not. What is
         // compared is identity, which a proxy answers itself.
         if (!PyObject_TypeCheck(other, object_type))
+        {
+            Py_RETURN_NOTIMPLEMENTED;
+        }
+
+        // A Python object derived from a composable class holds nothing until
+        // its __init__() has composed it, and is no other object until then.
+        if (!self->obj)
         {
             Py_RETURN_NOTIMPLEMENTED;
         }

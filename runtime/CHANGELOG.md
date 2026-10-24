@@ -8,6 +8,14 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- A subclass's `__init__()` has no WinRT members until `super().__init__()`.
+
+### Fixed
+- A composable subclass's `__init__` takes the arguments it declares.
+
 ## [4.0.1] - 2026-10-24
 
 ### Fixed

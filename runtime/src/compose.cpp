@@ -923,21 +923,24 @@ namespace py::interp
     }
 
     /**
-     * Makes an instance of @p type, which is a Python class derived from the
-     * composable class @p entry: the Python object, and the WinRT object it is
-     * composed into, each holding the other.
+     * Composes @p self, an instance of a Python class derived from the
+     * composable class @p entry that holds nothing yet, into a WinRT object:
+     * the Python object, and the WinRT object it is composed into, each
+     * holding the other.
      *
-     * @returns A new reference to the Python object, or @c nullptr with a
-     * Python error set.
+     * @returns @c true, or @c false with a Python error set and @p self left
+     * holding nothing.
      */
-    PyObject* make_composed_object(
-        PyTypeObject* type,
+    bool compose_into(
+        PyObject* self,
         type_entry& entry,
         member_desc const& constructor,
         overload_desc& overload,
         PyObject* const* args,
         Py_ssize_t nargs) noexcept
     {
+        auto* const type = Py_TYPE(self);
+
         if (!composes(overload))
         {
             PyErr_Format(
@@ -946,14 +949,14 @@ namespace py::interp
                 "instance rather than composing one",
                 entry.winrt_name,
                 overload.winrt_name);
-            return nullptr;
+            return false;
         }
 
         // init_subclass() refuses such a class already, unless a base before
         // it in the MRO does not call the next __init_subclass__().
         if (!check_composed_bases(type))
         {
-            return nullptr;
+            return false;
         }
 
         // What the outer object answers itself: every interface the Python
@@ -963,14 +966,14 @@ namespace py::interp
 
         if (!collect_interfaces(type, interfaces))
         {
-            return nullptr;
+            return false;
         }
 
         for (auto* const iface : interfaces)
         {
             if (!ensure_interface_vtable(*iface))
             {
-                return nullptr;
+                return false;
             }
         }
 
@@ -1003,14 +1006,14 @@ namespace py::interp
                 auto* const iface = ensure_named_entry(*base->owner, overridables[i]);
                 if (!iface)
                 {
-                    return nullptr;
+                    return false;
                 }
 
                 // An overridable interface is exclusive to the class, so the
                 // class's own record is where its members are written down.
                 if (!ensure_interface_vtable(*iface, *base))
                 {
-                    return nullptr;
+                    return false;
                 }
 
                 if (!named)
@@ -1026,16 +1029,10 @@ namespace py::interp
             }
         }
 
-        pyobj_handle self{type->tp_alloc(type, 0)};
-        if (!self)
-        {
-            return nullptr;
-        }
-
         // A weak reference to the pair takes the Python object from whatever
         // thread resolves it, which a free-threaded build only allows for an
         // object that has been told to expect it.
-        PyUnstable_EnableTryIncRef(self.get());
+        PyUnstable_EnableTryIncRef(self);
 
         auto outer = std::make_unique<compose_object>();
 
@@ -1047,7 +1044,7 @@ namespace py::interp
         outer->source_head.target = outer.get();
         outer->weak_head.vtable = weak_reference_vtable;
         outer->weak_head.target = outer.get();
-        outer->calls.obj = self.get();
+        outer->calls.obj = self;
 
         try
         {
@@ -1056,7 +1053,7 @@ namespace py::interp
         catch (...)
         {
             to_PyErr();
-            return nullptr;
+            return false;
         }
 
         make_tearoffs(interfaces, outer->head, outer->calls, outer->tearoffs);
@@ -1074,7 +1071,7 @@ namespace py::interp
         if (!instance)
         {
             object_release(&outer.release()->head);
-            return nullptr;
+            return false;
         }
 
         // The wrapper holds the outer object seen as the class's own default
@@ -1098,12 +1095,12 @@ namespace py::interp
             catch (...)
             {
                 to_PyErr();
-                return nullptr;
+                return false;
             }
         }
 
-        abi_of(self.get()) = abi;
+        abi_of(self) = abi;
 
-        return self.detach();
+        return true;
     }
 } // namespace py::interp

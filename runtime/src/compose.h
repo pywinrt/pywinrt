@@ -21,8 +21,8 @@
 
 namespace py::interp
 {
-    PyObject* make_composed_object(
-        PyTypeObject* type,
+    bool compose_into(
+        PyObject* self,
         type_entry& entry,
         member_desc const& constructor,
         overload_desc& overload,
