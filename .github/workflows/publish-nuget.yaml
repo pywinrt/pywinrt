@@ -24,7 +24,9 @@ jobs:
         # runtime refuses. Neither is something to find out after the push.
         run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/v", "")
-          Expand-Archive "PyWinRT.$version.nupkg" -DestinationPath nupkg
+          # Expand-Archive takes only a file whose name ends in .zip
+          Copy-Item "PyWinRT.$version.nupkg" nupkg.zip
+          Expand-Archive nupkg.zip -DestinationPath nupkg
           $packed = Get-ChildItem "nupkg/tools/*/any/shapes.json"
           if (-not $packed) {
             throw "the package has no shape census beside the tool"
