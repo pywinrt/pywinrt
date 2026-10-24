@@ -67,6 +67,27 @@ lives, as a thread of the program's own does. A thread pool thread serves the
 callbacks of unrelated objects, though, so what one handler leaves there is
 what the next handler on that thread finds.
 
+## The GIL
+
+Every WinRT call lets go of the GIL while it runs and takes it back afterwards.
+Other threads run Python meanwhile, so a call that does a long piece of work,
+such as inference on the NPU, holds up nothing else. And a call that waits for
+another thread that wants the GIL, such as one into another apartment or one
+that waits for a handler, cannot deadlock.
+
+When other threads are waiting for the GIL, handing it over and getting it back
+costs a few microseconds, which is more than many calls take, such as reading a
+property or a value of a `JsonObject`. Threads that make many such calls spend
+much of their time handing the GIL around. Threads running plain Python share
+one thread's throughput. Threads making many such calls gain little from a
+second thread, and with more they get less than one thread does alone. In a
+benchmark, eight threads parsing and reading back a small `JsonObject` together
+managed under a third of what one thread does.
+
+Keep work like that on one thread, spread it over processes, or run it on the
+free-threaded build, where the threads run at the same time. Threads still suit
+calls that take longer, and calls that wait.
+
 ## Free-threaded Python
 
 PyWinRT runs on the free-threaded build of CPython, where threads run Python
