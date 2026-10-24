@@ -25,6 +25,7 @@ set(WINRT_RUNTIME_SOURCES
     "${WINRT_RUNTIME_SRC_PATH}/enums.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/errors.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/generics.cpp"
+    "${WINRT_RUNTIME_SRC_PATH}/handles.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/implements.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/interp.cpp"
     "${WINRT_RUNTIME_SRC_PATH}/members.cpp"

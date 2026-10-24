@@ -530,6 +530,11 @@ thread pool thread, not one of the program's own. In a GUI app, an object that l
 UI thread raises its events there, so a XAML event handler runs on the UI
 thread.
 
+A thread WinRT calls back on keeps what Python stores per thread, such as a
+`threading.local` or the context of `contextvars`, from one handler call to
+the next for as long as the thread lives, as a thread of the program's own
+does.
+
 This means a handler must not touch anything that belongs to a particular
 thread. With `asyncio`, hand the work to the event loop with
 [`loop.call_soon_threadsafe()`][call_soon_threadsafe] rather than doing it in
