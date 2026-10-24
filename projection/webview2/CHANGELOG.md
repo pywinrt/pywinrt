@@ -10,6 +10,14 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [4!1.0.4314.35] - 2026-10-24
+
+### Added
+- `CoreWebView2CrashReport`, from `CoreWebView2ProcessFailedEventArgs.crash_report`.
+
+### Changed
+- Updated WebView2 to 1.0.4314.35, from 1.0.4191.47.
+
 ## [4!1.0.4191.47.1] - 2026-10-24
 
 `winrt-Microsoft.Web.WebView2.Dll` is not released again and stays at
