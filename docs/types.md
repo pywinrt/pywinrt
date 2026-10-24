@@ -310,6 +310,12 @@ class TimelinePanel(Panel):
 panel = TimelinePanel(spacing=12)
 ```
 
+!!! version-changed "Changed in version 4.0.2"
+
+    A subclass's `__init__` takes the arguments it declares, and its object has
+    no WinRT members until it calls `super().__init__()`. Previously every
+    argument of the call went to the constructor before `__init__` ran.
+
 WinRT asks such an object for its runtime class name, which by default is the
 name of the first overridable interface its class implements, or nothing when
 the class has none. A XAML metadata provider looks types up by that name, so a

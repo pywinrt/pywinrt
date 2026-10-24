@@ -8,7 +8,7 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.0.2] - 2026-10-24
 
 ### Changed
 - A subclass's `__init__()` has no WinRT members until `super().__init__()`.
