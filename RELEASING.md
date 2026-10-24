@@ -1,18 +1,57 @@
-## Moving the Windows App SDK pin
+## Moving a pin
 
-The Windows App SDK is a metapackage over component packages that are
-published separately, and `.config/_tools.json` records the version of each
-one. Do not edit those by hand: Microsoft's own build refuses a project that
-references a set of components it did not ship together, so the set belongs to
-a release rather than to us. Move the metapackage's pin in
-`.config/upstream/upstream.csproj`, where Dependabot proposes each new release,
-and run
+Each family of generated packages follows one upstream NuGet package, and
+`.config/upstream/upstream.csproj` pins it. Nothing builds that project. It is
+what Dependabot reads, and as soon as a new release of one of the four is out,
+Dependabot opens a pull request that moves its pin and nothing else. Then
+`.github/workflows/upstream.yaml` finishes the pull request: it runs
 
     py .\scripts\move-upstream-pins.py
 
-which takes the component set from that release's nuspec, checks it against
-the list the Runtime component carries, writes the result, and fetches and
-regenerates everything that depends on it.
+on the pull request's branch, pushes what that generates as a commit of its
+own, and comments with what merging it would release. The script copies each
+moved pin into `.config/_tools.json`, which everything else reads, deletes the
+family's `fixes.json`, fetches the packages and generates everything again.
+Moving a pin by hand is the same two steps: edit `upstream.csproj`, then run
+the script. The four pins in `_tools.json` are never edited by hand, and the
+generation refuses a `_tools.json` that disagrees with `upstream.csproj`.
+
+GitHub holds the pull request's checks until a maintainer approves them,
+since the commit was pushed with the workflow's token. Before merging:
+
+- Approve the checks, and see that they pass.
+- Read the comment. A package added for a new namespace is a project new to
+  PyPI, and the comment says what that costs: a pending publisher for each,
+  for a family that is published by trusted publishing, or days of the daily
+  limit on new projects for the others (see Releasing below).
+- A change outside `projection/`, which the comment lists, is a change to a
+  package that is released on its own, such as the C++/WinRT headers that
+  `winrt-runtime` compiles.
+
+Merge with "Rebase and merge", which keeps the pin and the regeneration as two
+commits. Merging releases nothing. To release the family, add a dated section
+for its new version to the family's changelog, with "Updated WebView2 to
+1.0.4314.35, from 1.0.4191.47." or the like and whatever API the release
+added, then push the tag that `release-tags.py` prints, as Releasing below
+describes.
+
+If the regeneration fails, the comment links the run, and the pull request
+moves the pin alone. The usual cause is a release that uses a call shape the
+census in `runtime/src/shapes.json` did not have: the generation then refuses
+until the census names the `winrt-runtime` release that will ship it, and that
+release goes out before the family's.
+
+If `main` moves on and the pull request falls behind or conflicts, comment
+`@dependabot recreate` on it. Dependabot rebuilds its commit on `main`, and the
+workflow generates everything again.
+
+The Windows App SDK is pinned by its metapackage, which is empty: its
+component packages are published separately, and `.config/_tools.json`
+records the version of each one. Microsoft's own build refuses a project that
+references a set of components it did not ship together, so the set belongs to
+a release rather than to us. For the App SDK, the script takes the component
+set from the nuspec of the pinned release and checks it against the list the
+Runtime component carries before it writes any of them.
 
 ## Building the Nuget package
 
@@ -28,12 +67,12 @@ after the directory its sources are in. There are two kinds.
 A family of generated packages — `winrt`, `winui2`, `wasdk` and `webview2`,
 the directories under `projection/` — is released on its upstream's schedule
 and takes its version from the NuGet package its metadata came from, which
-`.config/_tools.json` pins. A package that goes with a family is released with
-it and has its version too: the package under `redist/` that redistributes a
-family's `.dll`, such as `winrt-Microsoft.Web.WebView2.Dll` with `webview2`,
-and an interop module that compiles against a family other than the Windows
-SDK (below). Moving a pin is a change of its own, made the way the section
-above and `CONTRIBUTING.md` describe.
+`.config/upstream/upstream.csproj` pins. A package that goes with a family is
+released with it and has its version too: the package under `redist/` that
+redistributes a family's `.dll`, such as `winrt-Microsoft.Web.WebView2.Dll`
+with `webview2`, and an interop module that compiles against a family other
+than the Windows SDK (below). Moving a pin is a change of its own, made the
+way the section above describes.
 
 A package of a family that changes before the pin next moves, because the
 generator now writes it differently, is released again on its own with a number
