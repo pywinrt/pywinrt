@@ -191,6 +191,10 @@ TABLE_COMPILER_REQUIREMENT = versions.table_compiler_requirement()
 RUNTIME_VERSION = versions.runtime_version()
 TABLE_COMPILER_VERSION = versions.table_compiler_version()
 FAMILY_VERSIONS = versions.family_versions()
+# a package that changed after its family was released carries the version of
+# a fix, but what requires it still names the family's version, which the fix
+# satisfies
+FAMILY_FIXES = {family: versions.family_fixes(family) for family in FAMILY_VERSIONS}
 NUGET_VERSIONS = versions.nuget_versions()
 
 # The interop packages are written by hand, so there is no deps.json to derive
@@ -1151,7 +1155,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
         package_path,
         namespaces,
         module_names,
-        FAMILY_VERSIONS[family],
+        FAMILY_FIXES[family].get(package_name, FAMILY_VERSIONS[family]),
         dependencies,
         optional_dependencies,
         versions.NUGET_PACKAGES[family],

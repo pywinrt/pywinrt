@@ -253,6 +253,18 @@ def select(args: argparse.Namespace) -> list[Package]:
             raise SystemExit(error) from error
 
         selected = [package for package in selected if package.release == unit]
+
+        if unit in versions.NUGET_PACKAGES:
+            # a family with fixes is released at the newest, which releases
+            # only the packages that carry it
+            family_version = versions.family_versions()[unit]
+            fixes = versions.family_fixes(unit)
+            version = versions.published_versions()[unit]
+            selected = [
+                package
+                for package in selected
+                if fixes.get(package.distribution, family_version) == version
+            ]
     elif args.family and args.family != "all":
         if args.family not in {package.family for package in selected}:
             raise SystemExit(f"{args.family} is not a family that this tree publishes")

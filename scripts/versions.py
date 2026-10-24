@@ -26,6 +26,7 @@ RUNTIME_VERSION_PATH = RUNTIME_PATH / "version.txt"
 TABLE_PATH = REPO_PATH / "table"
 TABLE_VERSION_PATH = TABLE_PATH / "version.txt"
 INTEROP_PATH = REPO_PATH / "interop"
+PROJECTION_PATH = REPO_PATH / "projection"
 TABLE_HEADER_PATH = RUNTIME_PATH / "src" / "table.h"
 SHAPES_PATH = RUNTIME_PATH / "src" / "shapes.json"
 SHAPES_HEADER_PATH = RUNTIME_PATH / "src" / "shapes-generated.h"
@@ -91,11 +92,17 @@ FAMILY_RELEASED_INTEROP = {
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": "wasdk",
 }
 
-# A family version that a fix to one of those packages can follow: a final
-# release of three numbers, to which the fix adds a fourth. A prerelease
-# cannot take one, since a fourth number goes before the phase and would sort
-# above the final release, and no upstream this applies to uses four numbers.
-FIXABLE_FAMILY_VERSION = re.compile(r"\d+!\d+\.\d+\.\d+")
+# A family version that a fix to one of those packages, or to a generated
+# package, can follow: a final release, to which the fix adds a number, a
+# fourth after the App SDK's three and a fifth after the Windows SDK's four. A
+# prerelease cannot take one, since the number goes before the phase and would
+# sort above the final release.
+FIXABLE_FAMILY_VERSION = re.compile(r"\d+!\d+(?:\.\d+)+")
+
+# The file under a family's directory in projection/ that gives a package of
+# the family that changed after the family was released the version of a fix
+# (see family_fixes()), which scripts/fix-versions.py writes.
+FIXES_NAME = "fixes.json"
 
 # The test component is projected into this tree for the test suite and is
 # never uploaded anywhere, so it is versioned like a family without being one
@@ -112,8 +119,9 @@ TAG_PREFIX = "wheels"
 # publishes it as the PEP 440 phase of the same name, in the order upstream
 # uses them. Nothing maps onto .devN or .postN, which are left for PyWinRT's
 # own use: a re-release of one upstream version is a .postN of it. A fix to
-# one package that is released with a family is a fourth number instead (see
-# interop_version()), since it changes what the package does.
+# one package that is released with a family is a number on the end instead
+# (see interop_version() and family_fixes()), since it changes what the
+# package does.
 PRERELEASE_PHASES = {
     "experimental": "a",
     "preview": "b",
@@ -213,7 +221,7 @@ def read_version(path: Path) -> str:
 def check_fix_version(version: str, family_version: str) -> None:
     """
     Checks the version of a fix to a package that is released with a family,
-    which is the family's version with a fourth number on the end.
+    which is the family's version with a number on the end.
 
     A version that does not follow the family's current version is what a
     fix left behind when the pin moved, and the error says to delete it, so
@@ -221,7 +229,7 @@ def check_fix_version(version: str, family_version: str) -> None:
     """
     if not FIXABLE_FAMILY_VERSION.fullmatch(family_version):
         raise ValueError(
-            f"a fix is released only after a final release of three numbers,"
+            f"a fix is released only after a final release,"
             f" and the family is {family_version}"
         )
 
@@ -387,6 +395,83 @@ def family_versions() -> dict[str, str]:
     }
 
 
+def family_fixes(family: str) -> dict[str, str]:
+    """
+    The version of a fix that each package of a generated family carries,
+    keyed by distribution, for the packages that have one.
+
+    A package that changed after its family was released at the current pin,
+    such as one whose type hints the generator now writes differently, is
+    released again with a number on the family's version, and only that
+    package is: the rest of the family is what was released. The family's
+    fixes.json says which packages those are, and scripts/fix-versions.py
+    writes it. Every requirement stays on the family's version, which a fix
+    satisfies, so nothing else is regenerated for one.
+
+    A fix that does not follow the family's current version is what the pin
+    left behind when it moved, and is refused until the file is deleted.
+    """
+    path = PROJECTION_PATH / family / FIXES_NAME
+
+    if not path.exists():
+        return {}
+
+    fixes: dict[str, str] = json.loads(path.read_text(encoding="utf-8"))
+    family_version = family_versions()[family]
+    name = path.relative_to(PROJECTION_PATH.parent).as_posix()
+
+    for distribution, version in fixes.items():
+        if not (PROJECTION_PATH / family / distribution / "deps.json").exists():
+            raise RuntimeError(f"{name} names {distribution}, which is not in {family}")
+
+        try:
+            check_fix_version(version, family_version)
+        except ValueError as error:
+            raise RuntimeError(
+                f"{name} gives {distribution} the version of a fix, but {error};"
+                f" delete it to release {family} with the family's version"
+            ) from error
+
+    return fixes
+
+
+def fix_number(version: str, family_version: str) -> int:
+    """
+    The number a fix adds to its family's version, or 0 for the family's
+    version itself.
+    """
+    if version == family_version:
+        return 0
+
+    check_fix_version(version, family_version)
+
+    return int(version.rpartition(".")[2])
+
+
+def next_fixes(
+    family: str, released: Iterable[str], changed: Iterable[str]
+) -> dict[str, str]:
+    """
+    What a family's fixes.json says once the packages that changed after its
+    newest release are given the next fix.
+
+    released is the versions of the family that have been released at the
+    current pin, the family's own among them, and changed the distributions
+    whose files differ from the newest of those. A fix that is written but
+    not released yet is worked out again rather than added to.
+    """
+    family_version = family_versions()[family]
+    newest = max(fix_number(version, family_version) for version in released)
+    fix = f"{family_version}.{newest + 1}"
+    fixes = {
+        distribution: version
+        for distribution, version in family_fixes(family).items()
+        if fix_number(version, family_version) <= newest
+    } | dict.fromkeys(changed, fix)
+
+    return dict(sorted(fixes.items()))
+
+
 def published_versions() -> dict[str, str]:
     """
     The version each release unit is published with, keyed by unit and in the
@@ -398,13 +483,19 @@ def published_versions() -> dict[str, str]:
     because everything requires it, then the compiler that builds a
     projection package, then the generated families, then the interop
     modules, each of which names a projection package.
+
+    A family with fixes is published at its newest one, which releases the
+    packages that carry it (see family_fixes()).
     """
     runtime, table, *interop = version_files()
 
     return (
         {path.parent.name: read_version(path) for path in (runtime, table)}
         | {
-            family: version
+            family: max(
+                [version, *family_fixes(family).values()],
+                key=lambda fix: fix_number(fix, version),
+            )
             for family, version in family_versions().items()
             if family not in UNPUBLISHED_FAMILIES
         }
@@ -421,15 +512,20 @@ def release_tags() -> dict[str, str]:
     """
     The tag that releases each unit, keyed the way published_versions() is.
     """
-    tags: dict[str, str] = {}
+    return {
+        unit: release_tag(unit, version)
+        for unit, version in published_versions().items()
+    }
 
-    for family, version in published_versions().items():
-        epoch, _, release = version.rpartition("!")
-        spelled = f"e{epoch}v{release}" if epoch else f"v{release}"
 
-        tags[family] = f"{TAG_PREFIX}/{family}/{spelled}"
+def release_tag(unit: str, version: str) -> str:
+    """
+    The tag that releases a unit at a version.
+    """
+    epoch, _, release = version.rpartition("!")
+    spelled = f"e{epoch}v{release}" if epoch else f"v{release}"
 
-    return tags
+    return f"{TAG_PREFIX}/{unit}/{spelled}"
 
 
 def unit_of_tag(tag: str) -> str:

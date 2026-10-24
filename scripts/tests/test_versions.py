@@ -462,10 +462,12 @@ class FamilyReleasedInterop(unittest.TestCase):
         with self.assertRaises(ValueError):
             versions.check_fix_version("4!2.6.0.1b1", "4!2.6.0b1")
 
-    def test_a_family_of_four_numbers_takes_no_fix(self) -> None:
-        # the fourth number would be upstream's own
+    def test_a_family_of_four_numbers_takes_a_fifth(self) -> None:
+        versions.check_fix_version("4!1.0.4191.47.1", "4!1.0.4191.47")
+        versions.check_fix_version("4!10.0.28000.2705.1", "4!10.0.28000.2705")
+
         with self.assertRaises(ValueError):
-            versions.check_fix_version("4!1.0.4191.47.1", "4!1.0.4191.47")
+            versions.check_fix_version("4!1.0.4191.48", "4!1.0.4191.47")
 
     def add_fix(self, fix: str) -> None:
         """
@@ -477,6 +479,90 @@ class FamilyReleasedInterop(unittest.TestCase):
         (root / self.name / "version.txt").write_text(fix, encoding="utf-8")
 
         self.enterContext(mock.patch.object(versions, "INTEROP_PATH", root))
+
+
+class GeneratedFamilyFixes(unittest.TestCase):
+    """
+    The version of a package of a generated family that changed after the
+    family was released, and of the release that ships it.
+    """
+
+    family = "winrt"
+    names = ["winrt-Windows.Foundation", "winrt-Windows.UI.Xaml"]
+
+    def setUp(self) -> None:
+        root = Path(self.enterContext(tempfile.TemporaryDirectory())) / "projection"
+
+        for name in self.names:
+            (root / self.family / name).mkdir(parents=True)
+            (root / self.family / name / "deps.json").write_text("{}")
+
+        self.root = root
+        self.enterContext(mock.patch.object(versions, "PROJECTION_PATH", root))
+        self.version = versions.family_versions()[self.family]
+
+    def test_a_family_without_fixes_is_released_at_its_version(self) -> None:
+        self.assertEqual(versions.family_fixes(self.family), {})
+        self.assertEqual(versions.published_versions()[self.family], self.version)
+
+    def test_a_family_is_released_at_its_newest_fix(self) -> None:
+        self.write_fixes(
+            {self.names[0]: f"{self.version}.2", self.names[1]: f"{self.version}.1"}
+        )
+
+        self.assertEqual(
+            versions.published_versions()[self.family], f"{self.version}.2"
+        )
+        self.assertEqual(
+            versions.unit_of_tag(versions.release_tags()[self.family]), self.family
+        )
+
+    def test_a_fix_left_behind_by_the_pin_is_refused(self) -> None:
+        self.write_fixes({self.names[0]: "4!10.0.26100.4188.1"})
+
+        with self.assertRaisesRegex(RuntimeError, "delete it"):
+            versions.family_fixes(self.family)
+
+    def test_a_fix_to_a_package_of_another_family_is_refused(self) -> None:
+        self.write_fixes({"winrt-Microsoft.UI.Xaml": f"{self.version}.1"})
+
+        with self.assertRaisesRegex(RuntimeError, "not in winrt"):
+            versions.family_fixes(self.family)
+
+    def test_what_requires_the_family_takes_a_fix(self) -> None:
+        # a fix leaves every requirement on the family's version, so these
+        # are what has to admit it
+        fix = Version(f"{self.version}.1")
+
+        self.assertIn(fix, SpecifierSet(f"~={self.version}.0"))
+        self.assertIn(fix, SpecifierSet(f">={self.version}"))
+
+    def test_the_first_fix_is_1(self) -> None:
+        self.assertEqual(
+            versions.next_fixes(self.family, [self.version], [self.names[1]]),
+            {self.names[1]: f"{self.version}.1"},
+        )
+
+    def test_a_released_fix_is_kept_and_the_next_follows_it(self) -> None:
+        self.write_fixes({self.names[0]: f"{self.version}.1"})
+
+        self.assertEqual(
+            versions.next_fixes(
+                self.family, [self.version, f"{self.version}.1"], [self.names[1]]
+            ),
+            {self.names[0]: f"{self.version}.1", self.names[1]: f"{self.version}.2"},
+        )
+
+    def test_a_fix_not_released_yet_is_worked_out_again(self) -> None:
+        self.write_fixes({self.names[0]: f"{self.version}.1"})
+
+        self.assertEqual(
+            versions.next_fixes(self.family, [self.version], [self.names[1]]),
+            {self.names[1]: f"{self.version}.1"},
+        )
+
+    def write_fixes(self, fixes: dict[str, str]) -> None:
+        (self.root / self.family / versions.FIXES_NAME).write_text(json.dumps(fixes))
 
 
 class WindowsSdkMetadataPath(unittest.TestCase):
