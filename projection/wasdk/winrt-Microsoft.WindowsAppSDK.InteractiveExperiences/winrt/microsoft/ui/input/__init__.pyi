@@ -600,7 +600,7 @@ class InputActivationListener_Static(InputObject_Static):
 
 @typing.final
 class InputActivationListener(InputObject, metaclass=InputActivationListener_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputActivationListener::add_InputActivationChanged(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputActivationListener,Microsoft.UI.Input.InputActivationListenerActivationChangedEventArgs>)
     def add_input_activation_changed(self, handler: windows_foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -624,7 +624,7 @@ class InputCursor(windows_foundation.IClosable, winrt.system.Object, metaclass=I
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Input.InputCursor::Close()
     def close(self) -> None: ...
@@ -633,7 +633,7 @@ class InputCustomCursor_Static(InputCursor_Static):
     ...
 
 class InputCustomCursor(InputCursor, metaclass=InputCustomCursor_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -645,7 +645,7 @@ class InputDesktopNamedResourceCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputDesktopNamedResourceCursor(InputCursor, metaclass=InputDesktopNamedResourceCursor_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.UI.Input.InputDesktopNamedResourceCursor::get_ModuleName()
     @_property
@@ -663,7 +663,7 @@ class InputDesktopResourceCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputDesktopResourceCursor(InputCursor, metaclass=InputDesktopResourceCursor_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.UI.Input.InputDesktopResourceCursor::get_ModuleName()
     @_property
@@ -679,7 +679,7 @@ class InputFocusController_Static(InputObject_Static):
 
 @typing.final
 class InputFocusController(InputObject, metaclass=InputFocusController_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Input.FocusNavigationResult Microsoft.UI.Input.InputFocusController::DepartFocus(Microsoft.UI.Input.FocusNavigationRequest)
     def depart_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
@@ -713,7 +713,7 @@ class InputFocusNavigationHost_Static(InputObject_Static):
 
 @typing.final
 class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Input.FocusNavigationResult Microsoft.UI.Input.InputFocusNavigationHost::NavigateFocus(Microsoft.UI.Input.FocusNavigationRequest)
     def navigate_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
@@ -734,7 +734,7 @@ class InputKeyboardSource_Static(InputObject_Static):
 
 @typing.final
 class InputKeyboardSource(InputObject, metaclass=InputKeyboardSource_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Input.VirtualKeyStates Microsoft.UI.Input.InputKeyboardSource::GetCurrentKeyState(Windows.System.VirtualKey)
     def get_current_key_state(self, virtual_key: windows_system.VirtualKey, /) -> VirtualKeyStates: ...
@@ -772,7 +772,7 @@ class InputLightDismissAction_Static(InputObject_Static):
 
 @typing.final
 class InputLightDismissAction(InputObject, metaclass=InputLightDismissAction_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputLightDismissAction::add_Dismissed(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputLightDismissAction,Microsoft.UI.Input.InputLightDismissEventArgs>)
     def add_dismissed(self, handler: windows_foundation.TypedEventHandler[InputLightDismissAction, InputLightDismissEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -858,7 +858,7 @@ class InputObject_Static(winrt.system.Object_Static):
 
 class InputObject(winrt.system.Object, metaclass=InputObject_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Dispatching.DispatcherQueue Microsoft.UI.Input.InputObject::get_DispatcherQueue()
     @_property
@@ -872,7 +872,7 @@ class InputPointerSource_Static(InputObject_Static):
 
 @typing.final
 class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Microsoft.UI.Input.InputPointerSource::add_PointerCaptureLost(Windows.Foundation.TypedEventHandler`2<Microsoft.UI.Input.InputPointerSource,Microsoft.UI.Input.PointerEventArgs>)
     def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -931,7 +931,7 @@ class InputPreTranslateKeyboardSource_Static(InputObject_Static):
 
 @typing.final
 class InputPreTranslateKeyboardSource(InputObject, metaclass=InputPreTranslateKeyboardSource_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -941,7 +941,7 @@ class InputSystemCursor_Static(InputCursor_Static):
 
 @typing.final
 class InputSystemCursor(InputCursor, metaclass=InputSystemCursor_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Input.InputSystemCursorShape Microsoft.UI.Input.InputSystemCursor::get_CursorShape()
     @_property

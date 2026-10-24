@@ -60,7 +60,7 @@ class SceneWrappingMode(enum.IntEnum):
 
 @typing.final
 class SceneBoundingBox(SceneObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Microsoft.UI.Composition.Scenes.SceneBoundingBox::get_Center()
     @_property
@@ -82,7 +82,7 @@ class SceneComponent_Static(SceneObject_Static):
     ...
 
 class SceneComponent(SceneObject, metaclass=SceneComponent_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Scenes.SceneComponentType Microsoft.UI.Composition.Scenes.SceneComponent::get_ComponentType()
     @_property
@@ -106,7 +106,7 @@ class SceneComponentCollection(SceneObject, _cabc.MutableSequence[SceneComponent
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[SceneComponent]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: SceneComponent, /) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Scenes.SceneComponentCollection::Append(Microsoft.UI.Composition.Scenes.SceneComponent)
     def append(self, value: SceneComponent, /) -> None: ...
@@ -140,14 +140,14 @@ class SceneMaterial_Static(SceneObject_Static):
     ...
 
 class SceneMaterial(SceneObject, metaclass=SceneMaterial_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class SceneMaterialInput_Static(SceneObject_Static):
     ...
 
 class SceneMaterialInput(SceneObject, metaclass=SceneMaterialInput_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -157,7 +157,7 @@ class SceneMesh_Static(SceneObject_Static):
 
 @typing.final
 class SceneMesh(SceneObject, metaclass=SceneMesh_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Scenes.SceneMesh::FillMeshAttribute(Microsoft.UI.Composition.Scenes.SceneAttributeSemantic,Microsoft.Graphics.DirectX.DirectXPixelFormat,Windows.Foundation.MemoryBuffer)
     def fill_mesh_attribute(self, semantic: SceneAttributeSemantic, format: microsoft_graphics_directx.DirectXPixelFormat, memory: windows_foundation.MemoryBuffer, /) -> None: ...
@@ -180,7 +180,7 @@ class SceneMeshMaterialAttributeMap(SceneObject, _cabc.MutableMapping[str, Scene
     def __getitem__(self, key: str) -> SceneAttributeSemantic: ...
     def __setitem__(self, key: str, value: SceneAttributeSemantic) -> None: ...
     def __delitem__(self, key: str) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap::Clear()
     def clear(self) -> None: ...
@@ -207,7 +207,7 @@ class SceneMeshRendererComponent_Static(SceneRendererComponent_Static):
 
 @typing.final
 class SceneMeshRendererComponent(SceneRendererComponent, metaclass=SceneMeshRendererComponent_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Scenes.SceneMesh Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent::get_Mesh()
     @_property
@@ -232,7 +232,7 @@ class SceneMetallicRoughnessMaterial_Static(ScenePbrMaterial_Static):
 
 @typing.final
 class SceneMetallicRoughnessMaterial(ScenePbrMaterial, metaclass=SceneMetallicRoughnessMaterial_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial::get_RoughnessFactor()
     @_property
@@ -267,7 +267,7 @@ class SceneMetallicRoughnessMaterial(ScenePbrMaterial, metaclass=SceneMetallicRo
 
 @typing.final
 class SceneModelTransform(microsoft_ui_composition.CompositionTransform):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Microsoft.UI.Composition.Scenes.SceneModelTransform::get_Translation()
     @_property
@@ -313,7 +313,7 @@ class SceneNode_Static(SceneObject_Static):
 
 @typing.final
 class SceneNode(SceneObject, metaclass=SceneNode_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Scenes.SceneComponent Microsoft.UI.Composition.Scenes.SceneNode::FindFirstComponentOfType(Microsoft.UI.Composition.Scenes.SceneComponentType)
     def find_first_component_of_type(self, value: SceneComponentType, /) -> SceneComponent: ...
@@ -347,7 +347,7 @@ class SceneNodeCollection(SceneObject, _cabc.MutableSequence[SceneNode]):
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[SceneNode]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: SceneNode, /) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Scenes.SceneNodeCollection::Append(Microsoft.UI.Composition.Scenes.SceneNode)
     def append(self, value: SceneNode, /) -> None: ...
@@ -381,14 +381,14 @@ class SceneObject_Static(microsoft_ui_composition.CompositionObject_Static):
     ...
 
 class SceneObject(microsoft_ui_composition.CompositionObject, metaclass=SceneObject_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class ScenePbrMaterial_Static(SceneMaterial_Static):
     ...
 
 class ScenePbrMaterial(SceneMaterial, metaclass=ScenePbrMaterial_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Microsoft.UI.Composition.Scenes.ScenePbrMaterial::get_OcclusionStrength()
     @_property
@@ -458,7 +458,7 @@ class SceneRendererComponent_Static(SceneComponent_Static):
     ...
 
 class SceneRendererComponent(SceneComponent, metaclass=SceneRendererComponent_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -468,7 +468,7 @@ class SceneSurfaceMaterialInput_Static(SceneMaterialInput_Static):
 
 @typing.final
 class SceneSurfaceMaterialInput(SceneMaterialInput, metaclass=SceneSurfaceMaterialInput_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Scenes.SceneWrappingMode Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput::get_WrappingVMode()
     @_property
@@ -502,7 +502,7 @@ class SceneVisual_Static(microsoft_ui_composition.ContainerVisual_Static):
 
 @typing.final
 class SceneVisual(microsoft_ui_composition.ContainerVisual, metaclass=SceneVisual_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Scenes.SceneNode Microsoft.UI.Composition.Scenes.SceneVisual::get_Root()
     @_property

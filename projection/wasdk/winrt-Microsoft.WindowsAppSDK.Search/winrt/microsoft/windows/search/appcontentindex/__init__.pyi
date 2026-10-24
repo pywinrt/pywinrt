@@ -378,7 +378,7 @@ class AppIndexQueryMatch_Static(winrt.system.Object_Static):
 
 class AppIndexQueryMatch(winrt.system.Object, metaclass=AppIndexQueryMatch_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.AppIndexQueryMatch::get_ContentId()
     @_property
@@ -452,7 +452,7 @@ class AppIndexTextQuerySession(windows_foundation.IClosable, winrt.system.Object
 
 @typing.final
 class AppManagedImageQueryMatch(ImageQueryMatch):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IReference`1<Windows.Foundation.Rect> Microsoft.Windows.Search.AppContentIndex.AppManagedImageQueryMatch::get_RegionOfInterest()
     @_property
@@ -489,7 +489,7 @@ class AppManagedIndexableAppContent_Static(IndexableAppContent_Static):
 
 @typing.final
 class AppManagedIndexableAppContent(IndexableAppContent, metaclass=AppManagedIndexableAppContent_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Microsoft.Windows.Search.AppContentIndex.AppIndexContentRegion> Microsoft.Windows.Search.AppContentIndex.AppManagedIndexableAppContent::get_ContentRegions()
     @_property
@@ -497,7 +497,7 @@ class AppManagedIndexableAppContent(IndexableAppContent, metaclass=AppManagedInd
 
 @typing.final
 class AppManagedOcrTextQueryMatch(TextQueryMatch):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.AppManagedOcrTextQueryMatch::get_Fragment()
     @_property
@@ -508,7 +508,7 @@ class AppManagedOcrTextQueryMatch(TextQueryMatch):
 
 @typing.final
 class AppManagedTextQueryMatch(TextQueryMatch):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Microsoft.Windows.Search.AppContentIndex.AppManagedTextQueryMatch::get_TextLength()
     @_property
@@ -651,7 +651,7 @@ class ImageQueryMatch_Static(AppIndexQueryMatch_Static):
     ...
 
 class ImageQueryMatch(AppIndexQueryMatch, metaclass=ImageQueryMatch_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -759,7 +759,7 @@ class IndexableAppContent_Static(winrt.system.Object_Static):
 
 class IndexableAppContent(winrt.system.Object, metaclass=IndexableAppContent_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Microsoft.Windows.Search.AppContentIndex.IndexableAppContent::get_ContentId()
     @_property
@@ -770,7 +770,7 @@ class TextQueryMatch_Static(AppIndexQueryMatch_Static):
     ...
 
 class TextQueryMatch(AppIndexQueryMatch, metaclass=TextQueryMatch_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final

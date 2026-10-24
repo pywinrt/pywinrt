@@ -224,7 +224,7 @@ class GeneratorPosition:
 
 @typing.final
 class AppBarButtonTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings::get_KeyboardAcceleratorTextMinWidth()
     @_property
@@ -232,7 +232,7 @@ class AppBarButtonTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class AppBarTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Rect Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings::get_ClipRect()
     @_property
@@ -267,7 +267,7 @@ class AppBarTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class AppBarToggleButtonTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings::get_KeyboardAcceleratorTextMinWidth()
     @_property
@@ -296,7 +296,7 @@ class ButtonBase_Static(windows_ui_xaml_controls.ContentControl_Static):
     def is_pressed_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ButtonBase(windows_ui_xaml_controls.ContentControl, metaclass=ButtonBase_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """ButtonBase's constructor is protected: derive a class from it and create that."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.ButtonBase::add_Click(Windows.UI.Xaml.RoutedEventHandler)
@@ -336,11 +336,11 @@ class ButtonBase(windows_ui_xaml_controls.ContentControl, metaclass=ButtonBase_S
 
 @typing.final
 class CalendarPanel(windows_ui_xaml_controls.Panel):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class CalendarViewTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings::get_CenterX()
     @_property
@@ -392,7 +392,7 @@ class CarouselPanel_Static(windows_ui_xaml_controls.VirtualizingPanel_Static):
     ...
 
 class CarouselPanel(windows_ui_xaml_controls.VirtualizingPanel, IScrollSnapPointsInfo, metaclass=CarouselPanel_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.CarouselPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> _cabc.Sequence[winrt.system.Single]: ...
     # System.Single Windows.UI.Xaml.Controls.Primitives.CarouselPanel::GetRegularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
@@ -515,7 +515,7 @@ class ColorPickerSlider_Static(windows_ui_xaml_controls.Slider_Static):
     def color_channel_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ColorPickerSlider(windows_ui_xaml_controls.Slider, metaclass=ColorPickerSlider_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Controls.ColorPickerHsvChannel Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider::get_ColorChannel()
     @_property
     def color_channel(self) -> windows_ui_xaml_controls.ColorPickerHsvChannel: ...
@@ -567,7 +567,7 @@ class ColorSpectrum_Static(windows_ui_xaml_controls.Control_Static):
     def shape_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ColorSpectrum(windows_ui_xaml_controls.Control, metaclass=ColorSpectrum_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.ColorSpectrum::add_ColorChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Controls.Primitives.ColorSpectrum,Windows.UI.Xaml.Controls.ColorChangedEventArgs>)
     def add_color_changed(self, handler: windows_foundation.TypedEventHandler[ColorSpectrum, windows_ui_xaml_controls.ColorChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -647,7 +647,7 @@ class ColorSpectrum(windows_ui_xaml_controls.Control, metaclass=ColorSpectrum_St
 
 @typing.final
 class ComboBoxTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings::get_DropDownClosedHeight()
     @_property
@@ -669,7 +669,7 @@ class CommandBarFlyoutCommandBar_Static(windows_ui_xaml_controls.CommandBar_Stat
     ...
 
 class CommandBarFlyoutCommandBar(windows_ui_xaml_controls.CommandBar, metaclass=CommandBarFlyoutCommandBar_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar::get_FlyoutTemplateSettings()
     @_property
     @typing.final
@@ -677,7 +677,7 @@ class CommandBarFlyoutCommandBar(windows_ui_xaml_controls.CommandBar, metaclass=
 
 @typing.final
 class CommandBarFlyoutCommandBarTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings::get_CloseAnimationEndPosition()
     @_property
@@ -742,7 +742,7 @@ class CommandBarFlyoutCommandBarTemplateSettings(windows_ui_xaml.DependencyObjec
 
 @typing.final
 class CommandBarTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings::get_ContentHeight()
     @_property
@@ -785,7 +785,7 @@ class DragCompletedEventArgs_Static(windows_ui_xaml.RoutedEventArgs_Static):
     ...
 
 class DragCompletedEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=DragCompletedEventArgs_Static):
-    def __new__(cls, horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: bool, /) -> typing.Self: ...
+    def __init__(self, horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: bool, /) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs::get_Canceled()
     @_property
     @typing.final
@@ -803,7 +803,7 @@ class DragDeltaEventArgs_Static(windows_ui_xaml.RoutedEventArgs_Static):
     ...
 
 class DragDeltaEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=DragDeltaEventArgs_Static):
-    def __new__(cls, horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, /) -> typing.Self: ...
+    def __init__(self, horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, /) -> None: ...
     # System.Double Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs::get_HorizontalChange()
     @_property
     @typing.final
@@ -817,7 +817,7 @@ class DragStartedEventArgs_Static(windows_ui_xaml.RoutedEventArgs_Static):
     ...
 
 class DragStartedEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=DragStartedEventArgs_Static):
-    def __new__(cls, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, /) -> typing.Self: ...
+    def __init__(self, horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double, /) -> None: ...
     # System.Double Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs::get_HorizontalOffset()
     @_property
     @typing.final
@@ -888,7 +888,7 @@ class FlyoutBase_Static(windows_ui_xaml.DependencyObject_Static):
     def should_constrain_to_root_bounds_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class FlyoutBase(windows_ui_xaml.DependencyObject, metaclass=FlyoutBase_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """FlyoutBase's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.Controls.Control Windows.UI.Xaml.Controls.Primitives.FlyoutBase::CreatePresenter()
     def _create_presenter(self) -> windows_ui_xaml_controls.Control: ...
@@ -1034,7 +1034,7 @@ class FlyoutShowOptions_Static(winrt.system.Object_Static):
 
 class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Controls.Primitives.FlyoutShowMode Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions::get_ShowMode()
     @_property
     def show_mode(self) -> FlyoutShowMode: ...
@@ -1168,7 +1168,7 @@ class GridViewItemPresenter_Static(windows_ui_xaml_controls.ContentPresenter_Sta
     def selection_check_mark_visual_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class GridViewItemPresenter(windows_ui_xaml_controls.ContentPresenter, metaclass=GridViewItemPresenter_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter::get_SelectionCheckMarkVisualEnabled()
     @_property
     def selection_check_mark_visual_enabled(self) -> bool: ...
@@ -1332,7 +1332,7 @@ class GridViewItemPresenter(windows_ui_xaml_controls.ContentPresenter, metaclass
 
 @typing.final
 class GridViewItemTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings::get_DragItemsCount()
     @_property
@@ -1369,7 +1369,7 @@ class JumpListItemBackgroundConverter_Static(windows_ui_xaml.DependencyObject_St
 
 @typing.final
 class JumpListItemBackgroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.IValueConverter, metaclass=JumpListItemBackgroundConverter_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter::Convert(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
     def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter::ConvertBack(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
@@ -1398,7 +1398,7 @@ class JumpListItemForegroundConverter_Static(windows_ui_xaml.DependencyObject_St
 
 @typing.final
 class JumpListItemForegroundConverter(windows_ui_xaml.DependencyObject, windows_ui_xaml_data.IValueConverter, metaclass=JumpListItemForegroundConverter_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter::Convert(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
     def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName | tuple[str, windows_ui_xaml_interop.TypeKind], parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...
     # System.Object Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter::ConvertBack(System.Object,Windows.UI.Xaml.Interop.TypeName,System.Object,System.String)
@@ -1672,7 +1672,7 @@ class ListViewItemPresenter_Static(windows_ui_xaml_controls.ContentPresenter_Sta
     def selection_indicator_visual_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ListViewItemPresenter(windows_ui_xaml_controls.ContentPresenter, metaclass=ListViewItemPresenter_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter::get_SelectionCheckMarkVisualEnabled()
     @_property
     def selection_check_mark_visual_enabled(self) -> bool: ...
@@ -2095,7 +2095,7 @@ class ListViewItemPresenter(windows_ui_xaml_controls.ContentPresenter, metaclass
 
 @typing.final
 class ListViewItemTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings::get_DragItemsCount()
     @_property
@@ -2127,7 +2127,7 @@ class LoopingSelector_Static(windows_ui_xaml_controls.Control_Static):
 
 @typing.final
 class LoopingSelector(windows_ui_xaml_controls.Control, metaclass=LoopingSelector_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.LoopingSelector::add_SelectionChanged(Windows.UI.Xaml.Controls.SelectionChangedEventHandler)
     def add_selection_changed(self, handler: windows_ui_xaml_controls.SelectionChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
@@ -2178,12 +2178,12 @@ class LoopingSelector(windows_ui_xaml_controls.Control, metaclass=LoopingSelecto
 
 @typing.final
 class LoopingSelectorItem(windows_ui_xaml_controls.ContentControl):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class LoopingSelectorPanel(windows_ui_xaml_controls.Canvas, IScrollSnapPointsInfo):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> _cabc.Sequence[winrt.system.Single]: ...
@@ -2206,7 +2206,7 @@ class LoopingSelectorPanel(windows_ui_xaml_controls.Canvas, IScrollSnapPointsInf
 
 @typing.final
 class MenuFlyoutItemTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.MenuFlyoutItemTemplateSettings::get_KeyboardAcceleratorTextMinWidth()
     @_property
@@ -2214,7 +2214,7 @@ class MenuFlyoutItemTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class MenuFlyoutPresenterTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings::get_FlyoutContentMinWidth()
     @_property
@@ -2227,7 +2227,7 @@ class NavigationViewItemPresenter_Static(windows_ui_xaml_controls.ContentControl
     def icon_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class NavigationViewItemPresenter(windows_ui_xaml_controls.ContentControl, metaclass=NavigationViewItemPresenter_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Controls.IconElement Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter::get_Icon()
     @_property
     def icon(self) -> windows_ui_xaml_controls.IconElement: ...
@@ -2240,7 +2240,7 @@ class OrientedVirtualizingPanel_Static(windows_ui_xaml_controls.VirtualizingPane
     ...
 
 class OrientedVirtualizingPanel(windows_ui_xaml_controls.VirtualizingPanel, windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, metaclass=OrientedVirtualizingPanel_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel::GetInsertionIndexes(Windows.Foundation.Point,System.Int32&,System.Int32&)
     def get_insertion_indexes(self, position: windows_foundation.Point | tuple[winrt.system.Single, winrt.system.Single], /) -> tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -2370,7 +2370,7 @@ class PickerFlyoutBase_Static(FlyoutBase_Static):
     def title_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class PickerFlyoutBase(FlyoutBase, metaclass=PickerFlyoutBase_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """PickerFlyoutBase's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase::OnConfirmed()
     def _on_confirmed(self) -> None: ...
@@ -2381,15 +2381,15 @@ class PivotHeaderItem_Static(windows_ui_xaml_controls.ContentControl_Static):
     ...
 
 class PivotHeaderItem(windows_ui_xaml_controls.ContentControl, metaclass=PivotHeaderItem_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class PivotHeaderPanel(windows_ui_xaml_controls.Canvas):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class PivotPanel(windows_ui_xaml_controls.Panel, IScrollSnapPointsInfo):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<System.Single> Windows.UI.Xaml.Controls.Primitives.PivotPanel::GetIrregularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
     def get_irregular_snap_points(self, orientation: windows_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> _cabc.Sequence[winrt.system.Single]: ...
     # System.Single Windows.UI.Xaml.Controls.Primitives.PivotPanel::GetRegularSnapPoints(Windows.UI.Xaml.Controls.Orientation,Windows.UI.Xaml.Controls.Primitives.SnapPointsAlignment,System.Single&)
@@ -2444,7 +2444,7 @@ class Popup_Static(windows_ui_xaml.FrameworkElement_Static):
 
 @typing.final
 class Popup(windows_ui_xaml.FrameworkElement, metaclass=Popup_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.Popup::add_Closed(Windows.Foundation.EventHandler`1<System.Object>)
     def add_closed(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Controls.Primitives.Popup::remove_Closed(Windows.Foundation.EventRegistrationToken)
@@ -2526,7 +2526,7 @@ class Popup(windows_ui_xaml.FrameworkElement, metaclass=Popup_Static):
 
 @typing.final
 class ProgressBarTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings::get_ContainerAnimationEndPosition()
     @_property
@@ -2552,7 +2552,7 @@ class ProgressBarTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class ProgressRingTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings::get_EllipseDiameter()
     @_property
@@ -2587,7 +2587,7 @@ class RangeBase_Static(windows_ui_xaml_controls.Control_Static):
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class RangeBase(windows_ui_xaml_controls.Control, metaclass=RangeBase_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """RangeBase's constructor is protected: derive a class from it and create that."""
     # System.Void Windows.UI.Xaml.Controls.Primitives.RangeBase::OnMaximumChanged(System.Double,System.Double)
     def _on_maximum_changed(self, old_maximum: winrt.system.Double, new_maximum: winrt.system.Double, /) -> None: ...
@@ -2639,7 +2639,7 @@ class RangeBase(windows_ui_xaml_controls.Control, metaclass=RangeBase_Static):
 
 @typing.final
 class RangeBaseValueChangedEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs::get_NewValue()
     @_property
@@ -2659,7 +2659,7 @@ class RepeatButton_Static(ButtonBase_Static):
 
 @typing.final
 class RepeatButton(ButtonBase, metaclass=RepeatButton_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Int32 Windows.UI.Xaml.Controls.Primitives.RepeatButton::get_Interval()
     @_property
     def interval(self) -> winrt.system.Int32: ...
@@ -2687,7 +2687,7 @@ class ScrollBar_Static(RangeBase_Static):
 
 @typing.final
 class ScrollBar(RangeBase, metaclass=ScrollBar_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.ScrollBar::add_Scroll(Windows.UI.Xaml.Controls.Primitives.ScrollEventHandler)
     def add_scroll(self, handler: ScrollEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.UI.Xaml.Controls.Primitives.ScrollBar::remove_Scroll(Windows.Foundation.EventRegistrationToken)
@@ -2713,7 +2713,7 @@ class ScrollBar(RangeBase, metaclass=ScrollBar_Static):
 
 @typing.final
 class ScrollEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs::get_NewValue()
     @_property
     def new_value(self) -> winrt.system.Double: ...
@@ -2746,7 +2746,7 @@ class Selector_Static(windows_ui_xaml_controls.ItemsControl_Static):
     def selected_value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Selector(windows_ui_xaml_controls.ItemsControl, metaclass=Selector_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.Selector::add_SelectionChanged(Windows.UI.Xaml.Controls.SelectionChangedEventHandler)
@@ -2797,7 +2797,7 @@ class SelectorItem_Static(windows_ui_xaml_controls.ContentControl_Static):
     def is_selected_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class SelectorItem(windows_ui_xaml_controls.ContentControl, metaclass=SelectorItem_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """SelectorItem's constructor is protected: derive a class from it and create that."""
     # System.Boolean Windows.UI.Xaml.Controls.Primitives.SelectorItem::get_IsSelected()
     @_property
@@ -2809,7 +2809,7 @@ class SelectorItem(windows_ui_xaml_controls.ContentControl, metaclass=SelectorIt
 
 @typing.final
 class SettingsFlyoutTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings::get_BorderBrush()
     @_property
@@ -2832,7 +2832,7 @@ class SettingsFlyoutTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class SplitViewTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Xaml.GridLength Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings::get_CompactPaneGridLength()
     @_property
@@ -2861,7 +2861,7 @@ class Thumb_Static(windows_ui_xaml_controls.Control_Static):
 
 @typing.final
 class Thumb(windows_ui_xaml_controls.Control, metaclass=Thumb_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.Primitives.Thumb::CancelDrag()
     def cancel_drag(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Controls.Primitives.Thumb::add_DragCompleted(Windows.UI.Xaml.Controls.Primitives.DragCompletedEventHandler)
@@ -2888,7 +2888,7 @@ class TickBar_Static(windows_ui_xaml.FrameworkElement_Static):
 
 @typing.final
 class TickBar(windows_ui_xaml.FrameworkElement, metaclass=TickBar_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Controls.Primitives.TickBar::get_Fill()
     @_property
     def fill(self) -> windows_ui_xaml_media.Brush: ...
@@ -2907,7 +2907,7 @@ class ToggleButton_Static(ButtonBase_Static):
     def is_three_state_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class ToggleButton(ButtonBase, metaclass=ToggleButton_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Void Windows.UI.Xaml.Controls.Primitives.ToggleButton::OnToggle()
     def _on_toggle(self) -> None: ...
     @typing.final
@@ -2945,7 +2945,7 @@ class ToggleButton(ButtonBase, metaclass=ToggleButton_Static):
 
 @typing.final
 class ToggleSwitchTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings::get_CurtainCurrentToOffOffset()
     @_property
@@ -2974,7 +2974,7 @@ class ToggleSwitchTemplateSettings(windows_ui_xaml.DependencyObject):
 
 @typing.final
 class ToolTipTemplateSettings(windows_ui_xaml.DependencyObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Double Windows.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings::get_FromHorizontalOffset()
     @_property

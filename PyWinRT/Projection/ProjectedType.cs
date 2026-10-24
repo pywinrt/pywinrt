@@ -17,6 +17,7 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
+        DeclaresInit = IsComposable || type.BaseType is { FullName: not "System.Object" };
 
         var deprecated = type.GetDeprecatedAttribute();
         IsDeprecated = deprecated is not null;
@@ -163,6 +164,14 @@ class ProjectedType
     /// True if the type is a composable WinRT runtime class.
     /// </summary>
     public bool IsComposable { get; }
+
+    /// <summary>
+    /// True if the type stubs declare the type's constructors as __init__
+    /// rather than __new__: a composable class, whose Python subclasses have
+    /// an __init__ of their own, and any class derived from one, so that no
+    /// class in a hierarchy has a __new__ beside an inherited __init__.
+    /// </summary>
+    public bool DeclaresInit { get; }
 
     /// <summary>
     /// True if WinRT marks the type deprecated.

@@ -83,7 +83,7 @@ class CompositionConditionalValue_Static(microsoft_ui_composition.CompositionObj
 
 @typing.final
 class CompositionConditionalValue(microsoft_ui_composition.CompositionObject, metaclass=CompositionConditionalValue_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.ExpressionAnimation Microsoft.UI.Composition.Interactions.CompositionConditionalValue::get_Value()
     @_property
@@ -101,7 +101,7 @@ class CompositionConditionalValue(microsoft_ui_composition.CompositionObject, me
 @typing.final
 class CompositionInteractionSourceCollection(microsoft_ui_composition.CompositionObject):
     def __iter__(self) -> _cabc.Iterator[ICompositionInteractionSource]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Interactions.CompositionInteractionSourceCollection::Add(Microsoft.UI.Composition.Interactions.ICompositionInteractionSource)
     def add(self, value: ICompositionInteractionSource, /) -> None: ...
@@ -117,7 +117,7 @@ class CompositionInteractionSourceCollection(microsoft_ui_composition.Compositio
 
 @typing.final
 class InteractionSourceConfiguration(microsoft_ui_composition.CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Interactions.InteractionSourceRedirectionMode Microsoft.UI.Composition.Interactions.InteractionSourceConfiguration::get_ScaleSourceMode()
     @_property
@@ -151,7 +151,7 @@ class InteractionTracker_Static(microsoft_ui_composition.CompositionObject_Stati
 
 @typing.final
 class InteractionTracker(microsoft_ui_composition.CompositionObject, metaclass=InteractionTracker_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Microsoft.UI.Composition.Interactions.InteractionTracker::AdjustPositionXIfGreaterThanThreshold(System.Single,System.Single)
     def adjust_position_x_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
@@ -287,7 +287,7 @@ class InteractionTrackerInertiaModifier_Static(microsoft_ui_composition.Composit
     ...
 
 class InteractionTrackerInertiaModifier(microsoft_ui_composition.CompositionObject, metaclass=InteractionTrackerInertiaModifier_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -297,7 +297,7 @@ class InteractionTrackerInertiaMotion_Static(InteractionTrackerInertiaModifier_S
 
 @typing.final
 class InteractionTrackerInertiaMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaMotion_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.ExpressionAnimation Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaMotion::get_Motion()
     @_property
@@ -319,7 +319,7 @@ class InteractionTrackerInertiaNaturalMotion_Static(InteractionTrackerInertiaMod
 
 @typing.final
 class InteractionTrackerInertiaNaturalMotion(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaNaturalMotion_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.ScalarNaturalMotionAnimation Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaNaturalMotion::get_NaturalMotion()
     @_property
@@ -341,7 +341,7 @@ class InteractionTrackerInertiaRestingValue_Static(InteractionTrackerInertiaModi
 
 @typing.final
 class InteractionTrackerInertiaRestingValue(InteractionTrackerInertiaModifier, metaclass=InteractionTrackerInertiaRestingValue_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.ExpressionAnimation Microsoft.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue::get_RestingValue()
     @_property
@@ -425,7 +425,7 @@ class InteractionTrackerVector2InertiaModifier_Static(microsoft_ui_composition.C
     ...
 
 class InteractionTrackerVector2InertiaModifier(microsoft_ui_composition.CompositionObject, metaclass=InteractionTrackerVector2InertiaModifier_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -435,7 +435,7 @@ class InteractionTrackerVector2InertiaNaturalMotion_Static(InteractionTrackerVec
 
 @typing.final
 class InteractionTrackerVector2InertiaNaturalMotion(InteractionTrackerVector2InertiaModifier, metaclass=InteractionTrackerVector2InertiaNaturalMotion_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Microsoft.UI.Composition.Vector2NaturalMotionAnimation Microsoft.UI.Composition.Interactions.InteractionTrackerVector2InertiaNaturalMotion::get_NaturalMotion()
     @_property
@@ -457,7 +457,7 @@ class VisualInteractionSource_Static(microsoft_ui_composition.CompositionObject_
     def create_from_ivisual_element(cls, source: microsoft_ui_composition.IVisualElement, /) -> VisualInteractionSource: ...
 
 class VisualInteractionSource(microsoft_ui_composition.CompositionObject, ICompositionInteractionSource, metaclass=VisualInteractionSource_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Microsoft.UI.Composition.Interactions.VisualInteractionSource::ConfigureCenterPointXModifiers(Windows.Foundation.Collections.IIterable`1<Microsoft.UI.Composition.Interactions.CompositionConditionalValue>)

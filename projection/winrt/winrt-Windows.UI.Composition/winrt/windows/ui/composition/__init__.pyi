@@ -288,7 +288,7 @@ class InkTrailPoint:
 
 @typing.final
 class AmbientLight(CompositionLight):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Windows.UI.Composition.AmbientLight::get_Color()
     @_property
@@ -314,7 +314,7 @@ class AnimationController_Static(CompositionObject_Static):
 
 @typing.final
 class AnimationController(CompositionObject, metaclass=AnimationController_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.AnimationController::Pause()
     def pause(self) -> None: ...
@@ -341,7 +341,7 @@ class AnimationController(CompositionObject, metaclass=AnimationController_Stati
 
 @typing.final
 class AnimationPropertyInfo(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionObject Windows.UI.Composition.AnimationPropertyInfo::GetResolvedCompositionObject()
     def get_resolved_composition_object(self) -> CompositionObject: ...
@@ -356,7 +356,7 @@ class AnimationPropertyInfo(CompositionObject):
 
 @typing.final
 class BackEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.BackEasingFunction::get_Amplitude()
     @_property
@@ -367,14 +367,14 @@ class BackEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class BooleanKeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.BooleanKeyFrameAnimation::InsertKeyFrame(System.Single,System.Boolean)
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: bool, /) -> None: ...
 
 @typing.final
 class BounceEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Composition.BounceEasingFunction::get_Bounces()
     @_property
@@ -388,7 +388,7 @@ class BounceEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class BounceScalarNaturalMotionAnimation(ScalarNaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.BounceScalarNaturalMotionAnimation::get_Restitution()
     @_property
@@ -405,7 +405,7 @@ class BounceScalarNaturalMotionAnimation(ScalarNaturalMotionAnimation):
 
 @typing.final
 class BounceVector2NaturalMotionAnimation(Vector2NaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.BounceVector2NaturalMotionAnimation::get_Restitution()
     @_property
@@ -422,7 +422,7 @@ class BounceVector2NaturalMotionAnimation(Vector2NaturalMotionAnimation):
 
 @typing.final
 class BounceVector3NaturalMotionAnimation(Vector3NaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.BounceVector3NaturalMotionAnimation::get_Restitution()
     @_property
@@ -439,7 +439,7 @@ class BounceVector3NaturalMotionAnimation(Vector3NaturalMotionAnimation):
 
 @typing.final
 class CircleEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEasingFunctionMode Windows.UI.Composition.CircleEasingFunction::get_Mode()
     @_property
@@ -447,7 +447,7 @@ class CircleEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class ColorKeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.ColorKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.UI.Color)
@@ -470,7 +470,7 @@ class CompositionAnimation_Static(CompositionObject_Static):
     ...
 
 class CompositionAnimation(CompositionObject, ICompositionAnimationBase, metaclass=CompositionAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Windows.UI.Composition.CompositionAnimation::ClearAllParameters()
@@ -526,7 +526,7 @@ class CompositionAnimation(CompositionObject, ICompositionAnimationBase, metacla
 @typing.final
 class CompositionAnimationGroup(CompositionObject, ICompositionAnimationBase):
     def __iter__(self) -> _cabc.Iterator[CompositionAnimation]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionAnimationGroup::Add(Windows.UI.Composition.CompositionAnimation)
     def add(self, value: CompositionAnimation, /) -> None: ...
@@ -542,19 +542,19 @@ class CompositionAnimationGroup(CompositionObject, ICompositionAnimationBase):
 
 @typing.final
 class CompositionBackdropBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CompositionBatchCompletedEventArgs(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class CompositionBrush_Static(CompositionObject_Static):
     ...
 
 class CompositionBrush(CompositionObject, metaclass=CompositionBrush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -579,7 +579,7 @@ class CompositionClip_Static(CompositionObject_Static):
     ...
 
 class CompositionClip(CompositionObject, metaclass=CompositionClip_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Matrix3x2 Windows.UI.Composition.CompositionClip::get_TransformMatrix()
     @_property
@@ -633,7 +633,7 @@ class CompositionClip(CompositionObject, metaclass=CompositionClip_Static):
 
 @typing.final
 class CompositionColorBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Color Windows.UI.Composition.CompositionColorBrush::get_Color()
     @_property
@@ -644,7 +644,7 @@ class CompositionColorBrush(CompositionBrush):
 
 @typing.final
 class CompositionColorGradientStop(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionColorGradientStop::get_Offset()
     @_property
@@ -708,7 +708,7 @@ class CompositionColorGradientStopCollection(_cabc.MutableSequence[CompositionCo
 
 @typing.final
 class CompositionCommitBatch(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Composition.CompositionCommitBatch::add_Completed(Windows.Foundation.TypedEventHandler`2<System.Object,Windows.UI.Composition.CompositionBatchCompletedEventArgs>)
     def add_completed(self, handler: windows_foundation.TypedEventHandler[winrt.system.Object, CompositionBatchCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -723,7 +723,7 @@ class CompositionCommitBatch(CompositionObject):
 
 @typing.final
 class CompositionContainerShape(CompositionShape):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionShapeCollection Windows.UI.Composition.CompositionContainerShape::get_Shapes()
     @_property
@@ -733,7 +733,7 @@ class CompositionDrawingSurface_Static(CompositionObject_Static):
     ...
 
 class CompositionDrawingSurface(CompositionObject, ICompositionSurface, metaclass=CompositionDrawingSurface_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Windows.UI.Composition.CompositionDrawingSurface::Resize(Windows.Graphics.SizeInt32)
@@ -810,12 +810,12 @@ class CompositionEasingFunction_Static(CompositionObject_Static):
     def create_step_easing_function_with_step_count(cls, owner: Compositor, step_count: winrt.system.Int32 | typing.SupportsIndex, /) -> StepEasingFunction: ...
 
 class CompositionEasingFunction(CompositionObject, metaclass=CompositionEasingFunction_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CompositionEffectBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.CompositionEffectBrush::GetSourceParameter(System.String)
     def get_source_parameter(self, name: str, /) -> CompositionBrush: ...
@@ -824,7 +824,7 @@ class CompositionEffectBrush(CompositionBrush):
 
 @typing.final
 class CompositionEffectFactory(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEffectBrush Windows.UI.Composition.CompositionEffectFactory::CreateBrush()
     def create_brush(self) -> CompositionEffectBrush: ...
@@ -844,7 +844,7 @@ class CompositionEffectSourceParameter(windows_graphics_effects.IGraphicsEffectS
 
 @typing.final
 class CompositionEllipseGeometry(CompositionGeometry):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionEllipseGeometry::get_Radius()
     @_property
@@ -861,7 +861,7 @@ class CompositionEllipseGeometry(CompositionGeometry):
 
 @typing.final
 class CompositionGeometricClip(CompositionClip):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionViewBox Windows.UI.Composition.CompositionGeometricClip::get_ViewBox()
     @_property
@@ -880,7 +880,7 @@ class CompositionGeometry_Static(CompositionObject_Static):
     ...
 
 class CompositionGeometry(CompositionObject, metaclass=CompositionGeometry_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionGeometry::get_TrimStart()
     @_property
@@ -908,7 +908,7 @@ class CompositionGradientBrush_Static(CompositionBrush_Static):
     ...
 
 class CompositionGradientBrush(CompositionBrush, metaclass=CompositionGradientBrush_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Matrix3x2 Windows.UI.Composition.CompositionGradientBrush::get_TransformMatrix()
     @_property
@@ -987,7 +987,7 @@ class CompositionGradientBrush(CompositionBrush, metaclass=CompositionGradientBr
 
 @typing.final
 class CompositionGraphicsDevice(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.UI.Composition.ICompositionSurface> Windows.UI.Composition.CompositionGraphicsDevice::CaptureAsync(Windows.UI.Composition.Visual,Windows.Graphics.SizeInt32,Windows.Graphics.DirectX.DirectXPixelFormat,Windows.Graphics.DirectX.DirectXAlphaMode,System.Single)
     def capture_async(self, capture_visual: Visual, size: windows_graphics.SizeInt32 | tuple[winrt.system.Int32 | typing.SupportsIndex, winrt.system.Int32 | typing.SupportsIndex], pixel_format: windows_graphics_directx.DirectXPixelFormat, alpha_mode: windows_graphics_directx.DirectXAlphaMode, sdr_boost: winrt.system.Single, /) -> windows_foundation.IAsyncOperation[ICompositionSurface]: ...
@@ -1010,7 +1010,7 @@ class CompositionLight_Static(CompositionObject_Static):
     ...
 
 class CompositionLight(CompositionObject, metaclass=CompositionLight_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.VisualUnorderedCollection Windows.UI.Composition.CompositionLight::get_Targets()
     @_property
@@ -1030,7 +1030,7 @@ class CompositionLight(CompositionObject, metaclass=CompositionLight_Static):
 
 @typing.final
 class CompositionLineGeometry(CompositionGeometry):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionLineGeometry::get_Start()
     @_property
@@ -1047,7 +1047,7 @@ class CompositionLineGeometry(CompositionGeometry):
 
 @typing.final
 class CompositionLinearGradientBrush(CompositionGradientBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionLinearGradientBrush::get_StartPoint()
     @_property
@@ -1064,7 +1064,7 @@ class CompositionLinearGradientBrush(CompositionGradientBrush):
 
 @typing.final
 class CompositionMaskBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.CompositionMaskBrush::get_Source()
     @_property
@@ -1081,7 +1081,7 @@ class CompositionMaskBrush(CompositionBrush):
 
 @typing.final
 class CompositionMipmapSurface(CompositionObject, ICompositionSurface):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionDrawingSurface Windows.UI.Composition.CompositionMipmapSurface::GetDrawingSurfaceForLevel(System.UInt32)
     def get_drawing_surface_for_level(self, level: winrt.system.UInt32 | typing.SupportsIndex, /) -> CompositionDrawingSurface: ...
@@ -1100,7 +1100,7 @@ class CompositionMipmapSurface(CompositionObject, ICompositionSurface):
 
 @typing.final
 class CompositionNineGridBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.CompositionNineGridBrush::SetInsetScales(System.Single)
@@ -1194,7 +1194,7 @@ class CompositionObject(IAnimationObject, windows_foundation.IClosable, winrt.sy
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionObject::Close()
     def close(self) -> None: ...
@@ -1261,7 +1261,7 @@ class CompositionPath(windows_graphics.IGeometrySource2D, winrt.system.Object):
 
 @typing.final
 class CompositionPathGeometry(CompositionGeometry):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionPath Windows.UI.Composition.CompositionPathGeometry::get_Path()
     @_property
@@ -1272,7 +1272,7 @@ class CompositionPathGeometry(CompositionGeometry):
 
 @typing.final
 class CompositionProjectedShadow(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionProjectedShadow::get_MinBlurRadius()
     @_property
@@ -1307,7 +1307,7 @@ class CompositionProjectedShadow(CompositionObject):
 
 @typing.final
 class CompositionProjectedShadowCaster(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Visual Windows.UI.Composition.CompositionProjectedShadowCaster::get_CastingVisual()
     @_property
@@ -1331,7 +1331,7 @@ class CompositionProjectedShadowCasterCollection_Static(CompositionObject_Static
 @typing.final
 class CompositionProjectedShadowCasterCollection(CompositionObject, metaclass=CompositionProjectedShadowCasterCollection_Static):
     def __iter__(self) -> _cabc.Iterator[CompositionProjectedShadowCaster]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.UI.Composition.CompositionProjectedShadowCaster> Windows.UI.Composition.CompositionProjectedShadowCasterCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[CompositionProjectedShadowCaster]: ...
@@ -1353,7 +1353,7 @@ class CompositionProjectedShadowCasterCollection(CompositionObject, metaclass=Co
 
 @typing.final
 class CompositionProjectedShadowReceiver(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Visual Windows.UI.Composition.CompositionProjectedShadowReceiver::get_ReceivingVisual()
     @_property
@@ -1365,7 +1365,7 @@ class CompositionProjectedShadowReceiver(CompositionObject):
 @typing.final
 class CompositionProjectedShadowReceiverUnorderedCollection(CompositionObject):
     def __iter__(self) -> _cabc.Iterator[CompositionProjectedShadowReceiver]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection::Add(Windows.UI.Composition.CompositionProjectedShadowReceiver)
     def add(self, value: CompositionProjectedShadowReceiver, /) -> None: ...
@@ -1381,7 +1381,7 @@ class CompositionProjectedShadowReceiverUnorderedCollection(CompositionObject):
 
 @typing.final
 class CompositionPropertySet(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionPropertySet::InsertBoolean(System.String,System.Boolean)
     def insert_boolean(self, property_name: str, value: bool, /) -> None: ...
@@ -1422,7 +1422,7 @@ class CompositionPropertySet(CompositionObject):
 
 @typing.final
 class CompositionRadialGradientBrush(CompositionGradientBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionRadialGradientBrush::get_GradientOriginOffset()
     @_property
@@ -1445,7 +1445,7 @@ class CompositionRadialGradientBrush(CompositionGradientBrush):
 
 @typing.final
 class CompositionRectangleGeometry(CompositionGeometry):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionRectangleGeometry::get_Size()
     @_property
@@ -1462,7 +1462,7 @@ class CompositionRectangleGeometry(CompositionGeometry):
 
 @typing.final
 class CompositionRoundedRectangleGeometry(CompositionGeometry):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CompositionRoundedRectangleGeometry::get_Size()
     @_property
@@ -1485,7 +1485,7 @@ class CompositionRoundedRectangleGeometry(CompositionGeometry):
 
 @typing.final
 class CompositionScopedBatch(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionScopedBatch::End()
     def end(self) -> None: ...
@@ -1508,14 +1508,14 @@ class CompositionShadow_Static(CompositionObject_Static):
     ...
 
 class CompositionShadow(CompositionObject, metaclass=CompositionShadow_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class CompositionShape_Static(CompositionObject_Static):
     ...
 
 class CompositionShape(CompositionObject, metaclass=CompositionShape_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Matrix3x2 Windows.UI.Composition.CompositionShape::get_TransformMatrix()
     @_property
@@ -1577,7 +1577,7 @@ class CompositionShapeCollection(CompositionObject, _cabc.MutableSequence[Compos
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[CompositionShape]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: CompositionShape, /) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionShapeCollection::Append(Windows.UI.Composition.CompositionShape)
     def append(self, value: CompositionShape, /) -> None: ...
@@ -1609,7 +1609,7 @@ class CompositionShapeCollection(CompositionObject, _cabc.MutableSequence[Compos
 
 @typing.final
 class CompositionSpriteShape(CompositionShape):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionSpriteShape::get_StrokeThickness()
     @_property
@@ -1698,7 +1698,7 @@ class CompositionStrokeDashArray(CompositionObject, _cabc.MutableSequence[winrt.
     @typing.overload
     def __setitem__(self, index: slice, value: _cabc.Iterable[winrt.system.Single]) -> None: ...
     def insert(self, index: typing.SupportsIndex, value: winrt.system.Single, /) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.CompositionStrokeDashArray::Append(System.Single)
     def append(self, value: winrt.system.Single, /) -> None: ...
@@ -1730,7 +1730,7 @@ class CompositionStrokeDashArray(CompositionObject, _cabc.MutableSequence[winrt.
 
 @typing.final
 class CompositionSurfaceBrush(CompositionBrush):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionSurfaceBrush::get_VerticalAlignmentRatio()
     @_property
@@ -1815,7 +1815,7 @@ class CompositionTarget_Static(CompositionObject_Static):
     ...
 
 class CompositionTarget(CompositionObject, metaclass=CompositionTarget_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Visual Windows.UI.Composition.CompositionTarget::get_Root()
     @_property
@@ -1829,7 +1829,7 @@ class CompositionTexture_Static(CompositionObject_Static):
     ...
 
 class CompositionTexture(CompositionObject, ICompositionSurface, metaclass=CompositionTexture_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Graphics.RectInt32 Windows.UI.Composition.CompositionTexture::get_SourceRect()
     @_property
@@ -1857,12 +1857,12 @@ class CompositionTransform_Static(CompositionObject_Static):
     ...
 
 class CompositionTransform(CompositionObject, metaclass=CompositionTransform_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
 class CompositionViewBox(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.CompositionViewBox::get_VerticalAlignmentRatio()
     @_property
@@ -1899,7 +1899,7 @@ class CompositionVirtualDrawingSurface_Static(CompositionDrawingSurface_Static):
     ...
 
 class CompositionVirtualDrawingSurface(CompositionDrawingSurface, metaclass=CompositionVirtualDrawingSurface_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Void Windows.UI.Composition.CompositionVirtualDrawingSurface::Trim(Windows.Graphics.RectInt32[])
@@ -1907,7 +1907,7 @@ class CompositionVirtualDrawingSurface(CompositionDrawingSurface, metaclass=Comp
 
 @typing.final
 class CompositionVisualSurface(CompositionObject, ICompositionSurface):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Visual Windows.UI.Composition.CompositionVisualSurface::get_SourceVisual()
     @_property
@@ -2193,7 +2193,7 @@ class ContainerVisual_Static(Visual_Static):
     ...
 
 class ContainerVisual(Visual, metaclass=ContainerVisual_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.VisualCollection Windows.UI.Composition.ContainerVisual::get_Children()
     @_property
@@ -2202,7 +2202,7 @@ class ContainerVisual(Visual, metaclass=ContainerVisual_Static):
 
 @typing.final
 class CubicBezierEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.CubicBezierEasingFunction::get_ControlPoint1()
     @_property
@@ -2220,7 +2220,7 @@ class DelegatedInkTrailVisual_Static(Visual_Static):
 
 @typing.final
 class DelegatedInkTrailVisual(Visual, metaclass=DelegatedInkTrailVisual_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.UInt32 Windows.UI.Composition.DelegatedInkTrailVisual::AddTrailPoints(Windows.UI.Composition.InkTrailPoint[])
     def add_trail_points(self, ink_points: winrt.system.Array[InkTrailPoint] | winrt.system.ReadableBuffer, /) -> winrt.system.UInt32: ...
@@ -2233,7 +2233,7 @@ class DelegatedInkTrailVisual(Visual, metaclass=DelegatedInkTrailVisual_Static):
 
 @typing.final
 class DistantLight(CompositionLight):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.DistantLight::get_Direction()
     @_property
@@ -2262,7 +2262,7 @@ class DistantLight(CompositionLight):
 
 @typing.final
 class DropShadow(CompositionShadow):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.DropShadow::get_Opacity()
     @_property
@@ -2303,7 +2303,7 @@ class DropShadow(CompositionShadow):
 
 @typing.final
 class ElasticEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEasingFunctionMode Windows.UI.Composition.ElasticEasingFunction::get_Mode()
     @_property
@@ -2317,7 +2317,7 @@ class ElasticEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class ExponentialEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.ExponentialEasingFunction::get_Exponent()
     @_property
@@ -2328,7 +2328,7 @@ class ExponentialEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class ExpressionAnimation(CompositionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.String Windows.UI.Composition.ExpressionAnimation::get_Expression()
     @_property
@@ -2346,7 +2346,7 @@ class ImplicitAnimationCollection(CompositionObject, _cabc.MutableMapping[str, I
     def __getitem__(self, key: str) -> ICompositionAnimationBase: ...
     def __setitem__(self, key: str, value: ICompositionAnimationBase) -> None: ...
     def __delitem__(self, key: str) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.ImplicitAnimationCollection::Clear()
     def clear(self) -> None: ...
@@ -2375,7 +2375,7 @@ class InitialValueExpressionCollection(CompositionObject, _cabc.MutableMapping[s
     def __getitem__(self, key: str) -> str: ...
     def __setitem__(self, key: str, value: str) -> None: ...
     def __delitem__(self, key: str) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.InitialValueExpressionCollection::Clear()
     def clear(self) -> None: ...
@@ -2397,7 +2397,7 @@ class InitialValueExpressionCollection(CompositionObject, _cabc.MutableMapping[s
 
 @typing.final
 class InsetClip(CompositionClip):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.InsetClip::get_TopInset()
     @_property
@@ -2428,7 +2428,7 @@ class KeyFrameAnimation_Static(CompositionAnimation_Static):
     ...
 
 class KeyFrameAnimation(CompositionAnimation, metaclass=KeyFrameAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     @typing.final
@@ -2498,7 +2498,7 @@ class KeyFrameAnimation(CompositionAnimation, metaclass=KeyFrameAnimation_Static
 
 @typing.final
 class LayerVisual(ContainerVisual):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEffectBrush Windows.UI.Composition.LayerVisual::get_Effect()
     @_property
@@ -2515,14 +2515,14 @@ class LayerVisual(ContainerVisual):
 
 @typing.final
 class LinearEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class NaturalMotionAnimation_Static(CompositionAnimation_Static):
     ...
 
 class NaturalMotionAnimation(CompositionAnimation, metaclass=NaturalMotionAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.AnimationStopBehavior Windows.UI.Composition.NaturalMotionAnimation::get_StopBehavior()
     @_property
@@ -2548,7 +2548,7 @@ class NaturalMotionAnimation(CompositionAnimation, metaclass=NaturalMotionAnimat
 
 @typing.final
 class PathKeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.PathKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.UI.Composition.CompositionPath)
@@ -2563,7 +2563,7 @@ class PathKeyFrameAnimation(KeyFrameAnimation):
 
 @typing.final
 class PointLight(CompositionLight):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.PointLight::get_QuadraticAttenuation()
     @_property
@@ -2622,7 +2622,7 @@ class PointLight(CompositionLight):
 
 @typing.final
 class PowerEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEasingFunctionMode Windows.UI.Composition.PowerEasingFunction::get_Mode()
     @_property
@@ -2633,7 +2633,7 @@ class PowerEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class QuaternionKeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.QuaternionKeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Quaternion)
@@ -2648,7 +2648,7 @@ class QuaternionKeyFrameAnimation(KeyFrameAnimation):
 
 @typing.final
 class RectangleClip(CompositionClip):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.RectangleClip::get_TopRightRadius()
     @_property
@@ -2701,7 +2701,7 @@ class RectangleClip(CompositionClip):
 
 @typing.final
 class RedirectVisual(ContainerVisual):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.Visual Windows.UI.Composition.RedirectVisual::get_Source()
     @_property
@@ -2712,7 +2712,7 @@ class RedirectVisual(ContainerVisual):
 
 @typing.final
 class RenderingDeviceReplacedEventArgs(CompositionObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionGraphicsDevice Windows.UI.Composition.RenderingDeviceReplacedEventArgs::get_GraphicsDevice()
     @_property
@@ -2720,7 +2720,7 @@ class RenderingDeviceReplacedEventArgs(CompositionObject):
 
 @typing.final
 class ScalarKeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.ScalarKeyFrameAnimation::InsertKeyFrame(System.Single,System.Single)
@@ -2737,7 +2737,7 @@ class ScalarNaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
 
 class ScalarNaturalMotionAnimation(NaturalMotionAnimation, metaclass=ScalarNaturalMotionAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.ScalarNaturalMotionAnimation::get_InitialVelocity()
     @_property
@@ -2763,7 +2763,7 @@ class ScalarNaturalMotionAnimation(NaturalMotionAnimation, metaclass=ScalarNatur
 
 @typing.final
 class ShapeVisual(ContainerVisual):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionViewBox Windows.UI.Composition.ShapeVisual::get_ViewBox()
     @_property
@@ -2777,7 +2777,7 @@ class ShapeVisual(ContainerVisual):
 
 @typing.final
 class SineEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionEasingFunctionMode Windows.UI.Composition.SineEasingFunction::get_Mode()
     @_property
@@ -2785,7 +2785,7 @@ class SineEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class SpotLight(CompositionLight):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Single Windows.UI.Composition.SpotLight::get_QuadraticAttenuation()
     @_property
@@ -2886,7 +2886,7 @@ class SpotLight(CompositionLight):
 
 @typing.final
 class SpringScalarNaturalMotionAnimation(ScalarNaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.Composition.SpringScalarNaturalMotionAnimation::get_Period()
     @_property
@@ -2903,7 +2903,7 @@ class SpringScalarNaturalMotionAnimation(ScalarNaturalMotionAnimation):
 
 @typing.final
 class SpringVector2NaturalMotionAnimation(Vector2NaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.Composition.SpringVector2NaturalMotionAnimation::get_Period()
     @_property
@@ -2920,7 +2920,7 @@ class SpringVector2NaturalMotionAnimation(Vector2NaturalMotionAnimation):
 
 @typing.final
 class SpringVector3NaturalMotionAnimation(Vector3NaturalMotionAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.TimeSpan Windows.UI.Composition.SpringVector3NaturalMotionAnimation::get_Period()
     @_property
@@ -2937,7 +2937,7 @@ class SpringVector3NaturalMotionAnimation(Vector3NaturalMotionAnimation):
 
 @typing.final
 class SpriteVisual(ContainerVisual):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.Composition.CompositionBrush Windows.UI.Composition.SpriteVisual::get_Brush()
     @_property
@@ -2954,7 +2954,7 @@ class SpriteVisual(ContainerVisual):
 
 @typing.final
 class StepEasingFunction(CompositionEasingFunction):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Int32 Windows.UI.Composition.StepEasingFunction::get_StepCount()
     @_property
@@ -2989,7 +2989,7 @@ class StepEasingFunction(CompositionEasingFunction):
 
 @typing.final
 class Vector2KeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.Vector2KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector2)
@@ -3006,7 +3006,7 @@ class Vector2NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
 
 class Vector2NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector2NaturalMotionAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector2 Windows.UI.Composition.Vector2NaturalMotionAnimation::get_InitialVelocity()
     @_property
@@ -3032,7 +3032,7 @@ class Vector2NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector2Nat
 
 @typing.final
 class Vector3KeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.Vector3KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector3)
@@ -3049,7 +3049,7 @@ class Vector3NaturalMotionAnimation_Static(NaturalMotionAnimation_Static):
     ...
 
 class Vector3NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector3NaturalMotionAnimation_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Vector3 Windows.UI.Composition.Vector3NaturalMotionAnimation::get_InitialVelocity()
     @_property
@@ -3075,7 +3075,7 @@ class Vector3NaturalMotionAnimation(NaturalMotionAnimation, metaclass=Vector3Nat
 
 @typing.final
 class Vector4KeyFrameAnimation(KeyFrameAnimation):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # System.Void Windows.UI.Composition.Vector4KeyFrameAnimation::InsertKeyFrame(System.Single,Windows.Foundation.Numerics.Vector4)
@@ -3092,7 +3092,7 @@ class Visual_Static(CompositionObject_Static):
     ...
 
 class Visual(CompositionObject, metaclass=Visual_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Numerics.Matrix4x4 Windows.UI.Composition.Visual::get_TransformMatrix()
     @_property
@@ -3249,7 +3249,7 @@ class Visual(CompositionObject, metaclass=Visual_Static):
 @typing.final
 class VisualCollection(CompositionObject):
     def __iter__(self) -> _cabc.Iterator[Visual]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IIterator`1<Windows.UI.Composition.Visual> Windows.UI.Composition.VisualCollection::First()
     def first(self) -> windows_foundation_collections.IIterator[Visual]: ...
@@ -3272,7 +3272,7 @@ class VisualCollection(CompositionObject):
 @typing.final
 class VisualUnorderedCollection(CompositionObject):
     def __iter__(self) -> _cabc.Iterator[Visual]: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Composition.VisualUnorderedCollection::Add(Windows.UI.Composition.Visual)
     def add(self, new_visual: Visual, /) -> None: ...

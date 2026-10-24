@@ -228,7 +228,7 @@ class AppWindowPresentationConfiguration_Static(winrt.system.Object_Static):
 
 class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.UI.WindowManagement.AppWindowPresentationKind Windows.UI.WindowManagement.AppWindowPresentationConfiguration::get_Kind()
     @_property
@@ -350,11 +350,11 @@ class AppWindowTitleBarOcclusion(winrt.system.Object):
 
 @typing.final
 class CompactOverlayPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class DefaultPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class DisplayRegion(winrt.system.Object):
@@ -382,7 +382,7 @@ class DisplayRegion(winrt.system.Object):
 
 @typing.final
 class FullScreenPresentationConfiguration(AppWindowPresentationConfiguration):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.WindowManagement.FullScreenPresentationConfiguration::get_IsExclusive()
     @_property
     def is_exclusive(self) -> bool: ...

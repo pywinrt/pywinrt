@@ -12,7 +12,7 @@ __all__ = [
 
 @typing.final
 class DesktopWindowTarget(windows_ui_composition.CompositionTarget):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.UI.Composition.Desktop.DesktopWindowTarget::get_IsTopmost()
     @_property

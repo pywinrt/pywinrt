@@ -88,7 +88,7 @@ class Block_Static(TextElement_Static):
     def horizontal_text_alignment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class Block(TextElement, metaclass=Block_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """Block's constructor is protected: derive a class from it and create that."""
     # Windows.UI.Xaml.TextAlignment Windows.UI.Xaml.Documents.Block::get_TextAlignment()
     @_property
@@ -175,11 +175,11 @@ class BlockCollection(_cabc.MutableSequence[Block], winrt.system.Object):
 
 @typing.final
 class Bold(Span):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class ContactContentLinkProvider(ContentLinkProvider):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class ContentLink_Static(Inline_Static):
@@ -228,7 +228,7 @@ class ContentLink_Static(Inline_Static):
 
 @typing.final
 class ContentLink(Inline, metaclass=ContentLink_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Documents.ContentLink::Focus(Windows.UI.Xaml.FocusState)
     def focus(self, value: windows_ui_xaml.FocusState, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Documents.ContentLink::add_GotFocus(Windows.UI.Xaml.RoutedEventHandler)
@@ -349,7 +349,7 @@ class ContentLinkProvider_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class ContentLinkProvider(windows_ui_xaml.DependencyObject, metaclass=ContentLinkProvider_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """ContentLinkProvider's constructor is protected: derive a class from it and create that."""
 
 @typing.final
@@ -433,7 +433,7 @@ class Glyphs_Static(windows_ui_xaml.FrameworkElement_Static):
 
 @typing.final
 class Glyphs(windows_ui_xaml.FrameworkElement, metaclass=Glyphs_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.String Windows.UI.Xaml.Documents.Glyphs::get_UnicodeString()
     @_property
     def unicode_string(self) -> str: ...
@@ -542,7 +542,7 @@ class Hyperlink_Static(Span_Static):
 
 @typing.final
 class Hyperlink(Span, metaclass=Hyperlink_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Boolean Windows.UI.Xaml.Documents.Hyperlink::Focus(Windows.UI.Xaml.FocusState)
     def focus(self, value: windows_ui_xaml.FocusState, /) -> bool: ...
     # Windows.Foundation.EventRegistrationToken Windows.UI.Xaml.Documents.Hyperlink::add_Click(Windows.Foundation.TypedEventHandler`2<Windows.UI.Xaml.Documents.Hyperlink,Windows.UI.Xaml.Documents.HyperlinkClickEventArgs>)
@@ -641,14 +641,14 @@ class Hyperlink(Span, metaclass=Hyperlink_Static):
 
 @typing.final
 class HyperlinkClickEventArgs(windows_ui_xaml.RoutedEventArgs):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 class Inline_Static(TextElement_Static):
     ...
 
 class Inline(TextElement, metaclass=Inline_Static):
-    def __new__(cls) -> typing.Self:
+    def __init__(self) -> None:
         """Inline's constructor is protected: derive a class from it and create that."""
 
 @typing.final
@@ -700,7 +700,7 @@ class InlineCollection(_cabc.MutableSequence[Inline], winrt.system.Object):
 
 @typing.final
 class InlineUIContainer(Inline):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.UIElement Windows.UI.Xaml.Documents.InlineUIContainer::get_Child()
     @_property
     def child(self) -> windows_ui_xaml.UIElement: ...
@@ -710,11 +710,11 @@ class InlineUIContainer(Inline):
 
 @typing.final
 class Italic(Span):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class LineBreak(Inline):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class Paragraph_Static(Block_Static):
@@ -724,7 +724,7 @@ class Paragraph_Static(Block_Static):
 
 @typing.final
 class Paragraph(Block, metaclass=Paragraph_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.Double Windows.UI.Xaml.Documents.Paragraph::get_TextIndent()
     @_property
     def text_indent(self) -> winrt.system.Double: ...
@@ -737,7 +737,7 @@ class Paragraph(Block, metaclass=Paragraph_Static):
 
 @typing.final
 class PlaceContentLinkProvider(ContentLinkProvider):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 
 @typing.final
 class Run_Static(Inline_Static):
@@ -747,7 +747,7 @@ class Run_Static(Inline_Static):
 
 @typing.final
 class Run(Inline, metaclass=Run_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # System.String Windows.UI.Xaml.Documents.Run::get_Text()
     @_property
     def text(self) -> str: ...
@@ -765,7 +765,7 @@ class Span_Static(Inline_Static):
     ...
 
 class Span(Inline, metaclass=Span_Static):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Documents.InlineCollection Windows.UI.Xaml.Documents.Span::get_Inlines()
     @_property
     def inlines(self) -> InlineCollection: ...
@@ -849,7 +849,7 @@ class TextElement_Static(windows_ui_xaml.DependencyObject_Static):
     def text_decorations_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 class TextElement(windows_ui_xaml.DependencyObject, metaclass=TextElement_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.final
     # System.Object Windows.UI.Xaml.Documents.TextElement::FindName(System.String)
@@ -1041,7 +1041,7 @@ class TextHighlighter_Static(winrt.system.Object_Static):
 
 class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
     # Windows.UI.Xaml.Media.Brush Windows.UI.Xaml.Documents.TextHighlighter::get_Foreground()
     @_property
     def foreground(self) -> windows_ui_xaml_media.Brush: ...
@@ -1065,7 +1065,7 @@ class TextHighlighterBase_Static(windows_ui_xaml.DependencyObject_Static):
     ...
 
 class TextHighlighterBase(windows_ui_xaml.DependencyObject, metaclass=TextHighlighterBase_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
 
 @typing.final
@@ -1400,5 +1400,5 @@ class Typography(winrt.system.Object, metaclass=Typography_Static):
 
 @typing.final
 class Underline(Span):
-    def __new__(cls) -> typing.Self: ...
+    def __init__(self) -> None: ...
 

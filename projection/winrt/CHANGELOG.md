@@ -13,6 +13,9 @@ repository](../../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Changed
+- The type hints declare the constructors of derivable classes as `__init__`.
+
 ### Fixed
 - Fixed a struct's package not depending on the package of a struct it nests.
 

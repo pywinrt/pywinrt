@@ -236,7 +236,7 @@ class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object, m
     def __init_subclass__(cls, *, runtime_class_name: str = ...) -> None: ...
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Void Windows.UI.Input.AttachableInputObject::Close()
     def close(self) -> None: ...
@@ -546,7 +546,7 @@ class HoldingEventArgs(winrt.system.Object):
 
 @typing.final
 class InputActivationListener(AttachableInputObject):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.InputActivationListener::add_InputActivationChanged(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.InputActivationListener,Windows.UI.Input.InputActivationListenerActivationChangedEventArgs>)
     def add_input_activation_changed(self, handler: windows_foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -1261,7 +1261,7 @@ class SystemButtonEventController_Static(AttachableInputObject_Static):
 
 @typing.final
 class SystemButtonEventController(AttachableInputObject, metaclass=SystemButtonEventController_Static):
-    def __new__(cls, _: typing.Never, /) -> typing.Self:
+    def __init__(self, _: typing.Never, /) -> None:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.EventRegistrationToken Windows.UI.Input.SystemButtonEventController::add_SystemFunctionButtonPressed(Windows.Foundation.TypedEventHandler`2<Windows.UI.Input.SystemButtonEventController,Windows.UI.Input.SystemFunctionButtonEventArgs>)
     def add_system_function_button_pressed(self, handler: windows_foundation.TypedEventHandler[SystemButtonEventController, SystemFunctionButtonEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
