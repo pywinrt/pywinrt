@@ -12,6 +12,7 @@
         "Windows.Graphics.Printing"
     ],
     "required": [
+        "winrt-Windows.Foundation"
     ],
     "referenced": [
         "winrt-Windows.ApplicationModel.DataTransfer",

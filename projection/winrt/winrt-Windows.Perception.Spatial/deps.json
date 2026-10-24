@@ -12,6 +12,7 @@
         "Windows.Perception.Spatial"
     ],
     "required": [
+        "winrt-Windows.Foundation.Numerics"
     ],
     "referenced": [
         "winrt-Windows.Foundation",

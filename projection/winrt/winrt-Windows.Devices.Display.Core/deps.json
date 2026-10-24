@@ -12,6 +12,7 @@
         "Windows.Devices.Display.Core"
     ],
     "required": [
+        "winrt-Windows.Foundation.Numerics"
     ],
     "referenced": [
         "winrt-Windows.Devices.Display",

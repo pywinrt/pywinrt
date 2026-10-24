@@ -28,6 +28,7 @@
         "Microsoft.UI.Windowing"
     ],
     "required": [
+        "winrt-Windows.Foundation"
     ],
     "referenced": [
         "winrt-Windows.ApplicationModel.DataTransfer",
