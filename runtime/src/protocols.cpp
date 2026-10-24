@@ -807,13 +807,19 @@ namespace py::interp
                 return nullptr;
             }
 
+            auto const abi = instance_abi(self);
+            if (!abi)
+            {
+                return nullptr;
+            }
+
             // The three members take nothing and hand back one value each, so
             // where the table describes them the way IIterator<T> always does
             // they are called in one crossing rather than three. A table that
             // describes them some other way is answered below.
             bool fused{};
 
-            auto* const item = call_iterator_step(*info, abi_of(self), fused);
+            auto* const item = call_iterator_step(*info, abi, fused);
 
             if (fused)
             {
@@ -1013,7 +1019,11 @@ namespace py::interp
                 return false;
             }
 
-            auto const abi = abi_of(self);
+            auto const abi = instance_abi(self);
+            if (!abi)
+            {
+                return false;
+            }
 
             {
                 auto _gil = release_gil();
