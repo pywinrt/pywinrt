@@ -19,6 +19,7 @@ on:
       - PyWinRT/**
       - redist/**
       - scripts/app_sdk.py
+      - scripts/check-dependencies.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
@@ -39,6 +40,7 @@ on:
       - PyWinRT/**
       - redist/**
       - scripts/app_sdk.py
+      - scripts/check-dependencies.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
@@ -61,6 +63,7 @@ jobs:
       - run: python3 ./scripts/generate-cppwinrt.py
       - run: python3 ./scripts/generate-pywinrt.py
       - run: python3 ./scripts/generate-pyproject.py
+      - run: python3 ./scripts/check-dependencies.py
       # A run that projects only part of a package writes the rest of its
       # nullability file back as it read it, which the full runs above never
       # do. This one projects nothing, so all of it must come back unchanged.
