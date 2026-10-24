@@ -1,0 +1,77 @@
+name: upstream
+concurrency:
+  group: upstream-${{ github.head_ref }}
+  cancel-in-progress: true
+
+# Dependabot proposes a new upstream release by moving its pin in
+# .config/upstream/upstream.csproj, and nothing else. This finishes its pull
+# request: it generates everything from the new release as a commit of its
+# own and says what merging it would release. The checks of the pull request
+# then run on that commit once a maintainer approves them, which GitHub asks
+# for because this workflow's token pushed it.
+on:
+  pull_request:
+    paths:
+      - .config/upstream/upstream.csproj
+
+permissions: {}
+
+jobs:
+  regenerate:
+    # Dependabot's pull requests are from a branch of this repository, which
+    # one from a fork never is
+    if: >-
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    permissions:
+      # to push the regeneration to the pull request's branch
+      contents: write
+      # to comment on the pull request
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: ${{ github.head_ref }}
+      PULL_REQUEST: ${{ github.event.pull_request.number }}
+    steps:
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.head_ref }}
+          persist-credentials: false
+      # Only Dependabot's own commit is finished: once the regeneration is on
+      # top of it, there is nothing left to do, and a re-run of this changes
+      # nothing.
+      - id: head
+        run: |
+          $author = git log -1 --format=%an
+          "dependabot=$($author -eq 'dependabot[bot]')" >> $env:GITHUB_OUTPUT
+      - if: steps.head.outputs.dependabot == 'True'
+        run: dotnet build PyWinRT -c Release
+      - if: steps.head.outputs.dependabot == 'True'
+        run: python3 ./scripts/move-upstream-pins.py --report "$env:RUNNER_TEMP/report.md"
+      - if: steps.head.outputs.dependabot == 'True'
+        run: |
+          $moved = Select-String -Path "$env:RUNNER_TEMP/report.md" -Encoding utf8 -Pattern '^## (\S+) \S+ → (\S+)$' |
+            ForEach-Object { "$($_.Matches[0].Groups[1].Value) $($_.Matches[0].Groups[2].Value)" }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit --quiet --message "projection: generate from $($moved -join ', ')"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          git push "https://x-access-token:$env:GH_TOKEN@github.com/$env:GITHUB_REPOSITORY.git" "HEAD:$env:BRANCH"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - if: steps.head.outputs.dependabot == 'True'
+        run: |
+          $report = Get-Content -Raw -Encoding utf8 "$env:RUNNER_TEMP/report.md"
+          $body = "$report`nApprove the workflow runs of this pull request to check the regenerated branch."
+          [IO.File]::WriteAllText("$env:RUNNER_TEMP/comment.md", $body)
+          gh pr comment $env:PULL_REQUEST --body-file "$env:RUNNER_TEMP/comment.md"
+          exit $LASTEXITCODE
+      - if: failure()
+        run: |
+          $run = "$env:GITHUB_SERVER_URL/$env:GITHUB_REPOSITORY/actions/runs/$env:GITHUB_RUN_ID"
+          gh pr comment $env:PULL_REQUEST --body "The regeneration failed, so this pull request moves the pin alone: see [the run]($run)."
+          exit $LASTEXITCODE
