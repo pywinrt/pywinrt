@@ -184,11 +184,8 @@ namespace py::cpp::_winrt
             }
 
             auto const& guid = *static_cast<winrt::guid const*>(info->guid);
-            auto const& instance
-                = reinterpret_cast<
-                      py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(obj)
-                      ->obj;
-            if (!instance)
+            auto const abi = py::interp::held_abi(obj);
+            if (!abi)
             {
                 Py_RETURN_FALSE;
             }
@@ -201,7 +198,8 @@ namespace py::cpp::_winrt
 
             {
                 auto _gil = py::release_gil();
-                hr = instance.as(guid, queried.put_void());
+                hr = static_cast<::IUnknown*>(abi)->QueryInterface(
+                    guid, queried.put_void());
                 queried = nullptr;
             }
 
@@ -505,7 +503,7 @@ namespace py::cpp::_winrt
 
         // A Python object derived from a composable class holds nothing until
         // its __init__() has composed it, and is no other object until then.
-        if (!self->obj)
+        if (!py::interp::held_abi(reinterpret_cast<PyObject*>(self)))
         {
             Py_RETURN_NOTIMPLEMENTED;
         }

@@ -923,15 +923,14 @@ namespace py::interp
     }
 
     /**
-     * Composes @p self, an instance of a Python class derived from the
-     * composable class @p entry that holds nothing yet, into a WinRT object:
-     * the Python object, and the WinRT object it is composed into, each
-     * holding the other.
+     * Composes @p self, which this thread has claimed by storing composing_abi
+     * in it, into a WinRT object: the Python object, and the WinRT object it
+     * is composed into, each holding the other.
      *
-     * @returns @c true, or @c false with a Python error set and @p self left
-     * holding nothing.
+     * @returns @c true with @p self holding the WinRT object, or @c false with
+     * a Python error set and @p self still holding composing_abi.
      */
-    bool compose_into(
+    bool compose_claimed(
         PyObject* self,
         type_entry& entry,
         member_desc const& constructor,
@@ -1100,6 +1099,44 @@ namespace py::interp
         }
 
         abi_of(self) = abi;
+
+        return true;
+    }
+
+    /**
+     * Composes @p self, an instance of a Python class derived from the
+     * composable class @p entry that holds nothing yet, into a WinRT object.
+     *
+     * The constructor is a call into WinRT, which another thread can run
+     * during, so the thread that composes claims @p self first, by storing
+     * composing_abi in it, and a second thread's claim fails as a composition
+     * of an object that is composed already.
+     *
+     * @returns @c true, or @c false with a Python error set and @p self left
+     * holding nothing.
+     */
+    bool compose_into(
+        PyObject* self,
+        type_entry& entry,
+        member_desc const& constructor,
+        overload_desc& overload,
+        PyObject* const* args,
+        Py_ssize_t nargs) noexcept
+    {
+        void* expected{};
+
+        if (!std::atomic_ref<void*>{abi_of(self)}.compare_exchange_strong(
+                expected, composing_abi))
+        {
+            set_already_composed_error(self);
+            return false;
+        }
+
+        if (!compose_claimed(self, entry, constructor, overload, args, nargs))
+        {
+            abi_of(self) = nullptr;
+            return false;
+        }
 
         return true;
     }

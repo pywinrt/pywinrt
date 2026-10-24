@@ -228,6 +228,19 @@ namespace py::interp
             Py_TYPE(self)->tp_name);
     }
 
+    /**
+     * Says that @p self is composed already, or is being composed on another
+     * thread, so cannot be composed again.
+     */
+    void set_already_composed_error(PyObject* self) noexcept
+    {
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s' object is already composed into a WinRT object, so it cannot "
+            "be initialized again",
+            Py_TYPE(self)->tp_name);
+    }
+
     namespace
     {
         void release_interface_capsule(PyObject* capsule) noexcept
@@ -424,11 +437,7 @@ namespace py::interp
 
             if (abi_of(self))
             {
-                PyErr_Format(
-                    PyExc_TypeError,
-                    "'%s' object is already composed into a WinRT object, so "
-                    "it cannot be initialized again",
-                    type->tp_name);
+                set_already_composed_error(self);
                 return -1;
             }
 

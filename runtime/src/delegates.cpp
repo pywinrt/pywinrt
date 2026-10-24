@@ -142,10 +142,16 @@ namespace py::interp
                 return nullptr;
             }
 
+            auto const abi = instance_abi(self);
+            if (!abi)
+            {
+                return nullptr;
+            }
+
             return call_member(
                 info->members[0],
                 *overload,
-                abi_of(self),
+                abi,
                 nargs == 0 ? nullptr : &PyTuple_GET_ITEM(args, 0),
                 nargs);
         }

@@ -351,6 +351,30 @@ class TestThreads(unittest.TestCase):
 
 
 class TestComposedObject(unittest.TestCase):
+    def test_composed_by_one_of_the_threads_composing_it(self) -> None:
+        # The constructor is a call into WinRT that the other threads run
+        # during, so each of them finds the object being composed, as it would
+        # find one composed already.
+        class C(tc.Composable):
+            def __init__(self) -> None:
+                pass
+
+        for _ in range(20):
+            c = C.__new__(C)
+            refused: list[TypeError] = []
+
+            def compose(_: int) -> None:
+                try:
+                    tc.Composable.__init__(c)
+                except TypeError as e:
+                    refused.append(e)
+
+            run_together(compose)
+
+            self.assertEqual(len(refused), THREADS - 1)
+            self.assertRegex(str(refused[0]), "already composed")
+            self.assertEqual(c.one(), 1)
+
     def test_weak_reference_resolved_while_python_lets_go(self) -> None:
         # XAML holds its elements weakly and resolves them on its own thread,
         # while the last Python reference can go on any other. The GIL is given

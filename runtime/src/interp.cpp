@@ -352,7 +352,7 @@ namespace py::interp
             }
 
             winrt::Windows::Foundation::IUnknown object;
-            winrt::copy_from_abi(object, abi_of(value));
+            winrt::copy_from_abi(object, held_abi(value));
             if (!object)
             {
                 // The conversion says the object holds nothing.
