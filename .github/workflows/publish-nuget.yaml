@@ -47,3 +47,26 @@ jobs:
         run: |
           $version = $env:GITHUB_REF.Replace("refs/tags/nuget/PyWinRT/v", "")
           nuget push "PyWinRT.$version.nupkg" -ApiKey "${{ steps.login.outputs.NUGET_API_KEY }}" -Source 'https://api.nuget.org/v3/index.json'
+  # the tag's GitHub release, whose notes are the tool's changelog section
+  release:
+    needs: [build_and_publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # the job's token can write, and nothing here runs git with it
+          persist-credentials: false
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          python scripts/release-notes.py "$TAG" > notes.md
+          gh release create "$TAG" --verify-tag --latest=false \
+            --title "$(python scripts/release-notes.py --title "$TAG")" \
+            --notes-file notes.md

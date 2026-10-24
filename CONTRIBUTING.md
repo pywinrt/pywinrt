@@ -325,12 +325,11 @@ The `PyWinRT` tool on NuGet carries no version in the tree. Pushing
 `nuget/PyWinRT/v<version>` runs `.github/workflows/publish-nuget.yaml`, which
 packs the tool with that version and pushes it with NuGet trusted publishing.
 
-Each tag then gets a GitHub release, whose notes are the section of the unit's
-changelog that the tag's version heads:
+Once the upload is done, either workflow creates the tag's GitHub release,
+whose notes are the section of the unit's changelog that the tag's version
+heads. `scripts/release-notes.py` prints them:
 
-    $tag = "wheels/runtime/v4.0.0"
-    py .\scripts\release-notes.py $tag | gh release create $tag --verify-tag `
-        --title (py .\scripts\release-notes.py --title $tag) --notes-file -
+    py .\scripts\release-notes.py wheels/runtime/v4.0.0
 
 The same workflow can be started by hand, which is how everything else is
 done:

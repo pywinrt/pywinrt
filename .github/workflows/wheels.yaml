@@ -28,8 +28,9 @@ on:
         description: "build for this interpreter only, e.g. cp315; default: all of them"
         type: string
 
-# nothing here writes to the repository, and the upload is authenticated with
-# a token of its own rather than with the workflow's
+# Only the release job writes to the repository, and it asks for that itself.
+# The upload is authenticated with a token of its own rather than with the
+# workflow's.
 permissions:
   contents: read
 
@@ -220,3 +221,30 @@ jobs:
           repository-url: >-
             ${{ inputs.publish == 'testpypi' && 'https://test.pypi.org/legacy/'
                 || 'https://upload.pypi.org/legacy/' }}
+  # A tag's GitHub release, whose notes are the section of the unit's changelog
+  # that the tag's version heads. The Windows SDK family is what most users
+  # install, so its release is the one marked latest.
+  release:
+    needs: [publish]
+    if: ${{ !cancelled() && !failure() && github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # the job's token can write, and nothing here runs git with it
+          persist-credentials: false
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          LATEST: ${{ startsWith(github.ref_name, 'wheels/winrt/') }}
+        run: |
+          python scripts/release-notes.py "$TAG" > notes.md
+          gh release create "$TAG" --verify-tag --latest="$LATEST" \
+            --title "$(python scripts/release-notes.py --title "$TAG")" \
+            --notes-file notes.md
