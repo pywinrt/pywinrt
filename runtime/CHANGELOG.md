@@ -8,7 +8,7 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.0.1] - 2026-10-24
 
 ### Fixed
 - Fixed a struct holding a struct of another namespace, such as `Point`, as empty.
