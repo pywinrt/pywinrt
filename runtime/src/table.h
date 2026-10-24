@@ -15,6 +15,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <functional>
 #include <stdexcept>
 #include <string>
 #include <string_view>
@@ -441,13 +442,25 @@ namespace py::table
      * Offsets are never written into the table, because a pointer is not the
      * same width on every architecture the same table serves, so they are
      * computed here from the field type codes.
+     *
+     * A struct field whose struct belongs to another namespace cannot be
+     * measured from this table, which holds only an external record naming
+     * it. Without a measure for it the layout stops there: @c measured is
+     * false, and @c offsets has an entry only for the fields before it.
      */
     struct struct_layout
     {
         uint32_t size;
         uint32_t align;
         std::vector<uint32_t> offsets;
+        bool measured;
     };
+
+    /**
+     * The size and alignment of the struct field at @p position of the struct
+     * being laid out, from what knows the field's type better than the table.
+     */
+    using struct_field_measure = std::function<value_layout(uint32_t position)>;
 
     /**
      * One namespace's table, over bytes it does not own.
@@ -541,8 +554,11 @@ namespace py::table
             return guid_count_;
         }
 
-        /// Computes the layout of the struct @p type declares.
-        struct_layout get_struct_layout(type_view type) const;
+        /// Computes the layout of the struct @p type declares, measuring each
+        /// struct field with @p measure_struct if one is given and from this
+        /// table otherwise.
+        struct_layout get_struct_layout(
+            type_view type, struct_field_measure const& measure_struct = {}) const;
 
         // The accessors below are what the views are made of. They are public
         // because the views are separate classes, not because anything outside

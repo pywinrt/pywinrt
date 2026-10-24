@@ -27,6 +27,7 @@ import winrt.windows.foundation.collections as wfc
 import winrt.windows.globalization as wg
 import winrt.windows.storage as ws
 import winrt.windows.storage.provider as wsp
+import winrt.windows.ui.input as wui
 from winrt.system import Array, Int32, Object, Object_Static
 from winrt.system.hresult import E_FAIL
 
@@ -632,6 +633,18 @@ class TestStructs(unittest.TestCase):
             hash(value),
             hash(tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))),
         )
+
+    def test_a_struct_of_another_namespace_in_a_struct(self) -> None:
+        # ManipulationDelta's translation is a Windows.Foundation.Point, which
+        # the Windows.UI.Input table only names, so its size has to come from
+        # Windows.Foundation. Measured from the table it was empty, every field
+        # landed on offset zero and the struct had no room for any of them.
+        value = wui.ManipulationDelta(wf.Point(1, 2), 3, 4, 5)
+
+        self.assertEqual(value.translation, wf.Point(1, 2))
+        self.assertEqual((value.scale, value.rotation, value.expansion), (3, 4, 5))
+        self.assertEqual(value.unpack(), ((1, 2), 3, 4, 5))
+        self.assertGreaterEqual(type(value).__basicsize__, object.__basicsize__ + 5 * 4)
 
     def test_a_copy_is_the_struct_itself(self) -> None:
         value = tc.Nested(tc.Blittable(*BLITTABLE_FIELDS), tc.NonBlittable(c="hi"))

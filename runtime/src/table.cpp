@@ -359,9 +359,10 @@ namespace py::table
         return type_view{this, index};
     }
 
-    struct_layout file::get_struct_layout(type_view type) const
+    struct_layout file::get_struct_layout(
+        type_view type, struct_field_measure const& measure_struct) const
     {
-        struct_layout result{0, 1, {}};
+        struct_layout result{0, 1, {}, true};
         uint32_t offset = 0;
         auto const count = type.field_count();
 
@@ -372,9 +373,29 @@ namespace py::table
             auto const field = type.field(i);
             value_layout layout;
 
-            if (field.code() == type_code::struct_)
+            if (field.code() == type_code::struct_ && measure_struct)
             {
-                auto const nested = get_struct_layout(this->type(field.type()));
+                layout = measure_struct(i);
+            }
+            else if (field.code() == type_code::struct_)
+            {
+                auto const record = this->type(field.type());
+
+                // An external record is a name and nothing else, so measuring
+                // it here would find no fields and call the struct empty.
+                if (record.is_external())
+                {
+                    result.measured = false;
+                    return result;
+                }
+
+                auto const nested = get_struct_layout(record);
+                if (!nested.measured)
+                {
+                    result.measured = false;
+                    return result;
+                }
+
                 layout = {nested.size, nested.align};
             }
             else
@@ -1097,10 +1118,14 @@ namespace py::cpp::_winrt
                     return pyobj_handle{};
                 }
 
+                // A field at or after one this table cannot measure has no
+                // offset that the table alone can say.
                 if (!set_item(
                         item.get(),
                         "offset",
-                        PyLong_FromUnsignedLong(layout.offsets[i])))
+                        i < layout.offsets.size()
+                            ? PyLong_FromUnsignedLong(layout.offsets[i])
+                            : Py_NewRef(Py_None)))
                 {
                     return pyobj_handle{};
                 }
@@ -1290,12 +1315,20 @@ namespace py::cpp::_winrt
                 return pyobj_handle{};
             }
 
-            if (!set_item(result.get(), "size", PyLong_FromUnsignedLong(layout.size)))
+            if (!set_item(
+                    result.get(),
+                    "size",
+                    layout.measured ? PyLong_FromUnsignedLong(layout.size)
+                                    : Py_NewRef(Py_None)))
             {
                 return pyobj_handle{};
             }
 
-            if (!set_item(result.get(), "align", PyLong_FromUnsignedLong(layout.align)))
+            if (!set_item(
+                    result.get(),
+                    "align",
+                    layout.measured ? PyLong_FromUnsignedLong(layout.align)
+                                    : Py_NewRef(Py_None)))
             {
                 return pyobj_handle{};
             }

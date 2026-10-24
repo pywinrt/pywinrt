@@ -734,6 +734,18 @@ class TestStructLayout(unittest.TestCase):
             [f["offset"] for f in nested["fields"]], [0, blittable["size"]]
         )
 
+    def test_a_struct_of_another_namespace_is_not_measured_here(self) -> None:
+        # The table holds only the name of Windows.Foundation.Point, so it
+        # cannot say how big ManipulationDelta is. The runtime measures the
+        # field from the Windows.Foundation entry instead (test_projection).
+        delta = defined(read("winrt", "windows", "ui", "input"))["ManipulationDelta"]
+
+        self.assertIsNone(delta["size"])
+        self.assertIsNone(delta["align"])
+        self.assertEqual(
+            [f["offset"] for f in delta["fields"]], [None, None, None, None]
+        )
+
 
 class TestTableParameterizedTypes(unittest.TestCase):
     """What a member of a concrete parameterized type is allowed to name."""
