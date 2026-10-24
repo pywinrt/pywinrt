@@ -16,6 +16,8 @@ import tomllib
 import unittest
 from pathlib import Path
 
+from packaging.version import Version
+
 SCRIPT = Path(__file__).parent.parent / "3to4" / "inspect_source.py"
 
 SOURCE = textwrap.dedent(
@@ -411,15 +413,24 @@ class Tables(unittest.TestCase):
                 with self.subTest(row["distribution"]):
                     self.assertIn(row["new_distribution"], versions)
 
-    def test_every_floor_is_the_version_in_the_tree(self) -> None:
+    def test_every_floor_is_a_v4_release_of_the_tree(self) -> None:
+        # The table is written from the 4.0.0 release commit and then left
+        # alone, so a floor is the first v4 version: of the generation the tree
+        # carries, and at or below the version it carries now.
         versions = tree_versions()
 
         for row in DISTRIBUTIONS:
             with self.subTest(row["distribution"]):
                 if row["new_distribution"]:
-                    self.assertEqual(
-                        row["floor"], f">={versions[row['new_distribution']]}"
-                    )
+                    self.assertTrue(row["floor"].startswith(">="))
+
+                    floor = Version(row["floor"].removeprefix(">="))
+                    tree = Version(versions[row["new_distribution"]])
+
+                    self.assertEqual(floor.epoch, tree.epoch)
+                    if not tree.epoch:
+                        self.assertEqual(floor.major, tree.major)
+                    self.assertLessEqual(floor, tree)
                 else:
                     self.assertEqual(row["floor"], "")
 
