@@ -17,7 +17,9 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
-        DeclaresInit = IsComposable || type.BaseType is { FullName: not "System.Object" };
+        DeclaresInit =
+            Category == Category.Class
+            && (IsComposable || type.BaseType is { FullName: not "System.Object" });
 
         var deprecated = type.GetDeprecatedAttribute();
         IsDeprecated = deprecated is not null;
