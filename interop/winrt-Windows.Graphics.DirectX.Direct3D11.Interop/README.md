@@ -2,7 +2,7 @@
 
 # winrt-Windows.Graphics.DirectX.Direct3D11.Interop
 
-Converts between DXGI devices and surfaces and the `IDirect3DDevice` and `IDirect3DSurface` that WinRT APIs take.
+Creates a Direct3D 11 device, and converts between DXGI devices and surfaces and the `IDirect3DDevice` and `IDirect3DSurface` that WinRT APIs take.
 
 This package provides the `winrt.windows.graphics.directx.direct3d11.interop` module.
 

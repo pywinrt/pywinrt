@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
-description = "Converts between DXGI devices and surfaces and the IDirect3DDevice and IDirect3DSurface that WinRT APIs take."
+description = "Creates a Direct3D 11 device, and converts between DXGI devices and surfaces and the IDirect3DDevice and IDirect3DSurface that WinRT APIs take."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
