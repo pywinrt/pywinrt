@@ -250,8 +250,9 @@ INTEROP_SUMMARIES = {
         "Makes a `GraphicsCaptureItem` for a window or a monitor, from its handle."
     ),
     "winrt-Windows.Graphics.DirectX.Direct3D11.Interop": (
-        "Converts between DXGI devices and surfaces and the `IDirect3DDevice` and"
-        " `IDirect3DSurface` that WinRT APIs take."
+        "Creates a Direct3D 11 device, and converts between DXGI devices and"
+        " surfaces and the `IDirect3DDevice` and `IDirect3DSurface` that WinRT"
+        " APIs take."
     ),
     "winrt-Windows.Media.Interop": (
         "Gets the `SystemMediaTransportControls` of a window, from its handle."

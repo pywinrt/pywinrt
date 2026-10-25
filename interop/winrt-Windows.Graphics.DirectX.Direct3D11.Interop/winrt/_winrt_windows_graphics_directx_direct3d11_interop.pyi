@@ -1,5 +1,6 @@
 from winrt.runtime.interop import InterfaceCapsule
 
+def create_direct3d11_device(driver_type: int, flags: int, /) -> InterfaceCapsule: ...
 def create_direct3d11_device_from_dxgi_device(
     dxgi_device: int, /
 ) -> InterfaceCapsule: ...
