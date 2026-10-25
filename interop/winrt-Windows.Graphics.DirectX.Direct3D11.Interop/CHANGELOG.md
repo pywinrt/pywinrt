@@ -8,7 +8,7 @@ provides the `winrt.windows.graphics.directx.direct3d11.interop` module.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4.1.0] - 2026-10-24
 
 ### Added
 - `create_direct3d11_device()` creates the `IDirect3DDevice` that WinRT APIs take.
