@@ -22,13 +22,11 @@ from winrt.windows.graphics.capture import (
 )
 from winrt.windows.graphics.directx import DirectXPixelFormat
 from winrt.windows.graphics.directx.direct3d11.interop import (
-    create_direct3d11_device_from_dxgi_device,
+    create_direct3d11_device,
 )
 from winrt.windows.graphics.imaging import BitmapEncoder, SoftwareBitmap
 from winrt.windows.storage import CreationCollisionOption, FileAccessMode, StorageFolder
 from winrt.windows.ui.windowmanagement import WindowServices
-
-from .d3d11 import D3D_DRIVER_TYPE, D3D11_CREATE_DEVICE_FLAG, D3D11CreateDevice
 
 if os.environ.get("MSYSTEM", ""):
     _getfullpathname: Callable[[str], str]
@@ -58,12 +56,7 @@ selection = input("Select a window to capture: ")
 selected_item = capture_items[int(selection) - 1]
 
 with contextlib.ExitStack() as stack:
-    dxgi, _, context = D3D11CreateDevice(
-        DriverType=D3D_DRIVER_TYPE.HARDWARE,
-        Flags=D3D11_CREATE_DEVICE_FLAG.BGRA_SUPPORT,
-    )
-
-    device = stack.enter_context(create_direct3d11_device_from_dxgi_device(dxgi.value))
+    device = stack.enter_context(create_direct3d11_device())
 
     frame_pool = stack.enter_context(
         Direct3D11CaptureFramePool.create_free_threaded(
