@@ -8,6 +8,11 @@ projection of a WinRT component.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Fixed
+- Fixed a type stub importing `property` when it declares no property.
+
 ## [4.0.2] - 2026-10-24
 
 ### Changed

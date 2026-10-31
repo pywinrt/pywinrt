@@ -3,7 +3,6 @@
 import datetime
 import enum
 import typing
-from builtins import property as _property
 from abc import abstractmethod
 from typing_extensions import deprecated
 

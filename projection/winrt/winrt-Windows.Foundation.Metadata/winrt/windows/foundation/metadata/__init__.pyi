@@ -2,7 +2,6 @@
 
 import enum
 import typing
-from builtins import property as _property
 from typing_extensions import deprecated
 
 import winrt.system

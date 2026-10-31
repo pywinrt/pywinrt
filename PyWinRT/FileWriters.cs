@@ -526,7 +526,8 @@ static class FileWriters
             w.WriteLine("import uuid as _uuid");
         }
 
-        if (body.Contains("_property"))
+        // a member can end in "_property", so it is the decorator that counts
+        if (body.Contains("@_property"))
         {
             wroteAny = true;
             w.WriteLine("from builtins import property as _property");
