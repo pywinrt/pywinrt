@@ -57,6 +57,17 @@ def find_pywinrt() -> pathlib.Path:
 PYWINRT_EXE = find_pywinrt()
 
 
+def renames(family: str) -> list[str | pathlib.Path]:
+    """
+    The option that hands the generator a family's list of the names it
+    published and has since renamed, which scripts/list-renames.py writes, if
+    the family has one.
+    """
+    path = PROJECTION_PATH / family / "renames.json"
+
+    return ["--renames", path] if path.exists() else []
+
+
 # generate code for windows sdk
 
 WINDOWS_SDK = versions.windows_sdk_metadata_path()
@@ -79,6 +90,7 @@ subprocess.check_call(
         # written for them has to be edited anyway, and WinUI 2 is not expected
         # to have users.
         "--legacy-method-aliases",
+        *renames("winrt"),
     ]
 )
 
@@ -115,6 +127,7 @@ subprocess.check_call(
         # own that this one imports. See scripts/generate-pyproject.py.
         "--dll-package",
         "winrt.microsoft.web.webview2.dll",
+        *renames("webview2"),
     ]
 )
 
@@ -150,6 +163,7 @@ subprocess.check_call(
         PROJECTION_PATH / "winui2",
         "--nullability-json",
         MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH,
+        *renames("winui2"),
     ]
 )
 
@@ -183,6 +197,7 @@ subprocess.check_call(
         PROJECTION_PATH / "wasdk",
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
+        *renames("wasdk"),
     ]
 )
 
@@ -216,7 +231,6 @@ subprocess.check_call(
         # The test component was never published, so nothing in it was
         # renamed: the list names some of its members by made-up old names so
         # that the tests can check the aliases the generator writes for them.
-        "--renames",
-        PROJECTION_PATH / "test-winrt" / "renames.json",
+        *renames("test-winrt"),
     ]
 )
