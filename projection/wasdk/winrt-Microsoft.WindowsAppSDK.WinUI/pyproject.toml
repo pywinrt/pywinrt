@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Microsoft.WindowsAppSDK.WinUI"
-version = "4!2.5.1.1"
+version = "4!2.6.4"
 description = "PyWinRT projection of the Microsoft.WindowsAppSDK.WinUI NuGet package"
 readme = "README.md"
 license = "MIT"
@@ -27,8 +27,8 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Microsoft.WindowsAppSDK.Foundation~=4!2.5.1.0",
-    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences~=4!2.5.1.0",
+    "winrt-Microsoft.WindowsAppSDK.Foundation~=4!2.6.4.0",
+    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences~=4!2.6.4.0",
     "winrt-Windows.Foundation>=4!10.0.28000.2705",
     "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
     "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
@@ -37,8 +37,8 @@ dependencies = [
 [project.optional-dependencies]
 all = [
     "winrt-Microsoft.Web.WebView2[all]>=4!1.0.4314.35",
-    "winrt-Microsoft.WindowsAppSDK.Foundation[all]>=4!2.5.1",
-    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]>=4!2.5.1",
+    "winrt-Microsoft.WindowsAppSDK.Foundation[all]>=4!2.6.4",
+    "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]>=4!2.6.4",
     "winrt-Windows.ApplicationModel[all]>=4!10.0.28000.2705",
     "winrt-Windows.ApplicationModel.Activation[all]>=4!10.0.28000.2705",
     "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.28000.2705",

@@ -11,9 +11,9 @@ Finds the Windows App Runtime for an unpackaged app and loads it, as `MddBootstr
 
 This package provides the `winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap` module.
 
-It is built against version 2.5.1 of the `Microsoft.WindowsAppSDK`
+It is built against version 2.6.4 of the `Microsoft.WindowsAppSDK`
 NuGet package and loads that release of the Windows App SDK unless told otherwise.
-It carries `Microsoft.WindowsAppRuntime.Bootstrap.dll` from version 2.3.12 of the
+It carries `Microsoft.WindowsAppRuntime.Bootstrap.dll` from version 2.6.4 of the
 `Microsoft.WindowsAppSDK.Foundation` NuGet package.
 
 ```

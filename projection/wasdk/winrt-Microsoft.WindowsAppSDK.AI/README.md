@@ -22,11 +22,11 @@ This package provides the following modules:
 - `winrt.microsoft.windows.vision`
 - `winrt.microsoft.windows.workloads`
 
-The WinRT APIs in it are those of version 2.5.1 of the
+The WinRT APIs in it are those of version 2.6.4 of the
 `Microsoft.WindowsAppSDK` NuGet package.
 
 Its metadata comes from the `Microsoft.WindowsAppSDK.AI` component,
-version 2.5.5.
+version 2.6.4.
 
 ```
 pip install winrt-Microsoft.WindowsAppSDK.AI

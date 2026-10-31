@@ -11,7 +11,7 @@ Converts window, monitor and icon handles to and from the `WindowId`, `DisplayId
 
 This package provides the `winrt.microsoft.ui.interop` module.
 
-It is built against version 2.5.1 of the `Microsoft.WindowsAppSDK`
+It is built against version 2.6.4 of the `Microsoft.WindowsAppSDK`
 NuGet package.
 
 ```
