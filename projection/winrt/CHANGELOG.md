@@ -11,7 +11,11 @@ changelog](../../runtime/CHANGELOG.md), and each interop package, such as
 `interop/`. The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!10.0.28000.2957] - 2026-10-31
+
+### Added
+- The namespace `Windows.ApplicationModel.Overlay`, in a package of its own.
+- New classes such as `UserAgeRange` and `GamepadKeyRoutingConfiguration`.
 
 ### Changed
 - Updated the Windows SDK to [10.0.28000.2957][Windows SDK 10.0.28000.2957], from 10.0.28000.2705.
@@ -20,6 +24,10 @@ repository](../../CHANGELOG.md).
 - Each name that changed keeps working, with a `DeprecationWarning`.
 - The type hints leave out an enum member's old name, which a checker flags.
 - An implementation of a PlayReady interface defines its methods' new names.
+
+### Removed
+- BREAKING: `GamepadNavigationConfiguration`, removed from the Windows SDK.
+- BREAKING: `ContactAnnotationOperations.ACTIVITY`, removed from the SDK.
 
 ## [4!10.0.28000.2705.1] - 2026-10-24
 
