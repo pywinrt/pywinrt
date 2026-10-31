@@ -11,11 +11,11 @@ Windows Runtime (WinRT) APIs for the `Microsoft.Windows.AI.MachineLearning` name
 
 This package provides the `winrt.microsoft.windows.ai.machinelearning` module.
 
-The WinRT APIs in it are those of version 2.5.1 of the
+The WinRT APIs in it are those of version 2.6.4 of the
 `Microsoft.WindowsAppSDK` NuGet package.
 
 Its metadata comes from the `Microsoft.Windows.AI.MachineLearning` component,
-version 2.1.74.
+version 2.4.89.
 
 ```
 pip install winrt-Microsoft.Windows.AI.MachineLearning

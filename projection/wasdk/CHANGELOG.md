@@ -21,6 +21,11 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- Updated the Windows App SDK to [2.6.4][Windows App SDK 2.6.4], from 2.5.1.
+
 ## [4!2.5.1.1] - 2026-10-24
 
 Only the packages these changes touch are released, and the rest, the interop
@@ -86,3 +91,4 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed the interop packages' sdists needing environment variables to build.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
+[Windows App SDK 2.6.4]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.6.4

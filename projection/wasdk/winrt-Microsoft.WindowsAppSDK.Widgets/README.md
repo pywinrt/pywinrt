@@ -16,11 +16,11 @@ This package provides the following modules:
 - `winrt.microsoft.windows.widgets.notifications`
 - `winrt.microsoft.windows.widgets.providers`
 
-The WinRT APIs in it are those of version 2.5.1 of the
+The WinRT APIs in it are those of version 2.6.4 of the
 `Microsoft.WindowsAppSDK` NuGet package.
 
 Its metadata comes from the `Microsoft.WindowsAppSDK.Widgets` component,
-version 2.0.5.
+version 2.6.4.
 
 ```
 pip install winrt-Microsoft.WindowsAppSDK.Widgets

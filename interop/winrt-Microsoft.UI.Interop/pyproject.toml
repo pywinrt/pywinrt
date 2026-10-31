@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Microsoft.UI.Interop"
-version = "4!2.5.1"
+version = "4!2.6.4"
 description = "Converts window, monitor and icon handles to and from the WindowId, DisplayId and IconId that Windows App SDK APIs take."
 readme = "README.md"
 license = "MIT"
