@@ -21,7 +21,10 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!2.6.4] - 2026-10-31
+
+### Added
+- 16 `RuntimeCompatibilityChange` members, such as `INK_CANVAS_INKING_SUPPORT`.
 
 ### Changed
 - Updated the Windows App SDK to [2.6.4][Windows App SDK 2.6.4], from 2.5.1.
