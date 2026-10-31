@@ -8,6 +8,11 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Added
+- A name a projection renames keeps working, with a `DeprecationWarning`.
+
 ## [4.0.3] - 2026-10-24
 
 ### Fixed

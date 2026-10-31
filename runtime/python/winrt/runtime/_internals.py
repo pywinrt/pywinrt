@@ -194,6 +194,144 @@ def alias_field(typ: type, name: str) -> None:
     setattr(typ, name, property(field))
 
 
+# Staged deprecation of the names a projection published and has since
+# renamed, such as those PyWinRT now spells differently in Python. The
+# generated calls to the functions below come from the projection's list of
+# renames, which says when each name changed. This is DeprecationWarning, then
+# FutureWarning, and after that the aliases are removed, on a schedule of its
+# own rather than that of the v3.x method names.
+_RENAMED_WARNING: type[Warning] = DeprecationWarning
+
+
+def _warn_renamed(owner: type, old: str, name: str, call: str = "") -> None:
+    warnings.warn(
+        f"{owner.__name__}.{old}{call} is deprecated, use {name}{call} instead",
+        _RENAMED_WARNING,
+        stacklevel=3,
+    )
+
+
+def _add_renamed_method(target: type, owner: type, old: str, name: str) -> None:
+    # a real attribute of the type always wins over an alias
+    if old in vars(target):
+        return
+
+    def method(self: Any, *args: Any) -> Any:
+        _warn_renamed(owner, old, name, "()")
+        return getattr(self, name)(*args)
+
+    method.__name__ = old
+    method.__qualname__ = f"{owner.__name__}.{old}"
+    method.__doc__ = f"Deprecated alias of ``{name}()``."
+
+    setattr(target, old, method)
+
+
+def _add_renamed_property(target: type, owner: type, old: str, name: str) -> None:
+    # a real attribute of the type always wins over an alias
+    if old in vars(target):
+        return
+
+    def get(self: Any) -> Any:
+        _warn_renamed(owner, old, name)
+        return getattr(self, name)
+
+    def put(self: Any, value: Any) -> None:
+        _warn_renamed(owner, old, name)
+        setattr(self, name, value)
+
+    setattr(target, old, property(get, put, doc=f"Deprecated alias of ``{name}``."))
+
+
+def renamed_method(typ: type, old: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a method to a projected type, by the name the
+    method was published with before it was renamed.
+
+    An event is renamed as its ``add_`` and ``remove_`` methods.
+
+    Args:
+        typ: The projected type.
+        old: The name the method had.
+        name: The name of the method now.
+    """
+    _add_renamed_method(typ, typ, old, name)
+
+
+def renamed_static_method(typ: type, old: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a static method to a projected type, by the name
+    the method was published with before it was renamed.
+
+    Args:
+        typ: The projected type.
+        old: The name the method had.
+        name: The name of the method now.
+    """
+    # static methods are implemented by the metaclass of the projected type
+    _add_renamed_method(type(typ), typ, old, name)
+
+
+def renamed_property(typ: type, old: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a property to a projected type, by the name the
+    property was published with before it was renamed.
+
+    Args:
+        typ: The projected type.
+        old: The name the property had.
+        name: The name of the property now.
+    """
+    _add_renamed_property(typ, typ, old, name)
+
+
+def renamed_static_property(typ: type, old: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a static property to a projected type, by the
+    name the property was published with before it was renamed.
+
+    Args:
+        typ: The projected type.
+        old: The name the property had.
+        name: The name of the property now.
+    """
+    # static properties are implemented by the metaclass of the projected type
+    _add_renamed_property(type(typ), typ, old, name)
+
+
+class _RenamedEnumMember:
+    """
+    The deprecated alias of an enum member: reading it warns and gives the
+    member. It is not a member itself, so it is not iterated and ``typ[old]``
+    does not find it.
+    """
+
+    def __init__(self, old: str, name: str) -> None:
+        self.old = old
+        self.name = name
+
+    def __get__(self, instance: object, owner: type) -> Any:
+        _warn_renamed(owner, self.old, self.name)
+        return getattr(owner, self.name)
+
+
+def renamed_enum_member(typ: type, old: str, name: str) -> None:
+    """
+    Adds a deprecated alias of a member to a projected enum, by the name the
+    member was published with before it was renamed.
+
+    Args:
+        typ: The projected enum.
+        old: The name the member had.
+        name: The name of the member now.
+    """
+    # a real member or attribute of the enum always wins over an alias
+    if old in vars(typ):
+        return
+
+    setattr(typ, old, _RenamedEnumMember(old, name))
+
+
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.
 # https://github.com/python/cpython/issues/103968#issuecomment-1589928055
