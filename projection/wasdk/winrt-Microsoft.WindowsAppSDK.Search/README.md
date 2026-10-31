@@ -11,11 +11,11 @@ Windows Runtime (WinRT) APIs for the `Microsoft.Windows.Search.AppContentIndex` 
 
 This package provides the `winrt.microsoft.windows.search.appcontentindex` module.
 
-The WinRT APIs in it are those of version 2.5.1 of the
+The WinRT APIs in it are those of version 2.6.4 of the
 `Microsoft.WindowsAppSDK` NuGet package.
 
 Its metadata comes from the `Microsoft.WindowsAppSDK.Search` component,
-version 2.5.5.
+version 2.6.4.
 
 ```
 pip install winrt-Microsoft.WindowsAppSDK.Search
