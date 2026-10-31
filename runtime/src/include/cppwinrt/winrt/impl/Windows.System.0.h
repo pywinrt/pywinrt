@@ -186,6 +186,14 @@ WINRT_EXPORT namespace winrt::Windows::System
         Unknown = 3,
         Ambiguous = 4,
     };
+    enum class UserAgeVerificationStatus : std::int32_t
+    {
+        NotApplicable = 0,
+        TemporarilyUnavailable = 1,
+        Unverified = 2,
+        OptedOut = 3,
+        Verified = 4,
+    };
     enum class UserAuthenticationStatus : std::int32_t
     {
         Unauthenticated = 0,
@@ -473,6 +481,8 @@ WINRT_EXPORT namespace winrt::Windows::System
     struct ITimeZoneSettingsStatics2;
     struct IUser;
     struct IUser2;
+    struct IUser3;
+    struct IUserAgeRange;
     struct IUserAuthenticationStatusChangeDeferral;
     struct IUserAuthenticationStatusChangingEventArgs;
     struct IUserChangedEventArgs;
@@ -523,6 +533,7 @@ WINRT_EXPORT namespace winrt::Windows::System
     struct ShutdownManager;
     struct TimeZoneSettings;
     struct User;
+    struct UserAgeRange;
     struct UserAuthenticationStatusChangeDeferral;
     struct UserAuthenticationStatusChangingEventArgs;
     struct UserChangedEventArgs;
@@ -604,6 +615,8 @@ WINRT_EXPORT namespace winrt::impl
     template <> struct category<winrt::Windows::System::ITimeZoneSettingsStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::IUser>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::IUser2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::System::IUser3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::System::IUserAgeRange>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::IUserAuthenticationStatusChangeDeferral>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::IUserAuthenticationStatusChangingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::IUserChangedEventArgs>{ using type = interface_category; };
@@ -654,6 +667,7 @@ WINRT_EXPORT namespace winrt::impl
     template <> struct category<winrt::Windows::System::ShutdownManager>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::TimeZoneSettings>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::User>{ using type = class_category; };
+    template <> struct category<winrt::Windows::System::UserAgeRange>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::System::UserChangedEventArgs>{ using type = class_category; };
@@ -679,6 +693,7 @@ WINRT_EXPORT namespace winrt::impl
     template <> struct category<winrt::Windows::System::ShutdownKind>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::UserAgeConsentGroup>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::UserAgeConsentResult>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::System::UserAgeVerificationStatus>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::UserAuthenticationStatus>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::UserPictureSize>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::UserType>{ using type = enum_category; };
@@ -726,6 +741,7 @@ WINRT_EXPORT namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::ShutdownManager> = L"Windows.System.ShutdownManager";
     template <> inline constexpr auto& name_v<winrt::Windows::System::TimeZoneSettings> = L"Windows.System.TimeZoneSettings";
     template <> inline constexpr auto& name_v<winrt::Windows::System::User> = L"Windows.System.User";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::UserAgeRange> = L"Windows.System.UserAgeRange";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserAuthenticationStatusChangeDeferral> = L"Windows.System.UserAuthenticationStatusChangeDeferral";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs> = L"Windows.System.UserAuthenticationStatusChangingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserChangedEventArgs> = L"Windows.System.UserChangedEventArgs";
@@ -751,6 +767,7 @@ WINRT_EXPORT namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::ShutdownKind> = L"Windows.System.ShutdownKind";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserAgeConsentGroup> = L"Windows.System.UserAgeConsentGroup";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserAgeConsentResult> = L"Windows.System.UserAgeConsentResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::UserAgeVerificationStatus> = L"Windows.System.UserAgeVerificationStatus";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserAuthenticationStatus> = L"Windows.System.UserAuthenticationStatus";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserPictureSize> = L"Windows.System.UserPictureSize";
     template <> inline constexpr auto& name_v<winrt::Windows::System::UserType> = L"Windows.System.UserType";
@@ -827,6 +844,8 @@ WINRT_EXPORT namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::ITimeZoneSettingsStatics2> = L"Windows.System.ITimeZoneSettingsStatics2";
     template <> inline constexpr auto& name_v<winrt::Windows::System::IUser> = L"Windows.System.IUser";
     template <> inline constexpr auto& name_v<winrt::Windows::System::IUser2> = L"Windows.System.IUser2";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::IUser3> = L"Windows.System.IUser3";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::IUserAgeRange> = L"Windows.System.IUserAgeRange";
     template <> inline constexpr auto& name_v<winrt::Windows::System::IUserAuthenticationStatusChangeDeferral> = L"Windows.System.IUserAuthenticationStatusChangeDeferral";
     template <> inline constexpr auto& name_v<winrt::Windows::System::IUserAuthenticationStatusChangingEventArgs> = L"Windows.System.IUserAuthenticationStatusChangingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::System::IUserChangedEventArgs> = L"Windows.System.IUserChangedEventArgs";
@@ -909,6 +928,8 @@ WINRT_EXPORT namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::System::ITimeZoneSettingsStatics2>{ 0x555C0DB8,0x39A8,0x49FA,{ 0xB4,0xF6,0xA2,0xC7,0xFC,0x28,0x42,0xEC } }; // 555C0DB8-39A8-49FA-B4F6-A2C7FC2842EC
     template <> inline constexpr guid guid_v<winrt::Windows::System::IUser>{ 0xDF9A26C6,0xE746,0x4BCD,{ 0xB5,0xD4,0x12,0x01,0x03,0xC4,0x20,0x9B } }; // DF9A26C6-E746-4BCD-B5D4-120103C4209B
     template <> inline constexpr guid guid_v<winrt::Windows::System::IUser2>{ 0x98BA5628,0xA6E3,0x518E,{ 0x89,0xD9,0xD3,0xB2,0xB1,0x99,0x1A,0x10 } }; // 98BA5628-A6E3-518E-89D9-D3B2B1991A10
+    template <> inline constexpr guid guid_v<winrt::Windows::System::IUser3>{ 0x520E18E2,0xF00D,0x53D1,{ 0xA9,0xF6,0x88,0xC6,0x97,0x56,0x1D,0xC0 } }; // 520E18E2-F00D-53D1-A9F6-88C697561DC0
+    template <> inline constexpr guid guid_v<winrt::Windows::System::IUserAgeRange>{ 0xD002FFCA,0x8130,0x5F64,{ 0xBE,0x0F,0xE6,0x6A,0xDB,0x64,0xDD,0x12 } }; // D002FFCA-8130-5F64-BE0F-E66ADB64DD12
     template <> inline constexpr guid guid_v<winrt::Windows::System::IUserAuthenticationStatusChangeDeferral>{ 0x88B59568,0xBB30,0x42FB,{ 0xA2,0x70,0xE9,0x90,0x2E,0x40,0xEF,0xA7 } }; // 88B59568-BB30-42FB-A270-E9902E40EFA7
     template <> inline constexpr guid guid_v<winrt::Windows::System::IUserAuthenticationStatusChangingEventArgs>{ 0x8C030F28,0xA711,0x4C1E,{ 0xAB,0x48,0x04,0x17,0x9C,0x15,0x93,0x8F } }; // 8C030F28-A711-4C1E-AB48-04179C15938F
     template <> inline constexpr guid guid_v<winrt::Windows::System::IUserChangedEventArgs>{ 0x086459DC,0x18C6,0x48DB,{ 0xBC,0x99,0x72,0x4F,0xB9,0x20,0x3C,0xCC } }; // 086459DC-18C6-48DB-BC99-724FB9203CCC
@@ -952,6 +973,7 @@ WINRT_EXPORT namespace winrt::impl
     template <> struct default_interface<winrt::Windows::System::ProtocolForResultsOperation>{ using type = winrt::Windows::System::IProtocolForResultsOperation; };
     template <> struct default_interface<winrt::Windows::System::RemoteLauncherOptions>{ using type = winrt::Windows::System::IRemoteLauncherOptions; };
     template <> struct default_interface<winrt::Windows::System::User>{ using type = winrt::Windows::System::IUser; };
+    template <> struct default_interface<winrt::Windows::System::UserAgeRange>{ using type = winrt::Windows::System::IUserAgeRange; };
     template <> struct default_interface<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>{ using type = winrt::Windows::System::IUserAuthenticationStatusChangeDeferral; };
     template <> struct default_interface<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>{ using type = winrt::Windows::System::IUserAuthenticationStatusChangingEventArgs; };
     template <> struct default_interface<winrt::Windows::System::UserChangedEventArgs>{ using type = winrt::Windows::System::IUserChangedEventArgs; };
@@ -1600,6 +1622,22 @@ WINRT_EXPORT namespace winrt::impl
         struct WINRT_IMPL_ABI_DECL type : inspectable_abi
         {
             virtual std::int32_t __stdcall CheckUserAgeConsentGroupAsync(std::int32_t, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::System::IUser3>
+    {
+        struct WINRT_IMPL_ABI_DECL type : inspectable_abi
+        {
+            virtual std::int32_t __stdcall GetUserAgeRangeAsync(void**) noexcept = 0;
+            virtual std::int32_t __stdcall GetAgeVerificationStatusAsync(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::System::IUserAgeRange>
+    {
+        struct WINRT_IMPL_ABI_DECL type : inspectable_abi
+        {
+            virtual std::int32_t __stdcall get_Lower(std::int32_t*) noexcept = 0;
+            virtual std::int32_t __stdcall get_Upper(std::int32_t*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::System::IUserAuthenticationStatusChangeDeferral>
@@ -2528,6 +2566,26 @@ WINRT_EXPORT namespace winrt::impl
     template <> struct consume<winrt::Windows::System::IUser2>
     {
         template <typename D> using type = consume_Windows_System_IUser2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_IUser3
+    {
+        auto GetUserAgeRangeAsync() const;
+        auto GetAgeVerificationStatusAsync() const;
+    };
+    template <> struct consume<winrt::Windows::System::IUser3>
+    {
+        template <typename D> using type = consume_Windows_System_IUser3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_System_IUserAgeRange
+    {
+        [[nodiscard]] auto Lower() const;
+        [[nodiscard]] auto Upper() const;
+    };
+    template <> struct consume<winrt::Windows::System::IUserAgeRange>
+    {
+        template <typename D> using type = consume_Windows_System_IUserAgeRange<D>;
     };
     template <typename D>
     struct consume_Windows_System_IUserAuthenticationStatusChangeDeferral

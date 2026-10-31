@@ -61954,6 +61954,503 @@
     ]
   },
   {
+    "namespace": "Windows.ApplicationModel.Overlay",
+    "types": [
+      {
+        "name": "OverlayActivatedEventArgs",
+        "methods": [
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayCommand Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs::get_Command()",
+            "name": "get_Command",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayCommand"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "OverlayApp",
+        "methods": [
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayApp Windows.ApplicationModel.Overlay.OverlayApp::Create(System.Int64)",
+            "name": "Create",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayApp"
+              }
+            },
+            "parameters": [
+              {
+                "name": "hwnd",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int64"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayApp Windows.ApplicationModel.Overlay.OverlayApp::Create(System.Int64,Windows.ApplicationModel.Overlay.OverlayAppOptions)",
+            "name": "Create",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayApp"
+              }
+            },
+            "parameters": [
+              {
+                "name": "hwnd",
+                "kind": "in",
+                "type": {
+                  "name": "System.Int64"
+                }
+              },
+              {
+                "name": "options",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.ApplicationModel.Overlay.OverlayAppOptions"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction Windows.ApplicationModel.Overlay.OverlayApp::DisconnectAsync()",
+            "name": "DisconnectAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction Windows.ApplicationModel.Overlay.OverlayApp::ExitInteractiveAsync()",
+            "name": "ExitInteractiveAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction Windows.ApplicationModel.Overlay.OverlayApp::RequestInteractiveAsync(Windows.ApplicationModel.Overlay.OverlayCommand)",
+            "name": "RequestInteractiveAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": [
+              {
+                "name": "command",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.ApplicationModel.Overlay.OverlayCommand"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::SetHasActiveNotification(System.Boolean)",
+            "name": "SetHasActiveNotification",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "hasActive",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::SetPersistentModeEnabled(System.Boolean)",
+            "name": "SetPersistentModeEnabled",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "enabled",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::SetUnreadNotificationCount(System.UInt32)",
+            "name": "SetUnreadNotificationCount",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "count",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncAction Windows.ApplicationModel.Overlay.OverlayApp::StartAsync()",
+            "name": "StartAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncAction"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Overlay.OverlayApp::add_Activated(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs>)",
+            "name": "add_Activated",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Overlay.OverlayApp::add_Disconnected(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs>)",
+            "name": "add_Disconnected",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Overlay.OverlayApp::add_VisualStateChanged(Windows.Foundation.EventHandler`1<System.Object>)",
+            "name": "add_VisualStateChanged",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "System.Object"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.EventRegistrationToken Windows.ApplicationModel.Overlay.OverlayApp::add_VisualTransition(Windows.Foundation.EventHandler`1<Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs>)",
+            "name": "add_VisualTransition",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.EventRegistrationToken"
+              }
+            },
+            "parameters": [
+              {
+                "name": "handler",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventHandler`1",
+                  "args": [
+                    {
+                      "name": "Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayVisualState Windows.ApplicationModel.Overlay.OverlayApp::get_VisualState()",
+            "name": "get_VisualState",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayVisualState"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::remove_Activated(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Activated",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::remove_Disconnected(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_Disconnected",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::remove_VisualStateChanged(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_VisualStateChanged",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayApp::remove_VisualTransition(Windows.Foundation.EventRegistrationToken)",
+            "name": "remove_VisualTransition",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "token",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.EventRegistrationToken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "OverlayAppOptions",
+        "methods": [
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayAppOptions::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Windows.ApplicationModel.Overlay.OverlayAppOptions::get_CustomTransitionAnimations()",
+            "name": "get_CustomTransitionAnimations",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayAppOptions::put_CustomTransitionAnimations(System.Boolean)",
+            "name": "put_CustomTransitionAnimations",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "value",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "OverlayCommand",
+        "methods": [
+          {
+            "signature": "System.Void Windows.ApplicationModel.Overlay.OverlayCommand::.ctor(Windows.ApplicationModel.Overlay.OverlayCommandSource,Windows.Foundation.Uri)",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "source",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.ApplicationModel.Overlay.OverlayCommandSource"
+                }
+              },
+              {
+                "name": "uri",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Foundation.Uri"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayCommandSource Windows.ApplicationModel.Overlay.OverlayCommand::get_Source()",
+            "name": "get_Source",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayCommandSource"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.Uri Windows.ApplicationModel.Overlay.OverlayCommand::get_Uri()",
+            "name": "get_Uri",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Uri"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "OverlayDisconnectedEventArgs",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Deferral Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs::GetDeferral()",
+            "name": "GetDeferral",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Deferral"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "OverlayVisualTransitionEventArgs",
+        "methods": [
+          {
+            "signature": "Windows.Foundation.Deferral Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs::GetDeferral()",
+            "name": "GetDeferral",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.Deferral"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayCommand Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs::get_Command()",
+            "name": "get_Command",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayCommand"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayVisualState Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs::get_NewState()",
+            "name": "get_NewState",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayVisualState"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.ApplicationModel.Overlay.OverlayTransitionAnimation Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs::get_TransitionAnimation()",
+            "name": "get_TransitionAnimation",
+            "return": {
+              "type": {
+                "name": "Windows.ApplicationModel.Overlay.OverlayTransitionAnimation"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      }
+    ]
+  },
+  {
     "namespace": "Windows.ApplicationModel.PackageExtensions",
     "types": [
       {
@@ -225747,6 +226244,16 @@
             "parameters": []
           },
           {
+            "signature": "Windows.Management.Update.WindowsSoftwareUpdateIdentity Windows.Management.Update.WindowsSoftwareUpdateProvider::get_ProviderIdentity()",
+            "name": "get_ProviderIdentity",
+            "return": {
+              "type": {
+                "name": "Windows.Management.Update.WindowsSoftwareUpdateIdentity"
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType Windows.Management.Update.WindowsSoftwareUpdateProvider::get_RegistrationType()",
             "name": "get_RegistrationType",
             "return": {
@@ -319873,6 +320380,31 @@
             ]
           },
           {
+            "signature": "System.Void Windows.Networking.Vpn.VpnChannel::SetErrorMessage(System.String,System.UInt32)",
+            "name": "SetErrorMessage",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "message",
+                "kind": "in",
+                "type": {
+                  "name": "System.String"
+                }
+              },
+              {
+                "name": "errCode",
+                "kind": "in",
+                "type": {
+                  "name": "System.UInt32"
+                }
+              }
+            ]
+          },
+          {
             "signature": "System.Void Windows.Networking.Vpn.VpnChannel::Start(Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Networking.Vpn.VpnInterfaceId,Windows.Networking.Vpn.VpnRouteAssignment,Windows.Networking.Vpn.VpnNamespaceAssignment,System.UInt32,System.UInt32,System.Boolean,System.Object,System.Object)",
             "name": "Start",
             "return": {
@@ -320434,11 +320966,31 @@
             "parameters": []
           },
           {
+            "signature": "Windows.Networking.Vpn.VpnConnectionDetailsPreview Windows.Networking.Vpn.VpnChannel::get_ConnectionDetail()",
+            "name": "get_ConnectionDetail",
+            "return": {
+              "type": {
+                "name": "Windows.Networking.Vpn.VpnConnectionDetailsPreview"
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "System.Object Windows.Networking.Vpn.VpnChannel::get_CurrentRequestTransportContext()",
             "name": "get_CurrentRequestTransportContext",
             "return": {
               "type": {
                 "name": "System.Object"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Networking.Vpn.VpnDisconnectReasonPreview Windows.Networking.Vpn.VpnChannel::get_DisconnectReason()",
+            "name": "get_DisconnectReason",
+            "return": {
+              "type": {
+                "name": "Windows.Networking.Vpn.VpnDisconnectReasonPreview"
               }
             },
             "parameters": []
@@ -320608,6 +321160,31 @@
                     "name": "Windows.Foundation.Uri"
                   }
                 ]
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "VpnConnectionDetailsPreview",
+        "methods": [
+          {
+            "signature": "System.UInt32 Windows.Networking.Vpn.VpnConnectionDetailsPreview::get_Attempt()",
+            "name": "get_Attempt",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Networking.Vpn.VpnConnectionTypePreview Windows.Networking.Vpn.VpnConnectionDetailsPreview::get_Type()",
+            "name": "get_Type",
+            "return": {
+              "type": {
+                "name": "Windows.Networking.Vpn.VpnConnectionTypePreview"
               }
             },
             "parameters": []
@@ -322398,6 +322975,31 @@
             ]
           },
           {
+            "signature": "Windows.Networking.Vpn.IVpnProfile Windows.Networking.Vpn.VpnManagementAgent::GetAlwaysOnActiveProfile()",
+            "name": "GetAlwaysOnActiveProfile",
+            "return": {
+              "type": {
+                "name": "Windows.Networking.Vpn.IVpnProfile"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.IVpnProfile> Windows.Networking.Vpn.VpnManagementAgent::GetAlwaysOnActiveProfileAsync()",
+            "name": "GetAlwaysOnActiveProfileAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.Networking.Vpn.IVpnProfile"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Vpn.IVpnProfile>> Windows.Networking.Vpn.VpnManagementAgent::GetProfilesAsync()",
             "name": "GetProfilesAsync",
             "return": {
@@ -322416,6 +323018,47 @@
               }
             },
             "parameters": []
+          },
+          {
+            "signature": "System.Void Windows.Networking.Vpn.VpnManagementAgent::SetAlwaysOnActiveProfile(Windows.Networking.Vpn.IVpnProfile)",
+            "name": "SetAlwaysOnActiveProfile",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": [
+              {
+                "name": "profile",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Networking.Vpn.IVpnProfile"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::SetAlwaysOnActiveProfileAsync(Windows.Networking.Vpn.IVpnProfile)",
+            "name": "SetAlwaysOnActiveProfileAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.Networking.Vpn.VpnManagementErrorStatus"
+                  }
+                ]
+              }
+            },
+            "parameters": [
+              {
+                "name": "profile",
+                "kind": "in",
+                "type": {
+                  "name": "Windows.Networking.Vpn.IVpnProfile"
+                }
+              }
+            ]
           },
           {
             "signature": "Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::UpdateProfileFromObjectAsync(Windows.Networking.Vpn.IVpnProfile)",
@@ -391054,6 +391697,21 @@
             ]
           },
           {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeVerificationStatus> Windows.System.User::GetAgeVerificationStatusAsync()",
+            "name": "GetAgeVerificationStatusAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.System.UserAgeVerificationStatus"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "Windows.System.User Windows.System.User::GetDefault()",
             "name": "GetDefault",
             "return": {
@@ -391156,6 +391814,21 @@
             ]
           },
           {
+            "signature": "Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeRange> Windows.System.User::GetUserAgeRangeAsync()",
+            "name": "GetUserAgeRangeAsync",
+            "return": {
+              "type": {
+                "name": "Windows.Foundation.IAsyncOperation`1",
+                "args": [
+                  {
+                    "name": "Windows.System.UserAgeRange"
+                  }
+                ]
+              }
+            },
+            "parameters": []
+          },
+          {
             "signature": "Windows.System.UserAuthenticationStatus Windows.System.User::get_AuthenticationStatus()",
             "name": "get_AuthenticationStatus",
             "return": {
@@ -391181,6 +391854,31 @@
             "return": {
               "type": {
                 "name": "Windows.System.UserType"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "UserAgeRange",
+        "methods": [
+          {
+            "signature": "System.Int32 Windows.System.UserAgeRange::get_Lower()",
+            "name": "get_Lower",
+            "return": {
+              "type": {
+                "name": "System.Int32"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Int32 Windows.System.UserAgeRange::get_Upper()",
+            "name": "get_Upper",
+            "return": {
+              "type": {
+                "name": "System.Int32"
               }
             },
             "parameters": []
@@ -427923,6 +428621,49 @@
             "return": {
               "type": {
                 "name": "Windows.UI.Input.EdgeGestureKind"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
+        "name": "GamepadKeyRoutingConfiguration",
+        "methods": [
+          {
+            "signature": "System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::IsSupported()",
+            "name": "IsSupported",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::TrySetKeyRoutingEnabled(System.Boolean)",
+            "name": "TrySetKeyRoutingEnabled",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
+              }
+            },
+            "parameters": [
+              {
+                "name": "enabled",
+                "kind": "in",
+                "type": {
+                  "name": "System.Boolean"
+                }
+              }
+            ]
+          },
+          {
+            "signature": "System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::get_IsKeyRoutingEnabled()",
+            "name": "get_IsKeyRoutingEnabled",
+            "return": {
+              "type": {
+                "name": "System.Boolean"
               }
             },
             "parameters": []
