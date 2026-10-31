@@ -90,7 +90,7 @@ class WindowsSoftwareUpdateCategory(enum.IntEnum):
     DEFINITION = 4
     FEATURE = 5
     QUALITY = 6
-    A_I_COMPONENT = 7
+    AI_COMPONENT = 7
 
 class WindowsSoftwareUpdateIdentityType(enum.IntEnum):
     PRODUCT_CODE = 0

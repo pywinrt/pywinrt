@@ -15,6 +15,11 @@ repository](../../CHANGELOG.md).
 
 ### Changed
 - Updated the Windows SDK to [10.0.28000.2957][Windows SDK 10.0.28000.2957], from 10.0.28000.2705.
+- A name keeps an acronym in one word, as in `xy_focus_down`.
+- A letter that goes with a number stays with it, as in `resolution_720p`.
+- Each name that changed keeps working, with a `DeprecationWarning`.
+- The type hints leave out an enum member's old name, which a checker flags.
+- An implementation of a PlayReady interface defines its methods' new names.
 
 ## [4!10.0.28000.2705.1] - 2026-10-24
 

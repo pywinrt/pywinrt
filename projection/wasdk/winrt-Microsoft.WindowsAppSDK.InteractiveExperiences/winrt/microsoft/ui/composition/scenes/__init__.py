@@ -32,3 +32,4 @@ __all__ = [
 winrt.runtime._internals.mixin_mutable_sequence(SceneComponentCollection)
 winrt.runtime._internals.mixin_mutable_mapping(SceneMeshMaterialAttributeMap)
 winrt.runtime._internals.mixin_mutable_sequence(SceneNodeCollection)
+winrt.runtime._internals.renamed_property(SceneMeshRendererComponent, "u_v_mappings", "uv_mappings")

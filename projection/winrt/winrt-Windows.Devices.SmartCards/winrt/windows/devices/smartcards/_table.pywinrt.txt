@@ -2184,7 +2184,7 @@ enum Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm python_type
     constant CBC_MAC 1
     constant CVC3_UMD 2
     constant DECIMALIZED_MSD 3
-    constant CVC3_M_D 4
+    constant CVC3_MD 4
     constant SHA1 5
     constant SIGNED_DYNAMIC_APPLICATION_DATA 6
     constant RSA_PKCS1 7
@@ -2585,7 +2585,7 @@ enum Windows.Devices.SmartCards.SmartCardEmulationType python_type
     signature enum(Windows.Devices.SmartCards.SmartCardEmulationType;i4)
     constant HOST 0
     constant UICC 1
-    constant EMBEDDED_S_E 2
+    constant EMBEDDED_SE 2
 
 class Windows.Devices.SmartCards.SmartCardEmulator python_type
     py SmartCardEmulator
@@ -2921,7 +2921,7 @@ enum Windows.Devices.SmartCards.SmartCardReaderKind python_type
     constant TPM 2
     constant NFC 3
     constant UICC 4
-    constant EMBEDDED_S_E 5
+    constant EMBEDDED_SE 5
 
 enum Windows.Devices.SmartCards.SmartCardReaderStatus python_type
     py SmartCardReaderStatus

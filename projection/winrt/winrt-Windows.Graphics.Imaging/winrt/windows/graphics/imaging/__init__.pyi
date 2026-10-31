@@ -88,7 +88,7 @@ class BitmapRotation(enum.IntEnum):
 
 class ColorManagementMode(enum.IntEnum):
     DO_NOT_COLOR_MANAGE = 0
-    COLOR_MANAGE_TO_S_RGB = 1
+    COLOR_MANAGE_TO_SRGB = 1
 
 class ExifOrientationMode(enum.IntEnum):
     IGNORE_EXIF_ORIENTATION = 0
@@ -223,6 +223,11 @@ class BitmapDecoder_Static(winrt.system.Object_Static):
     def jpeg_decoder_id(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Graphics.Imaging.BitmapDecoder::get_JpegXRDecoderId()
     @_property
+    def jpeg_xr_decoder_id(cls) -> _uuid.UUID: ...
+    # Deprecated alias of jpeg_xr_decoder_id by the name it was published under.
+    # System.Guid Windows.Graphics.Imaging.BitmapDecoder::get_JpegXRDecoderId()
+    @_property
+    @deprecated("Use jpeg_xr_decoder_id instead.")
     def jpeg_x_r_decoder_id(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Graphics.Imaging.BitmapDecoder::get_PngDecoderId()
     @_property
@@ -340,6 +345,11 @@ class BitmapEncoder_Static(winrt.system.Object_Static):
     def jpeg_encoder_id(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Graphics.Imaging.BitmapEncoder::get_JpegXREncoderId()
     @_property
+    def jpeg_xr_encoder_id(cls) -> _uuid.UUID: ...
+    # Deprecated alias of jpeg_xr_encoder_id by the name it was published under.
+    # System.Guid Windows.Graphics.Imaging.BitmapEncoder::get_JpegXREncoderId()
+    @_property
+    @deprecated("Use jpeg_xr_encoder_id instead.")
     def jpeg_x_r_encoder_id(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Graphics.Imaging.BitmapEncoder::get_PngEncoderId()
     @_property

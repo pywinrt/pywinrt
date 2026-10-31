@@ -56,3 +56,4 @@ __all__ = [
     "TextQuerySessionResult",
 ]
 
+winrt.runtime._internals.renamed_enum_member(AppIndexTextStreamEncoding, "UTF16_L_E", "UTF16_LE")

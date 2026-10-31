@@ -406,11 +406,11 @@ class UiccAccessCondition(enum.IntEnum):
 class UiccAppKind(enum.IntEnum):
     UNKNOWN = 0
     MF = 1
-    M_F_SIM = 2
-    M_F_RUIM = 3
-    U_SIM = 4
-    C_SIM = 5
-    I_SIM = 6
+    MF_SIM = 2
+    MF_RUIM = 3
+    USIM = 4
+    CSIM = 5
+    ISIM = 6
 
 class UiccAppRecordKind(enum.IntEnum):
     UNKNOWN = 0
@@ -801,6 +801,11 @@ class HotspotCredentialsAuthenticationResult(winrt.system.Object):
 class KnownCSimFilePaths_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownCSimFilePaths::get_EFSpn()
     @_property
+    def ef_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_spn by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownCSimFilePaths::get_EFSpn()
+    @_property
+    @deprecated("Use ef_spn instead.")
     def e_f_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownCSimFilePaths::get_Gid1()
     @_property
@@ -818,6 +823,11 @@ class KnownCSimFilePaths(winrt.system.Object, metaclass=KnownCSimFilePaths_Stati
 class KnownRuimFilePaths_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownRuimFilePaths::get_EFSpn()
     @_property
+    def ef_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_spn by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownRuimFilePaths::get_EFSpn()
+    @_property
+    @deprecated("Use ef_spn instead.")
     def e_f_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownRuimFilePaths::get_Gid1()
     @_property
@@ -835,9 +845,19 @@ class KnownRuimFilePaths(winrt.system.Object, metaclass=KnownRuimFilePaths_Stati
 class KnownSimFilePaths_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_EFOns()
     @_property
+    def ef_ons(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_ons by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_EFOns()
+    @_property
+    @deprecated("Use ef_ons instead.")
     def e_f_ons(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_EFSpn()
     @_property
+    def ef_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_spn by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_EFSpn()
+    @_property
+    @deprecated("Use ef_spn instead.")
     def e_f_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownSimFilePaths::get_Gid1()
     @_property
@@ -855,12 +875,27 @@ class KnownSimFilePaths(winrt.system.Object, metaclass=KnownSimFilePaths_Static)
 class KnownUSimFilePaths_Static(winrt.system.Object_Static):
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFOpl()
     @_property
+    def ef_opl(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_opl by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFOpl()
+    @_property
+    @deprecated("Use ef_opl instead.")
     def e_f_opl(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFPnn()
     @_property
+    def ef_pnn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_pnn by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFPnn()
+    @_property
+    @deprecated("Use ef_pnn instead.")
     def e_f_pnn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFSpn()
     @_property
+    def ef_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
+    # Deprecated alias of ef_spn by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_EFSpn()
+    @_property
+    @deprecated("Use ef_spn instead.")
     def e_f_spn(cls) -> _cabc.Sequence[winrt.system.UInt32]: ...
     # Windows.Foundation.Collections.IVectorView`1<System.UInt32> Windows.Networking.NetworkOperators.KnownUSimFilePaths::get_Gid1()
     @_property
@@ -988,6 +1023,11 @@ class MobileBroadbandCellCdma(winrt.system.Object):
     def base_station_longitude(self) -> winrt.system.Double | None: ...
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellCdma::get_BaseStationPNCode()
     @_property
+    def base_station_pn_code(self) -> winrt.system.Int32 | None: ...
+    # Deprecated alias of base_station_pn_code by the name it was published under.
+    # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellCdma::get_BaseStationPNCode()
+    @_property
+    @deprecated("Use base_station_pn_code instead.")
     def base_station_p_n_code(self) -> winrt.system.Int32 | None: ...
     # Windows.Foundation.IReference`1<System.Int32> Windows.Networking.NetworkOperators.MobileBroadbandCellCdma::get_NetworkId()
     @_property
@@ -1180,9 +1220,19 @@ class MobileBroadbandCellsInfo(winrt.system.Object):
     def serving_cells_umts(self) -> _cabc.Sequence[MobileBroadbandCellUmts]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo::get_NeighboringCellsNR()
     @_property
+    def neighboring_cells_nr(self) -> _cabc.Sequence[MobileBroadbandCellNR]: ...
+    # Deprecated alias of neighboring_cells_nr by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo::get_NeighboringCellsNR()
+    @_property
+    @deprecated("Use neighboring_cells_nr instead.")
     def neighboring_cells_n_r(self) -> _cabc.Sequence[MobileBroadbandCellNR]: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo::get_ServingCellsNR()
     @_property
+    def serving_cells_nr(self) -> _cabc.Sequence[MobileBroadbandCellNR]: ...
+    # Deprecated alias of serving_cells_nr by the name it was published under.
+    # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo::get_ServingCellsNR()
+    @_property
+    @deprecated("Use serving_cells_nr instead.")
     def serving_cells_n_r(self) -> _cabc.Sequence[MobileBroadbandCellNR]: ...
 
 @typing.final

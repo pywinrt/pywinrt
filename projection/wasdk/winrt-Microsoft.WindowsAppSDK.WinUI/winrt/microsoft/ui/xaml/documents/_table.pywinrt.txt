@@ -218,42 +218,42 @@ class Microsoft.UI.Xaml.Documents.Hyperlink activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    property x_y_focus_up_navigation_strategy
+    property xy_focus_up_navigation_strategy
         get get_XYFocusUpNavigationStrategy slot=21 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusUpNavigationStrategy slot=22 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy name=value
-    property x_y_focus_up
+    property xy_focus_up
         get get_XYFocusUp slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
         put put_XYFocusUp slot=15 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
-    property x_y_focus_right_navigation_strategy
+    property xy_focus_right_navigation_strategy
         get get_XYFocusRightNavigationStrategy slot=27 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusRightNavigationStrategy slot=28 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy name=value
-    property x_y_focus_right
+    property xy_focus_right
         get get_XYFocusRight slot=12 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
         put put_XYFocusRight slot=13 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
-    property x_y_focus_left_navigation_strategy
+    property xy_focus_left_navigation_strategy
         get get_XYFocusLeftNavigationStrategy slot=25 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusLeftNavigationStrategy slot=26 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy name=value
-    property x_y_focus_left
+    property xy_focus_left
         get get_XYFocusLeft slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
         put put_XYFocusLeft slot=11 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in class type=Microsoft.UI.Xaml.DependencyObject name=value
-    property x_y_focus_down_navigation_strategy
+    property xy_focus_down_navigation_strategy
         get get_XYFocusDownNavigationStrategy slot=23 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusDownNavigationStrategy slot=24 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             in enum32 type=Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy name=value
-    property x_y_focus_down
+    property xy_focus_down
         get get_XYFocusDown slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
             out class type=Microsoft.UI.Xaml.DependencyObject return
         put put_XYFocusDown slot=17 inputs=1 outputs=0 declaring=Microsoft.UI.Xaml.Documents.IHyperlink shape=4
@@ -304,28 +304,28 @@ class Microsoft.UI.Xaml.Documents.Hyperlink activatable python_type
     property underline_style_property static
         get get_UnderlineStyleProperty slot=7 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_down_navigation_strategy_property static
+    property xy_focus_down_navigation_strategy_property static
         get get_XYFocusDownNavigationStrategyProperty slot=15 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_down_property static
+    property xy_focus_down_property static
         get get_XYFocusDownProperty slot=11 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_left_navigation_strategy_property static
+    property xy_focus_left_navigation_strategy_property static
         get get_XYFocusLeftNavigationStrategyProperty slot=16 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_left_property static
+    property xy_focus_left_property static
         get get_XYFocusLeftProperty slot=8 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_right_navigation_strategy_property static
+    property xy_focus_right_navigation_strategy_property static
         get get_XYFocusRightNavigationStrategyProperty slot=17 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_right_property static
+    property xy_focus_right_property static
         get get_XYFocusRightProperty slot=9 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_up_navigation_strategy_property static
+    property xy_focus_up_navigation_strategy_property static
         get get_XYFocusUpNavigationStrategyProperty slot=14 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
-    property x_y_focus_up_property static
+    property xy_focus_up_property static
         get get_XYFocusUpProperty slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Xaml.Documents.IHyperlinkStatics shape=4 static
             out class type=Microsoft.UI.Xaml.DependencyProperty return
     event click

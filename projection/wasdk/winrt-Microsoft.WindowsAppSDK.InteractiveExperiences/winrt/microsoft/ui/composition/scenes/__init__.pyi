@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt.system
 import winrt.microsoft.graphics.directx as microsoft_graphics_directx
@@ -223,6 +224,11 @@ class SceneMeshRendererComponent(SceneRendererComponent, metaclass=SceneMeshRend
     def material(self, value: SceneMaterial) -> None: ...
     # Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent::get_UVMappings()
     @_property
+    def uv_mappings(self) -> SceneMeshMaterialAttributeMap: ...
+    # Deprecated alias of uv_mappings by the name it was published under.
+    # Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent::get_UVMappings()
+    @_property
+    @deprecated("Use uv_mappings instead.")
     def u_v_mappings(self) -> SceneMeshMaterialAttributeMap: ...
 
 @typing.final

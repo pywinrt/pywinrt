@@ -26,3 +26,6 @@ __all__ = [
     "BluetoothLEManufacturerData",
 ]
 
+winrt.runtime._internals.renamed_property(BluetoothLEAdvertisementWatcher, "use_uncoded1_m_phy", "use_uncoded_1m_phy")
+winrt.runtime._internals.renamed_enum_member(BluetoothLEAdvertisementPhyType, "UNCODED1_M_PHY", "UNCODED_1M_PHY")
+winrt.runtime._internals.renamed_enum_member(BluetoothLEAdvertisementPhyType, "UNCODED2_M_PHY", "UNCODED_2M_PHY")

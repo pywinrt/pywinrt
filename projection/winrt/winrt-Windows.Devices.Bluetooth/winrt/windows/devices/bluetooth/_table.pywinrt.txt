@@ -124,7 +124,7 @@ class Windows.Devices.Bluetooth.BluetoothAdapter python_type
     property is_low_energy_coded_phy_supported
         get get_IsLowEnergyCodedPhySupported slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter4 shape=4
             out boolean return
-    property is_low_energy_uncoded2_m_phy_supported
+    property is_low_energy_uncoded_2m_phy_supported
         get get_IsLowEnergyUncoded2MPhySupported slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothAdapter4 shape=4
             out boolean return
     method from_id_async static
@@ -562,10 +562,10 @@ class Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo python_type
     property is_coded_phy
         get get_IsCodedPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4
             out boolean return
-    property is_uncoded1_m_phy
+    property is_uncoded_1m_phy
         get get_IsUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4
             out boolean return
-    property is_uncoded2_m_phy
+    property is_uncoded_2m_phy
         get get_IsUncoded2MPhy slot=7 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.IBluetoothLEConnectionPhyInfo shape=4
             out boolean return
 

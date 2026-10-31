@@ -10,3 +10,5 @@ __all__ = [
     "CryptographicBuffer",
 ]
 
+winrt.runtime._internals.renamed_enum_member(BinaryStringEncoding, "UTF16_B_E", "UTF16_BE")
+winrt.runtime._internals.renamed_enum_member(BinaryStringEncoding, "UTF16_L_E", "UTF16_LE")

@@ -366,7 +366,7 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids 
     property rsc_measurement static
         get get_RscMeasurement slot=22 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristicUuidsStatics shape=4 static
             out guid return
-    property s_c_control_point static
+    property sc_control_point static
         get get_SCControlPoint slot=23 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattCharacteristicUuidsStatics shape=4 static
             out guid return
     property sensor_location static
@@ -1401,12 +1401,12 @@ class Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdver
             out interface type=Windows.Storage.Streams.IBuffer return
         put put_ServiceData slot=6 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters2 shape=4
             in interface type=Windows.Storage.Streams.IBuffer name=value
-    property use_low_energy_uncoded2_m_phy_as_secondary_phy
+    property use_low_energy_uncoded_2m_phy_as_secondary_phy
         get get_UseLowEnergyUncoded2MPhyAsSecondaryPhy slot=8 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3 shape=4
             out boolean return
         put put_UseLowEnergyUncoded2MPhyAsSecondaryPhy slot=9 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3 shape=4
             in boolean name=value
-    property use_low_energy_uncoded1_m_phy_as_secondary_phy
+    property use_low_energy_uncoded_1m_phy_as_secondary_phy
         get get_UseLowEnergyUncoded1MPhyAsSecondaryPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3 shape=4
             out boolean return
         put put_UseLowEnergyUncoded1MPhyAsSecondaryPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.GenericAttributeProfile.IGattServiceProviderAdvertisingParameters3 shape=4

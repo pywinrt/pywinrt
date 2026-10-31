@@ -13,6 +13,10 @@ repository](../CHANGELOG.md).
 ### Added
 - `--renames <file>` keeps each name a projection renamed, as a deprecated alias.
 
+### Changed
+- A name keeps an acronym in one word, as in `xy_focus_down`.
+- A letter that goes with a number stays with it, as in `resolution_720p`.
+
 ### Fixed
 - Fixed a type stub importing `property` when it declares no property.
 

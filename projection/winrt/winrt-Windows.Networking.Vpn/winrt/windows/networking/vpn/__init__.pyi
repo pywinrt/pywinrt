@@ -104,7 +104,7 @@ class VpnChannelRequestCredentialsOptions(enum.IntFlag):
 
 class VpnConnectionTypePreview(enum.IntEnum):
     NO_CONNECTION = 0
-    PLATFORM_U_X_INITIATED = 1
+    PLATFORM_UX_INITIATED = 1
     API_INITIATED = 2
     AUTO = 3
     FAST_RECONNECT = 4
@@ -126,7 +126,7 @@ class VpnDataPathType(enum.IntEnum):
 class VpnDisconnectReasonPreview(enum.IntEnum):
     UNKNOWN = 0
     NOT_DISCONNECTED = 1
-    PLATFORM_U_X_INITIATED = 2
+    PLATFORM_UX_INITIATED = 2
     API_INITIATED = 3
     STANDBY = 4
     NETWORK_FAILURE = 5

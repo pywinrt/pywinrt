@@ -6,6 +6,7 @@ import enum
 import typing
 import uuid as _uuid
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt.system
 import winrt.windows.devices.bluetooth as windows_devices_bluetooth
@@ -44,8 +45,8 @@ class BluetoothLEAdvertisementFlags(enum.IntFlag):
 
 class BluetoothLEAdvertisementPhyType(enum.IntEnum):
     UNSPECIFIED = 0
-    UNCODED1_M_PHY = 1
-    UNCODED2_M_PHY = 2
+    UNCODED_1M_PHY = 1
+    UNCODED_2M_PHY = 2
     CODED_PHY = 3
 
 class BluetoothLEAdvertisementPublisherStatus(enum.IntEnum):
@@ -431,9 +432,18 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
     def allow_extended_advertisements(self, value: bool) -> None: ...
     # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseUncoded1MPhy()
     @_property
+    def use_uncoded_1m_phy(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_UseUncoded1MPhy(System.Boolean)
+    @use_uncoded_1m_phy.setter
+    def use_uncoded_1m_phy(self, value: bool) -> None: ...
+    # Deprecated alias of use_uncoded_1m_phy by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseUncoded1MPhy()
+    @_property
+    @deprecated("Use use_uncoded_1m_phy instead.")
     def use_uncoded1_m_phy(self) -> bool: ...
     # System.Void Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::put_UseUncoded1MPhy(System.Boolean)
     @use_uncoded1_m_phy.setter
+    @deprecated("Use use_uncoded_1m_phy instead.")
     def use_uncoded1_m_phy(self, value: bool) -> None: ...
     # System.Boolean Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher::get_UseHardwareFilter()
     @_property

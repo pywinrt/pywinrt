@@ -159,6 +159,16 @@ winrt.runtime._internals.alias_static_method(PropertyMetadata, "create_with_defa
 winrt.runtime._internals.alias_static_method(PropertyMetadata, "create_with_default_value_and_callback", "create")
 winrt.runtime._internals.alias_static_method(RectHelper, "union_with_point", "union")
 winrt.runtime._internals.alias_method(UIElement, "start_bring_into_view_with_options", "start_bring_into_view")
+winrt.runtime._internals.renamed_property(UIElement, "x_y_focus_down_navigation_strategy", "xy_focus_down_navigation_strategy")
+winrt.runtime._internals.renamed_static_property(UIElement, "x_y_focus_down_navigation_strategy_property", "xy_focus_down_navigation_strategy_property")
+winrt.runtime._internals.renamed_property(UIElement, "x_y_focus_keyboard_navigation", "xy_focus_keyboard_navigation")
+winrt.runtime._internals.renamed_static_property(UIElement, "x_y_focus_keyboard_navigation_property", "xy_focus_keyboard_navigation_property")
+winrt.runtime._internals.renamed_property(UIElement, "x_y_focus_left_navigation_strategy", "xy_focus_left_navigation_strategy")
+winrt.runtime._internals.renamed_static_property(UIElement, "x_y_focus_left_navigation_strategy_property", "xy_focus_left_navigation_strategy_property")
+winrt.runtime._internals.renamed_property(UIElement, "x_y_focus_right_navigation_strategy", "xy_focus_right_navigation_strategy")
+winrt.runtime._internals.renamed_static_property(UIElement, "x_y_focus_right_navigation_strategy_property", "xy_focus_right_navigation_strategy_property")
+winrt.runtime._internals.renamed_property(UIElement, "x_y_focus_up_navigation_strategy", "xy_focus_up_navigation_strategy")
+winrt.runtime._internals.renamed_static_property(UIElement, "x_y_focus_up_navigation_strategy_property", "xy_focus_up_navigation_strategy_property")
 ApplicationInitializationCallback = typing.Callable[[ApplicationInitializationCallbackParams], object]
 BindingFailedEventHandler = typing.Callable[[winrt.system.Object, BindingFailedEventArgs], object]
 CreateDefaultValueCallback = typing.Callable[[], winrt.system.Object]

@@ -83,13 +83,13 @@ class Windows.UI.ViewManagement.Core.CoreInputView python_type
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_OcclusionsChanged slot=7 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    event x_y_focus_transferred_to_primary_view
+    event xy_focus_transferred_to_primary_view
         add add_XYFocusTransferredToPrimaryView slot=8 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,System.Object> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
         remove remove_XYFocusTransferredToPrimaryView slot=9 inputs=1 outputs=0 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=26
             in event_token type=Windows.Foundation.EventRegistrationToken name=token
-    event x_y_focus_transferring_from_primary_view
+    event xy_focus_transferring_from_primary_view
         add add_XYFocusTransferringFromPrimaryView slot=6 inputs=1 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.Core.CoreInputView,Windows.UI.ViewManagement.Core.CoreInputViewTransferringXYFocusEventArgs> name=handler
             out event_token type=Windows.Foundation.EventRegistrationToken return
@@ -148,7 +148,7 @@ class Windows.UI.ViewManagement.Core.CoreInputView python_type
     method try_show_primary_view
         method TryShowPrimaryView slot=9 inputs=0 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView shape=4
             out boolean return
-    method try_transfer_x_y_focus_to_primary_view
+    method try_transfer_xy_focus_to_primary_view
         method TryTransferXYFocusToPrimaryView slot=10 inputs=2 outputs=1 declaring=Windows.UI.ViewManagement.Core.ICoreInputView2 shape=143
             in struct type=Windows.Foundation.Rect name=origin
             in enum32 type=Windows.UI.ViewManagement.Core.CoreInputViewXYFocusTransferDirection name=direction

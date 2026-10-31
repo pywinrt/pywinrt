@@ -137,5 +137,8 @@ winrt.runtime._internals.alias_method(MediaCapture, "initialize_with_settings_as
 winrt.runtime._internals.alias_method(MediaCapture, "prepare_low_lag_record_to_custom_sink_id_async", "prepare_low_lag_record_to_custom_sink_async")
 winrt.runtime._internals.alias_method(MediaCapture, "start_preview_to_custom_sink_id_async", "start_preview_to_custom_sink_async")
 winrt.runtime._internals.alias_method(MediaCapture, "start_record_to_custom_sink_id_async", "start_record_to_custom_sink_async")
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIMaxPhotoResolution, "LARGE3_M", "LARGE_3M")
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIMaxPhotoResolution, "VERY_LARGE5_M", "VERY_LARGE_5M")
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIPhotoFormat, "JPEG_X_R", "JPEG_XR")
 MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], object]
 RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], object]

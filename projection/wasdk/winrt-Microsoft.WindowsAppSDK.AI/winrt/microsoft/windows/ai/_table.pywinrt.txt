@@ -5,7 +5,7 @@ namespace Microsoft.Windows.AI
 class Microsoft.Windows.AI.AICapabilities static python_type
     py AICapabilities
     factory Microsoft.Windows.AI.IAICapabilitiesStatics
-    method has_a_i_capability static
+    method has_ai_capability static
         method HasAICapability slot=6 inputs=1 outputs=1 declaring=Microsoft.Windows.AI.IAICapabilitiesStatics shape=51 static
             in enum32 type=Microsoft.Windows.AI.AICapabilityCategory name=category
             out boolean return

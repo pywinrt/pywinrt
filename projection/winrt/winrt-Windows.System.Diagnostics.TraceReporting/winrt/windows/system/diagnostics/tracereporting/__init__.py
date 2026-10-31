@@ -17,3 +17,4 @@ __all__ = [
     "PlatformDiagnosticTraceRuntimeInfo",
 ]
 
+winrt.runtime._internals.renamed_enum_member(PlatformDiagnosticActionState, "A_C_POWER_NOT_AVAILABLE", "AC_POWER_NOT_AVAILABLE")

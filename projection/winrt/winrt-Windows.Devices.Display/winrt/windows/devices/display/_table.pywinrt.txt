@@ -115,7 +115,7 @@ enum Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind python_type
     signature enum(Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind;i4)
     constant UNKNOWN 0
     constant HD15 1
-    constant ANALOG_T_V 2
+    constant ANALOG_TV 2
     constant DVI 3
     constant HDMI 4
     constant LVDS 5

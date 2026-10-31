@@ -324,7 +324,7 @@ enum Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding python_
     py AppIndexTextStreamEncoding
     signature enum(Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding;i4)
     constant UTF8 0
-    constant UTF16_L_E 1
+    constant UTF16_LE 1
 
 class Microsoft.Windows.Search.AppContentIndex.AppManagedImageQueryMatch python_type
     py AppManagedImageQueryMatch

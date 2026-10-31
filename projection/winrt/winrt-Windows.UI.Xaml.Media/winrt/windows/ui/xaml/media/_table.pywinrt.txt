@@ -331,7 +331,7 @@ enum Windows.UI.Xaml.Media.ColorInterpolationMode python_type
     py ColorInterpolationMode
     signature enum(Windows.UI.Xaml.Media.ColorInterpolationMode;i4)
     constant SC_RGB_LINEAR_INTERPOLATION 0
-    constant S_RGB_LINEAR_INTERPOLATION 1
+    constant SRGB_LINEAR_INTERPOLATION 1
 
 class Windows.UI.Xaml.Media.CompositeTransform activatable python_type
     py CompositeTransform

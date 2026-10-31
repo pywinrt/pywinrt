@@ -37,3 +37,5 @@ winrt.runtime._internals.alias_method(CryptographicKey, "export_default_private_
 winrt.runtime._internals.alias_method(CryptographicKey, "export_private_key_with_blob_type", "export")
 winrt.runtime._internals.alias_method(CryptographicKey, "export_default_public_key_blob_type", "export_public_key")
 winrt.runtime._internals.alias_method(CryptographicKey, "export_public_key_with_blob_type", "export_public_key")
+winrt.runtime._internals.renamed_static_method(KeyDerivationParameters, "build_for_s_p800108", "build_for_sp800108")
+winrt.runtime._internals.renamed_static_method(KeyDerivationParameters, "build_for_s_p80056a", "build_for_sp80056a")

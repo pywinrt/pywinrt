@@ -661,7 +661,7 @@ class Windows.Devices.PointOfService.BarcodeSymbologies static python_type
     property us_planet static
         get get_UsPlanet slot=92 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeSymbologiesStatics shape=4 static
             out uint32 return
-    property gs1_d_w_code static
+    property gs1_dw_code static
         get get_Gs1DWCode slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IBarcodeSymbologiesStatics2 shape=4 static
             out uint32 return
     method get_name static
@@ -4259,7 +4259,7 @@ class Windows.Devices.PointOfService.PosPrinterCharacterSetIds static python_typ
     property ascii static
         get get_Ascii slot=7 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics shape=4 static
             out uint32 return
-    property utf16_l_e static
+    property utf16_le static
         get get_Utf16LE slot=6 inputs=0 outputs=1 declaring=Windows.Devices.PointOfService.IPosPrinterCharacterSetIdsStatics shape=4 static
             out uint32 return
 
@@ -5226,7 +5226,7 @@ enum Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel python_type
     py UnifiedPosHealthCheckLevel
     signature enum(Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel;i4)
     constant UNKNOWN_HEALTH_CHECK_LEVEL 0
-    constant P_O_S_INTERNAL 1
+    constant POS_INTERNAL 1
     constant EXTERNAL 2
     constant INTERACTIVE 3
 

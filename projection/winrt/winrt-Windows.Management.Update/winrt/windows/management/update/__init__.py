@@ -56,3 +56,4 @@ __all__ = [
     "WindowsUpdateScanCompletedEventArgs",
 ]
 
+winrt.runtime._internals.renamed_enum_member(WindowsSoftwareUpdateCategory, "A_I_COMPONENT", "AI_COMPONENT")

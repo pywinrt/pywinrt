@@ -1187,9 +1187,9 @@ enum Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm python_
     constant ANY 0
     constant TRIPLE_DES 1
     constant DES 2
-    constant R_C2128_BIT 3
-    constant R_C264_BIT 4
-    constant R_C240_BIT 5
+    constant RC2_128_BIT 3
+    constant RC2_64_BIT 4
+    constant RC2_40_BIT 5
 
 enum Windows.ApplicationModel.Email.EmailMailboxSmimeSigningAlgorithm python_type
     py EmailMailboxSmimeSigningAlgorithm

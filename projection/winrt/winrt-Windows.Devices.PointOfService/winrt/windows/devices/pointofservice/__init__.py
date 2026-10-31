@@ -120,6 +120,7 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_static_method(BarcodeScanner, "get_device_selector_with_connection_types", "get_device_selector")
+winrt.runtime._internals.renamed_static_property(BarcodeSymbologies, "gs1_d_w_code", "gs1_dw_code")
 winrt.runtime._internals.alias_static_method(CashDrawer, "get_device_selector_with_connection_types", "get_device_selector")
 winrt.runtime._internals.alias_static_method(ClaimedLineDisplay, "get_device_selector_with_connection_types", "get_device_selector")
 winrt.runtime._internals.alias_method(ClaimedLineDisplay, "try_store_storage_file_bitmap_with_alignment_and_width_async", "try_store_storage_file_bitmap_async")
@@ -133,6 +134,7 @@ winrt.runtime._internals.alias_method(LineDisplayWindow, "try_display_text_at_po
 winrt.runtime._internals.alias_method(LineDisplayWindow, "try_display_text_normal_async", "try_display_text_async")
 winrt.runtime._internals.alias_static_method(MagneticStripeReader, "get_device_selector_with_connection_types", "get_device_selector")
 winrt.runtime._internals.alias_static_method(PosPrinter, "get_device_selector_with_connection_types", "get_device_selector")
+winrt.runtime._internals.renamed_static_property(PosPrinterCharacterSetIds, "utf16_l_e", "utf16_le")
 winrt.runtime._internals.alias_method(ReceiptPrintJob, "cut_paper_default", "cut_paper")
 winrt.runtime._internals.alias_method(ReceiptPrintJob, "print_bitmap_custom_width_standard_align", "print_bitmap")
 winrt.runtime._internals.alias_method(ReceiptPrintJob, "print_bitmap_custom_width_custom_align", "print_custom_aligned_bitmap")
@@ -150,3 +152,4 @@ winrt.runtime._internals.alias_method(_IReceiptOrSlipJob, "print_bitmap_custom_w
 winrt.runtime._internals.alias_method(_IReceiptOrSlipJob, "print_newline", "print_line")
 winrt.runtime._internals.alias_method(_IReceiptOrSlipJob, "set_bitmap_custom_width_standard_align", "set_bitmap")
 winrt.runtime._internals.alias_method(_IReceiptOrSlipJob, "set_bitmap_custom_width_custom_align", "set_custom_aligned_bitmap")
+winrt.runtime._internals.renamed_enum_member(UnifiedPosHealthCheckLevel, "P_O_S_INTERNAL", "POS_INTERNAL")

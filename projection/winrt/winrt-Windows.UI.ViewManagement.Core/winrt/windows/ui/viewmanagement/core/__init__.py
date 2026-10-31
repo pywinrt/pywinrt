@@ -23,3 +23,8 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_method(CoreInputView, "try_show_with_kind", "try_show")
+winrt.runtime._internals.renamed_method(CoreInputView, "try_transfer_x_y_focus_to_primary_view", "try_transfer_xy_focus_to_primary_view")
+winrt.runtime._internals.renamed_method(CoreInputView, "add_x_y_focus_transferred_to_primary_view", "add_xy_focus_transferred_to_primary_view")
+winrt.runtime._internals.renamed_method(CoreInputView, "remove_x_y_focus_transferred_to_primary_view", "remove_xy_focus_transferred_to_primary_view")
+winrt.runtime._internals.renamed_method(CoreInputView, "add_x_y_focus_transferring_from_primary_view", "add_xy_focus_transferring_from_primary_view")
+winrt.runtime._internals.renamed_method(CoreInputView, "remove_x_y_focus_transferring_from_primary_view", "remove_xy_focus_transferring_from_primary_view")

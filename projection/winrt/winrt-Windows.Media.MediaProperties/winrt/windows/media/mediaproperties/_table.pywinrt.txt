@@ -947,7 +947,7 @@ class Windows.Media.MediaProperties.ImageEncodingProperties activatable python_t
     method create_jpeg static
         method CreateJpeg slot=6 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics shape=4 static
             out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
-    method create_jpeg_x_r static
+    method create_jpeg_xr static
         method CreateJpegXR slot=8 inputs=0 outputs=1 declaring=Windows.Media.MediaProperties.IImageEncodingPropertiesStatics shape=4 static
             out class type=Windows.Media.MediaProperties.ImageEncodingProperties return
     method create_png static
@@ -1484,15 +1484,15 @@ enum Windows.Media.MediaProperties.VideoEncodingQuality python_type
     py VideoEncodingQuality
     signature enum(Windows.Media.MediaProperties.VideoEncodingQuality;i4)
     constant AUTO 0
-    constant H_D1080P 1
-    constant H_D720P 2
+    constant HD_1080P 1
+    constant HD_720P 2
     constant WVGA 3
     constant NTSC 4
     constant PAL 5
     constant VGA 6
     constant QVGA 7
-    constant UHD2160P 8
-    constant UHD4320P 9
+    constant UHD_2160P 8
+    constant UHD_4320P 9
 
 class Windows.Media.MediaProperties.Vp9ProfileIds static python_type
     py Vp9ProfileIds

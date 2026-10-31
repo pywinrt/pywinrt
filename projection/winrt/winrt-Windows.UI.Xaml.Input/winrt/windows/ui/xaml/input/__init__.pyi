@@ -330,9 +330,18 @@ class FindNextElementOptions(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride Windows.UI.Xaml.Input.FindNextElementOptions::get_XYFocusNavigationStrategyOverride()
     @_property
+    def xy_focus_navigation_strategy_override(self) -> XYFocusNavigationStrategyOverride: ...
+    # System.Void Windows.UI.Xaml.Input.FindNextElementOptions::put_XYFocusNavigationStrategyOverride(Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride)
+    @xy_focus_navigation_strategy_override.setter
+    def xy_focus_navigation_strategy_override(self, value: XYFocusNavigationStrategyOverride) -> None: ...
+    # Deprecated alias of xy_focus_navigation_strategy_override by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride Windows.UI.Xaml.Input.FindNextElementOptions::get_XYFocusNavigationStrategyOverride()
+    @_property
+    @deprecated("Use xy_focus_navigation_strategy_override instead.")
     def x_y_focus_navigation_strategy_override(self) -> XYFocusNavigationStrategyOverride: ...
     # System.Void Windows.UI.Xaml.Input.FindNextElementOptions::put_XYFocusNavigationStrategyOverride(Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride)
     @x_y_focus_navigation_strategy_override.setter
+    @deprecated("Use xy_focus_navigation_strategy_override instead.")
     def x_y_focus_navigation_strategy_override(self, value: XYFocusNavigationStrategyOverride) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Input.FindNextElementOptions::get_SearchRoot()
     @_property

@@ -545,8 +545,16 @@ class KeyDerivationParameters_Static(winrt.system.Object_Static):
     # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForPbkdf2(Windows.Storage.Streams.IBuffer,System.UInt32)
     def build_for_pbkdf2(cls, pbkdf2_salt: winrt.system.ReadableBuffer, iteration_count: winrt.system.UInt32 | typing.SupportsIndex, /) -> KeyDerivationParameters: ...
     # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForSP800108(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
+    def build_for_sp800108(cls, label: winrt.system.ReadableBuffer, context: winrt.system.ReadableBuffer, /) -> KeyDerivationParameters: ...
+    # Deprecated alias of build_for_sp800108() by the name it was published under.
+    # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForSP800108(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
+    @deprecated("Use build_for_sp800108() instead.")
     def build_for_s_p800108(cls, label: winrt.system.ReadableBuffer, context: winrt.system.ReadableBuffer, /) -> KeyDerivationParameters: ...
     # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForSP80056a(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
+    def build_for_sp80056a(cls, algorithm_id: winrt.system.ReadableBuffer, party_u_info: winrt.system.ReadableBuffer, party_v_info: winrt.system.ReadableBuffer, supp_pub_info: winrt.system.ReadableBuffer, supp_priv_info: winrt.system.ReadableBuffer, /) -> KeyDerivationParameters: ...
+    # Deprecated alias of build_for_sp80056a() by the name it was published under.
+    # Windows.Security.Cryptography.Core.KeyDerivationParameters Windows.Security.Cryptography.Core.KeyDerivationParameters::BuildForSP80056a(Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer,Windows.Storage.Streams.IBuffer)
+    @deprecated("Use build_for_sp80056a() instead.")
     def build_for_s_p80056a(cls, algorithm_id: winrt.system.ReadableBuffer, party_u_info: winrt.system.ReadableBuffer, party_v_info: winrt.system.ReadableBuffer, supp_pub_info: winrt.system.ReadableBuffer, supp_priv_info: winrt.system.ReadableBuffer, /) -> KeyDerivationParameters: ...
 
 @typing.final

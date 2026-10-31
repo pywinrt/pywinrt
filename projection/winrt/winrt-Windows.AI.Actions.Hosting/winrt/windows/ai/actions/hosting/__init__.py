@@ -15,3 +15,4 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_method(ActionCatalog, "get_actions_for_inputs2", "get_actions_for_inputs")
+winrt.runtime._internals.renamed_property(ActionDefinition, "uses_generative_a_i", "uses_generative_ai")

@@ -83,6 +83,11 @@ class ActionDefinition(windows_foundation.IClosable, winrt.system.Object):
     def schema_version(self) -> winrt.system.UInt32: ...
     # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_UsesGenerativeAI()
     @_property
+    def uses_generative_ai(self) -> bool: ...
+    # Deprecated alias of uses_generative_ai by the name it was published under.
+    # System.Boolean Windows.AI.Actions.Hosting.ActionDefinition::get_UsesGenerativeAI()
+    @_property
+    @deprecated("Use uses_generative_ai instead.")
     def uses_generative_a_i(self) -> bool: ...
     # System.String Windows.AI.Actions.Hosting.ActionDefinition::get_PackageRelativeApplicationId()
     @_property

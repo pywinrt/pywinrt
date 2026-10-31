@@ -286,6 +286,11 @@ class GattCharacteristicUuids_Static(winrt.system.Object_Static):
     def rsc_measurement(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids::get_SCControlPoint()
     @_property
+    def sc_control_point(cls) -> _uuid.UUID: ...
+    # Deprecated alias of sc_control_point by the name it was published under.
+    # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids::get_SCControlPoint()
+    @_property
+    @deprecated("Use sc_control_point instead.")
     def s_c_control_point(cls) -> _uuid.UUID: ...
     # System.Guid Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids::get_SensorLocation()
     @_property
@@ -1238,15 +1243,33 @@ class GattServiceProviderAdvertisingParameters(winrt.system.Object):
     def service_data(self, value: winrt.system.ReadableBuffer) -> None: ...
     # System.Boolean Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::get_UseLowEnergyUncoded2MPhyAsSecondaryPhy()
     @_property
+    def use_low_energy_uncoded_2m_phy_as_secondary_phy(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::put_UseLowEnergyUncoded2MPhyAsSecondaryPhy(System.Boolean)
+    @use_low_energy_uncoded_2m_phy_as_secondary_phy.setter
+    def use_low_energy_uncoded_2m_phy_as_secondary_phy(self, value: bool) -> None: ...
+    # Deprecated alias of use_low_energy_uncoded_2m_phy_as_secondary_phy by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::get_UseLowEnergyUncoded2MPhyAsSecondaryPhy()
+    @_property
+    @deprecated("Use use_low_energy_uncoded_2m_phy_as_secondary_phy instead.")
     def use_low_energy_uncoded2_m_phy_as_secondary_phy(self) -> bool: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::put_UseLowEnergyUncoded2MPhyAsSecondaryPhy(System.Boolean)
     @use_low_energy_uncoded2_m_phy_as_secondary_phy.setter
+    @deprecated("Use use_low_energy_uncoded_2m_phy_as_secondary_phy instead.")
     def use_low_energy_uncoded2_m_phy_as_secondary_phy(self, value: bool) -> None: ...
     # System.Boolean Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::get_UseLowEnergyUncoded1MPhyAsSecondaryPhy()
     @_property
+    def use_low_energy_uncoded_1m_phy_as_secondary_phy(self) -> bool: ...
+    # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::put_UseLowEnergyUncoded1MPhyAsSecondaryPhy(System.Boolean)
+    @use_low_energy_uncoded_1m_phy_as_secondary_phy.setter
+    def use_low_energy_uncoded_1m_phy_as_secondary_phy(self, value: bool) -> None: ...
+    # Deprecated alias of use_low_energy_uncoded_1m_phy_as_secondary_phy by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::get_UseLowEnergyUncoded1MPhyAsSecondaryPhy()
+    @_property
+    @deprecated("Use use_low_energy_uncoded_1m_phy_as_secondary_phy instead.")
     def use_low_energy_uncoded1_m_phy_as_secondary_phy(self) -> bool: ...
     # System.Void Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters::put_UseLowEnergyUncoded1MPhyAsSecondaryPhy(System.Boolean)
     @use_low_energy_uncoded1_m_phy_as_secondary_phy.setter
+    @deprecated("Use use_low_energy_uncoded_1m_phy_as_secondary_phy instead.")
     def use_low_energy_uncoded1_m_phy_as_secondary_phy(self, value: bool) -> None: ...
 
 @typing.final

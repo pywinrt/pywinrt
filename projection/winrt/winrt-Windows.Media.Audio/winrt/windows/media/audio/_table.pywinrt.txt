@@ -2558,12 +2558,12 @@ class Windows.Media.Audio.ReverbEffectDefinition python_type
         ctor .ctor slot=6 inputs=1 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinitionFactory shape=51
             in class type=Windows.Media.Audio.AudioGraph name=audioGraph
             out class type=Windows.Media.Audio.ReverbEffectDefinition return
-    property high_e_q_gain
+    property high_eq_gain
         get get_HighEQGain slot=31 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
         put put_HighEQGain slot=30 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
-    property high_e_q_cutoff
+    property high_eq_cutoff
         get get_HighEQCutoff slot=33 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
         put put_HighEQCutoff slot=32 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
@@ -2608,12 +2608,12 @@ class Windows.Media.Audio.ReverbEffectDefinition python_type
             out uint8 return
         put put_PositionLeft slot=14 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
-    property low_e_q_gain
+    property low_eq_gain
         get get_LowEQGain slot=27 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
         put put_LowEQGain slot=26 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             in uint8 name=value
-    property low_e_q_cutoff
+    property low_eq_cutoff
         get get_LowEQCutoff slot=29 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out uint8 return
         put put_LowEQCutoff slot=28 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
@@ -2668,7 +2668,7 @@ class Windows.Media.Audio.ReverbEffectDefinition python_type
             out double return
         put put_RoomFilterMain slot=36 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
             in double name=value
-    property room_filter_h_f
+    property room_filter_hf
         get get_RoomFilterHF slot=39 inputs=0 outputs=1 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=4
             out double return
         put put_RoomFilterHF slot=38 inputs=1 outputs=0 declaring=Windows.Media.Audio.IReverbEffectDefinition shape=2
@@ -2763,10 +2763,10 @@ class Windows.Media.Audio.SpatialAudioFormatSubtype static python_type
     py SpatialAudioFormatSubtype
     factory Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics
     factory Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2
-    property d_t_s_headphone_x static
+    property dts_headphone_x static
         get get_DTSHeadphoneX slot=10 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
-    property d_t_s_x_ultra static
+    property dtsx_ultra static
         get get_DTSXUltra slot=11 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
     property dolby_atmos_for_headphones static
@@ -2781,7 +2781,7 @@ class Windows.Media.Audio.SpatialAudioFormatSubtype static python_type
     property windows_sonic static
         get get_WindowsSonic slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics shape=4 static
             out string return
-    property d_t_s_x_for_home_theater static
+    property dtsx_for_home_theater static
         get get_DTSXForHomeTheater slot=6 inputs=0 outputs=1 declaring=Windows.Media.Audio.ISpatialAudioFormatSubtypeStatics2 shape=4 static
             out string return
 

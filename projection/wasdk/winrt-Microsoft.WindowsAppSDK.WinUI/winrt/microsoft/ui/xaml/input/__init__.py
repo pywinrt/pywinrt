@@ -72,6 +72,7 @@ __all__ = [
     "TappedEventHandler",
 ]
 
+winrt.runtime._internals.renamed_property(FindNextElementOptions, "x_y_focus_navigation_strategy_override", "xy_focus_navigation_strategy_override")
 DoubleTappedEventHandler = typing.Callable[[winrt.system.Object, DoubleTappedRoutedEventArgs], object]
 HoldingEventHandler = typing.Callable[[winrt.system.Object, HoldingRoutedEventArgs], object]
 KeyEventHandler = typing.Callable[[winrt.system.Object, KeyRoutedEventArgs], object]

@@ -109,6 +109,7 @@ winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "get_ac
 winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "get_access_status_for_modern_standby_for_application", "get_access_status_for_modern_standby")
 winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "remove_access_for_application", "remove_access")
 winrt.runtime._internals.alias_static_method(BackgroundExecutionManager, "request_access_for_application_async", "request_access_async")
+winrt.runtime._internals.renamed_property(BluetoothLEAdvertisementWatcherTrigger, "use_uncoded1_m_phy", "use_uncoded_1m_phy")
 winrt.runtime._internals.alias_method(DeviceServicingTrigger, "request_async_simple", "request_async")
 winrt.runtime._internals.alias_method(DeviceServicingTrigger, "request_async_with_arguments", "request_async")
 winrt.runtime._internals.alias_method(DeviceUseTrigger, "request_async_simple", "request_async")

@@ -2581,22 +2581,52 @@ class UIElement_Static(DependencyObject_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusDownNavigationStrategyProperty()
     @_property
     @typing.final
+    def xy_focus_down_navigation_strategy_property(cls) -> DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusDownNavigationStrategyProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_down_navigation_strategy_property instead.")
     def x_y_focus_down_navigation_strategy_property(cls) -> DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusKeyboardNavigationProperty()
     @_property
     @typing.final
+    def xy_focus_keyboard_navigation_property(cls) -> DependencyProperty: ...
+    # Deprecated alias of xy_focus_keyboard_navigation_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusKeyboardNavigationProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_keyboard_navigation_property instead.")
     def x_y_focus_keyboard_navigation_property(cls) -> DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusLeftNavigationStrategyProperty()
     @_property
     @typing.final
+    def xy_focus_left_navigation_strategy_property(cls) -> DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusLeftNavigationStrategyProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_left_navigation_strategy_property instead.")
     def x_y_focus_left_navigation_strategy_property(cls) -> DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusRightNavigationStrategyProperty()
     @_property
     @typing.final
+    def xy_focus_right_navigation_strategy_property(cls) -> DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusRightNavigationStrategyProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_right_navigation_strategy_property instead.")
     def x_y_focus_right_navigation_strategy_property(cls) -> DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusUpNavigationStrategyProperty()
     @_property
     @typing.final
+    def xy_focus_up_navigation_strategy_property(cls) -> DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_XYFocusUpNavigationStrategyProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_up_navigation_strategy_property instead.")
     def x_y_focus_up_navigation_strategy_property(cls) -> DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.UIElement::get_TabFocusNavigationProperty()
     @_property
@@ -3194,24 +3224,54 @@ class UIElement(DependencyObject, windows_ui_composition.IVisualElement, windows
     def high_contrast_adjustment(self, value: ElementHighContrastAdjustment) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusRightNavigationStrategy()
     @_property
+    def xy_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.UIElement::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_right_navigation_strategy.setter
+    @typing.final
+    def xy_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusRightNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.UIElement::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_right_navigation_strategy.setter
     @typing.final
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode Windows.UI.Xaml.UIElement::get_XYFocusKeyboardNavigation()
     @_property
+    def xy_focus_keyboard_navigation(self) -> windows_ui_xaml_input.XYFocusKeyboardNavigationMode: ...
+    # System.Void Windows.UI.Xaml.UIElement::put_XYFocusKeyboardNavigation(Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode)
+    @xy_focus_keyboard_navigation.setter
+    @typing.final
+    def xy_focus_keyboard_navigation(self, value: windows_ui_xaml_input.XYFocusKeyboardNavigationMode) -> None: ...
+    # Deprecated alias of xy_focus_keyboard_navigation by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode Windows.UI.Xaml.UIElement::get_XYFocusKeyboardNavigation()
+    @_property
+    @deprecated("Use xy_focus_keyboard_navigation instead.")
     def x_y_focus_keyboard_navigation(self) -> windows_ui_xaml_input.XYFocusKeyboardNavigationMode: ...
     # System.Void Windows.UI.Xaml.UIElement::put_XYFocusKeyboardNavigation(Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode)
     @x_y_focus_keyboard_navigation.setter
     @typing.final
+    @deprecated("Use xy_focus_keyboard_navigation instead.")
     def x_y_focus_keyboard_navigation(self, value: windows_ui_xaml_input.XYFocusKeyboardNavigationMode) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusDownNavigationStrategy()
     @_property
+    def xy_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.UIElement::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_down_navigation_strategy.setter
+    @typing.final
+    def xy_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusDownNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.UIElement::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_down_navigation_strategy.setter
     @typing.final
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.KeyboardNavigationMode Windows.UI.Xaml.UIElement::get_TabFocusNavigation()
     @_property
@@ -3229,10 +3289,20 @@ class UIElement(DependencyObject, windows_ui_composition.IVisualElement, windows
     def key_tip_vertical_offset(self, value: winrt.system.Double) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusUpNavigationStrategy()
     @_property
+    def xy_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.UIElement::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_up_navigation_strategy.setter
+    @typing.final
+    def xy_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusUpNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.UIElement::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_up_navigation_strategy.setter
     @typing.final
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.KeyTipPlacementMode Windows.UI.Xaml.UIElement::get_KeyTipPlacementMode()
     @_property
@@ -3243,10 +3313,20 @@ class UIElement(DependencyObject, windows_ui_composition.IVisualElement, windows
     def key_tip_placement_mode(self, value: windows_ui_xaml_input.KeyTipPlacementMode) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusLeftNavigationStrategy()
     @_property
+    def xy_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.UIElement::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_left_navigation_strategy.setter
+    @typing.final
+    def xy_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.UIElement::get_XYFocusLeftNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.UIElement::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_left_navigation_strategy.setter
     @typing.final
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.Foundation.Collections.IVector`1<Windows.UI.Xaml.Media.XamlLight> Windows.UI.Xaml.UIElement::get_Lights()
     @_property

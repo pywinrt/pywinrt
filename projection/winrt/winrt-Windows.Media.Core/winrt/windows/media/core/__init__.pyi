@@ -561,6 +561,11 @@ class CodecQuery(winrt.system.Object):
 class CodecSubtypes_Static(winrt.system.Object_Static):
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioLossless()
     @_property
+    def audio_format_wm_audio_lossless(cls) -> str: ...
+    # Deprecated alias of audio_format_wm_audio_lossless by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioLossless()
+    @_property
+    @deprecated("Use audio_format_wm_audio_lossless instead.")
     def audio_format_w_m_audio_lossless(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAac()
     @_property
@@ -573,21 +578,51 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def audio_format_alac(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrNB()
     @_property
+    def audio_format_amr_nb(cls) -> str: ...
+    # Deprecated alias of audio_format_amr_nb by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrNB()
+    @_property
+    @deprecated("Use audio_format_amr_nb instead.")
     def audio_format_amr_n_b(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrWB()
     @_property
+    def audio_format_amr_wb(cls) -> str: ...
+    # Deprecated alias of audio_format_amr_wb by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrWB()
+    @_property
+    @deprecated("Use audio_format_amr_wb instead.")
     def audio_format_amr_w_b(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrWP()
     @_property
+    def audio_format_amr_wp(cls) -> str: ...
+    # Deprecated alias of audio_format_amr_wp by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatAmrWP()
+    @_property
+    @deprecated("Use audio_format_amr_wp instead.")
     def audio_format_amr_w_p(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyAC3()
     @_property
+    def audio_format_dolby_ac3(cls) -> str: ...
+    # Deprecated alias of audio_format_dolby_ac3 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyAC3()
+    @_property
+    @deprecated("Use audio_format_dolby_ac3 instead.")
     def audio_format_dolby_a_c3(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyAC3Spdif()
     @_property
+    def audio_format_dolby_ac3_spdif(cls) -> str: ...
+    # Deprecated alias of audio_format_dolby_ac3_spdif by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyAC3Spdif()
+    @_property
+    @deprecated("Use audio_format_dolby_ac3_spdif instead.")
     def audio_format_dolby_a_c3_spdif(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyDDPlus()
     @_property
+    def audio_format_dolby_dd_plus(cls) -> str: ...
+    # Deprecated alias of audio_format_dolby_dd_plus by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDolbyDDPlus()
+    @_property
+    @deprecated("Use audio_format_dolby_dd_plus instead.")
     def audio_format_dolby_d_d_plus(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatDrm()
     @_property
@@ -603,6 +638,11 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def audio_format_float(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatMP3()
     @_property
+    def audio_format_mp3(cls) -> str: ...
+    # Deprecated alias of audio_format_mp3 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatMP3()
+    @_property
+    @deprecated("Use audio_format_mp3 instead.")
     def audio_format_m_p3(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatMPeg()
     @_property
@@ -618,24 +658,54 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def audio_format_pcm(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP43()
     @_property
+    def video_format_mp43(cls) -> str: ...
+    # Deprecated alias of video_format_mp43 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP43()
+    @_property
+    @deprecated("Use video_format_mp43 instead.")
     def video_format_m_p43(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioV8()
     @_property
+    def audio_format_wm_audio_v8(cls) -> str: ...
+    # Deprecated alias of audio_format_wm_audio_v8 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioV8()
+    @_property
+    @deprecated("Use audio_format_wm_audio_v8 instead.")
     def audio_format_w_m_audio_v8(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioV9()
     @_property
+    def audio_format_wm_audio_v9(cls) -> str: ...
+    # Deprecated alias of audio_format_wm_audio_v9 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWMAudioV9()
+    @_property
+    @deprecated("Use audio_format_wm_audio_v9 instead.")
     def audio_format_w_m_audio_v9(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_AudioFormatWmaSpdif()
     @_property
     def audio_format_wma_spdif(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormat420O()
     @_property
+    def video_format_420o(cls) -> str: ...
+    # Deprecated alias of video_format_420o by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormat420O()
+    @_property
+    @deprecated("Use video_format_420o instead.")
     def video_format420_o(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatDV25()
     @_property
+    def video_format_dv25(cls) -> str: ...
+    # Deprecated alias of video_format_dv25 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatDV25()
+    @_property
+    @deprecated("Use video_format_dv25 instead.")
     def video_format_d_v25(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatDV50()
     @_property
+    def video_format_dv50(cls) -> str: ...
+    # Deprecated alias of video_format_dv50 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatDV50()
+    @_property
+    @deprecated("Use video_format_dv50 instead.")
     def video_format_d_v50(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatDvc()
     @_property
@@ -660,6 +730,11 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def video_format_h264(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatH264ES()
     @_property
+    def video_format_h264_es(cls) -> str: ...
+    # Deprecated alias of video_format_h264_es by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatH264ES()
+    @_property
+    @deprecated("Use video_format_h264_es instead.")
     def video_format_h264_e_s(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatH265()
     @_property
@@ -669,15 +744,30 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def video_format_hevc(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatHevcES()
     @_property
+    def video_format_hevc_es(cls) -> str: ...
+    # Deprecated alias of video_format_hevc_es by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatHevcES()
+    @_property
+    @deprecated("Use video_format_hevc_es instead.")
     def video_format_hevc_e_s(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatM4S2()
     @_property
     def video_format_m4_s2(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP4S()
     @_property
+    def video_format_mp4s(cls) -> str: ...
+    # Deprecated alias of video_format_mp4s by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP4S()
+    @_property
+    @deprecated("Use video_format_mp4s instead.")
     def video_format_m_p4_s(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP4V()
     @_property
+    def video_format_mp4v(cls) -> str: ...
+    # Deprecated alias of video_format_mp4v by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMP4V()
+    @_property
+    @deprecated("Use video_format_mp4v instead.")
     def video_format_m_p4_v(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatMjpg()
     @_property
@@ -696,9 +786,19 @@ class CodecSubtypes_Static(winrt.system.Object_Static):
     def video_format_mss2(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatVP80()
     @_property
+    def video_format_vp80(cls) -> str: ...
+    # Deprecated alias of video_format_vp80 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatVP80()
+    @_property
+    @deprecated("Use video_format_vp80 instead.")
     def video_format_v_p80(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatVP90()
     @_property
+    def video_format_vp90(cls) -> str: ...
+    # Deprecated alias of video_format_vp90 by the name it was published under.
+    # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatVP90()
+    @_property
+    @deprecated("Use video_format_vp90 instead.")
     def video_format_v_p90(cls) -> str: ...
     # System.String Windows.Media.Core.CodecSubtypes::get_VideoFormatWmv1()
     @_property

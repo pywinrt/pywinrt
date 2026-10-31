@@ -359,7 +359,7 @@ class UnifiedPosErrorSeverity(enum.IntEnum):
 
 class UnifiedPosHealthCheckLevel(enum.IntEnum):
     UNKNOWN_HEALTH_CHECK_LEVEL = 0
-    P_O_S_INTERNAL = 1
+    POS_INTERNAL = 1
     EXTERNAL = 2
     INTERACTIVE = 3
 
@@ -794,6 +794,11 @@ class BarcodeSymbologies_Static(winrt.system.Object_Static):
     def us_planet(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.PointOfService.BarcodeSymbologies::get_Gs1DWCode()
     @_property
+    def gs1_dw_code(cls) -> winrt.system.UInt32: ...
+    # Deprecated alias of gs1_dw_code by the name it was published under.
+    # System.UInt32 Windows.Devices.PointOfService.BarcodeSymbologies::get_Gs1DWCode()
+    @_property
+    @deprecated("Use gs1_dw_code instead.")
     def gs1_d_w_code(cls) -> winrt.system.UInt32: ...
 
 @typing.final
@@ -2518,6 +2523,11 @@ class PosPrinterCharacterSetIds_Static(winrt.system.Object_Static):
     def ascii(cls) -> winrt.system.UInt32: ...
     # System.UInt32 Windows.Devices.PointOfService.PosPrinterCharacterSetIds::get_Utf16LE()
     @_property
+    def utf16_le(cls) -> winrt.system.UInt32: ...
+    # Deprecated alias of utf16_le by the name it was published under.
+    # System.UInt32 Windows.Devices.PointOfService.PosPrinterCharacterSetIds::get_Utf16LE()
+    @_property
+    @deprecated("Use utf16_le instead.")
     def utf16_l_e(cls) -> winrt.system.UInt32: ...
 
 @typing.final

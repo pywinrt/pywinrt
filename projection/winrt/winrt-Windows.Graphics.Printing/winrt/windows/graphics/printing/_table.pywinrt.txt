@@ -565,10 +565,10 @@ enum Windows.Graphics.Printing.PrintMediaSize python_type
     constant ISO_C7 48
     constant ISO_C8 49
     constant ISO_C9 50
-    constant ISO_D_L_ENVELOPE 51
-    constant ISO_D_L_ENVELOPE_ROTATED 52
-    constant ISO_S_R_A3 53
-    constant JAPAN2_L_PHOTO 54
+    constant ISO_DL_ENVELOPE 51
+    constant ISO_DL_ENVELOPE_ROTATED 52
+    constant ISO_SRA3 53
+    constant JAPAN_2L_PHOTO 54
     constant JAPAN_CHOU3_ENVELOPE 55
     constant JAPAN_CHOU3_ENVELOPE_ROTATED 56
     constant JAPAN_CHOU4_ENVELOPE 57
@@ -653,15 +653,15 @@ enum Windows.Graphics.Printing.PrintMediaSize python_type
     constant OTHER_METRIC_ITALIAN_ENVELOPE 136
     constant PRC10_ENVELOPE 137
     constant PRC10_ENVELOPE_ROTATED 138
-    constant PRC16_K 139
-    constant PRC16_K_ROTATED 140
+    constant PRC16K 139
+    constant PRC16K_ROTATED 140
     constant PRC1_ENVELOPE 141
     constant PRC1_ENVELOPE_ROTATED 142
     constant PRC2_ENVELOPE 143
     constant PRC2_ENVELOPE_ROTATED 144
-    constant PRC32_K 145
-    constant PRC32_K_BIG 146
-    constant PRC32_K_ROTATED 147
+    constant PRC32K 145
+    constant PRC32K_BIG 146
+    constant PRC32K_ROTATED 147
     constant PRC3_ENVELOPE 148
     constant PRC3_ENVELOPE_ROTATED 149
     constant PRC4_ENVELOPE 150

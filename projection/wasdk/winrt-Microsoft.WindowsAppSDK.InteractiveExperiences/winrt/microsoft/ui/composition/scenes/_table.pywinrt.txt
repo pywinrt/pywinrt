@@ -619,7 +619,7 @@ class Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent python_type
             out class type=Microsoft.UI.Composition.Scenes.SceneMaterial return
         put put_Material slot=7 inputs=1 outputs=0 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             in class type=Microsoft.UI.Composition.Scenes.SceneMaterial name=value
-    property u_v_mappings
+    property uv_mappings
         get get_UVMappings slot=10 inputs=0 outputs=1 declaring=Microsoft.UI.Composition.Scenes.ISceneMeshRendererComponent shape=4
             out class type=Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap return
     method create static

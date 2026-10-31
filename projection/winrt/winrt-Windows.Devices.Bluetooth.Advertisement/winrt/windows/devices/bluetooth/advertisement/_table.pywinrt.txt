@@ -193,8 +193,8 @@ enum Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType pyt
     py BluetoothLEAdvertisementPhyType
     signature enum(Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType;i4)
     constant UNSPECIFIED 0
-    constant UNCODED1_M_PHY 1
-    constant UNCODED2_M_PHY 2
+    constant UNCODED_1M_PHY 1
+    constant UNCODED_2M_PHY 2
     constant CODED_PHY 3
 
 class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisher activatable python_type
@@ -412,7 +412,7 @@ class Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher ac
             out boolean return
         put put_AllowExtendedAdvertisements slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher2 shape=4
             in boolean name=value
-    property use_uncoded1_m_phy
+    property use_uncoded_1m_phy
         get get_UseUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4
             out boolean return
         put put_UseUncoded1MPhy slot=7 inputs=1 outputs=0 declaring=Windows.Devices.Bluetooth.Advertisement.IBluetoothLEAdvertisementWatcher3 shape=4

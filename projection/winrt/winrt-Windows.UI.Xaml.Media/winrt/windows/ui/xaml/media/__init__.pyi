@@ -155,7 +155,7 @@ class BrushMappingMode(enum.IntEnum):
 
 class ColorInterpolationMode(enum.IntEnum):
     SC_RGB_LINEAR_INTERPOLATION = 0
-    S_RGB_LINEAR_INTERPOLATION = 1
+    SRGB_LINEAR_INTERPOLATION = 1
 
 class ElementCompositeMode(enum.IntEnum):
     INHERIT = 0

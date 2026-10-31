@@ -4,6 +4,7 @@ import collections.abc as _cabc
 import enum
 import typing
 from builtins import property as _property
+from typing_extensions import deprecated
 
 import winrt.system
 import winrt.windows.foundation as windows_foundation
@@ -203,27 +204,67 @@ class ContentLink_Static(Inline_Static):
     def tab_index_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownNavigationStrategyProperty()
     @_property
+    def xy_focus_down_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_down_navigation_strategy_property instead.")
     def x_y_focus_down_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownProperty()
     @_property
+    def xy_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownProperty()
+    @_property
+    @deprecated("Use xy_focus_down_property instead.")
     def x_y_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftNavigationStrategyProperty()
     @_property
+    def xy_focus_left_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_left_navigation_strategy_property instead.")
     def x_y_focus_left_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftProperty()
     @_property
+    def xy_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftProperty()
+    @_property
+    @deprecated("Use xy_focus_left_property instead.")
     def x_y_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightNavigationStrategyProperty()
     @_property
+    def xy_focus_right_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_right_navigation_strategy_property instead.")
     def x_y_focus_right_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightProperty()
     @_property
+    def xy_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightProperty()
+    @_property
+    @deprecated("Use xy_focus_right_property instead.")
     def x_y_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpNavigationStrategyProperty()
     @_property
+    def xy_focus_up_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_up_navigation_strategy_property instead.")
     def x_y_focus_up_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpProperty()
     @_property
+    def xy_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpProperty()
+    @_property
+    @deprecated("Use xy_focus_up_property instead.")
     def x_y_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
@@ -245,51 +286,123 @@ class ContentLink(Inline, metaclass=ContentLink_Static):
     def remove_lost_focus(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpNavigationStrategy()
     @_property
+    def xy_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_up_navigation_strategy.setter
+    def xy_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUpNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_up_navigation_strategy.setter
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUp()
     @_property
+    def xy_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_up.setter
+    def xy_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_up by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusUp()
+    @_property
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_up.setter
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightNavigationStrategy()
     @_property
+    def xy_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_right_navigation_strategy.setter
+    def xy_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRightNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_right_navigation_strategy.setter
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRight()
     @_property
+    def xy_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_right.setter
+    def xy_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_right by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusRight()
+    @_property
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_right.setter
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftNavigationStrategy()
     @_property
+    def xy_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_left_navigation_strategy.setter
+    def xy_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeftNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_left_navigation_strategy.setter
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeft()
     @_property
+    def xy_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_left.setter
+    def xy_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_left by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusLeft()
+    @_property
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_left.setter
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownNavigationStrategy()
     @_property
+    def xy_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_down_navigation_strategy.setter
+    def xy_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDownNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_down_navigation_strategy.setter
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDown()
     @_property
+    def xy_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_down.setter
+    def xy_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_down by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.ContentLink::get_XYFocusDown()
+    @_property
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.ContentLink::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_down.setter
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # System.Int32 Windows.UI.Xaml.Documents.ContentLink::get_TabIndex()
     @_property
@@ -508,30 +621,70 @@ class Hyperlink_Static(Span_Static):
     def element_sound_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownProperty()
     @_property
+    def xy_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownProperty()
+    @_property
+    @deprecated("Use xy_focus_down_property instead.")
     def x_y_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftProperty()
     @_property
+    def xy_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftProperty()
+    @_property
+    @deprecated("Use xy_focus_left_property instead.")
     def x_y_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightProperty()
     @_property
+    def xy_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightProperty()
+    @_property
+    @deprecated("Use xy_focus_right_property instead.")
     def x_y_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpProperty()
     @_property
+    def xy_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpProperty()
+    @_property
+    @deprecated("Use xy_focus_up_property instead.")
     def x_y_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_FocusStateProperty()
     @_property
     def focus_state_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownNavigationStrategyProperty()
     @_property
+    def xy_focus_down_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_down_navigation_strategy_property instead.")
     def x_y_focus_down_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftNavigationStrategyProperty()
     @_property
+    def xy_focus_left_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_left_navigation_strategy_property instead.")
     def x_y_focus_left_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightNavigationStrategyProperty()
     @_property
+    def xy_focus_right_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_right_navigation_strategy_property instead.")
     def x_y_focus_right_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpNavigationStrategyProperty()
     @_property
+    def xy_focus_up_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpNavigationStrategyProperty()
+    @_property
+    @deprecated("Use xy_focus_up_navigation_strategy_property instead.")
     def x_y_focus_up_navigation_strategy_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Documents.Hyperlink::get_IsTabStopProperty()
     @_property
@@ -571,27 +724,63 @@ class Hyperlink(Span, metaclass=Hyperlink_Static):
     def underline_style(self, value: UnderlineStyle) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUp()
     @_property
+    def xy_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_up.setter
+    def xy_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_up by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUp()
+    @_property
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_up.setter
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRight()
     @_property
+    def xy_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_right.setter
+    def xy_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_right by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRight()
+    @_property
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_right.setter
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeft()
     @_property
+    def xy_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_left.setter
+    def xy_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_left by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeft()
+    @_property
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_left.setter
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDown()
     @_property
+    def xy_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_down.setter
+    def xy_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_down by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDown()
+    @_property
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_down.setter
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.ElementSoundMode Windows.UI.Xaml.Documents.Hyperlink::get_ElementSoundMode()
     @_property
@@ -601,27 +790,63 @@ class Hyperlink(Span, metaclass=Hyperlink_Static):
     def element_sound_mode(self, value: windows_ui_xaml.ElementSoundMode) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpNavigationStrategy()
     @_property
+    def xy_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_up_navigation_strategy.setter
+    def xy_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_up_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusUpNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusUpNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_up_navigation_strategy.setter
+    @deprecated("Use xy_focus_up_navigation_strategy instead.")
     def x_y_focus_up_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightNavigationStrategy()
     @_property
+    def xy_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_right_navigation_strategy.setter
+    def xy_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_right_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusRightNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusRightNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_right_navigation_strategy.setter
+    @deprecated("Use xy_focus_right_navigation_strategy instead.")
     def x_y_focus_right_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftNavigationStrategy()
     @_property
+    def xy_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_left_navigation_strategy.setter
+    def xy_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_left_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusLeftNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusLeftNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_left_navigation_strategy.setter
+    @deprecated("Use xy_focus_left_navigation_strategy instead.")
     def x_y_focus_left_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownNavigationStrategy()
     @_property
+    def xy_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
+    # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
+    @xy_focus_down_navigation_strategy.setter
+    def xy_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
+    # Deprecated alias of xy_focus_down_navigation_strategy by the name it was published under.
+    # Windows.UI.Xaml.Input.XYFocusNavigationStrategy Windows.UI.Xaml.Documents.Hyperlink::get_XYFocusDownNavigationStrategy()
+    @_property
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self) -> windows_ui_xaml_input.XYFocusNavigationStrategy: ...
     # System.Void Windows.UI.Xaml.Documents.Hyperlink::put_XYFocusDownNavigationStrategy(Windows.UI.Xaml.Input.XYFocusNavigationStrategy)
     @x_y_focus_down_navigation_strategy.setter
+    @deprecated("Use xy_focus_down_navigation_strategy instead.")
     def x_y_focus_down_navigation_strategy(self, value: windows_ui_xaml_input.XYFocusNavigationStrategy) -> None: ...
     # Windows.UI.Xaml.FocusState Windows.UI.Xaml.Documents.Hyperlink::get_FocusState()
     @_property

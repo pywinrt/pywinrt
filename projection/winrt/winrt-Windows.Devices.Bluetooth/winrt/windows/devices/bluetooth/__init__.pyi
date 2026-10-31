@@ -226,6 +226,11 @@ class BluetoothAdapter(winrt.system.Object, metaclass=BluetoothAdapter_Static):
     def is_low_energy_coded_phy_supported(self) -> bool: ...
     # System.Boolean Windows.Devices.Bluetooth.BluetoothAdapter::get_IsLowEnergyUncoded2MPhySupported()
     @_property
+    def is_low_energy_uncoded_2m_phy_supported(self) -> bool: ...
+    # Deprecated alias of is_low_energy_uncoded_2m_phy_supported by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.BluetoothAdapter::get_IsLowEnergyUncoded2MPhySupported()
+    @_property
+    @deprecated("Use is_low_energy_uncoded_2m_phy_supported instead.")
     def is_low_energy_uncoded2_m_phy_supported(self) -> bool: ...
 
 @typing.final
@@ -593,9 +598,19 @@ class BluetoothLEConnectionPhyInfo(winrt.system.Object):
     def is_coded_phy(self) -> bool: ...
     # System.Boolean Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo::get_IsUncoded1MPhy()
     @_property
+    def is_uncoded_1m_phy(self) -> bool: ...
+    # Deprecated alias of is_uncoded_1m_phy by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo::get_IsUncoded1MPhy()
+    @_property
+    @deprecated("Use is_uncoded_1m_phy instead.")
     def is_uncoded1_m_phy(self) -> bool: ...
     # System.Boolean Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo::get_IsUncoded2MPhy()
     @_property
+    def is_uncoded_2m_phy(self) -> bool: ...
+    # Deprecated alias of is_uncoded_2m_phy by the name it was published under.
+    # System.Boolean Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo::get_IsUncoded2MPhy()
+    @_property
+    @deprecated("Use is_uncoded_2m_phy instead.")
     def is_uncoded2_m_phy(self) -> bool: ...
 
 @typing.final

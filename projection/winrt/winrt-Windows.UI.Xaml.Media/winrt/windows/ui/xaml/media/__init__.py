@@ -115,5 +115,6 @@ winrt.runtime._internals.alias_static_method(LoadedImageSurface, "start_load_fro
 winrt.runtime._internals.alias_static_method(LoadedImageSurface, "start_load_from_uri_with_size", "start_load_from_uri")
 winrt.runtime._internals.alias_static_method(VisualTreeHelper, "find_all_elements_in_host_coordinates_point", "find_elements_in_host_coordinates")
 winrt.runtime._internals.alias_static_method(VisualTreeHelper, "find_elements_in_host_coordinates_point", "find_elements_in_host_coordinates")
+winrt.runtime._internals.renamed_enum_member(ColorInterpolationMode, "S_RGB_LINEAR_INTERPOLATION", "SRGB_LINEAR_INTERPOLATION")
 RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], object]
 TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], object]

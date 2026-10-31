@@ -203,7 +203,7 @@ enum Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState pyt
     signature enum(Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState;i4)
     constant SUCCESS 0
     constant FREE_NETWORK_NOT_AVAILABLE 1
-    constant A_C_POWER_NOT_AVAILABLE 2
+    constant AC_POWER_NOT_AVAILABLE 2
 
 class Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActions static python_type
     py PlatformDiagnosticActions

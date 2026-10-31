@@ -16,3 +16,6 @@ __all__ = [
     "CameraCaptureUIVideoCaptureSettings",
 ]
 
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIMaxPhotoResolution, "LARGE3_M", "LARGE_3M")
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIMaxPhotoResolution, "VERY_LARGE5_M", "VERY_LARGE_5M")
+winrt.runtime._internals.renamed_enum_member(CameraCaptureUIPhotoFormat, "JPEG_X_R", "JPEG_XR")

@@ -153,6 +153,30 @@ static partial class StringExtensions
     [GeneratedRegex(@"PC")]
     private static partial Regex PcRegex();
 
+    // Replace Prc16K with Prc16k, as the PRC10_ENVELOPE beside it is written
+    [GeneratedRegex(@"Prc(\d+)K")]
+    private static partial Regex PrcRegex();
+
+    // Replace SRgb with Srgb
+    [GeneratedRegex(@"SRgb")]
+    private static partial Regex SRgbRegex();
+
+    // Replace RC2128Bit with Rc2_128Bit, the RC2 cipher with a 128-bit key
+    [GeneratedRegex(@"RC2(\d+)Bit")]
+    private static partial Regex Rc2Regex();
+
+    // Replace BC6H16Float with Bc6h_16Float, the BC6H format with 16-bit floats
+    [GeneratedRegex(@"BC6H(\d+)")]
+    private static partial Regex Bc6hRegex();
+
+    // Replace USim, CSim and ISim with Usim, Csim and Isim
+    [GeneratedRegex(@"^([UCI])Sim$")]
+    private static partial Regex SimRegex();
+
+    // Put a screen resolution such as 1080p in a word of its own
+    [GeneratedRegex(@"(?<=[A-Za-z])(\d+)([Pp])(?![a-z0-9])")]
+    private static partial Regex ResolutionRegex();
+
     // Replace UI with Ui (also handles UInt)
     [GeneratedRegex(@"UI(?!nfo)")]
     private static partial Regex UiRegex();
@@ -201,6 +225,12 @@ static partial class StringExtensions
         str = OsRegex().Replace(str, "Os");
         str = PpcRegex().Replace(str, "Ppc");
         str = PcRegex().Replace(str, "Pc");
+        str = PrcRegex().Replace(str, "Prc${1}k");
+        str = SRgbRegex().Replace(str, "Srgb");
+        str = SimRegex().Replace(str, "${1}sim");
+        str = Rc2Regex().Replace(str, "Rc2_${1}Bit");
+        str = Bc6hRegex().Replace(str, "Bc6h_${1}");
+        str = ResolutionRegex().Replace(str, "_${1}${2}");
         str = UiRegex().Replace(str, "Ui");
         str = UwpRegex().Replace(str, "Uwp");
         str = WebView2Regex().Replace(str, "Webview2");
@@ -210,17 +240,93 @@ static partial class StringExtensions
 
         for (var i = 0; i < str.Length; i++)
         {
-            var c = str[i];
-
-            if (i > 0 && char.IsUpper(c) && str[i - 1] != '_')
+            if (i > 0 && str[i - 1] != '_' && StartsWord(str, i))
             {
                 sb.Append('_');
             }
 
-            sb.Append(c);
+            sb.Append(str[i]);
         }
 
         return sb.ToString();
+    }
+
+    /// <summary>
+    /// Tests whether the character at <paramref name="i"/> starts a word of
+    /// a PascalCase name, as one that follows another character.
+    /// </summary>
+    /// <remarks>
+    /// A capital after a lowercase letter starts a word. A run of capitals is
+    /// one word, as an acronym is, except that the last of them starts the
+    /// next word when a lowercase letter follows it, so XYFocusDown is
+    /// xy_focus_down, and an acronym keeps the s of a plural that ends the
+    /// name, so GetFileURLs is get_file_urls. A capital on its own after a
+    /// number belongs to the number, as in Resolution720P, and such a number
+    /// is a word of its own after a lowercase letter, so that is
+    /// resolution_720p, while one that follows a capital stays part of it, as
+    /// in BC6HTypeless, which is bc6h_typeless.
+    /// </remarks>
+    private static bool StartsWord(string str, int i)
+    {
+        var c = str[i];
+        var previous = str[i - 1];
+
+        if (char.IsDigit(c))
+        {
+            return char.IsLower(previous) && EndsInLetter(str, i);
+        }
+
+        if (!char.IsUpper(c))
+        {
+            return false;
+        }
+
+        if (char.IsDigit(previous))
+        {
+            return !JoinsNumber(str, i);
+        }
+
+        if (!char.IsUpper(previous))
+        {
+            return true;
+        }
+
+        if (i + 1 == str.Length || !char.IsLower(str[i + 1]))
+        {
+            return false;
+        }
+
+        // the s of a plural acronym at the end of the name
+        return !(str[i + 1] == 's' && i + 2 == str.Length);
+    }
+
+    /// <summary>
+    /// Tests whether the capital at <paramref name="i"/>, which follows a
+    /// digit, is a letter on its own that belongs to the number: one that the
+    /// end of the name, an underscore or the start of a word follows.
+    /// </summary>
+    private static bool JoinsNumber(string str, int i)
+    {
+        if (i + 1 == str.Length || str[i + 1] == '_')
+        {
+            return true;
+        }
+
+        return char.IsUpper(str[i + 1]) && i + 2 < str.Length && char.IsLower(str[i + 2]);
+    }
+
+    /// <summary>
+    /// Tests whether the number that starts at <paramref name="i"/> ends in a
+    /// capital that belongs to it.
+    /// </summary>
+    private static bool EndsInLetter(string str, int i)
+    {
+        while (i < str.Length && char.IsDigit(str[i]))
+        {
+            i++;
+        }
+
+        return i < str.Length && char.IsUpper(str[i]) && JoinsNumber(str, i);
     }
 
     /// <summary>

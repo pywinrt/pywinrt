@@ -1662,7 +1662,7 @@ enum Windows.Management.Update.WindowsSoftwareUpdateCategory python_type
     constant DEFINITION 4
     constant FEATURE 5
     constant QUALITY 6
-    constant A_I_COMPONENT 7
+    constant AI_COMPONENT 7
 
 class Windows.Management.Update.WindowsSoftwareUpdateExecutionInfo python_type
     py WindowsSoftwareUpdateExecutionInfo

@@ -185,9 +185,9 @@ class EmailMailboxSmimeEncryptionAlgorithm(enum.IntEnum):
     ANY = 0
     TRIPLE_DES = 1
     DES = 2
-    R_C2128_BIT = 3
-    R_C264_BIT = 4
-    R_C240_BIT = 5
+    RC2_128_BIT = 3
+    RC2_64_BIT = 4
+    RC2_40_BIT = 5
 
 class EmailMailboxSmimeSigningAlgorithm(enum.IntEnum):
     ANY = 0

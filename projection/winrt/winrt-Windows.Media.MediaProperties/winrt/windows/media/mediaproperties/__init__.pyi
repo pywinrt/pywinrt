@@ -6,6 +6,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt.system
 import winrt.windows.foundation as windows_foundation
@@ -78,15 +79,15 @@ class StereoscopicVideoPackingMode(enum.IntEnum):
 
 class VideoEncodingQuality(enum.IntEnum):
     AUTO = 0
-    H_D1080P = 1
-    H_D720P = 2
+    HD_1080P = 1
+    HD_720P = 2
     WVGA = 3
     NTSC = 4
     PAL = 5
     VGA = 6
     QVGA = 7
-    UHD2160P = 8
-    UHD4320P = 9
+    UHD_2160P = 8
+    UHD_4320P = 9
 
 @typing.final
 class AudioEncodingProperties_Static(winrt.system.Object_Static):
@@ -337,6 +338,10 @@ class ImageEncodingProperties_Static(winrt.system.Object_Static):
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreateJpeg()
     def create_jpeg(cls) -> ImageEncodingProperties: ...
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreateJpegXR()
+    def create_jpeg_xr(cls) -> ImageEncodingProperties: ...
+    # Deprecated alias of create_jpeg_xr() by the name it was published under.
+    # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreateJpegXR()
+    @deprecated("Use create_jpeg_xr() instead.")
     def create_jpeg_x_r(cls) -> ImageEncodingProperties: ...
     # Windows.Media.MediaProperties.ImageEncodingProperties Windows.Media.MediaProperties.ImageEncodingProperties::CreatePng()
     def create_png(cls) -> ImageEncodingProperties: ...

@@ -92,7 +92,7 @@ class SmartCardCryptogramAlgorithm(enum.IntEnum):
     CBC_MAC = 1
     CVC3_UMD = 2
     DECIMALIZED_MSD = 3
-    CVC3_M_D = 4
+    CVC3_MD = 4
     SHA1 = 5
     SIGNED_DYNAMIC_APPLICATION_DATA = 6
     RSA_PKCS1 = 7
@@ -164,7 +164,7 @@ class SmartCardEmulationCategory(enum.IntEnum):
 class SmartCardEmulationType(enum.IntEnum):
     HOST = 0
     UICC = 1
-    EMBEDDED_S_E = 2
+    EMBEDDED_SE = 2
 
 class SmartCardEmulatorConnectionDeactivatedReason(enum.IntEnum):
     CONNECTION_LOST = 0
@@ -195,7 +195,7 @@ class SmartCardReaderKind(enum.IntEnum):
     TPM = 2
     NFC = 3
     UICC = 4
-    EMBEDDED_S_E = 5
+    EMBEDDED_SE = 5
 
 class SmartCardReaderStatus(enum.IntEnum):
     DISCONNECTED = 0

@@ -1,0 +1,95 @@
+{
+    "4!2.6.4": {
+        "Microsoft.Graphics.DirectX.DirectXPixelFormat": {
+            "B_C1_TYPELESS": "BC1_TYPELESS",
+            "B_C1_UINT_NORMALIZED": "BC1_UINT_NORMALIZED",
+            "B_C1_UINT_NORMALIZED_SRGB": "BC1_UINT_NORMALIZED_SRGB",
+            "B_C2_TYPELESS": "BC2_TYPELESS",
+            "B_C2_UINT_NORMALIZED": "BC2_UINT_NORMALIZED",
+            "B_C2_UINT_NORMALIZED_SRGB": "BC2_UINT_NORMALIZED_SRGB",
+            "B_C3_TYPELESS": "BC3_TYPELESS",
+            "B_C3_UINT_NORMALIZED": "BC3_UINT_NORMALIZED",
+            "B_C3_UINT_NORMALIZED_SRGB": "BC3_UINT_NORMALIZED_SRGB",
+            "B_C4_INT_NORMALIZED": "BC4_INT_NORMALIZED",
+            "B_C4_TYPELESS": "BC4_TYPELESS",
+            "B_C4_UINT_NORMALIZED": "BC4_UINT_NORMALIZED",
+            "B_C5_INT_NORMALIZED": "BC5_INT_NORMALIZED",
+            "B_C5_TYPELESS": "BC5_TYPELESS",
+            "B_C5_UINT_NORMALIZED": "BC5_UINT_NORMALIZED",
+            "B_C6_H16_FLOAT": "BC6H_16_FLOAT",
+            "B_C6_H16_UNSIGNED_FLOAT": "BC6H_16_UNSIGNED_FLOAT",
+            "B_C6_H_TYPELESS": "BC6H_TYPELESS",
+            "B_C7_TYPELESS": "BC7_TYPELESS",
+            "B_C7_UINT_NORMALIZED": "BC7_UINT_NORMALIZED",
+            "B_C7_UINT_NORMALIZED_SRGB": "BC7_UINT_NORMALIZED_SRGB",
+            "R10_G10_B10_X_R_BIAS_A2_UINT_NORMALIZED": "R10_G10_B10_XR_BIAS_A2_UINT_NORMALIZED"
+        },
+        "Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent": {
+            "u_v_mappings": "uv_mappings"
+        },
+        "Microsoft.UI.Xaml.Documents.Hyperlink": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_navigation_strategy": "xy_focus_down_navigation_strategy",
+            "x_y_focus_down_navigation_strategy_property": "xy_focus_down_navigation_strategy_property",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_navigation_strategy": "xy_focus_left_navigation_strategy",
+            "x_y_focus_left_navigation_strategy_property": "xy_focus_left_navigation_strategy_property",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_navigation_strategy": "xy_focus_right_navigation_strategy",
+            "x_y_focus_right_navigation_strategy_property": "xy_focus_right_navigation_strategy_property",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_navigation_strategy": "xy_focus_up_navigation_strategy",
+            "x_y_focus_up_navigation_strategy_property": "xy_focus_up_navigation_strategy_property",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Microsoft.UI.Xaml.Input.FindNextElementOptions": {
+            "x_y_focus_navigation_strategy_override": "xy_focus_navigation_strategy_override"
+        },
+        "Microsoft.UI.Xaml.Media.ColorInterpolationMode": {
+            "S_RGB_LINEAR_INTERPOLATION": "SRGB_LINEAR_INTERPOLATION"
+        },
+        "Microsoft.UI.Xaml.UIElement": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_navigation_strategy": "xy_focus_down_navigation_strategy",
+            "x_y_focus_down_navigation_strategy_property": "xy_focus_down_navigation_strategy_property",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_keyboard_navigation": "xy_focus_keyboard_navigation",
+            "x_y_focus_keyboard_navigation_property": "xy_focus_keyboard_navigation_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_navigation_strategy": "xy_focus_left_navigation_strategy",
+            "x_y_focus_left_navigation_strategy_property": "xy_focus_left_navigation_strategy_property",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_navigation_strategy": "xy_focus_right_navigation_strategy",
+            "x_y_focus_right_navigation_strategy_property": "xy_focus_right_navigation_strategy_property",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_navigation_strategy": "xy_focus_up_navigation_strategy",
+            "x_y_focus_up_navigation_strategy_property": "xy_focus_up_navigation_strategy_property",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Microsoft.Windows.AI.AICapabilities": {
+            "has_a_i_capability": "has_ai_capability"
+        },
+        "Microsoft.Windows.ApplicationModel.WindowsAppRuntime.RuntimeCompatibilityChange": {
+            "APP_CONTENT_SEARCH_NEW_A_P_I_LAF_CHECK": "APP_CONTENT_SEARCH_NEW_API_LAF_CHECK",
+            "COMPOSITION_ENGINE_A_P_I": "COMPOSITION_ENGINE_API",
+            "H_W_BUILD_GLYPH_RUN_TEXTURES_DEVICE_GUARD_SCOPE": "HW_BUILD_GLYPH_RUN_TEXTURES_DEVICE_GUARD_SCOPE",
+            "M_R_T_CORE_SPARSE_PACKAGED_PRI_FALLBACK": "MRT_CORE_SPARSE_PACKAGED_PRI_FALLBACK",
+            "UNIVERSAL_B_G_TASK_RUN_CRASH": "UNIVERSAL_BG_TASK_RUN_CRASH"
+        },
+        "Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution": {
+            "LARGE3_M": "LARGE_3M",
+            "VERY_LARGE5_M": "VERY_LARGE_5M"
+        },
+        "Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat": {
+            "JPEG_X_R": "JPEG_XR"
+        },
+        "Microsoft.Windows.Search.AppContentIndex.AppIndexTextStreamEncoding": {
+            "UTF16_L_E": "UTF16_LE"
+        }
+    }
+}

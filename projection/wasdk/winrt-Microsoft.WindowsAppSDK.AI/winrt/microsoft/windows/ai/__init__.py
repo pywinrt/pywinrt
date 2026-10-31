@@ -13,3 +13,4 @@ __all__ = [
     "AIFeatureReadyResult",
 ]
 
+winrt.runtime._internals.renamed_static_method(AICapabilities, "has_a_i_capability", "has_ai_capability")

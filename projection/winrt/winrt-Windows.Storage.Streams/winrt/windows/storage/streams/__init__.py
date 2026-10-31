@@ -44,3 +44,5 @@ winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_trans
 winrt.runtime._internals.alias_static_method(FileRandomAccessStream, "open_transacted_write_for_user_with_options_async", "open_transacted_write_for_user_async")
 winrt.runtime._internals.alias_static_method(RandomAccessStream, "copy_size_async", "copy_async")
 winrt.runtime._internals.alias_method(_IDataWriter, "write_buffer_range", "write_buffer")
+winrt.runtime._internals.renamed_enum_member(UnicodeEncoding, "UTF16_B_E", "UTF16_BE")
+winrt.runtime._internals.renamed_enum_member(UnicodeEncoding, "UTF16_L_E", "UTF16_LE")

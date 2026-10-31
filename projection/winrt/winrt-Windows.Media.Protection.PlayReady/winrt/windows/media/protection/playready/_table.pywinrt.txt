@@ -495,7 +495,7 @@ interface Windows.Media.Protection.PlayReady.INDStorageFileHelper python_type
     py _INDStorageFileHelper
     guid d8f0bef8-91d2-4d47-a3f9-eaff4edb729f
     signature {d8f0bef8-91d2-4d47-a3f9-eaff4edb729f}
-    method get_file_u_r_ls
+    method get_file_urls
         method GetFileURLs slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDStorageFileHelper shape=51 reverse=24 deprecated
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
@@ -658,7 +658,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadyLicense python_type
     property usable_for_play
         get get_UsableForPlay slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense shape=4 reverse=43
             out boolean return
-    method get_k_i_d_at_chain_depth
+    method get_kid_at_chain_depth
         method GetKIDAtChainDepth slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense shape=51 reverse=163
             in uint32 name=chainDepth
             out guid return
@@ -734,7 +734,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession python_typ
     method configure_media_protection_manager
         method ConfigureMediaProtectionManager slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=43
             in class type=Windows.Media.Protection.MediaProtectionManager name=mpm
-    method create_l_a_service_request
+    method create_la_service_request
         method CreateLAServiceRequest slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=22
             out interface type=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest return
 
@@ -746,7 +746,7 @@ interface Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2 python_ty
     method configure_media_protection_manager
         method ConfigureMediaProtectionManager slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=43
             in class type=Windows.Media.Protection.MediaProtectionManager name=mpm
-    method create_l_a_service_request
+    method create_la_service_request
         method CreateLAServiceRequest slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=22
             out interface type=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest return
     method create_license_iterable
@@ -1460,7 +1460,7 @@ class Windows.Media.Protection.PlayReady.NDStorageFileHelper activatable python_
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    method get_file_u_r_ls
+    method get_file_urls
         method GetFileURLs slot=6 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.INDStorageFileHelper shape=51 reverse=24 deprecated
             in interface type=Windows.Storage.IStorageFile name=file
             out parameterized type=Windows.Foundation.Collections.IVector<System.String> return
@@ -1902,7 +1902,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicense python_type
     property security_level
         get get_SecurityLevel slot=7 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense2 shape=4
             out uint32 return
-    method get_k_i_d_at_chain_depth
+    method get_kid_at_chain_depth
         method GetKIDAtChainDepth slot=12 inputs=1 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicense shape=51 reverse=163
             in uint32 name=chainDepth
             out guid return
@@ -2028,7 +2028,7 @@ class Windows.Media.Protection.PlayReady.PlayReadyLicenseSession python_type
     method configure_media_protection_manager
         method ConfigureMediaProtectionManager slot=7 inputs=1 outputs=0 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=43
             in class type=Windows.Media.Protection.MediaProtectionManager name=mpm
-    method create_l_a_service_request
+    method create_la_service_request
         method CreateLAServiceRequest slot=6 inputs=0 outputs=1 declaring=Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession shape=4 reverse=22
             out interface type=Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest return
     method create_license_iterable

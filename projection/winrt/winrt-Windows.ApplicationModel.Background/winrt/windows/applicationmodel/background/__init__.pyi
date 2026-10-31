@@ -641,9 +641,18 @@ class BluetoothLEAdvertisementWatcherTrigger(IBackgroundTrigger, winrt.system.Ob
     def allow_extended_advertisements(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_UseUncoded1MPhy()
     @_property
+    def use_uncoded_1m_phy(self) -> bool: ...
+    # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_UseUncoded1MPhy(System.Boolean)
+    @use_uncoded_1m_phy.setter
+    def use_uncoded_1m_phy(self, value: bool) -> None: ...
+    # Deprecated alias of use_uncoded_1m_phy by the name it was published under.
+    # System.Boolean Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_UseUncoded1MPhy()
+    @_property
+    @deprecated("Use use_uncoded_1m_phy instead.")
     def use_uncoded1_m_phy(self) -> bool: ...
     # System.Void Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::put_UseUncoded1MPhy(System.Boolean)
     @use_uncoded1_m_phy.setter
+    @deprecated("Use use_uncoded_1m_phy instead.")
     def use_uncoded1_m_phy(self, value: bool) -> None: ...
     # System.Boolean Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger::get_UseCodedPhy()
     @_property

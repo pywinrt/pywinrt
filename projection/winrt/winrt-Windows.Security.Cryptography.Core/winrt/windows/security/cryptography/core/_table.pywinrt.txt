@@ -792,12 +792,12 @@ class Windows.Security.Cryptography.Core.KeyDerivationParameters python_type
             in interface type=Windows.Storage.Streams.IBuffer name=pbkdf2Salt
             in uint32 name=iterationCount
             out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
-    method build_for_s_p800108 static
+    method build_for_sp800108 static
         method BuildForSP800108 slot=7 inputs=2 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics shape=117 static
             in interface type=Windows.Storage.Streams.IBuffer name=label
             in interface type=Windows.Storage.Streams.IBuffer name=context
             out class type=Windows.Security.Cryptography.Core.KeyDerivationParameters return
-    method build_for_s_p80056a static
+    method build_for_sp80056a static
         method BuildForSP80056a slot=8 inputs=5 outputs=1 declaring=Windows.Security.Cryptography.Core.IKeyDerivationParametersStatics shape=267 static
             in interface type=Windows.Storage.Streams.IBuffer name=algorithmId
             in interface type=Windows.Storage.Streams.IBuffer name=partyUInfo

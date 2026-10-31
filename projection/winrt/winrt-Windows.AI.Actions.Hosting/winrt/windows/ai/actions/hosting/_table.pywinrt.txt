@@ -61,7 +61,7 @@ class Windows.AI.Actions.Hosting.ActionDefinition python_type closeable
     property schema_version
         get get_SchemaVersion slot=8 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition2 shape=4
             out uint32 return
-    property uses_generative_a_i
+    property uses_generative_ai
         get get_UsesGenerativeAI slot=7 inputs=0 outputs=1 declaring=Windows.AI.Actions.Hosting.IActionDefinition2 shape=4
             out boolean return
     property package_relative_application_id

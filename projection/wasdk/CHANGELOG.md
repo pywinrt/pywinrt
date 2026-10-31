@@ -25,6 +25,10 @@ changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 
 ### Changed
 - Updated the Windows App SDK to [2.6.4][Windows App SDK 2.6.4], from 2.5.1.
+- A name keeps an acronym in one word, as in `xy_focus_down`.
+- A letter that goes with a number stays with it, as in `resolution_720p`.
+- Each name that changed keeps working, with a `DeprecationWarning`.
+- The type hints leave out an enum member's old name, which a checker flags.
 
 ## [4!2.5.1.1] - 2026-10-24
 

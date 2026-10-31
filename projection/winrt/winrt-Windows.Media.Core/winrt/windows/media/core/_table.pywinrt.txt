@@ -260,7 +260,7 @@ class Windows.Media.Core.CodecSubtypes static python_type
     py CodecSubtypes
     factory Windows.Media.Core.ICodecSubtypesStatics
     factory Windows.Media.Core.ICodecSubtypesStatics2
-    property audio_format_w_m_audio_lossless static
+    property audio_format_wm_audio_lossless static
         get get_AudioFormatWMAudioLossless slot=54 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_aac static
@@ -272,22 +272,22 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property audio_format_alac static
         get get_AudioFormatAlac slot=37 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_amr_n_b static
+    property audio_format_amr_nb static
         get get_AudioFormatAmrNB slot=38 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_amr_w_b static
+    property audio_format_amr_wb static
         get get_AudioFormatAmrWB slot=39 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_amr_w_p static
+    property audio_format_amr_wp static
         get get_AudioFormatAmrWP slot=40 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_dolby_a_c3 static
+    property audio_format_dolby_ac3 static
         get get_AudioFormatDolbyAC3 slot=41 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_dolby_a_c3_spdif static
+    property audio_format_dolby_ac3_spdif static
         get get_AudioFormatDolbyAC3Spdif slot=42 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_dolby_d_d_plus static
+    property audio_format_dolby_dd_plus static
         get get_AudioFormatDolbyDDPlus slot=43 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_drm static
@@ -302,7 +302,7 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property audio_format_float static
         get get_AudioFormatFloat slot=47 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_m_p3 static
+    property audio_format_mp3 static
         get get_AudioFormatMP3 slot=48 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_m_peg static
@@ -317,25 +317,25 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property audio_format_pcm static
         get get_AudioFormatPcm slot=52 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_m_p43 static
+    property video_format_mp43 static
         get get_VideoFormatMP43 slot=21 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_w_m_audio_v8 static
+    property audio_format_wm_audio_v8 static
         get get_AudioFormatWMAudioV8 slot=55 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property audio_format_w_m_audio_v9 static
+    property audio_format_wm_audio_v9 static
         get get_AudioFormatWMAudioV9 slot=56 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property audio_format_wma_spdif static
         get get_AudioFormatWmaSpdif slot=53 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format420_o static
+    property video_format_420o static
         get get_VideoFormat420O slot=34 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_d_v25 static
+    property video_format_dv25 static
         get get_VideoFormatDV25 slot=6 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_d_v50 static
+    property video_format_dv50 static
         get get_VideoFormatDV50 slot=7 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_dvc static
@@ -359,7 +359,7 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property video_format_h264 static
         get get_VideoFormatH264 slot=14 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_h264_e_s static
+    property video_format_h264_es static
         get get_VideoFormatH264ES slot=16 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_h265 static
@@ -368,16 +368,16 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property video_format_hevc static
         get get_VideoFormatHevc slot=17 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_hevc_e_s static
+    property video_format_hevc_es static
         get get_VideoFormatHevcES slot=18 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_m4_s2 static
         get get_VideoFormatM4S2 slot=19 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_m_p4_s static
+    property video_format_mp4s static
         get get_VideoFormatMP4S slot=22 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_m_p4_v static
+    property video_format_mp4v static
         get get_VideoFormatMP4V slot=23 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_mjpg static
@@ -395,10 +395,10 @@ class Windows.Media.Core.CodecSubtypes static python_type
     property video_format_mss2 static
         get get_VideoFormatMss2 slot=29 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_v_p80 static
+    property video_format_vp80 static
         get get_VideoFormatVP80 slot=25 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
-    property video_format_v_p90 static
+    property video_format_vp90 static
         get get_VideoFormatVP90 slot=26 inputs=0 outputs=1 declaring=Windows.Media.Core.ICodecSubtypesStatics shape=4 static
             out string return
     property video_format_wmv1 static

@@ -60,6 +60,7 @@ winrt.runtime._internals.alias_method(GattCharacteristic, "get_descriptors_for_u
 winrt.runtime._internals.alias_method(GattCharacteristic, "read_value_with_cache_mode_async", "read_value_async")
 winrt.runtime._internals.alias_method(GattCharacteristic, "write_value_with_option_async", "write_value_async")
 winrt.runtime._internals.alias_method(GattCharacteristic, "write_value_with_result_and_option_async", "write_value_with_result_async")
+winrt.runtime._internals.renamed_static_property(GattCharacteristicUuids, "s_c_control_point", "sc_control_point")
 winrt.runtime._internals.alias_method(GattDescriptor, "read_value_with_cache_mode_async", "read_value_async")
 winrt.runtime._internals.alias_static_method(GattDeviceService, "from_id_with_sharing_mode_async", "from_id_async")
 winrt.runtime._internals.alias_method(GattDeviceService, "get_characteristics_with_cache_mode_async", "get_characteristics_async")
@@ -70,3 +71,5 @@ winrt.runtime._internals.alias_method(GattDeviceService, "get_included_services_
 winrt.runtime._internals.alias_method(GattDeviceService, "get_included_services_for_uuid_with_cache_mode_async", "get_included_services_for_uuid_async")
 winrt.runtime._internals.alias_method(GattLocalCharacteristic, "notify_value_for_subscribed_client_async", "notify_value_async")
 winrt.runtime._internals.alias_method(GattServiceProvider, "start_advertising_with_parameters", "start_advertising")
+winrt.runtime._internals.renamed_property(GattServiceProviderAdvertisingParameters, "use_low_energy_uncoded1_m_phy_as_secondary_phy", "use_low_energy_uncoded_1m_phy_as_secondary_phy")
+winrt.runtime._internals.renamed_property(GattServiceProviderAdvertisingParameters, "use_low_energy_uncoded2_m_phy_as_secondary_phy", "use_low_energy_uncoded_2m_phy_as_secondary_phy")

@@ -1,0 +1,339 @@
+{
+    "4!10.0.28000.2957": {
+        "Windows.AI.Actions.Hosting.ActionDefinition": {
+            "uses_generative_a_i": "uses_generative_ai"
+        },
+        "Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger": {
+            "use_uncoded1_m_phy": "use_uncoded_1m_phy"
+        },
+        "Windows.ApplicationModel.Email.EmailMailboxSmimeEncryptionAlgorithm": {
+            "R_C2128_BIT": "RC2_128_BIT",
+            "R_C240_BIT": "RC2_40_BIT",
+            "R_C264_BIT": "RC2_64_BIT"
+        },
+        "Windows.ApplicationModel.Store.Preview.StoreSystemFeature": {
+            "D3D12_HARDWARE_F_L11": "D3D12_HARDWARE_FL11",
+            "D3D12_HARDWARE_F_L12": "D3D12_HARDWARE_FL12",
+            "RESOLUTION720_P": "RESOLUTION_720P",
+            "RESOLUTION_WVGA_OR720_P": "RESOLUTION_WVGA_OR_720P",
+            "RESOLUTION_WXGA_OR720_P": "RESOLUTION_WXGA_OR_720P"
+        },
+        "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPhyType": {
+            "UNCODED1_M_PHY": "UNCODED_1M_PHY",
+            "UNCODED2_M_PHY": "UNCODED_2M_PHY"
+        },
+        "Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementWatcher": {
+            "use_uncoded1_m_phy": "use_uncoded_1m_phy"
+        },
+        "Windows.Devices.Bluetooth.BluetoothAdapter": {
+            "is_low_energy_uncoded2_m_phy_supported": "is_low_energy_uncoded_2m_phy_supported"
+        },
+        "Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo": {
+            "is_uncoded1_m_phy": "is_uncoded_1m_phy",
+            "is_uncoded2_m_phy": "is_uncoded_2m_phy"
+        },
+        "Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristicUuids": {
+            "s_c_control_point": "sc_control_point"
+        },
+        "Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceProviderAdvertisingParameters": {
+            "use_low_energy_uncoded1_m_phy_as_secondary_phy": "use_low_energy_uncoded_1m_phy_as_secondary_phy",
+            "use_low_energy_uncoded2_m_phy_as_secondary_phy": "use_low_energy_uncoded_2m_phy_as_secondary_phy"
+        },
+        "Windows.Devices.Display.DisplayMonitorPhysicalConnectorKind": {
+            "ANALOG_T_V": "ANALOG_TV"
+        },
+        "Windows.Devices.PointOfService.BarcodeSymbologies": {
+            "gs1_d_w_code": "gs1_dw_code"
+        },
+        "Windows.Devices.PointOfService.PosPrinterCharacterSetIds": {
+            "utf16_l_e": "utf16_le"
+        },
+        "Windows.Devices.PointOfService.UnifiedPosHealthCheckLevel": {
+            "P_O_S_INTERNAL": "POS_INTERNAL"
+        },
+        "Windows.Devices.SmartCards.SmartCardCryptogramAlgorithm": {
+            "CVC3_M_D": "CVC3_MD"
+        },
+        "Windows.Devices.SmartCards.SmartCardEmulationType": {
+            "EMBEDDED_S_E": "EMBEDDED_SE"
+        },
+        "Windows.Devices.SmartCards.SmartCardReaderKind": {
+            "EMBEDDED_S_E": "EMBEDDED_SE"
+        },
+        "Windows.Graphics.DirectX.DirectXPixelFormat": {
+            "B_C1_TYPELESS": "BC1_TYPELESS",
+            "B_C1_UINT_NORMALIZED": "BC1_UINT_NORMALIZED",
+            "B_C1_UINT_NORMALIZED_SRGB": "BC1_UINT_NORMALIZED_SRGB",
+            "B_C2_TYPELESS": "BC2_TYPELESS",
+            "B_C2_UINT_NORMALIZED": "BC2_UINT_NORMALIZED",
+            "B_C2_UINT_NORMALIZED_SRGB": "BC2_UINT_NORMALIZED_SRGB",
+            "B_C3_TYPELESS": "BC3_TYPELESS",
+            "B_C3_UINT_NORMALIZED": "BC3_UINT_NORMALIZED",
+            "B_C3_UINT_NORMALIZED_SRGB": "BC3_UINT_NORMALIZED_SRGB",
+            "B_C4_INT_NORMALIZED": "BC4_INT_NORMALIZED",
+            "B_C4_TYPELESS": "BC4_TYPELESS",
+            "B_C4_UINT_NORMALIZED": "BC4_UINT_NORMALIZED",
+            "B_C5_INT_NORMALIZED": "BC5_INT_NORMALIZED",
+            "B_C5_TYPELESS": "BC5_TYPELESS",
+            "B_C5_UINT_NORMALIZED": "BC5_UINT_NORMALIZED",
+            "B_C6_H16_FLOAT": "BC6H_16_FLOAT",
+            "B_C6_H16_UNSIGNED_FLOAT": "BC6H_16_UNSIGNED_FLOAT",
+            "B_C6_H_TYPELESS": "BC6H_TYPELESS",
+            "B_C7_TYPELESS": "BC7_TYPELESS",
+            "B_C7_UINT_NORMALIZED": "BC7_UINT_NORMALIZED",
+            "B_C7_UINT_NORMALIZED_SRGB": "BC7_UINT_NORMALIZED_SRGB",
+            "R10_G10_B10_X_R_BIAS_A2_UINT_NORMALIZED": "R10_G10_B10_XR_BIAS_A2_UINT_NORMALIZED"
+        },
+        "Windows.Graphics.Imaging.BitmapDecoder": {
+            "jpeg_x_r_decoder_id": "jpeg_xr_decoder_id"
+        },
+        "Windows.Graphics.Imaging.BitmapEncoder": {
+            "jpeg_x_r_encoder_id": "jpeg_xr_encoder_id"
+        },
+        "Windows.Graphics.Imaging.ColorManagementMode": {
+            "COLOR_MANAGE_TO_S_RGB": "COLOR_MANAGE_TO_SRGB"
+        },
+        "Windows.Graphics.Printing.PrintMediaSize": {
+            "ISO_D_L_ENVELOPE": "ISO_DL_ENVELOPE",
+            "ISO_D_L_ENVELOPE_ROTATED": "ISO_DL_ENVELOPE_ROTATED",
+            "ISO_S_R_A3": "ISO_SRA3",
+            "JAPAN2_L_PHOTO": "JAPAN_2L_PHOTO",
+            "PRC16_K": "PRC16K",
+            "PRC16_K_ROTATED": "PRC16K_ROTATED",
+            "PRC32_K": "PRC32K",
+            "PRC32_K_BIG": "PRC32K_BIG",
+            "PRC32_K_ROTATED": "PRC32K_ROTATED"
+        },
+        "Windows.Management.Update.WindowsSoftwareUpdateCategory": {
+            "A_I_COMPONENT": "AI_COMPONENT"
+        },
+        "Windows.Media.Audio.ReverbEffectDefinition": {
+            "high_e_q_cutoff": "high_eq_cutoff",
+            "high_e_q_gain": "high_eq_gain",
+            "low_e_q_cutoff": "low_eq_cutoff",
+            "low_e_q_gain": "low_eq_gain",
+            "room_filter_h_f": "room_filter_hf"
+        },
+        "Windows.Media.Audio.SpatialAudioFormatSubtype": {
+            "d_t_s_headphone_x": "dts_headphone_x",
+            "d_t_s_x_for_home_theater": "dtsx_for_home_theater",
+            "d_t_s_x_ultra": "dtsx_ultra"
+        },
+        "Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution": {
+            "LARGE3_M": "LARGE_3M",
+            "VERY_LARGE5_M": "VERY_LARGE_5M"
+        },
+        "Windows.Media.Capture.CameraCaptureUIPhotoFormat": {
+            "JPEG_X_R": "JPEG_XR"
+        },
+        "Windows.Media.Core.CodecSubtypes": {
+            "audio_format_amr_n_b": "audio_format_amr_nb",
+            "audio_format_amr_w_b": "audio_format_amr_wb",
+            "audio_format_amr_w_p": "audio_format_amr_wp",
+            "audio_format_dolby_a_c3": "audio_format_dolby_ac3",
+            "audio_format_dolby_a_c3_spdif": "audio_format_dolby_ac3_spdif",
+            "audio_format_dolby_d_d_plus": "audio_format_dolby_dd_plus",
+            "audio_format_m_p3": "audio_format_mp3",
+            "audio_format_w_m_audio_lossless": "audio_format_wm_audio_lossless",
+            "audio_format_w_m_audio_v8": "audio_format_wm_audio_v8",
+            "audio_format_w_m_audio_v9": "audio_format_wm_audio_v9",
+            "video_format420_o": "video_format_420o",
+            "video_format_d_v25": "video_format_dv25",
+            "video_format_d_v50": "video_format_dv50",
+            "video_format_h264_e_s": "video_format_h264_es",
+            "video_format_hevc_e_s": "video_format_hevc_es",
+            "video_format_m_p43": "video_format_mp43",
+            "video_format_m_p4_s": "video_format_mp4s",
+            "video_format_m_p4_v": "video_format_mp4v",
+            "video_format_v_p80": "video_format_vp80",
+            "video_format_v_p90": "video_format_vp90"
+        },
+        "Windows.Media.MediaProperties.ImageEncodingProperties": {
+            "create_jpeg_x_r": "create_jpeg_xr"
+        },
+        "Windows.Media.MediaProperties.VideoEncodingQuality": {
+            "H_D1080P": "HD_1080P",
+            "H_D720P": "HD_720P",
+            "UHD2160P": "UHD_2160P",
+            "UHD4320P": "UHD_4320P"
+        },
+        "Windows.Media.Protection.PlayReady.INDStorageFileHelper": {
+            "get_file_u_r_ls": "get_file_urls"
+        },
+        "Windows.Media.Protection.PlayReady.IPlayReadyLicense": {
+            "get_k_i_d_at_chain_depth": "get_kid_at_chain_depth"
+        },
+        "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession": {
+            "create_l_a_service_request": "create_la_service_request"
+        },
+        "Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession2": {
+            "create_l_a_service_request": "create_la_service_request"
+        },
+        "Windows.Media.Protection.PlayReady.NDStorageFileHelper": {
+            "get_file_u_r_ls": "get_file_urls"
+        },
+        "Windows.Media.Protection.PlayReady.PlayReadyLicense": {
+            "get_k_i_d_at_chain_depth": "get_kid_at_chain_depth"
+        },
+        "Windows.Media.Protection.PlayReady.PlayReadyLicenseSession": {
+            "create_l_a_service_request": "create_la_service_request"
+        },
+        "Windows.Networking.NetworkOperators.KnownCSimFilePaths": {
+            "e_f_spn": "ef_spn"
+        },
+        "Windows.Networking.NetworkOperators.KnownRuimFilePaths": {
+            "e_f_spn": "ef_spn"
+        },
+        "Windows.Networking.NetworkOperators.KnownSimFilePaths": {
+            "e_f_ons": "ef_ons",
+            "e_f_spn": "ef_spn"
+        },
+        "Windows.Networking.NetworkOperators.KnownUSimFilePaths": {
+            "e_f_opl": "ef_opl",
+            "e_f_pnn": "ef_pnn",
+            "e_f_spn": "ef_spn"
+        },
+        "Windows.Networking.NetworkOperators.MobileBroadbandCellCdma": {
+            "base_station_p_n_code": "base_station_pn_code"
+        },
+        "Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo": {
+            "neighboring_cells_n_r": "neighboring_cells_nr",
+            "serving_cells_n_r": "serving_cells_nr"
+        },
+        "Windows.Networking.NetworkOperators.UiccAppKind": {
+            "C_SIM": "CSIM",
+            "I_SIM": "ISIM",
+            "M_F_RUIM": "MF_RUIM",
+            "M_F_SIM": "MF_SIM",
+            "U_SIM": "USIM"
+        },
+        "Windows.Security.Cryptography.BinaryStringEncoding": {
+            "UTF16_B_E": "UTF16_BE",
+            "UTF16_L_E": "UTF16_LE"
+        },
+        "Windows.Security.Cryptography.Core.KeyDerivationParameters": {
+            "build_for_s_p800108": "build_for_sp800108",
+            "build_for_s_p80056a": "build_for_sp80056a"
+        },
+        "Windows.Storage.Streams.UnicodeEncoding": {
+            "UTF16_B_E": "UTF16_BE",
+            "UTF16_L_E": "UTF16_LE"
+        },
+        "Windows.System.Diagnostics.TraceReporting.PlatformDiagnosticActionState": {
+            "A_C_POWER_NOT_AVAILABLE": "AC_POWER_NOT_AVAILABLE"
+        },
+        "Windows.UI.Composition.Scenes.SceneMeshRendererComponent": {
+            "u_v_mappings": "uv_mappings"
+        },
+        "Windows.UI.ViewManagement.Core.CoreInputView": {
+            "try_transfer_x_y_focus_to_primary_view": "try_transfer_xy_focus_to_primary_view",
+            "x_y_focus_transferred_to_primary_view": "xy_focus_transferred_to_primary_view",
+            "x_y_focus_transferring_from_primary_view": "xy_focus_transferring_from_primary_view"
+        },
+        "Windows.UI.Xaml.Controls.Control": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Windows.UI.Xaml.Controls.WebView": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Windows.UI.Xaml.Core.Direct.XamlPropertyIndex": {
+            "CONTENT_LINK_X_Y_FOCUS_DOWN": "CONTENT_LINK_XY_FOCUS_DOWN",
+            "CONTENT_LINK_X_Y_FOCUS_DOWN_NAVIGATION_STRATEGY": "CONTENT_LINK_XY_FOCUS_DOWN_NAVIGATION_STRATEGY",
+            "CONTENT_LINK_X_Y_FOCUS_LEFT": "CONTENT_LINK_XY_FOCUS_LEFT",
+            "CONTENT_LINK_X_Y_FOCUS_LEFT_NAVIGATION_STRATEGY": "CONTENT_LINK_XY_FOCUS_LEFT_NAVIGATION_STRATEGY",
+            "CONTENT_LINK_X_Y_FOCUS_RIGHT": "CONTENT_LINK_XY_FOCUS_RIGHT",
+            "CONTENT_LINK_X_Y_FOCUS_RIGHT_NAVIGATION_STRATEGY": "CONTENT_LINK_XY_FOCUS_RIGHT_NAVIGATION_STRATEGY",
+            "CONTENT_LINK_X_Y_FOCUS_UP": "CONTENT_LINK_XY_FOCUS_UP",
+            "CONTENT_LINK_X_Y_FOCUS_UP_NAVIGATION_STRATEGY": "CONTENT_LINK_XY_FOCUS_UP_NAVIGATION_STRATEGY",
+            "CONTROL_X_Y_FOCUS_DOWN": "CONTROL_XY_FOCUS_DOWN",
+            "CONTROL_X_Y_FOCUS_LEFT": "CONTROL_XY_FOCUS_LEFT",
+            "CONTROL_X_Y_FOCUS_RIGHT": "CONTROL_XY_FOCUS_RIGHT",
+            "CONTROL_X_Y_FOCUS_UP": "CONTROL_XY_FOCUS_UP",
+            "HYPERLINK_X_Y_FOCUS_DOWN": "HYPERLINK_XY_FOCUS_DOWN",
+            "HYPERLINK_X_Y_FOCUS_DOWN_NAVIGATION_STRATEGY": "HYPERLINK_XY_FOCUS_DOWN_NAVIGATION_STRATEGY",
+            "HYPERLINK_X_Y_FOCUS_LEFT": "HYPERLINK_XY_FOCUS_LEFT",
+            "HYPERLINK_X_Y_FOCUS_LEFT_NAVIGATION_STRATEGY": "HYPERLINK_XY_FOCUS_LEFT_NAVIGATION_STRATEGY",
+            "HYPERLINK_X_Y_FOCUS_RIGHT": "HYPERLINK_XY_FOCUS_RIGHT",
+            "HYPERLINK_X_Y_FOCUS_RIGHT_NAVIGATION_STRATEGY": "HYPERLINK_XY_FOCUS_RIGHT_NAVIGATION_STRATEGY",
+            "HYPERLINK_X_Y_FOCUS_UP": "HYPERLINK_XY_FOCUS_UP",
+            "HYPERLINK_X_Y_FOCUS_UP_NAVIGATION_STRATEGY": "HYPERLINK_XY_FOCUS_UP_NAVIGATION_STRATEGY",
+            "UI_ELEMENT_X_Y_FOCUS_DOWN_NAVIGATION_STRATEGY": "UI_ELEMENT_XY_FOCUS_DOWN_NAVIGATION_STRATEGY",
+            "UI_ELEMENT_X_Y_FOCUS_KEYBOARD_NAVIGATION": "UI_ELEMENT_XY_FOCUS_KEYBOARD_NAVIGATION",
+            "UI_ELEMENT_X_Y_FOCUS_LEFT_NAVIGATION_STRATEGY": "UI_ELEMENT_XY_FOCUS_LEFT_NAVIGATION_STRATEGY",
+            "UI_ELEMENT_X_Y_FOCUS_RIGHT_NAVIGATION_STRATEGY": "UI_ELEMENT_XY_FOCUS_RIGHT_NAVIGATION_STRATEGY",
+            "UI_ELEMENT_X_Y_FOCUS_UP_NAVIGATION_STRATEGY": "UI_ELEMENT_XY_FOCUS_UP_NAVIGATION_STRATEGY",
+            "WEB_VIEW_X_Y_FOCUS_DOWN": "WEB_VIEW_XY_FOCUS_DOWN",
+            "WEB_VIEW_X_Y_FOCUS_LEFT": "WEB_VIEW_XY_FOCUS_LEFT",
+            "WEB_VIEW_X_Y_FOCUS_RIGHT": "WEB_VIEW_XY_FOCUS_RIGHT",
+            "WEB_VIEW_X_Y_FOCUS_UP": "WEB_VIEW_XY_FOCUS_UP"
+        },
+        "Windows.UI.Xaml.Documents.ContentLink": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_navigation_strategy": "xy_focus_down_navigation_strategy",
+            "x_y_focus_down_navigation_strategy_property": "xy_focus_down_navigation_strategy_property",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_navigation_strategy": "xy_focus_left_navigation_strategy",
+            "x_y_focus_left_navigation_strategy_property": "xy_focus_left_navigation_strategy_property",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_navigation_strategy": "xy_focus_right_navigation_strategy",
+            "x_y_focus_right_navigation_strategy_property": "xy_focus_right_navigation_strategy_property",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_navigation_strategy": "xy_focus_up_navigation_strategy",
+            "x_y_focus_up_navigation_strategy_property": "xy_focus_up_navigation_strategy_property",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Windows.UI.Xaml.Documents.Hyperlink": {
+            "x_y_focus_down": "xy_focus_down",
+            "x_y_focus_down_navigation_strategy": "xy_focus_down_navigation_strategy",
+            "x_y_focus_down_navigation_strategy_property": "xy_focus_down_navigation_strategy_property",
+            "x_y_focus_down_property": "xy_focus_down_property",
+            "x_y_focus_left": "xy_focus_left",
+            "x_y_focus_left_navigation_strategy": "xy_focus_left_navigation_strategy",
+            "x_y_focus_left_navigation_strategy_property": "xy_focus_left_navigation_strategy_property",
+            "x_y_focus_left_property": "xy_focus_left_property",
+            "x_y_focus_right": "xy_focus_right",
+            "x_y_focus_right_navigation_strategy": "xy_focus_right_navigation_strategy",
+            "x_y_focus_right_navigation_strategy_property": "xy_focus_right_navigation_strategy_property",
+            "x_y_focus_right_property": "xy_focus_right_property",
+            "x_y_focus_up": "xy_focus_up",
+            "x_y_focus_up_navigation_strategy": "xy_focus_up_navigation_strategy",
+            "x_y_focus_up_navigation_strategy_property": "xy_focus_up_navigation_strategy_property",
+            "x_y_focus_up_property": "xy_focus_up_property"
+        },
+        "Windows.UI.Xaml.Input.FindNextElementOptions": {
+            "x_y_focus_navigation_strategy_override": "xy_focus_navigation_strategy_override"
+        },
+        "Windows.UI.Xaml.Media.ColorInterpolationMode": {
+            "S_RGB_LINEAR_INTERPOLATION": "SRGB_LINEAR_INTERPOLATION"
+        },
+        "Windows.UI.Xaml.UIElement": {
+            "x_y_focus_down_navigation_strategy": "xy_focus_down_navigation_strategy",
+            "x_y_focus_down_navigation_strategy_property": "xy_focus_down_navigation_strategy_property",
+            "x_y_focus_keyboard_navigation": "xy_focus_keyboard_navigation",
+            "x_y_focus_keyboard_navigation_property": "xy_focus_keyboard_navigation_property",
+            "x_y_focus_left_navigation_strategy": "xy_focus_left_navigation_strategy",
+            "x_y_focus_left_navigation_strategy_property": "xy_focus_left_navigation_strategy_property",
+            "x_y_focus_right_navigation_strategy": "xy_focus_right_navigation_strategy",
+            "x_y_focus_right_navigation_strategy_property": "xy_focus_right_navigation_strategy_property",
+            "x_y_focus_up_navigation_strategy": "xy_focus_up_navigation_strategy",
+            "x_y_focus_up_navigation_strategy_property": "xy_focus_up_navigation_strategy_property"
+        }
+    }
+}

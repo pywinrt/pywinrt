@@ -227,7 +227,7 @@ class Windows.UI.Xaml.Input.FindNextElementOptions activatable python_type
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
-    property x_y_focus_navigation_strategy_override
+    property xy_focus_navigation_strategy_override
         get get_XYFocusNavigationStrategyOverride slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategyOverride return
         put put_XYFocusNavigationStrategyOverride slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Input.IFindNextElementOptions shape=4

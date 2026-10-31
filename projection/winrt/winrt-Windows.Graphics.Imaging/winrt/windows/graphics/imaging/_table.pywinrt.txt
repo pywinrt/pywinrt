@@ -255,7 +255,7 @@ class Windows.Graphics.Imaging.BitmapDecoder python_type
     property jpeg_decoder_id static
         get get_JpegDecoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
-    property jpeg_x_r_decoder_id static
+    property jpeg_xr_decoder_id static
         get get_JpegXRDecoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapDecoderStatics shape=4 static
             out guid return
     property png_decoder_id static
@@ -360,7 +360,7 @@ class Windows.Graphics.Imaging.BitmapEncoder python_type
     property jpeg_encoder_id static
         get get_JpegEncoderId slot=7 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
-    property jpeg_x_r_encoder_id static
+    property jpeg_xr_encoder_id static
         get get_JpegXREncoderId slot=11 inputs=0 outputs=1 declaring=Windows.Graphics.Imaging.IBitmapEncoderStatics shape=4 static
             out guid return
     property png_encoder_id static
@@ -650,7 +650,7 @@ enum Windows.Graphics.Imaging.ColorManagementMode python_type
     py ColorManagementMode
     signature enum(Windows.Graphics.Imaging.ColorManagementMode;i4)
     constant DO_NOT_COLOR_MANAGE 0
-    constant COLOR_MANAGE_TO_S_RGB 1
+    constant COLOR_MANAGE_TO_SRGB 1
 
 enum Windows.Graphics.Imaging.ExifOrientationMode python_type
     py ExifOrientationMode

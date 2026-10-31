@@ -22,3 +22,8 @@ __all__ = [
 ]
 
 winrt.runtime._internals.alias_static_method(WebAuthenticationCoreManagerHelper, "request_token_with_ui_element_hosting_and_web_account_async", "request_token_with_ui_element_hosting_async")
+winrt.runtime._internals.renamed_enum_member(StoreSystemFeature, "D3D12_HARDWARE_F_L11", "D3D12_HARDWARE_FL11")
+winrt.runtime._internals.renamed_enum_member(StoreSystemFeature, "D3D12_HARDWARE_F_L12", "D3D12_HARDWARE_FL12")
+winrt.runtime._internals.renamed_enum_member(StoreSystemFeature, "RESOLUTION720_P", "RESOLUTION_720P")
+winrt.runtime._internals.renamed_enum_member(StoreSystemFeature, "RESOLUTION_WVGA_OR720_P", "RESOLUTION_WVGA_OR_720P")
+winrt.runtime._internals.renamed_enum_member(StoreSystemFeature, "RESOLUTION_WXGA_OR720_P", "RESOLUTION_WXGA_OR_720P")

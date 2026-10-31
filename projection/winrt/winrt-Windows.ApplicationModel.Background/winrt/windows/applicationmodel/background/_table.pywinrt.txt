@@ -622,7 +622,7 @@ class Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger
             out boolean return
         put put_AllowExtendedAdvertisements slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2 shape=4
             in boolean name=value
-    property use_uncoded1_m_phy
+    property use_uncoded_1m_phy
         get get_UseUncoded1MPhy slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4
             out boolean return
         put put_UseUncoded1MPhy slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger3 shape=4

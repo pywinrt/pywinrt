@@ -3390,22 +3390,22 @@ class Windows.UI.Xaml.Controls.Control composable python_type
             out boolean return
         put put_UseSystemFocusVisuals slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl3 shape=4
             in boolean name=value
-    property x_y_focus_up
+    property xy_focus_up
         get get_XYFocusUp slot=16 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusUp slot=17 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_right
+    property xy_focus_right
         get get_XYFocusRight slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusRight slot=15 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_left
+    property xy_focus_left
         get get_XYFocusLeft slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusLeft slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_down
+    property xy_focus_down
         get get_XYFocusDown slot=18 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusDown slot=19 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IControl4 shape=4
@@ -3531,16 +3531,16 @@ class Windows.UI.Xaml.Controls.Control composable python_type
     property requires_pointer_property static
         get get_RequiresPointerProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics4 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_down_property static
+    property xy_focus_down_property static
         get get_XYFocusDownProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics4 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_left_property static
+    property xy_focus_left_property static
         get get_XYFocusLeftProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics4 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_right_property static
+    property xy_focus_right_property static
         get get_XYFocusRightProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics4 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_up_property static
+    property xy_focus_up_property static
         get get_XYFocusUpProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IControlStatics4 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property default_style_resource_uri_property static
@@ -22773,22 +22773,22 @@ class Windows.UI.Xaml.Controls.WebView activatable python_type
     property settings
         get get_Settings slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView4 shape=4
             out class type=Windows.UI.Xaml.Controls.WebViewSettings return
-    property x_y_focus_up
+    property xy_focus_up
         get get_XYFocusUp slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusUp slot=11 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_right
+    property xy_focus_right
         get get_XYFocusRight slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusRight slot=9 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_left
+    property xy_focus_left
         get get_XYFocusLeft slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusLeft slot=7 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             in class type=Windows.UI.Xaml.DependencyObject name=value
-    property x_y_focus_down
+    property xy_focus_down
         get get_XYFocusDown slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
             out class type=Windows.UI.Xaml.DependencyObject return
         put put_XYFocusDown slot=13 inputs=1 outputs=0 declaring=Windows.UI.Xaml.Controls.IWebView5 shape=4
@@ -22823,16 +22823,16 @@ class Windows.UI.Xaml.Controls.WebView activatable python_type
     property default_execution_mode static
         get get_DefaultExecutionMode slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewStatics4 shape=4 static
             out enum32 type=Windows.UI.Xaml.Controls.WebViewExecutionMode return
-    property x_y_focus_down_property static
+    property xy_focus_down_property static
         get get_XYFocusDownProperty slot=9 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_left_property static
+    property xy_focus_left_property static
         get get_XYFocusLeftProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_right_property static
+    property xy_focus_right_property static
         get get_XYFocusRightProperty slot=7 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_up_property static
+    property xy_focus_up_property static
         get get_XYFocusUpProperty slot=8 inputs=0 outputs=1 declaring=Windows.UI.Xaml.Controls.IWebViewStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     event load_completed

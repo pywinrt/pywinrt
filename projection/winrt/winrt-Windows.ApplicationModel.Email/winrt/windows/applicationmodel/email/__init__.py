@@ -82,3 +82,6 @@ winrt.runtime._internals.alias_method(EmailMailbox, "try_move_folder_with_new_na
 winrt.runtime._internals.alias_method(EmailStore, "create_mailbox_in_account_async", "create_mailbox_async")
 winrt.runtime._internals.alias_method(EmailStore, "get_conversation_reader_with_options", "get_conversation_reader")
 winrt.runtime._internals.alias_method(EmailStore, "get_message_reader_with_options", "get_message_reader")
+winrt.runtime._internals.renamed_enum_member(EmailMailboxSmimeEncryptionAlgorithm, "R_C2128_BIT", "RC2_128_BIT")
+winrt.runtime._internals.renamed_enum_member(EmailMailboxSmimeEncryptionAlgorithm, "R_C240_BIT", "RC2_40_BIT")
+winrt.runtime._internals.renamed_enum_member(EmailMailboxSmimeEncryptionAlgorithm, "R_C264_BIT", "RC2_64_BIT")

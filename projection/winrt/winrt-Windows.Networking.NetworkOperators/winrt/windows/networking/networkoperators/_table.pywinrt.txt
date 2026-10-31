@@ -3366,7 +3366,7 @@ interface Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkO
 class Windows.Networking.NetworkOperators.KnownCSimFilePaths static python_type
     py KnownCSimFilePaths
     factory Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics
-    property e_f_spn static
+    property ef_spn static
         get get_EFSpn slot=6 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     property gid1 static
@@ -3379,7 +3379,7 @@ class Windows.Networking.NetworkOperators.KnownCSimFilePaths static python_type
 class Windows.Networking.NetworkOperators.KnownRuimFilePaths static python_type
     py KnownRuimFilePaths
     factory Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics
-    property e_f_spn static
+    property ef_spn static
         get get_EFSpn slot=6 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     property gid1 static
@@ -3392,10 +3392,10 @@ class Windows.Networking.NetworkOperators.KnownRuimFilePaths static python_type
 class Windows.Networking.NetworkOperators.KnownSimFilePaths static python_type
     py KnownSimFilePaths
     factory Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics
-    property e_f_ons static
+    property ef_ons static
         get get_EFOns slot=6 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
-    property e_f_spn static
+    property ef_spn static
         get get_EFSpn slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     property gid1 static
@@ -3408,13 +3408,13 @@ class Windows.Networking.NetworkOperators.KnownSimFilePaths static python_type
 class Windows.Networking.NetworkOperators.KnownUSimFilePaths static python_type
     py KnownUSimFilePaths
     factory Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics
-    property e_f_opl static
+    property ef_opl static
         get get_EFOpl slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
-    property e_f_pnn static
+    property ef_pnn static
         get get_EFPnn slot=8 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
-    property e_f_spn static
+    property ef_spn static
         get get_EFSpn slot=6 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics shape=4 static
             out parameterized type=Windows.Foundation.Collections.IVectorView<System.UInt32> return
     property gid1 static
@@ -3575,7 +3575,7 @@ class Windows.Networking.NetworkOperators.MobileBroadbandCellCdma python_type
     property base_station_longitude
         get get_BaseStationLongitude slot=9 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandCellCdma shape=4
             out reference type=Windows.Foundation.IReference<System.Double> return
-    property base_station_p_n_code
+    property base_station_pn_code
         get get_BaseStationPNCode slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandCellCdma shape=4
             out reference type=Windows.Foundation.IReference<System.Int32> return
     property network_id
@@ -3774,10 +3774,10 @@ class Windows.Networking.NetworkOperators.MobileBroadbandCellsInfo python_type
     property serving_cells_umts
         get get_ServingCellsUmts slot=15 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellUmts> return
-    property neighboring_cells_n_r
+    property neighboring_cells_nr
         get get_NeighboringCellsNR slot=6 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> return
-    property serving_cells_n_r
+    property serving_cells_nr
         get get_ServingCellsNR slot=7 inputs=0 outputs=1 declaring=Windows.Networking.NetworkOperators.IMobileBroadbandCellsInfo2 shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.NetworkOperators.MobileBroadbandCellNR> return
 
@@ -5212,11 +5212,11 @@ enum Windows.Networking.NetworkOperators.UiccAppKind python_type
     signature enum(Windows.Networking.NetworkOperators.UiccAppKind;i4)
     constant UNKNOWN 0
     constant MF 1
-    constant M_F_SIM 2
-    constant M_F_RUIM 3
-    constant U_SIM 4
-    constant C_SIM 5
-    constant I_SIM 6
+    constant MF_SIM 2
+    constant MF_RUIM 3
+    constant USIM 4
+    constant CSIM 5
+    constant ISIM 6
 
 enum Windows.Networking.NetworkOperators.UiccAppRecordKind python_type
     py UiccAppRecordKind

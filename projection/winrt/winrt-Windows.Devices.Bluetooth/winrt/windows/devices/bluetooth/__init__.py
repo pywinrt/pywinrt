@@ -31,8 +31,11 @@ __all__ = [
     "BluetoothUuidHelper",
 ]
 
+winrt.runtime._internals.renamed_property(BluetoothAdapter, "is_low_energy_uncoded2_m_phy_supported", "is_low_energy_uncoded_2m_phy_supported")
 winrt.runtime._internals.alias_method(BluetoothDevice, "get_rfcomm_services_with_cache_mode_async", "get_rfcomm_services_async")
 winrt.runtime._internals.alias_method(BluetoothDevice, "get_rfcomm_services_for_id_with_cache_mode_async", "get_rfcomm_services_for_id_async")
+winrt.runtime._internals.renamed_property(BluetoothLEConnectionPhyInfo, "is_uncoded1_m_phy", "is_uncoded_1m_phy")
+winrt.runtime._internals.renamed_property(BluetoothLEConnectionPhyInfo, "is_uncoded2_m_phy", "is_uncoded_2m_phy")
 winrt.runtime._internals.alias_static_method(BluetoothLEDevice, "from_bluetooth_address_with_bluetooth_address_type_async", "from_bluetooth_address_async")
 winrt.runtime._internals.alias_static_method(BluetoothLEDevice, "get_device_selector_from_bluetooth_address_with_bluetooth_address_type", "get_device_selector_from_bluetooth_address")
 winrt.runtime._internals.alias_method(BluetoothLEDevice, "get_gatt_services_with_cache_mode_async", "get_gatt_services_async")

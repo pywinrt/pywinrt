@@ -42,4 +42,13 @@ __all__ = [
     "PrintTaskSourceRequestedHandler",
 ]
 
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "ISO_D_L_ENVELOPE", "ISO_DL_ENVELOPE")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "ISO_D_L_ENVELOPE_ROTATED", "ISO_DL_ENVELOPE_ROTATED")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "ISO_S_R_A3", "ISO_SRA3")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "JAPAN2_L_PHOTO", "JAPAN_2L_PHOTO")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "PRC16_K", "PRC16K")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "PRC16_K_ROTATED", "PRC16K_ROTATED")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "PRC32_K", "PRC32K")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "PRC32_K_BIG", "PRC32K_BIG")
+winrt.runtime._internals.renamed_enum_member(PrintMediaSize, "PRC32_K_ROTATED", "PRC32K_ROTATED")
 PrintTaskSourceRequestedHandler = typing.Callable[[PrintTaskSourceRequestedArgs], object]

@@ -17,3 +17,8 @@ __all__ = [
     "RuntimeInfo",
 ]
 
+winrt.runtime._internals.renamed_enum_member(RuntimeCompatibilityChange, "APP_CONTENT_SEARCH_NEW_A_P_I_LAF_CHECK", "APP_CONTENT_SEARCH_NEW_API_LAF_CHECK")
+winrt.runtime._internals.renamed_enum_member(RuntimeCompatibilityChange, "COMPOSITION_ENGINE_A_P_I", "COMPOSITION_ENGINE_API")
+winrt.runtime._internals.renamed_enum_member(RuntimeCompatibilityChange, "H_W_BUILD_GLYPH_RUN_TEXTURES_DEVICE_GUARD_SCOPE", "HW_BUILD_GLYPH_RUN_TEXTURES_DEVICE_GUARD_SCOPE")
+winrt.runtime._internals.renamed_enum_member(RuntimeCompatibilityChange, "M_R_T_CORE_SPARSE_PACKAGED_PRI_FALLBACK", "MRT_CORE_SPARSE_PACKAGED_PRI_FALLBACK")
+winrt.runtime._internals.renamed_enum_member(RuntimeCompatibilityChange, "UNIVERSAL_B_G_TASK_RUN_CRASH", "UNIVERSAL_BG_TASK_RUN_CRASH")

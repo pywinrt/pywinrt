@@ -1369,15 +1369,33 @@ class ReverbEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt
     def __new__(cls, audio_graph: AudioGraph, /) -> typing.Self: ...
     # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_HighEQGain()
     @_property
+    def high_eq_gain(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_HighEQGain(System.Byte)
+    @high_eq_gain.setter
+    def high_eq_gain(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
+    # Deprecated alias of high_eq_gain by the name it was published under.
+    # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_HighEQGain()
+    @_property
+    @deprecated("Use high_eq_gain instead.")
     def high_e_q_gain(self) -> winrt.system.UInt8: ...
     # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_HighEQGain(System.Byte)
     @high_e_q_gain.setter
+    @deprecated("Use high_eq_gain instead.")
     def high_e_q_gain(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
     # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_HighEQCutoff()
     @_property
+    def high_eq_cutoff(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_HighEQCutoff(System.Byte)
+    @high_eq_cutoff.setter
+    def high_eq_cutoff(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
+    # Deprecated alias of high_eq_cutoff by the name it was published under.
+    # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_HighEQCutoff()
+    @_property
+    @deprecated("Use high_eq_cutoff instead.")
     def high_e_q_cutoff(self) -> winrt.system.UInt8: ...
     # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_HighEQCutoff(System.Byte)
     @high_e_q_cutoff.setter
+    @deprecated("Use high_eq_cutoff instead.")
     def high_e_q_cutoff(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
     # System.Boolean Windows.Media.Audio.ReverbEffectDefinition::get_DisableLateField()
     @_property
@@ -1429,15 +1447,33 @@ class ReverbEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt
     def position_left(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
     # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_LowEQGain()
     @_property
+    def low_eq_gain(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_LowEQGain(System.Byte)
+    @low_eq_gain.setter
+    def low_eq_gain(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
+    # Deprecated alias of low_eq_gain by the name it was published under.
+    # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_LowEQGain()
+    @_property
+    @deprecated("Use low_eq_gain instead.")
     def low_e_q_gain(self) -> winrt.system.UInt8: ...
     # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_LowEQGain(System.Byte)
     @low_e_q_gain.setter
+    @deprecated("Use low_eq_gain instead.")
     def low_e_q_gain(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
     # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_LowEQCutoff()
     @_property
+    def low_eq_cutoff(self) -> winrt.system.UInt8: ...
+    # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_LowEQCutoff(System.Byte)
+    @low_eq_cutoff.setter
+    def low_eq_cutoff(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
+    # Deprecated alias of low_eq_cutoff by the name it was published under.
+    # System.Byte Windows.Media.Audio.ReverbEffectDefinition::get_LowEQCutoff()
+    @_property
+    @deprecated("Use low_eq_cutoff instead.")
     def low_e_q_cutoff(self) -> winrt.system.UInt8: ...
     # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_LowEQCutoff(System.Byte)
     @low_e_q_cutoff.setter
+    @deprecated("Use low_eq_cutoff instead.")
     def low_e_q_cutoff(self, value: winrt.system.UInt8 | typing.SupportsIndex) -> None: ...
     # System.Double Windows.Media.Audio.ReverbEffectDefinition::get_RoomFilterFreq()
     @_property
@@ -1501,9 +1537,18 @@ class ReverbEffectDefinition(windows_media_effects.IAudioEffectDefinition, winrt
     def room_filter_main(self, value: winrt.system.Double) -> None: ...
     # System.Double Windows.Media.Audio.ReverbEffectDefinition::get_RoomFilterHF()
     @_property
+    def room_filter_hf(self) -> winrt.system.Double: ...
+    # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_RoomFilterHF(System.Double)
+    @room_filter_hf.setter
+    def room_filter_hf(self, value: winrt.system.Double) -> None: ...
+    # Deprecated alias of room_filter_hf by the name it was published under.
+    # System.Double Windows.Media.Audio.ReverbEffectDefinition::get_RoomFilterHF()
+    @_property
+    @deprecated("Use room_filter_hf instead.")
     def room_filter_h_f(self) -> winrt.system.Double: ...
     # System.Void Windows.Media.Audio.ReverbEffectDefinition::put_RoomFilterHF(System.Double)
     @room_filter_h_f.setter
+    @deprecated("Use room_filter_hf instead.")
     def room_filter_h_f(self, value: winrt.system.Double) -> None: ...
     # System.String Windows.Media.Audio.ReverbEffectDefinition::get_ActivatableClassId()
     @_property
@@ -1574,9 +1619,19 @@ class SpatialAudioFormatConfiguration(winrt.system.Object, metaclass=SpatialAudi
 class SpatialAudioFormatSubtype_Static(winrt.system.Object_Static):
     # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSHeadphoneX()
     @_property
+    def dts_headphone_x(cls) -> str: ...
+    # Deprecated alias of dts_headphone_x by the name it was published under.
+    # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSHeadphoneX()
+    @_property
+    @deprecated("Use dts_headphone_x instead.")
     def d_t_s_headphone_x(cls) -> str: ...
     # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSXUltra()
     @_property
+    def dtsx_ultra(cls) -> str: ...
+    # Deprecated alias of dtsx_ultra by the name it was published under.
+    # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSXUltra()
+    @_property
+    @deprecated("Use dtsx_ultra instead.")
     def d_t_s_x_ultra(cls) -> str: ...
     # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DolbyAtmosForHeadphones()
     @_property
@@ -1592,6 +1647,11 @@ class SpatialAudioFormatSubtype_Static(winrt.system.Object_Static):
     def windows_sonic(cls) -> str: ...
     # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSXForHomeTheater()
     @_property
+    def dtsx_for_home_theater(cls) -> str: ...
+    # Deprecated alias of dtsx_for_home_theater by the name it was published under.
+    # System.String Windows.Media.Audio.SpatialAudioFormatSubtype::get_DTSXForHomeTheater()
+    @_property
+    @deprecated("Use dtsx_for_home_theater instead.")
     def d_t_s_x_for_home_theater(cls) -> str: ...
 
 @typing.final

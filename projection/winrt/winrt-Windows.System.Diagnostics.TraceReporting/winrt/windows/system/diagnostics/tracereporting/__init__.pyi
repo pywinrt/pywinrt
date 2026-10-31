@@ -24,7 +24,7 @@ __all__ = [
 class PlatformDiagnosticActionState(enum.IntEnum):
     SUCCESS = 0
     FREE_NETWORK_NOT_AVAILABLE = 1
-    A_C_POWER_NOT_AVAILABLE = 2
+    AC_POWER_NOT_AVAILABLE = 2
 
 class PlatformDiagnosticEscalationType(enum.IntEnum):
     ON_COMPLETION = 0

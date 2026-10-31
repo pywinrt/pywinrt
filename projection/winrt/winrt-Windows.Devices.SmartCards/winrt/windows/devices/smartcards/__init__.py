@@ -73,4 +73,7 @@ winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_att
 winrt.runtime._internals.alias_static_method(SmartCardProvisioning, "request_virtual_smart_card_creation_async_with_card_id", "request_virtual_smart_card_creation_async")
 winrt.runtime._internals.alias_static_method(SmartCardReader, "get_device_selector_with_kind", "get_device_selector")
 winrt.runtime._internals.alias_method(SmartCardTriggerDetails, "try_launch_current_app_with_behavior_async", "try_launch_current_app_async")
+winrt.runtime._internals.renamed_enum_member(SmartCardCryptogramAlgorithm, "CVC3_M_D", "CVC3_MD")
+winrt.runtime._internals.renamed_enum_member(SmartCardEmulationType, "EMBEDDED_S_E", "EMBEDDED_SE")
+winrt.runtime._internals.renamed_enum_member(SmartCardReaderKind, "EMBEDDED_S_E", "EMBEDDED_SE")
 SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], object]

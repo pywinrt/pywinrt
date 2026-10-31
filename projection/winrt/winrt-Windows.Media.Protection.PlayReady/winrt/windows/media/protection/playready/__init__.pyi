@@ -283,6 +283,10 @@ class NDStorageFileHelper(INDStorageFileHelper, winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.NDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
     @deprecated("INDStorageFileHelper is deprecated and might not work on all platforms. For more info, see MSDN.")
+    def get_file_urls(self, file: windows_storage.IStorageFile, /) -> _cabc.MutableSequence[str]: ...
+    # Deprecated alias of get_file_urls() by the name it was published under.
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.NDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
+    @deprecated("Use get_file_urls() instead.")
     def get_file_u_r_ls(self, file: windows_storage.IStorageFile, /) -> _cabc.MutableSequence[str]: ...
 
 @typing.final
@@ -519,7 +523,7 @@ class PlayReadyDomainLeaveServiceRequest(IPlayReadyServiceRequest, windows_media
 class PlayReadyITADataGenerator(winrt.system.Object):
     def __new__(cls) -> typing.Self: ...
     # System.Byte[] Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator::GenerateData(System.Guid,System.UInt32,Windows.Foundation.Collections.IPropertySet,Windows.Media.Protection.PlayReady.PlayReadyITADataFormat)
-    def generate_data(self, guid_c_p_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32 | typing.SupportsIndex, configuration: windows_foundation_collections.IPropertySet, format: PlayReadyITADataFormat, /) -> winrt.system.Array[winrt.system.UInt8]: ...
+    def generate_data(self, guid_cp_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32 | typing.SupportsIndex, configuration: windows_foundation_collections.IPropertySet, format: PlayReadyITADataFormat, /) -> winrt.system.Array[winrt.system.UInt8]: ...
 
 @typing.final
 class PlayReadyIndividualizationServiceRequest(IPlayReadyServiceRequest, windows_media_protection.IMediaProtectionServiceRequest, winrt.system.Object):
@@ -559,6 +563,10 @@ class PlayReadyLicense(IPlayReadyLicense, winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Guid Windows.Media.Protection.PlayReady.PlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
+    def get_kid_at_chain_depth(self, chain_depth: winrt.system.UInt32 | typing.SupportsIndex, /) -> _uuid.UUID: ...
+    # Deprecated alias of get_kid_at_chain_depth() by the name it was published under.
+    # System.Guid Windows.Media.Protection.PlayReady.PlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
+    @deprecated("Use get_kid_at_chain_depth() instead.")
     def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32 | typing.SupportsIndex, /) -> _uuid.UUID: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.PlayReadyLicense::get_ChainDepth()
     @_property
@@ -684,6 +692,10 @@ class PlayReadyLicenseSession(IPlayReadyLicenseSession2, IPlayReadyLicenseSessio
     # System.Void Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::ConfigureMediaProtectionManager(Windows.Media.Protection.MediaProtectionManager)
     def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
     # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::CreateLAServiceRequest()
+    def create_la_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
+    # Deprecated alias of create_la_service_request() by the name it was published under.
+    # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::CreateLAServiceRequest()
+    @deprecated("Use create_la_service_request() instead.")
     def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
     # Windows.Media.Protection.PlayReady.PlayReadyLicenseIterable Windows.Media.Protection.PlayReady.PlayReadyLicenseSession::CreateLicenseIterable(Windows.Media.Protection.PlayReady.PlayReadyContentHeader,System.Boolean)
     def create_license_iterable(self, content_header: PlayReadyContentHeader, fully_evaluated: bool, /) -> PlayReadyLicenseIterable: ...
@@ -1113,6 +1125,10 @@ class INDStorageFileHelper(winrt.system.Object):
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.INDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
     @deprecated("INDStorageFileHelper is deprecated and might not work on all platforms. For more info, see MSDN.")
     @abstractmethod
+    def get_file_urls(self, file: windows_storage.IStorageFile, /) -> _cabc.MutableSequence[str]: ...
+    # Deprecated alias of get_file_urls() by the name it was published under.
+    # Windows.Foundation.Collections.IVector`1<System.String> Windows.Media.Protection.PlayReady.INDStorageFileHelper::GetFileURLs(Windows.Storage.IStorageFile)
+    @deprecated("Use get_file_urls() instead.")
     def get_file_u_r_ls(self, file: windows_storage.IStorageFile, /) -> _cabc.MutableSequence[str]: ...
 
 @deprecated("INDStreamParser is deprecated and might not work on all platforms. For more info, see MSDN.")
@@ -1241,6 +1257,10 @@ class IPlayReadyDomain(winrt.system.Object):
 class IPlayReadyLicense(winrt.system.Object):
     # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
     @abstractmethod
+    def get_kid_at_chain_depth(self, chain_depth: winrt.system.UInt32 | typing.SupportsIndex, /) -> _uuid.UUID: ...
+    # Deprecated alias of get_kid_at_chain_depth() by the name it was published under.
+    # System.Guid Windows.Media.Protection.PlayReady.IPlayReadyLicense::GetKIDAtChainDepth(System.UInt32)
+    @deprecated("Use get_kid_at_chain_depth() instead.")
     def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32 | typing.SupportsIndex, /) -> _uuid.UUID: ...
     # System.UInt32 Windows.Media.Protection.PlayReady.IPlayReadyLicense::get_ChainDepth()
     @_property
@@ -1291,6 +1311,10 @@ class IPlayReadyLicenseSession(winrt.system.Object):
     def configure_media_protection_manager(self, mpm: windows_media_protection.MediaProtectionManager, /) -> None: ...
     # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::CreateLAServiceRequest()
     @abstractmethod
+    def create_la_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
+    # Deprecated alias of create_la_service_request() by the name it was published under.
+    # Windows.Media.Protection.PlayReady.IPlayReadyLicenseAcquisitionServiceRequest Windows.Media.Protection.PlayReady.IPlayReadyLicenseSession::CreateLAServiceRequest()
+    @deprecated("Use create_la_service_request() instead.")
     def create_l_a_service_request(self) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
 
 class IPlayReadyLicenseSession2(IPlayReadyLicenseSession, winrt.system.Object):

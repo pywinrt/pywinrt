@@ -801,8 +801,8 @@ enum Windows.ApplicationModel.Store.Preview.StoreSystemFeature python_type
     constant DIRECTX9 3
     constant DIRECTX10 4
     constant DIRECTX11 5
-    constant D3D12_HARDWARE_F_L11 6
-    constant D3D12_HARDWARE_F_L12 7
+    constant D3D12_HARDWARE_FL11 6
+    constant D3D12_HARDWARE_FL12 7
     constant MEMORY_300_MB 8
     constant MEMORY_750_MB 9
     constant MEMORY_1_GB 10
@@ -813,12 +813,12 @@ enum Windows.ApplicationModel.Store.Preview.StoreSystemFeature python_type
     constant HOVER 15
     constant MAGNETOMETER 16
     constant NFC 17
-    constant RESOLUTION720_P 18
+    constant RESOLUTION_720P 18
     constant RESOLUTION_WVGA 19
-    constant RESOLUTION_WVGA_OR720_P 20
+    constant RESOLUTION_WVGA_OR_720P 20
     constant RESOLUTION_WXGA 21
     constant RESOLUTION_WVGA_OR_WXGA 22
-    constant RESOLUTION_WXGA_OR720_P 23
+    constant RESOLUTION_WXGA_OR_720P 23
     constant MEMORY_4_GB 24
     constant MEMORY_6_GB 25
     constant MEMORY_8_GB 26

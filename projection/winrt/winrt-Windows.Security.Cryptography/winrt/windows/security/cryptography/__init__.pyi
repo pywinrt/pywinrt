@@ -13,8 +13,8 @@ __all__ = [
 
 class BinaryStringEncoding(enum.IntEnum):
     UTF8 = 0
-    UTF16_L_E = 1
-    UTF16_B_E = 2
+    UTF16_LE = 1
+    UTF16_BE = 2
 
 @typing.final
 class CryptographicBuffer_Static(winrt.system.Object_Static):

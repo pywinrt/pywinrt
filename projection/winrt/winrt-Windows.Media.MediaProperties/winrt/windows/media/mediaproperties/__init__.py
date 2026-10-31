@@ -32,3 +32,8 @@ __all__ = [
 ]
 
 winrt.runtime._internals.mixin_mutable_mapping(MediaPropertySet)
+winrt.runtime._internals.renamed_static_method(ImageEncodingProperties, "create_jpeg_x_r", "create_jpeg_xr")
+winrt.runtime._internals.renamed_enum_member(VideoEncodingQuality, "H_D1080P", "HD_1080P")
+winrt.runtime._internals.renamed_enum_member(VideoEncodingQuality, "H_D720P", "HD_720P")
+winrt.runtime._internals.renamed_enum_member(VideoEncodingQuality, "UHD2160P", "UHD_2160P")
+winrt.runtime._internals.renamed_enum_member(VideoEncodingQuality, "UHD4320P", "UHD_4320P")

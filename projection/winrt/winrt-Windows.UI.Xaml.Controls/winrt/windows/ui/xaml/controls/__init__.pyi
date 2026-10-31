@@ -4400,18 +4400,42 @@ class Control_Static(windows_ui_xaml.FrameworkElement_Static):
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusDownProperty()
     @_property
     @typing.final
+    def xy_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusDownProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_down_property instead.")
     def x_y_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusLeftProperty()
     @_property
     @typing.final
+    def xy_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusLeftProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_left_property instead.")
     def x_y_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusRightProperty()
     @_property
     @typing.final
+    def xy_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusRightProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_right_property instead.")
     def x_y_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusUpProperty()
     @_property
     @typing.final
+    def xy_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_XYFocusUpProperty()
+    @_property
+    @typing.final
+    @deprecated("Use xy_focus_up_property instead.")
     def x_y_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.Control::get_DefaultStyleResourceUriProperty()
     @_property
@@ -4665,31 +4689,71 @@ class Control(windows_ui_xaml.FrameworkElement, metaclass=Control_Static):
     def use_system_focus_visuals(self, value: bool) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusUp()
     @_property
+    def xy_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_up.setter
+    @typing.final
+    def xy_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_up by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusUp()
+    @_property
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_up.setter
     @typing.final
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusRight()
     @_property
+    def xy_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_right.setter
+    @typing.final
+    def xy_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_right by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusRight()
+    @_property
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_right.setter
     @typing.final
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusLeft()
     @_property
+    def xy_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_left.setter
+    @typing.final
+    def xy_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_left by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusLeft()
+    @_property
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_left.setter
     @typing.final
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusDown()
     @_property
+    def xy_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_down.setter
+    @typing.final
+    def xy_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_down by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.Control::get_XYFocusDown()
+    @_property
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.Control::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_down.setter
     @typing.final
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.Controls.RequiresPointer Windows.UI.Xaml.Controls.Control::get_RequiresPointer()
     @_property
@@ -15649,15 +15713,35 @@ class WebView_Static(windows_ui_xaml.FrameworkElement_Static):
     def default_execution_mode(cls) -> WebViewExecutionMode: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusDownProperty()
     @_property
+    def xy_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_down_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusDownProperty()
+    @_property
+    @deprecated("Use xy_focus_down_property instead.")
     def x_y_focus_down_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusLeftProperty()
     @_property
+    def xy_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_left_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusLeftProperty()
+    @_property
+    @deprecated("Use xy_focus_left_property instead.")
     def x_y_focus_left_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusRightProperty()
     @_property
+    def xy_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_right_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusRightProperty()
+    @_property
+    @deprecated("Use xy_focus_right_property instead.")
     def x_y_focus_right_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusUpProperty()
     @_property
+    def xy_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
+    # Deprecated alias of xy_focus_up_property by the name it was published under.
+    # Windows.UI.Xaml.DependencyProperty Windows.UI.Xaml.Controls.WebView::get_XYFocusUpProperty()
+    @_property
+    @deprecated("Use xy_focus_up_property instead.")
     def x_y_focus_up_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
@@ -15830,27 +15914,63 @@ class WebView(windows_ui_xaml.FrameworkElement, metaclass=WebView_Static):
     def settings(self) -> WebViewSettings: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusUp()
     @_property
+    def xy_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_up.setter
+    def xy_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_up by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusUp()
+    @_property
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusUp(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_up.setter
+    @deprecated("Use xy_focus_up instead.")
     def x_y_focus_up(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusRight()
     @_property
+    def xy_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_right.setter
+    def xy_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_right by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusRight()
+    @_property
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusRight(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_right.setter
+    @deprecated("Use xy_focus_right instead.")
     def x_y_focus_right(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusLeft()
     @_property
+    def xy_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_left.setter
+    def xy_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_left by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusLeft()
+    @_property
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusLeft(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_left.setter
+    @deprecated("Use xy_focus_left instead.")
     def x_y_focus_left(self, value: windows_ui_xaml.DependencyObject) -> None: ...
     # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusDown()
     @_property
+    def xy_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
+    # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
+    @xy_focus_down.setter
+    def xy_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
+    # Deprecated alias of xy_focus_down by the name it was published under.
+    # Windows.UI.Xaml.DependencyObject Windows.UI.Xaml.Controls.WebView::get_XYFocusDown()
+    @_property
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self) -> windows_ui_xaml.DependencyObject: ...
     # System.Void Windows.UI.Xaml.Controls.WebView::put_XYFocusDown(Windows.UI.Xaml.DependencyObject)
     @x_y_focus_down.setter
+    @deprecated("Use xy_focus_down instead.")
     def x_y_focus_down(self, value: windows_ui_xaml.DependencyObject) -> None: ...
 
 @typing.final

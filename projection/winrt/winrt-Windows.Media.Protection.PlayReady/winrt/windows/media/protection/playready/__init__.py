@@ -72,3 +72,10 @@ __all__ = [
     "IPlayReadyServiceRequest",
 ]
 
+winrt.runtime._internals.renamed_method(NDStorageFileHelper, "get_file_u_r_ls", "get_file_urls")
+winrt.runtime._internals.renamed_method(PlayReadyLicense, "get_k_i_d_at_chain_depth", "get_kid_at_chain_depth")
+winrt.runtime._internals.renamed_method(PlayReadyLicenseSession, "create_l_a_service_request", "create_la_service_request")
+winrt.runtime._internals.renamed_method(_INDStorageFileHelper, "get_file_u_r_ls", "get_file_urls")
+winrt.runtime._internals.renamed_method(_IPlayReadyLicense, "get_k_i_d_at_chain_depth", "get_kid_at_chain_depth")
+winrt.runtime._internals.renamed_method(_IPlayReadyLicenseSession, "create_l_a_service_request", "create_la_service_request")
+winrt.runtime._internals.renamed_method(_IPlayReadyLicenseSession2, "create_l_a_service_request", "create_la_service_request")

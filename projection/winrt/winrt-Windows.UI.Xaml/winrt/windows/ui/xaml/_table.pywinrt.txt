@@ -5332,17 +5332,17 @@ class Windows.UI.Xaml.UIElement composable python_type
             out enum_u32 type=Windows.UI.Xaml.ElementHighContrastAdjustment return
         put put_HighContrastAdjustment slot=24 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             in enum_u32 type=Windows.UI.Xaml.ElementHighContrastAdjustment name=value
-    property x_y_focus_right_navigation_strategy
+    property xy_focus_right_navigation_strategy
         get get_XYFocusRightNavigationStrategy slot=21 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusRightNavigationStrategy slot=22 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             in enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy name=value
-    property x_y_focus_keyboard_navigation
+    property xy_focus_keyboard_navigation
         get get_XYFocusKeyboardNavigation slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode return
         put put_XYFocusKeyboardNavigation slot=14 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             in enum32 type=Windows.UI.Xaml.Input.XYFocusKeyboardNavigationMode name=value
-    property x_y_focus_down_navigation_strategy
+    property xy_focus_down_navigation_strategy
         get get_XYFocusDownNavigationStrategy slot=17 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusDownNavigationStrategy slot=18 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
@@ -5357,7 +5357,7 @@ class Windows.UI.Xaml.UIElement composable python_type
             out double return
         put put_KeyTipVerticalOffset slot=12 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=2
             in double name=value
-    property x_y_focus_up_navigation_strategy
+    property xy_focus_up_navigation_strategy
         get get_XYFocusUpNavigationStrategy slot=15 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusUpNavigationStrategy slot=16 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
@@ -5367,7 +5367,7 @@ class Windows.UI.Xaml.UIElement composable python_type
             out enum32 type=Windows.UI.Xaml.Input.KeyTipPlacementMode return
         put put_KeyTipPlacementMode slot=8 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             in enum32 type=Windows.UI.Xaml.Input.KeyTipPlacementMode name=value
-    property x_y_focus_left_navigation_strategy
+    property xy_focus_left_navigation_strategy
         get get_XYFocusLeftNavigationStrategy slot=19 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElement5 shape=4
             out enum32 type=Windows.UI.Xaml.Input.XYFocusNavigationStrategy return
         put put_XYFocusLeftNavigationStrategy slot=20 inputs=1 outputs=0 declaring=Windows.UI.Xaml.IUIElement5 shape=4
@@ -5610,19 +5610,19 @@ class Windows.UI.Xaml.UIElement composable python_type
     property lights_property static
         get get_LightsProperty slot=6 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_down_navigation_strategy_property static
+    property xy_focus_down_navigation_strategy_property static
         get get_XYFocusDownNavigationStrategyProperty slot=12 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_keyboard_navigation_property static
+    property xy_focus_keyboard_navigation_property static
         get get_XYFocusKeyboardNavigationProperty slot=10 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_left_navigation_strategy_property static
+    property xy_focus_left_navigation_strategy_property static
         get get_XYFocusLeftNavigationStrategyProperty slot=13 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_right_navigation_strategy_property static
+    property xy_focus_right_navigation_strategy_property static
         get get_XYFocusRightNavigationStrategyProperty slot=14 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
-    property x_y_focus_up_navigation_strategy_property static
+    property xy_focus_up_navigation_strategy_property static
         get get_XYFocusUpNavigationStrategyProperty slot=11 inputs=0 outputs=1 declaring=Windows.UI.Xaml.IUIElementStatics5 shape=4 static
             out class type=Windows.UI.Xaml.DependencyProperty return
     property tab_focus_navigation_property static

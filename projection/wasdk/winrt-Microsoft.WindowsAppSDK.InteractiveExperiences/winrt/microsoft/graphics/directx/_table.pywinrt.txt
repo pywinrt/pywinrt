@@ -115,36 +115,36 @@ enum Microsoft.Graphics.DirectX.DirectXPixelFormat python_type
     constant R9_G9_B9_E5_SHARED_EXPONENT 67
     constant R8_G8_B8_G8_UINT_NORMALIZED 68
     constant G8_R8_G8_B8_UINT_NORMALIZED 69
-    constant B_C1_TYPELESS 70
-    constant B_C1_UINT_NORMALIZED 71
-    constant B_C1_UINT_NORMALIZED_SRGB 72
-    constant B_C2_TYPELESS 73
-    constant B_C2_UINT_NORMALIZED 74
-    constant B_C2_UINT_NORMALIZED_SRGB 75
-    constant B_C3_TYPELESS 76
-    constant B_C3_UINT_NORMALIZED 77
-    constant B_C3_UINT_NORMALIZED_SRGB 78
-    constant B_C4_TYPELESS 79
-    constant B_C4_UINT_NORMALIZED 80
-    constant B_C4_INT_NORMALIZED 81
-    constant B_C5_TYPELESS 82
-    constant B_C5_UINT_NORMALIZED 83
-    constant B_C5_INT_NORMALIZED 84
+    constant BC1_TYPELESS 70
+    constant BC1_UINT_NORMALIZED 71
+    constant BC1_UINT_NORMALIZED_SRGB 72
+    constant BC2_TYPELESS 73
+    constant BC2_UINT_NORMALIZED 74
+    constant BC2_UINT_NORMALIZED_SRGB 75
+    constant BC3_TYPELESS 76
+    constant BC3_UINT_NORMALIZED 77
+    constant BC3_UINT_NORMALIZED_SRGB 78
+    constant BC4_TYPELESS 79
+    constant BC4_UINT_NORMALIZED 80
+    constant BC4_INT_NORMALIZED 81
+    constant BC5_TYPELESS 82
+    constant BC5_UINT_NORMALIZED 83
+    constant BC5_INT_NORMALIZED 84
     constant B5_G6_R5_UINT_NORMALIZED 85
     constant B5_G5_R5_A1_UINT_NORMALIZED 86
     constant B8_G8_R8_A8_UINT_NORMALIZED 87
     constant B8_G8_R8_X8_UINT_NORMALIZED 88
-    constant R10_G10_B10_X_R_BIAS_A2_UINT_NORMALIZED 89
+    constant R10_G10_B10_XR_BIAS_A2_UINT_NORMALIZED 89
     constant B8_G8_R8_A8_TYPELESS 90
     constant B8_G8_R8_A8_UINT_NORMALIZED_SRGB 91
     constant B8_G8_R8_X8_TYPELESS 92
     constant B8_G8_R8_X8_UINT_NORMALIZED_SRGB 93
-    constant B_C6_H_TYPELESS 94
-    constant B_C6_H16_UNSIGNED_FLOAT 95
-    constant B_C6_H16_FLOAT 96
-    constant B_C7_TYPELESS 97
-    constant B_C7_UINT_NORMALIZED 98
-    constant B_C7_UINT_NORMALIZED_SRGB 99
+    constant BC6H_TYPELESS 94
+    constant BC6H_16_UNSIGNED_FLOAT 95
+    constant BC6H_16_FLOAT 96
+    constant BC7_TYPELESS 97
+    constant BC7_UINT_NORMALIZED 98
+    constant BC7_UINT_NORMALIZED_SRGB 99
     constant AYUV 100
     constant Y410 101
     constant Y416 102

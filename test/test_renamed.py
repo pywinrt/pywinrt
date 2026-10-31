@@ -3,10 +3,12 @@ import unittest
 import test_winrt.testcomponent as tc
 import winrt.runtime._internals as internals
 from winrt.system import Object
+import winrt.windows.devices.display as wdd
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.metadata as wfm
 import winrt.windows.globalization as wg
 import winrt.windows.globalization.numberformatting as wgn
+import winrt.windows.media.core as wmc
 
 # The aliases are added to the real projected types, which the rest of the
 # tests share, so every old name here is one no projection has.
@@ -250,6 +252,30 @@ class TestRenamedMembers(unittest.TestCase):
 
         with self.assertWarns(DeprecationWarning):
             tests.remove_renamed_event1(token)  # type: ignore[deprecated]
+
+
+class TestRenamedWindowsSdk(unittest.TestCase):
+    """
+    Names the Windows SDK projection published before it kept an acronym in
+    one word, from its list of renames.
+    """
+
+    def test_enum_member(self) -> None:
+        with self.assertWarns(DeprecationWarning) as cm:
+            value = getattr(wdd.DisplayMonitorPhysicalConnectorKind, "ANALOG_T_V")
+
+        self.assertIs(value, wdd.DisplayMonitorPhysicalConnectorKind.ANALOG_TV)
+        self.assertEqual(
+            str(cm.warning),
+            "DisplayMonitorPhysicalConnectorKind.ANALOG_T_V is deprecated, "
+            "use ANALOG_TV instead",
+        )
+
+    def test_static_property(self) -> None:
+        with self.assertWarns(DeprecationWarning):
+            value = wmc.CodecSubtypes.audio_format_m_p3  # type: ignore[deprecated]
+
+        self.assertEqual(value, wmc.CodecSubtypes.audio_format_mp3)
 
 
 if __name__ == "__main__":

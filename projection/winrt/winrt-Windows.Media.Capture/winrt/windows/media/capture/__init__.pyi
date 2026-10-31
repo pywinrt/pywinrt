@@ -279,8 +279,8 @@ class CameraCaptureUIMaxPhotoResolution(enum.IntEnum):
     VERY_SMALL_QVGA = 1
     SMALL_VGA = 2
     MEDIUM_XGA = 3
-    LARGE3_M = 4
-    VERY_LARGE5_M = 5
+    LARGE_3M = 4
+    VERY_LARGE_5M = 5
 
 class CameraCaptureUIMaxVideoResolution(enum.IntEnum):
     HIGHEST_AVAILABLE = 0
@@ -296,7 +296,7 @@ class CameraCaptureUIMode(enum.IntEnum):
 class CameraCaptureUIPhotoFormat(enum.IntEnum):
     JPEG = 0
     PNG = 1
-    JPEG_X_R = 2
+    JPEG_XR = 2
 
 class CameraCaptureUIVideoFormat(enum.IntEnum):
     MP4 = 0

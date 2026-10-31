@@ -66,7 +66,7 @@ __all__ = [
 
 class AppIndexTextStreamEncoding(enum.IntEnum):
     UTF8 = 0
-    UTF16_L_E = 1
+    UTF16_LE = 1
 
 class ContentItemErrorDetail(enum.IntEnum):
     NO_ERROR = 0

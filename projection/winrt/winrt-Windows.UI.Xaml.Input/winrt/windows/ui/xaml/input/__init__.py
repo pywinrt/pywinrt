@@ -72,6 +72,7 @@ __all__ = [
     "TappedEventHandler",
 ]
 
+winrt.runtime._internals.renamed_property(FindNextElementOptions, "x_y_focus_navigation_strategy_override", "xy_focus_navigation_strategy_override")
 winrt.runtime._internals.alias_static_method(FocusManager, "find_next_element_with_options", "find_next_element")
 winrt.runtime._internals.alias_static_method(FocusManager, "find_next_focusable_element_with_hint", "find_next_focusable_element")
 winrt.runtime._internals.alias_static_method(FocusManager, "try_move_focus_with_options", "try_move_focus")

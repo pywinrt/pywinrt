@@ -13,3 +13,4 @@ __all__ = [
     "DisplayMonitor",
 ]
 
+winrt.runtime._internals.renamed_enum_member(DisplayMonitorPhysicalConnectorKind, "ANALOG_T_V", "ANALOG_TV")

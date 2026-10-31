@@ -41,8 +41,8 @@ enum Microsoft.Windows.Media.Capture.CameraCaptureUIMaxPhotoResolution python_ty
     constant VERY_SMALL_QVGA 1
     constant SMALL_VGA 2
     constant MEDIUM_XGA 3
-    constant LARGE3_M 4
-    constant VERY_LARGE5_M 5
+    constant LARGE_3M 4
+    constant VERY_LARGE_5M 5
 
 enum Microsoft.Windows.Media.Capture.CameraCaptureUIMaxVideoResolution python_type
     py CameraCaptureUIMaxVideoResolution
@@ -98,7 +98,7 @@ enum Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat python_type
     signature enum(Microsoft.Windows.Media.Capture.CameraCaptureUIPhotoFormat;i4)
     constant JPEG 0
     constant PNG 1
-    constant JPEG_X_R 2
+    constant JPEG_XR 2
 
 class Microsoft.Windows.Media.Capture.CameraCaptureUIVideoCaptureSettings activatable python_type
     py CameraCaptureUIVideoCaptureSettings
