@@ -6,6 +6,7 @@ import typing
 import uuid as _uuid
 from builtins import property as _property
 from abc import abstractmethod
+from typing_extensions import deprecated
 
 import winrt.system
 import winrt.windows.foundation as windows_foundation
@@ -138,12 +139,25 @@ class AsyncActionSource(winrt.system.Object):
     def fail(self, error: winrt.system.Int32 | typing.SupportsIndex, /) -> None: ...
     # System.Void TestComponent.AsyncActionSource::InvokeCompletedHandler()
     def invoke_completed_handler(self) -> None: ...
+    # Deprecated alias of invoke_completed_handler() by the name it was published under.
+    # System.Void TestComponent.AsyncActionSource::InvokeCompletedHandler()
+    @deprecated("Use invoke_completed_handler() instead.")
+    def renamed_invoke_completed_handler(self) -> None: ...
     # System.Boolean TestComponent.AsyncActionSource::get_DefersCompletedHandler()
     @_property
     def defers_completed_handler(self) -> bool: ...
     # System.Void TestComponent.AsyncActionSource::put_DefersCompletedHandler(System.Boolean)
     @defers_completed_handler.setter
     def defers_completed_handler(self, value: bool) -> None: ...
+    # Deprecated alias of defers_completed_handler by the name it was published under.
+    # System.Boolean TestComponent.AsyncActionSource::get_DefersCompletedHandler()
+    @_property
+    @deprecated("Use defers_completed_handler instead.")
+    def renamed_defers_completed_handler(self) -> bool: ...
+    # System.Void TestComponent.AsyncActionSource::put_DefersCompletedHandler(System.Boolean)
+    @renamed_defers_completed_handler.setter
+    @deprecated("Use defers_completed_handler instead.")
+    def renamed_defers_completed_handler(self, value: bool) -> None: ...
     # System.UInt32 TestComponent.AsyncActionSource::get_CancelRequestCount()
     @_property
     def cancel_request_count(self) -> winrt.system.UInt32: ...
@@ -292,6 +306,16 @@ class Override(winrt.system.Object, metaclass=Override_Static):
     # System.Void TestComponent.Override::remove_OverridableCalled(Windows.Foundation.EventRegistrationToken)
     def remove_overridable_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     @typing.final
+    # Deprecated alias of add_overridable_called() by the name it was published under.
+    # Windows.Foundation.EventRegistrationToken TestComponent.Override::add_OverridableCalled(Windows.Foundation.EventHandler`1<System.Object>)
+    @deprecated("Use add_overridable_called() instead.")
+    def add_renamed_overridable_called(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    @typing.final
+    # Deprecated alias of remove_overridable_called() by the name it was published under.
+    # System.Void TestComponent.Override::remove_OverridableCalled(Windows.Foundation.EventRegistrationToken)
+    @deprecated("Use remove_overridable_called() instead.")
+    def remove_renamed_overridable_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    @typing.final
     # Windows.Foundation.EventRegistrationToken TestComponent.Override::add_ProtectedCalled(Windows.Foundation.EventHandler`1<System.Object>)
     def add_protected_called(self, handler: windows_foundation.EventHandler[winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     @typing.final
@@ -357,6 +381,10 @@ class TestRunner_Static(winrt.system.Object_Static):
     def expect_object(cls, value: winrt.system.Object, /) -> str: ...
     # TestComponent.ITests TestComponent.TestRunner::MakeTests()
     def make_tests(cls) -> ITests: ...
+    # Deprecated alias of make_tests() by the name it was published under.
+    # TestComponent.ITests TestComponent.TestRunner::MakeTests()
+    @deprecated("Use make_tests() instead.")
+    def renamed_make_tests(cls) -> ITests: ...
     # System.UInt32 TestComponent.TestRunner::TestConsumer(TestComponent.TestHandler)
     def test_consumer(cls, caller: TestHandler, /) -> winrt.system.UInt32: ...
     # System.Void TestComponent.TestRunner::TestProducer(TestComponent.ITests)
@@ -732,12 +760,24 @@ class ITests(winrt.system.Object):
     # System.Void TestComponent.ITests::Simple()
     @abstractmethod
     def simple(self) -> None: ...
+    # Deprecated alias of simple() by the name it was published under.
+    # System.Void TestComponent.ITests::Simple()
+    @deprecated("Use simple() instead.")
+    def renamed_simple(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken TestComponent.ITests::add_Event1(Windows.Foundation.EventHandler`1<System.Int32>)
     @abstractmethod
     def add_event1(self, handler: windows_foundation.EventHandler[winrt.system.Int32], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void TestComponent.ITests::remove_Event1(Windows.Foundation.EventRegistrationToken)
     @abstractmethod
     def remove_event1(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    # Deprecated alias of add_event1() by the name it was published under.
+    # Windows.Foundation.EventRegistrationToken TestComponent.ITests::add_Event1(Windows.Foundation.EventHandler`1<System.Int32>)
+    @deprecated("Use add_event1() instead.")
+    def add_renamed_event1(self, handler: windows_foundation.EventHandler[winrt.system.Int32], /) -> windows_foundation.EventRegistrationToken: ...
+    # Deprecated alias of remove_event1() by the name it was published under.
+    # System.Void TestComponent.ITests::remove_Event1(Windows.Foundation.EventRegistrationToken)
+    @deprecated("Use remove_event1() instead.")
+    def remove_renamed_event1(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken TestComponent.ITests::add_Event2(Windows.Foundation.TypedEventHandler`2<TestComponent.ITests,System.Int32>)
     @abstractmethod
     def add_event2(self, handler: windows_foundation.TypedEventHandler[ITests, winrt.system.Int32], /) -> windows_foundation.EventRegistrationToken: ...
@@ -748,6 +788,11 @@ class ITests(winrt.system.Object):
     @_property
     @abstractmethod
     def percentage(self) -> winrt.system.UInt32: ...
+    # Deprecated alias of percentage by the name it was published under.
+    # System.UInt32 TestComponent.ITests::get_Percentage()
+    @_property
+    @deprecated("Use percentage instead.")
+    def renamed_percentage(self) -> winrt.system.UInt32: ...
 
 type Array10Handler = typing.Callable[[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]], tuple[winrt.system.Array[winrt.system.Double] | winrt.system.ReadableBuffer, winrt.system.Array[winrt.system.Double] | winrt.system.ReadableBuffer]]
 type Array11Handler = typing.Callable[[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]], tuple[winrt.system.Array[winrt.system.Char16] | winrt.system.ReadableBuffer, winrt.system.Array[winrt.system.Char16] | winrt.system.ReadableBuffer]]

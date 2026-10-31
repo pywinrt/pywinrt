@@ -15,6 +15,7 @@ static class FileWriters
         bool componentDlls,
         string? dllPackage,
         bool legacyMethodAliases,
+        Renames renames,
         Census census
     )
     {
@@ -29,7 +30,7 @@ static class FileWriters
             nsDir = new DirectoryInfo(Path.Combine(nsDir.FullName, segment));
         }
 
-        var members = new Members(typeDefinitions, legacyMethodAliases);
+        var members = new Members(typeDefinitions, legacyMethodAliases, renames);
 
         if (
             !members
@@ -666,19 +667,60 @@ static class FileWriters
         }
 
         // Methods that were renamed in pywinrt v3.0 are still callable by the
-        // name they had then, with a deprecation warning.
+        // name they had then, and the members in the projection's list of
+        // renames by the name it published them under, with a deprecation
+        // warning.
         foreach (var type in allExtensionTypes)
         {
             foreach (var group in type.MethodGroups)
             {
                 foreach (var alias in group.Aliases)
                 {
-                    var function = group.IsStatic ? "alias_static_method" : "alias_method";
+                    var function = (alias.IsRename, group.IsStatic) switch
+                    {
+                        (false, false) => "alias_method",
+                        (false, true) => "alias_static_method",
+                        (true, false) => "renamed_method",
+                        (true, true) => "renamed_static_method",
+                    };
 
                     w.WriteLine(
                         $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.PyName}\", \"{group.PyName}\")"
                     );
                 }
+            }
+
+            foreach (var alias in type.PropertyAliases)
+            {
+                var function = alias.Property.IsStatic
+                    ? "renamed_static_property"
+                    : "renamed_property";
+
+                w.WriteLine(
+                    $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.PyName}\", \"{alias.Property.PyName}\")"
+                );
+            }
+
+            foreach (var alias in type.EventAliases)
+            {
+                var function = alias.Event.IsStatic ? "renamed_static_method" : "renamed_method";
+
+                w.WriteLine(
+                    $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.AddPyName}\", \"{alias.Event.AddMethod.PyName}\")"
+                );
+                w.WriteLine(
+                    $"winrt.runtime._internals.{function}({type.PyWrapperTypeName}, \"{alias.RemovePyName}\", \"{alias.Event.RemoveMethod.PyName}\")"
+                );
+            }
+        }
+
+        foreach (var type in members.Enums)
+        {
+            foreach (var alias in type.EnumMemberAliases)
+            {
+                w.WriteLine(
+                    $"winrt.runtime._internals.renamed_enum_member({type.Name}, \"{alias.PyName}\", \"{alias.Target}\")"
+                );
             }
         }
 

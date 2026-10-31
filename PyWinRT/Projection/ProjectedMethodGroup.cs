@@ -9,13 +9,43 @@ using Mono.Cecil;
 /// The overloads that the alias forwards to, sorted by number of Python
 /// arguments.
 /// </param>
+/// <param name="IsRename">
+/// Whether the alias is a name from the projection's <see cref="Renames"/>
+/// rather than one the method had in pywinrt v3.x.
+/// </param>
 /// <remarks>
 /// These exist so that code written for pywinrt v3.x, where the WinRT
 /// <c>Overload</c> attribute was always used for the Python method name, keeps
 /// working now that overloads are called using the WinRT method name and the
-/// number of arguments.
+/// number of arguments, and so that code written for a name the projection
+/// has since renamed keeps working.
 /// </remarks>
-record MethodAlias(string PyName, IReadOnlyList<ProjectedMethod> Methods);
+record MethodAlias(string PyName, IReadOnlyList<ProjectedMethod> Methods, bool IsRename = false);
+
+/// <summary>
+/// A deprecated Python name of a property, the one the projection published
+/// it under before renaming it.
+/// </summary>
+record PropertyAlias(string PyName, ProjectedProperty Property);
+
+/// <summary>
+/// A deprecated Python name of an event, the one the projection published it
+/// under before renaming it, which its <c>add_</c> and <c>remove_</c> methods
+/// are aliased by.
+/// </summary>
+/// <param name="PyName">The old name of the event.</param>
+/// <param name="AddPyName">The old name of the add method.</param>
+/// <param name="RemovePyName">The old name of the remove method.</param>
+/// <param name="Event">The event.</param>
+record EventAlias(string PyName, string AddPyName, string RemovePyName, ProjectedEvent Event);
+
+/// <summary>
+/// A deprecated Python name of a member of an enum, the one the projection
+/// published it under before renaming it.
+/// </summary>
+/// <param name="PyName">The old name.</param>
+/// <param name="Target">The name of the member now.</param>
+record EnumMemberAlias(string PyName, string Target);
 
 /// <summary>
 /// A group of WinRT methods that are projected as a single Python method.

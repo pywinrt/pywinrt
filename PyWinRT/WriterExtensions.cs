@@ -108,14 +108,21 @@ static class WriterExtensions
         IReadOnlyDictionary<string, string> packageMap,
         string self = "self",
         bool isAbstract = false,
-        string? aliasPyName = null,
+        MethodAlias? alias = null,
         string? aliasTarget = null,
         string ignoreComment = ""
     )
     {
         var nullabilityInfo = method.GetNullability(nullabilityMap);
+        var aliasPyName = alias?.PyName;
 
-        if (aliasPyName is not null)
+        if (alias is { IsRename: true })
+        {
+            w.WriteLine(
+                $"# Deprecated alias of {aliasTarget}() by the name it was published under."
+            );
+        }
+        else if (alias is not null)
         {
             w.WriteLine($"# Deprecated alias of {aliasTarget}() for pywinrt v3.x compatibility.");
         }
@@ -163,6 +170,49 @@ static class WriterExtensions
         );
     }
 
+    /// <summary>
+    /// Writes the deprecated <c>add_</c> and <c>remove_</c> methods of each
+    /// name the projection published <paramref name="evt"/> under before
+    /// renaming it.
+    /// </summary>
+    public static void WriteEventAliasTyping(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        ProjectedEvent evt,
+        string ns,
+        ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
+        IReadOnlyDictionary<string, string> packageMap,
+        string self = "self"
+    )
+    {
+        foreach (var alias in type.EventAliases.Where(a => a.Event == evt))
+        {
+            foreach (
+                var (method, pyName) in new[]
+                {
+                    (evt.AddMethod, alias.AddPyName),
+                    (evt.RemoveMethod, alias.RemovePyName),
+                }
+            )
+            {
+                if (type.IsComposable)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
+                w.WritePythonMethodTyping(
+                    method,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    self,
+                    alias: new MethodAlias(pyName, [method], IsRename: true),
+                    aliasTarget: method.PyName
+                );
+            }
+        }
+    }
+
     public static void WritePythonPropertyTyping(
         this IndentedTextWriter w,
         ProjectedType type,
@@ -171,16 +221,22 @@ static class WriterExtensions
         ReadOnlyDictionary<string, MethodNullabilityInfo> nullabilityMap,
         IReadOnlyDictionary<string, string> packageMap,
         string self = "self",
-        bool isAbstract = false
+        bool isAbstract = false,
+        PropertyAlias? alias = null
     )
     {
-        var name = prop.PyName;
+        var name = alias?.PyName ?? prop.PyName;
         var getterNullabilityInfo = prop.GetMethod.GetNullability(nullabilityMap);
         var propType = prop.GetMethod.Method.ToPyReturnTyping(
             ns,
             getterNullabilityInfo,
             packageMap
         );
+
+        if (alias is not null)
+        {
+            w.WriteLine($"# Deprecated alias of {prop.PyName} by the name it was published under.");
+        }
 
         w.WriteLine($"# {prop.GetMethod.Signature}");
 
@@ -214,7 +270,11 @@ static class WriterExtensions
             w.WriteLine("@typing.final");
         }
 
-        if (prop.GetMethod.IsDeprecated)
+        if (alias is not null)
+        {
+            w.WriteLine($"@deprecated(\"Use {prop.PyName} instead.\")");
+        }
+        else if (prop.GetMethod.IsDeprecated)
         {
             w.WriteDeprecated(prop.GetMethod.DeprecatedMessage);
         }
@@ -245,7 +305,11 @@ static class WriterExtensions
                 w.WriteLine("@typing.final");
             }
 
-            if (prop.SetMethod.IsDeprecated)
+            if (alias is not null)
+            {
+                w.WriteLine($"@deprecated(\"Use {prop.PyName} instead.\")");
+            }
+            else if (prop.SetMethod.IsDeprecated)
             {
                 w.WriteDeprecated(prop.SetMethod.DeprecatedMessage);
             }

@@ -5,7 +5,7 @@ class ProjectedType
     // TODO: eventually, this should be private
     public readonly TypeDefinition Type;
 
-    public ProjectedType(TypeDefinition type, bool legacyMethodAliases)
+    public ProjectedType(TypeDefinition type, bool legacyMethodAliases, Renames? renames = null)
     {
         Type = type;
 
@@ -66,6 +66,8 @@ class ProjectedType
             .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
             .ToArray();
 
+        var renamed = (renames ?? Renames.None).Of(type);
+
         var factories = Factories = GetFactories(type);
         Constructors = EnumerateConstructors(type).ToArray();
         Properties = EnumerateProperties(type).ToArray();
@@ -75,9 +77,45 @@ class ProjectedType
             Properties,
             Events,
             GetReservedPyNames(),
-            legacyMethodAliases
+            legacyMethodAliases,
+            renamed
         );
         Methods = MethodGroups.SelectMany(g => g.Overloads).ToList();
+
+        PropertyAliases =
+        [
+            .. renamed
+                .SelectMany(r =>
+                    Properties
+                        .Where(p => p.PyName == r.Value)
+                        .Select(p => new PropertyAlias(r.Key, p))
+                )
+                .OrderBy(a => a.PyName, StringComparer.Ordinal),
+        ];
+
+        EventAliases =
+        [
+            .. renamed
+                .SelectMany(r =>
+                    Events.Where(e => e.PyName == r.Value).Select(e => AliasEvent(e, r.Key))
+                )
+                .OrderBy(a => a.AddPyName, StringComparer.Ordinal),
+        ];
+
+        var constants = type
+            .Fields.Where(f => f.Constant is not null)
+            .Select(f => f.Name.ToPythonConstant())
+            .ToHashSet(StringComparer.Ordinal);
+
+        EnumMemberAliases =
+        [
+            .. renamed
+                .Where(r => Category == Category.Enum && constants.Contains(r.Value))
+                .Select(r => new EnumMemberAlias(r.Key, r.Value))
+                .OrderBy(a => a.PyName, StringComparer.Ordinal),
+        ];
+
+        CheckRenames(renamed, constants);
 
         HasComposableFactory = factories.Values.Any(f =>
             f.IsComposable && f.Type?.Methods.Count > 0
@@ -318,6 +356,107 @@ class ProjectedType
     /// Gets the events of the type.
     /// </summary>
     public IReadOnlyCollection<ProjectedEvent> Events { get; }
+
+    /// <summary>
+    /// Gets the names the type's properties were published under before the
+    /// projection renamed them, sorted by name.
+    /// </summary>
+    public IReadOnlyList<PropertyAlias> PropertyAliases { get; }
+
+    /// <summary>
+    /// Gets the names the type's events were published under before the
+    /// projection renamed them, sorted by name.
+    /// </summary>
+    public IReadOnlyList<EventAlias> EventAliases { get; }
+
+    /// <summary>
+    /// Gets the names the members of an enum were published under before the
+    /// projection renamed them, sorted by name.
+    /// </summary>
+    public IReadOnlyList<EnumMemberAlias> EnumMemberAliases { get; }
+
+    private static EventAlias AliasEvent(ProjectedEvent @event, string old)
+    {
+        // a protected event's methods start with an underscore, so the old
+        // names keep whatever comes before the name of the event
+        var add = @event.AddMethod.PyName;
+        var remove = @event.RemoveMethod.PyName;
+
+        if (!add.EndsWith(@event.PyName, StringComparison.Ordinal))
+        {
+            throw new InvalidOperationException(
+                $"{@event.Event.DeclaringType.FullName}: {add}() is not named after {@event.PyName}"
+            );
+        }
+
+        if (!remove.EndsWith(@event.PyName, StringComparison.Ordinal))
+        {
+            throw new InvalidOperationException(
+                $"{@event.Event.DeclaringType.FullName}: {remove}() is not named after {@event.PyName}"
+            );
+        }
+
+        return new EventAlias(
+            old,
+            add[..^@event.PyName.Length] + old,
+            remove[..^@event.PyName.Length] + old,
+            @event
+        );
+    }
+
+    /// <summary>
+    /// Stops the run when an entry of the projection's <see cref="Renames"/>
+    /// for this type names nothing it has, or names an old name that is still
+    /// one of its members, since either means the list has gone out of step
+    /// with the projection.
+    /// </summary>
+    private void CheckRenames(
+        IReadOnlyDictionary<string, string> renamed,
+        IReadOnlySet<string> constants
+    )
+    {
+        var aliased = MethodGroups
+            .SelectMany(g => g.Aliases.Where(a => a.IsRename).Select(a => a.PyName))
+            .Concat(PropertyAliases.Select(a => a.PyName))
+            .Concat(EventAliases.Select(a => a.PyName))
+            .Concat(EnumMemberAliases.Select(a => a.PyName))
+            .ToHashSet(StringComparer.Ordinal);
+
+        var members = MethodGroups
+            .Select(g => g.PyName)
+            .Concat(
+                MethodGroups.SelectMany(g =>
+                    g.Aliases.Where(a => !a.IsRename).Select(a => a.PyName)
+                )
+            )
+            .Concat(Properties.Select(p => p.PyName))
+            .Concat(
+                Events.SelectMany(e =>
+                    new[] { e.PyName, e.AddMethod.PyName, e.RemoveMethod.PyName }
+                )
+            )
+            .Concat(constants)
+            .ToHashSet(StringComparer.Ordinal);
+
+        foreach (var (old, name) in renamed.OrderBy(r => r.Key, StringComparer.Ordinal))
+        {
+            if (members.Contains(old))
+            {
+                throw new InvalidOperationException(
+                    $"{Type.FullName}: {old} is listed as renamed to {name}, but it is still a "
+                        + "member of the type"
+                );
+            }
+
+            if (!aliased.Contains(old))
+            {
+                throw new InvalidOperationException(
+                    $"{Type.FullName}: {old} is listed as renamed to {name}, which is not a member "
+                        + "of the type"
+                );
+            }
+        }
+    }
 
     /// <summary>
     /// True if the type has any factory methods for creating instances of a composable type.
@@ -733,9 +872,19 @@ class ProjectedType
         IEnumerable<ProjectedProperty> properties,
         IEnumerable<ProjectedEvent> events,
         IEnumerable<string> reservedPyNames,
-        bool legacyMethodAliases
+        bool legacyMethodAliases,
+        IReadOnlyDictionary<string, string> renamed
     )
     {
+        // the names the projection's list of renames says a group had, each
+        // of which forwards to all of its overloads
+        List<MethodAlias> renamedAliases(List<ProjectedMethod> overloads) =>
+            [
+                .. renamed
+                    .Where(r => r.Value == overloads[0].PyName)
+                    .Select(r => new MethodAlias(r.Key, overloads, IsRename: true)),
+            ];
+
         var collected = new SortedDictionary<
             MethodGroupKey,
             SortedDictionary<int, List<ProjectedMethod>>
@@ -948,7 +1097,18 @@ class ProjectedType
 
         if (!legacyMethodAliases)
         {
-            return [.. resolved.Values.Select(m => new ProjectedMethodGroup([.. m.Values], []))];
+            return
+            [
+                .. resolved.Values.Select(m =>
+                {
+                    List<ProjectedMethod> overloads = [.. m.Values];
+                    var aliases = renamedAliases(overloads);
+
+                    aliases.Sort((x, y) => string.CompareOrdinal(x.PyName, y.PyName));
+
+                    return new ProjectedMethodGroup(overloads, aliases);
+                }),
+            ];
         }
 
         var reserved = new Dictionary<bool, HashSet<string>>
@@ -1027,6 +1187,7 @@ class ProjectedType
                 aliases.Add(new MethodAlias(legacy.Key, [.. legacy]));
             }
 
+            aliases.AddRange(renamedAliases(overloads));
             aliases.Sort((x, y) => string.CompareOrdinal(x.PyName, y.PyName));
 
             groups.Add(new ProjectedMethodGroup(overloads, aliases));

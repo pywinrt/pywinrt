@@ -157,7 +157,7 @@ static class ObjectWriterExtensions
                             nullabilityMap,
                             packageMap,
                             "cls",
-                            aliasPyName: alias.PyName,
+                            alias: alias,
                             aliasTarget: group.PyName
                         );
                     }
@@ -179,6 +179,7 @@ static class ObjectWriterExtensions
                 }
 
                 w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, packageMap, "cls");
+                w.WriteEventAliasTyping(type, evt, ns, nullabilityMap, packageMap, "cls");
 
                 hasMembers = true;
             }
@@ -186,6 +187,19 @@ static class ObjectWriterExtensions
             foreach (var prop in type.Properties.Where(p => p.GetMethod.IsStatic))
             {
                 w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, packageMap, "cls");
+
+                foreach (var alias in type.PropertyAliases.Where(a => a.Property == prop))
+                {
+                    w.WritePythonPropertyTyping(
+                        type,
+                        prop,
+                        ns,
+                        nullabilityMap,
+                        packageMap,
+                        "cls",
+                        alias: alias
+                    );
+                }
 
                 hasMembers = true;
             }
@@ -559,7 +573,7 @@ static class ObjectWriterExtensions
                         ns,
                         nullabilityMap,
                         packageMap,
-                        aliasPyName: alias.PyName,
+                        alias: alias,
                         aliasTarget: group.PyName
                     );
 
@@ -583,12 +597,25 @@ static class ObjectWriterExtensions
             }
 
             w.WritePythonMethodTyping(evt.RemoveMethod, ns, nullabilityMap, packageMap);
+            w.WriteEventAliasTyping(type, evt, ns, nullabilityMap, packageMap);
             didWriteLine = true;
         }
 
         foreach (var prop in type.Properties.Where(p => !p.IsStatic))
         {
             w.WritePythonPropertyTyping(type, prop, ns, nullabilityMap, packageMap);
+
+            foreach (var alias in type.PropertyAliases.Where(a => a.Property == prop))
+            {
+                w.WritePythonPropertyTyping(
+                    type,
+                    prop,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    alias: alias
+                );
+            }
 
             didWriteLine = true;
         }

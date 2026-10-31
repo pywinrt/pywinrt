@@ -108,6 +108,18 @@ var legacyMethodAliasesOption = new Option<bool>(
         + "that name. Only a projection that pywinrt v3.x published has code that calls them."
 );
 
+var renamesOption = new Option<FileInfo?>(
+    "--renames",
+    "JSON file of the Python names this projection published and has since renamed, keyed by "
+        + "the release that first published the new names, then by the full name of a WinRT "
+        + "type, each mapping an old name of one of its members to the name it has now. Each old "
+        + "name is kept as a deprecated alias. An event is named without its add_ and remove_."
+)
+{
+    Arity = ArgumentArity.ZeroOrOne,
+    ArgumentHelpName = "path",
+};
+
 var verboseOption = new Option<bool>("--verbose", "Show detailed progress information");
 
 var rootCommand = new RootCommand("Generate Python projection for Windows Runtime types");
@@ -122,6 +134,7 @@ rootCommand.AddOption(emitShapesOption);
 rootCommand.AddOption(componentDllsOption);
 rootCommand.AddOption(dllPackageOption);
 rootCommand.AddOption(legacyMethodAliasesOption);
+rootCommand.AddOption(renamesOption);
 rootCommand.AddOption(verboseOption);
 
 rootCommand.SetHandler(
@@ -151,6 +164,7 @@ rootCommand.SetHandler(
         var legacyMethodAliases = invocationContext.ParseResult.GetValueForOption(
             legacyMethodAliasesOption
         );
+        var renames = Renames.Load(invocationContext.ParseResult.GetValueForOption(renamesOption));
         var verbose = invocationContext.ParseResult.GetValueForOption(verboseOption);
 
         var inputPackage = default(string);
@@ -470,6 +484,7 @@ rootCommand.SetHandler(
                         componentDlls,
                         dllPackage,
                         legacyMethodAliases,
+                        renames,
                         census
                     );
 
@@ -532,6 +547,18 @@ rootCommand.SetHandler(
             );
 
             written.Add(name);
+        }
+
+        // A type in the list of renames that the projection does not have is
+        // one that upstream withdrew or that the list misspells, and either
+        // way the list has gone out of step with the projection. A run that
+        // was told to generate part of the projection only sees part of it.
+        if (include.Length == 0 && exclude.Length == 0 && renames.Unused.Any())
+        {
+            throw new Exception(
+                "the list of renames names types that the projection does not have: "
+                    + string.Join(", ", renames.Unused)
+            );
         }
 
         // A namespace that upstream withdrew, or one that moved into another

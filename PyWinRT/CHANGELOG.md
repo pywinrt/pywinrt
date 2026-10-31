@@ -10,6 +10,9 @@ repository](../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Added
+- `--renames <file>` keeps each name a projection renamed, as a deprecated alias.
+
 ### Fixed
 - Fixed a type stub importing `property` when it declares no property.
 

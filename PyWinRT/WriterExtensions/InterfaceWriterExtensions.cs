@@ -222,7 +222,7 @@ static class InterfaceWriterExtensions
                         ns,
                         nullabilityMap,
                         packageMap,
-                        aliasPyName: alias.PyName,
+                        alias: alias,
                         aliasTarget: group.PyName
                     );
                 }
@@ -245,6 +245,10 @@ static class InterfaceWriterExtensions
                 packageMap,
                 isAbstract: true
             );
+
+            // aliases are not abstract so that implementations don't have to
+            // provide the deprecated name
+            w.WriteEventAliasTyping(type, evt, ns, nullabilityMap, packageMap);
         }
 
         foreach (var prop in properties)
@@ -257,6 +261,18 @@ static class InterfaceWriterExtensions
                 packageMap,
                 isAbstract: true
             );
+
+            foreach (var alias in type.PropertyAliases.Where(a => a.Property == prop))
+            {
+                w.WritePythonPropertyTyping(
+                    type,
+                    prop,
+                    ns,
+                    nullabilityMap,
+                    packageMap,
+                    alias: alias
+                );
+            }
         }
 
         if (!hasMembers)

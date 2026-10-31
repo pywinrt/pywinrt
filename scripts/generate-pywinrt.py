@@ -213,5 +213,10 @@ subprocess.check_call(
         "--nullability-json",
         TEST_PACKAGE_NULLABILITY_JSON,
         "--component-dlls",
+        # The test component was never published, so nothing in it was
+        # renamed: the list names some of its members by made-up old names so
+        # that the tests can check the aliases the generator writes for them.
+        "--renames",
+        PROJECTION_PATH / "test-winrt" / "renames.json",
     ]
 )

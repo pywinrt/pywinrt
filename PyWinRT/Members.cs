@@ -47,7 +47,14 @@ sealed class Members
     /// <param name="legacyMethodAliases">
     /// Whether methods get a deprecated alias under their pywinrt v3.x name.
     /// </param>
-    public Members(IEnumerable<TypeDefinition> typeDefinitions, bool legacyMethodAliases)
+    /// <param name="renames">
+    /// The names the projection published and has since renamed.
+    /// </param>
+    public Members(
+        IEnumerable<TypeDefinition> typeDefinitions,
+        bool legacyMethodAliases,
+        Renames renames
+    )
     {
         var enums = new List<TypeDefinition>();
         var structs = new List<TypeDefinition>();
@@ -98,16 +105,20 @@ sealed class Members
             }
         }
 
-        Enums = Project(enums, legacyMethodAliases);
-        Structs = Project(structs, legacyMethodAliases);
-        Interfaces = Project(interfaces, legacyMethodAliases);
-        Classes = Project(classes, legacyMethodAliases);
-        Delegates = Project(delegates, legacyMethodAliases);
-        Attributes = Project(attributes, legacyMethodAliases);
-        Contracts = Project(contracts, legacyMethodAliases);
+        Enums = Project(enums, legacyMethodAliases, renames);
+        Structs = Project(structs, legacyMethodAliases, renames);
+        Interfaces = Project(interfaces, legacyMethodAliases, renames);
+        Classes = Project(classes, legacyMethodAliases, renames);
+        Delegates = Project(delegates, legacyMethodAliases, renames);
+        Attributes = Project(attributes, legacyMethodAliases, renames);
+        Contracts = Project(contracts, legacyMethodAliases, renames);
     }
 
-    private static ProjectedType[] Project(List<TypeDefinition> types, bool legacyMethodAliases)
+    private static ProjectedType[] Project(
+        List<TypeDefinition> types,
+        bool legacyMethodAliases,
+        Renames renames
+    )
     {
         // Analyzing a type is relatively expensive and independent of other
         // types, so for large namespaces, do it in parallel. This helps the
@@ -115,13 +126,13 @@ sealed class Members
         // running at the end.
         if (types.Count < 32)
         {
-            return types.Select(t => new ProjectedType(t, legacyMethodAliases)).ToArray();
+            return types.Select(t => new ProjectedType(t, legacyMethodAliases, renames)).ToArray();
         }
 
         return types
             .AsParallel()
             .AsOrdered()
-            .Select(t => new ProjectedType(t, legacyMethodAliases))
+            .Select(t => new ProjectedType(t, legacyMethodAliases, renames))
             .ToArray();
     }
 

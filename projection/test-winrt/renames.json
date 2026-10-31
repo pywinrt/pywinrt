@@ -1,0 +1,19 @@
+{
+    "4!1.6.1": {
+        "TestComponent.AsyncActionSource": {
+            "renamed_defers_completed_handler": "defers_completed_handler",
+            "renamed_invoke_completed_handler": "invoke_completed_handler"
+        },
+        "TestComponent.ITests": {
+            "renamed_event1": "event1",
+            "renamed_percentage": "percentage",
+            "renamed_simple": "simple"
+        },
+        "TestComponent.Override": {
+            "renamed_overridable_called": "overridable_called"
+        },
+        "TestComponent.TestRunner": {
+            "renamed_make_tests": "make_tests"
+        }
+    }
+}

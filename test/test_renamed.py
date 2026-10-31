@@ -2,6 +2,7 @@ import unittest
 
 import test_winrt.testcomponent as tc
 import winrt.runtime._internals as internals
+from winrt.system import Object
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.metadata as wfm
 import winrt.windows.globalization as wg
@@ -174,6 +175,81 @@ class TestRenamed(unittest.TestCase):
                 before = vars(owner)[old]
                 rename(typ, old, "spam")
                 self.assertIs(vars(owner)[old], before)
+
+
+class TestRenamedMembers(unittest.TestCase):
+    """
+    The aliases the generator writes for the list of renames that the test
+    component is generated with, whose old names are made up.
+    """
+
+    def test_method(self) -> None:
+        tests = tc.TestRunner.make_tests()
+
+        with self.assertWarns(DeprecationWarning) as cm:
+            tests.renamed_simple()  # type: ignore[deprecated]
+
+        self.assertEqual(
+            str(cm.warning),
+            "ITests.renamed_simple() is deprecated, use simple() instead",
+        )
+
+    def test_static_method(self) -> None:
+        with self.assertWarns(DeprecationWarning):
+            tests = tc.TestRunner.renamed_make_tests()  # type: ignore[deprecated]
+
+        self.assertIsInstance(tests, tc.ITests)
+
+    def test_property(self) -> None:
+        source = tc.AsyncActionSource()
+
+        with self.assertWarns(DeprecationWarning):
+            source.renamed_defers_completed_handler = True  # type: ignore[deprecated]
+
+        self.assertTrue(source.defers_completed_handler)
+
+        with self.assertWarns(DeprecationWarning):
+            value = source.renamed_defers_completed_handler  # pyright: ignore[reportDeprecated]
+
+        self.assertTrue(value)
+
+    def test_interface_property(self) -> None:
+        tests = tc.TestRunner.make_tests()
+
+        with self.assertWarns(DeprecationWarning):
+            value = tests.renamed_percentage  # type: ignore[deprecated]
+
+        self.assertEqual(value, tests.percentage)
+
+    def test_event(self) -> None:
+        calls: list[object] = []
+        obj = tc.Override()
+
+        with self.assertWarns(DeprecationWarning):
+            token = obj.add_renamed_overridable_called(  # type: ignore[deprecated]
+                lambda sender, args: calls.append(sender)
+            )
+
+        obj.call_overridable()
+        self.assertEqual(len(calls), 1)
+
+        with self.assertWarns(DeprecationWarning):
+            obj.remove_renamed_overridable_called(token)  # type: ignore[deprecated]
+
+        obj.call_overridable()
+        self.assertEqual(len(calls), 1, "the handler was not removed")
+
+    def test_interface_event(self) -> None:
+        tests = tc.TestRunner.make_tests()
+
+        def handler(sender: Object, args: int) -> None:
+            pass
+
+        with self.assertWarns(DeprecationWarning):
+            token = tests.add_renamed_event1(handler)  # type: ignore[deprecated]
+
+        with self.assertWarns(DeprecationWarning):
+            tests.remove_renamed_event1(token)  # type: ignore[deprecated]
 
 
 if __name__ == "__main__":

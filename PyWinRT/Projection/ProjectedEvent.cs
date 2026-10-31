@@ -15,6 +15,12 @@ class ProjectedEvent(
     public string Name { get; } = @event.Name;
 
     /// <summary>
+    /// Gets the Python name of the event, which its <c>add_</c> and
+    /// <c>remove_</c> methods are named after.
+    /// </summary>
+    public string PyName { get; } = @event.Name.ToPythonIdentifier();
+
+    /// <summary>
     /// Gets a value indicating whether the event is static.
     /// </summary>
     public bool IsStatic { get; } = @event.AddMethod.IsStatic;

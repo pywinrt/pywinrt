@@ -80,6 +80,15 @@ __all__ = [
     "TestHandler",
 ]
 
+winrt.runtime._internals.renamed_method(AsyncActionSource, "renamed_invoke_completed_handler", "invoke_completed_handler")
+winrt.runtime._internals.renamed_property(AsyncActionSource, "renamed_defers_completed_handler", "defers_completed_handler")
+winrt.runtime._internals.renamed_method(Override, "add_renamed_overridable_called", "add_overridable_called")
+winrt.runtime._internals.renamed_method(Override, "remove_renamed_overridable_called", "remove_overridable_called")
+winrt.runtime._internals.renamed_static_method(TestRunner, "renamed_make_tests", "make_tests")
+winrt.runtime._internals.renamed_method(_ITests, "renamed_simple", "simple")
+winrt.runtime._internals.renamed_property(_ITests, "renamed_percentage", "percentage")
+winrt.runtime._internals.renamed_method(_ITests, "add_renamed_event1", "add_event1")
+winrt.runtime._internals.renamed_method(_ITests, "remove_renamed_event1", "remove_event1")
 Array10Handler = typing.Callable[[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]], tuple[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]]]
 Array11Handler = typing.Callable[[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]], tuple[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]]]
 Array12Handler = typing.Callable[[winrt.system.Array[str], winrt.system.Array[str]], tuple[winrt.system.Array[str], winrt.system.Array[str]]]
