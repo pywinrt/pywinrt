@@ -472,6 +472,9 @@ class WindowsSoftwareUpdateProvider(winrt.system.Object):
     # Windows.Foundation.Collections.IMapView`2<System.String,System.Object> Windows.Management.Update.WindowsSoftwareUpdateProvider::get_Properties()
     @_property
     def properties(self) -> _cabc.Mapping[str, winrt.system.Object]: ...
+    # Windows.Management.Update.WindowsSoftwareUpdateIdentity Windows.Management.Update.WindowsSoftwareUpdateProvider::get_ProviderIdentity()
+    @_property
+    def provider_identity(self) -> WindowsSoftwareUpdateIdentity: ...
     # Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType Windows.Management.Update.WindowsSoftwareUpdateProvider::get_RegistrationType()
     @_property
     def registration_type(self) -> WindowsSoftwareUpdateProviderRegistrationType: ...

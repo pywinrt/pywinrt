@@ -23,8 +23,10 @@ __all__ = [
     "VpnAuthenticationMethod",
     "VpnChannelActivityEventType",
     "VpnChannelRequestCredentialsOptions",
+    "VpnConnectionTypePreview",
     "VpnCredentialType",
     "VpnDataPathType",
+    "VpnDisconnectReasonPreview",
     "VpnDomainNameType",
     "VpnIPProtocol",
     "VpnManagementConnectionStatus",
@@ -37,6 +39,7 @@ __all__ = [
     "VpnChannelActivityEventArgs",
     "VpnChannelActivityStateChangedArgs",
     "VpnChannelConfiguration",
+    "VpnConnectionDetailsPreview",
     "VpnCredential",
     "VpnCustomCheckBox",
     "VpnCustomComboBox",
@@ -99,6 +102,14 @@ class VpnChannelRequestCredentialsOptions(enum.IntFlag):
     RETRYING = 0x1
     USE_FOR_SINGLE_SIGN_IN = 0x2
 
+class VpnConnectionTypePreview(enum.IntEnum):
+    NO_CONNECTION = 0
+    PLATFORM_U_X_INITIATED = 1
+    API_INITIATED = 2
+    AUTO = 3
+    FAST_RECONNECT = 4
+    PLUGIN_CRASH_RECONNECT = 5
+
 class VpnCredentialType(enum.IntEnum):
     USERNAME_PASSWORD = 0
     USERNAME_OTP_PIN = 1
@@ -111,6 +122,21 @@ class VpnCredentialType(enum.IntEnum):
 class VpnDataPathType(enum.IntEnum):
     SEND = 0
     RECEIVE = 1
+
+class VpnDisconnectReasonPreview(enum.IntEnum):
+    UNKNOWN = 0
+    NOT_DISCONNECTED = 1
+    PLATFORM_U_X_INITIATED = 2
+    API_INITIATED = 3
+    STANDBY = 4
+    NETWORK_FAILURE = 5
+    SERVICE_STOP = 6
+    USER_LOG_OFF = 7
+    SHUTDOWN = 8
+    PLUGIN_UNINSTALL = 9
+    CAPTIVE_PORTAL_DETECTED = 10
+    APP_TRIGGER_DISCONNECT = 11
+    ENTERED_TRUSTED_NETWORK = 12
 
 class VpnDomainNameType(enum.IntEnum):
     SUFFIX = 0
@@ -246,8 +272,16 @@ class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
     def request_vpn_packet_buffer(self, type: VpnDataPathType, /) -> VpnPacketBuffer: ...
     # System.Void Windows.Networking.Vpn.VpnChannel::SetAllowedSslTlsVersions(System.Object,System.Boolean)
     def set_allowed_ssl_tls_versions(self, tunnel_transport: winrt.system.Object, use_tls12: bool, /) -> None: ...
+    @typing.overload
     # System.Void Windows.Networking.Vpn.VpnChannel::SetErrorMessage(System.String)
     def set_error_message(self, message: str, /) -> None: ...
+    @typing.overload
+    # System.Void Windows.Networking.Vpn.VpnChannel::SetErrorMessage(System.String,System.UInt32)
+    def set_error_message(self, message: str, err_code: winrt.system.UInt32 | typing.SupportsIndex, /) -> None: ...
+    # Deprecated alias of set_error_message() for pywinrt v3.x compatibility.
+    # System.Void Windows.Networking.Vpn.VpnChannel::SetErrorMessage(System.String,System.UInt32)
+    @deprecated("Use set_error_message() instead.")
+    def set_error_message_with_details(self, message: str, err_code: winrt.system.UInt32 | typing.SupportsIndex, /) -> None: ...
     # System.Void Windows.Networking.Vpn.VpnChannel::Start(Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Networking.Vpn.VpnInterfaceId,Windows.Networking.Vpn.VpnRouteAssignment,Windows.Networking.Vpn.VpnNamespaceAssignment,System.UInt32,System.UInt32,System.Boolean,System.Object,System.Object)
     def start(self, assigned_client_ipv4list: _cabc.Sequence[windows_networking.HostName], assigned_client_ipv6list: _cabc.Sequence[windows_networking.HostName], vpn_interface_id: VpnInterfaceId, route_scope: VpnRouteAssignment, namespace_scope: VpnNamespaceAssignment, mtu_size: winrt.system.UInt32 | typing.SupportsIndex, max_frame_size: winrt.system.UInt32 | typing.SupportsIndex, optimize_for_low_cost_network: bool, main_outer_tunnel_transport: winrt.system.Object, optional_outer_tunnel_transport: winrt.system.Object, /) -> None: ...
     # System.Void Windows.Networking.Vpn.VpnChannel::StartExistingTransports(Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Foundation.Collections.IVectorView`1<Windows.Networking.HostName>,Windows.Networking.Vpn.VpnInterfaceId,Windows.Networking.Vpn.VpnRouteAssignment,Windows.Networking.Vpn.VpnDomainNameAssignment,System.UInt32,System.UInt32,System.Boolean)
@@ -296,6 +330,12 @@ class VpnChannel(winrt.system.Object, metaclass=VpnChannel_Static):
     # System.Object Windows.Networking.Vpn.VpnChannel::get_CurrentRequestTransportContext()
     @_property
     def current_request_transport_context(self) -> winrt.system.Object: ...
+    # Windows.Networking.Vpn.VpnConnectionDetailsPreview Windows.Networking.Vpn.VpnChannel::get_ConnectionDetail()
+    @_property
+    def connection_detail(self) -> VpnConnectionDetailsPreview: ...
+    # Windows.Networking.Vpn.VpnDisconnectReasonPreview Windows.Networking.Vpn.VpnChannel::get_DisconnectReason()
+    @_property
+    def disconnect_reason(self) -> VpnDisconnectReasonPreview: ...
 
 @typing.final
 class VpnChannelActivityEventArgs(winrt.system.Object):
@@ -329,6 +369,17 @@ class VpnChannelConfiguration(winrt.system.Object):
     # Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Uri> Windows.Networking.Vpn.VpnChannelConfiguration::get_ServerUris()
     @_property
     def server_uris(self) -> _cabc.Sequence[windows_foundation.Uri]: ...
+
+@typing.final
+class VpnConnectionDetailsPreview(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    # System.UInt32 Windows.Networking.Vpn.VpnConnectionDetailsPreview::get_Attempt()
+    @_property
+    def attempt(self) -> winrt.system.UInt32: ...
+    # Windows.Networking.Vpn.VpnConnectionTypePreview Windows.Networking.Vpn.VpnConnectionDetailsPreview::get_Type()
+    @_property
+    def type(self) -> VpnConnectionTypePreview: ...
 
 @typing.final
 class VpnCredential(IVpnCredential, winrt.system.Object):
@@ -712,8 +763,16 @@ class VpnManagementAgent(winrt.system.Object):
     def delete_profile_async(self, profile: IVpnProfile, /) -> windows_foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::DisconnectProfileAsync(Windows.Networking.Vpn.IVpnProfile)
     def disconnect_profile_async(self, profile: IVpnProfile, /) -> windows_foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
+    # Windows.Networking.Vpn.IVpnProfile Windows.Networking.Vpn.VpnManagementAgent::GetAlwaysOnActiveProfile()
+    def get_always_on_active_profile(self) -> IVpnProfile: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.IVpnProfile> Windows.Networking.Vpn.VpnManagementAgent::GetAlwaysOnActiveProfileAsync()
+    def get_always_on_active_profile_async(self) -> windows_foundation.IAsyncOperation[IVpnProfile]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Networking.Vpn.IVpnProfile>> Windows.Networking.Vpn.VpnManagementAgent::GetProfilesAsync()
     def get_profiles_async(self) -> windows_foundation.IAsyncOperation[_cabc.Sequence[IVpnProfile]]: ...
+    # System.Void Windows.Networking.Vpn.VpnManagementAgent::SetAlwaysOnActiveProfile(Windows.Networking.Vpn.IVpnProfile)
+    def set_always_on_active_profile(self, profile: IVpnProfile, /) -> None: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::SetAlwaysOnActiveProfileAsync(Windows.Networking.Vpn.IVpnProfile)
+    def set_always_on_active_profile_async(self, profile: IVpnProfile, /) -> windows_foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::UpdateProfileFromObjectAsync(Windows.Networking.Vpn.IVpnProfile)
     def update_profile_from_object_async(self, profile: IVpnProfile, /) -> windows_foundation.IAsyncOperation[VpnManagementErrorStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Networking.Vpn.VpnManagementErrorStatus> Windows.Networking.Vpn.VpnManagementAgent::UpdateProfileFromXmlAsync(System.String)

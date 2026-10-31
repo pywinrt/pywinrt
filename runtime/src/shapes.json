@@ -1677,12 +1677,12 @@
                 "i8": 22,
                 "i8i8i8p": 1,
                 "i8i8p": 2,
-                "i8p": 19,
-                "i8pp": 5,
+                "i8p": 20,
+                "i8pp": 6,
                 "i8ppp": 3,
                 "i8ppppp": 1,
                 "i8{f4f4f4f4}p": 1,
-                "p": 30172,
+                "p": 30209,
                 "pf4": 6,
                 "pf4p": 1,
                 "pf4pp": 1,
@@ -1697,7 +1697,7 @@
                 "pi8": 11,
                 "pi8p": 3,
                 "pi8pp": 2,
-                "pp": 7650,
+                "pp": 7663,
                 "ppf4": 1,
                 "ppf4p": 3,
                 "ppf8": 2,
@@ -1707,7 +1707,7 @@
                 "ppi8": 2,
                 "ppi8p": 2,
                 "ppi8pp": 2,
-                "ppp": 2667,
+                "ppp": 2668,
                 "pppf4p": 2,
                 "pppf8p": 2,
                 "pppi8p": 2,
@@ -1907,7 +1907,7 @@
                 "{i8i4}pp": 2,
                 "{i8i4}{i8i4}p": 4,
                 "{i8i8}pp": 2,
-                "{i8}": 1576,
+                "{i8}": 1580,
                 "{i8}p": 28,
                 "{i8}pp": 5,
                 "{i8}ppp": 1,
@@ -2540,8 +2540,8 @@
                     "Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange"
                 ]
             },
-            "implementable_interfaces": 3512,
-            "delegates": 1814
+            "implementable_interfaces": 3515,
+            "delegates": 1820
         },
         "winui2": {
             "forward": {

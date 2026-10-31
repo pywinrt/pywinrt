@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.Foundation"
-version = "4!10.0.28000.2705"
+version = "4!10.0.28000.2957"
 description = "PyWinRT projection of the Windows.Foundation namespace"
 readme = "README.md"
 license = "MIT"
@@ -27,12 +27,12 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2957",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2957",
 ]
 
 [project.urls]

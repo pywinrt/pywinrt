@@ -561,7 +561,6 @@ enum Windows.ApplicationModel.Contacts.ContactAnnotationOperations python_type f
     constant VIDEO_CALL 0x8
     constant SOCIAL_FEEDS 0x10
     constant SHARE 0x20
-    constant ACTIVITY 0x40
 
 class Windows.ApplicationModel.Contacts.ContactAnnotationStore python_type
     py ContactAnnotationStore
