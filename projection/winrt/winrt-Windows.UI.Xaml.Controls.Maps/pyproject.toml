@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.UI.Xaml.Controls.Maps"
-version = "4!10.0.28000.2705.1"
+version = "4!10.0.28000.2957"
 description = "PyWinRT projection of the Windows.UI.Xaml.Controls.Maps namespace"
 readme = "README.md"
 license = "MIT"
@@ -27,25 +27,25 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Foundation>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
-    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Xaml>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Xaml.Controls>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2957",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2957",
+    "winrt-Windows.UI.Xaml>=4!10.0.28000.2957",
+    "winrt-Windows.UI.Xaml.Controls>=4!10.0.28000.2957",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.Devices.Geolocation[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Numerics[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Services.Maps[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Services.Maps.LocalSearch[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
-    "winrt-Windows.UI[all]>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Xaml[all]>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Xaml.Controls[all]>=4!10.0.28000.2705",
+    "winrt-Windows.Devices.Geolocation[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Numerics[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Services.Maps[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Services.Maps.LocalSearch[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2957",
+    "winrt-Windows.UI[all]>=4!10.0.28000.2957",
+    "winrt-Windows.UI.Xaml[all]>=4!10.0.28000.2957",
+    "winrt-Windows.UI.Xaml.Controls[all]>=4!10.0.28000.2957",
 ]
 
 [project.urls]

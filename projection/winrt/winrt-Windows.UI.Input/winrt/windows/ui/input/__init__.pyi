@@ -39,7 +39,7 @@ __all__ = [
     "DraggingEventArgs",
     "EdgeGesture",
     "EdgeGestureEventArgs",
-    "GamepadNavigationConfiguration",
+    "GamepadKeyRoutingConfiguration",
     "GestureRecognizer",
     "HoldingEventArgs",
     "InputActivationListener",
@@ -306,22 +306,19 @@ class EdgeGestureEventArgs(winrt.system.Object):
     def kind(self) -> EdgeGestureKind: ...
 
 @typing.final
-class GamepadNavigationConfiguration_Static(winrt.system.Object_Static):
-    # Windows.UI.Input.GamepadNavigationConfiguration Windows.UI.Input.GamepadNavigationConfiguration::TryGetForCurrentProcess()
-    def try_get_for_current_process(cls) -> GamepadNavigationConfiguration: ...
-    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_IsSupported()
-    @_property
+class GamepadKeyRoutingConfiguration_Static(winrt.system.Object_Static):
+    # System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::IsSupported()
     def is_supported(cls) -> bool: ...
+    # System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::TrySetKeyRoutingEnabled(System.Boolean)
+    def try_set_key_routing_enabled(cls, enabled: bool, /) -> bool: ...
+    # System.Boolean Windows.UI.Input.GamepadKeyRoutingConfiguration::get_IsKeyRoutingEnabled()
+    @_property
+    def is_key_routing_enabled(cls) -> bool: ...
 
 @typing.final
-class GamepadNavigationConfiguration(winrt.system.Object, metaclass=GamepadNavigationConfiguration_Static):
+class GamepadKeyRoutingConfiguration(winrt.system.Object, metaclass=GamepadKeyRoutingConfiguration_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
-        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
-    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::TrySetNavigationEnabled(System.Boolean)
-    def try_set_navigation_enabled(self, enabled: bool, /) -> bool: ...
-    # System.Boolean Windows.UI.Input.GamepadNavigationConfiguration::get_NavigationEnabled()
-    @_property
-    def navigation_enabled(self) -> bool: ...
+        """A class of static members only, so there is nothing to create."""
 
 @typing.final
 class GestureRecognizer(winrt.system.Object):

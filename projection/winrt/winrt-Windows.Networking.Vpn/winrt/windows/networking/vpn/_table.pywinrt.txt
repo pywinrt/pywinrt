@@ -13,6 +13,17 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Co
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.IVpnProfile> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[IVpnProfile]
+    guid 99cbff9b-7b47-50ae-8145-d15b50f3d407
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.Networking.Vpn.IVpnProfile
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.VpnCredential> concrete
     py winrt.windows.foundation.AsyncOperationCompletedHandler[VpnCredential]
     guid 1c9c4504-4b75-57ea-837d-5338358bb762
@@ -63,6 +74,35 @@ interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVec
     method get_results
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> shape=4 reverse=62 role=get_results
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile> return
+
+interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[IVpnProfile]
+    guid 87e6df44-a795-52c8-be99-82c4421224b7
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};{7875b751-b0d7-43db-8a93-d3fe2479e56a})
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.Networking.Vpn.IVpnProfile
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.IVpnProfile> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Vpn.IVpnProfile> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> shape=4 reverse=62 role=get_results
+            out interface type=Windows.Networking.Vpn.IVpnProfile return
 
 interface Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnCredential> concrete awaitable
     py winrt.windows.foundation._IAsyncOperation[VpnCredential]
@@ -1257,6 +1297,9 @@ interface Windows.Networking.Vpn.IVpnChannel5
 interface Windows.Networking.Vpn.IVpnChannel6
     guid 55843696-bd63-49c5-abca-5da77885551a
 
+interface Windows.Networking.Vpn.IVpnChannel7Preview
+    guid 19862972-f14b-406b-bf10-f72ee323771b
+
 interface Windows.Networking.Vpn.IVpnChannelActivityEventArgs
     guid a36c88f2-afdc-4775-855d-d4ac0a35fc55
 
@@ -1277,6 +1320,9 @@ interface Windows.Networking.Vpn.IVpnChannelStatics python_type
         method ProcessEventAsync slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannelStatics shape=51 reverse=24
             in object name=thirdPartyPlugIn
             in object name=event
+
+interface Windows.Networking.Vpn.IVpnConnectionDetailsPreview
+    guid bbd3e70b-1ab8-49c9-9fb1-dc78564058d4
 
 interface Windows.Networking.Vpn.IVpnCredential python_type
     py _IVpnCredential
@@ -1403,6 +1449,9 @@ interface Windows.Networking.Vpn.IVpnInterfaceIdFactory python_type
 
 interface Windows.Networking.Vpn.IVpnManagementAgent
     guid 193696cd-a5c4-4abe-852b-785be4cb3e34
+
+interface Windows.Networking.Vpn.IVpnManagementAgent2Preview
+    guid 73791cc7-acd7-491b-8bed-e9a17c3433da
 
 interface Windows.Networking.Vpn.IVpnNamespaceAssignment
     guid d7f7db18-307d-4c0e-bd62-8fa270bbadd6
@@ -1624,6 +1673,7 @@ class Windows.Networking.Vpn.VpnChannel python_type
     requires Windows.Networking.Vpn.IVpnChannel4
     requires Windows.Networking.Vpn.IVpnChannel5
     requires Windows.Networking.Vpn.IVpnChannel6
+    requires Windows.Networking.Vpn.IVpnChannel7Preview
     factory Windows.Networking.Vpn.IVpnChannelStatics
     property plug_in_context
         get get_PlugInContext slot=17 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
@@ -1642,6 +1692,12 @@ class Windows.Networking.Vpn.VpnChannel python_type
     property current_request_transport_context
         get get_CurrentRequestTransportContext slot=11 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel4 shape=4
             out object return
+    property connection_detail
+        get get_ConnectionDetail slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel7Preview shape=4
+            out class type=Windows.Networking.Vpn.VpnConnectionDetailsPreview return
+    property disconnect_reason
+        get get_DisconnectReason slot=8 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel7Preview shape=4
+            out enum32 type=Windows.Networking.Vpn.VpnDisconnectReasonPreview return
     event activity_change
         add add_ActivityChange slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnChannel shape=51
             in delegate type=Windows.Foundation.TypedEventHandler<Windows.Networking.Vpn.VpnChannel,Windows.Networking.Vpn.VpnChannelActivityEventArgs> name=handler
@@ -1736,6 +1792,9 @@ class Windows.Networking.Vpn.VpnChannel python_type
     method set_error_message
         method SetErrorMessage slot=20 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=4
             in string name=message
+        method SetErrorMessage slot=6 inputs=2 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel7Preview shape=51
+            in string name=message
+            in uint32 name=errCode
     method start
         method Start slot=7 inputs=10 outputs=0 declaring=Windows.Networking.Vpn.IVpnChannel shape=294
             in parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> name=assignedClientIPv4list
@@ -1852,6 +1911,28 @@ enum Windows.Networking.Vpn.VpnChannelRequestCredentialsOptions python_type flag
     constant NONE 0x0
     constant RETRYING 0x1
     constant USE_FOR_SINGLE_SIGN_IN 0x2
+
+class Windows.Networking.Vpn.VpnConnectionDetailsPreview python_type
+    py VpnConnectionDetailsPreview
+    signature rc(Windows.Networking.Vpn.VpnConnectionDetailsPreview;{bbd3e70b-1ab8-49c9-9fb1-dc78564058d4})
+    default Windows.Networking.Vpn.IVpnConnectionDetailsPreview
+    requires Windows.Networking.Vpn.IVpnConnectionDetailsPreview
+    property attempt
+        get get_Attempt slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnConnectionDetailsPreview shape=4
+            out uint32 return
+    property type
+        get get_Type slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnConnectionDetailsPreview shape=4
+            out enum32 type=Windows.Networking.Vpn.VpnConnectionTypePreview return
+
+enum Windows.Networking.Vpn.VpnConnectionTypePreview python_type
+    py VpnConnectionTypePreview
+    signature enum(Windows.Networking.Vpn.VpnConnectionTypePreview;i4)
+    constant NO_CONNECTION 0
+    constant PLATFORM_U_X_INITIATED 1
+    constant API_INITIATED 2
+    constant AUTO 3
+    constant FAST_RECONNECT 4
+    constant PLUGIN_CRASH_RECONNECT 5
 
 class Windows.Networking.Vpn.VpnCredential python_type
     py VpnCredential
@@ -2179,6 +2260,23 @@ enum Windows.Networking.Vpn.VpnDataPathType python_type
     constant SEND 0
     constant RECEIVE 1
 
+enum Windows.Networking.Vpn.VpnDisconnectReasonPreview python_type
+    py VpnDisconnectReasonPreview
+    signature enum(Windows.Networking.Vpn.VpnDisconnectReasonPreview;i4)
+    constant UNKNOWN 0
+    constant NOT_DISCONNECTED 1
+    constant PLATFORM_U_X_INITIATED 2
+    constant API_INITIATED 3
+    constant STANDBY 4
+    constant NETWORK_FAILURE 5
+    constant SERVICE_STOP 6
+    constant USER_LOG_OFF 7
+    constant SHUTDOWN 8
+    constant PLUGIN_UNINSTALL 9
+    constant CAPTIVE_PORTAL_DETECTED 10
+    constant APP_TRIGGER_DISCONNECT 11
+    constant ENTERED_TRUSTED_NETWORK 12
+
 class Windows.Networking.Vpn.VpnDomainNameAssignment activatable python_type
     py VpnDomainNameAssignment
     signature rc(Windows.Networking.Vpn.VpnDomainNameAssignment;{4135b141-ccdb-49b5-9401-039a8ae767e9})
@@ -2305,6 +2403,7 @@ class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
     signature rc(Windows.Networking.Vpn.VpnManagementAgent;{193696cd-a5c4-4abe-852b-785be4cb3e34})
     default Windows.Networking.Vpn.IVpnManagementAgent
     requires Windows.Networking.Vpn.IVpnManagementAgent
+    requires Windows.Networking.Vpn.IVpnManagementAgent2Preview
     constructor -
         ctor .ctor slot=6 inputs=0 outputs=1 shape=4
             out object return
@@ -2333,9 +2432,22 @@ class Windows.Networking.Vpn.VpnManagementAgent activatable python_type
         method DisconnectProfileAsync slot=14 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
+    method get_always_on_active_profile
+        method GetAlwaysOnActiveProfile slot=6 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent2Preview shape=4
+            out interface type=Windows.Networking.Vpn.IVpnProfile return
+    method get_always_on_active_profile_async
+        method GetAlwaysOnActiveProfileAsync slot=7 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent2Preview shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.IVpnProfile> return
     method get_profiles_async
         method GetProfilesAsync slot=10 inputs=0 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=4
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Vpn.IVpnProfile>> return
+    method set_always_on_active_profile
+        method SetAlwaysOnActiveProfile slot=8 inputs=1 outputs=0 declaring=Windows.Networking.Vpn.IVpnManagementAgent2Preview shape=4
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+    method set_always_on_active_profile_async
+        method SetAlwaysOnActiveProfileAsync slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent2Preview shape=51
+            in interface type=Windows.Networking.Vpn.IVpnProfile name=profile
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Networking.Vpn.VpnManagementErrorStatus> return
     method update_profile_from_object_async
         method UpdateProfileFromObjectAsync slot=9 inputs=1 outputs=1 declaring=Windows.Networking.Vpn.IVpnManagementAgent shape=51
             in interface type=Windows.Networking.Vpn.IVpnProfile name=profile

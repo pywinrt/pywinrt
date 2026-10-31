@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Windows.Foundation.Metadata"
-version = "4!10.0.28000.2705"
+version = "4!10.0.28000.2957"
 description = "PyWinRT projection of the Windows.Foundation.Metadata namespace"
 readme = "README.md"
 license = "MIT"

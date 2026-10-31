@@ -1,0 +1,247 @@
+format 4.0
+census 2e30db26-66c8-4551-85b9-a537376d8f99 1
+namespace Windows.ApplicationModel.Overlay
+
+delegate Windows.Foundation.EventHandler<System.Object> concrete
+    py winrt.windows.foundation.EventHandler[Object]
+    guid c50898f6-c536-5f47-8583-8b2c2438a13b
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};cinterface(IInspectable))
+    base Windows.Foundation.EventHandler
+    argument System.Object
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in object name=args
+
+delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[OverlayActivatedEventArgs]
+    guid ff54ecb8-ff9c-56ce-94e8-7940347bde0d
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs;{277092d8-617c-50ba-9e57-6dc25078beb0}))
+    base Windows.Foundation.EventHandler
+    argument Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs name=args
+
+delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[OverlayDisconnectedEventArgs]
+    guid 093b0ad4-0a75-52eb-bf81-d6ff536a1f54
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs;{9573e2be-6692-513e-9ed4-71642a182d42}))
+    base Windows.Foundation.EventHandler
+    argument Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs name=args
+
+delegate Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs> concrete
+    py winrt.windows.foundation.EventHandler[OverlayVisualTransitionEventArgs]
+    guid 064695cb-fa4f-5514-895b-bda8f1d0f830
+    signature pinterface({9de1c535-6ae1-11e0-84e1-18a905bcc53f};rc(Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs;{0cc0e9dd-b088-5f81-a02b-c925259a464d}))
+    base Windows.Foundation.EventHandler
+    argument Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in object name=sender
+            in class type=Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs name=args
+
+interface Windows.ApplicationModel.Overlay.IOverlayActivatedEventArgs
+    guid 277092d8-617c-50ba-9e57-6dc25078beb0
+
+interface Windows.ApplicationModel.Overlay.IOverlayApp
+    guid 0410c228-3813-54fc-b402-88520526d1f5
+
+interface Windows.ApplicationModel.Overlay.IOverlayAppOptions
+    guid 9e0dd89a-0f2a-5cfd-805d-dbb13164c146
+
+interface Windows.ApplicationModel.Overlay.IOverlayAppStatics
+    guid 2c112604-c435-53d0-9be6-6431e39eb26c
+
+interface Windows.ApplicationModel.Overlay.IOverlayCommand
+    guid dde596f8-6093-5029-8cbc-06b046d328dc
+
+interface Windows.ApplicationModel.Overlay.IOverlayCommandFactory
+    guid 10210bb2-4755-520d-802b-7490c260f802
+
+interface Windows.ApplicationModel.Overlay.IOverlayDisconnectedEventArgs
+    guid 9573e2be-6692-513e-9ed4-71642a182d42
+
+interface Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs
+    guid 0cc0e9dd-b088-5f81-a02b-c925259a464d
+
+class Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs python_type
+    py OverlayActivatedEventArgs
+    signature rc(Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs;{277092d8-617c-50ba-9e57-6dc25078beb0})
+    default Windows.ApplicationModel.Overlay.IOverlayActivatedEventArgs
+    requires Windows.ApplicationModel.Overlay.IOverlayActivatedEventArgs
+    property command
+        get get_Command slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayActivatedEventArgs shape=4
+            out class type=Windows.ApplicationModel.Overlay.OverlayCommand return
+
+class Windows.ApplicationModel.Overlay.OverlayApp python_type
+    py OverlayApp
+    signature rc(Windows.ApplicationModel.Overlay.OverlayApp;{0410c228-3813-54fc-b402-88520526d1f5})
+    default Windows.ApplicationModel.Overlay.IOverlayApp
+    requires Windows.ApplicationModel.Overlay.IOverlayApp
+    factory Windows.ApplicationModel.Overlay.IOverlayAppStatics
+    property visual_state
+        get get_VisualState slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            out enum32 type=Windows.ApplicationModel.Overlay.OverlayVisualState return
+    event activated
+        add add_Activated slot=16 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=51
+            in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayActivatedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Activated slot=17 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event disconnected
+        add add_Disconnected slot=20 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=51
+            in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_Disconnected slot=21 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event visual_state_changed
+        add add_VisualStateChanged slot=9 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=51
+            in delegate type=Windows.Foundation.EventHandler<System.Object> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_VisualStateChanged slot=10 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    event visual_transition
+        add add_VisualTransition slot=18 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=51
+            in delegate type=Windows.Foundation.EventHandler<Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs> name=handler
+            out event_token type=Windows.Foundation.EventRegistrationToken return
+        remove remove_VisualTransition slot=19 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=26
+            in event_token type=Windows.Foundation.EventRegistrationToken name=token
+    method create static
+        method Create slot=6 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayAppStatics shape=47 static
+            in int64 name=hwnd
+            out class type=Windows.ApplicationModel.Overlay.OverlayApp return
+        method Create slot=7 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayAppStatics shape=108 static
+            in int64 name=hwnd
+            in class type=Windows.ApplicationModel.Overlay.OverlayAppOptions name=options
+            out class type=Windows.ApplicationModel.Overlay.OverlayApp return
+    method disconnect_async
+        method DisconnectAsync slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+    method exit_interactive_async
+        method ExitInteractiveAsync slot=12 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+    method request_interactive_async
+        method RequestInteractiveAsync slot=11 inputs=1 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=51
+            in class type=Windows.ApplicationModel.Overlay.OverlayCommand name=command
+            out interface type=Windows.Foundation.IAsyncAction return
+    method set_has_active_notification
+        method SetHasActiveNotification slot=15 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            in boolean name=hasActive
+    method set_persistent_mode_enabled
+        method SetPersistentModeEnabled slot=13 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            in boolean name=enabled
+    method set_unread_notification_count
+        method SetUnreadNotificationCount slot=14 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            in uint32 name=count
+    method start_async
+        method StartAsync slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayApp shape=4
+            out interface type=Windows.Foundation.IAsyncAction return
+
+class Windows.ApplicationModel.Overlay.OverlayAppOptions activatable python_type
+    py OverlayAppOptions
+    signature rc(Windows.ApplicationModel.Overlay.OverlayAppOptions;{9e0dd89a-0f2a-5cfd-805d-dbb13164c146})
+    default Windows.ApplicationModel.Overlay.IOverlayAppOptions
+    requires Windows.ApplicationModel.Overlay.IOverlayAppOptions
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    property custom_transition_animations
+        get get_CustomTransitionAnimations slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayAppOptions shape=4
+            out boolean return
+        put put_CustomTransitionAnimations slot=7 inputs=1 outputs=0 declaring=Windows.ApplicationModel.Overlay.IOverlayAppOptions shape=4
+            in boolean name=value
+
+class Windows.ApplicationModel.Overlay.OverlayCommand python_type
+    py OverlayCommand
+    signature rc(Windows.ApplicationModel.Overlay.OverlayCommand;{dde596f8-6093-5029-8cbc-06b046d328dc})
+    default Windows.ApplicationModel.Overlay.IOverlayCommand
+    requires Windows.ApplicationModel.Overlay.IOverlayCommand
+    factory Windows.ApplicationModel.Overlay.IOverlayCommandFactory
+    constructor -
+        ctor .ctor slot=6 inputs=2 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayCommandFactory shape=117
+            in enum32 type=Windows.ApplicationModel.Overlay.OverlayCommandSource name=source
+            in class type=Windows.Foundation.Uri name=uri
+            out class type=Windows.ApplicationModel.Overlay.OverlayCommand return
+    property source
+        get get_Source slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayCommand shape=4
+            out enum32 type=Windows.ApplicationModel.Overlay.OverlayCommandSource return
+    property uri
+        get get_Uri slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayCommand shape=4
+            out class type=Windows.Foundation.Uri return
+
+enum Windows.ApplicationModel.Overlay.OverlayCommandSource python_type
+    py OverlayCommandSource
+    signature enum(Windows.ApplicationModel.Overlay.OverlayCommandSource;i4)
+    constant KEYBOARD 0
+    constant GAMEPAD 1
+    constant PROGRAMMATIC 2
+    constant POINTER 3
+
+class Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs python_type
+    py OverlayDisconnectedEventArgs
+    signature rc(Windows.ApplicationModel.Overlay.OverlayDisconnectedEventArgs;{9573e2be-6692-513e-9ed4-71642a182d42})
+    default Windows.ApplicationModel.Overlay.IOverlayDisconnectedEventArgs
+    requires Windows.ApplicationModel.Overlay.IOverlayDisconnectedEventArgs
+    method get_deferral
+        method GetDeferral slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayDisconnectedEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+enum Windows.ApplicationModel.Overlay.OverlayTransitionAnimation python_type
+    py OverlayTransitionAnimation
+    signature enum(Windows.ApplicationModel.Overlay.OverlayTransitionAnimation;i4)
+    constant DISABLED 0
+    constant PLATFORM_AUTO 1
+    constant FADE 2
+    constant SLIDE_LEFT 3
+    constant SLIDE_RIGHT 4
+
+enum Windows.ApplicationModel.Overlay.OverlayVisualState python_type
+    py OverlayVisualState
+    signature enum(Windows.ApplicationModel.Overlay.OverlayVisualState;i4)
+    constant HIDDEN 0
+    constant PERSISTENT 1
+    constant INTERACTIVE 2
+
+class Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs python_type
+    py OverlayVisualTransitionEventArgs
+    signature rc(Windows.ApplicationModel.Overlay.OverlayVisualTransitionEventArgs;{0cc0e9dd-b088-5f81-a02b-c925259a464d})
+    default Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs
+    requires Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs
+    property command
+        get get_Command slot=7 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs shape=4
+            out class type=Windows.ApplicationModel.Overlay.OverlayCommand return
+    property new_state
+        get get_NewState slot=6 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs shape=4
+            out enum32 type=Windows.ApplicationModel.Overlay.OverlayVisualState return
+    property transition_animation
+        get get_TransitionAnimation slot=8 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs shape=4
+            out enum32 type=Windows.ApplicationModel.Overlay.OverlayTransitionAnimation return
+    method get_deferral
+        method GetDeferral slot=9 inputs=0 outputs=1 declaring=Windows.ApplicationModel.Overlay.IOverlayVisualTransitionEventArgs shape=4
+            out class type=Windows.Foundation.Deferral return
+
+class System.Object external
+    py winrt.system.Object
+
+class Windows.Foundation.Deferral external
+    py winrt.windows.foundation.Deferral
+
+delegate Windows.Foundation.EventHandler external parameterized
+    py winrt.windows.foundation.EventHandler
+    guid 9de1c535-6ae1-11e0-84e1-18a905bcc53f
+
+struct Windows.Foundation.EventRegistrationToken external
+    py winrt.windows.foundation.EventRegistrationToken
+
+interface Windows.Foundation.IAsyncAction external
+    py winrt.windows.foundation._IAsyncAction
+    guid 5a648006-843a-4da9-865b-9d26e5dfad7b
+
+class Windows.Foundation.Uri external
+    py winrt.windows.foundation.Uri

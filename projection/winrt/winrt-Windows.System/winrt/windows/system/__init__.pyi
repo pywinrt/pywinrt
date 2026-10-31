@@ -40,6 +40,7 @@ __all__ = [
     "ShutdownKind",
     "UserAgeConsentGroup",
     "UserAgeConsentResult",
+    "UserAgeVerificationStatus",
     "UserAuthenticationStatus",
     "UserPictureSize",
     "UserType",
@@ -86,6 +87,7 @@ __all__ = [
     "ShutdownManager",
     "TimeZoneSettings",
     "User",
+    "UserAgeRange",
     "UserAuthenticationStatusChangeDeferral",
     "UserAuthenticationStatusChangingEventArgs",
     "UserChangedEventArgs",
@@ -209,6 +211,13 @@ class UserAgeConsentResult(enum.IntEnum):
     NOT_INCLUDED = 2
     UNKNOWN = 3
     AMBIGUOUS = 4
+
+class UserAgeVerificationStatus(enum.IntEnum):
+    NOT_APPLICABLE = 0
+    TEMPORARILY_UNAVAILABLE = 1
+    UNVERIFIED = 2
+    OPTED_OUT = 3
+    VERIFIED = 4
 
 class UserAuthenticationStatus(enum.IntEnum):
     UNAUTHENTICATED = 0
@@ -1355,12 +1364,16 @@ class User(winrt.system.Object, metaclass=User_Static):
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeConsentResult> Windows.System.User::CheckUserAgeConsentGroupAsync(Windows.System.UserAgeConsentGroup)
     def check_user_age_consent_group_async(self, consent_group: UserAgeConsentGroup, /) -> windows_foundation.IAsyncOperation[UserAgeConsentResult]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeVerificationStatus> Windows.System.User::GetAgeVerificationStatusAsync()
+    def get_age_verification_status_async(self) -> windows_foundation.IAsyncOperation[UserAgeVerificationStatus]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference> Windows.System.User::GetPictureAsync(Windows.System.UserPictureSize)
     def get_picture_async(self, desired_size: UserPictureSize, /) -> windows_foundation.IAsyncOperation[windows_storage_streams.IRandomAccessStreamReference]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IPropertySet> Windows.System.User::GetPropertiesAsync(Windows.Foundation.Collections.IVectorView`1<System.String>)
     def get_properties_async(self, values: _cabc.Sequence[str], /) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IPropertySet]: ...
     # Windows.Foundation.IAsyncOperation`1<System.Object> Windows.System.User::GetPropertyAsync(System.String)
     def get_property_async(self, value: str, /) -> windows_foundation.IAsyncOperation[winrt.system.Object]: ...
+    # Windows.Foundation.IAsyncOperation`1<Windows.System.UserAgeRange> Windows.System.User::GetUserAgeRangeAsync()
+    def get_user_age_range_async(self) -> windows_foundation.IAsyncOperation[UserAgeRange]: ...
     # Windows.System.UserAuthenticationStatus Windows.System.User::get_AuthenticationStatus()
     @_property
     def authentication_status(self) -> UserAuthenticationStatus: ...
@@ -1370,6 +1383,17 @@ class User(winrt.system.Object, metaclass=User_Static):
     # Windows.System.UserType Windows.System.User::get_Type()
     @_property
     def type(self) -> UserType: ...
+
+@typing.final
+class UserAgeRange(winrt.system.Object):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
+    # System.Int32 Windows.System.UserAgeRange::get_Lower()
+    @_property
+    def lower(self) -> winrt.system.Int32: ...
+    # System.Int32 Windows.System.UserAgeRange::get_Upper()
+    @_property
+    def upper(self) -> winrt.system.Int32: ...
 
 @typing.final
 class UserAuthenticationStatusChangeDeferral(winrt.system.Object):

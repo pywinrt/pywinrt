@@ -28,23 +28,23 @@ requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
     "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences~=4!2.5.1.0",
-    "winrt-Windows.Foundation>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2957",
 ]
 
 [project.optional-dependencies]
 all = [
     "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences[all]>=4!2.5.1",
-    "winrt-Windows.ApplicationModel[all]>=4!10.0.28000.2705",
-    "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.28000.2705",
-    "winrt-Windows.ApplicationModel.Core[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Data.Json[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Storage[all]>=4!10.0.28000.2705",
-    "winrt-Windows.System[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Web.Http[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Web.Http.Headers[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel[all]>=4!10.0.28000.2957",
+    "winrt-Windows.ApplicationModel.Background[all]>=4!10.0.28000.2957",
+    "winrt-Windows.ApplicationModel.Core[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Data.Json[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Storage[all]>=4!10.0.28000.2957",
+    "winrt-Windows.System[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Web.Http[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Web.Http.Headers[all]>=4!10.0.28000.2957",
 ]
 
 [project.urls]

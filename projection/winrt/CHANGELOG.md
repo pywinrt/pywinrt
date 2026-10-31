@@ -11,6 +11,11 @@ changelog](../../runtime/CHANGELOG.md), and each interop package, such as
 `interop/`. The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- Updated the Windows SDK to [10.0.28000.2957][Windows SDK 10.0.28000.2957], from 10.0.28000.2705.
+
 ## [4!10.0.28000.2705.1] - 2026-10-24
 
 Only the packages these changes touch are released, and the rest stay at
@@ -86,3 +91,4 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed the type hints incorrectly refusing `None` for `additional_properties`.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
+[Windows SDK 10.0.28000.2957]: https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/10.0.28000.2957

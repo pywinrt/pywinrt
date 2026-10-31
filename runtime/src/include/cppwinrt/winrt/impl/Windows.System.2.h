@@ -308,7 +308,7 @@ WINRT_EXPORT namespace winrt::Windows::System
         static auto AutoUpdateTimeZoneAsync(winrt::Windows::Foundation::TimeSpan const& timeout);
     };
     struct WINRT_IMPL_EMPTY_BASES User : winrt::Windows::System::IUser,
-        impl::require<User, winrt::Windows::System::IUser2>
+        impl::require<User, winrt::Windows::System::IUser2, winrt::Windows::System::IUser3>
     {
         User(std::nullptr_t) noexcept {}
         User(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::IUser(ptr, take_ownership_from_abi) {}
@@ -318,6 +318,11 @@ WINRT_EXPORT namespace winrt::Windows::System
         static auto FindAllAsync(winrt::Windows::System::UserType const& type, winrt::Windows::System::UserAuthenticationStatus const& status);
         static auto GetFromId(param::hstring const& nonRoamableId);
         static auto GetDefault();
+    };
+    struct WINRT_IMPL_EMPTY_BASES UserAgeRange : winrt::Windows::System::IUserAgeRange
+    {
+        UserAgeRange(std::nullptr_t) noexcept {}
+        UserAgeRange(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::IUserAgeRange(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES UserAuthenticationStatusChangeDeferral : winrt::Windows::System::IUserAuthenticationStatusChangeDeferral
     {
