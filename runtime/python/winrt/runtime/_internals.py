@@ -203,9 +203,15 @@ def alias_field(typ: type, name: str) -> None:
 _RENAMED_WARNING: type[Warning] = DeprecationWarning
 
 
+def _owner_name(owner: type) -> str:
+    # an interface's members are reached through its wrapper type, _IFoo,
+    # which the user never meets, so it is named as the interface
+    return owner.__name__.removeprefix("_")
+
+
 def _warn_renamed(owner: type, old: str, name: str, call: str = "") -> None:
     warnings.warn(
-        f"{owner.__name__}.{old}{call} is deprecated, use {name}{call} instead",
+        f"{_owner_name(owner)}.{old}{call} is deprecated, use {name}{call} instead",
         _RENAMED_WARNING,
         stacklevel=3,
     )
@@ -221,7 +227,7 @@ def _add_renamed_method(target: type, owner: type, old: str, name: str) -> None:
         return getattr(self, name)(*args)
 
     method.__name__ = old
-    method.__qualname__ = f"{owner.__name__}.{old}"
+    method.__qualname__ = f"{_owner_name(owner)}.{old}"
     method.__doc__ = f"Deprecated alias of ``{name}()``."
 
     setattr(target, old, method)

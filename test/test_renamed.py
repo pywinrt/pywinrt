@@ -1,5 +1,6 @@
 import unittest
 
+import test_winrt.testcomponent as tc
 import winrt.runtime._internals as internals
 import winrt.windows.foundation as wf
 import winrt.windows.foundation.metadata as wfm
@@ -45,6 +46,20 @@ class TestRenamed(unittest.TestCase):
             "use is_type_present() instead",
         )
         self.assertEqual(cm.filename, __file__)
+
+    def test_interface_method(self) -> None:
+        tests = tc.TestRunner.make_tests()
+
+        # an interface's members are reached through a wrapper type of its own
+        internals.renamed_method(type(tests), "renamed_test_simple", "simple")
+
+        with self.assertWarns(DeprecationWarning) as cm:
+            getattr(tests, "renamed_test_simple")()
+
+        self.assertEqual(
+            str(cm.warning),
+            "ITests.renamed_test_simple() is deprecated, use simple() instead",
+        )
 
     def test_property(self) -> None:
         internals.renamed_property(
