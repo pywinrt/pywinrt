@@ -34,17 +34,20 @@ __all__ = [
     "WiFiDirectServiceSessionRequestedEventArgs",
 ]
 
+@deprecated("WiFiDirectServiceAdvertisementStatus is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceAdvertisementStatus(enum.IntEnum):
     CREATED = 0
     STARTED = 1
     STOPPED = 2
     ABORTED = 3
 
+@deprecated("WiFiDirectServiceConfigurationMethod is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceConfigurationMethod(enum.IntEnum):
     DEFAULT = 0
     PIN_DISPLAY = 1
     PIN_ENTRY = 2
 
+@deprecated("WiFiDirectServiceError is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceError(enum.IntEnum):
     SUCCESS = 0
     RADIO_NOT_AVAILABLE = 1
@@ -52,10 +55,12 @@ class WiFiDirectServiceError(enum.IntEnum):
     UNSUPPORTED_HARDWARE = 3
     NO_HARDWARE = 4
 
+@deprecated("WiFiDirectServiceIPProtocol is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceIPProtocol(enum.IntEnum):
     TCP = 6
     UDP = 17
 
+@deprecated("WiFiDirectServiceSessionErrorStatus is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSessionErrorStatus(enum.IntEnum):
     OK = 0
     DISASSOCIATED = 1
@@ -64,12 +69,14 @@ class WiFiDirectServiceSessionErrorStatus(enum.IntEnum):
     SYSTEM_FAILURE = 4
     NO_RESPONSE_FROM_REMOTE = 5
 
+@deprecated("WiFiDirectServiceSessionStatus is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSessionStatus(enum.IntEnum):
     CLOSED = 0
     INITIATED = 1
     REQUESTED = 2
     OPEN = 3
 
+@deprecated("WiFiDirectServiceStatus is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceStatus(enum.IntEnum):
     AVAILABLE = 0
     BUSY = 1
@@ -78,12 +85,15 @@ class WiFiDirectServiceStatus(enum.IntEnum):
 @typing.final
 class WiFiDirectService_Static(winrt.system.Object_Static):
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectService> Windows.Devices.WiFiDirect.Services.WiFiDirectService::FromIdAsync(System.String)
+    @deprecated("IWiFiDirectServiceStatics is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def from_id_async(cls, device_id: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectService]: ...
     @typing.overload
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String)
+    @deprecated("IWiFiDirectServiceStatics is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def get_selector(cls, service_name: str, /) -> str: ...
     @typing.overload
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String,Windows.Storage.Streams.IBuffer)
+    @deprecated("IWiFiDirectServiceStatics is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def get_selector(cls, service_name: str, service_info_filter: winrt.system.ReadableBuffer, /) -> str: ...
     # Deprecated alias of get_selector() for pywinrt v3.x compatibility.
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetSelector(System.String,Windows.Storage.Streams.IBuffer)
@@ -91,214 +101,282 @@ class WiFiDirectService_Static(winrt.system.Object_Static):
     def get_selector_with_filter(cls, service_name: str, service_info_filter: winrt.system.ReadableBuffer, /) -> str: ...
 
 @typing.final
+@deprecated("WiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectService(winrt.system.Object, metaclass=WiFiDirectService_Static):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync()
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def connect_async(self) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync(System.String)
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def connect_async(self, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectService::ConnectAsync(System.String)
     @deprecated("Use connect_async() instead.")
     def connect_async_with_pin(self, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo> Windows.Devices.WiFiDirect.Services.WiFiDirectService::GetProvisioningInfoAsync(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod)
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def get_provisioning_info_async(self, selected_configuration_method: WiFiDirectServiceConfigurationMethod, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceProvisioningInfo]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectService::add_SessionDeferred(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectService,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs>)
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_session_deferred(self, handler: windows_foundation.TypedEventHandler[WiFiDirectService, WiFiDirectServiceSessionDeferredEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectService::remove_SessionDeferred(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_session_deferred(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectService::get_SessionInfo()
     @_property
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_info(self) -> windows_storage_streams.IBuffer: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectService::put_SessionInfo(Windows.Storage.Streams.IBuffer)
     @session_info.setter
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_info(self, value: winrt.system.ReadableBuffer) -> None: ...
     # System.Boolean Windows.Devices.WiFiDirect.Services.WiFiDirectService::get_PreferGroupOwnerMode()
     @_property
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def prefer_group_owner_mode(self) -> bool: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectService::put_PreferGroupOwnerMode(System.Boolean)
     @prefer_group_owner_mode.setter
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def prefer_group_owner_mode(self, value: bool) -> None: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectService::get_RemoteServiceInfo()
     @_property
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remote_service_info(self) -> windows_storage_streams.IBuffer: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError Windows.Devices.WiFiDirect.Services.WiFiDirectService::get_ServiceError()
     @_property
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_error(self) -> WiFiDirectServiceError: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod> Windows.Devices.WiFiDirect.Services.WiFiDirectService::get_SupportedConfigurationMethods()
     @_property
+    @deprecated("IWiFiDirectService is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def supported_configuration_methods(self) -> _cabc.Sequence[WiFiDirectServiceConfigurationMethod]: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceAdvertiser(winrt.system.Object):
     def __new__(cls, service_name: str, /) -> typing.Self: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def connect_async(self, device_info: windows_devices_enumeration.DeviceInformation, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     @typing.overload
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation,System.String)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def connect_async(self, device_info: windows_devices_enumeration.DeviceInformation, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # Deprecated alias of connect_async() for pywinrt v3.x compatibility.
     # Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::ConnectAsync(Windows.Devices.Enumeration.DeviceInformation,System.String)
     @deprecated("Use connect_async() instead.")
     def connect_async_with_pin(self, device_info: windows_devices_enumeration.DeviceInformation, pin: str, /) -> windows_foundation.IAsyncOperation[WiFiDirectServiceSession]: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::Start()
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def start(self) -> None: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::Stop()
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def stop(self) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::add_AdvertisementStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,System.Object>)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_advertisement_status_changed(self, handler: windows_foundation.TypedEventHandler[WiFiDirectServiceAdvertiser, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::remove_AdvertisementStatusChanged(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_advertisement_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::add_AutoAcceptSessionConnected(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs>)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_auto_accept_session_connected(self, handler: windows_foundation.TypedEventHandler[WiFiDirectServiceAdvertiser, WiFiDirectServiceAutoAcceptSessionConnectedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::remove_AutoAcceptSessionConnected(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_auto_accept_session_connected(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::add_SessionRequested(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs>)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_session_requested(self, handler: windows_foundation.TypedEventHandler[WiFiDirectServiceAdvertiser, WiFiDirectServiceSessionRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::remove_SessionRequested(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_session_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_ServiceStatus()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_status(self) -> WiFiDirectServiceStatus: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_ServiceStatus(Windows.Devices.WiFiDirect.Services.WiFiDirectServiceStatus)
     @service_status.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_status(self, value: WiFiDirectServiceStatus) -> None: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_ServiceInfo()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_info(self) -> windows_storage_streams.IBuffer: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_ServiceInfo(Windows.Storage.Streams.IBuffer)
     @service_info.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_info(self, value: winrt.system.ReadableBuffer) -> None: ...
     # System.Boolean Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_PreferGroupOwnerMode()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def prefer_group_owner_mode(self) -> bool: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_PreferGroupOwnerMode(System.Boolean)
     @prefer_group_owner_mode.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def prefer_group_owner_mode(self, value: bool) -> None: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_DeferredSessionInfo()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def deferred_session_info(self) -> windows_storage_streams.IBuffer: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_DeferredSessionInfo(Windows.Storage.Streams.IBuffer)
     @deferred_session_info.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def deferred_session_info(self, value: winrt.system.ReadableBuffer) -> None: ...
     # System.UInt32 Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_CustomServiceStatusCode()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def custom_service_status_code(self) -> winrt.system.UInt32: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_CustomServiceStatusCode(System.UInt32)
     @custom_service_status_code.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def custom_service_status_code(self, value: winrt.system.UInt32 | typing.SupportsIndex) -> None: ...
     # System.Boolean Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_AutoAcceptSession()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def auto_accept_session(self) -> bool: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::put_AutoAcceptSession(System.Boolean)
     @auto_accept_session.setter
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def auto_accept_session(self, value: bool) -> None: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceError Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_ServiceError()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_error(self) -> WiFiDirectServiceError: ...
     # Windows.Foundation.Collections.IVector`1<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_PreferredConfigurationMethods()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def preferred_configuration_methods(self) -> _cabc.MutableSequence[WiFiDirectServiceConfigurationMethod]: ...
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_ServiceName()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_name(self) -> str: ...
     # Windows.Foundation.Collections.IVector`1<System.String> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_ServiceNamePrefixes()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_name_prefixes(self) -> _cabc.MutableSequence[str]: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertisementStatus Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAdvertiser::get_AdvertisementStatus()
     @_property
+    @deprecated("IWiFiDirectServiceAdvertiser is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def advertisement_status(self) -> WiFiDirectServiceAdvertisementStatus: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceAutoAcceptSessionConnectedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs::get_Session()
     @_property
+    @deprecated("IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session(self) -> WiFiDirectServiceSession: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs::get_SessionInfo()
     @_property
+    @deprecated("IWiFiDirectServiceAutoAcceptSessionConnectedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_info(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceProvisioningInfo is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # System.Boolean Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo::get_IsGroupFormationNeeded()
     @_property
+    @deprecated("IWiFiDirectServiceProvisioningInfo is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def is_group_formation_needed(self) -> bool: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceConfigurationMethod Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo::get_SelectedConfigurationMethod()
     @_property
+    @deprecated("IWiFiDirectServiceProvisioningInfo is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def selected_configuration_method(self) -> WiFiDirectServiceConfigurationMethod: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceRemotePortAddedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceRemotePortAddedEventArgs(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs::get_EndpointPairs()
     @_property
+    @deprecated("IWiFiDirectServiceRemotePortAddedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def endpoint_pairs(self) -> _cabc.Sequence[windows_networking.EndpointPair]: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceIPProtocol Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs::get_Protocol()
     @_property
+    @deprecated("IWiFiDirectServiceRemotePortAddedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def protocol(self) -> WiFiDirectServiceIPProtocol: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Foundation.IAsyncAction Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::AddDatagramSocketAsync(Windows.Networking.Sockets.DatagramSocket)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_datagram_socket_async(self, value: windows_networking_sockets.DatagramSocket, /) -> windows_foundation.IAsyncAction: ...
     # Windows.Foundation.IAsyncAction Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::AddStreamSocketListenerAsync(Windows.Networking.Sockets.StreamSocketListener)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_stream_socket_listener_async(self, value: windows_networking_sockets.StreamSocketListener, /) -> windows_foundation.IAsyncAction: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::Close()
     def close(self) -> None: ...
     # Windows.Foundation.Collections.IVectorView`1<Windows.Networking.EndpointPair> Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::GetConnectionEndpointPairs()
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def get_connection_endpoint_pairs(self) -> _cabc.Sequence[windows_networking.EndpointPair]: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::add_RemotePortAdded(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession,Windows.Devices.WiFiDirect.Services.WiFiDirectServiceRemotePortAddedEventArgs>)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_remote_port_added(self, handler: windows_foundation.TypedEventHandler[WiFiDirectServiceSession, WiFiDirectServiceRemotePortAddedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::remove_RemotePortAdded(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_remote_port_added(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # Windows.Foundation.EventRegistrationToken Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::add_SessionStatusChanged(Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession,System.Object>)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def add_session_status_changed(self, handler: windows_foundation.TypedEventHandler[WiFiDirectServiceSession, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     # System.Void Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::remove_SessionStatusChanged(Windows.Foundation.EventRegistrationToken)
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def remove_session_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
     # System.UInt32 Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_AdvertisementId()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def advertisement_id(self) -> winrt.system.UInt32: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionErrorStatus Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_ErrorStatus()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def error_status(self) -> WiFiDirectServiceSessionErrorStatus: ...
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_ServiceAddress()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_address(self) -> str: ...
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_ServiceName()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def service_name(self) -> str: ...
     # System.String Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_SessionAddress()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_address(self) -> str: ...
     # System.UInt32 Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_SessionId()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_id(self) -> winrt.system.UInt32: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionStatus Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSession::get_Status()
     @_property
+    @deprecated("IWiFiDirectServiceSession is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def status(self) -> WiFiDirectServiceSessionStatus: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceSessionDeferredEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSessionDeferredEventArgs(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionDeferredEventArgs::get_DeferredSessionInfo()
     @_property
+    @deprecated("IWiFiDirectServiceSessionDeferredEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def deferred_session_info(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceSessionRequest is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSessionRequest(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self) -> typing.Self: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
@@ -308,18 +386,23 @@ class WiFiDirectServiceSessionRequest(windows_foundation.IClosable, winrt.system
     def close(self) -> None: ...
     # Windows.Devices.Enumeration.DeviceInformation Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest::get_DeviceInformation()
     @_property
+    @deprecated("IWiFiDirectServiceSessionRequest is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def device_information(self) -> windows_devices_enumeration.DeviceInformation: ...
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceProvisioningInfo Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest::get_ProvisioningInfo()
     @_property
+    @deprecated("IWiFiDirectServiceSessionRequest is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def provisioning_info(self) -> WiFiDirectServiceProvisioningInfo: ...
     # Windows.Storage.Streams.IBuffer Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest::get_SessionInfo()
     @_property
+    @deprecated("IWiFiDirectServiceSessionRequest is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def session_info(self) -> windows_storage_streams.IBuffer: ...
 
 @typing.final
+@deprecated("WiFiDirectServiceSessionRequestedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
 class WiFiDirectServiceSessionRequestedEventArgs(winrt.system.Object):
     def __new__(cls, _: typing.Never, /) -> typing.Self:
         """WinRT gives this class no constructor; an instance comes from a method or property that returns one."""
     # Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequest Windows.Devices.WiFiDirect.Services.WiFiDirectServiceSessionRequestedEventArgs::GetSessionRequest()
+    @deprecated("IWiFiDirectServiceSessionRequestedEventArgs is deprecated and might not work on all platforms. For more info, see Microsoft Learn.")
     def get_session_request(self) -> WiFiDirectServiceSessionRequest: ...
 

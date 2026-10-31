@@ -27,22 +27,22 @@ classifiers = [
 requires-python = ">=3.11"
 dependencies = [
     "winrt-runtime>=4.0.0,<5",
-    "winrt-Windows.Foundation>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2705",
-    "winrt-Windows.Storage.Streams>=4!10.0.28000.2705",
+    "winrt-Windows.Foundation>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections>=4!10.0.28000.2957",
+    "winrt-Windows.Storage.Streams>=4!10.0.28000.2957",
     "winrt-Microsoft.Web.WebView2.Dll>=4!1.0.4314.35",
 ]
 
 [project.optional-dependencies]
 all = [
-    "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.28000.2705",
-    "winrt-Windows.ApplicationModel.DataTransfer.DragDrop.Core[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Security.Cryptography.Certificates[all]>=4!10.0.28000.2705",
-    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2705",
-    "winrt-Windows.UI[all]>=4!10.0.28000.2705",
-    "winrt-Windows.UI.Core[all]>=4!10.0.28000.2705",
+    "winrt-Windows.ApplicationModel.DataTransfer[all]>=4!10.0.28000.2957",
+    "winrt-Windows.ApplicationModel.DataTransfer.DragDrop.Core[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Foundation.Collections[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Security.Cryptography.Certificates[all]>=4!10.0.28000.2957",
+    "winrt-Windows.Storage.Streams[all]>=4!10.0.28000.2957",
+    "winrt-Windows.UI[all]>=4!10.0.28000.2957",
+    "winrt-Windows.UI.Core[all]>=4!10.0.28000.2957",
 ]
 
 [project.urls]

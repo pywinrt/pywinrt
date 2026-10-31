@@ -492,6 +492,20 @@ WINRT_EXPORT namespace winrt::Windows::System
         IUser2(std::nullptr_t = nullptr) noexcept {}
         IUser2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IUser3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IUser3>
+    {
+        IUser3(std::nullptr_t = nullptr) noexcept {}
+        IUser3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IUserAgeRange :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IUserAgeRange>
+    {
+        IUserAgeRange(std::nullptr_t = nullptr) noexcept {}
+        IUserAgeRange(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IUserAuthenticationStatusChangeDeferral :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserAuthenticationStatusChangeDeferral>

@@ -1211,7 +1211,7 @@ interface Windows.Management.Update.IWindowsSoftwareUpdateOptionalInfoFactory
     guid be28a884-5b20-5b8b-96a2-1c528c441acd
 
 interface Windows.Management.Update.IWindowsSoftwareUpdateProvider
-    guid fd6f6d8c-c6fd-58e0-949e-a344717a8166
+    guid b573a766-0c05-575a-a948-da82a59e782b
 
 interface Windows.Management.Update.IWindowsSoftwareUpdateProviderActionResult
     guid afd92b50-6bb9-54de-bdda-9dfb6cc17c16
@@ -1801,7 +1801,7 @@ class Windows.Management.Update.WindowsSoftwareUpdateOptionalInfo python_type
 
 class Windows.Management.Update.WindowsSoftwareUpdateProvider python_type
     py WindowsSoftwareUpdateProvider
-    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProvider;{fd6f6d8c-c6fd-58e0-949e-a344717a8166})
+    signature rc(Windows.Management.Update.WindowsSoftwareUpdateProvider;{b573a766-0c05-575a-a948-da82a59e782b})
     default Windows.Management.Update.IWindowsSoftwareUpdateProvider
     requires Windows.Management.Update.IWindowsSoftwareUpdateProvider
     factory Windows.Management.Update.IWindowsSoftwareUpdateProviderFactory
@@ -1822,8 +1822,11 @@ class Windows.Management.Update.WindowsSoftwareUpdateProvider python_type
         get get_PayloadFiles slot=17 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
             out parameterized type=Windows.Foundation.Collections.IVectorView<Windows.Management.Update.WindowsSoftwareUpdateProviderPayloadFileInfo> return
     property properties
-        get get_Properties slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
+        get get_Properties slot=21 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
             out parameterized type=Windows.Foundation.Collections.IMapView<System.String,System.Object> return
+    property provider_identity
+        get get_ProviderIdentity slot=20 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
+            out class type=Windows.Management.Update.WindowsSoftwareUpdateIdentity return
     property registration_type
         get get_RegistrationType slot=19 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
             out enum32 type=Windows.Management.Update.WindowsSoftwareUpdateProviderRegistrationType return
@@ -1846,7 +1849,7 @@ class Windows.Management.Update.WindowsSoftwareUpdateProvider python_type
         get get_Version slot=11 inputs=0 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=4
             out string return
     method get_property_value
-        method GetPropertyValue slot=21 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=51
+        method GetPropertyValue slot=22 inputs=1 outputs=1 declaring=Windows.Management.Update.IWindowsSoftwareUpdateProvider shape=51
             in string name=name
             out object return
     method register

@@ -634,6 +634,28 @@ delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAg
             in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult> name=asyncInfo
             in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
 
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeRange> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UserAgeRange]
+    guid 11c9db94-e99a-5481-9c20-61ed7d2d8916
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};rc(Windows.System.UserAgeRange;{d002ffca-8130-5f64-be0f-e66adb64dd12}))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.UserAgeRange
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
+delegate Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeVerificationStatus> concrete
+    py winrt.windows.foundation.AsyncOperationCompletedHandler[UserAgeVerificationStatus]
+    guid 9620732f-0e93-5c48-9623-eacd22632008
+    signature pinterface({fcdcf02c-e5d8-4478-915a-4d90b74b83a5};enum(Windows.System.UserAgeVerificationStatus;i4))
+    base Windows.Foundation.AsyncOperationCompletedHandler
+    argument Windows.System.UserAgeVerificationStatus
+    method -
+        method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
+            in parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> name=asyncInfo
+            in enum32 type=Windows.Foundation.AsyncStatus name=asyncStatus
+
 enum Windows.System.AutoUpdateTimeZoneStatus python_type
     py AutoUpdateTimeZoneStatus
     signature enum(Windows.System.AutoUpdateTimeZoneStatus;i4)
@@ -1450,6 +1472,64 @@ interface Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult
         method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeConsentResult> shape=4 reverse=62 role=get_results
             out enum32 type=Windows.System.UserAgeConsentResult return
 
+interface Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UserAgeRange]
+    guid 9536d8c3-c091-591b-bb09-8e4103965dcf
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};rc(Windows.System.UserAgeRange;{d002ffca-8130-5f64-be0f-e66adb64dd12}))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.System.UserAgeRange
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeRange> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeRange> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> shape=4 reverse=62 role=get_results
+            out class type=Windows.System.UserAgeRange return
+
+interface Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> concrete awaitable
+    py winrt.windows.foundation._IAsyncOperation[UserAgeVerificationStatus]
+    guid 2d460a38-6ff2-5f39-b5cc-8f68ba2ac83c
+    signature pinterface({9fc2b0bb-e446-44e2-aa61-9cab8f636af2};enum(Windows.System.UserAgeVerificationStatus;i4))
+    base Windows.Foundation.IAsyncOperation
+    requires Windows.Foundation.IAsyncInfo
+    argument Windows.System.UserAgeVerificationStatus
+    property completed
+        get get_Completed slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> shape=4 reverse=43 role=completed
+            out delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeVerificationStatus> return
+        put put_Completed slot=6 inputs=1 outputs=0 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> shape=4 reverse=22
+            in delegate type=Windows.Foundation.AsyncOperationCompletedHandler<Windows.System.UserAgeVerificationStatus> name=handler
+    property error_code
+        get get_ErrorCode slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=62
+            out hresult type=Windows.Foundation.HResult return
+    property id
+        get get_Id slot=6 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=22
+            out uint32 return
+    property status
+        get get_Status slot=7 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncInfo shape=4 reverse=43 role=status
+            out enum32 type=Windows.Foundation.AsyncStatus return
+    method cancel
+        method Cancel slot=9 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=93
+    method close
+        method Close slot=10 inputs=0 outputs=0 declaring=Windows.Foundation.IAsyncInfo shape=0 reverse=117
+    method get_results
+        method GetResults slot=8 inputs=0 outputs=1 declaring=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> shape=4 reverse=62 role=get_results
+            out enum32 type=Windows.System.UserAgeVerificationStatus return
+
 interface Windows.System.IDateTimeSettingsStatics
     guid 5d2150d1-47ee-48ab-a52b-9f1954278d82
 
@@ -2132,6 +2212,12 @@ interface Windows.System.IUser
 
 interface Windows.System.IUser2
     guid 98ba5628-a6e3-518e-89d9-d3b2b1991a10
+
+interface Windows.System.IUser3
+    guid 520e18e2-f00d-53d1-a9f6-88c697561dc0
+
+interface Windows.System.IUserAgeRange
+    guid d002ffca-8130-5f64-be0f-e66adb64dd12
 
 interface Windows.System.IUserAuthenticationStatusChangeDeferral
     guid 88b59568-bb30-42fb-a270-e9902e40efa7
@@ -3488,6 +3574,7 @@ class Windows.System.User python_type
     default Windows.System.IUser
     requires Windows.System.IUser
     requires Windows.System.IUser2
+    requires Windows.System.IUser3
     factory Windows.System.IUserStatics
     factory Windows.System.IUserStatics2
     property authentication_status
@@ -3516,6 +3603,9 @@ class Windows.System.User python_type
             in enum32 type=Windows.System.UserType name=type
             in enum32 type=Windows.System.UserAuthenticationStatus name=status
             out parameterized type=Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.System.User>> return
+    method get_age_verification_status_async
+        method GetAgeVerificationStatusAsync slot=7 inputs=0 outputs=1 declaring=Windows.System.IUser3 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeVerificationStatus> return
     method get_default static
         method GetDefault slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserStatics2 shape=4 static
             out class type=Windows.System.User return
@@ -3535,6 +3625,9 @@ class Windows.System.User python_type
         method GetPropertyAsync slot=9 inputs=1 outputs=1 declaring=Windows.System.IUser shape=51
             in string name=value
             out parameterized type=Windows.Foundation.IAsyncOperation<System.Object> return
+    method get_user_age_range_async
+        method GetUserAgeRangeAsync slot=6 inputs=0 outputs=1 declaring=Windows.System.IUser3 shape=4
+            out parameterized type=Windows.Foundation.IAsyncOperation<Windows.System.UserAgeRange> return
 
 enum Windows.System.UserAgeConsentGroup python_type
     py UserAgeConsentGroup
@@ -3551,6 +3644,27 @@ enum Windows.System.UserAgeConsentResult python_type
     constant NOT_INCLUDED 2
     constant UNKNOWN 3
     constant AMBIGUOUS 4
+
+class Windows.System.UserAgeRange python_type
+    py UserAgeRange
+    signature rc(Windows.System.UserAgeRange;{d002ffca-8130-5f64-be0f-e66adb64dd12})
+    default Windows.System.IUserAgeRange
+    requires Windows.System.IUserAgeRange
+    property lower
+        get get_Lower slot=6 inputs=0 outputs=1 declaring=Windows.System.IUserAgeRange shape=4
+            out int32 return
+    property upper
+        get get_Upper slot=7 inputs=0 outputs=1 declaring=Windows.System.IUserAgeRange shape=4
+            out int32 return
+
+enum Windows.System.UserAgeVerificationStatus python_type
+    py UserAgeVerificationStatus
+    signature enum(Windows.System.UserAgeVerificationStatus;i4)
+    constant NOT_APPLICABLE 0
+    constant TEMPORARILY_UNAVAILABLE 1
+    constant UNVERIFIED 2
+    constant OPTED_OUT 3
+    constant VERIFIED 4
 
 enum Windows.System.UserAuthenticationStatus python_type
     py UserAuthenticationStatus

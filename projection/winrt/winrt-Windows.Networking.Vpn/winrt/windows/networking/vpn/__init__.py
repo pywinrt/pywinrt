@@ -10,8 +10,10 @@ __all__ = [
     "VpnAuthenticationMethod",
     "VpnChannelActivityEventType",
     "VpnChannelRequestCredentialsOptions",
+    "VpnConnectionTypePreview",
     "VpnCredentialType",
     "VpnDataPathType",
+    "VpnDisconnectReasonPreview",
     "VpnDomainNameType",
     "VpnIPProtocol",
     "VpnManagementConnectionStatus",
@@ -24,6 +26,7 @@ __all__ = [
     "VpnChannelActivityEventArgs",
     "VpnChannelActivityStateChangedArgs",
     "VpnChannelConfiguration",
+    "VpnConnectionDetailsPreview",
     "VpnCredential",
     "VpnCustomCheckBox",
     "VpnCustomComboBox",
@@ -69,4 +72,5 @@ __all__ = [
 winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_simple_async", "request_credentials_async")
 winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_with_certificate_async", "request_credentials_async")
 winrt.runtime._internals.alias_method(VpnChannel, "request_credentials_with_options_async", "request_credentials_async")
+winrt.runtime._internals.alias_method(VpnChannel, "set_error_message_with_details", "set_error_message")
 winrt.runtime._internals.alias_method(VpnChannel, "start_with_multiple_transports", "start_with_traffic_filter")
