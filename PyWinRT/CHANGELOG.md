@@ -8,7 +8,7 @@ projection of a WinRT component.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.1.0] - 2026-10-31
 
 ### Added
 - `--renames <file>` keeps each name a projection renamed, as a deprecated alias.
