@@ -1,3 +1,20 @@
+# /// script
+# dependencies = [
+#   "winrt-runtime>=4",
+#   "winrt-Windows.Foundation",
+#   "winrt-Windows.Graphics",
+#   "winrt-Windows.Graphics.Capture",
+#   "winrt-Windows.Graphics.DirectX",
+#   "winrt-Windows.Graphics.DirectX.Direct3D11",
+#   "winrt-Windows.Graphics.DirectX.Direct3D11.Interop>=4",
+#   "winrt-Windows.Graphics.Imaging",
+#   "winrt-Windows.Storage",
+#   "winrt-Windows.Storage.Streams",
+#   "winrt-Windows.UI",
+#   "winrt-Windows.UI.WindowManagement",
+# ]
+# ///
+
 # SPDX-License-Identifier: MIT
 # Copyright 2024 David Lechner <david@pybricks.com>
 
@@ -5,9 +22,11 @@
 This is an example of how to use PyWinRT to capture a screen image from a
 command line program.
 
-Run this script as a module ``py -m samples.screen_capture`` and select a
-window to capture. If the window is minimized, activate it, otherwise the
-capture will time out. The captured image will be saved as
+Run this example from the web with:
+uv run --script https://raw.githubusercontent.com/pywinrt/pywinrt/main/samples/screen_capture.py
+
+Select a window to capture. If the window is minimized, activate it, otherwise
+the capture will time out. The captured image will be saved as
 ``pywinrt example screen capture.png`` in the current directory.
 """
 
