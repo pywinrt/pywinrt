@@ -29,6 +29,9 @@ dependencies = [
     "winrt-runtime>=4.0.0,<5",
 ]
 
+[project.optional-dependencies]
+all = []
+
 [project.urls]
 Documentation = "https://pywinrt.readthedocs.io"
 Repository = "https://github.com/pywinrt/pywinrt"

@@ -841,12 +841,16 @@ def write_projection_project_files(
                 ),
                 table_compiler_requirement=TABLE_COMPILER_REQUIREMENT,
                 dependencies=format_dependencies(dependencies),
+                # declared even when empty, since the packages that offer this
+                # one ask for it by name[all]
                 optional_dependencies=(
-                    "\n[project.optional-dependencies]\nall = [\n"
-                    + format_dependencies(optional_dependencies)
+                    "\n[project.optional-dependencies]\nall = ["
+                    + (
+                        "\n" + format_dependencies(optional_dependencies)
+                        if optional_dependencies
+                        else ""
+                    )
                     + "]\n"
-                    if optional_dependencies
-                    else ""
                 ),
                 root_dir=root_dir,
             )

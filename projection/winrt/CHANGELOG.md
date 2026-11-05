@@ -11,6 +11,11 @@ changelog](../../runtime/CHANGELOG.md), and each interop package, such as
 `interop/`. The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Fixed
+- Fixed a package such as `winrt-Windows.UI` not providing the extra `all`.
+
 ## [4!10.0.28000.2957] - 2026-10-31
 
 ### Added
