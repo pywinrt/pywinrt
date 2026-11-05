@@ -13,6 +13,7 @@ import unittest
 from pathlib import Path
 
 from packaging.requirements import Requirement
+from packaging.utils import canonicalize_name
 
 from scripts import versions
 
@@ -193,3 +194,37 @@ class StubImports(unittest.TestCase):
                 }
 
                 self.assertLessEqual(imported - {package.name}, offered)
+
+
+class AllExtra(unittest.TestCase):
+    """
+    The [all] extra that a projection package asks of the packages it offers.
+
+    A package names each one it offers as name[all], so each must declare the
+    extra, an empty one where it references nothing. pip warns about an extra
+    that a package does not provide, and uv leaves a lock file out of sync.
+    """
+
+    def test_every_package_named_with_all_declares_it(self) -> None:
+        projection = versions.REPO_PATH / "projection"
+        projects = {
+            canonicalize_name(project["name"]): project
+            for project in (
+                tomllib.loads(p.read_text(encoding="utf-8"))["project"]
+                for p in projection.glob("*/*/pyproject.toml")
+            )
+        }
+
+        named = {
+            requirement.name
+            for project in projects.values()
+            for r in project["dependencies"]
+            + project.get("optional-dependencies", {}).get("all", [])
+            if "all" in (requirement := Requirement(r)).extras
+        }
+
+        for name in sorted(named):
+            with self.subTest(package=name):
+                project = projects[canonicalize_name(name)]
+
+                self.assertIn("all", project.get("optional-dependencies", {}))
