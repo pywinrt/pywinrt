@@ -13,6 +13,9 @@ repository](../../CHANGELOG.md).
 
 ## [Unreleased]
 
+Only the packages these changes touch are released, and the rest stay at
+`4!10.0.28000.2957`.
+
 ### Fixed
 - Fixed a package such as `winrt-Windows.UI` not providing the extra `all`.
 

@@ -1,0 +1,22 @@
+{
+    "winrt-Windows.AI.Agents.Mcp": "4!10.0.28000.2957.1",
+    "winrt-Windows.ApplicationModel.DataTransfer.DragDrop": "4!10.0.28000.2957.1",
+    "winrt-Windows.Data.Html": "4!10.0.28000.2957.1",
+    "winrt-Windows.Foundation.Metadata": "4!10.0.28000.2957.1",
+    "winrt-Windows.Foundation.Numerics": "4!10.0.28000.2957.1",
+    "winrt-Windows.Graphics": "4!10.0.28000.2957.1",
+    "winrt-Windows.Graphics.DirectX": "4!10.0.28000.2957.1",
+    "winrt-Windows.Graphics.Effects": "4!10.0.28000.2957.1",
+    "winrt-Windows.Graphics.Printing.ProtectedPrint": "4!10.0.28000.2957.1",
+    "winrt-Windows.Management.Deployment.Preview": "4!10.0.28000.2957.1",
+    "winrt-Windows.Management.Workplace": "4!10.0.28000.2957.1",
+    "winrt-Windows.Media.Render": "4!10.0.28000.2957.1",
+    "winrt-Windows.System.Diagnostics.Telemetry": "4!10.0.28000.2957.1",
+    "winrt-Windows.System.Display": "4!10.0.28000.2957.1",
+    "winrt-Windows.System.Power.Diagnostics": "4!10.0.28000.2957.1",
+    "winrt-Windows.System.RemoteDesktop": "4!10.0.28000.2957.1",
+    "winrt-Windows.UI": "4!10.0.28000.2957.1",
+    "winrt-Windows.UI.UIAutomation": "4!10.0.28000.2957.1",
+    "winrt-Windows.UI.Xaml.Automation.Text": "4!10.0.28000.2957.1",
+    "winrt-Windows.UI.Xaml.Resources": "4!10.0.28000.2957.1"
+}
