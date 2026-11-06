@@ -214,11 +214,13 @@ jobs:
           # what the import test resolves an interop wheel's dependencies
           # from, as well as PyPI
           PIP_FIND_LINKS: ${{ github.workspace }}\find-links
+        # every line at the indentation of the first, since a folded block
+        # keeps the line break of one indented further, which ends the command
         run: >-
           python scripts/build-bdist.py --stable-abi
           ${{ inputs.python
-              && format('--only {0}-{1}', inputs.python, matrix.arch.wheel)
-              || format('--platform windows --archs {0}', matrix.arch.cibuildwheel) }}
+          && format('--only {0}-{1}', inputs.python, matrix.arch.wheel)
+          || format('--platform windows --archs {0}', matrix.arch.cibuildwheel) }}
           --tag "$env:BUILD_TAG"
           --family "$env:BUILD_FAMILY" --package "$env:BUILD_PACKAGES"
       - name: Check what the wheels carry
