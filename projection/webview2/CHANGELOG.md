@@ -13,6 +13,9 @@ changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 
 ## [Unreleased]
 
+`winrt-Microsoft.Web.WebView2` and `winrt-Microsoft.Web.WebView2.Dll` are not
+released again and stay at `4!1.0.4314.35`.
+
 ### Added
 - Added `winrt-Microsoft.Web.WebView2.Interop`, for file drops on visual hosting.
 

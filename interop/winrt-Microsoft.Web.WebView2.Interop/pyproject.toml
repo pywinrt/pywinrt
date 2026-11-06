@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "winrt-Microsoft.Web.WebView2.Interop"
-version = "4!1.0.4314.35"
+version = "4!1.0.4314.35.1"
 description = "Lets a visually hosted WebView2 take the files dropped on its window, as an OLE drop target."
 readme = "README.md"
 license = "MIT"
