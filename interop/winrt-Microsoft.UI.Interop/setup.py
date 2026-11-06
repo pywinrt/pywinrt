@@ -17,27 +17,28 @@ INCLUDE_DIRS = [
     os.fspath(pathlib.Path(__file__).parent / "cppwinrt"),
 ]
 
-# Each Windows App SDK component the module compiles against, named by the
-# environment variable that points at an unpacked copy of it: what it is
-# unpacked as, where nuget.org serves it, and what it has to hash to.
-APP_SDK_PACKAGES = {
+# Each NuGet package the module compiles against, named by the environment
+# variable that points at an unpacked copy of it: what it is unpacked as, where
+# nuget.org serves it, what it has to hash to and where in it the headers are.
+NUGET_PACKAGES = {
     "WASDK_INTERACTIVE_EXPERIENCES_PATH": (
         "Microsoft.WindowsAppSDK.InteractiveExperiences.2.6.4",
         "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.interactiveexperiences/2.6.4/microsoft.windowsappsdk.interactiveexperiences.2.6.4.nupkg",
         "9435ff933e11f0f899e9af288e46bc3248c034a7e9a5d2d8e0013eb3aad27933",
+        ["include"],
     ),
 }
 
 
-def unpack_app_sdk_package(env: str) -> pathlib.Path:
+def unpack_nuget_package(env: str) -> pathlib.Path:
     """
-    Where the component named by @p env is unpacked: the copy the environment
+    Where the package named by @p env is unpacked: the copy the environment
     variable points at, or else one downloaded from nuget.org into build/.
     """
     if env in os.environ:
         return pathlib.Path(os.environ[env]).resolve()
 
-    name, url, sha256 = APP_SDK_PACKAGES[env]
+    name, url, sha256, _ = NUGET_PACKAGES[env]
     path = pathlib.Path(__file__).parent.resolve() / "build" / "nuget" / name
 
     if path.is_dir():
@@ -70,12 +71,12 @@ def unpack_app_sdk_package(env: str) -> pathlib.Path:
     return path
 
 
-WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {}
+NUGET_PATHS: dict[str, pathlib.Path] = {}
 
-for name in APP_SDK_PACKAGES:
-    WINDOWS_APP_SDK_PATHS[name] = unpack_app_sdk_package(name)
-    print(f"Using {name} from {WINDOWS_APP_SDK_PATHS[name]}")
-    INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
+for name, (_, _, _, include_dirs) in NUGET_PACKAGES.items():
+    NUGET_PATHS[name] = unpack_nuget_package(name)
+    print(f"Using {name} from {NUGET_PATHS[name]}")
+    INCLUDE_DIRS.extend(os.fspath(NUGET_PATHS[name] / d) for d in include_dirs)
 
 
 class build_ext_ex(build_ext):

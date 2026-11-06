@@ -271,32 +271,32 @@ CPPWINRT_HEADERS = """INCLUDE_DIRS = [
     os.fspath(pathlib.Path(__file__).parent / "cppwinrt"),
 ]"""
 
-# The Windows App SDK is redistributed with an app rather than part of Windows,
-# so its own headers and import libraries come from its NuGet packages. It is a
-# metapackage over components that are published separately, so each module
-# names the component that ships what it includes. A build in this repository
-# points an environment variable at the copy scripts/fetch-tools.ps1 unpacked,
-# which is also how a machine that cannot reach nuget.org builds; a build from
-# the source distribution downloads the component instead, so that it needs
-# nothing but PyPI and nuget.org, and checks it against the hash taken when the
-# setup.py was generated.
-APP_SDK_INIT = '''
-# Each Windows App SDK component the module compiles against, named by the
-# environment variable that points at an unpacked copy of it: what it is
-# unpacked as, where nuget.org serves it, and what it has to hash to.
-APP_SDK_PACKAGES = {{
+# A family that is redistributed with an app rather than part of Windows, such
+# as the Windows App SDK, has its headers and import libraries in its NuGet
+# packages. The App SDK is a metapackage over components that are published
+# separately, so each module names the component that ships what it includes.
+# A build in this repository points an environment variable at the copy
+# scripts/fetch-tools.ps1 unpacked, which is also how a machine that cannot
+# reach nuget.org builds. A build from the source distribution downloads the
+# package instead, so that it needs nothing but PyPI and nuget.org, and checks
+# it against the hash taken when the setup.py was generated.
+NUGET_INIT = '''
+# Each NuGet package the module compiles against, named by the environment
+# variable that points at an unpacked copy of it: what it is unpacked as, where
+# nuget.org serves it, what it has to hash to and where in it the headers are.
+NUGET_PACKAGES = {{
 {packages}}}
 
 
-def unpack_app_sdk_package(env: str) -> pathlib.Path:
+def unpack_nuget_package(env: str) -> pathlib.Path:
     """
-    Where the component named by @p env is unpacked: the copy the environment
+    Where the package named by @p env is unpacked: the copy the environment
     variable points at, or else one downloaded from nuget.org into build/.
     """
     if env in os.environ:
         return pathlib.Path(os.environ[env]).resolve()
 
-    name, url, sha256 = APP_SDK_PACKAGES[env]
+    name, url, sha256, _ = NUGET_PACKAGES[env]
     path = pathlib.Path(__file__).parent.resolve() / "build" / "nuget" / name
 
     if path.is_dir():
@@ -329,12 +329,12 @@ def unpack_app_sdk_package(env: str) -> pathlib.Path:
     return path
 
 
-WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {{}}
+NUGET_PATHS: dict[str, pathlib.Path] = {{}}
 
-for name in APP_SDK_PACKAGES:
-    WINDOWS_APP_SDK_PATHS[name] = unpack_app_sdk_package(name)
-    print(f"Using {{name}} from {{WINDOWS_APP_SDK_PATHS[name]}}")
-    INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
+for name, (_, _, _, include_dirs) in NUGET_PACKAGES.items():
+    NUGET_PATHS[name] = unpack_nuget_package(name)
+    print(f"Using {{name}} from {{NUGET_PATHS[name]}}")
+    INCLUDE_DIRS.extend(os.fspath(NUGET_PATHS[name] / d) for d in include_dirs)
 '''
 
 # The release of the Windows App SDK that the bootstrap module is built for,
@@ -377,7 +377,7 @@ INTEROP_HEADER = """// WARNING: Please don't edit this file. It was copied from 
 APP_SDK_EXTRA_BUILD = """
         arch = {"win32": "x86", "win-amd64": "x64", "win-arm64": "arm64"}[self.plat_name]
         ext.library_dirs = [
-            os.fspath(WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
+            os.fspath(NUGET_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
         ]
 """
 
@@ -727,7 +727,7 @@ class build_py_ex(build_py):
         build_command = self.get_finalized_command("build")
         assert isinstance(build_command, build)
         plat_name = build_command.plat_name
-        nuget_path = WINDOWS_APP_SDK_PATHS["{env}"]
+        nuget_path = NUGET_PATHS["{env}"]
         destination = pathlib.Path(self.build_lib, "{root_package}")
 
         self.mkpath(os.fspath(destination))

@@ -41,13 +41,20 @@ NUGET_ENVIRONMENT = {
     "WEBVIEW2_PATH": "Microsoft.Web.WebView2",
 }
 
-# The Windows App SDK components each hand-written module compiles against,
-# named by the environment variable above that says where fetch-tools.ps1
-# unpacked each one. The App SDK is a metapackage, so what a module includes
-# is spread over several of them. Compiling against the App SDK is also what
-# puts a module in its family: these two are released with it rather than
-# with the Windows SDK that the other six interop modules follow.
-APP_SDK_INTEROP_COMPONENTS = {
+# The family whose release each of those NuGet packages is part of.
+NUGET_FAMILIES = {
+    "WASDK_FOUNDATION_PATH": "wasdk",
+    "WASDK_INTERACTIVE_EXPERIENCES_PATH": "wasdk",
+    "WEBVIEW2_PATH": "webview2",
+}
+
+# The NuGet packages each hand-written module compiles against, named by the
+# environment variable above that says where fetch-tools.ps1 unpacked each
+# one. The App SDK is a metapackage, so what a module includes is spread over
+# several of them. Compiling against a family's packages is also what puts a
+# module in that family: these are released with it rather than with the
+# Windows SDK that the other interop modules follow.
+INTEROP_NUGET_PACKAGES = {
     # Microsoft.UI.Interop.h
     "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
     # MddBootstrap.h and its import library; the release it expects is written
@@ -105,6 +112,24 @@ class Package(NamedTuple):
     build: Build
 
 
+def interop_family(distribution: str) -> str:
+    """
+    The family a hand-written interop module is built against: the one its
+    NuGet packages are part of, or the Windows SDK when it has none.
+    """
+    families = {
+        NUGET_FAMILIES[env] for env in INTEROP_NUGET_PACKAGES.get(distribution, [])
+    }
+
+    if len(families) > 1:
+        raise RuntimeError(
+            f"{distribution} compiles against the NuGet packages of"
+            f" {', '.join(sorted(families))}, and is released with only one family"
+        )
+
+    return families.pop() if families else "winrt"
+
+
 def generated() -> Iterator[Package]:
     """
     Every package that scripts/generate-pyproject.py writes the packaging of,
@@ -141,7 +166,7 @@ def generated() -> Iterator[Package]:
 
     for path in sorted(INTEROP_PATH.glob("winrt-*")):
         distribution = path.name
-        family = "wasdk" if distribution in APP_SDK_INTEROP_COMPONENTS else "winrt"
+        family = interop_family(distribution)
 
         if versions.FAMILY_RELEASED_INTEROP.get(path.name, "winrt") != family:
             raise RuntimeError(

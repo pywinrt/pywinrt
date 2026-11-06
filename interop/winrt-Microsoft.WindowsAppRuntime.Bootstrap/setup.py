@@ -19,27 +19,28 @@ from setuptools.command.build_py import build_py
 
 INCLUDE_DIRS: list[str] = []
 
-# Each Windows App SDK component the module compiles against, named by the
-# environment variable that points at an unpacked copy of it: what it is
-# unpacked as, where nuget.org serves it, and what it has to hash to.
-APP_SDK_PACKAGES = {
+# Each NuGet package the module compiles against, named by the environment
+# variable that points at an unpacked copy of it: what it is unpacked as, where
+# nuget.org serves it, what it has to hash to and where in it the headers are.
+NUGET_PACKAGES = {
     "WASDK_FOUNDATION_PATH": (
         "Microsoft.WindowsAppSDK.Foundation.2.6.4",
         "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.foundation/2.6.4/microsoft.windowsappsdk.foundation.2.6.4.nupkg",
         "d23b968700025000f93d38107708a9771b18dbe0fae57e9843c310556cf84091",
+        ["include"],
     ),
 }
 
 
-def unpack_app_sdk_package(env: str) -> pathlib.Path:
+def unpack_nuget_package(env: str) -> pathlib.Path:
     """
-    Where the component named by @p env is unpacked: the copy the environment
+    Where the package named by @p env is unpacked: the copy the environment
     variable points at, or else one downloaded from nuget.org into build/.
     """
     if env in os.environ:
         return pathlib.Path(os.environ[env]).resolve()
 
-    name, url, sha256 = APP_SDK_PACKAGES[env]
+    name, url, sha256, _ = NUGET_PACKAGES[env]
     path = pathlib.Path(__file__).parent.resolve() / "build" / "nuget" / name
 
     if path.is_dir():
@@ -72,12 +73,12 @@ def unpack_app_sdk_package(env: str) -> pathlib.Path:
     return path
 
 
-WINDOWS_APP_SDK_PATHS: dict[str, pathlib.Path] = {}
+NUGET_PATHS: dict[str, pathlib.Path] = {}
 
-for name in APP_SDK_PACKAGES:
-    WINDOWS_APP_SDK_PATHS[name] = unpack_app_sdk_package(name)
-    print(f"Using {name} from {WINDOWS_APP_SDK_PATHS[name]}")
-    INCLUDE_DIRS.append(os.fspath(WINDOWS_APP_SDK_PATHS[name] / "include"))
+for name, (_, _, _, include_dirs) in NUGET_PACKAGES.items():
+    NUGET_PATHS[name] = unpack_nuget_package(name)
+    print(f"Using {name} from {NUGET_PATHS[name]}")
+    INCLUDE_DIRS.extend(os.fspath(NUGET_PATHS[name] / d) for d in include_dirs)
 
 
 # The Windows App Runtime bootstrapper that the extension module links
@@ -139,7 +140,7 @@ class build_py_ex(build_py):
         build_command = self.get_finalized_command("build")
         assert isinstance(build_command, build)
         plat_name = build_command.plat_name
-        nuget_path = WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"]
+        nuget_path = NUGET_PATHS["WASDK_FOUNDATION_PATH"]
         destination = pathlib.Path(self.build_lib, "winrt")
 
         self.mkpath(os.fspath(destination))
@@ -185,7 +186,7 @@ class build_ext_ex(build_ext):
 
         arch = {"win32": "x86", "win-amd64": "x64", "win-arm64": "arm64"}[self.plat_name]
         ext.library_dirs = [
-            os.fspath(WINDOWS_APP_SDK_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
+            os.fspath(NUGET_PATHS["WASDK_FOUNDATION_PATH"] / "lib" / "native" / arch)
         ]
 
         build_ext.build_extension(self, ext)

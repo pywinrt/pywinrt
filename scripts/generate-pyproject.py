@@ -279,6 +279,13 @@ INTEROP_SUMMARIES = {
     ),
 }
 
+# Where in each NuGet package of packages.NUGET_ENVIRONMENT the headers an
+# interop module includes are, relative to the package's root.
+NUGET_INCLUDE_DIRS = {
+    "WASDK_FOUNDATION_PATH": ["include"],
+    "WASDK_INTERACTIVE_EXPERIENCES_PATH": ["include"],
+}
+
 # The namespace an interop package's module and source file are named after,
 # where it is not the one in the distribution's name. The bootstrapper's
 # distribution is named after Microsoft.WindowsAppRuntime.Bootstrap.dll, which
@@ -394,8 +401,8 @@ def avoid_keyword(name: str) -> str:
     return name
 
 
-def is_app_sdk_interop_package(name: str) -> bool:
-    return name in packages.APP_SDK_INTEROP_COMPONENTS
+def is_nuget_interop_package(name: str) -> bool:
+    return name in packages.INTEROP_NUGET_PACKAGES
 
 
 # Which family each package belongs to, so that a requirement on another one
@@ -631,7 +638,7 @@ def write_compiled_project_files(
         BOOTSTRAP_DLL if is_app_sdk_bootstrap_package(package_name) else None
     )
 
-    needs_app_sdk = is_app_sdk_interop_package(package_name)
+    needs_nuget = is_nuget_interop_package(package_name)
     own_headers = not is_runtime and any((package_path / "cppwinrt").glob("**/*.h"))
 
     # A package released with a family has no version.txt to read its version
@@ -727,10 +734,10 @@ def write_compiled_project_files(
             templates.SETUP_PY.format(
                 setup_py_imports=format_setup_py_imports(
                     ["os", "pathlib"]
-                    if is_runtime or needs_app_sdk or own_headers
+                    if is_runtime or needs_nuget or own_headers
                     else [],
                     ["hashlib", "io", "shutil", "urllib.request", "zipfile"]
-                    if needs_app_sdk
+                    if needs_nuget
                     else [],
                     ["json"] if redistributes else [],
                 ),
@@ -771,10 +778,10 @@ def write_compiled_project_files(
                     else templates.HEADERS
                 ),
                 extra_init=(
-                    templates.APP_SDK_INIT.format(
-                        packages=format_app_sdk_packages(package_name)
+                    templates.NUGET_INIT.format(
+                        packages=format_nuget_packages(package_name)
                     )
-                    if needs_app_sdk
+                    if needs_nuget
                     else ""
                 ),
                 root_package=root_package,
@@ -896,20 +903,22 @@ def format_setup_py_imports(*groups: list[str]) -> str:
     return "\n" + "".join(f"import {module}\n" for module in modules)
 
 
-def format_app_sdk_packages(package_name: str) -> str:
+def format_nuget_packages(package_name: str) -> str:
     """
-    The Windows App SDK components an interop package compiles against, as the
-    entries of its setup.py's APP_SDK_PACKAGES.
+    The NuGet packages an interop package compiles against, as the entries of
+    its setup.py's NUGET_PACKAGES.
     """
     entries: list[str] = []
 
-    for env in packages.APP_SDK_INTEROP_COMPONENTS[package_name]:
+    for env in packages.INTEROP_NUGET_PACKAGES[package_name]:
         package = packages.NUGET_ENVIRONMENT[env]
+        include_dirs = ", ".join(f'"{d}"' for d in NUGET_INCLUDE_DIRS[env])
         entries.append(
             f'    "{env}": (\n'
             f'        "{package}.{NUGET_PACKAGE_VERSIONS[package]}",\n'
             f'        "{nupkg_url(package)}",\n'
             f'        "{nupkg_sha256(package)}",\n'
+            f"        [{include_dirs}],\n"
             "    ),\n"
         )
 
