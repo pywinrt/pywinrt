@@ -8,6 +8,11 @@ provides the `winrt.windows.graphics.directx.direct3d11.interop` module.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- One abi3 wheel per architecture serves every CPython from 3.11 on.
+
 ## [4.1.0] - 2026-10-24
 
 ### Added

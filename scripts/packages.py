@@ -93,6 +93,10 @@ class Build(Enum):
     REDIST = "redist"
     # a cibuildwheel build per Python and architecture
     COMPILED = "compiled"
+    # a cibuildwheel build per architecture: one stable ABI wheel, which serves
+    # every CPython that is not free-threaded and is tested on each, and one
+    # wheel per free-threaded CPython, which has no stable ABI
+    STABLE_ABI = "stable-abi"
 
 
 class Package(NamedTuple):
@@ -180,7 +184,7 @@ def generated() -> Iterator[Package]:
 
         release = versions.interop_release(path.name)
 
-        yield Package(path, distribution, family, release, Build.COMPILED)
+        yield Package(path, distribution, family, release, Build.STABLE_ABI)
 
 
 def published() -> Iterator[Package]:

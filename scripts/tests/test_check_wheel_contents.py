@@ -85,3 +85,51 @@ class Sbom(unittest.TestCase):
             check_wheel_contents.check_wheel(self.wheel(None)),
             ["has a bill of materials that gives it no version"],
         )
+
+
+class StableAbi(unittest.TestCase):
+    def setUp(self) -> None:
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        self.directory = Path(directory.name)
+
+    def wheel(self, tag: str, module: bytes) -> Path:
+        """
+        A wheel tagged @p tag whose one extension module is @p module.
+        """
+        path = self.directory / f"winrt_example-1.0-{tag}-win_amd64.whl"
+        info = "winrt_example-1.0.dist-info"
+
+        with zipfile.ZipFile(path, "w") as wheel:
+            wheel.writestr(f"{info}/METADATA", "Name: winrt-Example\nVersion: 1.0\n")
+            wheel.writestr(f"{info}/licenses/LICENSE", "")
+            wheel.writestr("winrt/_winrt_example.pyd", module)
+
+        return path
+
+    def test_an_abi3_module_that_links_the_stable_abi(self) -> None:
+        self.assertEqual(
+            check_wheel_contents.check_wheel(
+                self.wheel("cp311-abi3", b"MZ ... python3.dll ...")
+            ),
+            [],
+        )
+
+    def test_an_abi3_module_that_links_a_version(self) -> None:
+        self.assertEqual(
+            check_wheel_contents.check_wheel(
+                self.wheel("cp311-abi3", b"MZ ... python311.dll ...")
+            ),
+            [
+                "is abi3 but its _winrt_example.pyd links python311.dll",
+                "is abi3 but its _winrt_example.pyd does not link python3.dll",
+            ],
+        )
+
+    def test_a_module_of_one_version_may_link_it(self) -> None:
+        self.assertEqual(
+            check_wheel_contents.check_wheel(
+                self.wheel("cp314t-cp314t", b"MZ ... python314t.dll ...")
+            ),
+            [],
+        )

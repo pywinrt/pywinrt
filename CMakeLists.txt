@@ -66,8 +66,10 @@ endif()
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE ON)
 
 # The interpreter compiles the projection tables from their text form; the
-# module component builds the runtime against the Python it belongs to.
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+# module component builds the runtime against the Python it belongs to, and
+# the stable ABI one builds the interop modules where their wheels use it.
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module
+    OPTIONAL_COMPONENTS Development.SABIModule)
 
 # The table compiler is a package of its own, because it is pure Python and a
 # projection package should not need a compiler to be built. The runtime's tests

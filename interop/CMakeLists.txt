@@ -7,9 +7,17 @@
 # hand-written and they name the WinRT types they hand over rather than sharing
 # generated code with the packages that project them. They reach the runtime
 # only through Python objects, so they are compiled without its headers.
+#
+# They are compiled against the stable ABI of Python 3.11 wherever their wheels
+# are, which is with MSVC for a Python that is not free-threaded (STABLE_ABI in
+# scripts/pyproject_templates.py), so that a call outside it fails here first.
+
+if (MSVC AND NOT Python3_SOABI MATCHES "^cp[0-9]+t-")
+    set(PYWINRT_INTEROP_SABI USE_SABI 3.11)
+endif()
 
 function(pywinrt_add_interop_module target package source root)
-    pywinrt_add_module(${target} "${package}/${source}")
+    pywinrt_add_module(${target} "${package}/${source}" ${PYWINRT_INTEROP_SABI})
     install(TARGETS ${target} DESTINATION "${root}")
     install(DIRECTORY "${package}/${root}/"
         DESTINATION "${root}")

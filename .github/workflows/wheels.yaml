@@ -44,15 +44,16 @@ env:
   BUILD_PACKAGES: ${{ inputs.packages }}
 
 jobs:
-  # Which halves of the wheel build have a package to build, and how the
-  # upload authenticates. A release unit is usually one half: winrt-runtime
-  # and an interop module compile, and the table compiler and a family of
-  # projection packages are data.
+  # Which parts of the wheel build have a package to build, and how the
+  # upload authenticates. A release unit is usually one part: winrt-runtime
+  # compiles per Python, an interop module compiles for the stable ABI, and
+  # the table compiler and a family of projection packages are data.
   plan:
     runs-on: windows-latest
     outputs:
       pure: ${{ steps.plan.outputs.pure }}
       compiled: ${{ steps.plan.outputs.compiled }}
+      stable_abi: ${{ steps.plan.outputs.stable_abi }}
       trusted: ${{ steps.plan.outputs.trusted }}
     steps:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
@@ -121,16 +122,11 @@ jobs:
         with:
           name: pure_${{ github.run_id }}
           path: wheelhouse/
-  # winrt-runtime and the interop modules, which are what is left of the
-  # build per Python and architecture now that nothing else compiles. It waits
-  # for the pure job because an interop wheel's import test installs the
-  # projection packages it depends on, and those are the other job's output.
-  # A unit with no pure package skips that job, which is not a failure.
+  # winrt-runtime, which is compiled against the whole C API and so is what is
+  # left of the build per Python and architecture.
   bdist:
-    needs: [plan, pure]
-    if: >-
-      ${{ !cancelled() && !failure()
-          && needs.plan.outputs.compiled == 'true' }}
+    needs: plan
+    if: needs.plan.outputs.compiled == 'true'
     runs-on: windows-latest
     strategy:
       fail-fast: false
@@ -154,25 +150,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-bdist.txt
-      - name: Download the wheels the pure job built
-        if: needs.pure.result == 'success'
-        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
-        with:
-          name: pure_${{ github.run_id }}
-          path: find-links
       - name: Build bdist wheels
-        env:
-          # what an interop wheel's import test resolves its dependencies
-          # from: the projection packages it names are in the artifact above
-          # and winrt-runtime is built into wheelhouse/ ahead of it, and
-          # neither is on PyPI at the version this release publishes. A
-          # release with no projection packages has no artifact and takes
-          # them from PyPI, where a release of hand-written packages alone
-          # leaves them.
-          PIP_FIND_LINKS: >-
-            ${{ needs.pure.result == 'success'
-                && format('{0}\find-links', github.workspace) || '' }}
-            ${{ github.workspace }}\wheelhouse
         run: >-
           python scripts/build-bdist.py --compiled
           --only ${{ matrix.py }}-${{ matrix.arch }}
@@ -185,10 +163,75 @@ jobs:
         with:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
+  # The interop modules, which are compiled against the stable ABI: per
+  # architecture, cibuildwheel builds one cp311-abi3 wheel and tests it on
+  # every later CPython, and builds a wheel per free-threaded CPython. It waits
+  # for the other two builds because an interop wheel's import test installs
+  # the projection packages it depends on and winrt-runtime, and neither may be
+  # on PyPI at the version this run builds. A unit that has none of them takes
+  # them from PyPI and skips those jobs, which is not a failure. The python
+  # input builds only a free-threaded CPython's wheel, since the abi3 wheel
+  # that is already out serves a new CPython that is not.
+  stable-abi:
+    needs: [plan, pure, bdist]
+    if: >-
+      ${{ !cancelled() && !failure()
+          && needs.plan.outputs.stable_abi == 'true'
+          && (!inputs.python || endsWith(inputs.python, 't')) }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        arch:
+          - { wheel: win_amd64, cibuildwheel: AMD64 }
+          - { wheel: win32, cibuildwheel: x86 }
+          - { wheel: win_arm64, cibuildwheel: ARM64 }
+    steps:
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-bdist.txt
+          New-Item -ItemType Directory -Force find-links
+      - name: Download the wheels the pure job built
+        if: needs.pure.result == 'success'
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: pure_${{ github.run_id }}
+          path: find-links
+      - name: Download the wheels the bdist jobs built
+        if: needs.bdist.result == 'success'
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: bdist_*_${{ github.run_id }}
+          path: find-links
+          merge-multiple: true
+      - name: Build stable ABI wheels
+        env:
+          # what the import test resolves an interop wheel's dependencies
+          # from, as well as PyPI
+          PIP_FIND_LINKS: ${{ github.workspace }}\find-links
+        run: >-
+          python scripts/build-bdist.py --stable-abi
+          ${{ inputs.python
+              && format('--only {0}-{1}', inputs.python, matrix.arch.wheel)
+              || format('--platform windows --archs {0}', matrix.arch.cibuildwheel) }}
+          --tag "$env:BUILD_TAG"
+          --family "$env:BUILD_FAMILY" --package "$env:BUILD_PACKAGES"
+      - name: Check what the wheels carry
+        run: python scripts/check-wheel-contents.py
+      - name: Upload wheels
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: stable-abi_${{ matrix.arch.wheel }}_${{ github.run_id }}
+          path: wheelhouse/
   publish:
-    needs: [plan, sdist, pure, bdist]
+    needs: [plan, sdist, pure, bdist, stable-abi]
     # a tag publishes to PyPI; a run started by hand publishes where it was
-    # told to, which is nowhere unless it says otherwise. A half of the build
+    # told to, which is nowhere unless it says otherwise. A part of the build
     # that the unit has no package in is skipped, which is not a failure.
     if: >-
       ${{ !cancelled() && !failure()

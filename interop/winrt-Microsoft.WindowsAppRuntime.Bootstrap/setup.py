@@ -8,6 +8,7 @@ import json
 import os
 import pathlib
 import shutil
+import sysconfig
 import urllib.request
 import zipfile
 
@@ -79,6 +80,14 @@ for name, (_, _, _, include_dirs) in NUGET_PACKAGES.items():
     NUGET_PATHS[name] = unpack_nuget_package(name)
     print(f"Using {name} from {NUGET_PATHS[name]}")
     INCLUDE_DIRS.extend(os.fspath(NUGET_PATHS[name] / d) for d in include_dirs)
+
+# compiled against the stable ABI of Python 3.11, except where the interpreter
+# is free-threaded, which has none, or MSYS2's, whose modules link against the
+# version's own DLL
+STABLE_ABI = not (
+    sysconfig.get_config_var("Py_GIL_DISABLED")
+    or sysconfig.get_platform().startswith("mingw")
+)
 
 
 # The Windows App Runtime bootstrapper that the extension module links
@@ -204,6 +213,9 @@ setup(
             sources=["py.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap.cpp"],
             include_dirs=INCLUDE_DIRS,
             libraries=["windowsapp", "Microsoft.WindowsAppRuntime.Bootstrap"],
+            define_macros=[("Py_LIMITED_API", "0x030B0000")] if STABLE_ABI else [],
+            py_limited_api=STABLE_ABI,
         )
     ],
+    options={"bdist_wheel": {"py_limited_api": "cp311"}} if STABLE_ABI else {},
 )

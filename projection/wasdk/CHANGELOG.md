@@ -21,6 +21,11 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- The interop packages have one abi3 wheel for every CPython from 3.11 on.
+
 ## [4!2.6.4] - 2026-10-31
 
 ### Added

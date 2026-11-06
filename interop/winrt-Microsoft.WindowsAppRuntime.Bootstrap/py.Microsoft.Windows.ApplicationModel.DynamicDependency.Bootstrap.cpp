@@ -266,12 +266,13 @@ namespace
 
     static PyModuleDef_Slot module_slots[]{
         {Py_mod_exec, reinterpret_cast<void*>(module_exec)},
-#ifdef Py_mod_multiple_interpreters
+    // looked for by their values, as interop.h's module_slots are
+#ifdef Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED
         // A failure is raised through winrt-runtime, which refuses any
         // interpreter but the main one.
         {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
 #endif
-#ifdef Py_mod_gil
+#ifdef Py_MOD_GIL_NOT_USED
         {Py_mod_gil, Py_MOD_GIL_NOT_USED},
 #endif
         {}};

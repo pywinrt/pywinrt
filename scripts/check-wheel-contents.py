@@ -21,11 +21,18 @@ is uploaded.
 No wheel carries a C or C++ header either: nothing compiles against an
 installed PyWinRT package, and each package that compiles carries the headers
 it includes in its source distribution rather than as package data.
+
+A wheel tagged abi3 is installed on every later CPython, so each extension
+module in it has to link python3.dll, the DLL of the stable ABI, and no
+version's own python3X.dll, which a module compiled against the whole C API
+links and which a later CPython does not have. The tag comes from one setting
+and the API from another, so this is what keeps the two together.
 """
 
 import argparse
 import email
 import json
+import re
 import sys
 import zipfile
 from pathlib import Path
@@ -109,6 +116,30 @@ def get_headers(wheel: zipfile.ZipFile) -> set[str]:
     return {name for name in wheel.namelist() if name.lower().endswith(".h")}
 
 
+def get_python_dlls(wheel: zipfile.ZipFile) -> dict[str, set[str]]:
+    """
+    The Python DLLs that each extension module in a wheel links, by the
+    module's name, such as {"python3.dll"} for one compiled against the stable
+    ABI and {"python314.dll"} for one that is not.
+
+    The name of a DLL a module imports is in the module as text, so this
+    reads it from there rather than parsing the import table. MinGW's are
+    named like libpython3.14.dll.
+    """
+    return {
+        name.rpartition("/")[2]: {
+            dll.decode().lower()
+            for dll in re.findall(
+                rb"(?:lib)?python3(?:\.?[0-9]+)?t?(?:_d)?\.dll",
+                wheel.read(name),
+                re.IGNORECASE,
+            )
+        }
+        for name in wheel.namelist()
+        if name.lower().endswith(".pyd")
+    }
+
+
 def get_license_files(wheel: zipfile.ZipFile) -> set[str]:
     """
     The license texts a wheel carries, which PEP 639 puts in the .dist-info.
@@ -133,6 +164,18 @@ def check_wheel(path: Path) -> list[str]:
         version = get_version(wheel)
         headers = get_headers(wheel)
         license_files = get_license_files(wheel)
+        python_dlls = get_python_dlls(wheel)
+
+    # name-version(-build)-python-abi-platform.whl
+    abi = path.stem.split("-")[-2]
+
+    if abi == "abi3":
+        for module, dlls in sorted(python_dlls.items()):
+            for dll in sorted(dlls - {"python3.dll"}):
+                problems.append(f"is abi3 but its {module} links {dll}")
+
+            if "python3.dll" not in dlls:
+                problems.append(f"is abi3 but its {module} does not link python3.dll")
 
     for name in sorted(binaries - components):
         problems.append(

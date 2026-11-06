@@ -195,21 +195,29 @@ every change.
 ## Building Python wheels
 
 A projection package is data, so its wheel is `py3-none-any` and is built once.
-`winrt-runtime` and the interop modules are compiled, so cibuildwheel builds
-theirs for each version of Python and each target architecture. With no
-arguments, both halves are built:
+`winrt-runtime` is compiled against the whole C API, so cibuildwheel builds its
+wheels for each version of Python and each target architecture. The interop
+modules are compiled against the stable ABI of Python 3.11, so cibuildwheel
+builds one `cp311-abi3` wheel per architecture, tests it on every later
+version, and builds a wheel of its own only for each free-threaded Python. With
+no arguments, all three parts are built:
 
     py .\scripts\build-bdist.py
 
-Either half can be built on its own, and any other argument is passed on to
+Each part can be built on its own, and any other argument is passed on to
 cibuildwheel:
 
     py .\scripts\build-bdist.py --pure
     py .\scripts\build-bdist.py --compiled --only cp312-win_amd64
+    py .\scripts\build-bdist.py --stable-abi --platform windows --archs AMD64
 
-The pure half needs `winrt-table-compiler` installed rather than merely
+The pure part needs `winrt-table-compiler` installed rather than merely
 importable, because hatchling finds the hook that compiles the tables through
 the entry point in its metadata.
+
+An interop module may call only what the limited API of Python 3.11 has. The
+CMake build compiles the interop modules that way too, with MSVC for a Python
+that is not free-threaded, so a call outside it fails there first.
 
 A release also needs the source distributions:
 

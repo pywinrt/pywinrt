@@ -754,6 +754,7 @@ def write_compiled_project_files(
                     if needs_nuget
                     else [],
                     ["json"] if redistributes else [],
+                    [] if is_runtime else ["sysconfig"],
                 ),
                 setuptools_command_imports=(
                     templates.BOOTSTRAP_SETUPTOOLS_COMMAND_IMPORTS
@@ -798,6 +799,11 @@ def write_compiled_project_files(
                     if needs_nuget
                     else ""
                 ),
+                stable_abi="" if is_runtime else templates.STABLE_ABI,
+                stable_abi_extension=(
+                    "" if is_runtime else templates.STABLE_ABI_EXTENSION
+                ),
+                stable_abi_setup="" if is_runtime else templates.STABLE_ABI_SETUP,
                 root_package=root_package,
                 ext_module=ext_module_name,
                 sources=format_sources(sources),

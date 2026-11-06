@@ -188,4 +188,8 @@ done. Such a run creates no GitHub release, whatever it publishes:
   unit publishes on PyPI.
 - `python` builds for one interpreter only, which back-fills wheels for a new
   CPython without a version change: the packages that are already published
-  keep their versions and only the missing builds are uploaded.
+  keep their versions and only the missing builds are uploaded. The interop
+  modules' abi3 wheels already serve a new CPython that is not free-threaded,
+  so for one of those no interop module is built or tested. `test.yaml` tests
+  them on it once the CPython is in its matrix, since its build compiles them
+  for the stable ABI too.

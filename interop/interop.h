@@ -169,12 +169,19 @@ namespace interop
     /// The slots of an interop module that has nothing to set up when it is
     /// executed. It keeps no state, but it exchanges objects and errors with
     /// winrt-runtime, which refuses any interpreter but the main one, so it
-    /// says the same.
+    /// says the same where it can. The stable ABI of Python 3.11, which its
+    /// wheels are built for, has neither slot: there CPython refuses the
+    /// module in an interpreter with a GIL of its own anyway, winrt-runtime
+    /// refuses the rest, and a free-threaded build, which is what Py_mod_gil
+    /// is for, is never a stable ABI one.
+    ///
+    /// Each slot is looked for by its value: from 3.15 the headers name every
+    /// slot whatever the API, but give the values only to an API that has it.
     inline PyModuleDef_Slot module_slots[]{
-#ifdef Py_mod_multiple_interpreters
+#ifdef Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED
         {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
 #endif
-#ifdef Py_mod_gil
+#ifdef Py_MOD_GIL_NOT_USED
         {Py_mod_gil, Py_MOD_GIL_NOT_USED},
 #endif
         {}};

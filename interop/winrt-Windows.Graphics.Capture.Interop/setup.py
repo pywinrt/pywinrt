@@ -2,10 +2,20 @@
 # setuptools does not annotate the build_ext methods this file overrides.
 # pyright: reportUnknownMemberType=false
 
+import sysconfig
+
 from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 
 INCLUDE_DIRS: list[str] = []
+
+# compiled against the stable ABI of Python 3.11, except where the interpreter
+# is free-threaded, which has none, or MSYS2's, whose modules link against the
+# version's own DLL
+STABLE_ABI = not (
+    sysconfig.get_config_var("Py_GIL_DISABLED")
+    or sysconfig.get_platform().startswith("mingw")
+)
 
 
 class build_ext_ex(build_ext):
@@ -37,6 +47,9 @@ setup(
             sources=["py.Windows.Graphics.Capture.Interop.cpp"],
             include_dirs=INCLUDE_DIRS,
             libraries=["windowsapp"],
+            define_macros=[("Py_LIMITED_API", "0x030B0000")] if STABLE_ABI else [],
+            py_limited_api=STABLE_ABI,
         )
     ],
+    options={"bdist_wheel": {"py_limited_api": "cp311"}} if STABLE_ABI else {},
 )

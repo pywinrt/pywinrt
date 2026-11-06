@@ -215,7 +215,7 @@ SETUP_PY = """# WARNING: Please don't edit this file. It was automatically gener
 from setuptools import Extension, setup
 {setuptools_command_imports}
 {headers}
-{extra_init}{payload}
+{extra_init}{stable_abi}{payload}
 
 class build_ext_ex(build_ext):
     def build_extension(self, ext: Extension) -> None:
@@ -245,11 +245,35 @@ setup(
             "{root_package}.{ext_module}",
             sources={sources},
             include_dirs=INCLUDE_DIRS,
-            libraries=["windowsapp"{extra_libraries}],
+            libraries=["windowsapp"{extra_libraries}],{stable_abi_extension}
         )
-    ],
+    ],{stable_abi_setup}
 )
 """
+
+# An interop module uses only the limited API of the oldest Python that every
+# package requires, so one cp311-abi3 wheel serves that CPython and each one
+# after it, a CPython that is released later included. CPython's headers refuse
+# the limited API in a free-threaded build, which gets a wheel per version. So
+# does MSYS2's Python: MinGW links the module against libpython3.X.dll whatever
+# the API, so a wheel tagged abi3 there would be one that pip's cache hands to
+# the next Python, which cannot load it.
+STABLE_ABI = """
+# compiled against the stable ABI of Python 3.11, except where the interpreter
+# is free-threaded, which has none, or MSYS2's, whose modules link against the
+# version's own DLL
+STABLE_ABI = not (
+    sysconfig.get_config_var("Py_GIL_DISABLED")
+    or sysconfig.get_platform().startswith("mingw")
+)
+"""
+
+STABLE_ABI_EXTENSION = """
+            define_macros=[("Py_LIMITED_API", "0x030B0000")] if STABLE_ABI else [],
+            py_limited_api=STABLE_ABI,"""
+
+STABLE_ABI_SETUP = """
+    options={"bdist_wheel": {"py_limited_api": "cp311"}} if STABLE_ABI else {},"""
 
 # winrt-runtime's headers are beside its sources.
 RUNTIME_HEADERS = """INCLUDE_PATH = pathlib.Path(__file__).parent / "src" / "include"

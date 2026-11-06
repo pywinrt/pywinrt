@@ -1,7 +1,17 @@
 set(PYWINRT_CHECK_DLL_IMPORTS "${CMAKE_CURRENT_LIST_DIR}/check-dll-imports.cmake")
 
+# pywinrt_add_module(<target> <sources> [USE_SABI <version>])
+#
+# USE_SABI compiles the module against the stable ABI of that Python version,
+# as Python3_add_library() does.
 function(pywinrt_add_module target sources)
-    Python3_add_library(${target} MODULE "${sources}")
+    cmake_parse_arguments(PARSE_ARGV 2 arg "" "USE_SABI" "")
+
+    if (arg_USE_SABI)
+        Python3_add_library(${target} MODULE USE_SABI ${arg_USE_SABI} "${sources}")
+    else()
+        Python3_add_library(${target} MODULE "${sources}")
+    endif()
 
     if (MSVC)
         target_link_options(${target} PRIVATE $<$<CONFIG:RelWithDebInfo>:/PROFILE /INCREMENTAL:NO>)
