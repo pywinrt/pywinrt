@@ -22,7 +22,7 @@ too, since nothing in them is compiled either; what is in them is built for
 one architecture, so each is three py3-none-win_* wheels rather than one
 py3-none-any wheel. Nothing in the half needs a compiler.
 
-winrt-runtime and the eight hand-written interop modules do compile, so they
+winrt-runtime and the hand-written interop modules do compile, so they
 are what is left of the cibuildwheel build per Python and architecture.
 Every argument other than the ones above is passed to cibuildwheel.
 

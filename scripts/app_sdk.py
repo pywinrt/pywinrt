@@ -3,7 +3,7 @@ Where the Windows App SDK keeps the pieces that PyWinRT reads.
 
 The App SDK is a metapackage over components that are published separately, so
 a generator run reads one directory per component rather than one per release,
-and the two hand-written interop modules compile against the components that
+and its hand-written interop modules compile against the components that
 ship the headers they include. Which components belong to a release is read
 from the release (see resolve()), scripts/move-upstream-pins.py writes them
 into .config/_tools.json, and scripts/fetch-tools.ps1 installs them.

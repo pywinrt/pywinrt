@@ -151,7 +151,7 @@ The upload authenticates one of two ways, and `build-bdist.py --plan` answers
 in `TRUSTED_PUBLISHING` in `scripts/packages.py`, upload with PyPI trusted
 publishing: each of their projects names `wheels.yaml` as its publisher, so a
 project new to PyPI needs its pending publisher created there before the tag
-is pushed. Every other unit — `runtime`, `table`, `winrt` and the six interop
+is pushed. Every other unit — `runtime`, `table`, `winrt` and the interop
 modules that compile against the Windows SDK — uploads with the account's
 token, the `PYPI_API_TOKEN` secret. One upload authenticates one way, so a
 run whose units are on both sides is refused before anything is uploaded.
