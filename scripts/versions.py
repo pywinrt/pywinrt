@@ -92,6 +92,7 @@ RUNTIME_FAMILY = "runtime"
 FAMILY_RELEASED_INTEROP = {
     "winrt-Microsoft.UI.Interop": "wasdk",
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": "wasdk",
+    "winrt-Microsoft.Web.WebView2.Interop": "webview2",
 }
 
 # A family version that a fix to one of those packages, or to a generated

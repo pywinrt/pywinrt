@@ -123,8 +123,17 @@ class StaleFixes(unittest.TestCase):
 
     def test_a_family_loses_its_fixes(self) -> None:
         self.assertEqual(
+            move_upstream_pins.stale_fixes("winui2"),
+            [self.projection / "winui2" / "fixes.json"],
+        )
+
+    def test_webview2_loses_the_fixes_of_its_interop_module_too(self) -> None:
+        self.assertEqual(
             move_upstream_pins.stale_fixes("webview2"),
-            [self.projection / "webview2" / "fixes.json"],
+            [
+                self.projection / "webview2" / "fixes.json",
+                self.interop / "winrt-Microsoft.Web.WebView2.Interop" / "version.txt",
+            ],
         )
 
     def test_the_app_sdk_loses_the_fixes_of_its_interop_modules_too(self) -> None:

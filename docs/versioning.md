@@ -52,14 +52,15 @@ modules, and moving the Windows SDK pin does not renumber any of them.
 
 The exception is an interop module built against an upstream other than the
 Windows SDK, which is released with that upstream's packages and carries their
-version, since that release is the one you choose. Today that is the two of
-the Windows App SDK, `winrt-Microsoft.UI.Interop` and
-`winrt-Microsoft.WindowsAppRuntime.Bootstrap`, so the
-interop modules for `winrt-Microsoft.WindowsAppSDK.WinUI` `4!2.5.1` are
-`4!2.5.1` too. The bootstrap module would have to be anyway: its wheel carries
-the bootstrapper `.dll` of the Windows App SDK release it was built against
-and loads that release by default. A fix to one of them released between two
-upstream releases adds a fourth number, such as `4!2.5.1.1`.
+version, since that release is the one you choose. Today that is
+`winrt-Microsoft.UI.Interop` and `winrt-Microsoft.WindowsAppRuntime.Bootstrap`
+with the Windows App SDK, so the interop modules for
+`winrt-Microsoft.WindowsAppSDK.WinUI` `4!2.5.1` are `4!2.5.1` too, and
+`winrt-Microsoft.Web.WebView2.Interop` with WebView2. The bootstrap module
+would have to be anyway: its wheel carries the bootstrapper `.dll` of the
+Windows App SDK release it was built against and loads that release by default.
+A fix to one of them released between two upstream releases adds a number on
+the end, such as `4!2.5.1.1`.
 
 The `4!` on the first group is a [PEP 440](https://peps.python.org/pep-0440/)
 *epoch*, and the leading `4` on the second is the major. They are the same number.

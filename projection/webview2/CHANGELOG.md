@@ -3,12 +3,18 @@
 # Changelog
 
 What changed in `winrt-Microsoft.Web.WebView2`, which projects the
-WebView2 SDK, and in `winrt-Microsoft.Web.WebView2.Dll`, which
-redistributes the `.dll` behind it.
+WebView2 SDK, in `winrt-Microsoft.Web.WebView2.Dll`, which redistributes
+the `.dll` behind it, and in `winrt-Microsoft.Web.WebView2.Interop`, which
+gives visual hosting the OLE drop target it needs.
 
 What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
+
+## [Unreleased]
+
+### Added
+- Added `winrt-Microsoft.Web.WebView2.Interop`, for file drops on visual hosting.
 
 ## [4!1.0.4314.35] - 2026-10-24
 

@@ -35,6 +35,7 @@ nav = [
       "api/microsoft.md",
       "api/microsoft/ui/interop.md",
       "api/microsoft/web/webview2/dll.md",
+      "api/microsoft/web/webview2/interop.md",
       "api/microsoft/windows/applicationmodel/dynamicdependency/bootstrap.md",
     ] },
   ] },

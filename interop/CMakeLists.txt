@@ -75,3 +75,17 @@ target_link_libraries(_winrt_microsoft_windows_applicationmodel_dynamicdependenc
 # SDK binary that ships with the package rather than being found through it.
 install(FILES "${WASDK_FOUNDATION_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
     DESTINATION "winrt")
+
+# The WebView2 module takes WebView2Interop.h, and WebView2.h that it includes,
+# from the WebView2 NuGet package, since WebView2 is redistributed with the app
+# rather than part of Windows. It is released with the webview2 family.
+set(WEBVIEW2_PATH "${PYWINRT_TOOLS_PATH}/Microsoft.Web.WebView2.${WEBVIEW2_VERSION}")
+
+pywinrt_add_interop_module(_winrt_microsoft_web_webview2_interop
+    "winrt-Microsoft.Web.WebView2.Interop" "py.Microsoft.Web.WebView2.Interop.cpp" "winrt")
+# as system headers, since they are made by MIDL for MSVC and use its pragmas
+target_include_directories(_winrt_microsoft_web_webview2_interop SYSTEM PRIVATE
+    "${WEBVIEW2_PATH}/build/native/include"
+    "${WEBVIEW2_PATH}/build/native/include-winrt")
+target_link_libraries(_winrt_microsoft_web_webview2_interop PRIVATE
+    "ole32.lib" "user32.lib")

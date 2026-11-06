@@ -27,11 +27,12 @@ INTEROP_PATH = (REPO_PATH / "interop").resolve()
 REDIST_PATH = (REPO_PATH / "redist").resolve()
 
 # The unpacked NuGet packages that a build reads something out of, named by
-# the environment variable the build looks for. The Windows App SDK is
-# redistributed with an app rather than part of Windows, so the two interop
-# modules that call it take its headers and its import libraries from these;
-# it is a metapackage over components published separately, so each module
-# names the one it needs. WebView2 is where the component .dll comes from.
+# the environment variable the build looks for. The Windows App SDK and
+# WebView2 are redistributed with an app rather than part of Windows, so the
+# interop modules that call them take their headers, and the App SDK's import
+# libraries, from these. The App SDK is a metapackage over components published
+# separately, so each module names the one it needs. WebView2 is also where its
+# component .dll comes from.
 # A build that finds no variable downloads the one package it needs itself,
 # checked against a hash, as a build from the source distribution does, so
 # pointing at an unpacked copy only keeps a build in this tree off the network.
@@ -60,6 +61,8 @@ INTEROP_NUGET_PACKAGES = {
     # MddBootstrap.h and its import library; the release it expects is written
     # into the package by scripts/generate-pyproject.py
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": ["WASDK_FOUNDATION_PATH"],
+    # WebView2Interop.h, which includes WebView2.h
+    "winrt-Microsoft.Web.WebView2.Interop": ["WEBVIEW2_PATH"],
 }
 
 # A package that redistributes a component .dll is released with the family

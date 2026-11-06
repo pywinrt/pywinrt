@@ -241,6 +241,10 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
     ],
     # only calls the bootstrapper, which has no projected types
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": [],
+    "winrt-Microsoft.Web.WebView2.Interop": [
+        # takes a CoreWebView2CompositionController
+        "winrt-Microsoft.Web.WebView2",
+    ],
 }
 
 # What each interop package does, which is the first thing its README says,
@@ -277,6 +281,10 @@ INTEROP_SUMMARIES = {
         "Finds the Windows App Runtime for an unpackaged app and loads it, as"
         " `MddBootstrap.h` does in C++. A packaged app does not need it."
     ),
+    "winrt-Microsoft.Web.WebView2.Interop": (
+        "Lets a visually hosted WebView2 take the files dropped on its window,"
+        " as an OLE drop target."
+    ),
 }
 
 # Where in each NuGet package of packages.NUGET_ENVIRONMENT the headers an
@@ -284,6 +292,8 @@ INTEROP_SUMMARIES = {
 NUGET_INCLUDE_DIRS = {
     "WASDK_FOUNDATION_PATH": ["include"],
     "WASDK_INTERACTIVE_EXPERIENCES_PATH": ["include"],
+    # WebView2Interop.h is in include-winrt and includes WebView2.h
+    "WEBVIEW2_PATH": ["build/native/include", "build/native/include-winrt"],
 }
 
 # The namespace an interop package's module and source file are named after,
@@ -424,6 +434,10 @@ def is_dispatcher_queue_package(name: str) -> bool:
     return name == "winrt-Windows.System.Interop"
 
 
+def is_webview2_interop_package(name: str) -> bool:
+    return name == "winrt-Microsoft.Web.WebView2.Interop"
+
+
 def is_direct3d11_package(name: str) -> bool:
     return name == "winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
 
@@ -555,13 +569,13 @@ def write_interop_readme(
     """
     Writes the README that PyPI shows for one interop package.
 
-    An App SDK interop package says which release it is built against, since
-    it is released with that family; the Windows SDK ones compile against
-    whatever Windows SDK the build has, so they name none.
+    An interop package that is released with a family says which release of
+    it it is built against. The Windows SDK ones compile against whatever
+    Windows SDK the build has, so they name none.
     """
     family = package_families[package_name]
 
-    if family != "wasdk":
+    if family == "winrt":
         built_against = ""
     elif is_app_sdk_bootstrap_package(package_name):
         built_against = (
@@ -802,7 +816,12 @@ def write_compiled_project_files(
                     if is_dispatcher_queue_package(package_name)
                     else ""
                 )
-                + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
+                + (', "D3D11"' if is_direct3d11_package(package_name) else "")
+                + (
+                    ', "ole32", "user32"'
+                    if is_webview2_interop_package(package_name)
+                    else ""
+                ),
             )
         )
 
