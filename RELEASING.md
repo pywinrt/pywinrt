@@ -110,7 +110,8 @@ release by default, so moving the pin changes it. `FAMILY_RELEASED_INTEROP` in
 refuses one that is not listed. They have no `version.txt`. To release a fix to
 one between two pins, add one holding the family's version with a number on the
 end, such as `4!2.5.1.1`: that makes it a unit of its own, with a tag of its
-own. When the pin next moves, `generate-pyproject.py` refuses the file until it
+own, and its section in the family's changelog is headed with that version.
+When the pin next moves, `generate-pyproject.py` refuses the file until it
 is deleted, and the package goes back to being released with the family. A fix
 cannot follow a preview of the family, since the added number would sort above
 the final release.
@@ -148,9 +149,10 @@ installs the packages it depends on; `release-tags.py` prints them in that
 order.
 
 The upload authenticates one of two ways, and `build-bdist.py --plan` answers
-`trusted=true|false` for a tag. `winui2`, `webview2` and `wasdk`, the units
+`trusted=true|false` for a tag. `winui2`, `webview2` and `wasdk`, the families
 in `TRUSTED_PUBLISHING` in `scripts/packages.py`, upload with PyPI trusted
-publishing: each of their projects names `wheels.yaml` as its publisher, so a
+publishing, a fix to one of their interop modules released on its own
+included: each of their projects names `wheels.yaml` as its publisher, so a
 project new to PyPI needs its pending publisher created there before the tag
 is pushed. Every other unit — `runtime`, `table`, `winrt` and the interop
 modules that compile against the Windows SDK — uploads with the account's

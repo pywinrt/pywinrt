@@ -58,15 +58,15 @@ PLAT_NAMES = ["win32", "win-amd64", "win-arm64"]
 def plan(selected: list[packages.Package]) -> dict[str, str]:
     """
     What --plan answers for a build of @p selected: whether each part has a
-    package to build, as pure, compiled and stable_abi, and whether its units
-    upload with trusted publishing, as trusted, which is mixed when they
-    disagree.
+    package to build, as pure, compiled and stable_abi, and whether its
+    packages upload with trusted publishing, as trusted, which is mixed when
+    they disagree.
     """
     builds = {package.build for package in selected}
     pure = bool(builds & {packages.Build.ANY, packages.Build.REDIST})
     compiled = packages.Build.COMPILED in builds
     stable_abi = packages.Build.STABLE_ABI in builds
-    trusted = {package.release in packages.TRUSTED_PUBLISHING for package in selected}
+    trusted = {package.family in packages.TRUSTED_PUBLISHING for package in selected}
 
     return {
         "pure": str(pure).lower(),

@@ -64,6 +64,13 @@ WEBVIEW2_DLL = package(
     "winrt-Microsoft.Web.WebView2.Dll", "webview2", "webview2", "redist"
 )
 UI_INTEROP = package("winrt-Microsoft.UI.Interop", "wasdk", "wasdk", "stable-abi")
+# the same module with a fix to it waiting, which makes it a unit of its own
+UI_INTEROP_FIX = package(
+    "winrt-Microsoft.UI.Interop",
+    "wasdk",
+    "winrt-Microsoft.UI.Interop",
+    "stable-abi",
+)
 
 
 class Plan(unittest.TestCase):
@@ -142,6 +149,9 @@ class Plan(unittest.TestCase):
 
     def test_an_interop_module_released_with_a_family_follows_it(self) -> None:
         self.assertEqual(build_bdist.plan([UI_INTEROP])["trusted"], "true")
+
+    def test_a_fix_released_on_its_own_still_follows_the_family(self) -> None:
+        self.assertEqual(build_bdist.plan([UI_INTEROP_FIX])["trusted"], "true")
 
     def test_the_windows_sdk_units_are_on_the_token(self) -> None:
         for unit in [RUNTIME, TABLE, FOUNDATION, SYSTEM_INTEROP]:

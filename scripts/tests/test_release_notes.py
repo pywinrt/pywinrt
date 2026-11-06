@@ -76,6 +76,7 @@ PUBLISHED = {
     "winrt": "4!10.0.1.2",
     "winui2": "4!2.8.7.1",
     "winrt-Windows.System.Interop": "4.0.0",
+    "winrt-Microsoft.UI.Interop": "4!2.5.1.1",
 }
 
 
@@ -176,6 +177,18 @@ class ReleaseOf(unittest.TestCase):
                 "winrt-Windows.System.Interop",
                 "4.0.0",
                 versions.INTEROP_PATH / "winrt-Windows.System.Interop",
+            ),
+        )
+
+    def test_a_fix_to_a_family_interop_module_is_in_the_familys_changelog(
+        self,
+    ) -> None:
+        self.assertEqual(
+            release_notes.release_of("wheels/winrt-Microsoft.UI.Interop/e4v2.5.1.1"),
+            (
+                "winrt-Microsoft.UI.Interop",
+                "4!2.5.1.1",
+                versions.REPO_PATH / "projection" / "wasdk",
             ),
         )
 

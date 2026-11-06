@@ -5,7 +5,9 @@
 
 Each tag releases one unit, and each unit has a changelog of its own in its
 directory, so the notes of a release are the section of that changelog that
-the tag's version heads, and nothing is written twice. A reference link in the
+the tag's version heads, and nothing is written twice. The exception is a fix
+to an interop module that is released with a family, whose section is in the
+family's changelog. A reference link in the
 section is given its definition from the end of the changelog, which a release
 does not have.
 
@@ -61,6 +63,12 @@ def release_of(tag: str) -> tuple[str, str, Path]:
 
     if unit in (versions.RUNTIME_PATH.name, versions.TABLE_PATH.name):
         path = versions.REPO_PATH / unit
+    elif unit in versions.FAMILY_RELEASED_INTEROP:
+        # a fix to an interop module that is released with a family, which
+        # shares the family's changelog
+        path = (
+            versions.REPO_PATH / "projection" / versions.FAMILY_RELEASED_INTEROP[unit]
+        )
     elif (versions.INTEROP_PATH / unit).is_dir():
         path = versions.INTEROP_PATH / unit
     else:

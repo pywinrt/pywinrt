@@ -73,10 +73,12 @@ REDIST_FAMILIES = {
 }
 
 
-# The release units that are uploaded to PyPI with trusted publishing rather
-# than the account's token, each of whose projects names
-# .github/workflows/wheels.yaml as its publisher. One upload authenticates one
-# way, so a unit is on one side or the other as a whole.
+# The families whose packages are uploaded to PyPI with trusted publishing
+# rather than the account's token, each of whose projects names
+# .github/workflows/wheels.yaml as its publisher. That holds for every unit that
+# releases one of their packages, a fix to an interop module released with one
+# of them on its own included. One upload authenticates one way, so a unit is
+# on one side or the other as a whole.
 TRUSTED_PUBLISHING = frozenset({"winui2", "webview2", "wasdk"})
 
 

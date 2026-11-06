@@ -101,6 +101,13 @@ class Changelogs(unittest.TestCase):
             with self.subTest(unit=unit):
                 if unit in (versions.RUNTIME_PATH.name, versions.TABLE_PATH.name):
                     path = versions.REPO_PATH / unit
+                elif unit in versions.FAMILY_RELEASED_INTEROP:
+                    # a fix to an interop module released with a family
+                    path = (
+                        versions.REPO_PATH
+                        / "projection"
+                        / versions.FAMILY_RELEASED_INTEROP[unit]
+                    )
                 elif (versions.REPO_PATH / "projection" / unit).is_dir():
                     path = versions.REPO_PATH / "projection" / unit
                 else:
