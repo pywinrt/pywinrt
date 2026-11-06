@@ -22,6 +22,15 @@
 
 #include <cstddef>
 
+// The version of the Python C API a module is compiled against: the stable
+// ABI's where it is built for that, and otherwise that of the Python it is
+// built for. Nothing newer is there to call.
+#ifdef Py_LIMITED_API
+#define INTEROP_PY_API_VERSION Py_LIMITED_API
+#else
+#define INTEROP_PY_API_VERSION PY_VERSION_HEX
+#endif
+
 namespace interop
 {
     /// The name every interface pointer capsule carries, in the runtime and in

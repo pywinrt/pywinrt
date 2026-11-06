@@ -104,7 +104,7 @@ namespace
     /// @returns false with a Python error set.
     bool as_int32(PyObject* obj, std::int32_t* value) noexcept
     {
-#if PY_VERSION_HEX >= 0x030E0000
+#if INTEROP_PY_API_VERSION >= 0x030E0000
         return PyLong_AsInt32(obj, value) == 0;
 #else
         // a long is 32 bits on Windows, so this raises OverflowError for what
@@ -126,7 +126,7 @@ namespace
     /// @returns false with a Python error set.
     bool as_uint32(PyObject* obj, std::uint32_t* value) noexcept
     {
-#if PY_VERSION_HEX >= 0x030E0000
+#if INTEROP_PY_API_VERSION >= 0x030E0000
         return PyLong_AsUInt32(obj, value) == 0;
 #else
         // This goes when the oldest Python supported is 3.14.

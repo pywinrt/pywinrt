@@ -88,13 +88,19 @@ namespace
         // Shutdown is a module attribute, which anything can rebind, so what
         // calling it made is only a ShutdownObject if it is of the type this
         // module made, which is the one type with this deallocator.
-        if (Py_TYPE(shutdown)->tp_dealloc
-            != reinterpret_cast<destructor>(shutdown_dealloc))
+        if (PyType_GetSlot(Py_TYPE(shutdown), Py_tp_dealloc)
+            != reinterpret_cast<void*>(shutdown_dealloc))
         {
-            PyErr_Format(
-                PyExc_TypeError,
-                "Shutdown() made a %s, not a Shutdown object",
-                Py_TYPE(shutdown)->tp_name);
+            auto const name = PyType_GetName(Py_TYPE(shutdown));
+            if (name)
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "Shutdown() made a %U, not a Shutdown object",
+                    name);
+                Py_DECREF(name);
+            }
+
             Py_DECREF(shutdown);
             return nullptr;
         }
@@ -129,7 +135,9 @@ namespace
     static PyObject* shutdown_new(
         PyTypeObject* subtype, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
-        auto self = reinterpret_cast<ShutdownObject*>(subtype->tp_alloc(subtype, 0));
+        auto const alloc
+            = reinterpret_cast<allocfunc>(PyType_GetSlot(subtype, Py_tp_alloc));
+        auto self = reinterpret_cast<ShutdownObject*>(alloc(subtype, 0));
 
         if (!self)
         {
@@ -144,11 +152,11 @@ namespace
 
     static void shutdown_dealloc(ShutdownObject* self) noexcept
     {
-        PyTypeObject* tp = Py_TYPE(self);
+        PyTypeObject* tp = Py_TYPE(reinterpret_cast<PyObject*>(self));
 
         if (self->shutdown)
         {
-#if PY_VERSION_HEX < 0x030C0000
+#if INTEROP_PY_API_VERSION < 0x030C0000
             PyObject *error_type, *error_value, *error_traceback;
 
             PyErr_Fetch(&error_type, &error_value, &error_traceback);
@@ -165,7 +173,7 @@ namespace
                 PyErr_WriteUnraisable(reinterpret_cast<PyObject*>(self));
             }
 
-#if PY_VERSION_HEX < 0x030C0000
+#if INTEROP_PY_API_VERSION < 0x030C0000
             PyErr_Restore(error_type, error_value, error_traceback);
 #else
             if (error)
@@ -178,7 +186,7 @@ namespace
         }
 
         std::destroy_at(&self->shutdown);
-        tp->tp_free(self);
+        reinterpret_cast<freefunc>(PyType_GetSlot(tp, Py_tp_free))(self);
         Py_DECREF(tp);
     }
 
