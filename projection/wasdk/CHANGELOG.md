@@ -24,6 +24,7 @@ changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 ## [Unreleased]
 
 ### Changed
+- Updated the Windows App SDK to [2.6.5][Windows App SDK 2.6.5], from 2.6.4.
 - The interop packages have one abi3 wheel for every CPython from 3.11 on.
 
 ## [4!2.6.4] - 2026-10-31
@@ -104,3 +105,4 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
 [Windows App SDK 2.6.4]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.6.4
+[Windows App SDK 2.6.5]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.6.5

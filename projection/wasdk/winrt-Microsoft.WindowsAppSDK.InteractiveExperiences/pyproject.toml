@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences"
-version = "4!2.6.4"
+version = "4!2.6.5"
 description = "PyWinRT projection of the Microsoft.WindowsAppSDK.InteractiveExperiences NuGet package"
 readme = "README.md"
 license = "MIT"

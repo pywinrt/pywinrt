@@ -23,9 +23,9 @@ INCLUDE_DIRS = [
 # nuget.org serves it, what it has to hash to and where in it the headers are.
 NUGET_PACKAGES = {
     "WASDK_INTERACTIVE_EXPERIENCES_PATH": (
-        "Microsoft.WindowsAppSDK.InteractiveExperiences.2.6.4",
-        "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.interactiveexperiences/2.6.4/microsoft.windowsappsdk.interactiveexperiences.2.6.4.nupkg",
-        "9435ff933e11f0f899e9af288e46bc3248c034a7e9a5d2d8e0013eb3aad27933",
+        "Microsoft.WindowsAppSDK.InteractiveExperiences.2.6.5",
+        "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.interactiveexperiences/2.6.5/microsoft.windowsappsdk.interactiveexperiences.2.6.5.nupkg",
+        "3782df5d796dfe872175da0db2b64b616611532fd14b06d9e2102895286df136",
         ["include"],
     ),
 }
