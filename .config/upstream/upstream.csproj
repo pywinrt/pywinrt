@@ -16,6 +16,6 @@ any release of them fits.
     <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.7" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4314.35" />
     <PackageReference Include="Microsoft.Windows.SDK.CPP" Version="10.0.28000.2957" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.6.4" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.6.5" />
   </ItemGroup>
 </Project>
