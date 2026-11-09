@@ -21,7 +21,7 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!2.6.5] - 2026-11-09
 
 ### Changed
 - Updated the Windows App SDK to [2.6.5][Windows App SDK 2.6.5], from 2.6.4.
