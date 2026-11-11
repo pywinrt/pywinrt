@@ -66,3 +66,9 @@ the extra often installs eighty packages or more, most of which an application
 never uses. Installing the packages an application uses is the better choice.
 
 [ModuleNotFoundError]: https://docs.python.org/3/library/exceptions.html#ModuleNotFoundError
+
+## Type checking
+
+The type hints declare generic types and type aliases with the syntax that
+Python 3.12 introduced, as in `class IIterable[T]`. To check code for Python
+3.11 with mypy, use mypy 2.4 or later. pyright accepts the syntax as well.
