@@ -8,4 +8,6 @@
 namespace py
 {
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
+
+    bool raise_if_namespace_package(PyObject* module, char const* module_name) noexcept;
 } // namespace py

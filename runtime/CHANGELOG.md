@@ -8,6 +8,11 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Fixed
+- A namespace package's delegate raises `ModuleNotFoundError`, not `TypeError`.
+
 ## [4.1.0] - 2026-10-31
 
 ### Added

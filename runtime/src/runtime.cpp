@@ -115,6 +115,48 @@ namespace
     }
 } // namespace
 
+/**
+ * Raises @c ModuleNotFoundError for @p module_name when @p module, which a
+ * name was not found in, is a namespace package.
+ *
+ * Every package installs into the same directories, so a namespace whose
+ * package is missing is still a namespace package when a package of a
+ * namespace below it is installed. It has no types, and the package to install
+ * is the one named after it, so it is missing as a module would be.
+ *
+ * @returns @c true with a Python error set, which is that one or a failure to
+ * tell, and @c false when @p module is not a namespace package.
+ */
+bool py::raise_if_namespace_package(PyObject* module, char const* module_name) noexcept
+{
+    auto const is_namespace = is_namespace_package(module);
+    if (is_namespace < 0)
+    {
+        return true;
+    }
+
+    if (!is_namespace)
+    {
+        return false;
+    }
+
+    pyobj_handle name{PyUnicode_FromString(module_name)};
+    if (!name)
+    {
+        return true;
+    }
+
+    pyobj_handle message{PyUnicode_FromFormat("No module named '%s'", module_name)};
+    if (!message)
+    {
+        return true;
+    }
+
+    PyErr_SetImportErrorSubclass(
+        PyExc_ModuleNotFoundError, message.get(), name.get(), nullptr);
+    return true;
+}
+
 PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
 {
     auto state = py::cpp::_winrt::get_module_state();
@@ -187,34 +229,8 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
 
     if (!type)
     {
-        // Every package installs into the same directories, so a namespace
-        // whose package is missing is still a namespace package when a package
-        // of a namespace below it is installed. It has no types, and the
-        // package to install is the one named after it, so it is missing as a
-        // module would be.
-        auto const is_namespace = is_namespace_package(module.get());
-        if (is_namespace < 0)
+        if (raise_if_namespace_package(module.get(), module_name.c_str()))
         {
-            return nullptr;
-        }
-
-        if (is_namespace)
-        {
-            pyobj_handle name{PyUnicode_FromString(module_name.c_str())};
-            if (!name)
-            {
-                return nullptr;
-            }
-
-            pyobj_handle message{
-                PyUnicode_FromFormat("No module named '%s'", module_name.c_str())};
-            if (!message)
-            {
-                return nullptr;
-            }
-
-            PyErr_SetImportErrorSubclass(
-                PyExc_ModuleNotFoundError, message.get(), name.get(), nullptr);
             return nullptr;
         }
 

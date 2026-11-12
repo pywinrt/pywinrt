@@ -28,6 +28,7 @@
 #include "interp.h"
 #include "module_state.h"
 #include "objects.h"
+#include "runtime.h"
 #include "structs.h"
 #include "types.h"
 
@@ -608,8 +609,9 @@ namespace py::interp
             return nullptr;
         }
 
-        pyobj_handle module{
-            PyImport_ImportModule(std::string{qualified_name.substr(0, dot)}.c_str())};
+        std::string const module_name{qualified_name.substr(0, dot)};
+
+        pyobj_handle module{PyImport_ImportModule(module_name.c_str())};
         if (!module)
         {
             return nullptr;
@@ -620,14 +622,20 @@ namespace py::interp
             return entry;
         }
 
-        if (!PyErr_Occurred())
+        if (PyErr_Occurred())
         {
-            PyErr_Format(
-                PyExc_TypeError,
-                "'%s' is not something a projection table describes",
-                std::string{qualified_name}.c_str());
+            return nullptr;
         }
 
+        if (raise_if_namespace_package(module.get(), module_name.c_str()))
+        {
+            return nullptr;
+        }
+
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s' is not something a projection table describes",
+            std::string{qualified_name}.c_str());
         return nullptr;
     }
 
