@@ -10,6 +10,9 @@ repository](../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Changed
+- The error a member raises for a missing Windows SDK package names the package.
+
 ### Fixed
 - A namespace package's delegate raises `ModuleNotFoundError`, not `TypeError`.
 

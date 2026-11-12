@@ -49,16 +49,20 @@ are in the [API reference](api/index.md).
 
 A type that an installed package names, as the result of a method for example,
 may come from a package that is not installed. The call that needs it then
-raises [`ModuleNotFoundError`][ModuleNotFoundError] with the module's name, and
-the package to install is named after the namespace:
+raises [`ModuleNotFoundError`][ModuleNotFoundError]. The error names the type's
+module, or a package that module sits in if that is missing too, and for a
+package of the Windows SDK it has a note naming the package to install:
 
 ```text
 ModuleNotFoundError: No module named 'winrt.windows.storage'
+The winrt-Windows.Storage package provides it.
 ```
 
 ```console
 pip install winrt-Windows.Storage
 ```
+
+For a package of another family, see the table above.
 
 Each package also has an `[all]` extra, which installs every package whose types
 it names, such as `winrt-Windows.Media.Ocr[all]`. Those name others in turn, so

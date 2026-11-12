@@ -72,6 +72,46 @@ def load_projection(spec: ModuleSpec) -> None:
         ) from error
 
 
+def note_missing_package(
+    error: ModuleNotFoundError, module: str, namespace: str
+) -> None:
+    """
+    Adds a note to ``error`` naming the package that provides ``module``, the
+    module of the WinRT namespace ``namespace``, when ``error`` is about
+    ``module`` or a package it sits in, ``module`` is of the Windows SDK and
+    ``error`` has no note yet.
+
+    The runtime calls this when it cannot import the module of a type or
+    delegate that a table refers to, or finds it only a namespace package. The
+    error is about the first module of ``module``'s packages that is missing,
+    which is ``module`` itself only if the packages it sits in are installed.
+    The note names the module when the error does not.
+
+    An error that has a note already is left as it is. The runtime meets one
+    when ``module`` is installed but importing it fails: a type it builds then,
+    such as a base class, needs a package ``module`` sits in that is missing,
+    and the runtime has noted that package.
+
+    Every package of the Windows SDK provides one namespace and is named after
+    it, as ``winrt-Windows.Storage`` provides ``winrt.windows.storage``, and
+    nothing else may define a ``Windows`` namespace, so the name of the module
+    is all it takes. The package of another family may be named after a
+    namespace that its own sits under, so its module does not say which it is.
+    """
+    if not module.startswith("winrt.windows."):
+        return
+
+    if getattr(error, "__notes__", None):
+        return
+
+    name = error.name
+    if not name or (name != module and not module.startswith(f"{name}.")):
+        return
+
+    subject = "it" if name == module else module
+    error.add_note(f"The winrt-{namespace} package provides {subject}.")
+
+
 class WinrtIntEnum(IntEnum):
     """
     The base of every projected WinRT enum that is not a set of flags.

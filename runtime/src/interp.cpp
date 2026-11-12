@@ -398,6 +398,95 @@ namespace py::interp
     }
 
     /**
+     * Calls winrt.runtime._internals.note_missing_package(), which adds a note
+     * to @p error naming the package that provides @p module_name, the module
+     * of @p winrt_namespace, when it can tell the package, which it can for the
+     * Windows SDK alone.
+     *
+     * @returns @c false with a Python error set.
+     */
+    static bool add_package_note(
+        PyObject* error,
+        std::string_view module_name,
+        std::string_view winrt_namespace) noexcept
+    {
+        pyobj_handle internals{PyImport_ImportModule("winrt.runtime._internals")};
+        if (!internals)
+        {
+            return false;
+        }
+
+        pyobj_handle note{
+            PyObject_GetAttrString(internals.get(), "note_missing_package")};
+        if (!note)
+        {
+            return false;
+        }
+
+        pyobj_handle module{PyUnicode_FromStringAndSize(
+            module_name.data(), static_cast<Py_ssize_t>(module_name.size()))};
+        if (!module)
+        {
+            return false;
+        }
+
+        pyobj_handle ns{PyUnicode_FromStringAndSize(
+            winrt_namespace.data(), static_cast<Py_ssize_t>(winrt_namespace.size()))};
+        if (!ns)
+        {
+            return false;
+        }
+
+        pyobj_handle result{PyObject_CallFunctionObjArgs(
+            note.get(), error, module.get(), ns.get(), nullptr)};
+
+        return static_cast<bool>(result);
+    }
+
+    /**
+     * Adds a note naming the package to install, when add_package_note() can
+     * tell it, to the @c ModuleNotFoundError raised while resolving @p record,
+     * a reference to a type of another namespace. Any other exception is left
+     * as it is.
+     *
+     * The note only adds to what the error says, so an @c Exception while
+     * adding it leaves the error without one. Anything else, such as a
+     * @c KeyboardInterrupt, is the exception raised, with the original as its
+     * context, as it would be in Python.
+     */
+    static void note_missing_package(table::type_view const& record) noexcept
+    {
+        if (!PyErr_ExceptionMatches(PyExc_ModuleNotFoundError))
+        {
+            return;
+        }
+
+        pyobj_handle error{take_raised_exception()};
+
+        auto const py_name = record.py_name();
+        auto const module_name = py_name.substr(0, py_name.find_last_of('.'));
+
+        if (!add_package_note(error.get(), module_name, record.winrt_namespace()))
+        {
+            if (PyErr_ExceptionMatches(PyExc_Exception))
+            {
+                PyErr_Clear();
+                restore_raised_exception(error.detach());
+                return;
+            }
+
+            pyobj_handle failure{take_raised_exception()};
+
+            // steals the reference to the context
+            PyException_SetContext(failure.get(), error.detach());
+            restore_raised_exception(failure.detach());
+            return;
+        }
+
+        restore_raised_exception(error.detach());
+    }
+
+    /**
      * Reads the type entry that @p arg or @p field names, importing the package
      * that defines it if this is the first time it has been needed.
      *
@@ -432,10 +521,19 @@ namespace py::interp
             // answer. A reference to a delegate of another namespace carries
             // only the name, so it is the defining table that has the Invoke
             // to call.
-            return cache_entry(
-                cache,
-                record.is_external() ? find_defining_entry(record.py_name())
-                                     : ensure_entry(owner, type));
+            if (!record.is_external())
+            {
+                return cache_entry(cache, ensure_entry(owner, type));
+            }
+
+            auto const defining = find_defining_entry(record.py_name());
+            if (!defining)
+            {
+                note_missing_package(record);
+                return nullptr;
+            }
+
+            return cache_entry(cache, defining);
         }
 
         if (record.flags() & table::type_flags::concrete)
@@ -504,6 +602,7 @@ namespace py::interp
             py_type = get_python_type(py_name);
             if (!py_type)
             {
+                note_missing_package(record);
                 return nullptr;
             }
         }
