@@ -276,8 +276,8 @@ rootCommand.SetHandler(
             // and never assigns an id of its own: the default is the copy that
             // ships beside this tool, which is the one the matching
             // winrt-runtime was built from.
-            var file =
-                shapes ?? new FileInfo(Path.Combine(AppContext.BaseDirectory, "shapes.json"));
+            var file = shapes
+                ?? new FileInfo(Path.Combine(AppContext.BaseDirectory, "shapes.json"));
 
             if (!file.Exists)
             {

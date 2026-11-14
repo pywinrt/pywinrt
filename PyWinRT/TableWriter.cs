@@ -1019,8 +1019,8 @@ sealed class TableWriter
                 {
                     IsImplicit = i >= implicitFrom,
                     IsByReference = param.IsPassedByReference(),
-                    IsFillBuffer =
-                        projected?.IsFillBuffer(param.Name ?? "", nullabilityMap) ?? false,
+                    IsFillBuffer = projected?.IsFillBuffer(param.Name ?? "", nullabilityMap)
+                        ?? false,
                 }
             );
 
@@ -1728,10 +1728,8 @@ sealed class TableWriter
 
         var revision = CensusRevisionFor(sorted);
 
-        FileContent.WriteIfChanged(
-            nsDir,
-            "_table.pywinrt.txt",
-            sink => WriteTable(new TextSink(sink), sorted, revision)
+        FileContent.WriteIfChanged(nsDir, "_table.pywinrt.txt", sink =>
+            WriteTable(new TextSink(sink), sorted, revision)
         );
 
         return revision;

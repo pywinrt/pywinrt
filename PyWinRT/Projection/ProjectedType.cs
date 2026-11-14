@@ -1021,8 +1021,7 @@ class ProjectedType
                     // if there are multiple overloads with the same number
                     // of arguments, we need to use the default overload
                     // https://devblogs.microsoft.com/oldnewthing/20210528-00/?p=105259
-                    var winner =
-                        pool.FirstOrDefault(m => m.IsDefaultOverload)
+                    var winner = pool.FirstOrDefault(m => m.IsDefaultOverload)
                         // if there was no default, use the one that is
                         // closest to the type being projected
                         ?? pool.OrderBy(m => m.Inheritance.Count).First();
