@@ -15,8 +15,12 @@ on:
       - pyrightconfig.json
       - pyrightconfig.lint.json
       - samples/requirements-dev.txt
+      - .config/dotnet-tools.json
+      - .editorconfig
       - '**/*.py'
       - '**/*.pyi'
+      - '**/*.cs'
+      - '**/*.csproj'
   pull_request:
     paths:
       - .github/workflows/lint.yaml
@@ -25,8 +29,12 @@ on:
       - pyrightconfig.json
       - pyrightconfig.lint.json
       - samples/requirements-dev.txt
+      - .config/dotnet-tools.json
+      - .editorconfig
       - '**/*.py'
       - '**/*.pyi'
+      - '**/*.cs'
+      - '**/*.csproj'
 
 jobs:
   lint:
@@ -39,6 +47,12 @@ jobs:
         run: pipx run ruff check
       - name: Check formatting
         run: pipx run ruff format --check
+      # the version is in .config/dotnet-tools.json and the settings in
+      # .editorconfig, so that the editor checks the same thing as CI does
+      - name: Check C# formatting
+        run: |
+          dotnet tool restore
+          dotnet csharpier check .
       # into _typing, which mypy.ini and both pyright configurations name
       - name: merge packages
         run: python scripts/merge-packages.py
