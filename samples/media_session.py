@@ -36,7 +36,7 @@ from winrt.windows.media.control import (
     GlobalSystemMediaTransportControlsSession as Session,
     GlobalSystemMediaTransportControlsSessionManager as SessionManager,
 )
-from winrt.windows.storage.streams import Buffer, InputStreamOptions
+from winrt.windows.storage.streams import InputStreamOptions
 
 
 def find_session(manager: SessionManager, app: str | None) -> Session | None:
@@ -96,13 +96,14 @@ async def save_thumbnail(session: Session, path: str) -> bool:
 
     # The stream is closed at the end of the block, like a Python file.
     with await properties.thumbnail.open_read_async() as stream:
-        buffer = Buffer(stream.size)
-        await stream.read_async(buffer, buffer.capacity, InputStreamOptions.READ_AHEAD)
+        data = await stream.read_async(
+            bytearray(stream.size), stream.size, InputStreamOptions.NONE
+        )
 
-    # A WinRT buffer supports the Python buffer protocol, so its bytes can be
+    # A WinRT IBuffer supports the Python buffer protocol, so its bytes can be
     # used directly. The format is whatever the app supplied, PNG or JPEG.
     with open(path, "wb") as file:
-        file.write(memoryview(buffer)[: buffer.length])
+        file.write(data)
 
     return True
 
