@@ -64,12 +64,12 @@ class CommandReader
     static RegistryKey OpenSdk()
     {
         return Registry.LocalMachine.OpenSubKey(
-                @"SOFTWARE\Microsoft\Windows Kits\Installed Roots"
-            // https://task.ms/29349404 - The SDK sometimes stores the 64 bit
-            // location into KitsRoot10 which is wrong, this breaks 64-bit
-            // cppwinrt.exe, so work around this by forcing to use the WoW64 hive.
-            // RegistryRights.ReadKey | (RegistryRights)Wow32Key
-            ) ?? throw new Exception("Could not find the Windows SDK in the registry");
+            @"SOFTWARE\Microsoft\Windows Kits\Installed Roots"
+        // https://task.ms/29349404 - The SDK sometimes stores the 64 bit
+        // location into KitsRoot10 which is wrong, this breaks 64-bit
+        // cppwinrt.exe, so work around this by forcing to use the WoW64 hive.
+        // RegistryRights.ReadKey | (RegistryRights)Wow32Key
+        ) ?? throw new Exception("Could not find the Windows SDK in the registry");
     }
 
     static string GetSdkPath()

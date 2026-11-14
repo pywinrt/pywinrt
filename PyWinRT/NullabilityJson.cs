@@ -75,13 +75,10 @@ sealed class NullabilityInfoFile
     /// </summary>
     public NamespaceNullabilityInfo GetOrAdd(string @namespace) =>
         namespaces
-            .GetOrAdd(
-                @namespace,
-                static ns => new Lazy<NamespaceNullabilityInfo>(
-                    () => new NamespaceNullabilityInfo(ns, []),
-                    LazyThreadSafetyMode.ExecutionAndPublication
-                )
-            )
+            .GetOrAdd(@namespace, static ns => new Lazy<NamespaceNullabilityInfo>(
+                () => new NamespaceNullabilityInfo(ns, []),
+                LazyThreadSafetyMode.ExecutionAndPublication
+            ))
             .Value;
 
     /// <summary>
@@ -137,56 +134,48 @@ static class NullabilityJson
     {
         var chunks = new ArrayBufferWriter<byte>[namespaces.Count];
 
-        Parallel.For(
-            0,
-            namespaces.Count,
-            i =>
+        Parallel.For(0, namespaces.Count, i =>
+        {
+            var ns = namespaces[i];
+            var types = ns.Types;
+
+            // estimate the size to avoid repeatedly growing the buffer
+            var estimate = 256 + types.Sum(t => 128 + t.Methods.Count * 640);
+            var buffer = new ArrayBufferWriter<byte>(estimate);
+
+            using (var writer = new Utf8JsonWriter(buffer, writerOptions))
             {
-                var ns = namespaces[i];
-                var types = ns.Types;
-
-                // estimate the size to avoid repeatedly growing the buffer
-                var estimate = 256 + types.Sum(t => 128 + t.Methods.Count * 640);
-                var buffer = new ArrayBufferWriter<byte>(estimate);
-
-                using (var writer = new Utf8JsonWriter(buffer, writerOptions))
-                {
-                    WriteNamespace(writer, ns.Namespace, types);
-                }
-
-                chunks[i] = buffer;
+                WriteNamespace(writer, ns.Namespace, types);
             }
-        );
+
+            chunks[i] = buffer;
+        });
 
         var newLine = GetIndentedNewLine();
 
-        FileContent.WriteIfChanged(
-            file.Directory ?? new DirectoryInfo("."),
-            file.Name,
-            sink =>
+        FileContent.WriteIfChanged(file.Directory ?? new DirectoryInfo("."), file.Name, sink =>
+        {
+            sink.Write("["u8);
+
+            for (var i = 0; i < chunks.Length; i++)
             {
-                sink.Write("["u8);
-
-                for (var i = 0; i < chunks.Length; i++)
+                if (i > 0)
                 {
-                    if (i > 0)
-                    {
-                        sink.Write(","u8);
-                    }
-
-                    sink.Write(newLine);
-                    sink.Write("  "u8);
-                    WriteIndented(sink, chunks[i].WrittenSpan);
+                    sink.Write(","u8);
                 }
 
-                if (chunks.Length > 0)
-                {
-                    sink.Write(newLine);
-                }
-
-                sink.Write("]"u8);
+                sink.Write(newLine);
+                sink.Write("  "u8);
+                WriteIndented(sink, chunks[i].WrittenSpan);
             }
-        );
+
+            if (chunks.Length > 0)
+            {
+                sink.Write(newLine);
+            }
+
+            sink.Write("]"u8);
+        });
     }
 
     /// <summary>

@@ -207,8 +207,7 @@ sealed class Census
     public static Census Load(FileInfo file)
     {
         using var stream = file.OpenRead();
-        var census =
-            JsonSerializer.Deserialize<Census>(stream, jsonOptions)
+        var census = JsonSerializer.Deserialize<Census>(stream, jsonOptions)
             ?? throw new FormatException($"{file.FullName} is empty");
 
         if (census.Version != CurrentVersion)
@@ -253,31 +252,27 @@ sealed class Census
 
     public void Save(DirectoryInfo path, string fileName)
     {
-        FileContent.WriteIfChanged(
-            path,
-            fileName,
-            sink =>
-            {
-                using var stream = new MemoryStream();
-                using (
-                    var writer = new Utf8JsonWriter(
-                        stream,
-                        new JsonWriterOptions
-                        {
-                            Indented = true,
-                            IndentSize = 4,
-                            NewLine = "\n",
-                        }
-                    )
+        FileContent.WriteIfChanged(path, fileName, sink =>
+        {
+            using var stream = new MemoryStream();
+            using (
+                var writer = new Utf8JsonWriter(
+                    stream,
+                    new JsonWriterOptions
+                    {
+                        Indented = true,
+                        IndentSize = 4,
+                        NewLine = "\n",
+                    }
                 )
-                {
-                    JsonSerializer.Serialize(writer, this, jsonOptions);
-                }
-
-                sink.Write(stream.GetBuffer().AsSpan(0, (int)stream.Length));
-                sink.Write("\n"u8);
+            )
+            {
+                JsonSerializer.Serialize(writer, this, jsonOptions);
             }
-        );
+
+            sink.Write(stream.GetBuffer().AsSpan(0, (int)stream.Length));
+            sink.Write("\n"u8);
+        });
     }
 
     /// <summary>
@@ -305,15 +300,11 @@ sealed class Census
             .Distinct(StringComparer.Ordinal);
 
         var assignedForward = AssignIds(ShapeIds, forward, k => (AbiShape.Parse(k).Args.Count, k));
-        var assignedReverse = AssignIds(
-            ReverseIds,
-            Families.Values.SelectMany(p => p.Reverse),
-            k =>
-            {
-                var (slot, shapeKey) = FromReverseKey(k);
-                return (slot, shapeKey);
-            }
-        );
+        var assignedReverse = AssignIds(ReverseIds, Families.Values.SelectMany(p => p.Reverse), k =>
+        {
+            var (slot, shapeKey) = FromReverseKey(k);
+            return (slot, shapeKey);
+        });
 
         // The revision counts appends and nothing else, so a run that finds
         // every shape already numbered leaves the file byte-identical and

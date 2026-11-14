@@ -69,8 +69,7 @@ sealed partial class Renames
 
                 foreach (var name in type.Value.EnumerateObject())
                 {
-                    var now =
-                        name.Value.GetString()
+                    var now = name.Value.GetString()
                         ?? throw new JsonException(
                             $"{file.FullName}: {type.Name}: {name.Name} is not renamed to a name"
                         );
