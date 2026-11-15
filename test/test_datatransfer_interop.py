@@ -22,14 +22,24 @@ except OSError as e:
 """
 
 
+# HRESULT_FROM_WIN32(ERROR_INVALID_WINDOW_HANDLE), which the interop calls
+# themselves return for a null window: getting the activation factory, or
+# querying it for the interop interface, fails with other errors.
+E_INVALID_WINDOW_HANDLE = -2147023496
+
+
 class TestDataTransferInterop(unittest.TestCase):
     def test_get_for_window_refuses_no_window(self) -> None:
-        with self.assertRaises(OSError):
+        with self.assertRaises(OSError) as caught:
             get_for_window(0)
 
+        self.assertEqual(caught.exception.winerror, E_INVALID_WINDOW_HANDLE)
+
     def test_show_share_ui_for_window_refuses_no_window(self) -> None:
-        with self.assertRaises(OSError):
+        with self.assertRaises(OSError) as caught:
             show_share_ui_for_window(0)
+
+        self.assertEqual(caught.exception.winerror, E_INVALID_WINDOW_HANDLE)
 
     def test_first_call_in_a_process(self) -> None:
         # A process of its own, in which nothing has initialized COM.
