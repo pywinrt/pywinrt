@@ -73,8 +73,8 @@ namespace
         IUnknown* manager{};
         HRESULT hr;
         {
-            // It makes the manager for a window the first time, which may wait
-            // for the window's thread.
+            // As for any call that may wait for another thread (see
+            // interop::gil_released): the window may belong to one.
             interop::gil_released const guard;
             hr = factory->GetForWindow(
                 hwnd, IID_IDataTransferManager, reinterpret_cast<void**>(&manager));
