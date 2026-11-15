@@ -20,6 +20,7 @@ conventions and other rules in [The WinRT type system](../types.md).
 There are also special `interop` modules that provide extra functionality
 to bridge between WinRT and other interfaces.
 
+- [`winrt.windows.applicationmodel.datatransfer.interop` module](windows/applicationmodel/datatransfer/interop.md)
 - [`winrt.windows.graphics.capture.interop` module](windows/graphics/capture/interop.md)
 - [`winrt.windows.graphics.directx.direct3d11.interop` module](windows/graphics/directx/direct3d11/interop.md)
 - [`winrt.windows.media.interop` module](windows/media/interop.md)
