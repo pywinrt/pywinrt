@@ -8,7 +8,5 @@ provides the `winrt.windows.applicationmodel.datatransfer.interop` module.
 ## [Unreleased]
 
 ### Added
-- The `winrt.windows.applicationmodel.datatransfer.interop` module, for
-  sharing from a desktop app: `get_for_window()` gets a window's
-  `DataTransferManager`, and `show_share_ui_for_window()` shows the share
-  sheet for it.
+- `get_for_window()` gets a window's `DataTransferManager`.
+- `show_share_ui_for_window()` shows the share sheet for a window.
