@@ -98,7 +98,7 @@ namespace
         HRESULT hr;
         {
             // The window's DataTransferManager raises DataRequested to fill the
-            // sheet, and its handler may be Python on another thread.
+            // sheet, and its handler may be Python.
             interop::gil_released const guard;
             hr = factory->ShowShareUIForWindow(hwnd);
             factory->Release();

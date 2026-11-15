@@ -25,7 +25,7 @@ def get_for_window(hwnd: int, /) -> DataTransferManager:
     app, which has no view, calls this with its window.
 
     Args:
-        hwnd (HWND): The top-level app window.
+        hwnd (HWND): The window whose DataTransferManager to get.
 
     Returns:
         The DataTransferManager of the window.
@@ -41,6 +41,6 @@ def show_share_ui_for_window(hwnd: int, /) -> None:
     get_for_window()) raises data_requested, whose handler fills in what to share.
 
     Args:
-        hwnd (HWND): The top-level app window to show the share sheet for.
+        hwnd (HWND): The window to show the share sheet for.
     """
     _native.show_share_ui_for_window(_factory(), hwnd)

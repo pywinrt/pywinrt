@@ -22,12 +22,14 @@ show_share_ui_for_window(hwnd)
 get_for_window(hwnd, /)
 ```
 
-Gets the `DataTransferManager` of a window. Its `data_requested` event asks for
-what to share when the share sheet is shown for the window.
+Gets the `DataTransferManager` of a window, as
+`DataTransferManager.get_for_current_view()` does for an app's view. Its
+`data_requested` event asks for what to share when the share sheet is shown for
+the window.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `hwnd` | `int` | The handle (`HWND`) of the top-level app window. |
+| `hwnd` | `int` | The handle (`HWND`) of the window whose `DataTransferManager` to get. |
 
 **Returns:** The `DataTransferManager` of the window.
 
@@ -45,14 +47,15 @@ what to share when the share sheet is shown for the window.
 show_share_ui_for_window(hwnd, /)
 ```
 
-Shows the share sheet for a window. The window's `DataTransferManager` raises
+Shows the share sheet for a window, as `DataTransferManager.show_share_ui()`
+does for an app's view. The window's `DataTransferManager` raises
 `data_requested` to fill it. A handler that has to await something, such as
 getting a `StorageFile`, takes a deferral from the request with
 `get_deferral()` and completes it once it's done.
 
 | Parameter | Type | Description |
 |---|---|---|
-| `hwnd` | `int` | The handle (`HWND`) of the top-level app window to show the share sheet for. |
+| `hwnd` | `int` | The handle (`HWND`) of the window to show the share sheet for. |
 
 !!! version-added "Added in version 4.0"
 
