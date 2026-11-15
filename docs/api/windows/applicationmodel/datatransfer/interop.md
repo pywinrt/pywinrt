@@ -33,7 +33,7 @@ what to share when the share sheet is shown for the window.
 
 **Return type:** `winrt.windows.applicationmodel.datatransfer.DataTransferManager`
 
-!!! version-added "Added in version 4.1"
+!!! version-added "Added in version 4.0"
 
 !!! seealso "See also"
 
@@ -54,7 +54,7 @@ getting a `StorageFile`, takes a deferral from the request with
 |---|---|---|
 | `hwnd` | `int` | The handle (`HWND`) of the top-level app window to show the share sheet for. |
 
-!!! version-added "Added in version 4.1"
+!!! version-added "Added in version 4.0"
 
 !!! seealso "See also"
 
