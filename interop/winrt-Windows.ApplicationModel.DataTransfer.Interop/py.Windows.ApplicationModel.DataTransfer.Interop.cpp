@@ -1,6 +1,30 @@
 #include "interop.h"
 
+#if __has_include("shobjidl_core.h")
 #include <shobjidl_core.h>
+#else
+// some environments like MSYS2 don't have this header
+#include <unknwn.h>
+
+MIDL_INTERFACE("3A3DCD6C-3EAB-43DC-BCDE-45671CE800C8")
+IDataTransferManagerInterop : ::IUnknown
+{
+    virtual HRESULT STDMETHODCALLTYPE GetForWindow(
+        HWND appWindow, REFIID riid, _COM_Outptr_ void** dataTransferManager) noexcept
+        = 0;
+
+    virtual HRESULT STDMETHODCALLTYPE ShowShareUIForWindow(HWND appWindow) noexcept = 0;
+};
+
+#ifdef __CRT_UUID_DECL
+__CRT_UUID_DECL(
+    IDataTransferManagerInterop,
+    // clang-format off
+    0x3A3DCD6C, 0x3EAB, 0x43DC, 0xBC, 0xDE, 0x45, 0x67, 0x1C, 0xE8, 0x00, 0xC8
+    // clang-format on
+);
+#endif
+#endif
 
 // https://learn.microsoft.com/en-us/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop
 
