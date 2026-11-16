@@ -23,6 +23,10 @@ function(pywinrt_add_interop_module target package source root)
         DESTINATION "${root}")
 endfunction()
 
+pywinrt_add_interop_module(_winrt_windows_applicationmodel_datatransfer_interop
+    "winrt-Windows.ApplicationModel.DataTransfer.Interop"
+    "py.Windows.ApplicationModel.DataTransfer.Interop.cpp" "winrt")
+
 pywinrt_add_interop_module(_winrt_windows_graphics_capture_interop
     "winrt-Windows.Graphics.Capture.Interop"
     "py.Windows.Graphics.Capture.Interop.cpp" "winrt")

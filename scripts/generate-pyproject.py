@@ -210,6 +210,10 @@ NUGET_VERSIONS = versions.nuget_versions()
 # Interop that only deals in IInspectable needs nothing extra, since
 # winrt.system.Object lives in the runtime.
 INTEROP_DEPENDENCIES: dict[str, list[str]] = {
+    "winrt-Windows.ApplicationModel.DataTransfer.Interop": [
+        # returns DataTransferManager
+        "winrt-Windows.ApplicationModel.DataTransfer",
+    ],
     "winrt-Windows.Graphics.Capture.Interop": [
         # returns GraphicsCaptureItem
         "winrt-Windows.Graphics.Capture",
@@ -250,6 +254,10 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
 # What each interop package does, which is the first thing its README says,
 # since it is not a namespace the way a generated package's subject is.
 INTEROP_SUMMARIES = {
+    "winrt-Windows.ApplicationModel.DataTransfer.Interop": (
+        "Gets the `DataTransferManager` of a window, and shows the share sheet for"
+        " it, from its handle."
+    ),
     "winrt-Windows.Graphics.Capture.Interop": (
         "Makes a `GraphicsCaptureItem` for a window or a monitor, from its handle."
     ),

@@ -24,6 +24,7 @@ nav = [
     "api/system.hresult.md",
     { "winrt.windows namespace" = [
       "api/windows.md",
+      "api/windows/applicationmodel/datatransfer/interop.md",
       "api/windows/graphics/capture/interop.md",
       "api/windows/graphics/directx/direct3d11/interop.md",
       "api/windows/media/interop.md",
