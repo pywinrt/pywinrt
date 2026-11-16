@@ -5,7 +5,7 @@
 What changed in `winrt-Windows.ApplicationModel.DataTransfer.Interop`, which
 provides the `winrt.windows.applicationmodel.datatransfer.interop` module.
 
-## [Unreleased]
+## [4.0.0] - 2026-11-15
 
 ### Added
 - New module.
