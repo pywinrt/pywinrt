@@ -66,7 +66,7 @@ def plan(selected: list[packages.Package]) -> dict[str, str]:
     pure = bool(builds & {packages.Build.ANY, packages.Build.REDIST})
     compiled = packages.Build.COMPILED in builds
     stable_abi = packages.Build.STABLE_ABI in builds
-    trusted = {package.family in packages.TRUSTED_PUBLISHING for package in selected}
+    trusted = {packages.is_trusted(package) for package in selected}
 
     return {
         "pure": str(pure).lower(),

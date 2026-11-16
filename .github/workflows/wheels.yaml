@@ -239,9 +239,9 @@ jobs:
       ${{ !cancelled() && !failure()
           && (github.event_name == 'push' || inputs.publish != 'none') }}
     runs-on: ubuntu-latest
-    # A family in packages.TRUSTED_PUBLISHING uploads to PyPI with trusted
-    # publishing, which exchanges this job's OIDC token for one that only its
-    # projects take; every other upload carries the account's token.
+    # A unit or family in packages.TRUSTED_PUBLISHING uploads to PyPI with
+    # trusted publishing, which exchanges this job's OIDC token for one that
+    # only its projects take; every other upload carries the account's token.
     permissions:
       id-token: write
     steps:

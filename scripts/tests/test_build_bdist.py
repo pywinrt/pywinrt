@@ -153,6 +153,22 @@ class Plan(unittest.TestCase):
     def test_a_fix_released_on_its_own_still_follows_the_family(self) -> None:
         self.assertEqual(build_bdist.plan([UI_INTEROP_FIX])["trusted"], "true")
 
+    def test_a_unit_listed_on_its_own_is_trusted(self) -> None:
+        unit = "winrt-Windows.ApplicationModel.DataTransfer.Interop"
+
+        self.assertEqual(
+            build_bdist.plan([package(unit, "winrt", unit, "stable-abi")])["trusted"],
+            "true",
+        )
+
+    def test_a_trusted_unit_with_a_token_unit_is_mixed(self) -> None:
+        unit = "winrt-Windows.ApplicationModel.DataTransfer.Interop"
+        datatransfer = package(unit, "winrt", unit, "stable-abi")
+
+        self.assertEqual(
+            build_bdist.plan([datatransfer, SYSTEM_INTEROP])["trusted"], "mixed"
+        )
+
     def test_the_windows_sdk_units_are_on_the_token(self) -> None:
         for unit in [RUNTIME, TABLE, FOUNDATION, SYSTEM_INTEROP]:
             with self.subTest(unit=unit.release):
