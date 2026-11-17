@@ -3,12 +3,18 @@ import unittest
 
 import winrt.microsoft.ui as ui
 import winrt.microsoft.ui.interop as interop
+import winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap as bootstrap
 
 ON_CI = os.environ.get("CI")
 
 
 @unittest.skipIf(ON_CI, "Windows App Runtime not installed on CI")
 class TestMicrosoftUIInterop(unittest.TestCase):
+    def setUp(self) -> None:
+        # The functions are in the Windows App Runtime, which an unpackaged
+        # process reaches only through the bootstrapper.
+        self.enterContext(bootstrap.initialize())
+
     def test_window(self) -> None:
         hwnd = interop.get_window_from_window_id(ui.WindowId())
         self.assertEqual(hwnd, 0)
