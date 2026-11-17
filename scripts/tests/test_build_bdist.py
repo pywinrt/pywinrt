@@ -85,7 +85,7 @@ class Plan(unittest.TestCase):
                 "pure": "false",
                 "compiled": "true",
                 "stable_abi": "false",
-                "trusted": "false",
+                "trusted": "true",
             },
         )
 
@@ -107,7 +107,7 @@ class Plan(unittest.TestCase):
                 "pure": "true",
                 "compiled": "false",
                 "stable_abi": "false",
-                "trusted": "false",
+                "trusted": "true",
             },
         )
 
@@ -135,7 +135,7 @@ class Plan(unittest.TestCase):
                 "pure": "true",
                 "compiled": "true",
                 "stable_abi": "true",
-                "trusted": "false",
+                "trusted": "mixed",
             },
         )
 
@@ -169,8 +169,13 @@ class Plan(unittest.TestCase):
             build_bdist.plan([datatransfer, SYSTEM_INTEROP])["trusted"], "mixed"
         )
 
+    def test_the_runtime_family_covers_both_its_units(self) -> None:
+        for unit in [RUNTIME, TABLE]:
+            with self.subTest(unit=unit.release):
+                self.assertEqual(build_bdist.plan([unit])["trusted"], "true")
+
     def test_the_windows_sdk_units_are_on_the_token(self) -> None:
-        for unit in [RUNTIME, TABLE, FOUNDATION, SYSTEM_INTEROP]:
+        for unit in [FOUNDATION, SYSTEM_INTEROP]:
             with self.subTest(unit=unit.release):
                 self.assertEqual(build_bdist.plan([unit])["trusted"], "false")
 
@@ -214,7 +219,7 @@ class Main(unittest.TestCase):
 
         self.assertEqual(
             self.run_script("--plan", "--tag", tag),
-            "pure=false\ncompiled=true\nstable_abi=false\ntrusted=false\n",
+            "pure=false\ncompiled=true\nstable_abi=false\ntrusted=true\n",
         )
 
     def build(self, *args: str) -> tuple[list[list[str]], str]:

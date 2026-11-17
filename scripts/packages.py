@@ -77,15 +77,18 @@ REDIST_FAMILIES = {
 # publishing rather than the account's token, each of whose projects names
 # .github/workflows/wheels.yaml as its publisher. A family's name covers every
 # unit that releases one of its packages, a fix to an interop module released
-# with it on its own included. A unit written by hand is named on its own: one
-# that was new to PyPI after trusted publishing began, whose project was
-# created by its pending publisher. One upload authenticates one way, so a unit
-# is on one side or the other as a whole.
+# with it on its own included, and "runtime" covers both winrt-runtime and
+# winrt-table-compiler. A unit written by hand is named on its own. A project
+# new to PyPI is created by its pending publisher and an older one has the
+# publisher added by hand, so a name goes here once every project it covers
+# has it. One upload authenticates one way, so a unit is on one side or the
+# other as a whole.
 TRUSTED_PUBLISHING = frozenset(
     {
         "winui2",
         "webview2",
         "wasdk",
+        "runtime",
         "winrt-Windows.ApplicationModel.DataTransfer.Interop",
     }
 )
