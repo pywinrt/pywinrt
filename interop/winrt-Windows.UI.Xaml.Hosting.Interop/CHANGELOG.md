@@ -10,6 +10,9 @@ repository](../../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Added
+- `DesktopWindowXamlSourceNative` works with `interface_pointer()`.
+
 ### Changed
 - One abi3 wheel per architecture serves every CPython from 3.11 on.
 

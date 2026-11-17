@@ -7,6 +7,7 @@ from winrt._winrt import (
     get_activation_factory,
     hresult_error,
     initialize_with_window,
+    interface_pointer,
     wrap_interface,
 )
 
@@ -16,6 +17,7 @@ __all__ = [
     "get_activation_factory",
     "hresult_error",
     "initialize_with_window",
+    "interface_pointer",
     "wrap_interface",
 ]
 

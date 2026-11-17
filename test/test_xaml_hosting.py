@@ -1,5 +1,6 @@
 import unittest
 
+from winrt.runtime.interop import interface_pointer
 from winrt.system.hresult import E_NOINTERFACE
 from winrt.windows.foundation import Uri
 from winrt.windows.ui.xaml.hosting import WindowsXamlManager, DesktopWindowXamlSource
@@ -69,6 +70,22 @@ class TestXamlHost(unittest.TestCase):
             hwnd = create_window()
             native.attach_to_window(hwnd)
             self.assertNotEqual(native.window_handle, 0)
+
+    @unittest.skipIf(
+        not is_maxversiontested_in_manifest(),
+        f"Manifest for '{get_activation_context_detailed_information()[0]}' does not specify maxversiontested",
+    )
+    def test_interface_pointer(self) -> None:
+        with (
+            WindowsXamlManager.initialize_for_current_thread(),
+            DesktopWindowXamlSource() as source,
+        ):
+            native = source.as_(DesktopWindowXamlSourceNative)
+            pointer = interface_pointer(native)
+
+            self.assertNotEqual(pointer, 0)
+            # the pointer in the capsule the instance holds
+            self.assertEqual(pointer, interface_pointer(native._interface_capsule_()))
 
     @unittest.skipIf(
         not is_maxversiontested_in_manifest(),

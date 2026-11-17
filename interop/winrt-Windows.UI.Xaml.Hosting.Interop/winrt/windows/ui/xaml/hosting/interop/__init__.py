@@ -47,6 +47,9 @@ class DesktopWindowXamlSourceNative:
     def _from(cls, obj: Object) -> Self:
         return cls._query_interface_(obj)
 
+    def _interface_capsule_(self) -> _runtime.InterfaceCapsule:
+        return self._native
+
     def __eq__(self, other: object) -> bool:
         # Equal to anything that is the same COM object, as a WinRT object is.
         if isinstance(other, DesktopWindowXamlSourceNative):

@@ -54,6 +54,7 @@ RUNTIME_FUNCTIONS = {
     "get_activation_factory": "4.0.0",
     "hresult_error": "4.0.0",
     "wrap_interface": "4.0.0",
+    "interface_pointer": "4.2.0",
 }
 
 # The modules an interop package reaches those functions through: the public

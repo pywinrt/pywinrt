@@ -17,6 +17,9 @@ which attach it to a window and hand it the window's messages.
 
 Call `as_()` on a source to get one. The class cannot be created or subclassed.
 It is equal to, and hashes like, any WinRT object that is the same COM object.
+[`interface_pointer()`](../../../../runtime.interop.md#interface_pointer)
+gives the address of its *IDesktopWindowXamlSourceNative*, for a library that
+takes the raw pointer.
 
 ```python
 from winrt.windows.ui.xaml.hosting import DesktopWindowXamlSource

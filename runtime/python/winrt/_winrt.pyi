@@ -42,6 +42,9 @@ def wrap_interface(
 def wrap_interface(capsule: InterfaceCapsule, qualified_name: str, /) -> Any: ...
 @overload
 def wrap_interface(capsule: None, type: type[Object] | str, /) -> None: ...
+def interface_pointer(
+    obj: Object | InterfaceCapsule | _SupportsInterfaceCapsule, /
+) -> int: ...
 def hresult_error(
     hresult: SupportsIndex, error_info: InterfaceCapsule | None = None, /
 ) -> OSError: ...
@@ -94,6 +97,12 @@ class _SupportsQueryInterface(Protocol):
     def _query_interface_(cls, obj: Object, /) -> Self: ...
 
 _TQueryInterface = TypeVar("_TQueryInterface", bound=_SupportsQueryInterface)
+
+# What interface_pointer() needs from an interop class instance: a method that
+# returns the capsule the instance holds. It must return the same capsule for
+# the life of the instance.
+class _SupportsInterfaceCapsule(Protocol):
+    def _interface_capsule_(self) -> InterfaceCapsule: ...
 
 # Declared as an ABCMeta although at run time it derives from type: a type
 # checker requires an abstract member to be implemented only under ABCMeta, and
