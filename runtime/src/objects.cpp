@@ -1386,17 +1386,128 @@ namespace
     }
 
     /**
+     * Whether @p obj is a parameterized interface given its type arguments,
+     * such as IVector[int], which is a types.GenericAlias.
+     *
+     * @returns -1 with a Python error set.
+     */
+    int is_generic_instance(PyObject* obj) noexcept
+    {
+        if (!PyObject_TypeCheck(obj, &Py_GenericAliasType))
+        {
+            return 0;
+        }
+
+        py::pyobj_handle origin{PyObject_GetAttrString(obj, "__origin__")};
+        if (!origin)
+        {
+            return -1;
+        }
+
+        if (!PyType_Check(origin.get()))
+        {
+            return 0;
+        }
+
+        auto const info = py::interp::find_type_entry(
+            reinterpret_cast<PyTypeObject*>(origin.get()));
+        if (!info)
+        {
+            return 0;
+        }
+
+        return info->parameterized;
+    }
+
+    /**
+     * The @c TypeError for @p obj, which py::convert_to_guid() refused as an
+     * IID, saying that @p function takes @p takes and naming what @p obj is.
+     *
+     * @returns @c nullptr with a Python error set.
+     */
+    PyObject* new_iid_type_error(
+        PyObject* obj, char const* function, char const* takes) noexcept
+    {
+        auto const generic_instance = is_generic_instance(obj);
+        if (generic_instance < 0)
+        {
+            return nullptr;
+        }
+
+        py::pyobj_handle message;
+
+        if (generic_instance)
+        {
+            message.attach(PyUnicode_FromFormat(
+                "%s() takes the parameterized interface '%R' only by its IID, "
+                "as a uuid.UUID",
+                function,
+                obj));
+        }
+        else
+        {
+            py::pyobj_handle name{py::interp::qualified_name_of(Py_TYPE(obj))};
+            if (!name)
+            {
+                return nullptr;
+            }
+
+            message.attach(PyUnicode_FromFormat(
+                "%s() takes %s, not '%U'", function, takes, name.get()));
+        }
+
+        if (!message)
+        {
+            return nullptr;
+        }
+
+        return PyObject_CallOneArg(PyExc_TypeError, message.get());
+    }
+
+    /**
+     * Replaces the @c TypeError that py::convert_to_guid() raised for @p obj
+     * with one saying that @p function takes @p takes, and naming what @p obj
+     * is. Its cause stays. An error while making it leaves the error as it
+     * was.
+     */
+    void set_iid_type_error(
+        PyObject* obj, char const* function, char const* takes) noexcept
+    {
+        py::pyobj_handle refused{py::take_raised_exception()};
+
+        py::pyobj_handle error{new_iid_type_error(obj, function, takes)};
+        if (!error)
+        {
+            PyErr_Clear();
+            py::restore_raised_exception(refused.detach());
+            return;
+        }
+
+        PyException_SetCause(error.get(), PyException_GetCause(refused.get()));
+        py::restore_raised_exception(error.detach());
+    }
+
+    /**
      * The IID that @p obj names: a @c uuid.UUID, or a projected class or
      * interface, which names the interface an instance of it holds, or
      * winrt.system.Object, which names IInspectable.
      *
-     * @throws python_exception if @p obj is none of these.
+     * @throws python_exception if @p obj is none of these. For anything that is
+     * not a type, the @c TypeError names @p function and says what it takes.
      */
-    winrt::guid iid_named_by(PyObject* obj)
+    winrt::guid iid_named_by(PyObject* obj, char const* function, char const* takes)
     {
         if (!PyType_Check(obj))
         {
-            return py::convert_to_guid(obj);
+            try
+            {
+                return py::convert_to_guid(obj);
+            }
+            catch (py::python_exception const&)
+            {
+                set_iid_type_error(obj, function, takes);
+                throw;
+            }
         }
 
         auto const object_type = py::get_object_type();
@@ -1591,7 +1702,10 @@ namespace py::cpp::_winrt
 
         try
         {
-            auto const iid = iid_named_by(iid_obj);
+            auto const iid = iid_named_by(
+                iid_obj,
+                "as_interface",
+                "a uuid.UUID or a projected class or interface");
             auto const abi = py::interp::unwrap_abi(obj, &iid);
 
             if (!abi)
@@ -1671,7 +1785,8 @@ namespace py::cpp::_winrt
 
         try
         {
-            auto const iid = iid_named_by(iid_obj);
+            auto const iid = iid_named_by(
+                iid_obj, "get_activation_factory", "an interface or a uuid.UUID");
 
             void* factory{};
             int32_t hr{};

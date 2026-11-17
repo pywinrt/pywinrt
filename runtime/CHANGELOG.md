@@ -15,6 +15,7 @@ repository](../CHANGELOG.md).
 
 ### Changed
 - The error a member raises for a missing Windows SDK package names the package.
+- `as_interface()` and `get_activation_factory()` say what their `iid` takes.
 
 ### Fixed
 - A namespace package's delegate raises `ModuleNotFoundError`, not `TypeError`.

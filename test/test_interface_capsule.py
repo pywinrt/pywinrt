@@ -14,6 +14,7 @@ import datetime
 import gc
 import importlib.machinery
 import os
+import re
 import sys
 import tempfile
 import types
@@ -243,6 +244,52 @@ class TestInterfaceCapsule(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "takes type arguments"):
             interop.as_interface(uri, IIterable)
 
+    def test_parameterized_interface_with_type_arguments(self) -> None:
+        uri = Uri("https://example.com/")
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^as_interface\(\) takes the parameterized interface "
+            r"'winrt\.windows\.foundation\.collections\.IIterable\[str\]' only by "
+            r"its IID, as a uuid\.UUID$",
+        ):
+            interop.as_interface(uri, IIterable[str])
+
+    def test_iid_error_that_cannot_be_worded(self) -> None:
+        class BadRepr:
+            def __repr__(self) -> str:
+                raise RuntimeError("repr failed")
+
+        uri = Uri("https://example.com/")
+
+        # The alias has no repr, so the error is left as uuid.UUID gives it.
+        with self.assertRaisesRegex(TypeError, r"^requires uuid\.UUID object$") as cm:
+            interop.as_interface(uri, IIterable[BadRepr()])  # type: ignore[call-overload, misc]
+
+        self.assertIsInstance(cm.exception.__cause__, AttributeError)
+
+    def test_not_an_iid(self) -> None:
+        uri = Uri("https://example.com/")
+        iids: tuple[tuple[object, str], ...] = (
+            (str(IID_IINSPECTABLE), "str"),
+            (42, "int"),
+            (list[int], "types.GenericAlias"),
+        )
+
+        for iid, name in iids:
+            with (
+                self.subTest(iid=iid),
+                self.assertRaisesRegex(
+                    TypeError,
+                    r"^as_interface\(\) takes a uuid\.UUID or a projected class or "
+                    rf"interface, not '{re.escape(name)}'$",
+                ) as cm,
+            ):
+                interop.as_interface(uri, iid)  # type: ignore[call-overload]
+
+            # what the object lacks to be taken for a uuid.UUID
+            self.assertIsInstance(cm.exception.__cause__, AttributeError)
+
     def test_neither_type_nor_name(self) -> None:
         capsule = interop.as_interface(Uri("https://example.com/"), IID_IINSPECTABLE)
 
@@ -459,6 +506,14 @@ class TestActivationFactory(unittest.TestCase):
             r"not '.*Derived', a subclass of the runtime class '.*Override'$",
         ):
             interop.get_activation_factory(tc.Override, Derived)
+
+    def test_not_an_iid(self) -> None:
+        with self.assertRaisesRegex(
+            TypeError,
+            r"^get_activation_factory\(\) takes an interface or a uuid\.UUID, "
+            r"not 'int'$",
+        ):
+            interop.get_activation_factory(Uri, 42)  # type: ignore[arg-type]
 
     def test_not_a_runtime_class(self) -> None:
         for cls in (IStringable, Point, int):
