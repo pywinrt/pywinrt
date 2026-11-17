@@ -1323,16 +1323,91 @@ namespace
     }
 
     /**
+     * Wraps @p value as winrt.system.Object, which is what a projected member
+     * typed Object returns. @p value is queried for IInspectable first, since
+     * the interface a capsule holds may be a COM interface that is not one.
+     */
+    PyObject* wrap_as_object(
+        winrt::Windows::Foundation::IInspectable const& value) noexcept
+    {
+        try
+        {
+            winrt::Windows::Foundation::IInspectable object;
+            int32_t hr{};
+
+            {
+                // The object may be a proxy, which a query for an interface
+                // is a call into the apartment of.
+                auto _gil = py::release_gil();
+                hr = static_cast<::IUnknown*>(winrt::get_abi(value))
+                         ->QueryInterface(
+                             winrt::guid_of<winrt::Windows::Foundation::IInspectable>(),
+                             winrt::put_abi(object));
+            }
+
+            winrt::check_hresult(hr);
+
+            return py::convert(object);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    /**
+     * Wraps @p value as @p type, a projected class or interface, or
+     * winrt.system.Object. @p name is what the caller named the type by.
+     */
+    PyObject* wrap_as_type(
+        winrt::Windows::Foundation::IInspectable const& value,
+        PyTypeObject* type,
+        char const* name) noexcept
+    {
+        auto const object_type = py::get_object_type();
+        if (!object_type)
+        {
+            return nullptr;
+        }
+
+        if (type == object_type)
+        {
+            return wrap_as_object(value);
+        }
+
+        auto const info = find_object_entry(type, name);
+        if (!info)
+        {
+            return nullptr;
+        }
+
+        return wrap_as(value, *info);
+    }
+
+    /**
      * The IID that @p obj names: a @c uuid.UUID, or a projected class or
-     * interface, which names the interface an instance of it holds.
+     * interface, which names the interface an instance of it holds, or
+     * winrt.system.Object, which names IInspectable.
      *
-     * @throws python_exception if @p obj is neither.
+     * @throws python_exception if @p obj is none of these.
      */
     winrt::guid iid_named_by(PyObject* obj)
     {
         if (!PyType_Check(obj))
         {
             return py::convert_to_guid(obj);
+        }
+
+        auto const object_type = py::get_object_type();
+        if (!object_type)
+        {
+            throw py::python_exception();
+        }
+
+        if (obj == reinterpret_cast<PyObject*>(object_type))
+        {
+            return winrt::guid_of<winrt::Windows::Foundation::IInspectable>();
         }
 
         auto const type = reinterpret_cast<PyTypeObject*>(obj);
@@ -1467,13 +1542,7 @@ PyObject* py::wrap_object(
         return nullptr;
     }
 
-    auto const info = find_object_entry(type, qualified_name);
-    if (!info)
-    {
-        return nullptr;
-    }
-
-    return wrap_as(value, *info);
+    return wrap_as_type(value, type, qualified_name);
 }
 
 /**
@@ -1503,7 +1572,8 @@ namespace py::cpp::_winrt
      * as_interface(obj, iid) - the @p iid interface of the WinRT object @p obj
      * wraps, as an interface pointer capsule, or None for None. @p iid is a
      * uuid.UUID, or a projected class or interface, which stands for the
-     * interface an instance of it holds.
+     * interface an instance of it holds, or winrt.system.Object, which stands
+     * for IInspectable.
      *
      * This and wrap_interface() are how compiled code outside the runtime
      * exchanges WinRT objects with it: through Python objects, so that nothing
@@ -1541,7 +1611,8 @@ namespace py::cpp::_winrt
     /**
      * get_activation_factory(cls, iid) - the @p iid interface of the
      * activation factory of the runtime class @p cls, as an interface pointer
-     * capsule. @p iid is a uuid.UUID, or a projected interface.
+     * capsule. @p iid is a uuid.UUID, or a projected interface, or
+     * winrt.system.Object, which stands for IInspectable.
      *
      * A class's statics, its constructors and the Windows interop interfaces
      * that act for it, such as IGraphicsCaptureItemInterop, are all reached
@@ -1627,8 +1698,8 @@ namespace py::cpp::_winrt
     /**
      * wrap_interface(capsule, type) - the WinRT object an interface pointer
      * capsule holds, as @p type, or None for None. @p type is a projected class
-     * or interface, or the qualified name it is bound to. The capsule keeps its
-     * own reference.
+     * or interface, or the qualified name it is bound to, or
+     * winrt.system.Object. The capsule keeps its own reference.
      */
     PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept
     {
@@ -1681,13 +1752,7 @@ namespace py::cpp::_winrt
 
         auto const type = reinterpret_cast<PyTypeObject*>(type_obj);
 
-        auto const info = find_object_entry(type, type->tp_name);
-        if (!info)
-        {
-            return nullptr;
-        }
-
-        return wrap_as(value, *info);
+        return wrap_as_type(value, type, type->tp_name);
     }
 
     /**
