@@ -62,6 +62,11 @@ Windows App SDK release it was built against and loads that release by default.
 A fix to one of them released between two upstream releases adds a number on
 the end, such as `4!2.5.1.1`.
 
+`winrt-Microsoft.UI.Xaml.Media.DXInterop` is not one of them, although it is
+for WinUI 3. It builds against the Windows SDK alone, so nothing in it changes
+with a Windows App SDK release, and it works with any of them. It is versioned
+on its own from `4.0.0`, like the interop modules of the Windows SDK.
+
 The `4!` on the first group is a [PEP 440](https://peps.python.org/pep-0440/)
 *epoch*, and the leading `4` on the second is the major. They are the same number.
 

@@ -1,0 +1,274 @@
+// WARNING: Please don't edit this file. It was copied from interop/interop.h
+// by scripts/generate-pyproject.py.
+
+// What an interop module needs to exchange WinRT objects and errors with
+// winrt-runtime.
+//
+// An interop module shares no C ABI with the runtime and includes none of its
+// headers. A WinRT object crosses as an interface pointer capsule, which
+// winrt.runtime.interop.as_interface() makes from a projected object and
+// winrt.runtime.interop.wrap_interface() makes a projected object from, and a
+// failed call raises the exception that winrt.runtime.interop.hresult_error()
+// builds. The capsule's name and those three functions are the whole
+// contract, so this header can change freely.
+//
+// scripts/generate-pyproject.py copies this file into each interop package,
+// so that its source distribution builds on its own.
+
+#pragma once
+
+#include <Python.h>
+
+#include <windows.h>
+
+#include <oleauto.h>
+
+#include <cstddef>
+#include <utility>
+
+// The version of the Python C API a module is compiled against: the stable
+// ABI's where it is built for that, and otherwise that of the Python it is
+// built for. Nothing newer is there to call.
+#ifdef Py_LIMITED_API
+#define INTEROP_PY_API_VERSION Py_LIMITED_API
+#else
+#define INTEROP_PY_API_VERSION PY_VERSION_HEX
+#endif
+
+namespace interop
+{
+    /// The name every interface pointer capsule carries, in the runtime and in
+    /// every interop module alike. One holds a reference to a COM interface,
+    /// which its destructor releases.
+    inline constexpr char interface_capsule_name[] = "winrt.interface";
+
+    /// Releases the GIL for as long as it is in scope.
+    ///
+    /// A call into an object in another apartment, or one that sends a window
+    /// on another thread a message, waits for that thread, which may itself
+    /// be waiting for the GIL to run a Python handler.
+    class gil_released
+    {
+      public:
+        gil_released() noexcept : state{PyEval_SaveThread()}
+        {
+        }
+
+        gil_released(gil_released const&) = delete;
+        gil_released& operator=(gil_released const&) = delete;
+
+        ~gil_released() noexcept
+        {
+            PyEval_RestoreThread(state);
+        }
+
+      private:
+        PyThreadState* state;
+    };
+
+    /// Owns a reference to the COM interface @p I, or nothing, and releases it
+    /// when it goes out of scope.
+    template<typename I>
+    class com_ptr
+    {
+      public:
+        com_ptr() noexcept = default;
+
+        /// The reference to @p abi moves in.
+        explicit com_ptr(I* abi) noexcept : abi{abi}
+        {
+        }
+
+        com_ptr(com_ptr&& other) noexcept : abi{other.detach()}
+        {
+        }
+
+        com_ptr& operator=(com_ptr&& other) noexcept
+        {
+            if (this != &other)
+            {
+                release();
+                abi = other.detach();
+            }
+
+            return *this;
+        }
+
+        ~com_ptr() noexcept
+        {
+            release();
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return abi != nullptr;
+        }
+
+        I* get() const noexcept
+        {
+            return abi;
+        }
+
+        I* operator->() const noexcept
+        {
+            return abi;
+        }
+
+        /// Releases what this holds and returns where to put a new reference,
+        /// for an out parameter.
+        I** put() noexcept
+        {
+            release();
+            return &abi;
+        }
+
+        /// put(), for an out parameter that takes a void**, as one that comes
+        /// with an IID does.
+        void** put_void() noexcept
+        {
+            return reinterpret_cast<void**>(put());
+        }
+
+        /// Gives up the reference, which the caller then owns.
+        I* detach() noexcept
+        {
+            return std::exchange(abi, nullptr);
+        }
+
+      private:
+        void release() noexcept
+        {
+            if (auto const old = detach())
+            {
+                old->Release();
+            }
+        }
+
+        I* abi{};
+    };
+
+    /// The destructor of an interface pointer capsule this module made, which
+    /// may hold the last reference to the object.
+    inline void release_interface(PyObject* capsule) noexcept
+    {
+        auto const abi = PyCapsule_GetPointer(capsule, interface_capsule_name);
+        if (!abi)
+        {
+            PyErr_WriteUnraisable(capsule);
+            return;
+        }
+
+        gil_released const guard;
+        static_cast<IUnknown*>(abi)->Release();
+    }
+
+    /// Hands @p abi, and the reference that comes with it, to a new interface
+    /// pointer capsule. The reference is released if that fails.
+    inline PyObject* new_interface_capsule(IUnknown* abi) noexcept
+    {
+        auto const capsule
+            = PyCapsule_New(abi, interface_capsule_name, release_interface);
+        if (!capsule)
+        {
+            abi->Release();
+        }
+
+        return capsule;
+    }
+
+    /// Raises what winrt.runtime.interop.hresult_error() makes of @p hr and
+    /// @p info, the error info of the call that failed with it, which may be
+    /// @c nullptr. The reference to @p info moves in.
+    /// @returns nullptr, for the caller to return.
+    inline PyObject* set_hresult_error(HRESULT hr, IErrorInfo* info) noexcept
+    {
+        auto const capsule = info ? new_interface_capsule(info) : Py_NewRef(Py_None);
+        if (!capsule)
+        {
+            return nullptr;
+        }
+
+        auto const runtime = PyImport_ImportModule("winrt.runtime.interop");
+        if (!runtime)
+        {
+            Py_DECREF(capsule);
+            return nullptr;
+        }
+
+        auto const error = PyObject_CallMethod(
+            runtime, "hresult_error", "lO", static_cast<long>(hr), capsule);
+        Py_DECREF(runtime);
+        Py_DECREF(capsule);
+        if (!error)
+        {
+            return nullptr;
+        }
+
+        PyErr_SetObject(reinterpret_cast<PyObject*>(Py_TYPE(error)), error);
+        Py_DECREF(error);
+
+        return nullptr;
+    }
+
+    /// Raises what winrt.runtime.interop.hresult_error() makes of @p hr and of
+    /// the error info that the call that just failed with it left on this
+    /// thread.
+    /// @returns nullptr, for the caller to return.
+    inline PyObject* set_hresult_error(HRESULT hr) noexcept
+    {
+        // The error info belongs to the thread and the next failure replaces
+        // it, so it is taken before anything else can fail.
+        com_ptr<IErrorInfo> info;
+        if (GetErrorInfo(0, info.put()) != S_OK)
+        {
+            // what a failed call left there is not a reference
+            info.detach();
+        }
+
+        return set_hresult_error(hr, info.detach());
+    }
+
+    /// Puts in @p result the @p I interface of what the interface pointer
+    /// capsule @p capsule holds.
+    /// @returns false with a Python exception set when @p capsule is not one
+    /// or what it holds does not implement @p I.
+    template<typename I>
+    bool query_capsule(PyObject* capsule, com_ptr<I>& result) noexcept
+    {
+        auto const abi = PyCapsule_GetPointer(capsule, interface_capsule_name);
+        if (!abi)
+        {
+            return false;
+        }
+
+        auto const hr = static_cast<IUnknown*>(abi)->QueryInterface(
+            __uuidof(I), result.put_void());
+        if (FAILED(hr))
+        {
+            set_hresult_error(hr);
+            return false;
+        }
+
+        return true;
+    }
+
+    /// The slots of an interop module that has nothing to set up when it is
+    /// executed. It keeps no state, but it exchanges objects and errors with
+    /// winrt-runtime, which refuses any interpreter but the main one, so it
+    /// says the same where it can. The stable ABI of Python 3.11, which its
+    /// wheels are built for, has neither slot: there CPython refuses the
+    /// module in an interpreter with a GIL of its own anyway, winrt-runtime
+    /// refuses the rest, and a free-threaded build, which is what Py_mod_gil
+    /// is for, is never a stable ABI one.
+    ///
+    /// Each slot is looked for by its value: from 3.15 the headers name every
+    /// slot whatever the API, but give the values only to an API that has it.
+    inline PyModuleDef_Slot module_slots[]{
+#ifdef Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED
+        {Py_mod_multiple_interpreters, Py_MOD_MULTIPLE_INTERPRETERS_NOT_SUPPORTED},
+#endif
+#ifdef Py_MOD_GIL_NOT_USED
+        {Py_mod_gil, Py_MOD_GIL_NOT_USED},
+#endif
+        {}};
+} // namespace interop

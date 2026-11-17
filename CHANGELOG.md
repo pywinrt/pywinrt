@@ -14,6 +14,7 @@ at:
 - [WinUI 2](projection/winui2/CHANGELOG.md), `winui2-Microsoft.UI.Xaml`
 - [WebView2](projection/webview2/CHANGELOG.md), with
   `winrt-Microsoft.Web.WebView2.Dll`
+- [`winrt-Microsoft.UI.Xaml.Media.DXInterop`][dxinterop]
 - [`winrt-Windows.ApplicationModel.DataTransfer.Interop`][datatransfer]
 - [`winrt-Windows.Graphics.Capture.Interop`][capture]
 - [`winrt-Windows.Graphics.DirectX.Direct3D11.Interop`][direct3d11]
@@ -25,6 +26,7 @@ at:
 
 The [4.0 release notes][4.0] describe what changed in PyWinRT as a whole.
 
+[dxinterop]: interop/winrt-Microsoft.UI.Xaml.Media.DXInterop/CHANGELOG.md
 [datatransfer]: interop/winrt-Windows.ApplicationModel.DataTransfer.Interop/CHANGELOG.md
 [capture]: interop/winrt-Windows.Graphics.Capture.Interop/CHANGELOG.md
 [direct3d11]: interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop/CHANGELOG.md

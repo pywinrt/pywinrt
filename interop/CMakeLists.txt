@@ -88,6 +88,14 @@ target_link_libraries(_winrt_microsoft_windows_applicationmodel_dynamicdependenc
 install(FILES "${WASDK_FOUNDATION_PATH}/runtimes/win-${PYWINRT_TARGET_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
     DESTINATION "winrt")
 
+# The DXInterop module is for WinUI 3's SwapChainPanel but takes nothing from
+# the App SDK: it declares the panel's native interfaces itself, since the
+# App SDK's header cannot be redistributed, and so builds against the Windows
+# SDK alone.
+pywinrt_add_interop_module(_winrt_microsoft_ui_xaml_media_dxinterop
+    "winrt-Microsoft.UI.Xaml.Media.DXInterop"
+    "py.Microsoft.UI.Xaml.Media.DXInterop.cpp" "winrt")
+
 # The WebView2 module takes WebView2Interop.h, and WebView2.h that it includes,
 # from the WebView2 NuGet package, since WebView2 is redistributed with the app
 # rather than part of Windows. It is released with the webview2 family.
