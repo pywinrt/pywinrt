@@ -149,8 +149,17 @@ namespace py::interp
         /// The activation factory, once it has been asked for and turned out to
         /// be agile. A factory that is not agile belongs to the apartment that
         /// asked for it, so it is fetched again every time, which is what
-        /// C++/WinRT's own factory cache does.
+        /// C++/WinRT's own factory cache does. release_factories() empties it.
         void* factory;
+#ifdef Py_GIL_DISABLED
+        /// An SRWLOCK, held shared from reading @c factory to taking a
+        /// reference to it and exclusive by release_factories() to empty it,
+        /// so that the factory cannot be released between the two. Under the
+        /// GIL, holding the GIL does that. Taken after the cache lock when both
+        /// are. An SRWLOCK is one pointer, which is how it is declared here, so
+        /// that this header needs no <windows.h>.
+        void* factory_lock;
+#endif
         char const* winrt_name;
         char const* iface_name;
         /// The Python protocol this overload stands for, if any.
@@ -440,6 +449,8 @@ namespace py::interp
 
     overload_desc* select_overload(
         member_desc const& member, Py_ssize_t nargs) noexcept;
+
+    bool release_factories() noexcept;
 
     /**
      * Whether @p arg is one of the values a call hands back: an output, or an

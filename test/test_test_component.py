@@ -1364,6 +1364,39 @@ class TestTestComponent(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "^7 is not a valid ApartmentType$"):
             wr.init_apartment(7)  # type: ignore[arg-type]
 
+    def test_uninit_apartment_releases_factories(self) -> None:
+        # The last CoUninitialize() of the process unloads the DLL that
+        # implements a class, so a factory kept past it crashes the next
+        # constructor or static. uninit_apartment() releases the factories
+        # the runtime keeps before it uninitializes. FactoryCounter counts
+        # the live factory objects of CountedFactory, of which TestComponent
+        # makes a new one per request and keeps none, so what it counts is
+        # what the runtime keeps.
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            # one factory for the static and one for the constructor, each
+            # kept for the next call
+            tc.CountedFactory.static_method()
+            tc.CountedFactory()
+            tc.CountedFactory.static_method()
+            tc.CountedFactory()
+            self.assertEqual(tc.FactoryCounter.counted_factory_count, 2)
+        finally:
+            wr.uninit_apartment()
+
+        self.assertEqual(tc.FactoryCounter.counted_factory_count, 0)
+
+        # and the next call asks for its factory again and keeps it
+        wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
+        try:
+            tc.CountedFactory.static_method()
+            tc.CountedFactory.static_method()
+            self.assertEqual(tc.FactoryCounter.counted_factory_count, 1)
+        finally:
+            wr.uninit_apartment()
+
+        self.assertEqual(tc.FactoryCounter.counted_factory_count, 0)
+
     def test_async_action_get_sta(self) -> None:
         wr.init_apartment(wr.ApartmentType.SINGLE_THREADED)
         try:

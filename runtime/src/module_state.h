@@ -12,6 +12,7 @@
 #include <string>
 #include <string_view>
 #include <unordered_map>
+#include <vector>
 
 // internal implementation details for the winrt-runtime module
 
@@ -177,8 +178,8 @@ namespace py::cpp::_winrt
         py::pytype_handle mapping_iter_type;
         /// The descriptor that a projected method is bound as.
         py::pytype_handle projected_method_type;
-        /// Guards every map below, which are the only members that are written
-        /// after the state is built.
+        /// Guards every container below, which are the only members that are
+        /// written after the state is built.
         state_mutex cache_lock;
         /// The Python type of each qualified name that has been resolved. The
         /// key is a copy, because a caller's name need not outlive the call.
@@ -202,6 +203,11 @@ namespace py::cpp::_winrt
         /// by its COM identity, which every wrapper of the object shares.
         /// Borrowed: an export holds the object until it is released.
         std::unordered_map<void*, uint32_t> buffer_exports;
+        /// The overloads whose activation factory get_factory() has kept,
+        /// which is how release_factories() finds them. Borrowed: the
+        /// projections own the overloads. A type kept from before a re-import
+        /// of winrt._winrt can list its overload here, which is not supported.
+        std::vector<py::interp::overload_desc*> kept_factories;
         /// Guards what the projections build after their packages have been
         /// imported. Taken before the cache lock when both are.
         build_mutex build_lock;
