@@ -22,8 +22,8 @@ namespace
             return nullptr;
         }
 
-        IDesktopWindowXamlSourceNative* native{};
-        if (!interop::query_capsule(capsule, &native))
+        interop::com_ptr<IDesktopWindowXamlSourceNative> native;
+        if (!interop::query_capsule(capsule, native))
         {
             return nullptr;
         }
@@ -37,7 +37,6 @@ namespace
             hr = native->AttachToWindow(static_cast<HWND>(hwnd));
         }
 
-        native->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
@@ -48,8 +47,8 @@ namespace
 
     PyObject* get_window_handle(PyObject* /*unused*/, PyObject* capsule) noexcept
     {
-        IDesktopWindowXamlSourceNative* native{};
-        if (!interop::query_capsule(capsule, &native))
+        interop::com_ptr<IDesktopWindowXamlSourceNative> native;
+        if (!interop::query_capsule(capsule, native))
         {
             return nullptr;
         }
@@ -57,7 +56,6 @@ namespace
         HWND hwnd{};
 
         auto const hr = native->get_WindowHandle(&hwnd);
-        native->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
@@ -106,8 +104,8 @@ namespace
             return nullptr;
         }
 
-        IDesktopWindowXamlSourceNative2* native2{};
-        if (!interop::query_capsule(capsule, &native2))
+        interop::com_ptr<IDesktopWindowXamlSourceNative2> native2;
+        if (!interop::query_capsule(capsule, native2))
         {
             PyBuffer_Release(&view);
             return nullptr;
@@ -125,7 +123,6 @@ namespace
                 static_cast<MSG const*>(view.buf), &handled);
         }
 
-        native2->Release();
         PyBuffer_Release(&view);
         if (FAILED(hr))
         {
@@ -139,15 +136,13 @@ namespace
     /// its IUnknown, for as long as something holds a reference to it.
     PyObject* get_identity(PyObject* /*unused*/, PyObject* capsule) noexcept
     {
-        IUnknown* identity{};
-        if (!interop::query_capsule(capsule, &identity))
+        interop::com_ptr<IUnknown> identity;
+        if (!interop::query_capsule(capsule, identity))
         {
             return nullptr;
         }
 
-        identity->Release();
-
-        return PyLong_FromVoidPtr(identity);
+        return PyLong_FromVoidPtr(identity.get());
     }
 
     PyMethodDef module_methods[]{

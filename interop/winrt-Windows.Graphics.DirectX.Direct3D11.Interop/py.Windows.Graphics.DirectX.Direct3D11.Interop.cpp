@@ -3,7 +3,6 @@
 #include <d3d11.h>
 
 #include <cstdint>
-#include <memory>
 
 #if __has_include("windows.graphics.directx.direct3d11.interop.h")
 #include <windows.graphics.directx.direct3d11.interop.h>
@@ -65,18 +64,6 @@ __CRT_UUID_DECL(
 namespace
 {
     using ::Windows::Graphics::DirectX::Direct3D11::IDirect3DDxgiInterfaceAccess;
-
-    struct release_com
-    {
-        void operator()(::IUnknown* p) const noexcept
-        {
-            p->Release();
-        }
-    };
-
-    /// Owns a reference to a COM interface, which it releases.
-    template<typename I>
-    using com_owner = std::unique_ptr<I, release_com>;
 
     PyObject* create_direct3d11_device_from_dxgi_device(
         PyObject* /*unused*/, PyObject* dxgi_device_obj) noexcept
@@ -189,7 +176,7 @@ namespace
             return nullptr;
         }
 
-        ID3D11Device* d3d11_device_abi{};
+        interop::com_ptr<ID3D11Device> d3d11_device;
         HRESULT hr;
 
         {
@@ -203,7 +190,7 @@ namespace
                 nullptr,
                 0,
                 D3D11_SDK_VERSION,
-                &d3d11_device_abi,
+                d3d11_device.put(),
                 nullptr,
                 nullptr);
         }
@@ -217,17 +204,13 @@ namespace
 
         // An error is raised before these are released, when the function
         // returns, so a release cannot replace the error info it takes.
-        com_owner<ID3D11Device> const d3d11_device{d3d11_device_abi};
-
-        IDXGIDevice* dxgi_device_abi{};
+        interop::com_ptr<IDXGIDevice> dxgi_device;
         hr = d3d11_device->QueryInterface(
-            __uuidof(IDXGIDevice), reinterpret_cast<void**>(&dxgi_device_abi));
+            __uuidof(IDXGIDevice), dxgi_device.put_void());
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr, nullptr);
         }
-
-        com_owner<IDXGIDevice> const dxgi_device{dxgi_device_abi};
 
         ::IInspectable* d3d_device{};
         hr = CreateDirect3D11DeviceFromDXGIDevice(dxgi_device.get(), &d3d_device);
@@ -266,26 +249,25 @@ namespace
     template<typename I>
     PyObject* get_dxgi_interface(PyObject* capsule) noexcept
     {
-        IDirect3DDxgiInterfaceAccess* access{};
-        if (!interop::query_capsule(capsule, &access))
+        interop::com_ptr<IDirect3DDxgiInterfaceAccess> access;
+        if (!interop::query_capsule(capsule, access))
         {
             return nullptr;
         }
 
-        I* result{};
+        interop::com_ptr<I> result;
 
-        auto const hr
-            = access->GetInterface(__uuidof(I), reinterpret_cast<void**>(&result));
-        access->Release();
+        auto const hr = access->GetInterface(__uuidof(I), result.put_void());
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
         }
 
-        auto const value = PyLong_FromVoidPtr(result);
-        if (!value)
+        auto const value = PyLong_FromVoidPtr(result.get());
+        if (value)
         {
-            result->Release();
+            // the integer owns the reference now
+            result.detach();
         }
 
         return value;

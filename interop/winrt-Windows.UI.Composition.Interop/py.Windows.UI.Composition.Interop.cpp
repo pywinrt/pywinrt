@@ -61,8 +61,8 @@ namespace
             return nullptr;
         }
 
-        abi::ICompositorDesktopInterop* interop{};
-        if (!interop::query_capsule(compositor, &interop))
+        interop::com_ptr<abi::ICompositorDesktopInterop> interop;
+        if (!interop::query_capsule(compositor, interop))
         {
             return nullptr;
         }
@@ -71,7 +71,6 @@ namespace
 
         auto const hr = interop->CreateDesktopWindowTarget(
             reinterpret_cast<HWND>(hwnd_target), is_topmost, &target);
-        interop->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
