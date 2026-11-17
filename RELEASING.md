@@ -149,17 +149,20 @@ installs the packages it depends on; `release-tags.py` prints them in that
 order.
 
 The upload authenticates one of two ways, and `build-bdist.py --plan` answers
-`trusted=true|false` for a tag. `winui2`, `webview2` and `wasdk`, the families
-in `TRUSTED_PUBLISHING` in `scripts/packages.py`, upload with PyPI trusted
-publishing, a fix to one of their interop modules released on its own
-included: each of their projects names `wheels.yaml` as its publisher, so a
-project new to PyPI needs its pending publisher created there before the tag
-is pushed. A unit written by hand that is listed there on its own, such as
+`trusted=true|false` for a tag. The families in `TRUSTED_PUBLISHING` in
+`scripts/packages.py` upload with PyPI trusted publishing: `winui2`, `webview2`
+and `wasdk`, a fix to one of their interop modules released on its own
+included, and `runtime`, whose units are `runtime` and `table`. Each of their
+projects names `wheels.yaml` as its publisher, so a project new to PyPI needs
+its pending publisher created there before the tag is pushed. A unit written
+by hand that is listed there on its own, such as
 `winrt-Windows.ApplicationModel.DataTransfer.Interop`, does too. Every other
-unit — `runtime`, `table`, `winrt` and the other interop modules that compile
-against the Windows SDK — uploads with the account's token, the
-`PYPI_API_TOKEN` secret. One upload authenticates one way, so a
-run whose units are on both sides is refused before anything is uploaded.
+unit — `winrt` and the other interop modules that compile against the Windows
+SDK — uploads with the account's token, the `PYPI_API_TOKEN` secret. A unit
+moves to trusted publishing when it is next released, once each of its
+projects on PyPI names `wheels.yaml` as its publisher. One upload
+authenticates one way, so a run whose units are on both sides is refused
+before anything is uploaded.
 PyPI also lets the account create only a few new projects a day, about four
 in 2026, so a tag that adds many names can be refused partway through the
 upload. Once the limit resets, re-run the run's `publish` job rather than
