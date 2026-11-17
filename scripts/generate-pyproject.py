@@ -243,6 +243,8 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
         # InteractiveExperiences component owns
         "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences",
     ],
+    # takes a SwapChainPanel, but only as IInspectable
+    "winrt-Microsoft.UI.Xaml.Media.DXInterop": [],
     # only calls the bootstrapper, which has no projected types
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": [],
     "winrt-Microsoft.Web.WebView2.Interop": [
@@ -284,6 +286,11 @@ INTEROP_SUMMARIES = {
     "winrt-Microsoft.UI.Interop": (
         "Converts window, monitor and icon handles to and from the `WindowId`,"
         " `DisplayId` and `IconId` that Windows App SDK APIs take."
+    ),
+    "winrt-Microsoft.UI.Xaml.Media.DXInterop": (
+        "Sets the DXGI swap chain that a WinUI 3 `SwapChainPanel` shows, through"
+        " the panel's native interfaces. It needs the Windows App Runtime, as"
+        " WinUI 3 does, but works with any Windows App SDK release."
     ),
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": (
         "Finds the Windows App Runtime for an unpackaged app and loads it, as"
