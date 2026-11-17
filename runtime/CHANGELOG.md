@@ -8,7 +8,7 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
-## [Unreleased]
+## [4.2.0] - 2026-11-17
 
 ### Added
 - `winrt.runtime.interop.interface_pointer()` gives the COM pointer an object holds.
