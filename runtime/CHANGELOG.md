@@ -18,6 +18,7 @@ repository](../CHANGELOG.md).
 
 ### Fixed
 - A namespace package's delegate raises `ModuleNotFoundError`, not `TypeError`.
+- The `winrt.runtime.interop` functions take `Object` as their type hints say.
 
 ## [4.1.0] - 2026-10-31
 

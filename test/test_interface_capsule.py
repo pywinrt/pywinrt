@@ -23,6 +23,7 @@ import uuid
 import test_winrt.testcomponent as tc
 import winrt._winrt
 from winrt.runtime import interop
+from winrt.system import Object
 from winrt.windows.foundation import IStringable, Point, Uri, WwwFormUrlDecoder
 from winrt.windows.foundation.metadata import ApiInformation
 from winrt.windows.foundation.collections import IIterable
@@ -33,6 +34,8 @@ IID_IUNKNOWN = uuid.UUID("00000000-0000-0000-C000-000000000046")
 IID_ISTRINGABLE = uuid.UUID("96369F54-8EB6-48F0-ABCE-C1B211E627C3")
 IID_IACTIVATIONFACTORY = uuid.UUID("00000035-0000-0000-C000-000000000046")
 IID_IURIRUNTIMECLASSFACTORY = uuid.UUID("44A9796F-723E-4FDF-A218-033E75B0C084")
+# a COM interface that a Uri implements and that is not an IInspectable
+IID_IWEAKREFERENCESOURCE = uuid.UUID("00000038-0000-0000-C000-000000000046")
 
 E_FAIL = -2147467259
 E_INVALIDARG = -2147024809
@@ -160,6 +163,53 @@ class TestInterfaceCapsule(unittest.TestCase):
 
         self.assertIsInstance(wrapped, IStringable)
         self.assertEqual(wrapped.to_string(), "https://example.com/")
+
+    def test_object_names_iinspectable(self) -> None:
+        uri = Uri("https://example.com/")
+
+        self.assertEqual(
+            interop.interface_pointer(interop.as_interface(uri, Object)),
+            interop.interface_pointer(interop.as_interface(uri, IID_IINSPECTABLE)),
+        )
+
+    def test_round_trip_by_object(self) -> None:
+        boxed = winrt._winrt.box_string("boxed")
+
+        wrapped = interop.wrap_interface(interop.as_interface(boxed, Object), Object)
+
+        self.assertIs(type(wrapped), Object)
+        self.assertEqual(wrapped, boxed)
+        self.assertEqual(winrt._winrt.unbox_string(wrapped), "boxed")
+
+    def test_object_from_another_com_interface(self) -> None:
+        # The pointer the capsule holds is not the object's IInspectable.
+        uri = Uri("https://example.com/")
+        capsule = interop.as_interface(uri, IID_IWEAKREFERENCESOURCE)
+
+        wrapped = interop.wrap_interface(capsule, Object)
+
+        self.assertEqual(wrapped, uri)
+        self.assertEqual(wrapped._runtime_class_name_, "Windows.Foundation.Uri")
+
+    def test_object_by_name(self) -> None:
+        uri = Uri("https://example.com/")
+        capsule = interop.as_interface(uri, IID_IWEAKREFERENCESOURCE)
+
+        wrapped: Object = interop.wrap_interface(capsule, "winrt.system.Object")
+
+        self.assertIs(type(wrapped), Object)
+        self.assertEqual(wrapped, uri)
+        self.assertEqual(wrapped._runtime_class_name_, "Windows.Foundation.Uri")
+
+    def test_object_started_in_python(self) -> None:
+        class Stringable(IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        stringable = Stringable()
+        capsule = interop.as_interface(stringable, Object)
+
+        self.assertIs(interop.wrap_interface(capsule, Object), stringable)
 
     def test_interface_class_not_implemented(self) -> None:
         boxed = winrt._winrt.box_int32(1)
@@ -378,6 +428,11 @@ class TestActivationFactory(unittest.TestCase):
         # A static class has a factory although it has no instances, and so no
         # default interface.
         capsule = interop.get_activation_factory(ApiInformation, IID_IACTIVATIONFACTORY)
+
+        self.assertTrue(is_interface_capsule(capsule))
+
+    def test_object(self) -> None:
+        capsule = interop.get_activation_factory(Uri, Object)
 
         self.assertTrue(is_interface_capsule(capsule))
 
