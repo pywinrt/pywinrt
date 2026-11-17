@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "test-winrt-TestComponent"
-version = "4!1.6.1"
+version = "4!1.7.0"
 description = "PyWinRT projection of the TestComponent namespace"
 readme = "README.md"
 license = "MIT"

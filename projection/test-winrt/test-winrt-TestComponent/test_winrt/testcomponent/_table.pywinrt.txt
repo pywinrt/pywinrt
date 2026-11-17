@@ -496,6 +496,18 @@ class TestComponent.Composable composable python_type
         method Two slot=6 inputs=0 outputs=1 declaring=TestComponent.IRequiredTwo shape=4 reverse=22
             out int32 return
 
+class TestComponent.CountedFactory activatable python_type
+    py CountedFactory
+    signature rc(TestComponent.CountedFactory;{f9480a4b-b3c8-5b2e-b31c-5eb494883959})
+    default TestComponent.ICountedFactory
+    requires TestComponent.ICountedFactory
+    factory TestComponent.ICountedFactoryStatics
+    constructor -
+        ctor .ctor slot=6 inputs=0 outputs=1 shape=4
+            out object return
+    method static_method static
+        method StaticMethod slot=6 inputs=0 outputs=0 declaring=TestComponent.ICountedFactoryStatics shape=0 static
+
 class TestComponent.Derived composable python_type
     py Derived
     signature rc(TestComponent.Derived;{ad36eed2-8c47-56c1-9748-ea1cb2f26440})
@@ -555,6 +567,13 @@ delegate Windows.Foundation.EventHandler<System.Int32> concrete
         method Invoke slot=3 inputs=2 outputs=0 shape=51 reverse=4
             in object name=sender
             in int32 name=args
+
+class TestComponent.FactoryCounter static python_type
+    py FactoryCounter
+    factory TestComponent.IFactoryCounterStatics
+    property counted_factory_count static
+        get get_CountedFactoryCount slot=6 inputs=0 outputs=1 declaring=TestComponent.IFactoryCounterStatics shape=4 static
+            out uint32 return
 
 interface TestComponent.IAsyncActionSource
     guid 8e86c8e1-7334-5de5-a8e8-6e9f270b6e66
@@ -671,6 +690,12 @@ interface TestComponent.IComposableFactory
 interface TestComponent.IComposableStatics
     guid 2050a66f-2401-54fc-8c64-d21324a72cba
 
+interface TestComponent.ICountedFactory
+    guid f9480a4b-b3c8-5b2e-b31c-5eb494883959
+
+interface TestComponent.ICountedFactoryStatics
+    guid 5e513903-e7d1-57a0-8510-175c5a0e6025
+
 interface TestComponent.IDerived
     guid ad36eed2-8c47-56c1-9748-ea1cb2f26440
 
@@ -685,6 +710,9 @@ interface TestComponent.IDerivedOverrideFactory
 
 interface TestComponent.IDerivedOverrideOverrides
     guid 29af5e3f-1046-5a3e-88c7-a2eadac91378
+
+interface TestComponent.IFactoryCounterStatics
+    guid 2fd8558a-953d-5291-b670-d3da692b39bf
 
 interface Windows.Foundation.Collections.IIterable<System.Object> concrete iterable
     py winrt.windows.foundation.collections._IIterable[Object]

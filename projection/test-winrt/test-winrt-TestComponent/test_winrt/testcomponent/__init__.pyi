@@ -20,8 +20,10 @@ __all__ = [
     "AsyncOperationSource",
     "Class",
     "Composable",
+    "CountedFactory",
     "Derived",
     "DerivedOverride",
+    "FactoryCounter",
     "OverloadClass",
     "Override",
     "ProtectedMembers",
@@ -242,6 +244,15 @@ class Composable(IRequiredFour, IRequiredThree, IRequiredTwo, IRequiredOne, winr
     @typing.final
     def value(self, value: winrt.system.Int32 | typing.SupportsIndex) -> None: ...
 
+@typing.final
+class CountedFactory_Static(winrt.system.Object_Static):
+    # System.Void TestComponent.CountedFactory::StaticMethod()
+    def static_method(cls) -> None: ...
+
+@typing.final
+class CountedFactory(winrt.system.Object, metaclass=CountedFactory_Static):
+    def __new__(cls) -> typing.Self: ...
+
 class Derived_Static(Composable_Static):
     ...
 
@@ -264,6 +275,17 @@ class DerivedOverride(Override, metaclass=DerivedOverride_Static):
     @typing.final
     # System.Void TestComponent.DerivedOverride::remove_DerivedOverridableCalled(Windows.Foundation.EventRegistrationToken)
     def remove_derived_overridable_called(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+
+@typing.final
+class FactoryCounter_Static(winrt.system.Object_Static):
+    # System.UInt32 TestComponent.FactoryCounter::get_CountedFactoryCount()
+    @_property
+    def counted_factory_count(cls) -> winrt.system.UInt32: ...
+
+@typing.final
+class FactoryCounter(winrt.system.Object, metaclass=FactoryCounter_Static):
+    def __new__(cls, _: typing.Never, /) -> typing.Self:
+        """A class of static members only, so there is nothing to create."""
 
 class OverloadClass_Static(winrt.system.Object_Static):
     def __new__(mcls, name: str, bases: tuple[type, ...], namespace: dict[str, typing.Any], /, *, runtime_class_name: str = ...) -> OverloadClass_Static: ...
