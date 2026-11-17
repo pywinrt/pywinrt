@@ -1564,6 +1564,31 @@
         ]
       },
       {
+        "name": "CountedFactory",
+        "methods": [
+          {
+            "signature": "System.Void TestComponent.CountedFactory::.ctor()",
+            "name": ".ctor",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.Void TestComponent.CountedFactory::StaticMethod()",
+            "name": "StaticMethod",
+            "return": {
+              "type": {
+                "name": "System.Void"
+              }
+            },
+            "parameters": []
+          }
+        ]
+      },
+      {
         "name": "Derived",
         "methods": [
           {
@@ -1651,6 +1676,21 @@
                 }
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "FactoryCounter",
+        "methods": [
+          {
+            "signature": "System.UInt32 TestComponent.FactoryCounter::get_CountedFactoryCount()",
+            "name": "get_CountedFactoryCount",
+            "return": {
+              "type": {
+                "name": "System.UInt32"
+              }
+            },
+            "parameters": []
           }
         ]
       },

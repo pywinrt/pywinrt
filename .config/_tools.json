@@ -12,5 +12,5 @@
     "Microsoft.WindowsAppSDK.Search": "2.6.5",
     "Microsoft.WindowsAppSDK.Widgets": "2.6.5",
     "Microsoft.WindowsAppSDK.WinUI": "2.6.5",
-    "PyWinRT.TestWinRT": "1.6.1"
+    "PyWinRT.TestWinRT": "1.7.0"
 }
