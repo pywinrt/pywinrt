@@ -44,6 +44,27 @@ object for the interface with [`as_interface()`](#as_interface), raising
 class holding the capsule. A type checker then types the result of `as_()` as
 that class.
 
+If the class also defines an `_interface_capsule_()` method that returns the
+capsule it holds, [`interface_pointer()`](#interface_pointer) accepts its
+instances too. The method must return the same capsule every time and keep it
+for the life of the instance, because that capsule is what keeps the pointer
+valid.
+
+```python
+@final
+class SwapChainPanelNative:
+    __slots__ = ("_native",)
+
+    @classmethod
+    def _query_interface_(cls, obj: Object) -> Self:
+        self = super().__new__(cls)
+        self._native = _runtime.as_interface(obj, _IID_ISWAPCHAINPANELNATIVE)
+        return self
+
+    def _interface_capsule_(self) -> _runtime.InterfaceCapsule:
+        return self._native
+```
+
 For a component of your own, declare its interfaces in IDL instead.
 [Its projection](../versioning.md#projections-of-your-own-components) then
 defines `_query_interface_()` for them, as for any projected interface.
@@ -125,6 +146,48 @@ Raises `OSError` if the object does not implement the interface that an
 instance of `type` holds.
 
 !!! version-added "Added in version 4.0"
+
+## `interface_pointer`
+
+```python
+interface_pointer(obj: Object | InterfaceCapsule | interop object, /) -> int
+```
+
+The raw COM pointer that `obj` holds, as an `int`, for a library that takes
+one, such as a graphics library that presents to a WinUI 3 `SwapChainPanel`.
+
+| Parameter | Type | Description |
+|---|---|---|
+| `obj` | [`Object`](system.md#object), [`InterfaceCapsule`](#interfacecapsule) or an interop object | A WinRT object, whose pointer is to its default interface, or to the interface itself for an interface type such as `IStringable`; an interface pointer capsule; or an instance of an interop class that defines `_interface_capsule_()` (see [A type that `as_()` takes](#a-type-that-as_-takes)). |
+
+The pointer is borrowed: no reference is added, and it is valid only while
+`obj` is alive. A receiver that keeps it must add a reference of its own.
+
+The object is not asked for any other interface. A borrowed pointer to an
+interface that is queried for would have nothing keeping it alive, and a
+*tear-off* interface would be freed at once. To get a specific interface, call
+[`as_interface()`](#as_interface) first and pass the capsule it returns.
+
+```python
+from uuid import UUID
+
+from winrt.runtime.interop import as_interface, interface_pointer
+
+capsule = as_interface(obj, UUID("..."))
+pointer = interface_pointer(capsule)  # valid while capsule is alive
+```
+
+Raises:
+
+- `TypeError` if `obj` is none of these, or if its `_interface_capsule_()`
+  returns something that is not a capsule. A Python class that implements a
+  WinRT interface is refused too: it holds no COM pointer, so pass the capsule
+  that `as_interface()` returns for it.
+- `ValueError` if a capsule is not an interface pointer capsule.
+- `RuntimeError` if `obj` is an instance of a Python subclass of a composable
+  class whose `__init__()` has not yet called `super().__init__()`.
+
+!!! version-added "Added in version 4.2"
 
 ## `hresult_error`
 

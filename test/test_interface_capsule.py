@@ -249,6 +249,123 @@ class TestInterfaceCapsule(unittest.TestCase):
             )
 
 
+def reference_count(pointer: int) -> int:
+    """
+    The reference count of the COM object at ``pointer``, which AddRef() and
+    Release() each return.
+    """
+    vtable = ctypes.cast(pointer, ctypes.POINTER(ctypes.POINTER(ctypes.c_void_p)))
+    prototype = ctypes.WINFUNCTYPE(ctypes.c_ulong, ctypes.c_void_p)
+    prototype(vtable[0][1])(pointer)
+    return int(prototype(vtable[0][2])(pointer))
+
+
+def capsule_pointer(capsule: object) -> int:
+    get_pointer = ctypes.pythonapi.PyCapsule_GetPointer
+    get_pointer.argtypes = (ctypes.py_object, ctypes.c_char_p)
+    get_pointer.restype = ctypes.c_void_p
+    return int(get_pointer(capsule, INTERFACE_CAPSULE_NAME))
+
+
+class Holder:
+    """An interop class, as far as interface_pointer() is concerned."""
+
+    def __init__(self, capsule: interop.InterfaceCapsule) -> None:
+        self.capsule = capsule
+
+    def _interface_capsule_(self) -> interop.InterfaceCapsule:
+        return self.capsule
+
+
+class TestInterfacePointer(unittest.TestCase):
+    def test_capsule(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IStringable)
+
+        self.assertEqual(interop.interface_pointer(capsule), capsule_pointer(capsule))
+
+    def test_object_is_its_default_interface(self) -> None:
+        uri = Uri("https://example.com/")
+
+        self.assertEqual(
+            interop.interface_pointer(uri),
+            capsule_pointer(interop.as_interface(uri, Uri)),
+        )
+
+    def test_interface_wrapper_is_that_interface(self) -> None:
+        stringable = Uri("https://example.com/").as_(IStringable)
+
+        self.assertEqual(
+            interop.interface_pointer(stringable),
+            capsule_pointer(interop.as_interface(stringable, IStringable)),
+        )
+
+    def test_interop_object(self) -> None:
+        capsule = interop.as_interface(Uri("https://example.com/"), IStringable)
+
+        self.assertEqual(
+            interop.interface_pointer(Holder(capsule)), capsule_pointer(capsule)
+        )
+
+    def test_adds_no_reference(self) -> None:
+        uri = Uri("https://example.com/")
+        capsule = interop.as_interface(uri, IStringable)
+        pointer = capsule_pointer(capsule)
+        before = reference_count(pointer)
+
+        for obj in (uri, capsule, Holder(capsule)):
+            with self.subTest(obj=obj):
+                interop.interface_pointer(obj)
+                self.assertEqual(reference_count(pointer), before)
+
+    def test_not_an_interface_capsule(self) -> None:
+        with self.assertRaisesRegex(TypeError, "must return an interface pointer"):
+            interop.interface_pointer(Holder(42))  # type: ignore[arg-type]
+
+    def test_wrong_capsule_name(self) -> None:
+        with self.assertRaises(ValueError):
+            interop.interface_pointer(datetime.datetime_CAPI)  # type: ignore[arg-type]
+
+        with self.assertRaises(ValueError):
+            interop.interface_pointer(Holder(datetime.datetime_CAPI))  # type: ignore[arg-type]
+
+    def test_not_an_object(self) -> None:
+        for obj in (None, 42, object()):
+            with (
+                self.subTest(obj=obj),
+                self.assertRaisesRegex(
+                    TypeError, r"^interface_pointer\(\) takes a WinRT object"
+                ),
+            ):
+                interop.interface_pointer(obj)  # type: ignore[arg-type]
+
+    def test_composed_subclass(self) -> None:
+        class Derived(tc.Composable):
+            pass
+
+        derived = Derived()
+
+        self.assertEqual(
+            interop.interface_pointer(derived),
+            capsule_pointer(interop.as_interface(derived, tc.Composable)),
+        )
+
+    def test_python_implementation(self) -> None:
+        class Stringable(IStringable):
+            def to_string(self) -> str:
+                return "stringable"
+
+        with self.assertRaisesRegex(TypeError, "holds no COM pointer"):
+            interop.interface_pointer(Stringable())
+
+    def test_interface_capsule_raises(self) -> None:
+        class Broken:
+            def _interface_capsule_(self) -> interop.InterfaceCapsule:
+                raise LookupError("broken")
+
+        with self.assertRaisesRegex(LookupError, "broken"):
+            interop.interface_pointer(Broken())
+
+
 class TestActivationFactory(unittest.TestCase):
     def test_factory(self) -> None:
         capsule = interop.get_activation_factory(Uri, IID_IACTIVATIONFACTORY)
@@ -310,6 +427,7 @@ class TestPublicModule(unittest.TestCase):
             interop.get_activation_factory, winrt._winrt.get_activation_factory
         )
         self.assertIs(interop.wrap_interface, winrt._winrt.wrap_interface)
+        self.assertIs(interop.interface_pointer, winrt._winrt.interface_pointer)
         self.assertIs(interop.hresult_error, winrt._winrt.hresult_error)
 
 

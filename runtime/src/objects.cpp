@@ -1371,6 +1371,77 @@ namespace
 
         return info;
     }
+
+    /**
+     * Checks whether @p obj is a wrapped WinRT object, including an instance
+     * of a Python subclass of a composable class.
+     *
+     * @returns -1 with a Python error set.
+     */
+    int is_winrt_object(PyObject* obj) noexcept
+    {
+        auto const object_type = py::get_object_type();
+        if (!object_type)
+        {
+            return -1;
+        }
+
+        return PyObject_TypeCheck(obj, object_type);
+    }
+
+    /**
+     * Gets the pointer from an interface pointer capsule, without adding a
+     * reference. @p obj is either the capsule itself, or an interop class
+     * instance whose _interface_capsule_() method returns the capsule.
+     *
+     * @param keep Set to the capsule returned by _interface_capsule_(), if
+     * that was called.
+     * @returns 1 with @p result set, 0 if @p obj is neither kind of object,
+     * or -1 with a Python error set.
+     */
+    int capsule_interface(PyObject* obj, py::pyobj_handle& keep, void** result) noexcept
+    {
+        if (!PyCapsule_CheckExact(obj))
+        {
+            py::pyobj_handle method;
+            if (PyObject_GetOptionalAttrString(obj, "_interface_capsule_", method.put())
+                < 0)
+            {
+                return -1;
+            }
+
+            if (!method)
+            {
+                return 0;
+            }
+
+            keep.attach(PyObject_CallNoArgs(method.get()));
+            if (!keep)
+            {
+                return -1;
+            }
+
+            if (!PyCapsule_CheckExact(keep.get()))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "_interface_capsule_() must return an interface pointer "
+                    "capsule, not '%s'",
+                    Py_TYPE(keep.get())->tp_name);
+                return -1;
+            }
+
+            obj = keep.get();
+        }
+
+        *result = PyCapsule_GetPointer(obj, py::interp::interface_capsule_name);
+        if (!*result)
+        {
+            return -1;
+        }
+
+        return 1;
+    }
 } // namespace
 
 /**
@@ -1617,5 +1688,77 @@ namespace py::cpp::_winrt
         }
 
         return wrap_as(value, *info);
+    }
+
+    /**
+     * interface_pointer(obj) - the raw COM pointer that @p obj holds, as an
+     * int. @p obj is one of:
+     *
+     * - an interface pointer capsule: the pointer in it;
+     * - a WinRT object: its default interface (for an interface type, that
+     *   interface);
+     * - an interop class instance: the pointer in the capsule its
+     *   _interface_capsule_() returns.
+     *
+     * The pointer is borrowed: no reference is added, and it is valid only
+     * while @p obj is alive. A receiver that keeps it must AddRef() it.
+     *
+     * No QueryInterface() is done. A borrowed pointer to a queried interface
+     * would have nothing keeping it alive, and a tear-off interface would be
+     * freed at once. To get a specific interface, call as_interface() first
+     * and pass the capsule it returns.
+     */
+    PyObject* interface_pointer(PyObject* /*unused*/, PyObject* obj) noexcept
+    {
+        auto const is_object = is_winrt_object(obj);
+        if (is_object < 0)
+        {
+            return nullptr;
+        }
+
+        if (is_object)
+        {
+            auto const abi = py::interp::instance_abi(obj);
+            if (!abi)
+            {
+                return nullptr;
+            }
+
+            return PyLong_FromVoidPtr(abi);
+        }
+
+        py::pyobj_handle keep;
+        void* held{};
+
+        auto const found = capsule_interface(obj, keep, &held);
+        if (found < 0)
+        {
+            return nullptr;
+        }
+
+        if (!found)
+        {
+            // A Python implementation of a WinRT interface holds no COM
+            // pointer: as_interface() makes a COM object for it each time.
+            if (py::interp::implements_interfaces(Py_TYPE(obj)))
+            {
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "interface_pointer() cannot take '%s', a Python "
+                    "implementation of a WinRT interface, which holds no COM "
+                    "pointer; pass the capsule that as_interface() returns for it",
+                    Py_TYPE(obj)->tp_name);
+                return nullptr;
+            }
+
+            PyErr_Format(
+                PyExc_TypeError,
+                "interface_pointer() takes a WinRT object, an interface pointer "
+                "capsule or an object with _interface_capsule_(), not '%s'",
+                Py_TYPE(obj)->tp_name);
+            return nullptr;
+        }
+
+        return PyLong_FromVoidPtr(held);
     }
 } // namespace py::cpp::_winrt

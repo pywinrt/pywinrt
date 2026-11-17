@@ -10,6 +10,9 @@ repository](../CHANGELOG.md).
 
 ## [Unreleased]
 
+### Added
+- `winrt.runtime.interop.interface_pointer()` gives the COM pointer an object holds.
+
 ### Changed
 - The error a member raises for a missing Windows SDK package names the package.
 

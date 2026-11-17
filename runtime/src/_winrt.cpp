@@ -969,6 +969,7 @@ namespace py::cpp::_winrt
     PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
     PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept;
     PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+    PyObject* interface_pointer(PyObject* /*unused*/, PyObject* obj) noexcept;
     PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept;
 
     static PyMethodDef module_methods[]{
@@ -1058,6 +1059,13 @@ namespace py::cpp::_winrt
          wrap_interface,
          METH_VARARGS,
          PyDoc_STR("The WinRT object an interface pointer capsule holds.")},
+        {"interface_pointer",
+         interface_pointer,
+         METH_O,
+         PyDoc_STR(
+             "The raw COM pointer an object holds, as an int. It is borrowed: no "
+             "reference is added, it is valid only while the object is alive, and "
+             "a receiver that keeps it must AddRef() it.")},
         {"hresult_error",
          hresult_error,
          METH_VARARGS,
