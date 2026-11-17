@@ -42,8 +42,18 @@ uninit_apartment() -> None
 
 Uninitializes the WinRT runtime.
 
-Not necessary on thread exit, but can be used to uninitialize and re-initialize
-a thread if needed.
+A thread that called [`init_apartment()`](#init_apartment) calls this before it
+exits, and a thread can call it to uninitialize and re-initialize itself. When
+it uninitializes the last apartment of the process, COM unloads the DLLs that
+implement the classes, so:
+
+- No WinRT object is kept past it. One that is crashes the process when it is
+  used or collected.
+- No other thread uses WinRT while it runs.
+- COM is uninitialized through this function only. It lets go of the
+  activation factories that `winrt-runtime` keeps before it uninitializes, and
+  a call to `CoUninitialize()` from anywhere else, such as `pythoncom` or
+  `ctypes`, does not. Neither does a thread that exits without calling it.
 
 !!! version-added "Added in version 3.0"
 

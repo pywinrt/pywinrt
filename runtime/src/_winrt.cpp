@@ -731,7 +731,21 @@ namespace py::cpp::_winrt
     static PyObject* uninit_apartment(
         PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
-        winrt::uninit_apartment();
+        // The last CoUninitialize() of the process unloads the DLLs that
+        // implement the classes, so a factory kept past it would point into
+        // code that is no longer there. The runtime's own are let go of first,
+        // and so are the ones C++/WinRT keeps, which boxing a value asks for.
+        if (!py::interp::release_factories())
+        {
+            return nullptr;
+        }
+
+        {
+            auto _gil = py::release_gil();
+            winrt::clear_factory_cache();
+            winrt::uninit_apartment();
+        }
+
         Py_RETURN_NONE;
     }
 
@@ -927,6 +941,7 @@ namespace py::cpp::_winrt
         std::destroy_at(&state->type_entries);
         std::destroy_at(&state->generic_types);
         std::destroy_at(&state->buffer_exports);
+        std::destroy_at(&state->kept_factories);
 
         std::destroy_at(&state->projections);
     }
@@ -1097,6 +1112,7 @@ namespace py::cpp::_winrt
         std::construct_at(&state->type_entries);
         std::construct_at(&state->generic_types);
         std::construct_at(&state->buffer_exports);
+        std::construct_at(&state->kept_factories);
 
         // The slot below says the same, but CPython only enforces it in an
         // interpreter configured to check, which a legacy subinterpreter on a
