@@ -6,6 +6,7 @@
 
 #include <atomic>
 #include <new>
+#include <utility>
 
 // The WebView2 headers are made by MIDL, whose MIDL_INTERFACE names the IID
 // with __declspec(uuid), which GCC does not have.
@@ -33,10 +34,10 @@ namespace
     class drop_target final : public IDropTarget
     {
       public:
-        /// The reference to @p controller moves in.
         drop_target(
-            ICoreWebView2CompositionControllerInterop2* controller, HWND hwnd) noexcept
-            : controller{controller}, hwnd{hwnd}
+            interop::com_ptr<ICoreWebView2CompositionControllerInterop2> controller,
+            HWND hwnd) noexcept
+            : controller{std::move(controller)}, hwnd{hwnd}
         {
         }
 
@@ -110,10 +111,7 @@ namespace
         }
 
       private:
-        ~drop_target()
-        {
-            controller->Release();
-        }
+        ~drop_target() = default;
 
         /// OLE gives the point in screen coordinates.
         POINT to_client(POINTL point) const noexcept
@@ -125,7 +123,7 @@ namespace
         }
 
         std::atomic<ULONG> references{1};
-        ICoreWebView2CompositionControllerInterop2* const controller;
+        interop::com_ptr<ICoreWebView2CompositionControllerInterop2> const controller;
         HWND const hwnd;
     };
 
@@ -180,8 +178,8 @@ namespace
             return nullptr;
         }
 
-        ICoreWebView2CompositionControllerInterop2* controller{};
-        if (!interop::query_capsule(controller_capsule, &controller))
+        interop::com_ptr<ICoreWebView2CompositionControllerInterop2> controller;
+        if (!interop::query_capsule(controller_capsule, controller))
         {
             return nullptr;
         }
@@ -191,22 +189,20 @@ namespace
         auto hr = OleInitialize(nullptr);
         if (FAILED(hr))
         {
-            controller->Release();
             return interop::set_hresult_error(hr);
         }
 
-        auto const target = new (std::nothrow) drop_target{controller, hwnd};
+        interop::com_ptr<drop_target> const target{
+            new (std::nothrow) drop_target{std::move(controller), hwnd}};
         if (!target)
         {
-            controller->Release();
             OleUninitialize();
             return PyErr_NoMemory();
         }
 
         // On success, OLE holds a reference of its own until the window's
         // drop target is revoked.
-        hr = RegisterDragDrop(hwnd, target);
-        target->Release();
+        hr = RegisterDragDrop(hwnd, target.get());
         if (FAILED(hr))
         {
             auto const error = interop::set_hresult_error(hr);

@@ -21,6 +21,7 @@
 #include <oleauto.h>
 
 #include <cstddef>
+#include <utility>
 
 // The version of the Python C API a module is compiled against: the stable
 // ABI's where it is built for that, and otherwise that of the Python it is
@@ -60,6 +61,87 @@ namespace interop
 
       private:
         PyThreadState* state;
+    };
+
+    /// Owns a reference to the COM interface @p I, or nothing, and releases it
+    /// when it goes out of scope.
+    template<typename I>
+    class com_ptr
+    {
+      public:
+        com_ptr() noexcept = default;
+
+        /// The reference to @p abi moves in.
+        explicit com_ptr(I* abi) noexcept : abi{abi}
+        {
+        }
+
+        com_ptr(com_ptr&& other) noexcept : abi{other.detach()}
+        {
+        }
+
+        com_ptr& operator=(com_ptr&& other) noexcept
+        {
+            if (this != &other)
+            {
+                release();
+                abi = other.detach();
+            }
+
+            return *this;
+        }
+
+        ~com_ptr() noexcept
+        {
+            release();
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return abi != nullptr;
+        }
+
+        I* get() const noexcept
+        {
+            return abi;
+        }
+
+        I* operator->() const noexcept
+        {
+            return abi;
+        }
+
+        /// Releases what this holds and returns where to put a new reference,
+        /// for an out parameter.
+        I** put() noexcept
+        {
+            release();
+            return &abi;
+        }
+
+        /// put(), for an out parameter that takes a void**, as one that comes
+        /// with an IID does.
+        void** put_void() noexcept
+        {
+            return reinterpret_cast<void**>(put());
+        }
+
+        /// Gives up the reference, which the caller then owns.
+        I* detach() noexcept
+        {
+            return std::exchange(abi, nullptr);
+        }
+
+      private:
+        void release() noexcept
+        {
+            if (auto const old = detach())
+            {
+                old->Release();
+            }
+        }
+
+        I* abi{};
     };
 
     /// The destructor of an interface pointer capsule this module made, which
@@ -133,21 +215,22 @@ namespace interop
     {
         // The error info belongs to the thread and the next failure replaces
         // it, so it is taken before anything else can fail.
-        IErrorInfo* info{};
-        if (GetErrorInfo(0, &info) != S_OK)
+        com_ptr<IErrorInfo> info;
+        if (GetErrorInfo(0, info.put()) != S_OK)
         {
-            info = nullptr;
+            // what a failed call left there is not a reference
+            info.detach();
         }
 
-        return set_hresult_error(hr, info);
+        return set_hresult_error(hr, info.detach());
     }
 
-    /// The @p I interface of what the interface pointer capsule @p capsule
-    /// holds, which the caller owns a reference to.
+    /// Puts in @p result the @p I interface of what the interface pointer
+    /// capsule @p capsule holds.
     /// @returns false with a Python exception set when @p capsule is not one
     /// or what it holds does not implement @p I.
     template<typename I>
-    bool query_capsule(PyObject* capsule, I** result) noexcept
+    bool query_capsule(PyObject* capsule, com_ptr<I>& result) noexcept
     {
         auto const abi = PyCapsule_GetPointer(capsule, interface_capsule_name);
         if (!abi)
@@ -156,7 +239,7 @@ namespace interop
         }
 
         auto const hr = static_cast<IUnknown*>(abi)->QueryInterface(
-            __uuidof(I), reinterpret_cast<void**>(result));
+            __uuidof(I), result.put_void());
         if (FAILED(hr))
         {
             set_hresult_error(hr);

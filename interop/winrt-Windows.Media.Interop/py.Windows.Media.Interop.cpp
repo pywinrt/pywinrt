@@ -26,8 +26,8 @@ namespace
             return nullptr;
         }
 
-        ISystemMediaTransportControlsInterop* factory{};
-        if (!interop::query_capsule(factory_capsule, &factory))
+        interop::com_ptr<ISystemMediaTransportControlsInterop> factory;
+        if (!interop::query_capsule(factory_capsule, factory))
         {
             return nullptr;
         }
@@ -38,7 +38,6 @@ namespace
             static_cast<HWND>(hwnd),
             IID_ISystemMediaTransportControls,
             reinterpret_cast<void**>(&controls));
-        factory->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);

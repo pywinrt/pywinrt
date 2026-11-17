@@ -57,8 +57,8 @@ namespace
             return nullptr;
         }
 
-        IGraphicsCaptureItemInterop* factory{};
-        if (!interop::query_capsule(factory_capsule, &factory))
+        interop::com_ptr<IGraphicsCaptureItemInterop> factory;
+        if (!interop::query_capsule(factory_capsule, factory))
         {
             return nullptr;
         }
@@ -69,7 +69,6 @@ namespace
             static_cast<HMONITOR>(hmonitor),
             IID_IGraphicsCaptureItem,
             reinterpret_cast<void**>(&item));
-        factory->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
@@ -95,8 +94,8 @@ namespace
         }
 
         // https://github.com/microsoft/Windows.UI.Composition-Win32-Samples/blob/a59e7586c0bd1a967e1e25f6ca0363e20151afe5/cpp/ScreenCaptureforHWND/ScreenCaptureforHWND/capture.interop.h#L11
-        IGraphicsCaptureItemInterop* factory{};
-        if (!interop::query_capsule(factory_capsule, &factory))
+        interop::com_ptr<IGraphicsCaptureItemInterop> factory;
+        if (!interop::query_capsule(factory_capsule, factory))
         {
             return nullptr;
         }
@@ -107,7 +106,6 @@ namespace
             static_cast<HWND>(hwnd),
             IID_IGraphicsCaptureItem,
             reinterpret_cast<void**>(&item));
-        factory->Release();
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);

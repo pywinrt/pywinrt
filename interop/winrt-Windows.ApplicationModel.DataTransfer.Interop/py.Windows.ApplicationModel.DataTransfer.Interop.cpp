@@ -36,7 +36,9 @@ namespace
 
     /// Parses the (factory, hwnd) arguments both functions take.
     bool parse_args(
-        PyObject* args, IDataTransferManagerInterop** factory, HWND* hwnd) noexcept
+        PyObject* args,
+        interop::com_ptr<IDataTransferManagerInterop>& factory,
+        HWND* hwnd) noexcept
     {
         PyObject* factory_capsule;
         PyObject* hwnd_obj;
@@ -63,9 +65,9 @@ namespace
 
     PyObject* get_for_window(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        IDataTransferManagerInterop* factory{};
+        interop::com_ptr<IDataTransferManagerInterop> factory;
         HWND hwnd{};
-        if (!parse_args(args, &factory, &hwnd))
+        if (!parse_args(args, factory, &hwnd))
         {
             return nullptr;
         }
@@ -78,7 +80,6 @@ namespace
             interop::gil_released const guard;
             hr = factory->GetForWindow(
                 hwnd, IID_IDataTransferManager, reinterpret_cast<void**>(&manager));
-            factory->Release();
         }
         if (FAILED(hr))
         {
@@ -90,9 +91,9 @@ namespace
 
     PyObject* show_share_ui_for_window(PyObject* /*unused*/, PyObject* args) noexcept
     {
-        IDataTransferManagerInterop* factory{};
+        interop::com_ptr<IDataTransferManagerInterop> factory;
         HWND hwnd{};
-        if (!parse_args(args, &factory, &hwnd))
+        if (!parse_args(args, factory, &hwnd))
         {
             return nullptr;
         }
@@ -103,7 +104,6 @@ namespace
             // sheet, and its handler may be Python.
             interop::gil_released const guard;
             hr = factory->ShowShareUIForWindow(hwnd);
-            factory->Release();
         }
         if (FAILED(hr))
         {
