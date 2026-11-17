@@ -95,12 +95,13 @@ An interface of a WinRT object, as an interface pointer capsule, or `None` for
 | Parameter | Type | Description |
 |---|---|---|
 | `obj` | [`Object`](system.md#object) | A WinRT object, or a Python implementation of a projected interface. |
-| `iid` | `uuid.UUID` or `type` | The IID of the interface to query for, or a projected interface or runtime class, which stands for the interface an instance of it holds: the interface itself, or the class's default interface. |
+| `iid` | `uuid.UUID` or `type` | The IID of the interface to query for, or a projected interface or runtime class, which stands for the interface an instance of it holds: the interface itself, or the class's default interface. [`Object`](system.md#object) stands for *IInspectable*. |
 
 Raises `OSError` if the object does not implement the interface and
-`TypeError` if `iid` is a type that is neither a projected interface nor a
-runtime class. A parameterized interface such as `IVector` has no IID of its
-own until it is given type arguments, so it is named by a `uuid.UUID`.
+`TypeError` if `iid` is a type that is neither a projected interface, a
+runtime class nor `Object`. A parameterized interface such as `IVector` has no
+IID of its own until it is given type arguments, so it is named by a
+`uuid.UUID`.
 
 !!! version-added "Added in version 4.0"
 
@@ -119,7 +120,7 @@ is the first WinRT call in a process works.
 | Parameter | Type | Description |
 |---|---|---|
 | `cls` | `type` | A projected runtime class, a static class included. |
-| `iid` | `uuid.UUID` or `type` | The IID of the interface to query the factory for, or a projected interface. |
+| `iid` | `uuid.UUID` or `type` | The IID of the interface to query the factory for, or a projected interface, or [`Object`](system.md#object), which stands for *IInspectable*. |
 
 Raises `OSError` if the class is not registered or its factory does not
 implement the interface, and `TypeError` if `cls` is not a runtime class or if
@@ -140,7 +141,7 @@ The WinRT object an interface pointer capsule holds, as a projected type, or
 | Parameter | Type | Description |
 |---|---|---|
 | `capsule` | [`InterfaceCapsule`](#interfacecapsule) | An interface pointer capsule. |
-| `type` | `type` or `str` | The projected interface or runtime class to wrap the object as, or the qualified name it is bound to, such as `"winrt.windows.foundation.Uri"`. |
+| `type` | `type` or `str` | The projected interface or runtime class to wrap the object as, or the qualified name it is bound to, such as `"winrt.windows.foundation.Uri"`. [`Object`](system.md#object), or the name `"winrt.system.Object"`, wraps it the way a member typed `Object` returns it. |
 
 Raises `OSError` if the object does not implement the interface that an
 instance of `type` holds.
