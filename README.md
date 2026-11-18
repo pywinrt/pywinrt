@@ -10,6 +10,15 @@ PyWinRT lets Python call Windows Runtime (WinRT) APIs: Bluetooth, USB and
 serial devices, cameras, notifications, screen capture, speech and many other
 APIs that Windows offers apps.
 
+- **A projection:** it is generated from the WinRT metadata, so every API of
+  the Windows SDK is there, and the Windows App SDK's too.
+- **Pythonic:** `snake_case` names, collections that are sequences and
+  mappings, async operations you `await` and any bytes-like object where WinRT
+  takes a buffer, as [the WinRT type system](https://pywinrt.readthedocs.io/en/latest/types/)
+  describes.
+- **Fully typed:** every package ships type hints, so editors complete your
+  code and type checkers check it.
+
 ## Installing
 
 Each part of the WinRT API is a package of its own on PyPI. Install the ones
@@ -51,8 +60,7 @@ says how to package them.
 - **Moving from 3.x:** read the
   [4.0 release notes](https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/)
   and the [migration guide](scripts/3to4/README.md).
-- **Built on PyWinRT:** [Bleak](https://github.com/hbldh/bleak),
-  [Hermes Agent](https://github.com/NousResearch/hermes-agent) and
+- **Built on PyWinRT:** [Bleak](https://github.com/hbldh/bleak) and
   [Windows-Toasts](https://github.com/DatGuy1/Windows-Toasts).
 - **Support:** ask questions in
   [Discussions](https://github.com/pywinrt/pywinrt/discussions) and report bugs
