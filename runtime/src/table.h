@@ -7,11 +7,15 @@
 // table-format.md; this is the reader, and table.cpp is the only place that
 // knows the byte offsets.
 //
+// It also declares read_table(), which is winrt._winrt.read_table().
+//
 // Nothing here owns the bytes. A view is valid for as long as the buffer the
 // file was opened over is, which for a loaded projection is the lifetime of the
 // process.
 
 #pragma once
+
+#include <Python.h>
 
 #include <cstddef>
 #include <cstdint>
@@ -613,3 +617,8 @@ namespace py::table
         uint32_t ref_count_;
     };
 } // namespace py::table
+
+namespace py::cpp::_winrt
+{
+    PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept;
+} // namespace py::cpp::_winrt

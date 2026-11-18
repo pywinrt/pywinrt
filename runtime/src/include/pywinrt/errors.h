@@ -240,3 +240,8 @@ namespace py
         }
     }
 } // namespace py
+
+namespace py::cpp::_winrt
+{
+    PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept;
+} // namespace py::cpp::_winrt
