@@ -53,22 +53,15 @@ import versions  # type: ignore[import-not-found]  # noqa: E402
 V3_TAG = "v3.2.1"
 
 PYWINRT_EXE = REPO_PATH / "PyWinRT" / "bin" / "Release" / "net10.0" / "PyWinRT.exe"
-SHAPES_JSON = REPO_PATH / "runtime" / "src" / "shapes.json"
 OUTPUT_PATH = REPO_PATH / "_build" / "3to4"
-
-with open(REPO_PATH / ".config" / "_tools.json") as f:
-    TOOLS = json.load(f)
-
-
-def tool_path(package: str) -> Path:
-    return REPO_PATH / "_tools" / f"{package}.{TOOLS[package]}"
-
 
 WINDOWS_SDK = versions.windows_sdk_metadata_path()
 WEBVIEW2 = (
-    tool_path("Microsoft.Web.WebView2") / "lib" / "Microsoft.Web.WebView2.Core.winmd"
+    versions.unpacked_nuget_path("Microsoft.Web.WebView2")
+    / "lib"
+    / "Microsoft.Web.WebView2.Core.winmd"
 )
-WINUI2 = tool_path("Microsoft.UI.Xaml") / "lib" / "uap10.0"
+WINUI2 = versions.unpacked_nuget_path("Microsoft.UI.Xaml") / "lib" / "uap10.0"
 
 # The families that pywinrt v3.2.1 published, as scripts/generate-pywinrt.py
 # generates them: the top-level Python package, what is projected and what is
@@ -158,7 +151,13 @@ def generate(family: str) -> set[tuple[str, str, str, str, str]]:
     for spec in references:
         args += ["--reference", spec]
 
-    args += ["--shapes", SHAPES_JSON, "--output", output, "--legacy-method-aliases"]
+    args += [
+        "--shapes",
+        versions.SHAPES_PATH,
+        "--output",
+        output,
+        "--legacy-method-aliases",
+    ]
 
     print(f"Generating {family}", file=sys.stderr)
 
@@ -381,7 +380,7 @@ def v4_stubs() -> dict[str, ast.Module]:
     result: dict[str, ast.Module] = {}
 
     for family in FAMILIES:
-        family_path = REPO_PATH / "projection" / family
+        family_path = versions.PROJECTION_PATH / family
 
         for stub_path in family_path.glob("*/**/__init__.pyi"):
             package_path = family_path / stub_path.relative_to(family_path).parts[0]

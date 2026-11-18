@@ -1,4 +1,3 @@
-import json
 import pathlib
 import subprocess
 import sys
@@ -6,27 +5,13 @@ import sys
 import app_sdk
 import versions
 
-REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
-
-TOOLS_JSON_PATH = REPO_ROOT_PATH / ".config" / "_tools.json"
-
-with open(TOOLS_JSON_PATH) as f:
-    tools_json = json.load(f)
-
-
-def versioned_package(package: str) -> str:
-    return f"{package}.{tools_json[package]}"
-
-
-PROJECTION_PATH = REPO_ROOT_PATH / "projection"
-RUNTIME_PATH = REPO_ROOT_PATH / "runtime"
 # The ABI call shape census, which every run merges into and which the runtime
 # compiles the trampolines from. See runtime/src/table-format.md.
-RUNTIME_SRC_PATH = RUNTIME_PATH / "src"
+RUNTIME_SRC_PATH = versions.RUNTIME_PATH / "src"
 
 # must match <TargetFramework> in PyWinRT/PyWinRT.csproj
 PYWINRT_TFM = "net10.0"
-PYWINRT_BUILD_PATH = REPO_ROOT_PATH / "PyWinRT" / "bin"
+PYWINRT_BUILD_PATH = versions.REPO_PATH / "PyWinRT" / "bin"
 
 
 def find_pywinrt() -> pathlib.Path:
@@ -63,7 +48,7 @@ def renames(family: str) -> list[str | pathlib.Path]:
     published and has since renamed, which scripts/list-renames.py writes, if
     the family has one.
     """
-    path = PROJECTION_PATH / family / "renames.json"
+    path = versions.PROJECTION_PATH / family / "renames.json"
 
     return ["--renames", path] if path.exists() else []
 
@@ -71,7 +56,9 @@ def renames(family: str) -> list[str | pathlib.Path]:
 # generate code for windows sdk
 
 WINDOWS_SDK = versions.windows_sdk_metadata_path()
-WINDOWS_SDK_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "windows-sdk.json"
+WINDOWS_SDK_NULLABILITY_JSON_PATH = (
+    versions.REPO_PATH / "nullability" / "windows-sdk.json"
+)
 
 subprocess.check_call(
     [
@@ -81,7 +68,7 @@ subprocess.check_call(
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "winrt",
+        versions.PROJECTION_PATH / "winrt",
         "--nullability-json",
         WINDOWS_SDK_NULLABILITY_JSON_PATH,
         # The Windows SDK is the only family that keeps the deprecated names
@@ -97,13 +84,11 @@ subprocess.check_call(
 # generate code for WebView2
 
 WEBVIEW2_PACKAGE_METADATA = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.Web.WebView2")
+    versions.unpacked_nuget_path("Microsoft.Web.WebView2")
     / "lib"
     / "Microsoft.Web.WebView2.Core.winmd"
 )
-WEBVIEW2_NULLABILITY_JSON_PATH = REPO_ROOT_PATH / "nullability" / "webview2.json"
+WEBVIEW2_NULLABILITY_JSON_PATH = versions.REPO_PATH / "nullability" / "webview2.json"
 
 # The one namespace here is published in a distribution named after the NuGet
 # package it came from rather than after itself, the way the App SDK components
@@ -119,7 +104,7 @@ subprocess.check_call(
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "webview2",
+        versions.PROJECTION_PATH / "webview2",
         "--nullability-json",
         WEBVIEW2_NULLABILITY_JSON_PATH,
         # Microsoft.Web.WebView2.Core.dll is architecture-specific and the
@@ -134,14 +119,10 @@ subprocess.check_call(
 # generate code for microsoft ui xaml (winui2)
 
 MICROSOFT_UI_XAML_PACKAGE_METADATA = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("Microsoft.UI.Xaml")
-    / "lib"
-    / "uap10.0"
+    versions.unpacked_nuget_path("Microsoft.UI.Xaml") / "lib" / "uap10.0"
 )
 MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH = (
-    REPO_ROOT_PATH / "nullability" / "microsoft.ui.xaml.json"
+    versions.REPO_PATH / "nullability" / "microsoft.ui.xaml.json"
 )
 
 # The six namespaces here are published in one distribution named after the
@@ -160,7 +141,7 @@ subprocess.check_call(
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "winui2",
+        versions.PROJECTION_PATH / "winui2",
         "--nullability-json",
         MICROSOFT_UI_XAML_NULLABILITY_JSON_PATH,
         *renames("winui2"),
@@ -178,7 +159,7 @@ WINDOWS_APP_SDK_INPUTS = [
     for arg in ("--input", f"winrt;{distribution};{path}")
 ]
 WINDOWS_APP_SDK_NULLABILITY_JSON_PATH = (
-    REPO_ROOT_PATH / "nullability" / "windows-app-sdk.json"
+    versions.REPO_PATH / "nullability" / "windows-app-sdk.json"
 )
 
 subprocess.check_call(
@@ -194,7 +175,7 @@ subprocess.check_call(
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "wasdk",
+        versions.PROJECTION_PATH / "wasdk",
         "--nullability-json",
         WINDOWS_APP_SDK_NULLABILITY_JSON_PATH,
         *renames("wasdk"),
@@ -204,15 +185,13 @@ subprocess.check_call(
 # generate code for test component
 
 TEST_PACKAGE_METADATA = (
-    REPO_ROOT_PATH
-    / "_tools"
-    / versioned_package("PyWinRT.TestWinRT")
+    versions.unpacked_nuget_path("PyWinRT.TestWinRT")
     / "lib"
     / "uap10.0"
     / "TestComponent.winmd"
 )
 
-TEST_PACKAGE_NULLABILITY_JSON = REPO_ROOT_PATH / "nullability" / "test-winrt.json"
+TEST_PACKAGE_NULLABILITY_JSON = versions.REPO_PATH / "nullability" / "test-winrt.json"
 
 subprocess.check_call(
     [
@@ -224,7 +203,7 @@ subprocess.check_call(
         "--emit-shapes",
         RUNTIME_SRC_PATH,
         "--output",
-        PROJECTION_PATH / "test-winrt",
+        versions.PROJECTION_PATH / "test-winrt",
         "--nullability-json",
         TEST_PACKAGE_NULLABILITY_JSON,
         "--component-dlls",

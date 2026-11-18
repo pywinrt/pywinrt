@@ -69,13 +69,11 @@ def release_of(tag: str) -> tuple[str, str, Path]:
     elif unit in families.FAMILY_RELEASED_INTEROP:
         # a fix to an interop module that is released with a family, which
         # shares the family's changelog
-        path = (
-            versions.REPO_PATH / "projection" / families.FAMILY_RELEASED_INTEROP[unit]
-        )
+        path = versions.PROJECTION_PATH / families.FAMILY_RELEASED_INTEROP[unit]
     elif (versions.INTEROP_PATH / unit).is_dir():
         path = versions.INTEROP_PATH / unit
     else:
-        path = versions.REPO_PATH / "projection" / unit
+        path = versions.PROJECTION_PATH / unit
 
     return title, version, path
 

@@ -22,7 +22,6 @@ be run when the NuGet packages that ``scripts/fetch-tools.ps1`` downloads move
 or when a module starts including a namespace that is not listed below.
 """
 
-import json
 import pathlib
 import re
 import shutil
@@ -34,25 +33,8 @@ from collections.abc import Iterable
 import app_sdk
 import versions
 
-REPO_ROOT_PATH = pathlib.Path(__file__).parent.parent.resolve()
-
-TOOLS_JSON_PATH = REPO_ROOT_PATH / ".config" / "_tools.json"
-
-with open(TOOLS_JSON_PATH) as f:
-    tools_json = json.load(f)
-
-
-def versioned_package(package: str) -> str:
-    return f"{package}.{tools_json[package]}"
-
-
-TOOLS_PATH = REPO_ROOT_PATH / "_tools"
-
 CPPWINRT_EXE = (
-    TOOLS_PATH
-    / versioned_package("Microsoft.Windows.CppWinRT")
-    / "bin"
-    / "cppwinrt.exe"
+    versions.unpacked_nuget_path("Microsoft.Windows.CppWinRT") / "bin" / "cppwinrt.exe"
 )
 
 if not CPPWINRT_EXE.exists():
@@ -60,15 +42,13 @@ if not CPPWINRT_EXE.exists():
 
 # The runtime's own directory, beside its sources. An interop package's is
 # "cppwinrt" beside its setup.py.
-RUNTIME_OUTPUT_PATH = REPO_ROOT_PATH / "runtime" / "src" / "include" / "cppwinrt"
-INTEROP_PATH = REPO_ROOT_PATH / "interop"
+RUNTIME_OUTPUT_PATH = versions.RUNTIME_PATH / "src" / "include" / "cppwinrt"
 INTEROP_OUTPUT_DIR = "cppwinrt"
 
 WINDOWS_SDK_METADATA = versions.windows_sdk_metadata_path()
 
 WEBVIEW2_METADATA = (
-    TOOLS_PATH
-    / versioned_package("Microsoft.Web.WebView2")
+    versions.unpacked_nuget_path("Microsoft.Web.WebView2")
     / "lib"
     / "Microsoft.Web.WebView2.Core.winmd"
 )
@@ -190,7 +170,7 @@ with tempfile.TemporaryDirectory(prefix="pywinrt-cppwinrt-") as temp_dir:
     print(f"{count} headers -> {RUNTIME_OUTPUT_PATH}")
 
     for package, namespaces in INTEROP_NAMESPACES.items():
-        output_path = INTEROP_PATH / package / INTEROP_OUTPUT_DIR
+        output_path = versions.INTEROP_PATH / package / INTEROP_OUTPUT_DIR
 
         closure = header_closure(namespaces, search_paths)
         count = copy_headers(closure, search_paths, output_path)

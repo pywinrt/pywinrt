@@ -31,8 +31,9 @@ AFTER_NAME = re.compile(r"[^\w.-]")
 
 
 def main() -> int:
-    projection = versions.REPO_PATH / "projection"
-    packages = sorted(p.parent for p in projection.glob("*/*/pyproject.toml"))
+    packages = sorted(
+        p.parent for p in versions.PROJECTION_PATH.glob("*/*/pyproject.toml")
+    )
 
     tables = {
         package: [

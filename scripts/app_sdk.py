@@ -12,16 +12,13 @@ Running this file fetches the one piece that is not installed: see
 fetch_version_header() for why the Runtime component is not.
 """
 
-import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import nuget
 
-REPO_PATH = Path(__file__).parent.parent
-
-TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
-TOOLS_PATH = REPO_PATH / "_tools"
+# where scripts/fetch-tools.ps1 unpacked each NuGet package, and its version
+import versions
 
 # Only what is under metadata/ is projected: the AI component also ships the
 # private winmd files of the framework package under runtimes-framework/, and
@@ -59,19 +56,9 @@ VERSION_HEADER = "include/WindowsAppSDK-VersionInfo.h"
 
 
 def component_version(package: str) -> str:
-    with open(TOOLS_JSON_PATH) as f:
-        tools = json.load(f)
-
     # KeyError here means move-upstream-pins.py did not write the component,
     # which is what fetch-tools.ps1 installs the family from
-    return tools[package]
-
-
-def component_path(package: str) -> Path:
-    """
-    Where scripts/fetch-tools.ps1 unpacked @p package.
-    """
-    return TOOLS_PATH / f"{package}.{component_version(package)}"
+    return versions.nuget_package_versions()[package]
 
 
 def metadata_inputs() -> list[tuple[str, Path]]:
@@ -85,7 +72,7 @@ def metadata_inputs() -> list[tuple[str, Path]]:
     after the package it came from is what makes the two line up.
     """
     return [
-        (package, component_path(package) / metadata)
+        (package, versions.unpacked_nuget_path(package) / metadata)
         for package, metadata in COMPONENTS.items()
     ]
 
@@ -186,7 +173,7 @@ def fetch_version_header() -> Path:
     that nothing downstream has to know the difference.
     """
     version = component_version(RUNTIME_COMPONENT)
-    path = component_path(RUNTIME_COMPONENT) / VERSION_HEADER
+    path = versions.unpacked_nuget_path(RUNTIME_COMPONENT) / VERSION_HEADER
 
     if path.exists():
         return path

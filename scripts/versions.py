@@ -21,7 +21,7 @@ from pathlib import Path
 # which family each package written by hand is released with
 import families
 
-REPO_PATH = Path(__file__).parent.parent
+REPO_PATH = Path(__file__).resolve().parent.parent
 
 TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
 UPSTREAM_PINS_PATH = REPO_PATH / ".config" / "upstream" / "upstream.csproj"

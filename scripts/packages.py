@@ -21,13 +21,13 @@ from typing import NamedTuple
 # which family each package written by hand is released with
 import families
 
-# the version each release unit is published with, and the tag that says so
+# the version each release unit is published with, the tag that says so, and
+# where the tree's directories are
 import versions
 
-REPO_PATH = versions.REPO_PATH
-PROJECTION_PATH = (REPO_PATH / "projection").resolve()
-INTEROP_PATH = (REPO_PATH / "interop").resolve()
-REDIST_PATH = (REPO_PATH / "redist").resolve()
+# where the packages that redistribute a component .dll are (see
+# REDIST_PACKAGES)
+REDIST_PATH = versions.REPO_PATH / "redist"
 
 # Where each architecture's runtimes are in a NuGet package, keyed by the
 # platform tag of the wheel that carries them and holding the name setuptools
@@ -220,7 +220,7 @@ def check_families() -> None:
     module with no directory, or a family that is not one this tree projects.
     Either would leave a package out of its family's release without a word.
     """
-    interop = {path.name for path in INTEROP_PATH.glob("winrt-*")}
+    interop = {path.name for path in versions.INTEROP_PATH.glob("winrt-*")}
     unknown = sorted(set(families.INTEROP_NUGET_PACKAGES) - interop)
 
     if unknown:
@@ -251,8 +251,8 @@ def generated() -> Iterator[Package]:
     """
     check_families()
 
-    table = REPO_PATH / "table"
-    runtime = REPO_PATH / "runtime"
+    table = versions.TABLE_PATH
+    runtime = versions.RUNTIME_PATH
 
     yield Package(
         table, "winrt-table-compiler", versions.RUNTIME_FAMILY, table.name, Build.ANY
@@ -263,7 +263,7 @@ def generated() -> Iterator[Package]:
 
     # a projection distribution is a directory with a deps.json in it, and
     # the directory that holds it is the family
-    for deps_path in sorted(PROJECTION_PATH.glob("*/*/deps.json")):
+    for deps_path in sorted(versions.PROJECTION_PATH.glob("*/*/deps.json")):
         family = deps_path.parent.parent.name
 
         yield Package(
@@ -275,7 +275,7 @@ def generated() -> Iterator[Package]:
 
         yield Package(path, path.name, family, family, Build.REDIST)
 
-    for path in sorted(INTEROP_PATH.glob("winrt-*")):
+    for path in sorted(versions.INTEROP_PATH.glob("winrt-*")):
         distribution = path.name
         family = families.interop_family(distribution)
         release = versions.interop_release(path.name)

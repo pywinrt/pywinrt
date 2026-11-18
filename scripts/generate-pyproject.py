@@ -6,7 +6,8 @@ import json
 import re
 from pathlib import Path
 
-# the version scheme, which scripts/tests/test_versions.py covers
+# the version scheme, which scripts/tests/test_versions.py covers, and where
+# the tree's directories are
 import versions
 
 # which family each package written by hand is released with
@@ -18,22 +19,16 @@ import packages
 # the text of every file this writes
 import pyproject_templates as templates
 
-REPO_PATH = Path(__file__).parent.parent.resolve()
-PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
-TABLE_PATH = (Path(__file__).parent.parent / "table").resolve()
-RUNTIME_PATH = (Path(__file__).parent.parent / "runtime").resolve()
-INTEROP_PATH = (Path(__file__).parent.parent / "interop").resolve()
 # What every interop module includes to exchange objects and errors with the
 # runtime. It is hand-written once and copied into each package, since a
 # source distribution cannot reach outside its own directory.
 INTEROP_HEADER = "interop.h"
-REDIST_PATH = (Path(__file__).parent.parent / "redist").resolve()
 
 # PEP 639 has a distribution name its license as an SPDX expression and carry
 # the text of what it names, and a license file is only found beside the
 # pyproject.toml that names it, so every package gets a copy of the one at the
 # root of this repository.
-LICENSE_TEXT = (Path(__file__).parent.parent / "LICENSE").read_text(encoding="utf-8")
+LICENSE_TEXT = (versions.REPO_PATH / "LICENSE").read_text(encoding="utf-8")
 
 # Where a build keeps what it took out of a NuGet package, so that a second
 # build needs neither the network nor an unpacked copy again. It is build
@@ -391,7 +386,7 @@ def format_project_urls(unit_path: Path) -> str:
     is pointed at the family's. The test component is released nowhere and is
     pointed at the changelog at the root of the repository.
     """
-    changelog = (unit_path / "CHANGELOG.md").relative_to(REPO_PATH).as_posix()
+    changelog = (unit_path / "CHANGELOG.md").relative_to(versions.REPO_PATH).as_posix()
 
     return templates.PROJECT_URLS.format(changelog=changelog)
 
@@ -402,9 +397,9 @@ def family_path(family: str) -> Path:
     root of the repository for a family that is not published.
     """
     if family in versions.UNPUBLISHED_FAMILIES:
-        return REPO_PATH
+        return versions.REPO_PATH
 
-    return PROJECTION_PATH / family
+    return versions.PROJECTION_PATH / family
 
 
 def write_readme(
@@ -655,7 +650,9 @@ def write_compiled_project_files(
             f.write(
                 templates.INTEROP_HEADER.format(
                     interop_header=INTEROP_HEADER,
-                    text=(INTEROP_PATH / INTEROP_HEADER).read_text(encoding="utf-8"),
+                    text=(versions.INTEROP_PATH / INTEROP_HEADER).read_text(
+                        encoding="utf-8"
+                    ),
                 )
             )
 
@@ -913,7 +910,7 @@ def write_dll_project_files(
     architecture, so it is three py3-none-win_* wheels rather than the one
     py3-none-any wheel that a projection package is.
     """
-    package_path = REDIST_PATH / package_name
+    package_path = packages.REDIST_PATH / package_name
     module_path = "/".join(module.split("."))
     version = FAMILY_VERSIONS[package_families[package_name]]
     nuget_version = NUGET_PACKAGE_VERSIONS[payload.nuget_package]
@@ -988,7 +985,7 @@ versions.check_census()
 with open(versions.SHAPES_PATH, encoding="utf-8") as census_file:
     runtime_census = json.load(census_file)
 
-for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
+for deps_path in sorted(versions.PROJECTION_PATH.glob("**/deps.json")):
     package_path = deps_path.parent
 
     with open(deps_path) as deps_file:
@@ -1118,7 +1115,7 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
 
 # create requirements.txt for the hand-written interop projects
 
-for path in INTEROP_PATH.glob("winrt-*"):
+for path in versions.INTEROP_PATH.glob("winrt-*"):
     # KeyError here means a new interop package needs a row in the table
     interop_deps = INTEROP_DEPENDENCIES[path.name]
     runtime_requirement = versions.interop_runtime_requirement(
@@ -1145,25 +1142,25 @@ for path in INTEROP_PATH.glob("winrt-*"):
 
 # create the packaging of the table compiler
 
-with open_if_changed(TABLE_PATH / "pyproject.toml") as f:
+with open_if_changed(versions.TABLE_PATH / "pyproject.toml") as f:
     f.write(
         templates.TABLE_PYPROJECT_TOML.format(
             classifiers=templates.CLASSIFIERS,
-            project_urls=format_project_urls(TABLE_PATH),
+            project_urls=format_project_urls(versions.TABLE_PATH),
             package_name="winrt-table-compiler",
             version=TABLE_COMPILER_VERSION,
             description="Compiler for the projection tables of PyWinRT",
         )
     )
 
-with open_if_changed(TABLE_PATH / "winrt" / "table" / "version.py") as f:
+with open_if_changed(versions.TABLE_PATH / "winrt" / "table" / "version.py") as f:
     f.write(templates.TABLE_VERSION_PY.format(version=TABLE_COMPILER_VERSION))
 
-with open_if_changed(TABLE_PATH / "README.md") as f:
+with open_if_changed(versions.TABLE_PATH / "README.md") as f:
     f.write(templates.README.format(package_name="winrt-table-compiler"))
     f.write(templates.TABLE_README)
 
-write_license(TABLE_PATH)
+write_license(versions.TABLE_PATH)
 
 # create the packaging of the packages that redistribute a component .dll
 
@@ -1175,17 +1172,17 @@ for package_name, redist in packages.REDIST_PACKAGES.items():
 # create pyproject.toml files for the packages that compile
 
 write_compiled_project_files(
-    RUNTIME_PATH,
+    versions.RUNTIME_PATH,
     "winrt.system",
     "_winrt",
     sorted(
-        f.relative_to(RUNTIME_PATH).as_posix()
-        for f in (RUNTIME_PATH / "src").glob("*.cpp")
+        f.relative_to(versions.RUNTIME_PATH).as_posix()
+        for f in (versions.RUNTIME_PATH / "src").glob("*.cpp")
     ),
     package_name="winrt-runtime",
 )
 
-for package_path in INTEROP_PATH.glob("winrt-*"):
+for package_path in versions.INTEROP_PATH.glob("winrt-*"):
     package_name = package_path.name
     family = package_families[package_name]
     root_package = package_name[: package_name.rindex("-")]
