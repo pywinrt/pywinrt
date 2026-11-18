@@ -393,18 +393,12 @@ void py::set_member_not_available_error(py::member_not_available const& info) no
         info.interface_name);
 }
 
-void py::set_call_error(
-    py::call_error error, py::member_site const* site, Py_ssize_t arg_count) noexcept
+void py::set_call_error(py::call_error error, py::member_site const* site) noexcept
 {
     switch (error)
     {
     case call_error::invalid_arg_count:
-        // -1 is how the generated code reports an argument tuple it could not
-        // even count, which it only fails to do with a Python error already set
-        if (arg_count != -1)
-        {
-            PyErr_SetString(PyExc_TypeError, "invalid parameter count");
-        }
+        PyErr_SetString(PyExc_TypeError, "invalid parameter count");
         break;
 
     case call_error::keyword_arguments:

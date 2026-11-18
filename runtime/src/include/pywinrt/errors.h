@@ -44,18 +44,17 @@ namespace py
         const member_site site{
             member_kind::method, 0, type_name, nullptr, nullptr, site_is_constructor};
 
-        set_call_error(call_error::cannot_instantiate, &site, 0);
+        set_call_error(call_error::cannot_instantiate, &site);
     }
 
-    inline WINRT_IMPL_NOINLINE void set_invalid_arg_count_error(
-        Py_ssize_t arg_count) noexcept
+    inline WINRT_IMPL_NOINLINE void set_invalid_arg_count_error() noexcept
     {
-        set_call_error(call_error::invalid_arg_count, nullptr, arg_count);
+        set_call_error(call_error::invalid_arg_count, nullptr);
     }
 
     inline WINRT_IMPL_NOINLINE void set_invalid_kwd_args_error() noexcept
     {
-        set_call_error(call_error::keyword_arguments, nullptr, 0);
+        set_call_error(call_error::keyword_arguments, nullptr);
     }
 
     [[noreturn]] inline WINRT_IMPL_NOINLINE void throw_member_not_available(

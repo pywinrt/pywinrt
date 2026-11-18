@@ -144,8 +144,7 @@ namespace py
      */
     enum class call_error
     {
-        /// No overload takes this many arguments. The count is passed
-        /// alongside; -1 means a Python exception is already pending.
+        /// No overload takes this many arguments.
         invalid_arg_count,
         /// Keyword arguments were passed to a member that takes none.
         keyword_arguments,
@@ -184,8 +183,7 @@ namespace py
     void set_error(error_info const& info) noexcept;
     PyObject* take_raised_exception() noexcept;
     void restore_raised_exception(PyObject* exception) noexcept;
-    void set_call_error(
-        call_error error, member_site const* site, Py_ssize_t arg_count) noexcept;
+    void set_call_error(call_error error, member_site const* site) noexcept;
     int32_t report_unraisable(PyObject* source) noexcept;
     int32_t async_wait(
         winrt::Windows::Foundation::IInspectable const& async,

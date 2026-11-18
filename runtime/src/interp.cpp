@@ -1194,7 +1194,7 @@ namespace py::interp
             }
         }
 
-        set_invalid_arg_count_error(nargs);
+        set_invalid_arg_count_error();
         return nullptr;
     }
 
