@@ -90,6 +90,7 @@ TRUSTED_PUBLISHING = frozenset(
         "wasdk",
         "runtime",
         "winrt-Windows.ApplicationModel.DataTransfer.Interop",
+        "winrt-Microsoft.UI.Xaml.Media.DXInterop",
     }
 )
 
