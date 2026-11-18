@@ -9,3 +9,5 @@ This package provides the `winrt.microsoft.ui.xaml.media.dxinterop` module.
 ```
 pip install winrt-Microsoft.UI.Xaml.Media.DXInterop
 ```
+
+installs it with `winrt-Windows.Foundation`.
