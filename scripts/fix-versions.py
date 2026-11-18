@@ -19,6 +19,9 @@ import json
 import subprocess
 import sys
 
+# the families of generated packages
+import families
+
 # the version each release unit is published with, and the tag that says so
 import versions
 
@@ -46,19 +49,19 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    families = [
+    selected = [
         family
-        for family in versions.NUGET_PACKAGES
-        if family not in versions.UNPUBLISHED_FAMILIES
+        for family in families.NUGET_PACKAGES
+        if family not in families.UNPUBLISHED_FAMILIES
     ]
 
     if args.family:
-        if args.family not in families:
+        if args.family not in selected:
             raise SystemExit(f"{args.family} is not a family that this tree publishes")
 
-        families = [args.family]
+        selected = [args.family]
 
-    for family in families:
+    for family in selected:
         family_version = versions.family_versions()[family]
         released = [
             version

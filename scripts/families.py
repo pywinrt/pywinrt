@@ -1,5 +1,5 @@
 """
-The upstream family each interop module is released with.
+The upstream families, and the one each interop module is released with.
 
 A generated package belongs to the family whose directory under projection/
 holds it. A package written by hand belongs to the Windows SDK unless it takes
@@ -13,6 +13,75 @@ scripts/versions.py imports this, so it imports no other script.
 """
 
 from typing import NamedTuple
+
+
+class Family(NamedTuple):
+    """
+    A family of generated packages: the ones under one directory of
+    projection/, generated from one upstream and released together.
+    """
+
+    # the NuGet package the family takes its version from
+    nuget_package: str
+    # the title of its GitHub releases: what its packages are, or the name of
+    # the one distribution in a family of one
+    title: str
+    # what its changelog calls its upstream, and where upstream says what one
+    # of its releases changed, with {version} for the release
+    upstream_name: str
+    upstream_notes: str
+    # whether it is released at all
+    published: bool = True
+
+
+# Every family of generated packages, keyed by the directory under projection/
+# that holds it. The App SDK and WinUI 2 publish a GitHub release for each,
+# and the others do not, so for them the notes are the release's page on
+# NuGet, which points on to whatever notes there are.
+FAMILIES = {
+    "winrt": Family(
+        nuget_package="Microsoft.Windows.SDK.CPP",
+        title="Windows SDK packages",
+        upstream_name="the Windows SDK",
+        upstream_notes="https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/{version}",
+    ),
+    "winui2": Family(
+        nuget_package="Microsoft.UI.Xaml",
+        title="winui2-Microsoft.UI.Xaml",
+        upstream_name="WinUI 2",
+        upstream_notes="https://github.com/microsoft/microsoft-ui-xaml/releases/tag/v{version}",
+    ),
+    "wasdk": Family(
+        nuget_package="Microsoft.WindowsAppSDK",
+        title="Windows App SDK packages",
+        upstream_name="the Windows App SDK",
+        upstream_notes="https://github.com/microsoft/WindowsAppSDK/releases/tag/v{version}",
+    ),
+    "webview2": Family(
+        nuget_package="Microsoft.Web.WebView2",
+        title="WebView2 packages",
+        upstream_name="WebView2",
+        upstream_notes="https://www.nuget.org/packages/Microsoft.Web.WebView2/{version}",
+    ),
+    # The test component is projected into this tree for the test suite and is
+    # never uploaded anywhere, so it is versioned like a family without being
+    # one that is released.
+    "test-winrt": Family(
+        nuget_package="PyWinRT.TestWinRT",
+        title="TestWinRT packages",
+        upstream_name="TestWinRT",
+        upstream_notes="https://www.nuget.org/packages/PyWinRT.TestWinRT/{version}",
+        published=False,
+    ),
+}
+
+# Which NuGet package each family takes its version from.
+NUGET_PACKAGES = {name: family.nuget_package for name, family in FAMILIES.items()}
+
+# The families that are never released.
+UNPUBLISHED_FAMILIES = frozenset(
+    name for name, family in FAMILIES.items() if not family.published
+)
 
 
 class NuGetPackage(NamedTuple):

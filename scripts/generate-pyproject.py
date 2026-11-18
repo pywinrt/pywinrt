@@ -10,7 +10,8 @@ from pathlib import Path
 # the tree's directories are
 import versions
 
-# which family each package written by hand is released with
+# the families of generated packages, and which family each package written
+# by hand is released with
 import families
 
 # the distributions this repository publishes and the layout they sit in
@@ -396,7 +397,7 @@ def family_path(family: str) -> Path:
     The directory of a family of packages, which is its release unit's, or the
     root of the repository for a family that is not published.
     """
-    if family in versions.UNPUBLISHED_FAMILIES:
+    if family in families.UNPUBLISHED_FAMILIES:
         return versions.REPO_PATH
 
     return versions.PROJECTION_PATH / family
@@ -492,7 +493,7 @@ def write_interop_readme(
         built_against = (
             "\n\n"
             + f"It is built against version {NUGET_VERSIONS[family]} of the"
-            + f" `{versions.NUGET_PACKAGES[family]}`"
+            + f" `{families.NUGET_PACKAGES[family]}`"
             + "\n"
             + "NuGet package and loads that release of the Windows App SDK unless"
             + " told otherwise."
@@ -506,7 +507,7 @@ def write_interop_readme(
         built_against = (
             "\n\n"
             + f"It is built against version {NUGET_VERSIONS[family]} of the"
-            + f" `{versions.NUGET_PACKAGES[family]}`"
+            + f" `{families.NUGET_PACKAGES[family]}`"
             + "\n"
             + "NuGet package."
         )
@@ -1108,7 +1109,7 @@ for deps_path in sorted(versions.PROJECTION_PATH.glob("**/deps.json")):
         FAMILY_FIXES[family].get(package_name, FAMILY_VERSIONS[family]),
         dependencies,
         optional_dependencies,
-        versions.NUGET_PACKAGES[family],
+        families.NUGET_PACKAGES[family],
         NUGET_VERSIONS[family],
         component,
     )

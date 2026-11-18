@@ -140,7 +140,7 @@ class Changelogs(unittest.TestCase):
             family = package.parent.name
             expected[package] = (
                 "CHANGELOG.md"
-                if family in versions.UNPUBLISHED_FAMILIES
+                if family in families.UNPUBLISHED_FAMILIES
                 else f"projection/{family}/CHANGELOG.md"
             )
 

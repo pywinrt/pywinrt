@@ -22,6 +22,8 @@ from packaging.version import Version
 
 from scripts import versions
 
+families = versions.families
+
 
 class NuGetToPep440(unittest.TestCase):
     """
@@ -174,7 +176,7 @@ class UpstreamPins(unittest.TestCase):
     def test_every_published_family_is_pinned(self) -> None:
         self.assertEqual(
             set(versions.upstream_pins()),
-            set(versions.NUGET_PACKAGES) - versions.UNPUBLISHED_FAMILIES,
+            set(families.NUGET_PACKAGES) - families.UNPUBLISHED_FAMILIES,
         )
 
     def test_a_pin_the_copy_lacks_is_refused(self) -> None:

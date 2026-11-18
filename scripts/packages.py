@@ -18,7 +18,8 @@ from enum import Enum
 from pathlib import Path
 from typing import NamedTuple
 
-# which family each package written by hand is released with
+# the families of generated packages, and which family each package written
+# by hand is released with
 import families
 
 # the version each release unit is published with, the tag that says so, and
@@ -230,12 +231,12 @@ def check_families() -> None:
         )
 
     named = {package.family for package in families.NUGET_ENVIRONMENT.values()}
-    unknown = sorted(named - set(versions.NUGET_PACKAGES))
+    unknown = sorted(named - set(families.FAMILIES))
 
     if unknown:
         raise RuntimeError(
             f"families.NUGET_ENVIRONMENT names the family {', '.join(unknown)},"
-            " which is not a key of versions.NUGET_PACKAGES"
+            " which is not one of families.FAMILIES"
         )
 
 
@@ -290,7 +291,7 @@ def published() -> Iterator[Package]:
     return (
         package
         for package in generated()
-        if package.family not in versions.UNPUBLISHED_FAMILIES
+        if package.family not in families.UNPUBLISHED_FAMILIES
     )
 
 
@@ -382,7 +383,7 @@ def select(args: argparse.Namespace) -> list[Package]:
 
         selected = [package for package in selected if package.release == unit]
 
-        if unit in versions.NUGET_PACKAGES:
+        if unit in families.NUGET_PACKAGES:
             # a family with fixes is released at the newest, which releases
             # only the packages that carry it
             family_version = versions.family_versions()[unit]

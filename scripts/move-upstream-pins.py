@@ -30,7 +30,8 @@ from pathlib import Path
 # where the App SDK says which components belong to a release
 import app_sdk
 
-# which interop modules are released with a family
+# the families, what each upstream is called, and which interop modules
+# are released with a family
 import families
 
 # which units are published by trusted publishing
@@ -45,25 +46,6 @@ SCRIPTS_PATH = versions.REPO_PATH / "scripts"
 # publishes no figure, and a release that adds more is refused partway
 # through until the next day.
 NEW_PROJECTS_PER_DAY = 4
-
-# What a family's changelog calls its upstream, keyed the way
-# versions.NUGET_PACKAGES is.
-UPSTREAM_NAMES = {
-    "winrt": "the Windows SDK",
-    "winui2": "WinUI 2",
-    "wasdk": "the Windows App SDK",
-    "webview2": "WebView2",
-}
-
-# Where upstream says what a release changed. The App SDK and WinUI 2 publish
-# a GitHub release for each, and the other two do not, so for them it is the
-# release's page on NuGet, which points on to whatever notes there are.
-UPSTREAM_NOTES = {
-    "winrt": "https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/{version}",
-    "winui2": "https://github.com/microsoft/microsoft-ui-xaml/releases/tag/v{version}",
-    "wasdk": "https://github.com/microsoft/WindowsAppSDK/releases/tag/v{version}",
-    "webview2": "https://www.nuget.org/packages/Microsoft.Web.WebView2/{version}",
-}
 
 # The heading of the section a changelog collects changes in before they are
 # released, and what ends a section: the next heading, or the link
@@ -99,7 +81,7 @@ def moved_pins(pins: dict[str, str], tools: dict[str, str]) -> dict[str, str]:
     return {
         family: version
         for family, version in pins.items()
-        if tools[versions.NUGET_PACKAGES[family]] != version
+        if tools[families.NUGET_PACKAGES[family]] != version
     }
 
 
@@ -115,7 +97,7 @@ def tools_with_pins(tools: dict[str, str], moved: dict[str, str]) -> dict[str, s
 
     for family, version in moved.items():
         if family != "wasdk":
-            tools[versions.NUGET_PACKAGES[family]] = version
+            tools[families.NUGET_PACKAGES[family]] = version
             continue
 
         resolved = app_sdk.resolve(version)
@@ -192,7 +174,7 @@ def changelog_with_update(
     rather than added to, keeping the release it moved from, so that the
     changelog says what the family's next release changes.
     """
-    name = UPSTREAM_NAMES[family]
+    name = families.FAMILIES[family].upstream_name
     label = f"{name.removeprefix('the ')} {version}"
 
     if not UNRELEASED.search(changelog):
@@ -230,7 +212,7 @@ def changelog_with_update(
         definition = re.compile(rf"^\[{re.escape(earlier[1])}\]: .*\n", re.MULTILINE)
         changelog = definition.sub("", changelog)
 
-    url = UPSTREAM_NOTES[family].format(version=version)
+    url = families.FAMILIES[family].upstream_notes.format(version=version)
 
     # beside the other link definitions, or as the first of them
     if not re.search(r"^\[[^\]]+\]: .*\n\Z", changelog, re.MULTILINE):
@@ -275,7 +257,7 @@ def family_report(
     """
     What moving @p family's pin from @p previous releases, as Markdown lines.
     """
-    package = versions.NUGET_PACKAGES[family]
+    package = families.NUGET_PACKAGES[family]
     version = versions.family_versions()[family]
     lines = [
         f"## {package} {previous} → {versions.nuget_versions()[family]}",
@@ -393,7 +375,7 @@ def main() -> None:
         return
 
     for family, version in moved.items():
-        package = versions.NUGET_PACKAGES[family]
+        package = families.NUGET_PACKAGES[family]
         print(f"{family}: {package} {committed[package]} -> {version}")
 
     previous = {family: committed_packages(family) for family in moved}
@@ -404,7 +386,7 @@ def main() -> None:
         for path in stale_fixes(family):
             path.unlink(missing_ok=True)
 
-        package = versions.NUGET_PACKAGES[family]
+        package = families.NUGET_PACKAGES[family]
         path = versions.PROJECTION_PATH / family / "CHANGELOG.md"
         changelog = path.read_bytes().decode()
         path.write_bytes(
@@ -418,7 +400,7 @@ def main() -> None:
     lines: list[str] = []
 
     for family in moved:
-        package = versions.NUGET_PACKAGES[family]
+        package = families.NUGET_PACKAGES[family]
         generated = generated_packages(family)
         added = generated - previous[family]
         lines += family_report(

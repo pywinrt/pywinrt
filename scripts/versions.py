@@ -18,7 +18,8 @@ import xml.etree.ElementTree as ET
 from collections.abc import Iterable
 from pathlib import Path
 
-# which family each package written by hand is released with
+# the families of generated packages, and which family each package written
+# by hand is released with
 import families
 
 REPO_PATH = Path(__file__).resolve().parent.parent
@@ -64,19 +65,9 @@ RUNTIME_FUNCTIONS = {
 # one, and the extension module that implements them.
 RUNTIME_MODULES = {"winrt.runtime.interop", "winrt._winrt"}
 
-# Which NuGet package each family of generated packages takes its version
-# from, keyed by the directory under projection/ that holds the family.
-NUGET_PACKAGES = {
-    "winrt": "Microsoft.Windows.SDK.CPP",
-    "winui2": "Microsoft.UI.Xaml",
-    "wasdk": "Microsoft.WindowsAppSDK",
-    "webview2": "Microsoft.Web.WebView2",
-    "test-winrt": "PyWinRT.TestWinRT",
-}
-
 # The family that winrt-runtime is released as, which is a family of one:
 # its version is the hand-maintained one in runtime/version.txt rather than an
-# upstream package's, so it is not one of the families above.
+# upstream package's, so it is not one of families.FAMILIES.
 RUNTIME_FAMILY = "runtime"
 
 # A family version that a fix to a generated package, or to an interop package
@@ -91,11 +82,6 @@ FIXABLE_FAMILY_VERSION = re.compile(r"\d+!\d+(?:\.\d+)+")
 # the family that changed after the family was released the version of a fix
 # (see family_fixes()), which scripts/fix-versions.py writes.
 FIXES_NAME = "fixes.json"
-
-# The test component is projected into this tree for the test suite and is
-# never uploaded anywhere, so it is versioned like a family without being one
-# that is released.
-UNPUBLISHED_FAMILIES = frozenset({"test-winrt"})
 
 # The tag that releases one unit, which .github/workflows/wheels.yaml
 # builds and publishes that unit from. The version in it carries a "v", and
@@ -360,20 +346,19 @@ def windows_sdk_metadata_path() -> Path:
 
 def nuget_versions() -> dict[str, str]:
     """
-    The upstream version of each family's NuGet package, keyed the way
-    NUGET_PACKAGES is.
+    The upstream version of each family's NuGet package, keyed by family.
     """
     tools = nuget_package_versions()
 
     # KeyError here means a family names a NuGet package that fetch-tools.ps1
     # does not download
-    return {family: tools[nuget] for family, nuget in NUGET_PACKAGES.items()}
+    return {family: tools[nuget] for family, nuget in families.NUGET_PACKAGES.items()}
 
 
 def upstream_pins() -> dict[str, str]:
     """
     The version of each published family's NuGet package that
-    .config/upstream/upstream.csproj pins, keyed the way NUGET_PACKAGES is.
+    .config/upstream/upstream.csproj pins, keyed by family.
 
     Dependabot proposes a new upstream release by moving a package reference
     in that project, so that is where a family's pin is moved, and
@@ -389,8 +374,8 @@ def upstream_pins() -> dict[str, str]:
     # so nothing would propose its next release
     return {
         family: references[nuget]
-        for family, nuget in NUGET_PACKAGES.items()
-        if family not in UNPUBLISHED_FAMILIES
+        for family, nuget in families.NUGET_PACKAGES.items()
+        if family not in families.UNPUBLISHED_FAMILIES
     }
 
 
@@ -405,7 +390,7 @@ def check_upstream_pins() -> None:
     for family, version in upstream_pins().items():
         if tools[family] != version:
             raise RuntimeError(
-                f"{project} pins {NUGET_PACKAGES[family]} at {version} and"
+                f"{project} pins {families.NUGET_PACKAGES[family]} at {version} and"
                 f" .config/_tools.json at {tools[family]};"
                 " run scripts/move-upstream-pins.py"
             )
@@ -413,8 +398,8 @@ def check_upstream_pins() -> None:
 
 def family_versions() -> dict[str, str]:
     """
-    The version each family of generated packages is published with, keyed the
-    way NUGET_PACKAGES is.
+    The version each family of generated packages is published with, keyed by
+    family.
     """
     generation = compatibility_generation()
 
@@ -526,7 +511,7 @@ def published_versions() -> dict[str, str]:
                 key=lambda fix: fix_number(fix, version),
             )
             for family, version in family_versions().items()
-            if family not in UNPUBLISHED_FAMILIES
+            if family not in families.UNPUBLISHED_FAMILIES
         }
         | {path.parent.name: read_version(path) for path in interop}
         | {

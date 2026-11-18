@@ -21,7 +21,7 @@ import re
 import sys
 from pathlib import Path
 
-# which interop modules are released with a family
+# what each family is called, and which interop modules are released with one
 import families
 
 # the version each release unit is published with, and the tag that says so
@@ -29,18 +29,12 @@ import versions
 
 NUGET_TAG = re.compile(r"nuget/PyWinRT/v(?P<version>.+)")
 
-# What a unit of several distributions is called. Every other unit is one
-# distribution and is called by its name.
-FAMILY_TITLES = {
-    "winrt": "Windows SDK packages",
-    "wasdk": "Windows App SDK packages",
-    "webview2": "WebView2 packages",
-}
-
+# What the unit of a package written by hand is called, where its directory
+# is not named after it. A family is called by its title, and every other unit
+# is one distribution and is called by its name.
 DISTRIBUTIONS = {
     "runtime": "winrt-runtime",
     "table": "winrt-table-compiler",
-    "winui2": "winui2-Microsoft.UI.Xaml",
 }
 
 REFERENCE = re.compile(r"\]\[([^\]]+)\]")
@@ -62,7 +56,11 @@ def release_of(tag: str) -> tuple[str, str, Path]:
         raise SystemExit(error) from error
 
     version = versions.published_versions()[unit]
-    title = FAMILY_TITLES.get(unit) or DISTRIBUTIONS.get(unit) or unit
+    title = (
+        families.FAMILIES[unit].title
+        if unit in families.FAMILIES
+        else DISTRIBUTIONS.get(unit, unit)
+    )
 
     if unit in (versions.RUNTIME_PATH.name, versions.TABLE_PATH.name):
         path = versions.REPO_PATH / unit
