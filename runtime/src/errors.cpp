@@ -38,9 +38,6 @@ namespace
             return "event";
         }
 
-        // The kind is read from another module, so it can hold a value this
-        // one does not know about, and calling that an event would be a
-        // guess rather than an answer.
         return "member";
     }
 
