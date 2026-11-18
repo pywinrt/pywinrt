@@ -20,9 +20,8 @@ from packaging.requirements import Requirement
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
 
-from scripts import versions
-
-families = versions.families
+import families
+import versions
 
 
 class NuGetToPep440(unittest.TestCase):

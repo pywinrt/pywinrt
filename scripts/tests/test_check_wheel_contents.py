@@ -6,27 +6,16 @@ metadata, the license texts, and, for one that redistributes a binary, the
 binary and a bill of materials naming it.
 """
 
-import importlib.util
 import json
 import tempfile
 import unittest
 import zipfile
 from pathlib import Path
-from types import ModuleType
 from typing import Any
 
-SCRIPT = Path(__file__).parent.parent / "check-wheel-contents.py"
+from scripts.tests import load_script
 
-
-def load_script() -> ModuleType:
-    spec = importlib.util.spec_from_file_location("check_wheel_contents", SCRIPT)
-    assert spec is not None and spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-
-check_wheel_contents = load_script()
+check_wheel_contents = load_script("check-wheel-contents.py")
 
 
 def sbom(version: str | None) -> dict[str, Any]:

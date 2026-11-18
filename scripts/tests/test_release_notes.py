@@ -7,37 +7,17 @@ nothing here depends on what the tree publishes.
 """
 
 import contextlib
-import importlib.util
 import io
 import sys
 import tempfile
 import textwrap
 import unittest
 from pathlib import Path
-from types import ModuleType
 from unittest import mock
 
-SCRIPTS = Path(__file__).parent.parent
-SCRIPT = SCRIPTS / "release-notes.py"
+from scripts.tests import load_script
 
-
-def load_script() -> ModuleType:
-    spec = importlib.util.spec_from_file_location("release_notes", SCRIPT)
-    assert spec is not None and spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-
-    # the script imports versions.py beside it by its bare name
-    sys.path.insert(0, str(SCRIPTS))
-
-    try:
-        spec.loader.exec_module(module)
-    finally:
-        sys.path.remove(str(SCRIPTS))
-
-    return module
-
-
-release_notes = load_script()
+release_notes = load_script("release-notes.py")
 versions = release_notes.versions
 
 CHANGELOG = textwrap.dedent(

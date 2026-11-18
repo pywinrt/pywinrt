@@ -6,36 +6,15 @@ is put in place of NuGet's answer, and the files a moved pin deletes are made
 in a temporary directory put in place of the tree.
 """
 
-import importlib.util
-import sys
 import tempfile
 import textwrap
 import unittest
 from pathlib import Path
-from types import ModuleType
 from unittest import mock
 
-SCRIPTS = Path(__file__).parent.parent
-SCRIPT = SCRIPTS / "move-upstream-pins.py"
+from scripts.tests import load_script
 
-
-def load_script() -> ModuleType:
-    spec = importlib.util.spec_from_file_location("move_upstream_pins", SCRIPT)
-    assert spec is not None and spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-
-    # the script imports the modules beside it by their bare names
-    sys.path.insert(0, str(SCRIPTS))
-
-    try:
-        spec.loader.exec_module(module)
-    finally:
-        sys.path.remove(str(SCRIPTS))
-
-    return module
-
-
-move_upstream_pins = load_script()
+move_upstream_pins = load_script("move-upstream-pins.py")
 versions = move_upstream_pins.versions
 app_sdk = move_upstream_pins.app_sdk
 

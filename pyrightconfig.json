@@ -56,8 +56,9 @@
       "reportUnnecessaryComparison": "none",
       "reportPrivateUsage": "none"
     },
-    // The scripts import each other as top-level modules, and their tests
-    // import them through the scripts package. They use no WinRT types.
+    // The scripts import each other as top-level modules, as their tests
+    // import them, and the tests import their own helpers through the scripts
+    // package. They use no WinRT types.
     {
       "root": "scripts",
       "extraPaths": ["."]

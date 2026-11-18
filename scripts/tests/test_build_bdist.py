@@ -6,36 +6,16 @@ answers depend only on how each one is built and which unit releases it.
 """
 
 import contextlib
-import importlib.util
 import io
 import sys
 import unittest
 from pathlib import Path
-from types import ModuleType
 from typing import Any
 from unittest import mock
 
-SCRIPTS = Path(__file__).parent.parent
-SCRIPT = SCRIPTS / "build-bdist.py"
+from scripts.tests import load_script
 
-
-def load_script() -> ModuleType:
-    spec = importlib.util.spec_from_file_location("build_bdist", SCRIPT)
-    assert spec is not None and spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-
-    # the script imports packages.py beside it by its bare name
-    sys.path.insert(0, str(SCRIPTS))
-
-    try:
-        spec.loader.exec_module(module)
-    finally:
-        sys.path.remove(str(SCRIPTS))
-
-    return module
-
-
-build_bdist = load_script()
+build_bdist = load_script("build-bdist.py")
 packages = build_bdist.packages
 versions = packages.versions
 

@@ -15,9 +15,8 @@ from pathlib import Path
 from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 
-from scripts import versions
-
-families = versions.families
+import families
+import versions
 
 
 class InteropBuildRequirement(unittest.TestCase):
