@@ -132,7 +132,8 @@ The suite is split by what a module needs to run:
 - `test/interop` also needs the compiled interop modules.
 
 So the runtime's tests can be run with no projection at all, against a
-`winrt-runtime` built from source into a virtual environment:
+`winrt-runtime` built from source into a virtual environment, as the `runtime`
+job in `.github/workflows/test.yaml` does:
 
     py -m venv _install\runtime-venv
     _install\runtime-venv\Scripts\python -m pip install .\runtime

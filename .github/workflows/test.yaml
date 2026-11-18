@@ -54,6 +54,8 @@ on:
       # script's tests read
       - runtime/version.txt
       - runtime/pyproject.toml
+      # and the dependencies the runtime job installs it with
+      - runtime/requirements.txt
       - table/**
       - '!table/**/*.md'
       - '!table/**/*.toml'
@@ -115,6 +117,8 @@ on:
       # script's tests read
       - runtime/version.txt
       - runtime/pyproject.toml
+      # and the dependencies the runtime job installs it with
+      - runtime/requirements.txt
       - table/**
       - '!table/**/*.md'
       - '!table/**/*.toml'
@@ -131,6 +135,30 @@ on:
       - test/**
 
 jobs:
+  # The runtime's own tests, against a winrt-runtime built from source into a
+  # virtual environment with no projection package in it, which is what shows
+  # that the runtime needs nothing else. It builds nothing but the runtime, so
+  # it is also the leg that fails first.
+  runtime:
+    runs-on: windows-2025-vs2026
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14", "3.14t", "3.15"]
+    name: Runtime alone, Python ${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        id: python
+        with:
+          python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
+      - name: create a virtual environment
+        run: ${{ steps.python.outputs.python-path }} -m venv _install/runtime-venv
+      - name: build winrt-runtime into it
+        run: _install/runtime-venv/Scripts/python -m pip install ./runtime
+      - name: test
+        run: _install/runtime-venv/Scripts/python -X dev -m unittest discover -v -s test/runtime -t .
   msvc:
     runs-on: ${{ matrix.runs-on }}
     strategy:
