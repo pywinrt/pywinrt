@@ -384,18 +384,6 @@ def open_if_changed(path: Path) -> Generator[io.StringIO]:
     path.write_bytes(data)
 
 
-def remove_if_present(path: Path) -> None:
-    """
-    Deletes a file this script used to write.
-
-    A projection package carried a setup.py, a version.txt and two
-    requirements files while it was a compiled extension. Nothing generates
-    them any more, so a tree that still has them is a tree where they would go
-    stale.
-    """
-    path.unlink(missing_ok=True)
-
-
 def write_license(package_path: Path, payload: DllPayload | None = None) -> None:
     """
     Copies the license of everything in one package into it.
@@ -922,12 +910,6 @@ def write_projection_project_files(
         nuget_version,
         component,
     )
-
-    # what a compiled projection package used to carry
-    remove_if_present(package_path / "setup.py")
-    remove_if_present(package_path / "version.txt")
-    remove_if_present(package_path / "requirements.txt")
-    remove_if_present(package_path / "all-requirements.txt")
 
 
 def format_setup_py_imports(*groups: list[str]) -> str:
