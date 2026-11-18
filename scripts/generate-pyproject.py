@@ -244,7 +244,10 @@ INTEROP_DEPENDENCIES: dict[str, list[str]] = {
         "winrt-Microsoft.WindowsAppSDK.InteractiveExperiences",
     ],
     # takes a SwapChainPanel, but only as IInspectable
-    "winrt-Microsoft.UI.Xaml.Media.DXInterop": [],
+    "winrt-Microsoft.UI.Xaml.Media.DXInterop": [
+        # imports winrt.system.hresult, whose values are HResults
+        "winrt-Windows.Foundation",
+    ],
     # only calls the bootstrapper, which has no projected types
     "winrt-Microsoft.WindowsAppRuntime.Bootstrap": [],
     "winrt-Microsoft.Web.WebView2.Interop": [
