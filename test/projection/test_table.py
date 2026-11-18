@@ -525,7 +525,7 @@ class TestTableContents(unittest.TestCase):
 
 
 # The census that every member's forward shape id was assigned from.
-SHAPES_JSON = pathlib.Path(__file__).parent.parent / "runtime" / "src" / "shapes.json"
+SHAPES_JSON = pathlib.Path(__file__).parents[2] / "runtime" / "src" / "shapes.json"
 
 # How a struct field of each type code is spelled in a shape key. A field keeps
 # its exact width, because it is laid out in memory rather than passed.

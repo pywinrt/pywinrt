@@ -82,8 +82,8 @@ def unbox_date_time(value: Object, /) -> datetime: ...
 def unbox_time_span(value: Object, /) -> timedelta: ...
 
 # Reads a projection table and returns its contents as plain Python objects, so
-# that test/test_table.py can check that the generator's writer and this
-# module's reader agree on the format. The shape of the result follows
+# that test/projection/test_table.py can check that the generator's writer and
+# this module's reader agree on the format. The shape of the result follows
 # runtime/src/table-format.md rather than a type of its own.
 def read_table(data: Buffer, /) -> dict[str, Any]: ...
 

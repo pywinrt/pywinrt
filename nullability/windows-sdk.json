@@ -110676,7 +110676,7 @@
                     }
                   ],
                   "allowNull": true,
-                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/test_nullability.py"
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/projection/test_nullability.py"
                 }
               }
             ]
@@ -110849,7 +110849,7 @@
                     }
                   ],
                   "allowNull": true,
-                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/test_nullability.py"
+                  "evidence": "Not documented for this overload; its sibling FindAllAsync(String, IIterable(String)) is, in the docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); Windows accepts null here, and passing None is tested in test/projection/test_nullability.py"
                 }
               }
             ]
@@ -111032,7 +111032,7 @@
                     }
                   ],
                   "allowNull": true,
-                  "evidence": "The docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); passing None is tested in test/test_nullability.py"
+                  "evidence": "The docs of FindAllAsync(String): 'you should use FindAllAsync(String, IIterable(String)) with null as the second parameter if no other properties are needed' (https://learn.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync); passing None is tested in test/projection/test_nullability.py"
                 }
               }
             ]
@@ -367894,7 +367894,7 @@
                   {
                     "name": "Windows.Storage.StorageFolder",
                     "maybeNull": true,
-                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync); the parent of a drive root is None, tested in test/test_nullability.py"
+                    "evidence": "Implements IStorageItem2.GetParentAsync. The docs of IStorageItem2.GetParentAsync: 'this method returns null if you can't get to the parent, instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.istorageitem2.getparentasync); the parent of a drive root is None, tested in test/projection/test_nullability.py"
                   }
                 ]
               }
@@ -368230,7 +368230,7 @@
                   {
                     "name": "Windows.Storage.IStorageItem",
                     "maybeNull": true,
-                    "evidence": "The docs: 'If the specified file or folder is not found, this method returns null instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetitemasync); tested in test/test_nullability.py"
+                    "evidence": "The docs: 'If the specified file or folder is not found, this method returns null instead of raising an exception' (https://learn.microsoft.com/uwp/api/windows.storage.storagefolder.trygetitemasync); tested in test/projection/test_nullability.py"
                   }
                 ]
               }
@@ -375082,7 +375082,7 @@
                     }
                   ],
                   "allowNull": true,
-                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync); passing None is tested in test/test_nullability.py"
+                  "evidence": "Implements IStorageItemExtraProperties.RetrievePropertiesAsync. The docs of IStorageItemExtraProperties.RetrievePropertiesAsync: 'Pass null to retrieve all possible properties' (https://learn.microsoft.com/uwp/api/windows.storage.fileproperties.istorageitemextraproperties.retrievepropertiesasync); passing None is tested in test/projection/test_nullability.py"
                 }
               }
             ]
@@ -382326,7 +382326,7 @@
                     }
                   ],
                   "allowNull": true,
-                  "evidence": "The docs of the fileTypeFilter parameter: 'To include all file types, supply null, an empty array, or an array containing a single entry of \"*\"' (https://learn.microsoft.com/uwp/api/windows.storage.search.queryoptions.-ctor); passing None is tested in test/test_nullability.py"
+                  "evidence": "The docs of the fileTypeFilter parameter: 'To include all file types, supply null, an empty array, or an array containing a single entry of \"*\"' (https://learn.microsoft.com/uwp/api/windows.storage.search.queryoptions.-ctor); passing None is tested in test/projection/test_nullability.py"
                 }
               }
             ]
@@ -392728,7 +392728,7 @@
               "type": {
                 "name": "Windows.System.Diagnostics.ProcessDiagnosticInfo",
                 "maybeNull": true,
-                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT; None for a process id that does not exist, tested in test/test_nullability.py"
+                "evidence": "The docs do not say; the method is named Try*, which the docs of DisplayTarget.TryGetMonitor describe as meaning it returns null instead of throwing an exception or returning a failure HRESULT; None for a process id that does not exist, tested in test/projection/test_nullability.py"
               }
             },
             "parameters": [
