@@ -10,8 +10,8 @@ PyWinRT lets Python call Windows Runtime (WinRT) APIs: Bluetooth, USB and
 serial devices, cameras, notifications, screen capture, speech and many other
 APIs that Windows offers apps.
 
-- **A projection:** it is generated from the WinRT metadata, so every API of
-  the Windows SDK is there, and the Windows App SDK's too.
+- **A projection:** it is generated from the WinRT metadata, so every WinRT API
+  in the Windows SDK is there, and the Windows App SDK's too.
 - **Pythonic:** `snake_case` names, collections that are sequences and
   mappings, async operations you `await` and any bytes-like object where WinRT
   takes a buffer, as [the WinRT type system](https://pywinrt.readthedocs.io/en/latest/types/)
