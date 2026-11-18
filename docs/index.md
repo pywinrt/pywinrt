@@ -11,3 +11,4 @@ The `PyWinRT` project provides access to Windows Runtime (WinRT) APIs in Python.
 - [Versioning](versioning.md)
 - [Release notes](release-notes/index.md)
 - [Freezing an application](freezing.md)
+- [History](history.md)
