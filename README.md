@@ -51,8 +51,9 @@ says how to package them.
 - **Moving from 3.x:** read the
   [4.0 release notes](https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/)
   and the [migration guide](scripts/3to4/README.md).
-- **Built on PyWinRT:** [Bleak](https://github.com/hbldh/bleak) and the WinUI 3
-  backend of [pywebview](https://github.com/r0x0r/pywebview).
+- **Built on PyWinRT:** [Bleak](https://github.com/hbldh/bleak),
+  [Hermes Agent](https://github.com/NousResearch/hermes-agent) and
+  [Windows-Toasts](https://github.com/DatGuy1/Windows-Toasts).
 - **Support:** ask questions in
   [Discussions](https://github.com/pywinrt/pywinrt/discussions) and report bugs
   in [Issues](https://github.com/pywinrt/pywinrt/issues).
