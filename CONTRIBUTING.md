@@ -121,8 +121,22 @@ the first command picks `python314t.lib` instead:
     -DPython3_FIND_ABI="ANY;ANY;ANY;ON"
 
 Install that tree to its own prefix and run the tests with `python3.14t_d.exe`.
-`test/test_threads.py` is the part of the suite that is written for it: its
-threads run at the same time only when there is no GIL.
+`test/projection/test_threads.py` is the part of the suite that is written for
+it: its threads run at the same time only when there is no GIL.
+
+The suite is split by what a module needs to run:
+
+- `test/runtime` needs nothing but `winrt-runtime`.
+- `test/projection` also needs the projection packages (tables and stubs), the
+  table compiler and the test component.
+- `test/interop` also needs the compiled interop modules.
+
+So the runtime's tests can be run with no projection at all, against a
+`winrt-runtime` built from source into a virtual environment:
+
+    py -m venv _install\runtime-venv
+    _install\runtime-venv\Scripts\python -m pip install .\runtime
+    _install\runtime-venv\Scripts\python -X dev -m unittest discover -s test\runtime -t .
 
 ## Linting
 
