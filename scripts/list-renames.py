@@ -24,12 +24,14 @@ getter, an event by its add method, and a member of an enum by its value.
 import argparse
 import json
 import re
-import subprocess
 from collections import defaultdict
 from collections.abc import Callable
 
 # the families of generated packages
 import families
+
+# a family's release tags, and its tables as each released them
+import repo
 
 # the version each release unit is published with, and the tag that says so
 import versions
@@ -39,17 +41,6 @@ RENAMES_NAME = "renames.json"
 
 # what a member of a type is, with what identifies it besides its Python name
 Key = tuple[str, ...]
-
-
-def git(*args: str) -> str:
-    return subprocess.run(
-        ["git", *args],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        check=True,
-    ).stdout
 
 
 def version_key(version: str) -> tuple[int, tuple[int, ...], int, int]:
@@ -88,7 +79,7 @@ def released_tags(family: str) -> list[str]:
 
         return version_key(f"{epoch}!{release}" if epoch else release)
 
-    return sorted(git("tag", "--list", f"{prefix}*").split(), key=version)
+    return sorted(repo.git("tag", "--list", f"{prefix}*").split(), key=version)
 
 
 def read_members(text: str) -> dict[str, dict[Key, str]]:
@@ -191,10 +182,12 @@ def main() -> None:
         old = read_tables(
             [
                 path
-                for path in git("ls-tree", "-r", "--name-only", tag, prefix).split()
+                for path in repo.git(
+                    "ls-tree", "-r", "--name-only", tag, prefix
+                ).split()
                 if path.endswith(f"/{TABLE}")
             ],
-            lambda path: git("show", f"{tag}:{path}"),
+            lambda path: repo.git("show", f"{tag}:{path}"),
         )
         new = read_tables(
             [

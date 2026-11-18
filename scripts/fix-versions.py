@@ -22,19 +22,11 @@ import sys
 # the families of generated packages
 import families
 
+# which release tags exist, and what changed since one
+import repo
+
 # the version each release unit is published with, and the tag that says so
 import versions
-
-
-def tag_exists(tag: str) -> bool:
-    return (
-        subprocess.run(
-            ["git", "rev-parse", "--quiet", "--verify", f"refs/tags/{tag}"],
-            cwd=versions.REPO_PATH,
-            capture_output=True,
-        ).returncode
-        == 0
-    )
 
 
 def main() -> None:
@@ -66,7 +58,7 @@ def main() -> None:
         released = [
             version
             for version in {family_version, *versions.family_fixes(family).values()}
-            if tag_exists(versions.release_tag(family, version))
+            if repo.exists(f"refs/tags/{versions.release_tag(family, version)}")
         ]
 
         if family_version not in released:
@@ -81,24 +73,17 @@ def main() -> None:
         # deps.json is what generate-pyproject.py writes the packaging from,
         # and is in neither the sdist nor the wheel, so a change to it alone
         # changes nothing that is published
-        diff = subprocess.run(
-            [
-                "git",
-                "diff",
-                "--name-only",
-                tag,
-                "--",
-                family_path.as_posix(),
-                f":(exclude){family_path.as_posix()}/*/deps.json",
-            ],
-            cwd=versions.REPO_PATH,
-            capture_output=True,
-            text=True,
-            check=True,
+        diff = repo.git(
+            "diff",
+            "--name-only",
+            tag,
+            "--",
+            family_path.as_posix(),
+            f":(exclude){family_path.as_posix()}/*/deps.json",
         )
         changed = {
             parts[2]
-            for parts in (path.split("/") for path in diff.stdout.splitlines())
+            for parts in (path.split("/") for path in diff.splitlines())
             if len(parts) > 3 and (family_path / parts[2] / "deps.json").exists()
         }
         fixes = versions.next_fixes(family, released, changed)

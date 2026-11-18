@@ -40,6 +40,9 @@ import families
 # which units are published by trusted publishing
 import packages
 
+# what is committed, and what a run changed
+import repo
+
 # the version each release unit is published with, and the tag that says so
 import versions
 
@@ -63,15 +66,7 @@ def committed_tools() -> dict[str, str]:
     tree, so that a run that stopped after writing the copy - a fetch that
     failed, say - is finished by running this again.
     """
-    tools = subprocess.run(
-        ["git", "show", "HEAD:.config/_tools.json"],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-
-    return json.loads(tools.stdout)
+    return json.loads(repo.git("show", "HEAD:.config/_tools.json"))
 
 
 def moved_pins(pins: dict[str, str], tools: dict[str, str]) -> dict[str, str]:
@@ -128,17 +123,11 @@ def committed_packages(family: str) -> set[str]:
     The distributions of @p family as committed.
     """
     family_path = (versions.PROJECTION_PATH / family).relative_to(versions.REPO_PATH)
-    files = subprocess.run(
-        ["git", "ls-tree", "-r", "--name-only", "HEAD", family_path.as_posix()],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
+    files = repo.git("ls-tree", "-r", "--name-only", "HEAD", family_path.as_posix())
 
     return {
         Path(path).parent.name
-        for path in files.stdout.splitlines()
+        for path in files.splitlines()
         if Path(path).name == "deps.json"
     }
 
@@ -295,27 +284,9 @@ def changes_report() -> list[str]:
     How big the change is and what it touches outside projection/, as
     Markdown lines.
     """
-    stat = subprocess.run(
-        ["git", "diff", "--shortstat", "HEAD"],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout.strip()
-    changed = subprocess.run(
-        ["git", "diff", "--name-only", "HEAD"],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout.splitlines()
-    untracked = subprocess.run(
-        ["git", "ls-files", "--others", "--exclude-standard"],
-        cwd=versions.REPO_PATH,
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout.splitlines()
+    stat = repo.git("diff", "--shortstat", "HEAD").strip()
+    changed = repo.git("diff", "--name-only", "HEAD").splitlines()
+    untracked = repo.git("ls-files", "--others", "--exclude-standard").splitlines()
 
     # a directory or two deep is enough to say which package it is
     outside = sorted(
