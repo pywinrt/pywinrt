@@ -30,6 +30,9 @@ from pathlib import Path
 # where the App SDK says which components belong to a release
 import app_sdk
 
+# the sections of a changelog
+import changelogs
+
 # the families, what each upstream is called, and which interop modules
 # are released with a family
 import families
@@ -48,10 +51,8 @@ SCRIPTS_PATH = versions.REPO_PATH / "scripts"
 NEW_PROJECTS_PER_DAY = 4
 
 # The heading of the section a changelog collects changes in before they are
-# released, and what ends a section: the next heading, or the link
-# definitions at the bottom of the file.
+# released.
 UNRELEASED = re.compile(r"^## \[Unreleased\]\n", re.MULTILINE)
-SECTION_END = re.compile(r"^## \[|^\[[^\]]+\]: ", re.MULTILINE)
 
 
 def committed_tools() -> dict[str, str]:
@@ -179,15 +180,13 @@ def changelog_with_update(
 
     if not UNRELEASED.search(changelog):
         # above the newest release
-        newest = SECTION_END.search(changelog)
-        at = newest.start() if newest else len(changelog)
+        at = changelogs.section_end(changelog, 0)
         changelog = changelog[:at] + "## [Unreleased]\n\n" + changelog[at:]
 
-    unreleased = UNRELEASED.search(changelog)
+    unreleased = changelogs.section(changelog, UNRELEASED)
     assert unreleased is not None
-    end = SECTION_END.search(changelog, unreleased.end())
-    stop = end.start() if end else len(changelog)
-    section = changelog[unreleased.end() : stop]
+    begin, stop = unreleased
+    section = changelog[begin:stop]
     earlier = re.search(
         rf"^- Updated {re.escape(name)} to \[[^\]]+\]\[([^\]]+)\], from (\S+)\.\n",
         section,
@@ -206,7 +205,7 @@ def changelog_with_update(
         at = added.end() if added else len(section) - len(section.lstrip("\n"))
         section = section[:at] + "### Changed\n" + line + "\n" + section[at:]
 
-    changelog = changelog[: unreleased.end()] + section + changelog[stop:]
+    changelog = changelog[:begin] + section + changelog[stop:]
 
     if earlier:
         definition = re.compile(rf"^\[{re.escape(earlier[1])}\]: .*\n", re.MULTILINE)

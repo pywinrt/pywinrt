@@ -21,6 +21,9 @@ import re
 import sys
 from pathlib import Path
 
+# the sections of a changelog
+import changelogs
+
 # what each family is called, and which interop modules are released with one
 import families
 
@@ -83,13 +86,13 @@ def notes(changelog: Path, version: str) -> str:
     """
     text = changelog.read_text(encoding="utf-8")
     heading = re.compile(rf"^## \[{re.escape(version)}\] - .*$", re.MULTILINE)
-    start = heading.search(text)
+    span = changelogs.section(text, heading)
 
-    if start is None:
+    if span is None:
         raise SystemExit(f"{changelog} has no section for {version}")
 
-    end = re.compile(r"^## \[|^\[[^\]]+\]: ", re.MULTILINE).search(text, start.end())
-    section = text[start.end() : end.start() if end else len(text)].strip()
+    begin, end = span
+    section = text[begin:end].strip()
 
     definitions = {
         match[1]: line
