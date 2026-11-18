@@ -3,7 +3,8 @@
 // Building a type is two passes, because CPython wants a type's getset array
 // before the type exists and its methods only after: collect_members() turns a
 // table's groups into descriptors and hands back what each pass needs, and
-// bind_methods() runs the second one.
+// bind_methods() runs the second one. lay_out_outputs() is the part of building
+// a descriptor that a call can have to finish.
 
 #pragma once
 
@@ -39,4 +40,6 @@ namespace py::interp
 
     bool bind_methods(
         type_members& collected, PyTypeObject* instance_type, PyTypeObject* statics);
+
+    bool lay_out_outputs(overload_desc& overload) noexcept;
 } // namespace py::interp

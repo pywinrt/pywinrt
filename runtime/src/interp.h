@@ -178,10 +178,11 @@ namespace py::interp
         uint16_t arg_count;
         /// Bytes of storage the outputs need, including their alignment.
         uint16_t out_size;
-        /// Whether @c out_size and the output offsets are final. An output
-        /// whose type is a struct from another package cannot be measured until
-        /// that package has been imported, so those are laid out on the first
-        /// call instead.
+        /// Whether @c out_size and the output offsets are final. A struct is
+        /// measured from its type entry, which the build does not resolve,
+        /// because resolving one can import another package, so an overload
+        /// that receives a struct or passes one by reference is laid out on
+        /// its first call instead.
         bool prepared;
         arg_desc* args;
     };

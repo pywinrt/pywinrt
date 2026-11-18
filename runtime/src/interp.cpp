@@ -27,6 +27,7 @@
 #include "delegates.h"
 #include "generics.h"
 #include "interp.h"
+#include "members.h"
 #include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
@@ -1113,11 +1114,9 @@ namespace py::interp
     }
 
     /**
-     * Lays out the block of storage a call's outputs are received into.
-     *
-     * An output whose type is a struct from a package that had not been
-     * imported when the descriptor was built could not be measured then, so a
-     * member with one is measured here instead, once.
+     * Lays out the block of storage a call's outputs are received into, for
+     * an overload that the build left unprepared because it receives or
+     * passes by reference a struct, which is measured here instead, once.
      *
      * The structs are resolved first, which can import their packages, so
      * that the layout itself is done holding the build lock and nothing that
@@ -1163,59 +1162,7 @@ namespace py::interp
             return true;
         }
 
-        uint32_t cursor = 0;
-        uint32_t widest = 1;
-
-        for (uint16_t i = 0; i < overload.arg_count; i++)
-        {
-            auto& arg = overload.args[i];
-            if (!needs_storage(arg))
-            {
-                continue;
-            }
-
-            uint32_t size{};
-            uint32_t align{};
-
-            if (arg.category == table::param_category::receive_array)
-            {
-                // The count and the elements, which the two array slots point
-                // at; what the elements are does not change what receives
-                // them.
-                size = sizeof(array_out);
-                align = alignof(array_out);
-            }
-            else if (arg.code == table::type_code::struct_)
-            {
-                auto const info = load_published(arg.info);
-                size = info->size;
-                align = info->align;
-            }
-            else
-            {
-                try
-                {
-                    auto const layout = table::get_value_layout(arg.code);
-                    size = layout.size;
-                    align = layout.align;
-                }
-                catch (...)
-                {
-                    to_PyErr();
-                    return false;
-                }
-            }
-
-            cursor = align_up(cursor, align);
-            arg.out_offset = static_cast<uint16_t>(cursor);
-            cursor += size;
-            widest = std::max(widest, align);
-        }
-
-        overload.out_size = static_cast<uint16_t>(align_up(cursor, widest));
-        publish(overload.prepared, true);
-
-        return true;
+        return lay_out_outputs(overload);
     }
 
     /**

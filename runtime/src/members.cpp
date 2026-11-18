@@ -259,6 +259,90 @@ namespace py::interp
 
     // ----- turning a table's groups into descriptors -----------------------
 
+    /**
+     * Lays out the block of storage @p overload's outputs are received into,
+     * and marks it prepared.
+     *
+     * A struct the call receives or passes by reference is measured from the
+     * struct's type entry, which is not there until the struct has been
+     * resolved, and resolving one can import the package that defines it. So
+     * the build, which resolves no struct, lays out an overload with no such
+     * struct and leaves one with a struct unprepared, for its first call to
+     * lay out once the call has resolved the structs.
+     *
+     * @returns @c true, with @p overload left unprepared when a struct has
+     * not been resolved, or @c false with a Python error set when an output
+     * has no layout.
+     */
+    bool lay_out_outputs(overload_desc& overload) noexcept
+    {
+        uint32_t cursor = 0;
+        uint32_t widest = 1;
+        auto measured = true;
+
+        for (uint16_t i = 0; i < overload.arg_count; i++)
+        {
+            auto& arg = overload.args[i];
+            if (!needs_storage(arg))
+            {
+                continue;
+            }
+
+            uint32_t size{};
+            uint32_t align{};
+
+            if (arg.category == table::param_category::receive_array)
+            {
+                // Only the count and the pointer, which the two array slots
+                // point at, are received here. The elements are the callee's
+                // to allocate.
+                size = sizeof(array_out);
+                align = alignof(array_out);
+            }
+            else if (arg.code == table::type_code::struct_)
+            {
+                auto const info = load_published(arg.info);
+                if (!info)
+                {
+                    measured = false;
+                    continue;
+                }
+
+                size = info->size;
+                align = info->align;
+            }
+            else
+            {
+                try
+                {
+                    auto const layout = table::get_value_layout(arg.code);
+                    size = layout.size;
+                    align = layout.align;
+                }
+                catch (...)
+                {
+                    to_PyErr();
+                    return false;
+                }
+            }
+
+            cursor = align_up(cursor, align);
+            arg.out_offset = static_cast<uint16_t>(cursor);
+            cursor += size;
+            widest = std::max(widest, align);
+        }
+
+        if (!measured)
+        {
+            return true;
+        }
+
+        overload.out_size = static_cast<uint16_t>(align_up(cursor, widest));
+        publish(overload.prepared, true);
+
+        return true;
+    }
+
     namespace
     {
         bool same_guid(void const* left, void const* right) noexcept
@@ -360,9 +444,6 @@ namespace py::interp
             // Where each argument sits is what the shape says, and an array
             // parameter is two of them: the count and the pointer.
             uint32_t slot = 0;
-            uint32_t cursor = 0;
-            uint32_t widest = 1;
-            auto measured = true;
 
             for (uint32_t i = 0; i < member.param_count(); i++)
             {
@@ -415,46 +496,12 @@ namespace py::interp
                 }
 
                 slot += slots;
-
-                if (!needs_storage(arg))
-                {
-                    continue;
-                }
-
-                uint32_t size{};
-                uint32_t align{};
-
-                if (arg.category == table::param_category::receive_array)
-                {
-                    // Only the count and the pointer are received here; the
-                    // elements are the callee's to allocate.
-                    size = sizeof(array_out);
-                    align = alignof(array_out);
-                }
-                else if (arg.code == table::type_code::struct_)
-                {
-                    // A struct from a package that has not been imported yet
-                    // cannot be measured here, so the whole block is laid out
-                    // again on the first call instead.
-                    measured = false;
-                    continue;
-                }
-                else
-                {
-                    auto const layout = table::get_value_layout(arg.code);
-                    size = layout.size;
-                    align = layout.align;
-                }
-
-                cursor = align_up(cursor, align);
-                arg.out_offset = static_cast<uint16_t>(cursor);
-                cursor += size;
-                widest = std::max(widest, align);
             }
 
-            overload.prepared = measured;
-            overload.out_size
-                = measured ? static_cast<uint16_t>(align_up(cursor, widest)) : 0;
+            if (!lay_out_outputs(overload))
+            {
+                return false;
+            }
 
             // Plain activation hands back the object itself rather than its
             // default interface, so what comes back has to be queried for the
