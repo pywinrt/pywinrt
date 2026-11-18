@@ -860,6 +860,15 @@ namespace py::cpp::_winrt
      */
     static std::atomic<module_state*> main_state{};
 
+    /**
+     * Lets go of wrap_async_func, the one reference the state owns that is not
+     * a handle. The members go after it, in the reverse of their order.
+     */
+    module_state::~module_state()
+    {
+        Py_XDECREF(wrap_async_func);
+    }
+
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
@@ -927,23 +936,7 @@ namespace py::cpp::_winrt
         main_state.compare_exchange_strong(
             expected, nullptr, std::memory_order_acq_rel);
 
-        std::destroy_at(&state->object_meta_type);
-        std::destroy_at(&state->object_type);
-        std::destroy_at(&state->array_type);
-        std::destroy_at(&state->mapping_iter_type);
-        std::destroy_at(&state->projected_method_type);
-        std::destroy_at(&state->to_uuid_func);
-        std::destroy_at(&state->uuid_type);
-        Py_XDECREF(state->wrap_async_func);
-
-        std::destroy_at(&state->type_cache);
-
-        std::destroy_at(&state->type_entries);
-        std::destroy_at(&state->generic_types);
-        std::destroy_at(&state->buffer_exports);
-        std::destroy_at(&state->kept_factories);
-
-        std::destroy_at(&state->projections);
+        std::destroy_at(state);
     }
 
     // Not using a header file for thes because setuptools doesn't have a nice
@@ -1096,23 +1089,11 @@ namespace py::cpp::_winrt
         static const auto kSTA
             = static_cast<long>(winrt::apartment_type::single_threaded);
 
-        // CPython allocates the state zeroed just before this runs, and does
-        // not call traverse, clear or free before it has, so constructing the
-        // handles and maps first is what lets those three assume them.
-        auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
-        std::construct_at(&state->object_meta_type);
-        std::construct_at(&state->object_type);
-        std::construct_at(&state->array_type);
-        std::construct_at(&state->mapping_iter_type);
-        std::construct_at(&state->projected_method_type);
-        std::construct_at(&state->to_uuid_func);
-        std::construct_at(&state->uuid_type);
-        std::construct_at(&state->type_cache);
-        std::construct_at(&state->projections);
-        std::construct_at(&state->type_entries);
-        std::construct_at(&state->generic_types);
-        std::construct_at(&state->buffer_exports);
-        std::construct_at(&state->kept_factories);
+        // CPython allocates the state just before this runs, and does not call
+        // traverse, clear or free before it has, so constructing it first is
+        // what lets those three assume it.
+        auto state = std::construct_at(
+            reinterpret_cast<module_state*>(PyModule_GetState(module)));
 
         // The slot below says the same, but CPython only enforces it in an
         // interpreter configured to check, which a legacy subinterpreter on a
@@ -1193,7 +1174,6 @@ namespace py::cpp::_winrt
         state->projected_method_type = std::move(projected_method_type);
         state->to_uuid_func = std::move(to_uuid_func);
         state->uuid_type = std::move(uuid_type);
-        state->wrap_async_func = nullptr; // lazy-initialized
 
         main_state.store(state, std::memory_order_release);
 

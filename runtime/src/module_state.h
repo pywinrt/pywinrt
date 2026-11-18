@@ -36,8 +36,7 @@ namespace py::cpp::_winrt
      * already safe - every one of them is reached with the GIL held - so the
      * guard is an empty object that compiles away, and the lock an empty
      * struct that takes no room in the state. On a free-threaded build it is a
-     * PyMutex, which is one byte and unlocked when zero, so a state that
-     * CPython hands out zeroed needs no initialization.
+     * PyMutex, which is one byte and unlocked when zero.
      *
      * One lock covers every cache, and the rule that makes that safe is that a
      * critical section is one map operation and never a call that can run
@@ -170,25 +169,34 @@ namespace py::cpp::_winrt
         }
     };
 
+    /**
+     * What winrt._winrt keeps, which CPython allocates for the module and
+     * module_exec() constructs in place.
+     */
     struct module_state
     {
+        ~module_state();
+
+        /// The projection tables that have been loaded, by the name of the
+        /// module each was loaded into. First, so that it is destroyed last:
+        /// the types the members below hold have the descriptors a projection
+        /// owns bound to them.
+        std::unordered_map<std::string, std::unique_ptr<py::interp::projection>>
+            projections;
         py::pytype_handle object_meta_type;
         py::pytype_handle object_type;
         py::pytype_handle array_type;
         py::pytype_handle mapping_iter_type;
         /// The descriptor that a projected method is bound as.
         py::pytype_handle projected_method_type;
-        /// Guards every container below, which are the only members that are
-        /// written after the state is built.
-        state_mutex cache_lock;
+        /// Guards the projections and every container below, which are the
+        /// members besides wrap_async_func that are written after the state
+        /// is built.
+        state_mutex cache_lock{};
         /// The Python type of each qualified name that has been resolved. The
         /// key is a copy, because a caller's name need not outlive the call.
         std::unordered_map<std::string, py::pytype_handle, string_hash, std::equal_to<>>
             type_cache;
-        /// The projection tables that have been loaded, by the name of the
-        /// module each was loaded into.
-        std::unordered_map<std::string, std::unique_ptr<py::interp::projection>>
-            projections;
         /// The descriptor a projected type was built from, which is how the
         /// call path gets from the type of a value back to what the table said
         /// about it. One descriptor can be here more than once: an interface
@@ -210,15 +218,15 @@ namespace py::cpp::_winrt
         std::vector<py::interp::overload_desc*> kept_factories;
         /// Guards what the projections build after their packages have been
         /// imported. Taken before the cache lock when both are.
-        build_mutex build_lock;
+        build_mutex build_lock{};
         py::pyobj_handle to_uuid_func;
         /// uuid.UUID, which is what a Guid is in Python.
         py::pytype_handle uuid_type;
         /// winrt.runtime._internals.wrap_async, which __await__ of an async
-        /// operation calls. Owned, and not a handle, because the first thread
-        /// to import it publishes it with a compare-exchange on the pointer
-        /// itself.
-        PyObject* wrap_async_func;
+        /// operation calls, once it has been imported. Owned, and not a
+        /// handle, because the first thread to import it publishes it with a
+        /// compare-exchange on the pointer itself.
+        PyObject* wrap_async_func{};
     };
 
     module_state* get_module_state() noexcept;
