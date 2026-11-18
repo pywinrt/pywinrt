@@ -18,6 +18,9 @@ import xml.etree.ElementTree as ET
 from collections.abc import Iterable
 from pathlib import Path
 
+# which family each package written by hand is released with
+import families
+
 REPO_PATH = Path(__file__).parent.parent
 
 TOOLS_JSON_PATH = REPO_PATH / ".config" / "_tools.json"
@@ -76,31 +79,12 @@ NUGET_PACKAGES = {
 # upstream package's, so it is not one of the families above.
 RUNTIME_FAMILY = "runtime"
 
-
-# The packages written by hand that are released with a family rather than on
-# their own, keyed by directory under interop/: every interop module that
-# compiles against a family other than the Windows SDK, which
-# packages.generated() holds to the family it builds each one against. Such a
-# family's release is what its users choose a version of, so each package of
-# it carries that version, and the interop modules that go with a set of its
-# packages are the ones with their version. The Windows App SDK bootstrap
-# module has to besides: its wheel carries
-# Microsoft.WindowsAppRuntime.Bootstrap.dll out of the pin and loads that
-# release of the App SDK unless told otherwise, so what it carries changes
-# whenever the pin moves, even where its source does not. None of them has a
-# version.txt. A fix to one between two pins adds one, which makes that
-# package a unit of its own until the pin moves (see interop_version()).
-FAMILY_RELEASED_INTEROP = {
-    "winrt-Microsoft.UI.Interop": "wasdk",
-    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": "wasdk",
-    "winrt-Microsoft.Web.WebView2.Interop": "webview2",
-}
-
-# A family version that a fix to one of those packages, or to a generated
-# package, can follow: a final release, to which the fix adds a number, a
-# fourth after the App SDK's three and a fifth after the Windows SDK's four. A
-# prerelease cannot take one, since the number goes before the phase and would
-# sort above the final release.
+# A family version that a fix to a generated package, or to an interop package
+# released with the family (see families.FAMILY_RELEASED_INTEROP), can follow:
+# a final release, to which the fix adds a number, a fourth after the App SDK's
+# three and a fifth after the Windows SDK's four. A prerelease cannot take one,
+# since the number goes before the phase and would sort above the final
+# release.
 FIXABLE_FAMILY_VERSION = re.compile(r"\d+!\d+(?:\.\d+)+")
 
 # The file under a family's directory in projection/ that gives a package of
@@ -210,7 +194,7 @@ def version_files() -> list[Path]:
         *sorted(
             path
             for path in INTEROP_PATH.glob("winrt-*/version.txt")
-            if path.parent.name not in FAMILY_RELEASED_INTEROP
+            if path.parent.name not in families.FAMILY_RELEASED_INTEROP
         ),
     ]
 
@@ -251,9 +235,9 @@ def interop_release(name: str) -> str:
     That is the package itself, unless it is released with a family and has
     no fix of its own waiting to be released.
     """
-    if name in FAMILY_RELEASED_INTEROP:
+    if name in families.FAMILY_RELEASED_INTEROP:
         if not (INTEROP_PATH / name / "version.txt").exists():
-            return FAMILY_RELEASED_INTEROP[name]
+            return families.FAMILY_RELEASED_INTEROP[name]
 
     return name
 
@@ -267,10 +251,10 @@ def interop_version(name: str) -> str:
     """
     path = INTEROP_PATH / name / "version.txt"
 
-    if name not in FAMILY_RELEASED_INTEROP:
+    if name not in families.FAMILY_RELEASED_INTEROP:
         return read_version(path)
 
-    family_version = family_versions()[FAMILY_RELEASED_INTEROP[name]]
+    family_version = family_versions()[families.FAMILY_RELEASED_INTEROP[name]]
 
     if not path.exists():
         return family_version
@@ -547,7 +531,7 @@ def published_versions() -> dict[str, str]:
         | {path.parent.name: read_version(path) for path in interop}
         | {
             name: interop_version(name)
-            for name in sorted(FAMILY_RELEASED_INTEROP)
+            for name in sorted(families.FAMILY_RELEASED_INTEROP)
             if interop_release(name) == name
         }
     )

@@ -18,6 +18,9 @@ from enum import Enum
 from pathlib import Path
 from typing import NamedTuple
 
+# which family each package written by hand is released with
+import families
+
 # the version each release unit is published with, and the tag that says so
 import versions
 
@@ -26,51 +29,120 @@ PROJECTION_PATH = (REPO_PATH / "projection").resolve()
 INTEROP_PATH = (REPO_PATH / "interop").resolve()
 REDIST_PATH = (REPO_PATH / "redist").resolve()
 
-# The unpacked NuGet packages that a build reads something out of, named by
-# the environment variable the build looks for. The Windows App SDK and
-# WebView2 are redistributed with an app rather than part of Windows, so the
-# interop modules that call them take their headers, and the App SDK's import
-# libraries, from these. The App SDK is a metapackage over components published
-# separately, so each module names the one it needs. WebView2 is also where its
-# component .dll comes from.
-# A build that finds no variable downloads the one package it needs itself,
-# checked against a hash, as a build from the source distribution does, so
-# pointing at an unpacked copy only keeps a build in this tree off the network.
-NUGET_ENVIRONMENT = {
-    "WASDK_FOUNDATION_PATH": "Microsoft.WindowsAppSDK.Foundation",
-    "WASDK_INTERACTIVE_EXPERIENCES_PATH": "Microsoft.WindowsAppSDK.InteractiveExperiences",
-    "WEBVIEW2_PATH": "Microsoft.Web.WebView2",
+# Where each architecture's runtimes are in a NuGet package, keyed by the
+# platform tag of the wheel that carries them and holding the name setuptools
+# builds that architecture under, since the two spell it differently. Both
+# NuGet packages that PyWinRT redistributes a binary from lay their runtimes
+# out this way; only the leaf directory differs.
+RUNTIME_DIRS = {
+    "win32": ("win32", "runtimes/win-x86"),
+    "win_amd64": ("win-amd64", "runtimes/win-x64"),
+    "win_arm64": ("win-arm64", "runtimes/win-arm64"),
 }
 
-# The family whose release each of those NuGet packages is part of.
-NUGET_FAMILIES = {
-    "WASDK_FOUNDATION_PATH": "wasdk",
-    "WASDK_INTERACTIVE_EXPERIENCES_PATH": "wasdk",
-    "WEBVIEW2_PATH": "webview2",
+
+class DllPayload(NamedTuple):
+    """
+    A Microsoft binary that PyWinRT redistributes, and where it comes from.
+    """
+
+    # the environment variable that scripts/build-sdist.py and
+    # scripts/build-bdist.py point at a copy of the NuGet package it is taken
+    # out of (see families.NUGET_ENVIRONMENT)
+    env: str
+    # the file itself, and the directory under RUNTIME_DIRS that holds it
+    dll_name: str
+    native_dir: str
+    # the upstream license text, keyed by where it is in the NuGet package and
+    # named by what the package carries it as, and the SPDX identifier of the
+    # license. Neither of these licenses has an SPDX id, so both are
+    # LicenseRef-.
+    license_files: dict[str, str]
+    license_id: str
+
+    @property
+    def nuget_package(self) -> str:
+        """
+        The NuGet package it is taken out of.
+        """
+        return families.NUGET_ENVIRONMENT[self.env].name
+
+    @property
+    def family(self) -> str:
+        """
+        The family whose release the NuGet package is part of.
+        """
+        return families.NUGET_ENVIRONMENT[self.env].family
+
+    def dll_paths(self, wheel_tag: bool) -> dict[str, str]:
+        """
+        Where each architecture's .dll is, keyed the way the build that reads
+        this asks for a platform.
+        """
+        return {
+            tag if wheel_tag else plat_name: (
+                f"{runtime_dir}/{self.native_dir}/{self.dll_name}"
+            )
+            for tag, (plat_name, runtime_dir) in RUNTIME_DIRS.items()
+        }
+
+    def nuget_path(self) -> Path:
+        """
+        The unpacked NuGet package that scripts/fetch-tools.ps1 downloaded.
+        """
+        return versions.unpacked_nuget_path(self.nuget_package)
+
+
+class RedistPackage(NamedTuple):
+    """
+    A distribution that redistributes a component .dll, and the projection
+    that needs it.
+    """
+
+    # the distribution that depends on it and imports it, and the module it
+    # imports
+    importer: str
+    module: str
+    payload: DllPayload
+
+
+# The component .dlls that are redistributed in a distribution of their own,
+# whose sources are under redist/. A .dll is built for one architecture and
+# the projection that needs it is not, so the two cannot be published in one
+# wheel: the projection depends on the package below and imports it, and
+# importing it is what puts the .dll on the DLL search path. Each is released
+# with the family of the NuGet package its .dll comes out of, which is the
+# family of the projection that imports it, since the two move together.
+REDIST_PACKAGES = {
+    "winrt-Microsoft.Web.WebView2.Dll": RedistPackage(
+        importer="winrt-Microsoft.Web.WebView2",
+        module="winrt.microsoft.web.webview2.dll",
+        payload=DllPayload(
+            env="WEBVIEW2_PATH",
+            dll_name="Microsoft.Web.WebView2.Core.dll",
+            native_dir="native_uap",
+            license_files={
+                "LICENSE.txt": "LICENSE.Microsoft.Web.WebView2.txt",
+                "NOTICE.txt": "NOTICE.Microsoft.Web.WebView2.txt",
+            },
+            license_id="LicenseRef-Microsoft-Web-WebView2",
+        ),
+    ),
 }
 
-# The NuGet packages each hand-written module compiles against, named by the
-# environment variable above that says where fetch-tools.ps1 unpacked each
-# one. The App SDK is a metapackage, so what a module includes is spread over
-# several of them. Compiling against a family's packages is also what puts a
-# module in that family: these are released with it rather than with the
-# Windows SDK that the other interop modules follow.
-INTEROP_NUGET_PACKAGES = {
-    # Microsoft.UI.Interop.h
-    "winrt-Microsoft.UI.Interop": ["WASDK_INTERACTIVE_EXPERIENCES_PATH"],
-    # MddBootstrap.h and its import library; the release it expects is written
-    # into the package by scripts/generate-pyproject.py
-    "winrt-Microsoft.WindowsAppRuntime.Bootstrap": ["WASDK_FOUNDATION_PATH"],
-    # WebView2Interop.h, which includes WebView2.h
-    "winrt-Microsoft.Web.WebView2.Interop": ["WEBVIEW2_PATH"],
-}
-
-# A package that redistributes a component .dll is released with the family
-# of the projection that imports it, since the .dll and the projection come
-# out of one NuGet package and move together.
-REDIST_FAMILIES = {
-    "winrt-Microsoft.Web.WebView2.Dll": "webview2",
-}
+# The Windows App Runtime bootstrapper, which is the one Microsoft binary that
+# a compiled package redistributes. The extension module links against its
+# import library, and Windows looks for a module's dependencies in the
+# directory the module was loaded from, so it ships beside the .pyd rather
+# than in a package of its own the way a component .dll of an
+# architecture-independent projection does.
+BOOTSTRAP_DLL = DllPayload(
+    env="WASDK_FOUNDATION_PATH",
+    dll_name="Microsoft.WindowsAppRuntime.Bootstrap.dll",
+    native_dir="native",
+    license_files={"license.txt": "LICENSE.Microsoft.WindowsAppSDK.txt"},
+    license_id="LicenseRef-Microsoft-WindowsAppSDK",
+)
 
 
 # The families and units whose packages are uploaded to PyPI with trusted
@@ -137,27 +209,34 @@ class Package(NamedTuple):
     # what a tag releases it as, named after the directory its sources are
     # in: the family for a generated package, and the package itself for one
     # that is written by hand and so carries a version of its own, unless
-    # versions.FAMILY_RELEASED_INTEROP releases it with a family
+    # families.FAMILY_RELEASED_INTEROP releases it with a family
     release: str
     build: Build
 
 
-def interop_family(distribution: str) -> str:
+def check_families() -> None:
     """
-    The family a hand-written interop module is built against: the one its
-    NuGet packages are part of, or the Windows SDK when it has none.
+    Refuses a name in scripts/families.py that matches nothing: an interop
+    module with no directory, or a family that is not one this tree projects.
+    Either would leave a package out of its family's release without a word.
     """
-    families = {
-        NUGET_FAMILIES[env] for env in INTEROP_NUGET_PACKAGES.get(distribution, [])
-    }
+    interop = {path.name for path in INTEROP_PATH.glob("winrt-*")}
+    unknown = sorted(set(families.INTEROP_NUGET_PACKAGES) - interop)
 
-    if len(families) > 1:
+    if unknown:
         raise RuntimeError(
-            f"{distribution} compiles against the NuGet packages of"
-            f" {', '.join(sorted(families))}, and is released with only one family"
+            f"families.INTEROP_NUGET_PACKAGES names {', '.join(unknown)},"
+            " which is not a directory under interop/"
         )
 
-    return families.pop() if families else "winrt"
+    named = {package.family for package in families.NUGET_ENVIRONMENT.values()}
+    unknown = sorted(named - set(versions.NUGET_PACKAGES))
+
+    if unknown:
+        raise RuntimeError(
+            f"families.NUGET_ENVIRONMENT names the family {', '.join(unknown)},"
+            " which is not a key of versions.NUGET_PACKAGES"
+        )
 
 
 def generated() -> Iterator[Package]:
@@ -170,6 +249,8 @@ def generated() -> Iterator[Package]:
     that the suite has something to run against and is published nowhere, so
     it has a family and a directory like the rest without being released.
     """
+    check_families()
+
     table = REPO_PATH / "table"
     runtime = REPO_PATH / "runtime"
 
@@ -190,21 +271,13 @@ def generated() -> Iterator[Package]:
         )
 
     for path in sorted(REDIST_PATH.glob("winrt-*")):
-        family = REDIST_FAMILIES[path.name]
+        family = REDIST_PACKAGES[path.name].payload.family
 
         yield Package(path, path.name, family, family, Build.REDIST)
 
     for path in sorted(INTEROP_PATH.glob("winrt-*")):
         distribution = path.name
-        family = interop_family(distribution)
-
-        if versions.FAMILY_RELEASED_INTEROP.get(path.name, "winrt") != family:
-            raise RuntimeError(
-                f"{path.name} is built against the {family} family, so"
-                f" versions.FAMILY_RELEASED_INTEROP has to say whether it is"
-                f" released with it"
-            )
-
+        family = families.interop_family(distribution)
         release = versions.interop_release(path.name)
 
         yield Package(path, distribution, family, release, Build.STABLE_ABI)
@@ -239,8 +312,8 @@ def set_nuget_environment() -> None:
     downloads that one package and nothing else. That is why a release fetches
     nothing ahead of its builds: most units need no NuGet package at all.
     """
-    for env, package in NUGET_ENVIRONMENT.items():
-        path = versions.unpacked_nuget_path(package)
+    for env, package in families.NUGET_ENVIRONMENT.items():
+        path = versions.unpacked_nuget_path(package.name)
 
         if path.is_dir():
             os.environ[env] = os.fspath(path)

@@ -1,6 +1,5 @@
 from collections.abc import Generator
 import hashlib
-from typing import NamedTuple
 from contextlib import contextmanager
 import io
 import json
@@ -9,6 +8,9 @@ from pathlib import Path
 
 # the version scheme, which scripts/tests/test_versions.py covers
 import versions
+
+# which family each package written by hand is released with
+import families
 
 # the distributions this repository publishes and the layout they sit in
 import packages
@@ -41,61 +43,6 @@ PAYLOAD_DIR = "nuget"
 # What PEP 770 calls the bill of materials in a wheel.
 SBOM_NAME = "cyclonedx.json"
 
-# Where each architecture's runtimes are in a NuGet package, keyed by the
-# platform tag of the wheel that carries them and holding the name setuptools
-# builds that architecture under, since the two spell it differently. Both
-# NuGet packages that PyWinRT redistributes a binary from lay their runtimes
-# out this way; only the leaf directory differs.
-RUNTIME_DIRS = {
-    "win32": ("win32", "runtimes/win-x86"),
-    "win_amd64": ("win-amd64", "runtimes/win-x64"),
-    "win_arm64": ("win-arm64", "runtimes/win-arm64"),
-}
-
-
-class DllPayload(NamedTuple):
-    """
-    A Microsoft binary that PyWinRT redistributes, and where it comes from.
-    """
-
-    # the NuGet package it is taken out of, and the environment variable that
-    # scripts/build-sdist.py and scripts/build-bdist.py point at a copy of it
-    nuget_package: str
-    env: str
-    # the file itself, and the directory under RUNTIME_DIRS that holds it
-    dll_name: str
-    native_dir: str
-    # the upstream license text, keyed by where it is in the NuGet package and
-    # named by what the package carries it as, and the SPDX identifier of the
-    # license. Neither of these licenses has an SPDX id, so both are
-    # LicenseRef-.
-    license_files: dict[str, str]
-    license_id: str
-
-    def dll_paths(self, wheel_tag: bool) -> dict[str, str]:
-        """
-        Where each architecture's .dll is, keyed the way the build that reads
-        this asks for a platform.
-        """
-        return {
-            tag if wheel_tag else plat_name: (
-                f"{runtime_dir}/{self.native_dir}/{self.dll_name}"
-            )
-            for tag, (plat_name, runtime_dir) in RUNTIME_DIRS.items()
-        }
-
-    def nuget_path(self) -> Path:
-        """
-        The unpacked NuGet package that scripts/fetch-tools.ps1 downloaded.
-        """
-        return versions.unpacked_nuget_path(self.nuget_package)
-
-    def nupkg_url(self) -> str:
-        return nupkg_url(self.nuget_package)
-
-    def nupkg_sha256(self) -> str:
-        return nupkg_sha256(self.nuget_package)
-
 
 def nupkg_url(package: str) -> str:
     """
@@ -123,45 +70,6 @@ def nupkg_sha256(package: str) -> str:
 
     return hashlib.sha256(nupkg.read_bytes()).hexdigest()
 
-
-# The component .dlls that are redistributed in a distribution of their own,
-# whose sources are under redist/. A .dll is built for one architecture and
-# the projection that needs it is not, so the two cannot be published in one
-# wheel: the projection depends on the package below and imports it, and
-# importing it is what puts the .dll on the DLL search path.
-REDIST_PACKAGES = {
-    "winrt-Microsoft.Web.WebView2.Dll": (
-        # the distribution that depends on it and imports it
-        "winrt-Microsoft.Web.WebView2",
-        "winrt.microsoft.web.webview2.dll",
-        DllPayload(
-            nuget_package="Microsoft.Web.WebView2",
-            env="WEBVIEW2_PATH",
-            dll_name="Microsoft.Web.WebView2.Core.dll",
-            native_dir="native_uap",
-            license_files={
-                "LICENSE.txt": "LICENSE.Microsoft.Web.WebView2.txt",
-                "NOTICE.txt": "NOTICE.Microsoft.Web.WebView2.txt",
-            },
-            license_id="LicenseRef-Microsoft-Web-WebView2",
-        ),
-    ),
-}
-
-# The Windows App Runtime bootstrapper, which is the one Microsoft binary that
-# a compiled package redistributes. The extension module links against its
-# import library, and Windows looks for a module's dependencies in the
-# directory the module was loaded from, so it ships beside the .pyd rather
-# than in a package of its own the way a component .dll of an
-# architecture-independent projection does.
-BOOTSTRAP_DLL = DllPayload(
-    nuget_package="Microsoft.WindowsAppSDK.Foundation",
-    env="WASDK_FOUNDATION_PATH",
-    dll_name="Microsoft.WindowsAppRuntime.Bootstrap.dll",
-    native_dir="native",
-    license_files={"license.txt": "LICENSE.Microsoft.WindowsAppSDK.txt"},
-    license_id="LicenseRef-Microsoft-WindowsAppSDK",
-)
 
 # The three namespaces that nearly everything in the projection hands a type
 # back from. A package that references one of these is broken without it, so
@@ -305,7 +213,7 @@ INTEROP_SUMMARIES = {
     ),
 }
 
-# Where in each NuGet package of packages.NUGET_ENVIRONMENT the headers an
+# Where in each NuGet package of families.NUGET_ENVIRONMENT the headers an
 # interop module includes are, relative to the package's root.
 NUGET_INCLUDE_DIRS = {
     "WASDK_FOUNDATION_PATH": ["include"],
@@ -384,7 +292,9 @@ def open_if_changed(path: Path) -> Generator[io.StringIO]:
     path.write_bytes(data)
 
 
-def write_license(package_path: Path, payload: DllPayload | None = None) -> None:
+def write_license(
+    package_path: Path, payload: packages.DllPayload | None = None
+) -> None:
     """
     Copies the license of everything in one package into it.
 
@@ -418,7 +328,7 @@ def avoid_keyword(name: str) -> str:
 
 
 def is_nuget_interop_package(name: str) -> bool:
-    return name in packages.INTEROP_NUGET_PACKAGES
+    return name in families.INTEROP_NUGET_PACKAGES
 
 
 # Which family each package belongs to, so that a requirement on another one
@@ -592,10 +502,10 @@ def write_interop_readme(
             + "NuGet package and loads that release of the Windows App SDK unless"
             + " told otherwise."
             + "\n"
-            + f"It carries `{BOOTSTRAP_DLL.dll_name}` from version"
-            + f" {NUGET_PACKAGE_VERSIONS[BOOTSTRAP_DLL.nuget_package]} of the"
+            + f"It carries `{packages.BOOTSTRAP_DLL.dll_name}` from version"
+            + f" {NUGET_PACKAGE_VERSIONS[packages.BOOTSTRAP_DLL.nuget_package]} of the"
             + "\n"
-            + f"`{BOOTSTRAP_DLL.nuget_package}` NuGet package."
+            + f"`{packages.BOOTSTRAP_DLL.nuget_package}` NuGet package."
         )
     else:
         built_against = (
@@ -655,7 +565,7 @@ def write_compiled_project_files(
     # Microsoft binary, so it is the only one whose license names two parties
     # and whose build stages something into the package before it runs.
     redistributes = (
-        BOOTSTRAP_DLL if is_app_sdk_bootstrap_package(package_name) else None
+        packages.BOOTSTRAP_DLL if is_app_sdk_bootstrap_package(package_name) else None
     )
 
     needs_nuget = is_nuget_interop_package(package_name)
@@ -667,15 +577,15 @@ def write_compiled_project_files(
     version = (
         RUNTIME_VERSION if is_runtime else versions.interop_version(package_path.name)
     )
-    static_version = package_path.name in versions.FAMILY_RELEASED_INTEROP
+    static_version = package_path.name in families.FAMILY_RELEASED_INTEROP
 
     with open_if_changed(package_path / "pyproject.toml") as f:
         f.write(
             templates.COMPILED_PYPROJECT_TOML.format(
                 classifiers=templates.IMPORTED_CLASSIFIERS,
                 project_urls=format_project_urls(
-                    family_path(versions.FAMILY_RELEASED_INTEROP[package_path.name])
-                    if package_path.name in versions.FAMILY_RELEASED_INTEROP
+                    family_path(families.FAMILY_RELEASED_INTEROP[package_path.name])
+                    if package_path.name in families.FAMILY_RELEASED_INTEROP
                     else package_path
                 ),
                 package_name=package_name,
@@ -935,8 +845,8 @@ def format_nuget_packages(package_name: str) -> str:
     """
     entries: list[str] = []
 
-    for env in packages.INTEROP_NUGET_PACKAGES[package_name]:
-        package = packages.NUGET_ENVIRONMENT[env]
+    for env in families.INTEROP_NUGET_PACKAGES[package_name]:
+        package = families.NUGET_ENVIRONMENT[env].name
         include_dirs = ", ".join(f'"{d}"' for d in NUGET_INCLUDE_DIRS[env])
         entries.append(
             f'    "{env}": (\n'
@@ -986,7 +896,7 @@ def format_version_info_defines() -> str:
     return "".join(f"#define {name} {values[name]}\n" for name in VERSION_INFO_MACROS)
 
 
-def format_dll_paths(payload: DllPayload, wheel_tag: bool) -> str:
+def format_dll_paths(payload: packages.DllPayload, wheel_tag: bool) -> str:
     return "".join(
         f'    "{plat_name}": "{path}",\n'
         for plat_name, path in payload.dll_paths(wheel_tag).items()
@@ -994,7 +904,7 @@ def format_dll_paths(payload: DllPayload, wheel_tag: bool) -> str:
 
 
 def write_dll_project_files(
-    package_name: str, importer: str, module: str, payload: DllPayload
+    package_name: str, importer: str, module: str, payload: packages.DllPayload
 ) -> None:
     """
     Writes the packaging of one package that redistributes a component .dll.
@@ -1005,7 +915,7 @@ def write_dll_project_files(
     """
     package_path = REDIST_PATH / package_name
     module_path = "/".join(module.split("."))
-    version = FAMILY_VERSIONS[package_families[importer]]
+    version = FAMILY_VERSIONS[package_families[package_name]]
     nuget_version = NUGET_PACKAGE_VERSIONS[payload.nuget_package]
     upstream_licenses = "".join(
         f'    "{name}",\n' for name in payload.license_files.values()
@@ -1018,7 +928,7 @@ def write_dll_project_files(
             templates.DLL_PYPROJECT_TOML.format(
                 classifiers=templates.CLASSIFIERS,
                 project_urls=format_project_urls(
-                    family_path(package_families[importer])
+                    family_path(package_families[package_name])
                 ),
                 package_name=package_name,
                 version=version,
@@ -1036,8 +946,8 @@ def write_dll_project_files(
                 version=version,
                 nuget_package=payload.nuget_package,
                 nuget_version=nuget_version,
-                nuget_url=payload.nupkg_url(),
-                nuget_sha256=payload.nupkg_sha256(),
+                nuget_url=nupkg_url(payload.nuget_package),
+                nuget_sha256=nupkg_sha256(payload.nuget_package),
                 env=payload.env,
                 payload_dir=PAYLOAD_DIR,
                 sbom_name=SBOM_NAME,
@@ -1181,9 +1091,9 @@ for deps_path in sorted(PROJECTION_PATH.glob("**/deps.json")):
     # without it, so the dependency is hard, and a floor is all of it: a
     # newer component .dll serves an older projection.
     dependencies.extend(
-        f"{dll_package}>={FAMILY_VERSIONS[family]}"
-        for dll_package, (importer, _, _) in REDIST_PACKAGES.items()
-        if importer == package_name
+        f"{dll_package}>={FAMILY_VERSIONS[package_families[dll_package]]}"
+        for dll_package, redist in packages.REDIST_PACKAGES.items()
+        if redist.importer == package_name
     )
 
     # What the [all] extra offers is the closure of everything a package can
@@ -1257,8 +1167,10 @@ write_license(TABLE_PATH)
 
 # create the packaging of the packages that redistribute a component .dll
 
-for package_name, (importer, module, payload) in REDIST_PACKAGES.items():
-    write_dll_project_files(package_name, importer, module, payload)
+for package_name, redist in packages.REDIST_PACKAGES.items():
+    write_dll_project_files(
+        package_name, redist.importer, redist.module, redist.payload
+    )
 
 # create pyproject.toml files for the packages that compile
 

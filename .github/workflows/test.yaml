@@ -18,7 +18,9 @@ on:
       # what fetch-tools.ps1 runs to fetch the App SDK
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # the version scheme, whose tests are part of the suite
+      # the version scheme and the family table it reads, whose tests are part
+      # of the suite
+      - scripts/families.py
       - scripts/versions.py
       # the wheel contents check, whose tests are part of the suite
       - scripts/check-wheel-contents.py
@@ -81,7 +83,9 @@ on:
       # what fetch-tools.ps1 runs to fetch the App SDK
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # the version scheme, whose tests are part of the suite
+      # the version scheme and the family table it reads, whose tests are part
+      # of the suite
+      - scripts/families.py
       - scripts/versions.py
       # the wheel contents check, whose tests are part of the suite
       - scripts/check-wheel-contents.py
