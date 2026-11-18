@@ -8,10 +8,13 @@
 #include <libloaderapi.h>
 
 #include <pywinrt/base.h>
+#include "_winrt_array.h"
+#include "_winrt_box.h"
 #include "module_state.h"
 #include "implements.h"
 #include "members.h"
 #include "objects.h"
+#include "table.h"
 #include "types.h"
 #include <winrt/base.h>
 
@@ -555,12 +558,6 @@ namespace py::cpp::_winrt
 
     // END: class _winrt.Object:
 
-    // BEGIN: class _winrt.Array:
-
-    extern PyType_Spec Array_type_spec;
-
-    // END: class _winrt.Array:
-
     // BEGIN: class _winrt.MappingIter:
 
     // This class is used to wrap the iterator returned by IMap/IMapView so
@@ -938,47 +935,6 @@ namespace py::cpp::_winrt
 
         std::destroy_at(state);
     }
-
-    // Not using a header file for thes because setuptools doesn't have a nice
-    // way to pick up private header files.
-    PyObject* box_boolean(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_int8(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_uint8(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_int16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_uint16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_int32(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_uint32(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_int64(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_uint64(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_single(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_double(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_char16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_string(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_guid(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* box_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_boolean(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_int8(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_uint8(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_int16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_uint16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_int32(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_uint32(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_int64(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_uint64(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_single(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_double(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_char16(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_string(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_guid(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_date_time(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* unbox_time_span(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
-    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept;
-    PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
-    PyObject* interface_pointer(PyObject* /*unused*/, PyObject* obj) noexcept;
-    PyObject* hresult_error(PyObject* /*unused*/, PyObject* args) noexcept;
 
     static PyMethodDef module_methods[]{
         {"init_apartment", init_apartment, METH_O, "initialize the apartment"},

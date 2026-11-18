@@ -11,6 +11,8 @@
 
 namespace py::cpp::_winrt
 {
+    extern PyType_Spec Array_type_spec;
+
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept;
 
     py::Array* Array_Get(PyObject* obj) noexcept;

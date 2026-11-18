@@ -3,6 +3,8 @@
 #include <winrt/base.h>
 #include <Python.h>
 
+#include "_winrt_box.h"
+
 namespace
 {
     /**

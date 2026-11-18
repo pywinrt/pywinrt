@@ -103,3 +103,14 @@ namespace py::interp
     PyObject* runtime_class_name_of(
         winrt::Windows::Foundation::IInspectable object) noexcept;
 } // namespace py::interp
+
+namespace py::cpp::_winrt
+{
+    PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+
+    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept;
+
+    PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
+
+    PyObject* interface_pointer(PyObject* /*unused*/, PyObject* obj) noexcept;
+} // namespace py::cpp::_winrt
