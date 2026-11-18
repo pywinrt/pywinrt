@@ -17,6 +17,8 @@ from packaging.utils import canonicalize_name
 
 from scripts import versions
 
+families = versions.families
+
 
 class InteropBuildRequirement(unittest.TestCase):
     """
@@ -101,12 +103,12 @@ class Changelogs(unittest.TestCase):
             with self.subTest(unit=unit):
                 if unit in (versions.RUNTIME_PATH.name, versions.TABLE_PATH.name):
                     path = versions.REPO_PATH / unit
-                elif unit in versions.FAMILY_RELEASED_INTEROP:
+                elif unit in families.FAMILY_RELEASED_INTEROP:
                     # a fix to an interop module released with a family
                     path = (
                         versions.REPO_PATH
                         / "projection"
-                        / versions.FAMILY_RELEASED_INTEROP[unit]
+                        / families.FAMILY_RELEASED_INTEROP[unit]
                     )
                 elif (versions.REPO_PATH / "projection" / unit).is_dir():
                     path = versions.REPO_PATH / "projection" / unit
@@ -124,7 +126,7 @@ class Changelogs(unittest.TestCase):
         }
 
         for package in sorted(versions.INTEROP_PATH.glob("winrt-*")):
-            family = versions.FAMILY_RELEASED_INTEROP.get(package.name)
+            family = families.FAMILY_RELEASED_INTEROP.get(package.name)
             expected[package] = (
                 f"projection/{family}/CHANGELOG.md"
                 if family

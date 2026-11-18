@@ -21,6 +21,7 @@ on:
       - redist/**
       - scripts/app_sdk.py
       - scripts/check-dependencies.py
+      - scripts/families.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py
@@ -45,6 +46,7 @@ on:
       - redist/**
       - scripts/app_sdk.py
       - scripts/check-dependencies.py
+      - scripts/families.py
       - scripts/fetch-tools.ps1
       - scripts/generate-cppwinrt.py
       - scripts/generate-pywinrt.py

@@ -30,6 +30,9 @@ from pathlib import Path
 # where the App SDK says which components belong to a release
 import app_sdk
 
+# which interop modules are released with a family
+import families
+
 # which units are published by trusted publishing
 import packages
 
@@ -132,7 +135,7 @@ def stale_fixes(family: str) -> list[Path]:
     """
     return [versions.PROJECTION_PATH / family / versions.FIXES_NAME] + [
         versions.INTEROP_PATH / name / "version.txt"
-        for name, released_with in versions.FAMILY_RELEASED_INTEROP.items()
+        for name, released_with in families.FAMILY_RELEASED_INTEROP.items()
         if released_with == family
     ]
 
