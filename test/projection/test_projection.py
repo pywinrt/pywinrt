@@ -589,9 +589,10 @@ class TestStructs(unittest.TestCase):
     A struct is the one value the runtime lays out itself, because the table
     says what its fields are and never where they sit: a pointer is not the
     same width on every architecture one table serves. The offsets the reader
-    computes are checked against ``struct.calcsize`` in ``test_table.py``; what
-    is checked here is that a value written through those offsets comes back
-    unchanged from WinRT, which no arithmetic can fake.
+    computes are checked against ``struct.calcsize`` in
+    ``test_table_shapes.py``; what is checked here is that a value written
+    through those offsets comes back unchanged from WinRT, which no arithmetic
+    can fake.
     """
 
     def test_positional_fields(self) -> None:
