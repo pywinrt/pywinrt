@@ -1341,10 +1341,10 @@ namespace py::cpp::_winrt
      * Reads a projection table and returns everything in it as plain Python
      * objects.
      *
-     * This is what test/test_table.py checks the generator's writer against: the
-     * two ends of the format are in different languages and different processes,
-     * so the only way to know they agree is to write a table with one and read
-     * it back with the other.
+     * This is what test/projection/test_table.py checks the generator's writer
+     * against: the two ends of the format are in different languages and
+     * different processes, so the only way to know they agree is to write a
+     * table with one and read it back with the other.
      */
     PyObject* read_table(PyObject* /*unused*/, PyObject* obj) noexcept
     {
