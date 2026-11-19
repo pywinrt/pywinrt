@@ -8,6 +8,11 @@ package runs on.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Fixed
+- Requires `typing_extensions` 4.13.0, the oldest with what the type hints use.
+
 ## [4.2.0] - 2026-11-17
 
 ### Added
