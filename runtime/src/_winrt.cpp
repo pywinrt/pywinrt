@@ -1003,8 +1003,8 @@ namespace py::cpp::_winrt
          METH_O,
          PyDoc_STR(
              "Reads a projection table and returns its contents as plain Python objects. "
-             "This is how test/test_table.py checks that the generator's writer and the "
-             "runtime's reader agree on the format.")},
+             "This is how test/projection/test_table.py checks that the generator's "
+             "writer and the runtime's reader agree on the format.")},
         {"as_interface",
          as_interface,
          METH_VARARGS,
