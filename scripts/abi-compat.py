@@ -50,6 +50,16 @@ PROJECT_DIR = Path(__file__).parent.parent
 TEST_COMPONENT_PACKAGE = Path("projection/test-winrt/test-winrt-TestComponent")
 TEST_COMPONENT_TABLE = Path("test_winrt/testcomponent/_table.pywinrt.txt")
 
+# TestComponent's own tests, in a tree whose tests are grouped by what they
+# need: the modules of test/projection that test_test_component.py was split
+# into. A tree older than the grouping has test/test_test_component.py alone.
+TEST_COMPONENT_TESTS = (
+    "test_test_component",
+    "test_composable",
+    "test_async",
+    "test_async_await",
+)
+
 # The messages table.cpp raises through when a runtime will not read a table.
 # Both halves have to agree on the wording for this to be checkable, which they
 # have since the table format was introduced.
@@ -124,6 +134,24 @@ class Tree:
     @property
     def test_component_table(self) -> Path:
         return self.test_component_package / TEST_COMPONENT_TABLE
+
+    @property
+    def test_component_tests(self) -> list[str]:
+        """
+        This tree's tests of TestComponent, as the module names unittest takes.
+        A module that the tree does not have yet is left out, so any commit
+        from 4.0 on can be the baseline.
+        """
+        projection = self.root / "test/projection"
+
+        if not projection.is_dir():
+            return ["test.test_test_component"]
+
+        return [
+            f"test.projection.{name}"
+            for name in TEST_COMPONENT_TESTS
+            if (projection / f"{name}.py").is_file()
+        ]
 
     @property
     def table_compiler_pythonpath(self) -> str:
@@ -247,9 +275,9 @@ else:
         raise SystemExit("check failed: no clean refusal")
 
 
-def run_tests(test: str, *, pythonpath: str, cwd: Path) -> None:
+def run_tests(tests: list[str], *, pythonpath: str, cwd: Path) -> None:
     run(
-        [sys.executable, "-X", "dev", "-m", "unittest", "-v", test],
+        [sys.executable, "-X", "dev", "-m", "unittest", "-v", *tests],
         cwd=cwd,
         env=dict(os.environ, PYTHONPATH=pythonpath),
     )
@@ -313,7 +341,9 @@ def check_old_table(
     pythonpath = os.pathsep.join([os.fspath(module_dir), os.fspath(current_install)])
 
     if is_satisfied(required, provided):
-        run_tests("test.test_test_component", pythonpath=pythonpath, cwd=baseline.root)
+        run_tests(
+            baseline.test_component_tests, pythonpath=pythonpath, cwd=baseline.root
+        )
     else:
         # The current runtime will not read the baseline's table. That is only
         # allowed to happen across a format major, or when the table says
