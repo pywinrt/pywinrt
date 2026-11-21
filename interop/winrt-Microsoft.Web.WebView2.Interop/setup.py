@@ -21,9 +21,9 @@ INCLUDE_DIRS: list[str] = []
 # nuget.org serves it, what it has to hash to and where in it the headers are.
 NUGET_PACKAGES = {
     "WEBVIEW2_PATH": (
-        "Microsoft.Web.WebView2.1.0.4314.35",
-        "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4314.35/microsoft.web.webview2.1.0.4314.35.nupkg",
-        "90778deb1b77e36292828b4b5833c9255c27533f40e0ddd55891ae718944edc4",
+        "Microsoft.Web.WebView2.1.0.4370.26",
+        "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4370.26/microsoft.web.webview2.1.0.4370.26.nupkg",
+        "1c0dacac84b70109b3fd42f90c53a0ba942abc3a87590d7a4e0ccd86e4a06cf4",
         ["build/native/include", "build/native/include-winrt"],
     ),
 }

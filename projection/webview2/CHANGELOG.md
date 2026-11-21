@@ -11,6 +11,11 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- Updated WebView2 to [1.0.4370.26][WebView2 1.0.4370.26], from 1.0.4314.35.
+
 ## [4!1.0.4314.35.1] - 2026-11-06
 
 `winrt-Microsoft.Web.WebView2` and `winrt-Microsoft.Web.WebView2.Dll` are not
@@ -78,3 +83,4 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 - Fixed type hints incorrectly accepting a call to a class with no constructor.
 
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
+[WebView2 1.0.4370.26]: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.4370.26
