@@ -6,7 +6,7 @@ Lets a visually hosted WebView2 take the files dropped on its window, as an OLE 
 
 This package provides the `winrt.microsoft.web.webview2.interop` module.
 
-It is built against version 1.0.4314.35 of the `Microsoft.Web.WebView2`
+It is built against version 1.0.4370.26 of the `Microsoft.Web.WebView2`
 NuGet package.
 
 ```
