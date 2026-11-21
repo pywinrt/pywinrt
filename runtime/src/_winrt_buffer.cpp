@@ -38,13 +38,56 @@ __CRT_UUID_DECL(
 
 namespace py::cpp::_winrt
 {
+    /**
+     * A Python buffer as an IBuffer.
+     *
+     * It marshals by value, as Windows.Storage.Streams.Buffer does, rather than
+     * with the free-threaded marshaler that C++/WinRT gives an object by
+     * default. A buffer passed to a service in another process, as a GATT write
+     * passes its value to the Bluetooth service, then arrives there as a copy
+     * of its bytes. Marshaled by reference, it arrives as a proxy, the service
+     * never reads through it, and the write fails with ACCESS_DENIED.
+     *
+     * COM calls the IMarshal methods on whatever thread marshals the buffer,
+     * and the buffer marshaler reads Length, Capacity and Buffer() there, in
+     * MarshalInterface, to copy the bytes. That thread need not hold the GIL,
+     * and the thread that does may be waiting for the call to return, so
+     * nothing here but final_release() takes the GIL or touches a Python
+     * object: the view is taken once, with the GIL, when the buffer is made,
+     * and holds the memory still until it is released, so its pointer and size
+     * are plain values that any thread may read, and the length is atomic. The
+     * view is released only when the last reference goes, on whatever thread
+     * that is, and final_release() takes the GIL for it as the runtime's other
+     * objects do.
+     */
     struct PyWinRTBuffer : winrt::implements<
                                PyWinRTBuffer,
                                winrt::Windows::Storage::Streams::IBuffer,
                                Windows::Storage::Streams::IBufferByteAccess,
-                               IPywinrtBuffer>
+                               IPywinrtBuffer,
+                               ::IMarshal>
     {
       private:
+        /**
+         * Calls @p f with the marshaler that Windows provides for IBuffer
+         * implementations (RoGetBufferMarshaler), the one that
+         * Windows.Storage.Streams.Buffer and .NET's WindowsRuntimeBuffer use.
+         *
+         * It is asked for on every call rather than kept, so there is nothing
+         * for two threads to fill in at once, and it takes no GIL.
+         */
+        template <typename F>
+        static HRESULT with_buffer_marshaler(F&& f) noexcept
+        {
+            winrt::com_ptr<::IMarshal> marshaler;
+            if (HRESULT const hr = ::RoGetBufferMarshaler(marshaler.put()); FAILED(hr))
+            {
+                return hr;
+            }
+
+            return f(marshaler.get());
+        }
+
         py::buffer_view buffer;
         /// How many of the bytes hold data: none at first for WinRT to fill,
         /// all of them for it to read, and what a writer sets after it has
@@ -129,6 +172,70 @@ namespace py::cpp::_winrt
         {
             value = read_only;
             return S_OK;
+        }
+
+        HRESULT __stdcall GetUnmarshalClass(
+            REFIID riid,
+            void* pv,
+            DWORD dest_context,
+            void* reserved,
+            DWORD flags,
+            CLSID* clsid) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->GetUnmarshalClass(
+                    riid, pv, dest_context, reserved, flags, clsid);
+            });
+        }
+
+        HRESULT __stdcall GetMarshalSizeMax(
+            REFIID riid,
+            void* pv,
+            DWORD dest_context,
+            void* reserved,
+            DWORD flags,
+            DWORD* size) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->GetMarshalSizeMax(
+                    riid, pv, dest_context, reserved, flags, size);
+            });
+        }
+
+        HRESULT __stdcall MarshalInterface(
+            IStream* stream,
+            REFIID riid,
+            void* pv,
+            DWORD dest_context,
+            void* reserved,
+            DWORD flags) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->MarshalInterface(
+                    stream, riid, pv, dest_context, reserved, flags);
+            });
+        }
+
+        HRESULT __stdcall UnmarshalInterface(
+            IStream* stream, REFIID riid, void** object) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->UnmarshalInterface(stream, riid, object);
+            });
+        }
+
+        HRESULT __stdcall ReleaseMarshalData(IStream* stream) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->ReleaseMarshalData(stream);
+            });
+        }
+
+        HRESULT __stdcall DisconnectObject(DWORD reserved) noexcept final
+        {
+            return with_buffer_marshaler([&](::IMarshal* marshaler) {
+                return marshaler->DisconnectObject(reserved);
+            });
         }
     };
 

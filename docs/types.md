@@ -1204,9 +1204,12 @@ async def download(operation) -> None:
 A method parameter of type [Windows.Storage.Streams.IBuffer][IBuffer] takes
 any Python object that implements the buffer protocol, for example, a
 [`bytearray`](https://docs.python.org/3/builtins/stdtypes.html#bytearray),
-[`bytes`][bytes], or a [`memoryview`][memoryview], and WinRT reads or writes
-its memory directly, without a copy. The type hints name such a parameter
-[`winrt.system.ReadableBuffer`](api/system.md#readablebuffer), or
+[`bytes`][bytes], or a [`memoryview`][memoryview]. Within the process, WinRT
+reads or writes its memory directly, without a copy. A WinRT object in another
+process, such as the Bluetooth service that a `GattCharacteristic` write goes
+to, receives a copy of the bytes instead, as it would of a `Buffer`, so what it
+writes into its copy does not reach the Python object. The type hints name such
+a parameter [`winrt.system.ReadableBuffer`](api/system.md#readablebuffer), or
 [`winrt.system.WriteableBuffer`](api/system.md#writeablebuffer) where WinRT
 writes into it, both aliases for [`collections.abc.Buffer`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Buffer).
 An `IBuffer` that WinRT hands back is typed as `IBuffer`, which supports the
@@ -1215,7 +1218,8 @@ buffer protocol and `len()` too and has `length` and `capacity`.
 Where WinRT writes into the buffer, as `read_async()` of a stream does, the
 object has to be writable, so a `bytearray` rather than `bytes`, and a read-only
 one raises [`TypeError`][TypeError]. Use the buffer the method hands back: its
-`len()` is how many bytes WinRT wrote, which can be fewer than the object holds.
+`len()` is how many bytes WinRT wrote, which can be fewer than the object holds,
+and where what wrote them is in another process, it alone holds them.
 
 ```python
 data = bytearray(1024)

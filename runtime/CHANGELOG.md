@@ -12,6 +12,7 @@ repository](../CHANGELOG.md).
 
 ### Fixed
 - Requires `typing_extensions` 4.13.0, the oldest with what the type hints use.
+- Python buffers passed as `IBuffer` marshal by value, fixing GATT `ACCESS_DENIED`.
 
 ## [4.2.0] - 2026-11-17
 
