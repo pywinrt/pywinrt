@@ -436,6 +436,9 @@ interface Microsoft.Windows.AI.Text.ILanguageModel2
 interface Microsoft.Windows.AI.Text.ILanguageModel3
     guid e5f6b00d-a835-5170-864c-4aa810a7fd15
 
+interface Microsoft.Windows.AI.Text.ILanguageModel4
+    guid d58f4b08-f3fb-5f50-905b-d23f7866d933
+
 interface Microsoft.Windows.AI.Text.ILanguageModelContext
     guid 518b305c-7b69-5a33-8129-d47d6b8eec4e
 
@@ -447,6 +450,9 @@ interface Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapter
 
 interface Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult
     guid b23af149-70fd-53f1-9e5c-51ba642a7836
+
+interface Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult2
+    guid 7322a142-103d-51eb-aacd-67e18eb18abc
 
 interface Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterStatics
     guid e3b61010-37c3-56d5-b112-1aa57ad5bfc7
@@ -571,8 +577,15 @@ class Microsoft.Windows.AI.Text.LanguageModel python_type closeable
     requires Microsoft.Windows.AI.Text.ILanguageModel
     requires Microsoft.Windows.AI.Text.ILanguageModel2
     requires Microsoft.Windows.AI.Text.ILanguageModel3
+    requires Microsoft.Windows.AI.Text.ILanguageModel4
     requires Windows.Foundation.IClosable
     factory Microsoft.Windows.AI.Text.ILanguageModelStatics
+    property model_name
+        get get_ModelName slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModel4 shape=4
+            out string return
+    property model_version
+        get get_ModelVersion slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModel4 shape=4
+            out string return
     method close
         method Close slot=6 inputs=0 outputs=0 declaring=Windows.Foundation.IClosable shape=0 reverse=16 role=close
     method create_async static
@@ -693,12 +706,24 @@ class Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult python_type
     signature rc(Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult;{b23af149-70fd-53f1-9e5c-51ba642a7836})
     default Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult
     requires Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult
+    requires Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult2
     property extended_error
         get get_ExtendedError slot=7 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult shape=4
             out hresult type=Windows.Foundation.HResult return
     property low_rank_adapter
         get get_LowRankAdapter slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult shape=4
             out class type=Microsoft.Windows.AI.Text.LanguageModelLowRankAdapter return
+    property status
+        get get_Status slot=6 inputs=0 outputs=1 declaring=Microsoft.Windows.AI.Text.ILanguageModelLowRankAdapterResult2 shape=4
+            out enum32 type=Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus return
+
+enum Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus python_type
+    py LanguageModelLowRankAdapterStatus
+    signature enum(Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus;i4)
+    constant COMPATIBLE 0
+    constant REVALIDATION_RECOMMENDED 1
+    constant INCOMPATIBLE 2
+    constant ERROR 3
 
 class Microsoft.Windows.AI.Text.LanguageModelOptions activatable python_type
     py LanguageModelOptions
@@ -763,6 +788,8 @@ enum Microsoft.Windows.AI.Text.LanguageModelResponseStatus python_type
     constant INCOMPATIBLE_LOW_RANK_ADAPTER 7
     constant UNSUPPORTED_LANGUAGE 8
     constant LANGUAGE_MISMATCH 9
+    constant INSUFFICIENT_VIDEO_RAM 10
+    constant BLOCKED_BY_GAME_MODE 11
 
 enum Microsoft.Windows.AI.Text.TextRewriteTone python_type
     py TextRewriteTone

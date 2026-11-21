@@ -25,9 +25,9 @@ INCLUDE_DIRS: list[str] = []
 # nuget.org serves it, what it has to hash to and where in it the headers are.
 NUGET_PACKAGES = {
     "WASDK_FOUNDATION_PATH": (
-        "Microsoft.WindowsAppSDK.Foundation.2.6.5",
-        "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.foundation/2.6.5/microsoft.windowsappsdk.foundation.2.6.5.nupkg",
-        "548033e51be965804f7119e1936fe7f78f324d668becb731fcacb101f3bb18e4",
+        "Microsoft.WindowsAppSDK.Foundation.2.7.0",
+        "https://api.nuget.org/v3-flatcontainer/microsoft.windowsappsdk.foundation/2.7.0/microsoft.windowsappsdk.foundation.2.7.0.nupkg",
+        "4131660bda7476eef751ce134c9847b5a79e4051809bffbf9dd171f4246afdf8",
         ["include"],
     ),
 }
@@ -120,8 +120,8 @@ def get_sbom() -> dict[str, object]:
             "component": {
                 "type": "library",
                 "name": "winrt-Microsoft.WindowsAppRuntime.Bootstrap",
-                "version": "4!2.6.5",
-                "purl": "pkg:pypi/winrt-microsoft-windowsappruntime-bootstrap@4!2.6.5",
+                "version": "4!2.7.0",
+                "purl": "pkg:pypi/winrt-microsoft-windowsappruntime-bootstrap@4!2.7.0",
                 "licenses": [{"expression": "MIT"}],
                 "supplier": {"name": "PyWinRT"},
             }
@@ -130,8 +130,8 @@ def get_sbom() -> dict[str, object]:
             {
                 "type": "library",
                 "name": PAYLOAD_DLL_NAME,
-                "version": "2.6.5",
-                "purl": "pkg:nuget/Microsoft.WindowsAppSDK.Foundation@2.6.5",
+                "version": "2.7.0",
+                "purl": "pkg:nuget/Microsoft.WindowsAppSDK.Foundation@2.7.0",
                 "licenses": [{"license": {"name": PAYLOAD_LICENSE_ID}}],
                 "supplier": {"name": "Microsoft Corporation"},
             }
