@@ -8,6 +8,7 @@ winrt.runtime._internals.load_projection(__spec__)
 __all__ = [
     "GenerateStructuredJsonResponseStatus",
     "InputKind",
+    "LanguageModelLowRankAdapterStatus",
     "LanguageModelResponseStatus",
     "TextRewriteTone",
     "ConversationItem",

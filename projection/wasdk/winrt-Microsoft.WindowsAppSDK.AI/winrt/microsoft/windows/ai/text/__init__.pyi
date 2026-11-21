@@ -17,6 +17,7 @@ import winrt.windows.foundation.collections as windows_foundation_collections
 __all__ = [
     "GenerateStructuredJsonResponseStatus",
     "InputKind",
+    "LanguageModelLowRankAdapterStatus",
     "LanguageModelResponseStatus",
     "TextRewriteTone",
     "ConversationItem",
@@ -50,6 +51,12 @@ class InputKind(enum.IntEnum):
     GENERAL_CONVERSATION = 0
     EMAIL = 1
 
+class LanguageModelLowRankAdapterStatus(enum.IntEnum):
+    COMPATIBLE = 0
+    REVALIDATION_RECOMMENDED = 1
+    INCOMPATIBLE = 2
+    ERROR = 3
+
 class LanguageModelResponseStatus(enum.IntEnum):
     COMPLETE = 0
     IN_PROGRESS = 1
@@ -61,6 +68,8 @@ class LanguageModelResponseStatus(enum.IntEnum):
     INCOMPATIBLE_LOW_RANK_ADAPTER = 7
     UNSUPPORTED_LANGUAGE = 8
     LANGUAGE_MISMATCH = 9
+    INSUFFICIENT_VIDEO_RAM = 10
+    BLOCKED_BY_GAME_MODE = 11
 
 class TextRewriteTone(enum.IntEnum):
     DEFAULT = 0
@@ -197,6 +206,12 @@ class LanguageModel(windows_foundation.IClosable, winrt.system.Object, metaclass
     def get_usable_prompt_length(self, context: LanguageModelContext, prompt: str, /) -> winrt.system.UInt64: ...
     # System.Guid Microsoft.Windows.AI.Text.LanguageModel::GetVectorSpaceId()
     def get_vector_space_id(self) -> _uuid.UUID: ...
+    # System.String Microsoft.Windows.AI.Text.LanguageModel::get_ModelName()
+    @_property
+    def model_name(self) -> str: ...
+    # System.String Microsoft.Windows.AI.Text.LanguageModel::get_ModelVersion()
+    @_property
+    def model_version(self) -> str: ...
 
 @typing.final
 class LanguageModelContext(windows_foundation.IClosable, winrt.system.Object):
@@ -245,6 +260,9 @@ class LanguageModelLowRankAdapterResult(winrt.system.Object):
     # Microsoft.Windows.AI.Text.LanguageModelLowRankAdapter Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult::get_LowRankAdapter()
     @_property
     def low_rank_adapter(self) -> LanguageModelLowRankAdapter: ...
+    # Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult::get_Status()
+    @_property
+    def status(self) -> LanguageModelLowRankAdapterStatus: ...
 
 @typing.final
 class LanguageModelOptions(winrt.system.Object):

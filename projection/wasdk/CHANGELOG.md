@@ -21,6 +21,11 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- Updated the Windows App SDK to [2.7.0][Windows App SDK 2.7.0], from 2.6.5.
+
 ## [4!2.6.5] - 2026-11-09
 
 ### Changed
@@ -106,3 +111,4 @@ See the [4.0 release notes][4.0] for what these changes mean together.
 [4.0]: https://pywinrt.readthedocs.io/en/latest/release-notes/4.0/
 [Windows App SDK 2.6.4]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.6.4
 [Windows App SDK 2.6.5]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.6.5
+[Windows App SDK 2.7.0]: https://github.com/microsoft/WindowsAppSDK/releases/tag/v2.7.0
