@@ -108,11 +108,11 @@ build uses the debug configuration, so that means we _must_ use `python_d.exe`
 instead of `python.exe`.
 
     $env:PYTHONPATH="_install/projection"
-    python_d.exe -X dev -m unittest
+    python_d.exe -X dev -m unittest discover -s test -t .
 
 If using MSYS2 shell for MINGW, this can be simplified to:
 
-    PYTHONPATH=_install/projection python -X dev -m unittest
+    PYTHONPATH=_install/projection python -X dev -m unittest discover -s test -t .
 
 The free-threaded build of Python needs a tree of its own, because its
 extension modules are built against a different ABI. Adding the following to
@@ -138,6 +138,11 @@ job in `.github/workflows/test.yaml` does:
     py -m venv _install\runtime-venv
     _install\runtime-venv\Scripts\python -m pip install .\runtime
     _install\runtime-venv\Scripts\python -X dev -m unittest discover -s test\runtime -t .
+
+The tests of the scripts in `scripts/` need no build at all, only the packages
+in `requirements.txt`. `.github/workflows/scripts.yaml` runs them on their own:
+
+    python -X dev -m unittest discover -s scripts\tests -t .
 
 ## Linting
 

@@ -1,8 +1,7 @@
 """
 Asking git about this repository.
 
-The MSYS2 jobs in .github/workflows/test.yaml have no git on PATH, so these
-are skipped there.
+Where git is not on PATH, as in an MSYS2 shell by default, these are skipped.
 """
 
 import contextlib
