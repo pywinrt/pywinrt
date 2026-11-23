@@ -11,7 +11,7 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!1.0.4370.26] - 2026-11-23
 
 ### Changed
 - Updated WebView2 to [1.0.4370.26][WebView2 1.0.4370.26], from 1.0.4314.35.
