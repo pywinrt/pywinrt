@@ -15,45 +15,32 @@ on:
       - requirements.txt
       - .config/_tools.json
       - scripts/fetch-tools.ps1
-      # what fetch-tools.ps1 runs to fetch the App SDK
+      # what fetch-tools.ps1 runs to fetch the App SDK, and the modules it
+      # imports
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # the version scheme and the family table it reads, whose tests are part
-      # of the suite
       - scripts/families.py
       - scripts/versions.py
-      # the wheel contents check, whose tests are part of the suite
-      - scripts/check-wheel-contents.py
-      # the migration script, whose tests are part of the suite
-      - scripts/3to4/**
-      - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
-      # except a namespace's table, which is what the tests read, and a
-      # package's pyproject.toml, which the packaging tests read
+      # except a namespace's table, which is what the tests read
       - projection/**/_table.pywinrt.txt
-      - projection/*/*/pyproject.toml
       - projection/CMakeLists.txt
       - interop/**
       - '!interop/**/*.md'
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      # except a package's pyproject.toml, which the packaging tests read, and
-      # its version.txt, which the version tests read
-      - interop/*/pyproject.toml
-      - interop/*/version.txt
       - interop/CMakeLists.txt
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
       - runtime/CMakeLists.txt
-      # except the version the runtime is published with, which the
-      # version tests read, and its pyproject.toml, which the migration
-      # script's tests read
+      # except the pyproject.toml the runtime job builds the runtime from, which
+      # takes the version from version.txt
       - runtime/version.txt
       - runtime/pyproject.toml
       # and the dependencies the runtime job installs it with
@@ -62,15 +49,6 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
-      # the changelogs, and the packaging files whose Changelog link the
-      # packaging tests check, which the patterns above leave out
-      - CHANGELOG.md
-      - runtime/CHANGELOG.md
-      - table/CHANGELOG.md
-      - table/pyproject.toml
-      - interop/*/CHANGELOG.md
-      - projection/*/CHANGELOG.md
-      - redist/*/pyproject.toml
       - test/**
   pull_request:
     paths:
@@ -80,45 +58,32 @@ on:
       - requirements.txt
       - .config/_tools.json
       - scripts/fetch-tools.ps1
-      # what fetch-tools.ps1 runs to fetch the App SDK
+      # what fetch-tools.ps1 runs to fetch the App SDK, and the modules it
+      # imports
       - scripts/app_sdk.py
       - scripts/nuget.py
-      # the version scheme and the family table it reads, whose tests are part
-      # of the suite
       - scripts/families.py
       - scripts/versions.py
-      # the wheel contents check, whose tests are part of the suite
-      - scripts/check-wheel-contents.py
-      # the migration script, whose tests are part of the suite
-      - scripts/3to4/**
-      - scripts/tests/**
       - projection/**
       - '!projection/**/*.md'
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
-      # except a namespace's table, which is what the tests read, and a
-      # package's pyproject.toml, which the packaging tests read
+      # except a namespace's table, which is what the tests read
       - projection/**/_table.pywinrt.txt
-      - projection/*/*/pyproject.toml
       - projection/CMakeLists.txt
       - interop/**
       - '!interop/**/*.md'
       - '!interop/**/*.toml'
       - '!interop/**/*.txt'
       - '!interop/**/setup.py'
-      # except a package's pyproject.toml, which the packaging tests read, and
-      # its version.txt, which the version tests read
-      - interop/*/pyproject.toml
-      - interop/*/version.txt
       - interop/CMakeLists.txt
       - runtime/**
       - '!runtime/**/*.md'
       - '!runtime/**/*.toml'
       - '!runtime/**/*.txt'
       - runtime/CMakeLists.txt
-      # except the version the runtime is published with, which the
-      # version tests read, and its pyproject.toml, which the migration
-      # script's tests read
+      # except the pyproject.toml the runtime job builds the runtime from, which
+      # takes the version from version.txt
       - runtime/version.txt
       - runtime/pyproject.toml
       # and the dependencies the runtime job installs it with
@@ -127,15 +92,6 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
-      # the changelogs, and the packaging files whose Changelog link the
-      # packaging tests check, which the patterns above leave out
-      - CHANGELOG.md
-      - runtime/CHANGELOG.md
-      - table/CHANGELOG.md
-      - table/pyproject.toml
-      - interop/*/CHANGELOG.md
-      - projection/*/CHANGELOG.md
-      - redist/*/pyproject.toml
       - test/**
 
 jobs:
@@ -221,7 +177,7 @@ jobs:
       - name: test
         env:
           PYTHONPATH: _install/projection
-        run: ${{ steps.python.outputs.python-path }} -X dev -m unittest -v
+        run: ${{ steps.python.outputs.python-path }} -X dev -m unittest discover -v -s test -t .
   mingw:
     runs-on: windows-latest
     strategy:
@@ -245,7 +201,6 @@ jobs:
             cc:p
             cmake:p
             python:p
-            python-packaging:p
             python-typing_extensions:p
       - name: install nuget packages
         shell: pwsh
@@ -264,4 +219,4 @@ jobs:
       - name: test
         env:
           PYTHONPATH: _install/projection
-        run: ${MINGW_PREFIX}/bin/python -X dev -m unittest -v
+        run: ${MINGW_PREFIX}/bin/python -X dev -m unittest discover -v -s test -t .

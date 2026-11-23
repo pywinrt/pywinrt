@@ -1,0 +1,67 @@
+name: scripts
+concurrency:
+  group: scripts-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+      - next
+    paths:
+      - .github/workflows/scripts.yaml
+      - requirements.txt
+      - scripts/**
+      # what the tests check the scripts against: the upstream pins, and the
+      # tree's packages with their versions, pyproject.toml files, stubs and
+      # changelogs
+      - .config/_tools.json
+      - .config/upstream/upstream.csproj
+      - CHANGELOG.md
+      - runtime/**
+      - table/**
+      - interop/**
+      - projection/**
+      - redist/**
+  pull_request:
+    paths:
+      - .github/workflows/scripts.yaml
+      - requirements.txt
+      - scripts/**
+      # what the tests check the scripts against: the upstream pins, and the
+      # tree's packages with their versions, pyproject.toml files, stubs and
+      # changelogs
+      - .config/_tools.json
+      - .config/upstream/upstream.csproj
+      - CHANGELOG.md
+      - runtime/**
+      - table/**
+      - interop/**
+      - projection/**
+      - redist/**
+
+permissions:
+  contents: read
+
+jobs:
+  # The tests of the scripts in scripts/, which read the tree as it is in git
+  # and need no build, no NuGet package and no installed winrt package.
+  scripts:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # the oldest Python the project supports and the newest test.yaml
+        # tests, since scripts/3to4/inspect_source.py runs on the user's own
+        # interpreter and tokenize changed in 3.12
+        python-version: ["3.11", "3.15"]
+    name: Python ${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
+      - run: python -m pip install -r requirements.txt
+      - name: test
+        run: python -X dev -m unittest discover -v -s scripts/tests -t .
