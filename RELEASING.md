@@ -175,9 +175,12 @@ packs the tool with that version and pushes it with NuGet trusted publishing.
 
 Once the upload is done, the `release` job of either workflow creates the
 tag's GitHub release, whose notes are the section of the unit's changelog
-that the tag's version heads. The Windows SDK family's release is marked
-latest and no other is. `scripts/release-notes.py` prints the notes for any
-tag `release-tags.py` prints, and `--title` prints the release's title:
+that the tag's version heads. The winrt-runtime release is marked latest and
+no other is. A release of an older runtime, such as a fix tagged from a side
+branch after a newer runtime, takes latest too, and latest is then moved back
+to the newest runtime release by hand with `gh release edit <tag> --latest`.
+`scripts/release-notes.py` prints the notes for any tag `release-tags.py`
+prints, and `--title` prints the release's title:
 
     py .\scripts\release-notes.py wheels/runtime/v4.0.2
 
