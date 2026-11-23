@@ -3,6 +3,7 @@ import typing
 import unittest
 import warnings
 
+from typing_extensions import TypeForm
 from winrt.system import (
     Array,
     BufferFormat,
@@ -21,14 +22,9 @@ from winrt.system import (
     WinrtSignature,
 )
 
-# TypeForm is newer than the typing_extensions winrt-runtime requires, so it
-# is only named in an annotation that is never evaluated.
-if typing.TYPE_CHECKING:
-    from typing_extensions import TypeForm
-
 #: Every winrt.system scalar alias with the three formats it is annotated
 #: with - buffer, struct and WinRT signature - and the WinRT type it names.
-SCALAR_ALIASES: "list[tuple[TypeForm[typing.Any], str, str, str, str]]" = [
+SCALAR_ALIASES: list[tuple[TypeForm[typing.Any], str, str, str, str]] = [
     (Int8, "b", "b", "i1", "Int8"),
     (UInt8, "B", "B", "u1", "UInt8"),
     (Int16, "h", "h", "i2", "Int16"),
