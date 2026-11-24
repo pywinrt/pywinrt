@@ -106,14 +106,12 @@ namespace py
         catch (winrt::hresult_error const& e)
         {
             const auto message = e.message();
-            const auto restricted = e.try_as<winrt::impl::IRestrictedErrorInfo>();
 
             error_info info{};
             info.kind = error_kind::hresult;
             info.hresult = e.code().value;
             info.message = message.c_str();
             info.message_length = message.size();
-            info.restricted_error_info = restricted.get();
             info.site = site;
 
             set_error(info);

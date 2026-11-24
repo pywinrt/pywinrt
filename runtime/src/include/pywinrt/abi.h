@@ -82,8 +82,8 @@ namespace py
      */
     enum class error_kind
     {
-        /// A C++/WinRT @c hresult_error. Only this kind fills in @c hresult,
-        /// @c message and @c restricted_error_info.
+        /// A C++/WinRT @c hresult_error. Only this kind fills in @c hresult
+        /// and @c message.
         hresult,
         bad_alloc,
         out_of_range,
@@ -113,10 +113,6 @@ namespace py
         const wchar_t* message;
         /// Length of @c message in characters.
         uint32_t message_length;
-        /// Borrowed @c IRestrictedErrorInfo the error was originated with, or
-        /// @c nullptr. Carried so that the runtime can report the details it
-        /// holds without the modules having to be rebuilt to send them.
-        void* restricted_error_info;
         /// @c std::exception::what(), or @c nullptr for @c error_kind::unknown.
         const char* what;
         /// The member that was being called, or @c nullptr when it is not known.
