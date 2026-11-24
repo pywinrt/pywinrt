@@ -66,41 +66,8 @@ namespace py
     };
 
     template<typename T>
-    constexpr bool is_basic_category_v
-        = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::basic_category>;
-
-    template<typename T>
     constexpr bool is_class_category_v
         = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::class_category>;
-
-    template<typename T>
-    constexpr bool is_delegate_category_v
-        = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::delegate_category>;
-
-    template<typename T>
-    constexpr bool is_pdelegate_category_v
-        = !std::is_base_of_v<winrt::Windows::Foundation::IInspectable, T>
-          && std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>;
-
-    template<typename T>
-    constexpr bool is_enum_category_v
-        = std::is_same_v<winrt::impl::category_t<T>, winrt::impl::enum_category>;
-
-    template<typename T>
-    struct is_struct_category
-    {
-        static constexpr bool value = false;
-    };
-
-    template<typename... Fields>
-    struct is_struct_category<winrt::impl::struct_category<Fields...>>
-    {
-        static constexpr bool value = true;
-    };
-
-    template<typename T>
-    constexpr bool is_struct_category_v
-        = is_struct_category<typename winrt::impl::category<T>::type>::value;
 
     template<typename T>
     constexpr bool is_interface_category_v
@@ -110,15 +77,4 @@ namespace py
     constexpr bool is_pinterface_category_v
         = std::is_base_of_v<winrt::Windows::Foundation::IInspectable, T>
           && pinterface_checker<typename winrt::impl::category<T>::type>::value;
-
-    /**
-     * A type that always evaluates to false.
-     *
-     * This is useful for static_assert() in template functions to catch
-     * unsupported types.
-     */
-    template<typename T>
-    struct false_type : std::false_type
-    {
-    };
 } // namespace py
