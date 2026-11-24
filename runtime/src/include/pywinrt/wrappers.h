@@ -1,7 +1,7 @@
 // The objects that carry a value across the language boundary: the PyObject
-// layouts that hold a WinRT object, struct or parameterized interface, the
-// array interface the runtime allocates through, and py::IPywinrtObject, which
-// finds the Python object behind a WinRT one.
+// layout that holds a WinRT object, the array interface the runtime allocates
+// through, and py::IPywinrtObject, which finds the Python object behind a WinRT
+// one.
 //
 // This is only the storage. Creating these objects (py::wrap) and converting
 // their contents (py::converter) are in <pywinrt/convert.h>, and the WinRT side
@@ -16,16 +16,6 @@
 namespace py
 {
     /**
-     * Python PyObject struct for wrapping WinRT structs.
-     */
-    template<typename T>
-    struct winrt_struct_wrapper
-    {
-        PyObject_HEAD
-        T obj{};
-    };
-
-    /**
      * Python PyObject struct for wrapping WinRT objects and interfaces.
      *
      * @tparam T   The WinRT type to wrap (e.g. `winrt::Windows::...`).
@@ -37,20 +27,6 @@ namespace py
         /** The winrt object instance. */
         T obj{};
         static_assert(std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>);
-    };
-
-    /**
-     * Python PyObject struct for wrapping WinRT parameterized interfaces.
-     *
-     * @tparam T   The abstract pinterface wrapper type to wrap (e.g.
-     * `py::proj::Windows::...`).
-     */
-    template<typename T>
-    struct winrt_pinterface_wrapper
-        : winrt_wrapper<winrt::Windows::Foundation::IUnknown>
-    {
-        /** The PyWinRT member implementation for the concrete generic type. */
-        std::unique_ptr<T> impl{};
     };
 
     /**
