@@ -9,9 +9,9 @@
 
 #pragma once
 
-#include <pywinrt/handles.h>
-#include <pywinrt/prelude.h>
-#include <pywinrt/wrappers.h>
+#include "handles.h"
+#include "prelude.h"
+#include "wrappers.h"
 
 namespace py
 {

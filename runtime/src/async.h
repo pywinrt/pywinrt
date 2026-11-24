@@ -15,7 +15,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/prelude.h>
+#include "prelude.h"
 
 #include <cstdint>
 

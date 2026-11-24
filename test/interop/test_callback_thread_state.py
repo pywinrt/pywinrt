@@ -1,13 +1,12 @@
 """
 What Python keeps between WinRT callbacks that arrive on the same thread.
 
-Callbacks enter Python through py::gil_guard (runtime/src/include/pywinrt/
-handles.h). On a thread Python has not seen, attaching on its own creates a
-thread state that the matching release deletes again, so everything Python
-keeps per thread state - threading.local, the asyncio running loop, the
-contextvars context - would last for one callback only. So the runtime keeps
-the thread state until the thread exits (runtime/src/handles.cpp), and
-deletes it then.
+Callbacks enter Python through py::gil_guard (runtime/src/handles.h). On a
+thread Python has not seen, attaching on its own creates a thread state that the
+matching release deletes again, so everything Python keeps per thread state -
+threading.local, the asyncio running loop, the contextvars context - would last
+for one callback only. So the runtime keeps the thread state until the thread
+exits (runtime/src/handles.cpp), and deletes it then.
 
 A DispatcherQueue on a dedicated thread runs every work item on one OS thread
 that Python did not create: the case in question. A queue on a thread Python

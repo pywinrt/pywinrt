@@ -1,4 +1,4 @@
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include <winrt/base.h>
 #include <Python.h>

@@ -1,5 +1,5 @@
 // What runtime.cpp provides to the rest of the runtime beyond the entry points
-// it implements for <pywinrt/abi.h>.
+// it implements for abi.h.
 
 #pragma once
 

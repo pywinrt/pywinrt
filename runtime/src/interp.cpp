@@ -7,9 +7,9 @@
 // by the parameter's type code, which is the only thing the table says about
 // it.
 //
-// The conversions themselves are the ones in <pywinrt/convert.h>, so a value
-// crosses the boundary the same way here as it did through a thunk. What is new
-// is the switch that picks one.
+// The conversions themselves are the ones in convert.h, so a value crosses the
+// boundary the same way here as it did through a thunk. What is new is the
+// switch that picks one.
 
 // keeps <windows.h> from defining min and max as macros
 #ifndef NOMINMAX
@@ -19,7 +19,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "_winrt_buffer.h"
 #include "arrays.h"

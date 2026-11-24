@@ -8,7 +8,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "callbacks.h"
 #include "collections.h"

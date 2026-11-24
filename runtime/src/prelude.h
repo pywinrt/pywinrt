@@ -1,6 +1,6 @@
-// The headers that everything else in pywinrt/ is written against: the Python C
-// API, C++/WinRT, and the C++/WinRT namespace headers for the types the runtime
-// API itself mentions.
+// The headers that base.h and everything it includes are written against: the
+// Python C API, C++/WinRT, and the C++/WinRT namespace headers for the types
+// the runtime API itself mentions.
 //
 // Including them from one place is not only convenience. Several of them are
 // order-sensitive - the macros below have to be set before <unknwn.h>, and the
@@ -19,7 +19,7 @@
 // Keeps MSVCP140.dll out of winrt-runtime. See the file itself - it is
 // deliberately included before anything that instantiates a standard
 // container, though either order works.
-#include <pywinrt/throw_helpers.h>
+#include "throw_helpers.h"
 
 #define COM_NO_WINDOWS_H
 #ifndef NOMINMAX

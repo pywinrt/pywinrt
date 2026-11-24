@@ -2,7 +2,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/handles.h>
+#include "handles.h"
 
 #include "interp.h"
 

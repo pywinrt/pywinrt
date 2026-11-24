@@ -8,14 +8,14 @@
 //
 // Which Python exception any of this becomes is decided in errors.cpp rather
 // than here: this header classifies what it caught into one of the PODs in
-// <pywinrt/abi.h> and hands it to py::set_error() or
+// abi.h and hands it to py::set_error() or
 // py::set_member_not_available_error().
 
 #pragma once
 
-#include <pywinrt/abi.h>
-#include <pywinrt/handles.h>
-#include <pywinrt/prelude.h>
+#include "abi.h"
+#include "handles.h"
+#include "prelude.h"
 
 namespace py
 {
@@ -186,8 +186,7 @@ namespace py
     }
 
     /**
-     * Throws if one of the Python collection entries in <pywinrt/abi.h>
-     * failed.
+     * Throws if one of the Python collection entries in abi.h failed.
      *
      * @throws winrt::hresult_error
      */

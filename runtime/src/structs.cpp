@@ -16,7 +16,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "generics.h"
 #include "interp.h"

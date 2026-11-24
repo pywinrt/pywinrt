@@ -9,7 +9,7 @@
 #include <Python.h>
 #include <datetime.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 #include "metaclass.h"
 #include "module_state.h"
 #include "runtime.h"

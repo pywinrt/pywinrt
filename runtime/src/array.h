@@ -4,12 +4,12 @@
 
 #pragma once
 
-#include <pywinrt/abi.h>
-#include <pywinrt/convert.h>
-#include <pywinrt/errors.h>
-#include <pywinrt/prelude.h>
-#include <pywinrt/traits.h>
-#include <pywinrt/wrappers.h>
+#include "abi.h"
+#include "convert.h"
+#include "errors.h"
+#include "prelude.h"
+#include "traits.h"
+#include "wrappers.h"
 
 namespace py
 {

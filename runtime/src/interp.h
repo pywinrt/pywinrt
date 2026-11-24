@@ -17,7 +17,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/handles.h>
+#include "handles.h"
 
 #include "shapes.h"
 #include "table.h"

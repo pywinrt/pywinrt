@@ -8,7 +8,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #if PY_VERSION_HEX < 0x030C0000
 /**

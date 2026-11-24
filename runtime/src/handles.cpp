@@ -32,7 +32,7 @@
 
 #include <Windows.h>
 
-#include <pywinrt/handles.h>
+#include "handles.h"
 
 namespace
 {

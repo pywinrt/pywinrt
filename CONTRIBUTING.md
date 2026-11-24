@@ -68,7 +68,7 @@ the rest of the generated tree, so this has to be run whenever
     py .\scripts\generate-cppwinrt.py
 
 Each package carries the headers it includes. `winrt-runtime` carries what
-`pywinrt/base.h` includes, in `runtime/src/include/cppwinrt`, and an interop
+`runtime/src/base.h` includes, in `runtime/src/include/cppwinrt`, and an interop
 module carries the whole closure of the namespaces it includes in a `cppwinrt`
 directory of its own. Either way they are found at the same place whether the
 module is built here or from its source distribution, and neither is installed.

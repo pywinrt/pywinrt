@@ -8,7 +8,7 @@
 // and a runtime that do not belong together should say so rather than read past
 // the end of a mapping.
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "table.h"
 

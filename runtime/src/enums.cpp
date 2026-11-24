@@ -2,7 +2,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "enums.h"
 #include "types.h"

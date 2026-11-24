@@ -1,4 +1,4 @@
-#include <pywinrt/base.h>
+#include "base.h"
 #include "_winrt_array.h"
 #include "arrays.h"
 #include "module_state.h"

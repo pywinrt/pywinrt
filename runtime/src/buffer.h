@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include <pywinrt/prelude.h>
-#include <pywinrt/traits.h>
+#include "prelude.h"
+#include "traits.h"
 
 namespace py
 {

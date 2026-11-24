@@ -16,7 +16,7 @@ namespace py::interp
     /**
      * Where the ABI pointer sits in a wrapper, which is directly after the
      * object header. objects.cpp asserts this against the layout in
-     * <pywinrt/wrappers.h>, which is the one that is ABI.
+     * wrappers.h, which is the one that is ABI.
      */
     inline constexpr size_t abi_offset = sizeof(PyObject);
 

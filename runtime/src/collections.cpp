@@ -22,7 +22,7 @@
 //    Python exception, so it is reported with report_unraisable() and returned
 //    as that HRESULT.
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "collections.h"
 

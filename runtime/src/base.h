@@ -9,15 +9,15 @@
 
 #pragma once
 
-#include <pywinrt/prelude.h>
+#include "prelude.h"
 
-#include <pywinrt/handles.h>
-#include <pywinrt/traits.h>
-#include <pywinrt/wrappers.h>
+#include "handles.h"
+#include "traits.h"
+#include "wrappers.h"
 
-#include <pywinrt/abi.h>
-#include <pywinrt/errors.h>
+#include "abi.h"
+#include "errors.h"
 
-#include <pywinrt/convert.h>
-#include <pywinrt/buffer.h>
-#include <pywinrt/array.h>
+#include "convert.h"
+#include "buffer.h"
+#include "array.h"

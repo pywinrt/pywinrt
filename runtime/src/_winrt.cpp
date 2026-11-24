@@ -7,7 +7,7 @@
 #include <Shobjidl.h>
 #include <libloaderapi.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 #include "_winrt_array.h"
 #include "_winrt_box.h"
 #include "module_state.h"
@@ -547,8 +547,8 @@ namespace py::cpp::_winrt
 
     // Every wrapper type the runtime builds from a table inherits this one and
     // is laid out as py::winrt_wrapper<T>. The basic size is taken from
-    // <pywinrt/abi.h> rather than spelled again here so that the asserts that
-    // guard the layout guard this too.
+    // abi.h rather than spelled again here so that the asserts that guard the
+    // layout guard this too.
     static PyType_Spec Object_type_spec
         = {"winrt.system.Object",
            py::object_basicsize,

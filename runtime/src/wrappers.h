@@ -4,12 +4,12 @@
 // one.
 //
 // This is only the storage. Creating these objects (py::wrap) and converting
-// their contents (py::converter) are in <pywinrt/convert.h>, and the WinRT side
+// their contents (py::converter) are in convert.h, and the WinRT side
 // of a Python subclass of a composable type is in the runtime's compose.cpp.
 
 #pragma once
 
-#include <pywinrt/prelude.h>
+#include "prelude.h"
 
 #include <span>
 

@@ -4,7 +4,7 @@
 # system component, but the C++ standard library is neither, so a module that
 # imports MSVCP140.dll fails to load on any machine where the Visual C++
 # redistributable was never installed. No wheel carries a copy of it any more -
-# pywinrt/throw_helpers.h is what keeps the import out.
+# runtime/src/throw_helpers.h is what keeps the import out.
 #
 # This is worth checking mechanically because the dependency appears in no build
 # file. It arrives through an #include and a use of a standard container that
@@ -54,8 +54,8 @@ foreach (import IN LISTS imports)
             "Python does not ship the C++ runtime, so this module would fail to "
             "load wherever the Visual C++ redistributable is not installed. "
             "Something here now uses a part of the standard library that is not "
-            "header-only - see pywinrt/throw_helpers.h, which covers the parts "
-            "the projection used to need."
+            "header-only - see runtime/src/throw_helpers.h, which covers the "
+            "parts the projection used to need."
         )
     endif()
 

@@ -13,7 +13,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "numerics-traits.h"
 #include "numerics.h"

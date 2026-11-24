@@ -7,7 +7,7 @@
 
 #include <Python.h>
 
-#include <pywinrt/base.h>
+#include "base.h"
 
 #include "interp.h"
 #include "shapes-generated.h"

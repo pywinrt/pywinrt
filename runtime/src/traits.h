@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <pywinrt/prelude.h>
+#include "prelude.h"
 
 namespace py
 {
