@@ -140,18 +140,35 @@ class Tree:
         """
         This tree's tests of TestComponent, as the module names unittest takes.
         A module that the tree does not have yet is left out, so any commit
-        from 4.0 on can be the baseline.
+        from 4.0 on can be the baseline. A tree with none of them is refused,
+        since unittest given no module names discovers tests instead.
         """
         projection = self.root / "test/projection"
 
         if not projection.is_dir():
+            if not (self.root / "test/test_test_component.py").is_file():
+                raise SystemExit(
+                    f"{self.name} at {self.root} has none of TestComponent's"
+                    " tests: no test/projection and no"
+                    " test/test_test_component.py"
+                )
+
             return ["test.test_test_component"]
 
-        return [
+        tests = [
             f"test.projection.{name}"
             for name in TEST_COMPONENT_TESTS
             if (projection / f"{name}.py").is_file()
         ]
+
+        if not tests:
+            raise SystemExit(
+                f"{self.name} at {self.root} has none of TestComponent's tests:"
+                f" no {', '.join(f'{name}.py' for name in TEST_COMPONENT_TESTS)}"
+                " in test/projection"
+            )
+
+        return tests
 
     @property
     def table_compiler_pythonpath(self) -> str:
@@ -284,12 +301,13 @@ def run_tests(tests: list[str], *, pythonpath: str, cwd: Path) -> None:
 
 
 def check_old_table(
-    baseline: Tree, current: Tree, current_install: Path, work: Path
+    baseline: Tree, current: Tree, current_install: Path, work: Path, tests: list[str]
 ) -> None:
     """
-    Old table, new runtime. The baseline's TestComponent package comes first
-    on PYTHONPATH, so it shadows the one in the current install; everything
-    else, including winrt._winrt, comes from the current install.
+    Old table, new runtime, running the baseline's @p tests. The baseline's
+    TestComponent package comes first on PYTHONPATH, so it shadows the one in
+    the current install. Everything else, including winrt._winrt, comes from
+    the current install.
 
     Nothing is built here. A projection package is a table and an __init__.py,
     so the old half is a copy of the baseline's package with its table
@@ -341,9 +359,7 @@ def check_old_table(
     pythonpath = os.pathsep.join([os.fspath(module_dir), os.fspath(current_install)])
 
     if is_satisfied(required, provided):
-        run_tests(
-            baseline.test_component_tests, pythonpath=pythonpath, cwd=baseline.root
-        )
+        run_tests(tests, pythonpath=pythonpath, cwd=baseline.root)
     else:
         # The current runtime will not read the baseline's table. That is only
         # allowed to happen across a format major, or when the table says
@@ -405,12 +421,16 @@ def main() -> None:
     baseline = add_worktree(baseline_ref, work / "baseline")
 
     try:
+        # read first, so that a refused tree stops before anything is copied
+        # or compiled
+        tests = baseline.test_component_tests
+
         print()
         print(describe(current))
         print(describe(baseline))
         print(flush=True)
 
-        check_old_table(baseline, current, current_install, work)
+        check_old_table(baseline, current, current_install, work, tests)
     finally:
         if args.remove_worktree:
             run(["git", "worktree", "remove", "--force", os.fspath(baseline.root)])
