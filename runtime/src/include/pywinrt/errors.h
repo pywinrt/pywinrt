@@ -69,37 +69,6 @@ namespace py
     }
 
     /**
-     * Queries @p obj for the interface @p I that declares a member.
-     *
-     * C++/WinRT reaches a member of a non-default interface through an implicit
-     * conversion that is @c noexcept and yields a *null* interface when the
-     * object does not implement it, which the call then dereferences. Asking for
-     * the interface here costs the same query and turns that crash into a Python
-     * exception.
-     *
-     * @throws member_not_available if @p obj does not implement @p I.
-     */
-    template<typename I, typename T>
-    [[nodiscard]] I require(
-        T const& obj,
-        member_kind kind,
-        const char* type_name,
-        const char* member_name,
-        const char* interface_name,
-        uint32_t arg_count = 0)
-    {
-        auto iface = obj.template try_as<I>();
-
-        if (!iface)
-        {
-            throw_member_not_available(
-                kind, type_name, member_name, interface_name, arg_count);
-        }
-
-        return iface;
-    }
-
-    /**
      * Sets a Python exception for the C++ exception currently being handled.
      *
      * Must only be called from a catch block. @p site names the member that was
