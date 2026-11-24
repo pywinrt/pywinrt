@@ -297,6 +297,21 @@ SETUP = textwrap.dedent(
     """
 )
 
+# in the text of an f-string, after a format spec with a replacement field in
+# it, and in a string in a replacement field, but not in a comment after an
+# f-string or in the code that follows one that spans lines
+F_STRINGS = textwrap.dedent(
+    """\
+    y = f"winui3-Microsoft.UI.Xaml==3.2.1 {x}"
+    z = f"{x!r:>{width}} webview2-Microsoft.Web.WebView2.Core==3.2.1"
+    w = f"{f'{x}'} {'winrt-sdk'}"
+    v = f"{x}"  # winui3-Microsoft.UI.Xaml
+    u = f'''
+    {x}''', winui3_Microsoft_UI_Xaml
+    t = 'winui3-Microsoft.UI.Xaml.Controls'
+    """
+)
+
 
 class Requirements(unittest.TestCase):
     def setUp(self) -> None:
@@ -370,6 +385,45 @@ class Requirements(unittest.TestCase):
                 f"{p}:2:25",
                 "possible match: webview2-Microsoft.Web.WebView2.Core==3.2.1",
                 f"rename to: winrt-Microsoft.Web.WebView2{webview2}",
+            ],
+        )
+
+    def test_f_strings(self) -> None:
+        # Python 3.12 and later tokenize an f-string as the parts it is made of
+        p = self.write("setup.py", F_STRINGS)
+        winui = "winrt-Microsoft.WindowsAppSDK.WinUI"
+        webview2 = "winrt-Microsoft.Web.WebView2"
+
+        self.assertEqual(
+            run(p),
+            [
+                f"{p}:1:7",
+                "possible match: winui3-Microsoft.UI.Xaml==3.2.1",
+                f"rename to: {winui}{floor(winui)}",
+                f"{p}:2:22",
+                "possible match: webview2-Microsoft.Web.WebView2.Core==3.2.1",
+                f"rename to: {webview2}{floor(webview2)}",
+                f"{p}:3:18",
+                "possible match: winrt-sdk",
+                "rename to: nothing: there is no v4 distribution,"
+                " see scripts/3to4/README.md",
+                f"{p}:7:6",
+                "possible match: winui3-Microsoft.UI.Xaml.Controls",
+                f"rename to: {winui}",
+            ],
+        )
+
+    @unittest.skipIf(sys.version_info < (3, 14), "t-strings are new in Python 3.14")
+    def test_t_strings(self) -> None:
+        # tokenized as the parts they are made of, as an f-string is
+        p = self.write("setup.py", 't = t"winui3-Microsoft.UI.Xaml {x}"  # winrt-sdk\n')
+
+        self.assertEqual(
+            run(p),
+            [
+                f"{p}:1:7",
+                "possible match: winui3-Microsoft.UI.Xaml",
+                "rename to: winrt-Microsoft.WindowsAppSDK.WinUI",
             ],
         )
 

@@ -406,15 +406,48 @@ def excludes(specifier: str, floor: str) -> bool:
     return False
 
 
+# Python 3.11 tokenizes an f-string as one STRING token. From 3.12 it is a
+# token where it starts, one where it ends, and the tokens of its text and its
+# replacement fields between them, and from 3.14 a t-string is the same.
+STRING_STARTS = frozenset(
+    getattr(tokenize, name)
+    for name in ("FSTRING_START", "TSTRING_START")
+    if hasattr(tokenize, name)
+)
+STRING_ENDS = frozenset(
+    getattr(tokenize, name)
+    for name in ("FSTRING_END", "TSTRING_END")
+    if hasattr(tokenize, name)
+)
+
+
 def string_spans(source: str) -> list[tuple[tuple[int, int], tuple[int, int]]]:
     """
-    Where the string literals of the Python code @p source are.
+    Where the string literals of the Python code @p source are. An f-string
+    or a t-string is one span, replacement fields and all, as Python 3.11
+    tokenizes an f-string.
     """
-    return [
-        (token.start, token.end)
-        for token in tokens(source)
-        if token.type == tokenize.STRING
-    ]
+    spans: list[tuple[tuple[int, int], tuple[int, int]]] = []
+    # how many f-strings and t-strings the token is in, and where the
+    # outermost one starts
+    depth = 0
+    start = (0, 0)
+
+    for token in tokens(source):
+        if token.type in STRING_STARTS:
+            if depth == 0:
+                start = token.start
+
+            depth += 1
+        elif token.type in STRING_ENDS:
+            depth -= 1
+
+            if depth == 0:
+                spans.append((start, token.end))
+        elif token.type == tokenize.STRING and depth == 0:
+            spans.append((token.start, token.end))
+
+    return spans
 
 
 def find_requirements(source: str, lines: list[str], python: bool) -> Iterator[Match]:
