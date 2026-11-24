@@ -23,6 +23,9 @@ on:
       - interop/**
       - projection/**
       - redist/**
+      # the TestComponent test modules that the abi-compat test expects to
+      # find
+      - test/projection/**
   pull_request:
     paths:
       - .github/workflows/scripts.yaml
@@ -39,6 +42,9 @@ on:
       - interop/**
       - projection/**
       - redist/**
+      # the TestComponent test modules that the abi-compat test expects to
+      # find
+      - test/projection/**
 
 permissions:
   contents: read

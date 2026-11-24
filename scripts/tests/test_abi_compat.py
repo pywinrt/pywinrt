@@ -71,5 +71,18 @@ class TestComponentTests(unittest.TestCase):
             tree.test_component_tests
 
 
+class CurrentTree(unittest.TestCase):
+    def test_has_every_module(self) -> None:
+        # A module of TEST_COMPONENT_TESTS that this tree no longer has, as
+        # after a rename, would otherwise be left out of the check without a
+        # word.
+        tree = abi_compat.Tree(abi_compat.PROJECT_DIR, "current")
+
+        self.assertEqual(
+            tree.test_component_tests,
+            [f"test.projection.{name}" for name in abi_compat.TEST_COMPONENT_TESTS],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
