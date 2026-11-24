@@ -8,15 +8,20 @@ is on PyPI they cannot be changed.
 
 import ast
 import re
+import shutil
 import tomllib
 import unittest
+from collections import defaultdict
 from pathlib import Path
 
 from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 
 import families
+import repo
 import versions
+
+HAS_GIT = shutil.which("git") is not None
 
 
 class InteropBuildRequirement(unittest.TestCase):
@@ -158,6 +163,7 @@ class Changelogs(unittest.TestCase):
                 self.assertTrue((versions.REPO_PATH / changelog).is_file())
 
 
+@unittest.skipUnless(HAS_GIT, "git is not on PATH")
 class StubImports(unittest.TestCase):
     """
     The distributions that the stubs of a projection package import.
@@ -166,17 +172,36 @@ class StubImports(unittest.TestCase):
     its bases, so a distribution the stubs import that the package neither
     depends on nor offers in its [all] extra leaves a base that a type checker
     cannot resolve, and the whole class unknown to it.
+
+    The stubs are the ones in git's index. Listing them takes git a fraction
+    of the time that walking the tree takes, and a walk also finds the copies
+    in a package's build directory.
     """
 
     def test_every_imported_distribution_is_a_dependency(self) -> None:
         projection = versions.REPO_PATH / "projection"
         packages = sorted(p.parent for p in projection.glob("*/*/pyproject.toml"))
 
+        # Each package's stubs, by projection/<family>/<package>.
+        stubs_of: defaultdict[Path, list[Path]] = defaultdict(list)
+
+        for path in repo.git(
+            "ls-files", "--", ":(glob)projection/**/__init__.pyi"
+        ).splitlines():
+            stub = versions.REPO_PATH / path
+
+            # deleted, but not yet in the index
+            if not stub.is_file():
+                continue
+
+            package = versions.REPO_PATH.joinpath(*Path(path).parts[:3])
+            stubs_of[package].append(stub)
+
         # Each module's distribution, from where its stub is.
         distribution_of = {
             ".".join(stub.parent.relative_to(package).parts): package.name
             for package in packages
-            for stub in package.rglob("__init__.pyi")
+            for stub in stubs_of[package]
         }
 
         for package in packages:
@@ -192,7 +217,7 @@ class StubImports(unittest.TestCase):
 
                 imported = {
                     distribution_of[module]
-                    for stub in package.rglob("__init__.pyi")
+                    for stub in stubs_of[package]
                     for module in re.findall(
                         r"^import ([\w.]+) as \w+$",
                         stub.read_text(encoding="utf-8"),
