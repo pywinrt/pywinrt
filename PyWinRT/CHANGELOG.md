@@ -8,6 +8,11 @@ projection of a WinRT component.
 The releases before v4.0 are in the [changelog at the root of the
 repository](../CHANGELOG.md).
 
+## [Unreleased]
+
+### Changed
+- A name keeps WinUI in one word, as it does WebView2.
+
 ## [4.1.0] - 2026-10-31
 
 ### Added

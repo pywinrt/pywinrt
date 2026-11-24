@@ -177,6 +177,10 @@ static partial class StringExtensions
     [GeneratedRegex(@"(?<=[A-Za-z])(\d+)([Pp])(?![a-z0-9])")]
     private static partial Regex ResolutionRegex();
 
+    // Replace WinUI with Winui
+    [GeneratedRegex(@"WinUI")]
+    private static partial Regex WinUiRegex();
+
     // Replace UI with Ui (also handles UInt)
     [GeneratedRegex(@"UI(?!nfo)")]
     private static partial Regex UiRegex();
@@ -231,6 +235,7 @@ static partial class StringExtensions
         str = Rc2Regex().Replace(str, "Rc2_${1}Bit");
         str = Bc6hRegex().Replace(str, "Bc6h_${1}");
         str = ResolutionRegex().Replace(str, "_${1}${2}");
+        str = WinUiRegex().Replace(str, "Winui");
         str = UiRegex().Replace(str, "Ui");
         str = UwpRegex().Replace(str, "Uwp");
         str = WebView2Regex().Replace(str, "Webview2");
