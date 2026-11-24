@@ -15,7 +15,7 @@
 // handler and a function that hands the handler to the object.
 //
 // py::interp::async_wait_for() touches no Python at all - it reports a failure
-// as an HRESULT and leaves the raising to <pywinrt/async.h> - so the caller can
+// as an HRESULT and leaves the raising to its caller - so the caller can
 // release the GIL around the wait.
 
 #include <pywinrt/base.h>
