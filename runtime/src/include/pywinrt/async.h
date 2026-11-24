@@ -1,17 +1,11 @@
-// The blocking half of the async projection - obj.get() and obj.wait(timeout) -
-// as the calling module sees it.
+// What surrounds the blocking wait of obj.get() and obj.wait(timeout): the
+// check that the thread may block at all, the conversion of a Python timeout,
+// and turning what the waiter returns into the exception a failed call raises.
 //
-// The wait itself is behind py::interp::async_wait_for() in the runtime's
-// async.cpp: an event, a completed handler with its own vtable and the wait,
-// none of which depends on the type arguments of the async interface, and all
-// of which C++/WinRT would otherwise inline into every caller.
-//
-// What is left here is the part that has to stay with the caller: the check
-// that the thread may block at all, the conversion of a Python timeout, and
-// turning what the waiter returns into the exception a failed call raises. The
-// runtime's waiter touches no Python at all, which is what lets the generated
-// code release the GIL once around both the wait and the GetResults() that
-// follows it.
+// The wait itself is py::interp::async_wait_for() in the runtime's async.cpp:
+// an event, a completed handler with its own vtable and the wait, none of which
+// depends on the type arguments of the async interface. It touches no Python at
+// all, which is what lets protocols.cpp release the GIL around it.
 
 #pragma once
 

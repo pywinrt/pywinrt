@@ -4,15 +4,12 @@
 // specialized here for the types the runtime API itself mentions: the
 // fundamental types, strings, GUIDs, DateTime, TimeSpan and IInspectable.
 // Arrays are specialized in <pywinrt/array.h>, and <pywinrt/base.h> pulls in
-// both, which is what makes every specialization visible before a module
-// instantiates any of them.
+// both, which is what makes every specialization visible before a translation
+// unit instantiates any of them.
 //
-// A WinRT class, interface, struct, enum or delegate is not here. Naming one
-// in C++ takes the header C++/WinRT generates for its namespace, and knowing
-// which Python type projects it took a second generated header beside that;
-// nothing generates either any more, because a projection is a table the
-// runtime interprets. A module that holds such a value hands it over by name
-// instead - py::wrap_object() and py::unwrap_object() in <pywinrt/abi.h>.
+// A WinRT class, interface, struct, enum or delegate is not here. The runtime
+// knows one only from the table that describes it, and converts it with the
+// interpreter's own conversions.
 
 #pragma once
 

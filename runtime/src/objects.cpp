@@ -1633,10 +1633,9 @@ namespace
 /**
  * Wraps @p value as the type that @p qualified_name is bound to.
  *
- * This and py::unwrap_object() are how a compiled module hands a WinRT object
- * to Python and takes one back now that it shares no generated code with the
- * package that projects the type: it names the type and the runtime, which
- * built that type from a table, does the rest.
+ * This is what wrap_interface() calls once it has the name. The caller names
+ * the type and the runtime, which built that type from a table, does the
+ * rest.
  */
 PyObject* py::wrap_object(
     winrt::Windows::Foundation::IInspectable const& value,

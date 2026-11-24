@@ -1,12 +1,11 @@
 // The runtime side of the async projection: the blocking wait behind obj.get()
 // and obj.wait(timeout), and the hand-off of an async object to asyncio.
 //
-// C++/WinRT implements a blocking wait by inlining a whole waiter - an event, a
-// delegate object with its own vtable, QueryInterface, AddRef and Release, and
-// the wait itself - into every caller. The projection has one caller per
-// awaitable type per module and, for the parameterized async interfaces, one
-// per concrete instance as well, which made IAsyncOperation<T>::get() the
-// largest single template instantiation in a projection module.
+// C++/WinRT implements a blocking wait as a template over the async interface:
+// a whole waiter - an event, a delegate object with its own vtable,
+// QueryInterface, AddRef and Release, and the wait itself - for each async
+// interface it is used with. The interpreter knows an async interface only
+// from a table, so it has no C++ type to instantiate that template with.
 //
 // Nothing in that waiter depends on the type arguments. Every WinRT completed
 // handler passes the async object and an AsyncStatus as two machine words, so

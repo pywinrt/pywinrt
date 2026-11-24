@@ -16,9 +16,9 @@
 #include <structmember.h>
 #include <pythoncapi_compat.h>
 
-// Keeps MSVCP140.dll out of every module that includes this header. See the
-// file itself - it is deliberately included before anything that instantiates a
-// standard container, though either order works.
+// Keeps MSVCP140.dll out of winrt-runtime. See the file itself - it is
+// deliberately included before anything that instantiates a standard
+// container, though either order works.
 #include <pywinrt/throw_helpers.h>
 
 #define COM_NO_WINDOWS_H

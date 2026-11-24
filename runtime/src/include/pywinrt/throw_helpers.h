@@ -1,17 +1,15 @@
-// Definitions of the Microsoft STL throw helpers, so that no module in the
-// projection imports MSVCP140.dll.
+// Definitions of the Microsoft STL throw helpers, so that winrt-runtime does
+// not import MSVCP140.dll.
 //
 // Python ships the C runtime next to python3xx.dll and the UCRT is an operating
 // system component, but the C++ standard library is neither. A module that
 // imports MSVCP140.dll therefore needs a copy of a DLL the machine may not
-// have, which is why winrt-runtime used to carry one in its wheel - and one
-// copy of it per process, whether the process wanted ours or not.
+// have.
 //
 // The whole of that dependency is two cold [[noreturn]] helpers that MSVC's
-// containers call when a length or index check fails. Measured over the built
-// projection, the imports are exactly std::_Xlength_error (nearly every module,
-// from std::vector, std::string and std::map growth) and std::_Xout_of_range
-// (winrt-runtime, from std::string_view::substr).
+// containers call when a length or index check fails: std::_Xlength_error,
+// from std::vector, std::string and std::map growth, and std::_Xout_of_range,
+// from std::string_view::substr.
 //
 // <xutility> declares them without __declspec(dllimport) - _CRTIMP2 expands to
 // nothing outside the CRT's own build - so defining them here resolves them
@@ -26,10 +24,10 @@
 // and if the library member that defines them is pulled in for some other
 // symbol, the linker reports a duplicate. The third is silent and is the one to
 // guard against - something new starting to pull MSVCP140.dll in for a
-// different symbol. Once the wheels stop carrying a copy of it, a module that
-// does that fails to load on every machine without the Visual C++
-// redistributable installed, so it wants checking after linking rather than
-// discovering in a bug report.
+// different symbol. winrt-runtime's wheel carries no copy of it, so a module
+// that does that fails to load on every machine without the Visual C++
+// redistributable installed, which is why cmake/check-dll-imports.cmake checks
+// it after linking.
 
 #pragma once
 

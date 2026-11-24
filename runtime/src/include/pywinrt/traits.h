@@ -3,9 +3,8 @@
 //
 // Everything here is evaluated by the compiler and emits no code of its own,
 // and all of it answers from C++/WinRT's own metadata traits. Which Python
-// type projects a WinRT type is not a compile-time question any more: the
-// answer is in the table the runtime interprets, and a module asks for it by
-// name through <pywinrt/abi.h>.
+// type projects a WinRT type is not a compile-time question: the answer is in
+// the table the runtime interprets.
 
 #pragma once
 

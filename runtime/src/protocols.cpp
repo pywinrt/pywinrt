@@ -5,8 +5,8 @@
 // a file of its own is that the mapping from a Python operation to a WinRT
 // member is a convention rather than anything either side writes down - a
 // Python mapping's __getitem__ is IMap<K, V>::Lookup, and raises KeyError
-// where WinRT fails with E_BOUNDS - and that convention used to be spread over
-// the generated code of every collection type in the projection.
+// where WinRT fails with E_BOUNDS - so this file is where that convention is
+// kept.
 
 #include <Python.h>
 

@@ -6,12 +6,10 @@
 // so the unwinding path does not have to carry the error with it, and
 // py::to_PyErr() is the catch-all that every projected method ends with.
 //
-// Which Python exception any of this becomes is decided by winrt-runtime rather
+// Which Python exception any of this becomes is decided in errors.cpp rather
 // than here: this header classifies what it caught into one of the PODs in
-// <pywinrt/abi.h> and hands it over. A module carries its own copy of these
-// headers, so anything it decides for itself is frozen into it at build time,
-// and the wording of an error is the kind of thing that should be able to
-// improve in a runtime release without rebuilding four hundred packages.
+// <pywinrt/abi.h> and hands it to py::set_error() or
+// py::set_member_not_available_error().
 
 #pragma once
 
@@ -82,9 +80,10 @@ namespace py
             return;
         }
 
-        // The exception object lives until its handler ends, and everything an
-        // error_info points at belongs to it, so each of these has to make the
-        // call from inside its own catch block rather than after the try.
+        // An error_info's message is a local of the catch block that fills it
+        // in, and its what() belongs to the exception being handled, so each
+        // of these makes the call from inside its own catch block rather than
+        // after the try.
         auto set_std_error = [site](error_kind kind, std::exception const& e) noexcept
         {
             error_info info{};

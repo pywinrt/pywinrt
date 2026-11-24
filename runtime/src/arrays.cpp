@@ -438,11 +438,13 @@ namespace py::interp
     /**
      * A WinRT array whose element type is a type code.
      *
-     * py::ComArray<T> is the same thing for generated code, where T is a C++
-     * type and the compiler writes the conversions. Here the element type is
-     * whatever a table named, so every operation goes through the value
-     * conversions the rest of the interpreter uses, and the storage is managed
-     * by hand because there is no winrt::com_array<T> to hold it.
+     * py::ComArray<T> is the same thing for an array winrt.system.Array()
+     * makes of a fundamental type, a string, a GUID, a DateTime, a TimeSpan or
+     * an Object, and for the GUIDs _iids_ returns, where T is a C++ type and
+     * the compiler writes the conversions. Here the element type is whatever
+     * a table named, so every operation goes through the value conversions the
+     * rest of the interpreter uses, and the storage is managed by hand because
+     * there is no winrt::com_array<T> to hold it.
      *
      * An array either owns its elements - it allocated them, or took over the
      * ones a call handed back - or is lent them by a WinRT caller for the

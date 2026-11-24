@@ -29,8 +29,8 @@ namespace py
      * Thrown when an object does not implement the interface that declares the
      * member that is being called.
      *
-     * The names point at string literals in the generated code, so they outlive
-     * the exception without having to be copied.
+     * The names point at strings that the loaded projection keeps, so they
+     * outlive the exception without having to be copied.
      */
     struct member_not_available
     {
@@ -52,12 +52,11 @@ namespace py
 
     /**
      * Identifies the projected member a call was made through, so that the
-     * runtime can say which one failed without the calling module having to
-     * work out the wording itself.
+     * error can say which one failed.
      *
-     * Every field is either a scalar or a pointer to a string literal in the
-     * calling module, so an instance of this is a @c static @c constexpr next
-     * to the member it describes and costs nothing to pass.
+     * Every field is either a scalar or a pointer to a string that outlives
+     * the call. An instance of this is made where the call fails and passed
+     * by pointer.
      */
     struct member_site
     {
@@ -77,8 +76,8 @@ namespace py
     };
 
     /**
-     * What the calling module caught, which decides which Python exception the
-     * runtime raises.
+     * What py::to_PyErr() caught, which decides which Python exception
+     * py::set_error() raises.
      */
     enum class error_kind
     {
@@ -95,14 +94,12 @@ namespace py
     };
 
     /**
-     * A C++ exception, flattened into something that can cross the boundary.
+     * A C++ exception, flattened by py::to_PyErr() inside its catch block and
+     * read by py::set_error() for the duration of the call.
      *
-     * The exception itself cannot: its layout comes from whichever C++/WinRT
-     * and standard library headers the calling module was built with, and
-     * matching exception types across modules is not something every supported
-     * toolchain does the same way. So the module classifies its own exception
-     * and hands over this instead, which is read only for the duration of the
-     * call.
+     * @c message is a local of the catch block that fills it in, and @c what
+     * belongs to the exception being handled, so neither outlives the call.
+     * py::set_error() copies what it keeps.
      */
     struct error_info
     {

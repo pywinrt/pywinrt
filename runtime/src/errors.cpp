@@ -16,7 +16,7 @@
 namespace
 {
     /**
-     * @p what, or @p fallback when the module had nothing to report.
+     * @p what, or @p fallback when the exception had nothing to report.
      */
     const char* what_or(const char* what, const char* fallback) noexcept
     {
@@ -48,8 +48,7 @@ namespace
      * This is the only thing on either failure path that knows about
      * @c ApiInformation. It is a cold query - it reads the @c .winmd files
      * through @c WinTypes.dll - which is why it is made here, to choose the
-     * wording of an error, rather than before every call as the generated
-     * probes used to do.
+     * wording of an error, rather than before every call.
      *
      * @returns whether the member is in the metadata, or no value when the
      * question cannot be answered, which is not the same as "no". Metadata is
@@ -302,10 +301,9 @@ void py::set_error(py::error_info const& info) noexcept
     case error_kind::hresult:
     {
         // A static member is reached through the activation factory, which is
-        // where a member this version of Windows does not have fails. The
-        // generated code used to ask ApiInformation before every such call to
-        // get a better message than the HRESULT; asking here instead keeps the
-        // message and costs nothing until something has already gone wrong.
+        // where a member this version of Windows does not have fails. Asking
+        // ApiInformation here gives a better message than the HRESULT, and
+        // costs nothing until something has already gone wrong.
         if (info.site && (info.site->flags & site_is_static)
             && is_activation_failure(info.hresult))
         {
@@ -324,9 +322,8 @@ void py::set_error(py::error_info const& info) noexcept
             }
         }
 
-        // The message is an hstring owned by the exception the caller is
-        // still handling, so it is not necessarily null-terminated and must
-        // be copied before this returns.
+        // The message is a local of the caller's catch block, which ends after
+        // this returns, so it is copied here.
         pyobj_handle exc{
             new_hresult_error(info.hresult, info.message, info.message_length)};
 
