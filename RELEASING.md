@@ -28,13 +28,23 @@ since the commit was pushed with the workflow's token. Before merging:
   package that is released on its own, such as the C++/WinRT headers that
   `winrt-runtime` compiles.
 
-Merge with "Rebase and merge", which keeps the pin and the regeneration as two
-commits. Merging releases nothing. The regeneration has already added a line
-such as "Updated WebView2 to 1.0.4314.35, from 1.0.4191.47." under
-`[Unreleased]` in the family's changelog, linked to upstream's notes on the
-release. To release the family, add whatever API the release added, name the
-section after the family's new version and date it, then push the tag that
-`release-tags.py` prints, as Releasing below describes.
+With the branch on top of `main`, merge by fast-forwarding `main` to the pull
+request's head commit, which keeps the pin and the regeneration as two commits
+with the hashes the checks ran on:
+
+    git fetch origin
+    git push origin <head>:main
+
+`<head>` is the hash of that commit, which
+`gh pr view <number> --json headRefOid` prints, so that what is pushed is the
+commit whose checks ran. The push is refused if `main` has moved on since.
+
+Merging releases nothing. The regeneration has already added a line such as
+"Updated WebView2 to 1.0.4314.35, from 1.0.4191.47." under `[Unreleased]` in
+the family's changelog, linked to upstream's notes on the release. To release
+the family, add whatever API the release added, name the section after the
+family's new version and date it, then push the tag that `release-tags.py`
+prints, as Releasing below describes.
 
 If the regeneration fails, the comment links the run, and the pull request
 moves the pin alone. The usual cause is a release that uses a call shape the
@@ -44,7 +54,17 @@ release goes out before the family's.
 
 If `main` moves on and the pull request falls behind or conflicts, comment
 `@dependabot recreate` on it. Dependabot rebuilds its commit on `main`, and the
-workflow generates everything again.
+workflow generates everything again. The workflow generates only when the head
+commit's author is `dependabot[bot]`, so when Dependabot does not respond, do
+its part by hand: rebase Dependabot's pin commit alone onto `main`, leaving the
+old regeneration out and the author as it is, and force-push it to the pull
+request's branch. The rebase can conflict in `upstream.csproj` when `main` took
+another pin on a neighboring line: keep `main`'s other pins. The workflow then
+generates as it did the first time. When `main` moved on only with commits that
+change nothing the generation reads, rebase both commits onto `main` and
+force-push them instead. The head is then the regeneration, so the workflow
+does nothing, and the checks run again. If those commits did change something
+the generation reads, the `generate` check fails.
 
 The Windows App SDK is pinned by its metapackage, which is empty: its
 component packages are published separately, and `.config/_tools.json`
