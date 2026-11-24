@@ -21,7 +21,13 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
-## [Unreleased]
+## [4!2.7.0] - 2026-11-23
+
+### Added
+- `LanguageModel.model_name` and `LanguageModel.model_version`.
+- `LanguageModelLowRankAdapterStatus`, from `LanguageModelLowRankAdapterResult.status`.
+- `LanguageModelResponseStatus.INSUFFICIENT_VIDEO_RAM` and `BLOCKED_BY_GAME_MODE`.
+- 8 `RuntimeCompatibilityChange` members, such as `LANGUAGE_MODEL_GPU_SUPPORT`.
 
 ### Changed
 - Updated the Windows App SDK to [2.7.0][Windows App SDK 2.7.0], from 2.6.5.
