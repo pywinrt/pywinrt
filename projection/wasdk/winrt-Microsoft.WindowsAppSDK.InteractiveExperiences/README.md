@@ -29,11 +29,11 @@ This package provides the following modules:
 - `winrt.microsoft.ui.system`
 - `winrt.microsoft.ui.windowing`
 
-The WinRT APIs in it are those of version 2.6.5 of the
+The WinRT APIs in it are those of version 2.7.0 of the
 `Microsoft.WindowsAppSDK` NuGet package.
 
 Its metadata comes from the `Microsoft.WindowsAppSDK.InteractiveExperiences` component,
-version 2.6.5.
+version 2.7.0.
 
 ```
 pip install winrt-Microsoft.WindowsAppSDK.InteractiveExperiences

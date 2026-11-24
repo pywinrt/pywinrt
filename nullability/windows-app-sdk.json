@@ -187609,6 +187609,26 @@
               }
             },
             "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Windows.AI.Text.LanguageModel::get_ModelName()",
+            "name": "get_ModelName",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "System.String Microsoft.Windows.AI.Text.LanguageModel::get_ModelVersion()",
+            "name": "get_ModelVersion",
+            "return": {
+              "type": {
+                "name": "System.String"
+              }
+            },
+            "parameters": []
           }
         ]
       },
@@ -187719,6 +187739,16 @@
             "return": {
               "type": {
                 "name": "Microsoft.Windows.AI.Text.LanguageModelLowRankAdapter"
+              }
+            },
+            "parameters": []
+          },
+          {
+            "signature": "Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterResult::get_Status()",
+            "name": "get_Status",
+            "return": {
+              "type": {
+                "name": "Microsoft.Windows.AI.Text.LanguageModelLowRankAdapterStatus"
               }
             },
             "parameters": []
