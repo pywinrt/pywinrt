@@ -15,6 +15,10 @@ on:
       - requirements.txt
       - .config/_tools.json
       - scripts/fetch-tools.ps1
+      # what the msvc job runs to let XAML islands start
+      - scripts/fix_python_manifest_for_xaml_islands.ps1
+      # what the build runs to merge the packages for the type checkers
+      - scripts/merge-packages.py
       # what fetch-tools.ps1 runs to fetch the App SDK, and the modules it
       # imports
       - scripts/app_sdk.py
@@ -49,6 +53,10 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
+      # the CMake file that installs the redistribution packages, and each
+      # one's module, not its packaging
+      - redist/CMakeLists.txt
+      - redist/*/winrt/**
       - test/**
   pull_request:
     paths:
@@ -58,6 +66,10 @@ on:
       - requirements.txt
       - .config/_tools.json
       - scripts/fetch-tools.ps1
+      # what the msvc job runs to let XAML islands start
+      - scripts/fix_python_manifest_for_xaml_islands.ps1
+      # what the build runs to merge the packages for the type checkers
+      - scripts/merge-packages.py
       # what fetch-tools.ps1 runs to fetch the App SDK, and the modules it
       # imports
       - scripts/app_sdk.py
@@ -92,6 +104,10 @@ on:
       - '!table/**/*.md'
       - '!table/**/*.toml'
       - '!table/winrt/table/build_hooks.py'
+      # the CMake file that installs the redistribution packages, and each
+      # one's module, not its packaging
+      - redist/CMakeLists.txt
+      - redist/*/winrt/**
       - test/**
 
 jobs:
