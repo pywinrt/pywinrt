@@ -2,10 +2,10 @@
 //
 // py::convert<T>() and py::convert_to<T>() dispatch to py::converter<T>,
 // specialized here for the types the runtime API itself mentions: the
-// fundamental types, strings, GUIDs, DateTime, TimeSpan, IInspectable and
-// std::optional<T>. Arrays are specialized in <pywinrt/array.h>; <pywinrt/base.h>
-// pulls in both, which is what makes every specialization visible before a
-// module instantiates any of them.
+// fundamental types, strings, GUIDs, DateTime, TimeSpan and IInspectable.
+// Arrays are specialized in <pywinrt/array.h>, and <pywinrt/base.h> pulls in
+// both, which is what makes every specialization visible before a module
+// instantiates any of them.
 //
 // A WinRT class, interface, struct, enum or delegate is not here. Naming one
 // in C++ takes the header C++/WinRT generates for its namespace, and knowing
@@ -695,27 +695,6 @@ namespace py
     };
 
     template<>
-    struct converter<winrt::param::hstring>
-    {
-        static PyObject* convert(winrt::param::hstring const& value) noexcept
-        {
-            return PyUnicode_FromWideChar(
-                static_cast<winrt::hstring const&>(value).c_str(),
-                static_cast<winrt::hstring const&>(value).size());
-        }
-
-        static winrt::param::hstring convert_to(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            // It is expected that this is only used to convert delegate parameters
-            // to Python objects, so we shouldn't need to go the other way around.
-            throw winrt::hresult_not_implemented{
-                L"winrt::param::hstring cannot be converted from Python object"};
-        }
-    };
-
-    template<>
     struct converter<char16_t>
     {
         static PyObject* convert(char16_t value) noexcept
@@ -781,32 +760,6 @@ namespace py
     };
 
     template<typename T>
-    struct converter<std::optional<T>>
-    {
-        static PyObject* convert(std::optional<T> const& reference) noexcept
-        {
-            if (!reference)
-            {
-                Py_RETURN_NONE;
-            }
-
-            return converter<T>::convert(reference.value());
-        }
-
-        static std::optional<T> convert_to(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            if (Py_IsNone(obj))
-            {
-                return std::nullopt;
-            }
-
-            return converter<T>::convert_to(obj);
-        }
-    };
-
-    template<typename T>
     PyObject* convert(T const& instance) noexcept
     {
         return converter<T>::convert(instance);
@@ -816,11 +769,5 @@ namespace py
     auto convert_to(PyObject* value)
     {
         return converter<T>::convert_to(value);
-    }
-
-    template<typename T>
-    auto convert_to(PyObject* args, int index)
-    {
-        return convert_to<T>(PyTuple_GET_ITEM(args, index));
     }
 } // namespace py
