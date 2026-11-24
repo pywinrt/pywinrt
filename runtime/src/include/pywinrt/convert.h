@@ -12,8 +12,7 @@
 // which Python type projects it took a second generated header beside that;
 // nothing generates either any more, because a projection is a table the
 // runtime interprets. A module that holds such a value hands it over by name
-// instead - py::wrap_object(), py::unwrap_object(), py::struct_to_python() and
-// py::struct_from_python() in <pywinrt/abi.h>.
+// instead - py::wrap_object() and py::unwrap_object() in <pywinrt/abi.h>.
 
 #pragma once
 

@@ -1,14 +1,9 @@
 // The blocking wait, as the interpreter asks for it.
 //
-// py::async_wait() in <pywinrt/abi.h> is what a compiled module calls: the
-// module knows the async interface at compile time, so the callback that hands
-// the object its completed handler is a captureless lambda and needs nothing
-// passed to it. The interpreter knows the interface only as a descriptor, so it
-// needs that descriptor back when the waiter calls in, which is the one thing
-// the capsule entry cannot carry.
-//
-// Both go through the same waiter in async.cpp. Nothing here is part of the C
-// ABI: the interpreter and the waiter are compiled into the same module.
+// The interpreter knows the async interface only as a descriptor, so it needs
+// that descriptor back when the waiter in async.cpp calls in. Nothing here is
+// part of the C ABI: the interpreter and the waiter are compiled into the same
+// module.
 //
 // The hand-off of an async object to asyncio, which is what __await__ is, is
 // here too.

@@ -124,22 +124,6 @@ namespace py
     };
 
     /**
-     * Hands @p handler to @p async as its completed handler.
-     *
-     * The implementation queries @p handler for the closed handler type of its
-     * own async interface and calls @c Completed() with it, which is the only
-     * part of a blocking wait that has to name the type arguments. It is a
-     * captureless lambda in the calling module, so what crosses is an ordinary
-     * function pointer.
-     *
-     * @returns an @c HRESULT, because nothing may throw across the boundary.
-     * Called with the GIL released, like the wait that calls it.
-     */
-    using async_set_completed_fn = int32_t (*)(
-        winrt::Windows::Foundation::IInspectable const& async,
-        winrt::Windows::Foundation::IUnknown const& handler) noexcept;
-
-    /**
      * A call that never reached WinRT at all, because of how it was made.
      */
     enum class call_error
@@ -185,11 +169,6 @@ namespace py
     void restore_raised_exception(PyObject* exception) noexcept;
     void set_call_error(call_error error, member_site const* site) noexcept;
     int32_t report_unraisable(PyObject* source) noexcept;
-    int32_t async_wait(
-        winrt::Windows::Foundation::IInspectable const& async,
-        uint32_t timeout_ms,
-        winrt::guid const& handler_iid,
-        async_set_completed_fn set_completed) noexcept;
 
     // ----- values named by their Python type -------------------------------
     //
@@ -200,8 +179,6 @@ namespace py
         winrt::Windows::Foundation::IInspectable const& value,
         char const* qualified_name) noexcept;
     bool unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noexcept;
-    PyObject* struct_to_python(PyTypeObject* type, void const* value) noexcept;
-    bool struct_from_python(PyTypeObject* type, PyObject* obj, void* out) noexcept;
 
     namespace cpp::_winrt
     {

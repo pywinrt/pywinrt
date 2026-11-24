@@ -1,10 +1,10 @@
 // The blocking half of the async projection - obj.get() and obj.wait(timeout) -
 // as the calling module sees it.
 //
-// The wait itself is in winrt-runtime, behind py::async_wait() in
-// <pywinrt/abi.h>: an event, a completed handler with its own vtable and the
-// wait, none of which depends on the type arguments of the async interface, and
-// all of which C++/WinRT would otherwise inline into every caller.
+// The wait itself is behind py::interp::async_wait_for() in the runtime's
+// async.cpp: an event, a completed handler with its own vtable and the wait,
+// none of which depends on the type arguments of the async interface, and all
+// of which C++/WinRT would otherwise inline into every caller.
 //
 // What is left here is the part that has to stay with the caller: the check
 // that the thread may block at all, the conversion of a Python timeout, and
@@ -15,7 +15,6 @@
 
 #pragma once
 
-#include <pywinrt/abi.h>
 #include <pywinrt/errors.h>
 #include <pywinrt/prelude.h>
 
@@ -74,8 +73,8 @@ namespace py
 
     /**
      * Throws if the wait itself failed, which is what a negative return of
-     * py::async_wait() means: it is the @c HRESULT of the failure, since the
-     * four @c AsyncStatus values are not negative.
+     * py::interp::async_wait_for() means: it is the @c HRESULT of the failure,
+     * since the four @c AsyncStatus values are not negative.
      *
      * @throws winrt::hresult_error
      */

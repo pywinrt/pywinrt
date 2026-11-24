@@ -11,14 +11,13 @@
 // Nothing in that waiter depends on the type arguments. Every WinRT completed
 // handler passes the async object and an AsyncStatus as two machine words, so
 // they all share one ABI and differ only in the IID that identifies them. So
-// the waiter is written here once, without templates, and the calling module
-// passes in the two things that do depend on the type arguments: the IID of its
-// completed handler and a function that hands the handler to the object.
+// the waiter is written here once, without templates, and the caller passes in
+// the two things that do depend on the type arguments: the IID of its completed
+// handler and a function that hands the handler to the object.
 //
-// py::async_wait() touches no Python at all - it reports a failure as an
-// HRESULT and leaves the raising to <pywinrt/async.h> in the calling module -
-// so the caller can release the GIL once around both the wait and the
-// GetResults() that follows it, which is what C++/WinRT's own get() did.
+// py::interp::async_wait_for() touches no Python at all - it reports a failure
+// as an HRESULT and leaves the raising to <pywinrt/async.h> - so the caller can
+// release the GIL around the wait.
 
 #include <pywinrt/base.h>
 
@@ -162,32 +161,6 @@ int32_t py::interp::async_wait_for(
         // from, which is why this does not need the GIL to report anything.
         return winrt::to_hresult();
     }
-}
-
-int32_t py::async_wait(
-    winrt::Windows::Foundation::IInspectable const& async,
-    uint32_t timeout_ms,
-    winrt::guid const& handler_iid,
-    async_set_completed_fn set_completed) noexcept
-{
-    // A compiled module's callback takes the two objects and no context, so
-    // the context is the callback itself.
-    return py::interp::async_wait_for(
-        winrt::get_abi(async),
-        timeout_ms,
-        &handler_iid,
-        [](void* callback, void* object, void* handler) noexcept
-        {
-            winrt::Windows::Foundation::IInspectable async_object;
-            winrt::Windows::Foundation::IUnknown unknown;
-
-            winrt::copy_from_abi(async_object, object);
-            winrt::copy_from_abi(unknown, handler);
-
-            return reinterpret_cast<async_set_completed_fn>(callback)(
-                async_object, unknown);
-        },
-        reinterpret_cast<void*>(set_completed));
 }
 
 /**
