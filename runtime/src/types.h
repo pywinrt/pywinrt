@@ -48,4 +48,6 @@ namespace py::interp
     PyGetSetDef* keep_getsets(projection& proj, std::vector<PyGetSetDef>& defs);
 
     PyMethodDef* keep_methods(projection& proj, std::vector<PyMethodDef>& defs);
+
+    void release_types(projection& proj) noexcept;
 } // namespace py::interp

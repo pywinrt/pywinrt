@@ -411,8 +411,6 @@ namespace py::interp
         /// later load raises as its cause, since the types are built only
         /// once. Guarded by the cache lock.
         py::pyobj_handle failure;
-
-        void release_types() noexcept;
     };
 
     // ----- interp.cpp -----------------------------------------------------

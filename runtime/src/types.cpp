@@ -836,15 +836,15 @@ namespace py::interp
     }
 
     /**
-     * Lets go of the Python types this projection built, which is what
-     * breaks the cycle between a type and the descriptors bound to it. The
-     * descriptors themselves stay until the module state is freed, because
-     * a type that outlives this call still has them bound, and so do the
-     * names they answer to.
+     * Lets go of the Python types @p proj built, which is what breaks the
+     * cycle between a type and the descriptors bound to it. The descriptors
+     * themselves stay until the module state is freed, because a type that
+     * outlives this call still has them bound, and so do the names they
+     * answer to.
      */
-    void projection::release_types() noexcept
+    void release_types(projection& proj) noexcept
     {
-        for (auto& entry : types)
+        for (auto& entry : proj.types)
         {
             Py_CLEAR(entry.py_type);
             Py_CLEAR(entry.statics);

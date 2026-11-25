@@ -923,7 +923,7 @@ namespace py::cpp::_winrt
 
         for (auto& [name, projection] : state->projections)
         {
-            projection->release_types();
+            py::interp::release_types(*projection);
             projection->failure.close();
         }
 
