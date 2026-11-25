@@ -493,18 +493,4 @@ namespace py::interp
     void release_value(arg_desc const& arg, void* storage) noexcept;
 
     type_entry* resolve(projection& owner, uint32_t type, type_entry*& cache) noexcept;
-
-    // ----- shapes.cpp -----------------------------------------------------
-
-    shapes::shape_desc const* get_forward_shape(uint32_t id) noexcept;
-
-    shapes::reverse_desc const* get_reverse_shape(uint32_t id) noexcept;
-
-    uint32_t forward_shape_count() noexcept;
-
-    uint32_t reverse_shape_count() noexcept;
-
-    std::string_view census_lineage() noexcept;
-
-    uint32_t census_revision() noexcept;
 } // namespace py::interp

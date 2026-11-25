@@ -20,6 +20,7 @@
 #include "objects.h"
 #include "prelude.h"
 #include "protocols.h"
+#include "shapes.h"
 #include "table.h"
 #include "types.h"
 

@@ -7,7 +7,6 @@
 
 #include <Python.h>
 
-#include "interp.h"
 #include "shapes-generated.h"
 #include "shapes.h"
 

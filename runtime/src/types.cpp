@@ -30,6 +30,7 @@
 #include "objects.h"
 #include "prelude.h"
 #include "runtime.h"
+#include "shapes.h"
 #include "structs.h"
 #include "table.h"
 #include "types.h"
