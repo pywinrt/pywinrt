@@ -21,7 +21,6 @@
 #include "interp.h"
 #include "metaclass.h"
 #include "members.h"
-#include "objects.h"
 #include "prelude.h"
 #include "protocols.h"
 #include "table.h"

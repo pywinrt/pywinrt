@@ -5,7 +5,6 @@
 
 // must be included before winrt to avoid compile errors
 #include <Shobjidl.h>
-#include <libloaderapi.h>
 
 #include "_winrt.h"
 #include "_winrt_array.h"
