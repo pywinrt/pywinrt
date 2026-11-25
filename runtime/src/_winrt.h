@@ -235,5 +235,6 @@ namespace py::cpp::_winrt
 
 namespace py
 {
+    PyTypeObject* get_object_type() noexcept;
     PyTypeObject* get_object_meta_type() noexcept;
 } // namespace py

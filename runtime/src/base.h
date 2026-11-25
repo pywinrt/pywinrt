@@ -15,7 +15,6 @@
 #include "traits.h"
 #include "wrappers.h"
 
-#include "abi.h"
 #include "errors.h"
 
 #include "convert.h"

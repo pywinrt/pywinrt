@@ -5,13 +5,15 @@
 
 #include <Python.h>
 
-#include "base.h"
+#include "wrappers.h"
 
 #include <memory>
 
 namespace py::cpp::_winrt
 {
     extern PyType_Spec Array_type_spec;
+
+    PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept;
 
     bool Array_Assign(PyObject* obj, std::unique_ptr<py::Array> array) noexcept;
 

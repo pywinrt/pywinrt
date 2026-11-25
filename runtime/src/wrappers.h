@@ -11,7 +11,9 @@
 
 #include "prelude.h"
 
+#include <cstddef>
 #include <span>
+#include <type_traits>
 
 namespace py
 {
@@ -28,6 +30,20 @@ namespace py
         T obj{};
         static_assert(std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>);
     };
+
+    /**
+     * @c tp_basicsize of @c _winrt.Object, which every wrapper type the runtime
+     * builds from a table inherits.
+     */
+    inline constexpr size_t object_basicsize
+        = sizeof(winrt_wrapper<winrt::Windows::Foundation::IUnknown>);
+
+    static_assert(
+        std::is_standard_layout_v<winrt_wrapper<winrt::Windows::Foundation::IUnknown>>);
+    static_assert(object_basicsize == sizeof(PyObject) + sizeof(void*));
+    static_assert(
+        offsetof(winrt_wrapper<winrt::Windows::Foundation::IUnknown>, obj)
+        == sizeof(PyObject));
 
     /**
      * Generic WinRT array type (System.Array) implementation.

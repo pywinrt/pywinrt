@@ -4,9 +4,10 @@
 
 #pragma once
 
-#include "abi.h"
+#include "_winrt_array.h"
 #include "convert.h"
 #include "errors.h"
+#include "handles.h"
 #include "prelude.h"
 #include "traits.h"
 #include "wrappers.h"

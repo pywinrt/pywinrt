@@ -3,8 +3,9 @@
 //
 // Every failed WinRT call comes through here. The runtime's own code catches
 // the C++ exception in py::to_PyErr(), which flattens it into one of the PODs
-// in abi.h and calls in, and an interop package, which is compiled apart from
-// the runtime, gets its exception from winrt.runtime.interop.hresult_error().
+// in errors.h and calls in, and an interop package, which is compiled apart
+// from the runtime, gets its exception from
+// winrt.runtime.interop.hresult_error().
 // So the wording, the exception type and the HRESULT mapping belong to
 // winrt-runtime and can improve in a runtime release without rebuilding any
 // other package.

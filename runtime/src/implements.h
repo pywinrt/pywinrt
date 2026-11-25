@@ -104,4 +104,6 @@ namespace py::interp
         std::span<type_entry* const> interfaces,
         void const* iid,
         std::unique_ptr<reverse_call> calls);
+
+    PyObject* python_object_of(void* abi) noexcept;
 } // namespace py::interp

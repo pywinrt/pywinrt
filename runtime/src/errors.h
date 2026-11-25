@@ -7,18 +7,136 @@
 // py::to_PyErr() is the catch-all that every projected method ends with.
 //
 // Which Python exception any of this becomes is decided in errors.cpp rather
-// than here: this header classifies what it caught into one of the PODs in
-// abi.h and hands it to py::set_error() or
-// py::set_member_not_available_error().
+// than here: this header classifies what it caught into one of the PODs below
+// and hands it to py::set_error() or py::set_member_not_available_error().
 
 #pragma once
 
-#include "abi.h"
-#include "handles.h"
 #include "prelude.h"
 
 namespace py
 {
+    /**
+     * The kind of member a Python attribute is projected from.
+     */
+    enum class member_kind
+    {
+        method,
+        property,
+        event,
+    };
+
+    /**
+     * Thrown when an object does not implement the interface that declares the
+     * member that is being called.
+     *
+     * The names point at strings that the loaded projection keeps, so they
+     * outlive the exception without having to be copied.
+     */
+    struct member_not_available
+    {
+        member_kind kind;
+        uint32_t arg_count;
+        /// Metadata name of the type that declares the member or @c nullptr for
+        /// a parameterized interface, which has no name in the metadata.
+        const char* type_name;
+        const char* member_name;
+        /// Metadata name of the interface that was queried for.
+        const char* interface_name;
+    };
+
+    /// The member is reached without an instance, so a failure to reach it
+    /// cannot be blamed on the object.
+    inline constexpr uint32_t site_is_static = 1;
+    /// The member is a constructor.
+    inline constexpr uint32_t site_is_constructor = 2;
+
+    /**
+     * Identifies the projected member a call was made through, so that the
+     * error can say which one failed.
+     *
+     * Every field is either a scalar or a pointer to a string that outlives
+     * the call. An instance of this is made where the call fails and passed
+     * by pointer.
+     */
+    struct member_site
+    {
+        member_kind kind;
+        /// Number of WinRT input parameters, which is what distinguishes the
+        /// overloads of a method from each other.
+        uint32_t arg_count;
+        /// Metadata name of the type that declares the member or @c nullptr for
+        /// a parameterized interface, which has no name in the metadata.
+        const char* type_name;
+        const char* member_name;
+        /// Metadata name of the interface that declares the member, or
+        /// @c nullptr when it is not reached through one.
+        const char* interface_name;
+        /// Zero or more of the @c site_is_* flags above.
+        uint32_t flags;
+    };
+
+    /**
+     * What py::to_PyErr() caught, which decides which Python exception
+     * py::set_error() raises.
+     */
+    enum class error_kind
+    {
+        /// A C++/WinRT @c hresult_error. Only this kind fills in @c hresult
+        /// and @c message.
+        hresult,
+        bad_alloc,
+        out_of_range,
+        invalid_argument,
+        /// Any other @c std::exception.
+        std_exception,
+        /// Something that is not a @c std::exception at all.
+        unknown,
+    };
+
+    /**
+     * A C++ exception, flattened by py::to_PyErr() inside its catch block and
+     * read by py::set_error() for the duration of the call.
+     *
+     * @c message is a local of the catch block that fills it in, and @c what
+     * belongs to the exception being handled, so neither outlives the call.
+     * py::set_error() copies what it keeps.
+     */
+    struct error_info
+    {
+        error_kind kind;
+        /// The @c HRESULT, for @c error_kind::hresult.
+        int32_t hresult;
+        /// The error message, not necessarily null-terminated.
+        const wchar_t* message;
+        /// Length of @c message in characters.
+        uint32_t message_length;
+        /// @c std::exception::what(), or @c nullptr for @c error_kind::unknown.
+        const char* what;
+        /// The member that was being called, or @c nullptr when it is not known.
+        member_site const* site;
+    };
+
+    /**
+     * A call that never reached WinRT at all, because of how it was made.
+     */
+    enum class call_error
+    {
+        /// No overload takes this many arguments.
+        invalid_arg_count,
+        /// Keyword arguments were passed to a member that takes none.
+        keyword_arguments,
+        /// The type cannot be constructed from Python.
+        cannot_instantiate,
+    };
+
+    void set_member_not_available_error(member_not_available const& info) noexcept;
+    void set_error(error_info const& info) noexcept;
+    PyObject* take_raised_exception() noexcept;
+    void restore_raised_exception(PyObject* exception) noexcept;
+    void set_call_error(call_error error, member_site const* site) noexcept;
+    int32_t report_unraisable(PyObject* source) noexcept;
+
     /**
      * The @c HRESULT that py::report_unraisable() returns, and therefore the
      * one that a Python exception escaping a WinRT callback is reported to
@@ -186,7 +304,7 @@ namespace py
     }
 
     /**
-     * Throws if one of the Python collection entries in abi.h failed.
+     * Throws if one of the Python collection entries in collections.h failed.
      *
      * @throws winrt::hresult_error
      */
