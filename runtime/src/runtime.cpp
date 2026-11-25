@@ -9,11 +9,20 @@
 #include <Python.h>
 #include <datetime.h>
 
-#include "base.h"
 #include "_winrt.h"
+#include "errors.h"
+#include "handles.h"
 #include "metaclass.h"
+#include "prelude.h"
 #include "runtime.h"
 #include "types.h"
+
+#include <chrono>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <string_view>
 
 /**
  * Adds a Python type to a Python module.

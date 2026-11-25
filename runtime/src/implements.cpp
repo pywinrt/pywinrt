@@ -21,14 +21,27 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt.h"
 #include "callbacks.h"
 #include "compose.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
 #include "interp.h"
+#include "prelude.h"
+#include "shapes.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
+
+#include <algorithm>
+#include <atomic>
+#include <cstddef>
+#include <cstdint>
+#include <memory>
+#include <span>
+#include <utility>
+#include <vector>
 
 namespace py::interp
 {

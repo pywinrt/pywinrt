@@ -8,6 +8,8 @@
 
 #include "prelude.h"
 
+#include <cstddef>
+
 namespace py
 {
 #if PY_VERSION_HEX >= 0x030F0000

@@ -14,6 +14,11 @@
 
 #include "prelude.h"
 
+#include <cstdint>
+#include <exception>
+#include <new>
+#include <stdexcept>
+
 namespace py
 {
     /**

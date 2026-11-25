@@ -12,7 +12,10 @@
 #include "prelude.h"
 
 #include <cstddef>
+#include <cstdint>
+#include <memory>
 #include <span>
+#include <string_view>
 #include <type_traits>
 
 namespace py

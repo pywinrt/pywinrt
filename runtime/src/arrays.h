@@ -26,6 +26,7 @@
 
 #include "interp.h"
 
+#include <cstdint>
 #include <memory>
 
 namespace py::interp

@@ -24,7 +24,9 @@
 #include <Python.h>
 
 #include "interp.h"
+#include "shapes.h"
 
+#include <cstdint>
 #include <memory>
 #include <span>
 #include <vector>

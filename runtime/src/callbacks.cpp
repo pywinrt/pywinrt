@@ -14,15 +14,21 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "arrays.h"
 #include "callbacks.h"
+#include "convert.h"
 #include "delegates.h"
+#include "errors.h"
 #include "generics.h"
+#include "handles.h"
 #include "interp.h"
 #include "objects.h"
+#include "prelude.h"
 #include "structs.h"
+#include "table.h"
+
+#include <cstdint>
+#include <cstring>
 
 namespace py::interp
 {

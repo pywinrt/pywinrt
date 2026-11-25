@@ -22,9 +22,12 @@
 //    Python exception, so it is reported with report_unraisable() and returned
 //    as that HRESULT.
 
-#include "base.h"
-
 #include "collections.h"
+#include "errors.h"
+#include "handles.h"
+#include "prelude.h"
+
+#include <cstdint>
 
 namespace
 {

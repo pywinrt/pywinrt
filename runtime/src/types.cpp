@@ -21,19 +21,29 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt.h"
 #include "delegates.h"
 #include "enums.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
 #include "objects.h"
+#include "prelude.h"
 #include "runtime.h"
 #include "structs.h"
+#include "table.h"
 #include "types.h"
 
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <memory>
 #include <optional>
+#include <string>
+#include <string_view>
 #include <unordered_map>
+#include <utility>
+#include <vector>
 
 namespace py::interp
 {

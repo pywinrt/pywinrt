@@ -16,16 +16,26 @@
 
 #include <Python.h>
 
-#include "base.h"
-
+#include "convert.h"
+#include "errors.h"
 #include "generics.h"
+#include "handles.h"
 #include "interp.h"
 #include "numerics-buffer.h"
 #include "numerics-statics.h"
 #include "numerics.h"
 #include "objects.h"
+#include "prelude.h"
+#include "runtime.h"
 #include "structs.h"
+#include "table.h"
 #include "types.h"
+
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <utility>
+#include <vector>
 
 namespace py::interp
 {

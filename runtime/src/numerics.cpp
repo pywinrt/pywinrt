@@ -20,8 +20,18 @@
 // resolve at link time, so the ones they leave out raise NotImplementedError
 // on that toolchain rather than keeping the runtime from linking at all.
 
+#include "convert.h"
+#include "handles.h"
+#include "interp.h"
+#include "numerics-traits.h"
 #include "numerics-values.h"
+#include "numerics.h"
+#include "types.h"
 
+#include <array>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <optional>
 #include <string_view>
 #include <vector>

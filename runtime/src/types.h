@@ -10,7 +10,9 @@
 #include <Python.h>
 
 #include "interp.h"
+#include "table.h"
 
+#include <cstdint>
 #include <string>
 #include <string_view>
 #include <vector>

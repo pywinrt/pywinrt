@@ -21,17 +21,24 @@
 
 #include <Python.h>
 
-#include "base.h"
-
+#include "_winrt.h"
 #include "callbacks.h"
 #include "compose.h"
+#include "convert.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
 #include "interp.h"
 #include "objects.h"
+#include "prelude.h"
+#include "shapes.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
 
 #include <algorithm>
 #include <atomic>
+#include <cstdint>
 #include <memory>
 #include <vector>
 

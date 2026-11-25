@@ -8,14 +8,17 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "callbacks.h"
 #include "collections.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
+#include "prelude.h"
 #include "pycollections.h"
 #include "pysequence.h"
+#include "table.h"
 
+#include <cstdint>
 #include <memory>
 
 namespace py::interp

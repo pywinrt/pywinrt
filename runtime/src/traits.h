@@ -10,6 +10,8 @@
 
 #include "prelude.h"
 
+#include <type_traits>
+
 namespace py
 {
     /**

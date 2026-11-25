@@ -10,11 +10,21 @@
 #include "numerics-buffer.h"
 
 #include "_winrt_array.h"
+#include "convert.h"
+#include "errors.h"
+#include "handles.h"
 #include "numerics-traits.h"
+#include "numerics.h"
+#include "prelude.h"
 #include "types.h"
+#include "wrappers.h"
 
 #include <algorithm>
+#include <array>
 #include <bit>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <span>
 #include <string>
 #include <string_view>

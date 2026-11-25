@@ -18,6 +18,7 @@
 #include <Python.h>
 
 #include "interp.h"
+#include "table.h"
 
 #include <vector>
 

@@ -8,12 +8,15 @@
 // and a runtime that do not belong together should say so rather than read past
 // the end of a mapping.
 
-#include "base.h"
-
+#include "handles.h"
 #include "table.h"
 
 #include <algorithm>
+#include <cstdint>
 #include <cstring>
+#include <string>
+#include <string_view>
+#include <utility>
 
 namespace py::table
 {

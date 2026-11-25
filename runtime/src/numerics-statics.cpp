@@ -16,8 +16,13 @@
 // resolve at link time, so the ones they leave out raise NotImplementedError
 // on that toolchain rather than keeping the runtime from linking at all.
 
+#include "handles.h"
+#include "interp.h"
 #include "numerics-statics.h"
+#include "numerics-traits.h"
 #include "numerics-values.h"
+#include "numerics.h"
+#include "types.h"
 
 #include <vector>
 

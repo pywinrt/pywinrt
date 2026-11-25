@@ -12,6 +12,13 @@
 #include "traits.h"
 #include "wrappers.h"
 
+#include <cstddef>
+#include <cstdint>
+#include <memory>
+#include <string_view>
+#include <type_traits>
+#include <utility>
+
 namespace py
 {
     // The Python buffer protocol: the PEP 3118 format string for each element

@@ -10,9 +10,13 @@
 // winrt-runtime and can improve in a runtime release without rebuilding any
 // other package.
 
-#include "base.h"
-
+#include "errors.h"
+#include "handles.h"
 #include "objects.h"
+#include "prelude.h"
+
+#include <cstdint>
+#include <optional>
 
 namespace
 {

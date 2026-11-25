@@ -15,15 +15,26 @@
 
 #include <Python.h>
 
-#include "base.h"
-
+#include "_winrt.h"
 #include "callbacks.h"
 #include "delegates.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
 #include "members.h"
 #include "metaclass.h"
 #include "objects.h"
+#include "prelude.h"
+#include "shapes.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
+
+#include <atomic>
+#include <cstdint>
+#include <memory>
+#include <new>
+#include <utility>
 
 namespace py::interp
 {

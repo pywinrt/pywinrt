@@ -11,6 +11,10 @@
 
 #include "interp.h"
 #include "prelude.h"
+#include "table.h"
+
+#include <cstddef>
+#include <cstdint>
 
 namespace py::interp
 {

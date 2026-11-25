@@ -5,11 +5,14 @@
 
 #include <Python.h>
 #include <Robuffer.h>
-#include "base.h"
 #include "_winrt_buffer.h"
-#include <winrt/base.h>
+#include "errors.h"
+#include "handles.h"
+#include "prelude.h"
 
 #include <atomic>
+#include <cstdint>
+#include <memory>
 
 namespace py::cpp::_winrt
 {

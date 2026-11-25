@@ -9,16 +9,20 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "callbacks.h"
 #include "collections.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
 #include "objects.h"
+#include "prelude.h"
 #include "pycollections.h"
 #include "pymapping.h"
+#include "table.h"
 
+#include <cstdint>
 #include <memory>
+#include <utility>
 
 namespace py::interp
 {

@@ -52,6 +52,7 @@ setup(
                 "src/callbacks.cpp",
                 "src/collections.cpp",
                 "src/compose.cpp",
+                "src/convert.cpp",
                 "src/delegates.cpp",
                 "src/enums.cpp",
                 "src/errors.cpp",

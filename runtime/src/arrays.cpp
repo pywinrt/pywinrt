@@ -19,21 +19,30 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt_array.h"
 #include "arrays.h"
 #include "callbacks.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
 #include "numerics-buffer.h"
+#include "prelude.h"
+#include "runtime.h"
 #include "structs.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
 
 #include <algorithm>
 #include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <memory>
 #include <new>
+#include <span>
 #include <string>
+#include <string_view>
+#include <utility>
 
 namespace py::interp
 {

@@ -7,18 +7,28 @@
 #include <Shobjidl.h>
 #include <libloaderapi.h>
 
-#include "base.h"
 #include "_winrt.h"
 #include "_winrt_array.h"
 #include "_winrt_box.h"
+#include "convert.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
+#include "interp.h"
 #include "members.h"
 #include "objects.h"
+#include "prelude.h"
+#include "runtime.h"
 #include "table.h"
 #include "types.h"
-#include <winrt/base.h>
+#include "wrappers.h"
 
 #include <atomic>
+#include <cstddef>
+#include <cstdint>
+#include <functional>
+#include <memory>
+#include <utility>
 
 namespace py::cpp::_winrt
 {

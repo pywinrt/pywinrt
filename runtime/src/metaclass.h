@@ -8,7 +8,10 @@
 
 #include <Python.h>
 
-#include "base.h"
+#include "handles.h"
+
+#include <cstring>
+#include <memory>
 
 #if PY_VERSION_HEX < 0x030C0000
 /**

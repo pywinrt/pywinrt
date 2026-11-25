@@ -18,10 +18,14 @@
 // as an HRESULT and leaves the raising to its caller - so the caller can
 // release the GIL around the wait.
 
-#include "base.h"
-
 #include "_winrt.h"
 #include "async.h"
+#include "handles.h"
+#include "interp.h"
+#include "prelude.h"
+
+#include <atomic>
+#include <cstdint>
 
 namespace
 {

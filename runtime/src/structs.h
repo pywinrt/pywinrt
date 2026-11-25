@@ -13,6 +13,7 @@
 #include <Python.h>
 
 #include "interp.h"
+#include "table.h"
 
 namespace py::interp
 {

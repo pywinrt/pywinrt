@@ -1,9 +1,17 @@
-#include "base.h"
 #include "_winrt.h"
 #include "_winrt_array.h"
 #include "arrays.h"
+#include "com_array.h"
+#include "handles.h"
 #include "numerics-buffer.h"
-#include <winrt/base.h>
+#include "prelude.h"
+#include "wrappers.h"
+
+#include <cstdint>
+#include <memory>
+#include <string>
+#include <string_view>
+#include <utility>
 
 namespace py::cpp::_winrt
 {

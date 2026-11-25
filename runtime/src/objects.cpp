@@ -8,19 +8,29 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt.h"
 #include "_winrt_buffer.h"
+#include "com_array.h"
 #include "compose.h"
+#include "convert.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
 #include "interp.h"
 #include "members.h"
 #include "objects.h"
+#include "prelude.h"
 #include "protocols.h"
 #include "pycollections.h"
+#include "runtime.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
 
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <string>
 #include <vector>
 
 namespace py::interp

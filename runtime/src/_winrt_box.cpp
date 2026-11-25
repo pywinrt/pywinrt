@@ -1,9 +1,12 @@
-#include "base.h"
-
-#include <winrt/base.h>
 #include <Python.h>
 
 #include "_winrt_box.h"
+#include "convert.h"
+#include "errors.h"
+#include "handles.h"
+#include "prelude.h"
+
+#include <cstdint>
 
 namespace
 {

@@ -11,15 +11,25 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt.h"
 #include "arrays.h"
+#include "errors.h"
+#include "handles.h"
 #include "interp.h"
 #include "members.h"
 #include "objects.h"
+#include "prelude.h"
 #include "protocols.h"
+#include "table.h"
 #include "types.h"
+
+#include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <memory>
+#include <string>
+#include <utility>
 
 namespace py::interp
 {

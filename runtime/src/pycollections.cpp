@@ -15,18 +15,24 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "callbacks.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
 #include "interp.h"
+#include "prelude.h"
 #include "pycollections.h"
 #include "pymapping.h"
 #include "pysequence.h"
+#include "table.h"
 
 #include <algorithm>
 #include <array>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <memory>
+#include <utility>
 
 namespace py::interp
 {

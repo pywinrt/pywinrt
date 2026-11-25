@@ -2,10 +2,13 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "enums.h"
+#include "handles.h"
+#include "interp.h"
+#include "table.h"
 #include "types.h"
+
+#include <cstdint>
 
 namespace py::interp
 {

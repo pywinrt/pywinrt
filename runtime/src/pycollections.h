@@ -23,8 +23,11 @@
 #include <Python.h>
 
 #include "callbacks.h"
+#include "errors.h"
+#include "handles.h"
 #include "implements.h"
 #include "interp.h"
+#include "table.h"
 
 #include <cstdint>
 #include <cstring>

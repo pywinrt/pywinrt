@@ -13,14 +13,16 @@
 
 #include <Python.h>
 
-#include "base.h"
-
+#include "convert.h"
+#include "errors.h"
+#include "interp.h"
 #include "numerics-traits.h"
 #include "numerics.h"
 #include "structs.h"
 #include "types.h"
 
 #include <array>
+#include <cstddef>
 #include <cstring>
 #include <tuple>
 #include <type_traits>

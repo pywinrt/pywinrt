@@ -13,16 +13,24 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "_winrt.h"
+#include "convert.h"
+#include "errors.h"
 #include "generics.h"
+#include "handles.h"
 #include "interp.h"
 #include "metaclass.h"
 #include "members.h"
 #include "objects.h"
+#include "prelude.h"
 #include "protocols.h"
+#include "table.h"
 #include "types.h"
+#include "wrappers.h"
+
+#include <cstdint>
+#include <string_view>
+#include <vector>
 
 namespace py::interp
 {

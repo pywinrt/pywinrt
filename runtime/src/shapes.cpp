@@ -7,10 +7,13 @@
 
 #include <Python.h>
 
-#include "base.h"
-
 #include "interp.h"
 #include "shapes-generated.h"
+#include "shapes.h"
+
+#include <cstdint>
+#include <iterator>
+#include <string_view>
 
 namespace py::interp
 {

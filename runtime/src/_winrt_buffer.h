@@ -4,7 +4,7 @@
 
 #include <Python.h>
 
-#include "base.h"
+#include "prelude.h"
 
 namespace py
 {
