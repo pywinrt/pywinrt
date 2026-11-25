@@ -647,7 +647,7 @@ namespace py::interp
         {
             entry.owner = &owner;
             entry.index = type;
-            entry.py_type = py_type;
+            entry.py_type = reinterpret_cast<PyTypeObject*>(Py_NewRef(py_type));
             entry.category = record.get_category();
             entry.parameterized
                 = (record.flags() & table::type_flags::parameterized) != 0;
