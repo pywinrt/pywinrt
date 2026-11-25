@@ -7,7 +7,7 @@ set(WINRT_RUNTIME_SRC_PATH "src")
 set(WINRT_RUNTIME_PYTHON_PATH "python/winrt")
 set(WINRT_RUNTIME_INCLUDE_PATH "${WINRT_RUNTIME_SRC_PATH}/include")
 # The C++/WinRT headers scripts/generate-cppwinrt.py writes. The runtime
-# carries what src/base.h includes; an interop module carries the whole
+# carries what src/prelude.h includes. An interop module carries the whole
 # closure of the namespaces it includes, in a cppwinrt directory of its own.
 set(CPPWINRT_PATH "${WINRT_RUNTIME_INCLUDE_PATH}/cppwinrt")
 
@@ -51,9 +51,9 @@ target_include_directories(_winrt PRIVATE
 )
 
 # Every translation unit of the runtime parses the same several seconds of
-# src/base.h and the C++/WinRT headers under it, and those are rebuilt on
+# src/pch.h and the C++/WinRT headers under it, and those are rebuilt on
 # exactly the edits the iteration loop is made of.
-target_precompile_headers(_winrt PRIVATE "${WINRT_RUNTIME_SRC_PATH}/base.h")
+target_precompile_headers(_winrt PRIVATE "${WINRT_RUNTIME_SRC_PATH}/pch.h")
 
 install(TARGETS _winrt DESTINATION "winrt")
 install(DIRECTORY "${WINRT_RUNTIME_PYTHON_PATH}/" DESTINATION "winrt")

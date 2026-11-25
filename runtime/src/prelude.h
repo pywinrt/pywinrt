@@ -1,4 +1,4 @@
-// The headers that base.h and everything it includes are written against: the
+// The headers that the runtime's own headers are written against: the
 // Python C API, C++/WinRT, and the C++/WinRT namespace headers for the types
 // the runtime API itself mentions.
 //

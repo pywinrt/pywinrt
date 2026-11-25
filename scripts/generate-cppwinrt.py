@@ -9,10 +9,10 @@ whatever it is asked for, so the headers are generated in full and then the
 transitive closure of those five is copied out.
 
 Each package carries the headers it includes, rather than one package carrying
-them for everybody: ``winrt-runtime`` carries what ``runtime/src/base.h``
+them for everybody: ``winrt-runtime`` carries what ``runtime/src/prelude.h``
 includes, and each interop package carries the whole closure of its own
-namespaces, ``winrt/base.h`` and the ``Windows.Foundation`` headers included, so
-that it builds without ``winrt-runtime`` at all. So an interop module that
+namespaces, ``winrt/base.h`` and the ``Windows.Foundation`` headers included,
+so that it builds without ``winrt-runtime`` at all. So an interop module that
 starts including another namespace is a release of that package and not of the
 runtime, and the runtime knows about the Windows SDK only - the Windows App SDK
 headers belong to the one interop package that includes them.
@@ -53,7 +53,7 @@ WEBVIEW2_METADATA = (
     / "Microsoft.Web.WebView2.Core.winmd"
 )
 
-# What runtime/src/base.h and the runtime's own sources include. `winrt/base.h`
+# What runtime/src/prelude.h and the runtime's own sources include. `winrt/base.h`
 # comes along with them.
 RUNTIME_NAMESPACES = [
     "Windows.Foundation",
