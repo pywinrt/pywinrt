@@ -536,6 +536,8 @@ sealed class Census
         w.WriteBlankLine();
         w.WriteLine("#include \"shapes.h\"");
         w.WriteBlankLine();
+        w.WriteLine("#include <cstdint>");
+        w.WriteBlankLine();
         w.WriteLine("// clang-format off");
         w.WriteBlankLine();
         w.WriteLine("namespace py::shapes");

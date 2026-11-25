@@ -9,6 +9,8 @@
 
 #include "shapes.h"
 
+#include <cstdint>
+
 // clang-format off
 
 namespace py::shapes
