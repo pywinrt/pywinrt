@@ -12,7 +12,7 @@
 // elements holding references are only taken from a winrt.system.Array of the
 // same element type. Elements a call hands back become a winrt.system.Array
 // whose element type is a type code rather than a C++ type, which is the one
-// thing py::ComArray<T> in array.h cannot be.
+// thing py::ComArray<T> in com_array.h cannot be.
 //
 // A parameter's own descriptor is what describes its elements - the type code
 // and type of an array parameter are the element's - so everything below takes

@@ -3,9 +3,9 @@
 // what it is for, and they are listed in the order they depend on each other.
 //
 // It stays one include rather than one per header because the py::converter<T>
-// specializations are spread over convert.h and array.h, and every
-// one of them has to be declared before a source file instantiates any of
-// them. Including this header is what guarantees that.
+// specializations are spread over convert.h and com_array.h, and every one of
+// them has to be declared before a source file instantiates any of them.
+// Including this header is what guarantees that.
 
 #pragma once
 
@@ -19,5 +19,4 @@
 #include "errors.h"
 
 #include "convert.h"
-#include "buffer.h"
-#include "array.h"
+#include "com_array.h"
