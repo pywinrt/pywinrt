@@ -23,11 +23,11 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "callbacks.h"
 #include "compose.h"
 #include "implements.h"
 #include "interp.h"
-#include "module_state.h"
 #include "types.h"
 
 namespace py::interp

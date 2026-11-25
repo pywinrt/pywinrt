@@ -1,7 +1,7 @@
 #include "base.h"
+#include "_winrt.h"
 #include "_winrt_array.h"
 #include "arrays.h"
-#include "module_state.h"
 #include "numerics-buffer.h"
 #include <winrt/base.h>
 

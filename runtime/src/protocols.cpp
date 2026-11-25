@@ -12,11 +12,11 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "_winrt_buffer.h"
 #include "arrays.h"
 #include "async.h"
 #include "interp.h"
-#include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
 #include "runtime.h"

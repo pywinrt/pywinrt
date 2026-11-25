@@ -20,8 +20,8 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "async.h"
-#include "module_state.h"
 
 namespace
 {

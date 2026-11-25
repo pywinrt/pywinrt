@@ -8,9 +8,9 @@
 #include <libloaderapi.h>
 
 #include "base.h"
+#include "_winrt.h"
 #include "_winrt_array.h"
 #include "_winrt_box.h"
-#include "module_state.h"
 #include "implements.h"
 #include "members.h"
 #include "objects.h"

@@ -10,8 +10,8 @@
 #include <datetime.h>
 
 #include "base.h"
+#include "_winrt.h"
 #include "metaclass.h"
-#include "module_state.h"
 #include "runtime.h"
 #include "types.h"
 

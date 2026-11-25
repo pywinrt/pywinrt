@@ -13,10 +13,10 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "arrays.h"
 #include "interp.h"
 #include "members.h"
-#include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
 #include "types.h"

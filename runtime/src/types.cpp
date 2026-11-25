@@ -23,10 +23,10 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "delegates.h"
 #include "enums.h"
 #include "interp.h"
-#include "module_state.h"
 #include "objects.h"
 #include "runtime.h"
 #include "structs.h"

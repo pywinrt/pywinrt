@@ -15,11 +15,11 @@
 
 #include "base.h"
 
+#include "_winrt.h"
 #include "generics.h"
 #include "interp.h"
 #include "metaclass.h"
 #include "members.h"
-#include "module_state.h"
 #include "objects.h"
 #include "protocols.h"
 #include "types.h"
