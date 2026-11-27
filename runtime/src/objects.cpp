@@ -305,6 +305,41 @@ namespace py::interp
         return wrap_abi(type, queried);
     }
 
+    /**
+     * The WinRT class @p type is, or the one it derives from when it is a
+     * Python class derived from a composable one, or @c nullptr when it is
+     * neither.
+     *
+     * A derived class has a table entry of its own for nothing: what it
+     * activates, and every member it inherits, is the WinRT class's.
+     *
+     * The first type with an entry decides. The abstract type of an interface
+     * has the layout of object, which a WinRT class's extends, so in a class
+     * derived from both, tp_base is in the WinRT class's chain of bases. A
+     * chain that reaches an interface's type, as a Python implementation's
+     * does, reaches no class after it.
+     */
+    type_entry* class_of(PyTypeObject* type) noexcept
+    {
+        for (auto* base = type; base; base = base->tp_base)
+        {
+            auto* const entry = find_type_entry(base);
+            if (!entry)
+            {
+                continue;
+            }
+
+            if (entry->category != table::category::class_)
+            {
+                return nullptr;
+            }
+
+            return entry;
+        }
+
+        return nullptr;
+    }
+
     namespace
     {
         /**
@@ -313,26 +348,6 @@ namespace py::interp
         PyObject* const* tuple_items(PyObject* args) noexcept
         {
             return PyTuple_GET_SIZE(args) == 0 ? nullptr : &PyTuple_GET_ITEM(args, 0);
-        }
-
-        /**
-         * The class @p type is, which for a Python class derived from a
-         * composable one is the class it derives from.
-         *
-         * A derived class has a table entry of its own for nothing: what it
-         * activates, and every member it inherits, is the WinRT class's.
-         */
-        type_entry* class_entry_of(PyTypeObject* type) noexcept
-        {
-            for (auto* base = type; base; base = base->tp_base)
-            {
-                if (auto* const entry = find_type_entry(base))
-                {
-                    return entry;
-                }
-            }
-
-            return nullptr;
         }
 
         int class_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
@@ -363,7 +378,7 @@ namespace py::interp
 
         PyObject* class_new(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
         {
-            auto const info = class_entry_of(type);
+            auto const info = class_of(type);
 
             // A Python class with an __init__ of its own takes the arguments
             // that __init__ declares, as any Python class does, so it is
@@ -458,7 +473,7 @@ namespace py::interp
                 return -1;
             }
 
-            auto const info = class_entry_of(type);
+            auto const info = class_of(type);
             if (!info || !info->constructor)
             {
                 set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
@@ -680,13 +695,8 @@ namespace py::interp
     {
         auto* const type = Py_TYPE(self);
 
-        auto const info = class_entry_of(type);
+        auto const info = class_of(type);
         if (!info)
-        {
-            return true;
-        }
-
-        if (info->category != table::category::class_)
         {
             return true;
         }
@@ -1545,32 +1555,6 @@ namespace
     }
 
     /**
-     * The projected runtime class that @p obj is, or that @p obj is a Python
-     * subclass of, when that class is composable, or @c nullptr.
-     */
-    py::interp::type_entry* runtime_class_of(PyObject* obj) noexcept
-    {
-        if (!PyType_Check(obj))
-        {
-            return nullptr;
-        }
-
-        auto const info
-            = py::interp::class_entry_of(reinterpret_cast<PyTypeObject*>(obj));
-        if (!info)
-        {
-            return nullptr;
-        }
-
-        if (info->category != py::table::category::class_)
-        {
-            return nullptr;
-        }
-
-        return info;
-    }
-
-    /**
      * Checks whether @p obj is a wrapped WinRT object, including an instance
      * of a Python subclass of a composable class.
      *
@@ -1769,7 +1753,11 @@ namespace py::cpp::_winrt
 
         // A class stands for its default interface, which no factory
         // implements, and so does a Python subclass of a composable one.
-        if (auto const iid_class = runtime_class_of(iid_obj))
+        auto const iid_class
+            = PyType_Check(iid_obj)
+                  ? py::interp::class_of(reinterpret_cast<PyTypeObject*>(iid_obj))
+                  : nullptr;
+        if (iid_class)
         {
             auto const iid_type = reinterpret_cast<PyTypeObject*>(iid_obj);
             if (iid_type == iid_class->py_type.get())

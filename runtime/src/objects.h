@@ -73,6 +73,8 @@ namespace py::interp
         return abi;
     }
 
+    type_entry* class_of(PyTypeObject* type) noexcept;
+
     bool compose_after_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
 
     /**
