@@ -754,6 +754,36 @@ class TestComposable(unittest.TestCase):
         c.__init__(6)  # type: ignore[misc]
         self.assertEqual(c.value, 5)
 
+    def test_a_derived_class_without_init_takes_what_a_constructor_takes(
+        self,
+    ) -> None:
+        # Its call goes to the constructor, as a call to the WinRT class does,
+        # and so does a call to a class derived from it in turn. Keyword
+        # arguments are refused before an instance is made, so there is none
+        # to finalize.
+        finalized: list[str] = []
+
+        class C(tc.Composable):
+            def __del__(self) -> None:
+                finalized.append(type(self).__name__)
+
+        class D(C):
+            pass
+
+        for cls in (C, D):
+            with self.subTest(cls=cls.__name__):
+                finalized.clear()
+
+                with self.assertRaisesRegex(
+                    TypeError, "^keyword arguments are not supported$"
+                ):
+                    cls(init=5)  # type: ignore[call-overload]
+
+                self.assertEqual(finalized, [])
+
+                with self.assertRaisesRegex(TypeError, "^invalid parameter count$"):
+                    cls(5, 6)  # type: ignore[call-overload]
+
     def test_a_derived_class_with_init_ignores_the_arguments_of_new(self) -> None:
         # The constructor takes what __init__ passes on, as object.__new__()
         # ignores the arguments of a class that has an __init__. Overriding
