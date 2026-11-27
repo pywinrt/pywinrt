@@ -5,7 +5,6 @@
 #include <WebView2Interop.h>
 
 #include <atomic>
-#include <new>
 #include <utility>
 
 // The WebView2 headers are made by MIDL, whose MIDL_INTERFACE names the IID
@@ -111,8 +110,6 @@ namespace
         }
 
       private:
-        ~drop_target() = default;
-
         /// OLE gives the point in screen coordinates.
         POINT to_client(POINTL point) const noexcept
         {
@@ -184,20 +181,21 @@ namespace
             return nullptr;
         }
 
+        // Until it is registered, the drop target is a plain COM object that
+        // needs no OLE.
+        auto const target
+            = interop::make_com_ptr<drop_target>(std::move(controller), hwnd);
+        if (!target)
+        {
+            return PyErr_NoMemory();
+        }
+
         // RegisterDragDrop needs OLE, not only COM, and revoke_drop_target()
         // balances this.
         auto hr = OleInitialize(nullptr);
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
-        }
-
-        interop::com_ptr<drop_target> const target{
-            new (std::nothrow) drop_target{std::move(controller), hwnd}};
-        if (!target)
-        {
-            OleUninitialize();
-            return PyErr_NoMemory();
         }
 
         // On success, OLE holds a reference of its own until the window's

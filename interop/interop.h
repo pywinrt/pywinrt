@@ -21,6 +21,9 @@
 #include <oleauto.h>
 
 #include <cstddef>
+#include <memory>
+#include <new>
+#include <type_traits>
 #include <utility>
 
 // The version of the Python C API a module is compiled against: the stable
@@ -63,8 +66,8 @@ namespace interop
         PyThreadState* state;
     };
 
-    /// Owns a reference to the COM interface @p I, or nothing, and releases it
-    /// when it goes out of scope.
+    /// Owns a reference to @p I, a COM interface or a class that implements
+    /// one, or nothing, and releases it when it goes out of scope.
     template<typename I>
     class com_ptr
     {
@@ -143,6 +146,26 @@ namespace interop
 
         I* abi{};
     };
+
+    /// Makes a @p T, a COM class that starts with one reference, from
+    /// @p args, and hands that reference to the com_ptr it returns. The
+    /// constructor it calls must not throw.
+    /// @returns an empty com_ptr when there is no memory for it.
+    template<typename T, typename... Args>
+    com_ptr<T> make_com_ptr(Args&&... args) noexcept
+    {
+        static_assert(std::is_nothrow_constructible_v<T, Args&&...>);
+
+        try
+        {
+            return com_ptr<T>{
+                std::make_unique<T>(std::forward<Args>(args)...).release()};
+        }
+        catch (std::bad_alloc const&)
+        {
+            return {};
+        }
+    }
 
     /// The destructor of an interface pointer capsule this module made, which
     /// may hold the last reference to the object.
