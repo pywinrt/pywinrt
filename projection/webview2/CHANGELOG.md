@@ -11,6 +11,12 @@ What changed in `winrt-runtime`, which every package runs on, is in [its own
 changelog](../../runtime/CHANGELOG.md). The releases before v4.0 are in the
 [changelog at the root of the repository](../../CHANGELOG.md).
 
+## [Unreleased]
+
+### Fixed
+- `DropTarget.close()` no longer revokes a drop target that it did not register.
+- `register_drop_target()` and `DropTarget.close()` release the GIL around OLE.
+
 ## [4!1.0.4370.26] - 2026-11-23
 
 ### Changed

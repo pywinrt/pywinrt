@@ -154,6 +154,128 @@ namespace
         return true;
     }
 
+    /// The window property that marks a window whose drop target this module
+    /// registered, and so whose OLE initialization it owns. It goes away with
+    /// the window, so a window that reuses the handle does not have it.
+    constexpr wchar_t registered_property[]
+        = L"winrt.microsoft.web.webview2.interop.drop_target";
+
+    /// Owns one initialization of OLE on the calling thread, or none, and
+    /// ends it when it goes out of scope. It is destroyed on the thread that
+    /// made it, with the GIL held. OLE is initialized and uninitialized with
+    /// the GIL released: the thread's first initialization sets OLE up, and
+    /// its last one can flush the OLE clipboard, which waits for other
+    /// processes.
+    class ole_initialization
+    {
+      public:
+        ole_initialization(ole_initialization const&) = delete;
+        ole_initialization& operator=(ole_initialization const&) = delete;
+
+        ~ole_initialization() noexcept
+        {
+            if (owned)
+            {
+                interop::gil_released const guard;
+                OleUninitialize();
+            }
+        }
+
+        /// Initializes OLE on the calling thread.
+        /// @returns one that owns nothing when that fails, with the error in
+        /// @p hr.
+        static ole_initialization initialize(HRESULT& hr) noexcept
+        {
+            {
+                interop::gil_released const guard;
+                hr = OleInitialize(nullptr);
+            }
+
+            return ole_initialization{SUCCEEDED(hr)};
+        }
+
+        /// Removes the mark of @p hwnd and takes the initialization that it
+        /// held.
+        /// @returns one that owns nothing when @p hwnd has no mark.
+        static ole_initialization take(HWND hwnd) noexcept
+        {
+            return ole_initialization{
+                RemovePropW(hwnd, registered_property) != nullptr};
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return owned;
+        }
+
+        /// Gives up the initialization, which something else then owns.
+        void detach() noexcept
+        {
+            owned = false;
+        }
+
+      private:
+        explicit ole_initialization(bool owned) noexcept : owned{owned}
+        {
+        }
+
+        bool owned;
+    };
+
+    /// Owns the registration of a window's drop target, or none, and revokes
+    /// it when it goes out of scope. It is destroyed on the thread that owns
+    /// the window, with the GIL held, which it releases around OLE.
+    class drag_drop_registration
+    {
+      public:
+        drag_drop_registration(drag_drop_registration const&) = delete;
+        drag_drop_registration& operator=(drag_drop_registration const&) = delete;
+
+        ~drag_drop_registration() noexcept
+        {
+            if (hwnd)
+            {
+                // OLE's reference may be the last one to the drop target,
+                // which holds the controller.
+                interop::gil_released const guard;
+                RevokeDragDrop(hwnd);
+            }
+        }
+
+        /// Registers @p target as the drop target of @p hwnd. OLE holds a
+        /// reference of its own to it until it is revoked.
+        /// @returns one that owns nothing when that fails, with the error in
+        /// @p hr.
+        static drag_drop_registration make(
+            HWND hwnd, IDropTarget* target, HRESULT& hr) noexcept
+        {
+            {
+                interop::gil_released const guard;
+                hr = RegisterDragDrop(hwnd, target);
+            }
+
+            return drag_drop_registration{SUCCEEDED(hr) ? hwnd : nullptr};
+        }
+
+        explicit operator bool() const noexcept
+        {
+            return hwnd != nullptr;
+        }
+
+        /// Gives up the registration, which something else then owns.
+        void detach() noexcept
+        {
+            hwnd = nullptr;
+        }
+
+      private:
+        explicit drag_drop_registration(HWND hwnd) noexcept : hwnd{hwnd}
+        {
+        }
+
+        HWND hwnd;
+    };
+
     PyObject* register_drop_target(PyObject* /*unused*/, PyObject* args) noexcept
     {
         PyObject* controller_capsule;
@@ -190,23 +312,31 @@ namespace
             return PyErr_NoMemory();
         }
 
-        // RegisterDragDrop needs OLE, not only COM, and revoke_drop_target()
-        // balances this.
-        auto hr = OleInitialize(nullptr);
-        if (FAILED(hr))
+        // RegisterDragDrop needs OLE, not only COM.
+        HRESULT hr;
+        auto ole = ole_initialization::initialize(hr);
+        if (!ole)
         {
             return interop::set_hresult_error(hr);
         }
 
-        // On success, OLE holds a reference of its own until the window's
-        // drop target is revoked.
-        hr = RegisterDragDrop(hwnd, target.get());
-        if (FAILED(hr))
+        auto registration = drag_drop_registration::make(hwnd, target.get(), hr);
+        if (!registration)
         {
-            auto const error = interop::set_hresult_error(hr);
-            OleUninitialize();
-            return error;
+            return interop::set_hresult_error(hr);
         }
+
+        // Any handle but null marks the window, and its own is one.
+        if (!SetPropW(hwnd, registered_property, hwnd))
+        {
+            return interop::set_hresult_error(
+                HRESULT_FROM_WIN32(GetLastError()), nullptr);
+        }
+
+        // The window keeps its registration, and the mark keeps the OLE
+        // initialization until revoke_drop_target() takes it.
+        registration.detach();
+        ole.detach();
 
         Py_RETURN_NONE;
     }
@@ -224,6 +354,13 @@ namespace
             return nullptr;
         }
 
+        // A drop target this module did not register, and the OLE
+        // initialization that goes with it, belong to someone else.
+        if (!GetPropW(hwnd, registered_property))
+        {
+            return interop::set_hresult_error(DRAGDROP_E_NOTREGISTERED, nullptr);
+        }
+
         HRESULT hr;
         {
             // OLE's reference may be the last one to the drop target, which
@@ -232,12 +369,23 @@ namespace
             hr = RevokeDragDrop(hwnd);
         }
 
+        if (hr == DRAGDROP_E_NOTREGISTERED)
+        {
+            // Other code revoked the drop target, so nothing of this module
+            // uses the OLE initialization any more. It ends once the error is
+            // raised.
+            auto const error = interop::set_hresult_error(hr);
+            auto const ole = ole_initialization::take(hwnd);
+            return error;
+        }
+
         if (FAILED(hr))
         {
             return interop::set_hresult_error(hr);
         }
 
-        OleUninitialize();
+        // The OLE initialization ends when this returns.
+        auto const ole = ole_initialization::take(hwnd);
 
         Py_RETURN_NONE;
     }

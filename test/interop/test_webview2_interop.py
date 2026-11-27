@@ -1,3 +1,4 @@
+import concurrent.futures
 import contextlib
 import ctypes
 import threading
@@ -33,17 +34,42 @@ _DestroyWindow = _user32.DestroyWindow
 _DestroyWindow.restype = wintypes.BOOL
 _DestroyWindow.argtypes = [wintypes.HWND]
 
+_SetPropW = _user32.SetPropW
+_SetPropW.restype = wintypes.BOOL
+_SetPropW.argtypes = [wintypes.HWND, wintypes.LPCWSTR, wintypes.HANDLE]
+
+_GetPropW = _user32.GetPropW
+_GetPropW.restype = wintypes.HANDLE
+_GetPropW.argtypes = [wintypes.HWND, wintypes.LPCWSTR]
+
+# the window property that marks a window whose drop target the module
+# registered
+_REGISTERED_PROPERTY = "winrt.microsoft.web.webview2.interop.drop_target"
+
+# OleDLL raises OSError for a failed HRESULT
+_ole32 = ctypes.OleDLL("ole32")
+
+_OleInitialize = _ole32.OleInitialize
+_OleInitialize.argtypes = [wintypes.LPVOID]
+
+_OleUninitialize = _ole32.OleUninitialize
+_OleUninitialize.restype = None
+_OleUninitialize.argtypes = []
+
+_RevokeDragDrop = _ole32.RevokeDragDrop
+_RevokeDragDrop.argtypes = [wintypes.HWND]
+
 # the signed HRESULTs that OSError.winerror holds
 E_NOINTERFACE = -2147467262
 # https://learn.microsoft.com/en-us/windows/win32/com/com-error-codes-1
 DRAGDROP_E_NOTREGISTERED = -2147221248
 
 
-def _new_window() -> int:
+def _new_window(class_name: str = "Button") -> int:
     """
     A window of the calling thread that is never shown.
     """
-    hwnd = _CreateWindowExW(0, "Button", None, 0, 0, 0, 0, 0, None, None, None, None)
+    hwnd = _CreateWindowExW(0, class_name, None, 0, 0, 0, 0, 0, None, None, None, None)
     if not hwnd:
         raise ctypes.WinError(ctypes.get_last_error())
 
@@ -133,6 +159,55 @@ class TestWebView2Interop(unittest.TestCase):
             native.revoke_drop_target(hwnd)
 
         self.assertEqual(error.exception.winerror, DRAGDROP_E_NOTREGISTERED)
+
+    def test_revoke_drop_target_of_another_registration(self) -> None:
+        # a rich edit control registers a drop target of its own
+        ctypes.WinDLL("msftedit")
+
+        def run() -> None:
+            # a thread of its own, since OLE needs a single-threaded apartment
+            with contextlib.ExitStack() as stack:
+                _OleInitialize(None)
+                stack.callback(_OleUninitialize)
+
+                hwnd = _new_window("RICHEDIT50W")
+                stack.callback(_DestroyWindow, hwnd)
+
+                with self.assertRaises(OSError) as error:
+                    native.revoke_drop_target(hwnd)
+
+                self.assertEqual(error.exception.winerror, DRAGDROP_E_NOTREGISTERED)
+
+                # raises if the rich edit control's drop target is gone
+                _RevokeDragDrop(hwnd)
+
+        with concurrent.futures.ThreadPoolExecutor(1) as executor:
+            executor.submit(run).result()
+
+    def test_revoke_drop_target_revoked_by_other_code(self) -> None:
+        def run() -> None:
+            # a thread of its own, since OLE needs a single-threaded apartment
+            with contextlib.ExitStack() as stack:
+                _OleInitialize(None)
+                stack.callback(_OleUninitialize)
+
+                hwnd = _new_window()
+                stack.callback(_DestroyWindow, hwnd)
+
+                # what the module leaves when other code revokes its drop
+                # target: the mark, and the OLE initialization it holds
+                _OleInitialize(None)
+                if not _SetPropW(hwnd, _REGISTERED_PROPERTY, hwnd):
+                    raise ctypes.WinError(ctypes.get_last_error())
+
+                with self.assertRaises(OSError) as error:
+                    native.revoke_drop_target(hwnd)
+
+                self.assertEqual(error.exception.winerror, DRAGDROP_E_NOTREGISTERED)
+                self.assertIsNone(_GetPropW(hwnd, _REGISTERED_PROPERTY))
+
+        with concurrent.futures.ThreadPoolExecutor(1) as executor:
+            executor.submit(run).result()
 
     def test_revoke_drop_target_window_of_another_thread(self) -> None:
         with (

@@ -62,8 +62,12 @@ Revokes the registration, as `RevokeDragDrop()` does. It is called on the
 thread that owns the window, before the window is destroyed. Calling it again
 does nothing. A `DropTarget` is also a context manager that closes it.
 
-**Raises:** [`ValueError`][ValueError] if the window is not a window of the
-calling thread, which includes a window that was already destroyed.
+**Raises:**
+
+- [`ValueError`][ValueError] if the window is not a window of the calling
+  thread, which includes a window that was already destroyed.
+- [`OSError`][OSError] if `register_drop_target()` did not register the
+  window, or revoking the window's drop target fails.
 
 [OSError]: https://docs.python.org/3/library/exceptions.html#OSError
 [ValueError]: https://docs.python.org/3/library/exceptions.html#ValueError
