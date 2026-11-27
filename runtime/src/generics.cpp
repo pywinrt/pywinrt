@@ -59,27 +59,51 @@ namespace py::interp
             return found == s->generic_types.end() ? nullptr : found->second;
         }
 
-        bool remember_instance_type(
-            std::string_view signature, PyTypeObject* type) noexcept
+        /**
+         * Records @p type as the Python type of the instance @p signature
+         * names, and @p entry as what it was built from, unless a type was
+         * recorded for the instance first. Either both are recorded or
+         * neither is.
+         *
+         * @returns The type recorded for the instance, which is @p type or the
+         * one recorded first, or @c nullptr with a Python error set.
+         */
+        PyTypeObject* remember_instance_type(
+            type_entry& entry, std::string_view signature, PyTypeObject* type) noexcept
         {
             auto const s = py::cpp::_winrt::get_module_state();
             if (!s)
             {
-                return false;
+                return nullptr;
             }
 
             try
             {
                 py::cpp::_winrt::state_guard guard{s->cache_lock};
-                s->generic_types[signature] = type;
+                auto const [it, added] = s->generic_types.try_emplace(signature, type);
+
+                if (!added)
+                {
+                    return it->second;
+                }
+
+                try
+                {
+                    s->type_entries[type] = &entry;
+                }
+                catch (...)
+                {
+                    s->generic_types.erase(it);
+                    throw;
+                }
             }
             catch (...)
             {
                 to_PyErr();
-                return false;
+                return nullptr;
             }
 
-            return true;
+            return type;
         }
 
         /**
@@ -140,7 +164,7 @@ namespace py::interp
      * Builds the Python type of one generic instance, or finds the one that
      * another package's table has already built.
      */
-    bool ensure_instance_type(
+    static bool build_instance_type(
         projection& proj, type_entry& entry, table::type_view const& record)
     {
         auto const base = record.base_type();
@@ -231,31 +255,57 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = type.detach();
-
-        if (!remember(entry, entry.py_type))
+        // Nothing finds the type until it has every method, so a build that
+        // fails part of the way leaves nothing for the next one to find.
+        if (!bind_methods(collected, type.get(), nullptr))
         {
             return false;
         }
 
-        if (!remember_instance_type(record.signature(), entry.py_type))
+        if (!bind_protocol_methods(record, type.get()))
         {
             return false;
         }
 
-        if (!bind_methods(collected, entry.py_type, nullptr))
+        // A finalizer that ran since the members were collected can have come
+        // back here and built the instance itself.
+        if (entry.ready)
+        {
+            return true;
+        }
+
+        auto const remembered
+            = remember_instance_type(entry, record.signature(), type.get());
+        if (!remembered)
         {
             return false;
         }
 
-        if (!bind_protocol_methods(record, entry.py_type))
-        {
-            return false;
-        }
+        entry.py_type = remembered == type.get()
+                            ? type.detach()
+                            : reinterpret_cast<PyTypeObject*>(Py_NewRef(remembered));
 
         publish(entry.ready, true);
 
         return true;
+    }
+
+    /**
+     * build_instance_type() for the call path, which cannot let a C++
+     * exception through.
+     */
+    bool ensure_instance_type(
+        projection& proj, type_entry& entry, table::type_view const& record) noexcept
+    {
+        try
+        {
+            return build_instance_type(proj, entry, record);
+        }
+        catch (...)
+        {
+            to_PyErr();
+            return false;
+        }
     }
 
     /**

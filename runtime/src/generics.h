@@ -24,7 +24,7 @@
 namespace py::interp
 {
     bool ensure_instance_type(
-        projection& proj, type_entry& entry, table::type_view const& record);
+        projection& proj, type_entry& entry, table::type_view const& record) noexcept;
 
     PyObject* reference_to_python(type_entry& info, void* abi) noexcept;
 
