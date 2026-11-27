@@ -82,7 +82,7 @@ namespace py
         buffer_format<T, std::enable_if_t<is_interface_category_v<T>>> = "P";
 
     template<typename T>
-    constexpr const char*
+    inline constexpr const char*
         buffer_format<T, std::enable_if_t<is_pinterface_category_v<T>>> = "P";
 
     template<>
