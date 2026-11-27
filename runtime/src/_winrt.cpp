@@ -938,6 +938,15 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
+        // The module's dealloc calls free and never clear, so a module whose
+        // last reference goes is freed uncleared. That can happen inside a
+        // collection too: clearing a type the state holds lets go of the
+        // type's reference to the module. Clearing is what lets go of the
+        // types the projections built, ahead of the descriptors bound to them,
+        // which go with the state. A module that was cleared already has
+        // nothing left to let go of.
+        module_clear(module);
+
         auto expected = state;
         main_state.compare_exchange_strong(
             expected, nullptr, std::memory_order_acq_rel);
