@@ -1640,32 +1640,29 @@ namespace
 
         return 1;
     }
+
+    /**
+     * Wraps @p value as the type that @p qualified_name is bound to, for
+     * wrap_interface() when it is given a name.
+     */
+    PyObject* wrap_object(
+        winrt::Windows::Foundation::IInspectable const& value,
+        char const* qualified_name) noexcept
+    {
+        if (!value)
+        {
+            Py_RETURN_NONE;
+        }
+
+        auto const type = py::get_python_type(qualified_name);
+        if (!type)
+        {
+            return nullptr;
+        }
+
+        return wrap_as_type(value, type, qualified_name);
+    }
 } // namespace
-
-/**
- * Wraps @p value as the type that @p qualified_name is bound to.
- *
- * This is what wrap_interface() calls once it has the name. The caller names
- * the type and the runtime, which built that type from a table, does the
- * rest.
- */
-PyObject* py::wrap_object(
-    winrt::Windows::Foundation::IInspectable const& value,
-    char const* qualified_name) noexcept
-{
-    if (!value)
-    {
-        Py_RETURN_NONE;
-    }
-
-    auto const type = get_python_type(qualified_name);
-    if (!type)
-    {
-        return nullptr;
-    }
-
-    return wrap_as_type(value, type, qualified_name);
-}
 
 /**
  * The @p iid interface of the WinRT object @p obj wraps.

@@ -122,13 +122,5 @@ namespace py::cpp::_winrt
 
 namespace py
 {
-    // ----- values named by their Python type -------------------------------
-    //
-    // A type is named by the qualified Python name it is bound to, which is
-    // one way winrt.runtime.interop.wrap_interface() is told what to wrap.
-
-    PyObject* wrap_object(
-        winrt::Windows::Foundation::IInspectable const& value,
-        char const* qualified_name) noexcept;
     bool unwrap_object(PyObject* obj, winrt::guid const& iid, void** result) noexcept;
 } // namespace py
