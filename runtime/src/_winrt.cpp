@@ -918,9 +918,11 @@ namespace py::cpp::_winrt
             std::exchange(state->wrap_async_func, nullptr)};
 
         // Nothing here takes the cache lock, and traverse and free do not
-        // either. The collector calls them with the world stopped on a
-        // free-threaded build, so a thread paused holding the lock would never
-        // let go of it.
+        // either. The free-threaded collector calls traverse with the world
+        // stopped, so a thread paused holding the lock would never let go of
+        // it. It calls clear with the world started again, and a module's
+        // dealloc calls free the same way, so a thread that is still in the
+        // runtime then can read what this lets go of.
         //
         // The types a projection built hold descriptors that point back at it,
         // so letting go of them is what breaks the cycle. The descriptors
