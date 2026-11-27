@@ -353,24 +353,122 @@ namespace py::interp
         int class_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
 
         /**
+         * Which call to a constructor a call is, which the errors for one
+         * that no constructor takes say.
+         */
+        enum class constructor_call
+        {
+            // The call to the class, or the one a derived class's __init__()
+            // makes to super().__init__(), whose arguments are for the
+            // constructor.
+            direct,
+
+            // The call to a derived class, once its __init__() has returned
+            // without calling super().__init__(), whose arguments are
+            // __init__()'s.
+            after_init,
+        };
+
+        /**
+         * Refuses a call to @p type, which is or derives from the class
+         * @p info, that no constructor of it takes: one with keyword
+         * arguments, or any call to a class without a constructor. @p call
+         * says which call it is.
+         *
+         * @p info can be @c nullptr only with constructor_call::direct, and
+         * is refused then as a class that cannot be created.
+         *
+         * @returns @c true, or @c false with a Python error set.
+         */
+        bool check_call(
+            PyTypeObject* type,
+            type_entry const* info,
+            PyObject* kwds,
+            constructor_call call) noexcept
+        {
+            WINRT_ASSERT(info || call == constructor_call::direct);
+
+            if (kwds && PyDict_GET_SIZE(kwds) != 0)
+            {
+                if (call == constructor_call::direct)
+                {
+                    set_invalid_kwd_args_error();
+                    return false;
+                }
+
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "%s.__init__() did not call super().__init__(), and a call "
+                    "with keyword arguments fits no constructor of '%s'",
+                    type->tp_name,
+                    info->winrt_name);
+                return false;
+            }
+
+            if (!info)
+            {
+                set_invalid_activation_error(type->tp_name);
+                return false;
+            }
+
+            if (!info->constructor)
+            {
+                set_invalid_activation_error(info->winrt_name);
+                return false;
+            }
+
+            return true;
+        }
+
+        /**
          * Composes @p self, an instance of a Python class derived from the
          * composable class @p info that holds nothing yet, with the
-         * constructor overload that takes @p args.
+         * constructor overload that a call with @p args and @p kwds takes.
+         * class_new(), class_init() and compose_after_init() each compose an
+         * object with this, and @p call says which call it is.
+         *
+         * @p info can be @c nullptr only with constructor_call::direct, and
+         * is refused then as a class that cannot be created.
+         *
+         * @returns @c true, or @c false with a Python error set.
          */
-        bool compose_with(PyObject* self, type_entry& info, PyObject* args) noexcept
+        bool compose_from_call(
+            PyObject* self,
+            type_entry* info,
+            PyObject* args,
+            PyObject* kwds,
+            constructor_call call) noexcept
         {
+            if (!check_call(Py_TYPE(self), info, kwds, call))
+            {
+                return false;
+            }
+
             auto const overload
-                = select_overload(*info.constructor, PyTuple_GET_SIZE(args));
+                = select_overload(*info->constructor, PyTuple_GET_SIZE(args));
 
             if (!overload)
             {
+                if (call == constructor_call::direct)
+                {
+                    return false;
+                }
+
+                PyErr_Clear();
+                PyErr_Format(
+                    PyExc_TypeError,
+                    "%s.__init__() did not call super().__init__(), and a call "
+                    "with %zd arguments fits no constructor of '%s'",
+                    Py_TYPE(self)->tp_name,
+                    PyTuple_GET_SIZE(args),
+                    info->winrt_name);
                 return false;
             }
 
             return compose_into(
                 self,
-                info,
-                *info.constructor,
+                *info,
+                *info->constructor,
                 *overload,
                 tuple_items(args),
                 PyTuple_GET_SIZE(args));
@@ -391,15 +489,10 @@ namespace py::interp
                 return type->tp_alloc(type, 0);
             }
 
-            if (kwds && PyDict_GET_SIZE(kwds) != 0)
+            // Checked before an instance of a derived class is allocated, and
+            // checked again by compose_from_call(), which composes it.
+            if (!check_call(type, info, kwds, constructor_call::direct))
             {
-                set_invalid_kwd_args_error();
-                return nullptr;
-            }
-
-            if (!info || !info->constructor)
-            {
-                set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
                 return nullptr;
             }
 
@@ -411,7 +504,8 @@ namespace py::interp
                     return nullptr;
                 }
 
-                if (!compose_with(self.get(), *info, args))
+                if (!compose_from_call(
+                        self.get(), info, args, kwds, constructor_call::direct))
                 {
                     return nullptr;
                 }
@@ -467,20 +561,11 @@ namespace py::interp
                 return -1;
             }
 
-            if (kwds && PyDict_GET_SIZE(kwds) != 0)
-            {
-                set_invalid_kwd_args_error();
-                return -1;
-            }
-
             auto const info = class_of(type);
-            if (!info || !info->constructor)
-            {
-                set_invalid_activation_error(info ? info->winrt_name : type->tp_name);
-                return -1;
-            }
 
-            return compose_with(self, *info, args) ? 0 : -1;
+            return compose_from_call(self, info, args, kwds, constructor_call::direct)
+                       ? 0
+                       : -1;
         }
 
         /**
@@ -711,46 +796,7 @@ namespace py::interp
             return true;
         }
 
-        if (kwds && PyDict_GET_SIZE(kwds) != 0)
-        {
-            PyErr_Format(
-                PyExc_TypeError,
-                "%s.__init__() did not call super().__init__(), and a call with "
-                "keyword arguments fits no constructor of '%s'",
-                type->tp_name,
-                info->winrt_name);
-            return false;
-        }
-
-        if (!info->constructor)
-        {
-            set_invalid_activation_error(info->winrt_name);
-            return false;
-        }
-
-        auto const overload
-            = select_overload(*info->constructor, PyTuple_GET_SIZE(args));
-
-        if (!overload)
-        {
-            PyErr_Clear();
-            PyErr_Format(
-                PyExc_TypeError,
-                "%s.__init__() did not call super().__init__(), and a call with "
-                "%zd arguments fits no constructor of '%s'",
-                type->tp_name,
-                PyTuple_GET_SIZE(args),
-                info->winrt_name);
-            return false;
-        }
-
-        return compose_into(
-            self,
-            *info,
-            *info->constructor,
-            *overload,
-            tuple_items(args),
-            PyTuple_GET_SIZE(args));
+        return compose_from_call(self, info, args, kwds, constructor_call::after_init);
     }
 
     /**
