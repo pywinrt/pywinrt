@@ -276,8 +276,6 @@ namespace py::interp
         reverse->slots[shape->slot]
             = {&entry.members[0], &entry.members[0].overloads[0], python_op::invoke};
 
-        entry.reverse = std::move(reverse);
-
         // A delegate that comes the other way - out of a member, or into a
         // Python implementation of one that takes it - is a callable that
         // invokes the delegate behind it. Nothing binds the type: the module
@@ -311,9 +309,26 @@ namespace py::interp
             return false;
         }
 
+        // A finalizer that ran since the members were collected can have come
+        // back and built the delegate itself, and a WinRT caller may already
+        // hold that vtable.
+        if (entry.reverse)
+        {
+            return true;
+        }
+
+        if (!remember(entry, type.get()))
+        {
+            return false;
+        }
+
+        // Kept only now that nothing else can fail, because ensure_entry()
+        // takes an entry with a vtable to be built, and a build that failed
+        // part of the way would otherwise leave one with no type behind.
+        entry.reverse = std::move(reverse);
         entry.py_type = type.detach();
 
-        return remember(entry, entry.py_type);
+        return true;
     }
 
     /**
