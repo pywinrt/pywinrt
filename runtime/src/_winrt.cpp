@@ -13,6 +13,7 @@
 #include "errors.h"
 #include "handles.h"
 #include "implements.h"
+#include "interop.h"
 #include "interp.h"
 #include "members.h"
 #include "objects.h"
