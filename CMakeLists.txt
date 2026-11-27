@@ -35,9 +35,9 @@ set(PYWINRT_TOOLS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/_tools")
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 link_libraries("RuntimeObject.lib")
 
-# /GR- (-fno-rtti): nothing in the projection uses dynamic_cast or typeid, but
-# the RTTI data MSVC emits anyway is about 15% of the size of a module, most of
-# it type descriptors in writable .data.
+# /GR- (-fno-rtti): nothing built here uses dynamic_cast or typeid, but MSVC
+# emits RTTI data anyway, most of it type descriptors in writable .data, which
+# only makes a module larger.
 if (MSVC)
     add_compile_options(/bigobj /permissive- /W4 /WX /Gy /GR-)
 else()

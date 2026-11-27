@@ -1,12 +1,11 @@
 # interop modules
 ################################################################################
 #
-# The desktop interop APIs are the only compiled part of the projection that is
-# left: each of them calls a plain COM interface or a flat C function that is
-# not in any winmd, so there is nothing for a table to describe. They are
-# hand-written and they name the WinRT types they hand over rather than sharing
-# generated code with the packages that project them. They reach the runtime
-# only through Python objects, so they are compiled without its headers.
+# The desktop interop APIs are compiled modules rather than tables: each of them
+# calls a plain COM interface or a flat C function that is not in any winmd, so
+# there is nothing for a table to describe. They are hand-written and name the
+# WinRT types they hand over. They reach the runtime only through Python
+# objects, so they are compiled without its headers.
 #
 # They are compiled against the stable ABI of Python 3.11 wherever their wheels
 # are, which is with MSVC for a Python that is not free-threaded (STABLE_ABI in
