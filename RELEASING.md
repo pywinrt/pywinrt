@@ -27,6 +27,10 @@ since the commit was pushed with the workflow's token. Before merging:
 - A change outside `projection/`, which the comment lists, is a change to a
   package that is released on its own, such as the C++/WinRT headers that
   `winrt-runtime` compiles.
+- A package of a family whose pin did not move, which the comment lists too,
+  has had its floors on the moved family raised. It now differs from its
+  family's newest release tag, so the next run of `fix-versions.py` (see
+  Releasing below) gives it a fix release.
 
 With the branch on top of `main`, merge by fast-forwarding `main` to the pull
 request's head commit, which keeps the pin and the regeneration as two commits

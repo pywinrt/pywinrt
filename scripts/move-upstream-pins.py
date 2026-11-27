@@ -25,6 +25,7 @@ import subprocess
 import sys
 import urllib.error
 import urllib.request
+from collections.abc import Collection
 from pathlib import Path
 
 # where the App SDK says which components belong to a release
@@ -279,23 +280,56 @@ def family_report(
     return lines
 
 
-def changes_report() -> list[str]:
+def touched_packages(
+    paths: list[str], moved: Collection[str]
+) -> tuple[list[str], list[str]]:
     """
-    How big the change is and what it touches outside projection/, as
-    Markdown lines.
+    The packages that @p paths fall in beyond the projection of the families
+    in @p moved: those outside projection/, and those of the families whose
+    pin did not move, such as one whose floors on a moved family were raised.
+
+    The pins are left out, since every move changes them, and so is
+    nullability/, since nothing in it is published and what it changes
+    reaches a package only through that family's projection. A family that
+    is never published is left out too, as is a file under projection/ that
+    is in no package, and a package whose deps.json alone changed: that is
+    what generate-pyproject.py writes the packaging from, and it is in
+    neither the sdist nor the wheel.
+    """
+    outside: set[str] = set()
+    other_families: set[str] = set()
+
+    for path in paths:
+        parts = path.split("/")
+
+        if parts[0] in (".config", "nullability"):
+            continue
+
+        if parts[0] != "projection":
+            # a directory or two deep is enough to say which package it is
+            outside.add("/".join(parts[:2]))
+            continue
+
+        if len(parts) <= 3 or parts[3] == "deps.json":
+            continue
+
+        if parts[1] in moved or parts[1] in families.UNPUBLISHED_FAMILIES:
+            continue
+
+        other_families.add("/".join(parts[:3]))
+
+    return sorted(outside), sorted(other_families)
+
+
+def changes_report(moved: Collection[str]) -> list[str]:
+    """
+    How big the change is and what it touches beyond the projection of the
+    families in @p moved, as Markdown lines.
     """
     stat = repo.git("diff", "--shortstat", "HEAD").strip()
     changed = repo.git("diff", "--name-only", "HEAD").splitlines()
     untracked = repo.git("ls-files", "--others", "--exclude-standard").splitlines()
-
-    # a directory or two deep is enough to say which package it is
-    outside = sorted(
-        {
-            "/".join(path.split("/")[:2])
-            for path in changed + untracked
-            if not path.startswith(("projection/", ".config/", "nullability/"))
-        }
-    )
+    outside, other_families = touched_packages(changed + untracked, moved)
 
     lines = [
         "## The change",
@@ -306,6 +340,12 @@ def changes_report() -> list[str]:
     if outside:
         lines.append(
             "- Outside the projection: " + ", ".join(f"`{path}`" for path in outside)
+        )
+
+    if other_families:
+        lines.append(
+            "- In families whose pin did not move: "
+            + ", ".join(f"`{path}`" for path in other_families)
         )
 
     return lines
@@ -382,7 +422,7 @@ def main() -> None:
         )
         lines.append("")
 
-    report = "\n".join(lines + changes_report()) + "\n"
+    report = "\n".join(lines + changes_report(moved)) + "\n"
 
     if args.report:
         args.report.write_bytes(report.encode())

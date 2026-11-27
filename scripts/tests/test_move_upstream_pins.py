@@ -174,6 +174,63 @@ class FamilyReport(unittest.TestCase):
         self.assertTrue(any("pending publisher" in line for line in lines))
 
 
+class TouchedPackages(unittest.TestCase):
+    """
+    What the report names beyond the projection of the families that moved.
+    """
+
+    def test_a_raised_floor_in_another_family_is_named(self) -> None:
+        paths = [
+            ".config/_tools.json",
+            "nullability/windows-sdk.json",
+            "projection/winrt/CHANGELOG.md",
+            "projection/winrt/winrt-Windows.Foundation/pyproject.toml",
+            "projection/webview2/winrt-Microsoft.Web.WebView2/pyproject.toml",
+            "projection/wasdk/winrt-Microsoft.WindowsAppSDK.AI/pyproject.toml",
+            "projection/wasdk/winrt-Microsoft.WindowsAppSDK.AI/requirements.txt",
+            "interop/winrt-Microsoft.UI.Interop/pyproject.toml",
+            "runtime/src/shapes.json",
+        ]
+
+        self.assertEqual(
+            move_upstream_pins.touched_packages(paths, {"winrt"}),
+            (
+                ["interop/winrt-Microsoft.UI.Interop", "runtime/src"],
+                [
+                    "projection/wasdk/winrt-Microsoft.WindowsAppSDK.AI",
+                    "projection/webview2/winrt-Microsoft.Web.WebView2",
+                ],
+            ),
+        )
+
+    def test_the_projection_of_a_moved_family_is_not_named(self) -> None:
+        paths = [
+            "projection/winrt/winrt-Windows.Foundation/pyproject.toml",
+            "projection/webview2/winrt-Microsoft.Web.WebView2/pyproject.toml",
+        ]
+
+        self.assertEqual(
+            move_upstream_pins.touched_packages(paths, {"winrt", "webview2"}),
+            ([], []),
+        )
+
+    def test_what_nothing_published_carries_is_not_named(self) -> None:
+        paths = [
+            # a family that is never published
+            "projection/test-winrt/test-winrt-TestComponent/pyproject.toml",
+            # in no package
+            "projection/winui2/fixes.json",
+            "projection/CMakeLists.txt",
+            # in neither the sdist nor the wheel
+            "projection/winui2/winrt-Microsoft.UI.Xaml/deps.json",
+        ]
+
+        self.assertEqual(
+            move_upstream_pins.touched_packages(paths, {"winrt"}),
+            ([], []),
+        )
+
+
 class ChangelogWithUpdate(unittest.TestCase):
     """
     The line a moved pin adds to its family's changelog.
