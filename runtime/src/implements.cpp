@@ -392,7 +392,7 @@ namespace py::interp
         {
             auto* const entry = find_type_entry(type);
 
-            return entry && entry->implements == type ? entry : nullptr;
+            return entry && entry->implements.get() == type ? entry : nullptr;
         }
     } // namespace
 

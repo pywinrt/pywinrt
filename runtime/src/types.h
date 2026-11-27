@@ -9,6 +9,7 @@
 
 #include <Python.h>
 
+#include "handles.h"
 #include "interp.h"
 #include "table.h"
 
@@ -49,5 +50,5 @@ namespace py::interp
 
     PyMethodDef* keep_methods(projection& proj, std::vector<PyMethodDef>& defs);
 
-    void release_types(projection& proj) noexcept;
+    void take_types(projection& proj, std::vector<pytype_handle>& types) noexcept;
 } // namespace py::interp

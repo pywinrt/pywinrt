@@ -125,7 +125,7 @@ namespace py::interp::numerics
                 return std::nullopt;
             }
 
-            if (!Py_IS_TYPE(obj, entry->py_type))
+            if (!Py_IS_TYPE(obj, entry->py_type.get()))
             {
                 return std::nullopt;
             }
@@ -213,7 +213,7 @@ namespace py::interp::numerics
         bool read_operand(
             type_entry& entry, PyObject* obj, typename traits<K>::type& out) noexcept
         {
-            if (!Py_IS_TYPE(obj, entry.py_type))
+            if (!Py_IS_TYPE(obj, entry.py_type.get()))
             {
                 return false;
             }
@@ -349,7 +349,7 @@ namespace py::interp::numerics
             }
             else
             {
-                if (!Py_IS_TYPE(right, entry->py_type))
+                if (!Py_IS_TYPE(right, entry->py_type.get()))
                 {
                     Py_RETURN_NOTIMPLEMENTED;
                 }

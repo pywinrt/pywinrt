@@ -795,7 +795,7 @@ namespace py::interp::numerics
                     "an Array of %U is not a '%s': memoryview() of it reads its "
                     "floats as one",
                     name.get(),
-                    info.py_type ? info.py_type->tp_name : info.winrt_name);
+                    info.py_type ? info.py_type.get()->tp_name : info.winrt_name);
                 throw python_exception();
             }
         }
@@ -816,7 +816,7 @@ namespace py::interp::numerics
                 PyExc_TypeError,
                 "a buffer read as '%s' must hold floats or doubles of shape %s, "
                 "not '%s' of shape %s",
-                info.py_type ? info.py_type->tp_name : info.winrt_name,
+                info.py_type ? info.py_type.get()->tp_name : info.winrt_name,
                 shape_text(shape).c_str(),
                 view.format ? view.format : "B",
                 view_shape_text(view).c_str());

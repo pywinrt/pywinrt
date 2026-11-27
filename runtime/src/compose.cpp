@@ -764,7 +764,7 @@ namespace py::interp
                     continue;
                 }
 
-                if (PyType_IsSubtype(composed->py_type, base))
+                if (PyType_IsSubtype(composed->py_type.get(), base))
                 {
                     continue;
                 }
@@ -776,7 +776,7 @@ namespace py::interp
                         continue;
                     }
                 }
-                else if (PyType_IsSubtype(base, composed->py_type))
+                else if (PyType_IsSubtype(base, composed->py_type.get()))
                 {
                     if (PyType_IsSubtype(chain, base))
                     {
@@ -787,7 +787,8 @@ namespace py::interp
 
                 if (composed_class_of(base))
                 {
-                    auto const* const first = chain == cls ? composed->py_type : chain;
+                    auto const* const first
+                        = chain == cls ? composed->py_type.get() : chain;
 
                     PyErr_Format(
                         PyExc_TypeError,
@@ -991,7 +992,8 @@ namespace py::interp
         // as the first one the most derived class declares does in C++/WinRT.
         type_entry* named{};
 
-        for (auto* base_type = entry.py_type; base_type; base_type = base_type->tp_base)
+        for (auto* base_type = entry.py_type.get(); base_type;
+             base_type = base_type->tp_base)
         {
             auto* const base = find_type_entry(base_type);
             if (!base)

@@ -31,6 +31,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace py::interp
@@ -197,7 +198,7 @@ namespace py::interp
 
         // A wrapper of exactly the type asked for already holds the interface
         // it is asked for, which for a class is its default one.
-        if (info && Py_IS_TYPE(obj, info->py_type))
+        if (info && Py_IS_TYPE(obj, info->py_type.get()))
         {
             static_cast<::IUnknown*>(abi)->AddRef();
             return abi;
@@ -370,7 +371,7 @@ namespace py::interp
             // composes it, with the arguments given there, or else
             // compose_after_init(), with the arguments of the call, once
             // __init__ has returned without doing so.
-            if (info && type != info->py_type && type->tp_init != class_init)
+            if (info && type != info->py_type.get() && type->tp_init != class_init)
             {
                 return type->tp_alloc(type, 0);
             }
@@ -387,7 +388,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            if (type != info->py_type)
+            if (type != info->py_type.get())
             {
                 pyobj_handle self{type->tp_alloc(type, 0)};
                 if (!self)
@@ -507,7 +508,7 @@ namespace py::interp
 
             try
             {
-                return wrap_abi(info->py_type, unwrap_abi(arg, info->guid));
+                return wrap_abi(info->py_type.get(), unwrap_abi(arg, info->guid));
             }
             catch (...)
             {
@@ -531,7 +532,8 @@ namespace py::interp
             if (type->tp_base == &PyBaseObject_Type)
             {
                 WINRT_ASSERT(
-                    find_type_entry(type) && find_type_entry(type)->implements == type);
+                    find_type_entry(type)
+                    && find_type_entry(type)->implements.get() == type);
 
                 pyobj_handle name{PyType_GetName(type)};
                 if (!name)
@@ -689,7 +691,7 @@ namespace py::interp
             return true;
         }
 
-        if (type == info->py_type)
+        if (type == info->py_type.get())
         {
             return true;
         }
@@ -809,9 +811,9 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = type.detach();
+        entry.py_type = std::move(type);
 
-        if (!remember(entry, entry.py_type))
+        if (!remember(entry, entry.py_type.get()))
         {
             return false;
         }
@@ -854,19 +856,19 @@ namespace py::interp
             return false;
         }
 
-        entry.implements = implements.detach();
+        entry.implements = std::move(implements);
 
-        if (!remember(entry, entry.implements))
+        if (!remember(entry, entry.implements.get()))
         {
             return false;
         }
 
-        if (!bind_methods(collected, entry.py_type, nullptr))
+        if (!bind_methods(collected, entry.py_type.get(), nullptr))
         {
             return false;
         }
 
-        return bind_protocol_methods(record, entry.py_type);
+        return bind_protocol_methods(record, entry.py_type.get());
     }
 
     /**
@@ -1015,25 +1017,25 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = type.detach();
-        entry.statics = statics.detach();
+        entry.py_type = std::move(type);
+        entry.statics = std::move(statics);
 
-        if (!remember(entry, entry.py_type))
+        if (!remember(entry, entry.py_type.get()))
         {
             return false;
         }
 
-        if (entry.statics && !remember(entry, entry.statics))
+        if (entry.statics && !remember(entry, entry.statics.get()))
         {
             return false;
         }
 
-        if (!bind_methods(collected, entry.py_type, metaclass))
+        if (!bind_methods(collected, entry.py_type.get(), metaclass))
         {
             return false;
         }
 
-        return bind_protocol_methods(record, entry.py_type);
+        return bind_protocol_methods(record, entry.py_type.get());
     }
 
     /**
@@ -1295,7 +1297,7 @@ namespace
 
         // The metaclass that carries a class's statics is remembered with the
         // class's entry, and no value is of it.
-        if (type == info->statics)
+        if (type == info->statics.get())
         {
             return not_an_object_type(name);
         }
@@ -1329,7 +1331,7 @@ namespace
             }
         }
 
-        return py::interp::wrap_abi(info.py_type, abi);
+        return py::interp::wrap_abi(info.py_type.get(), abi);
     }
 
     /**
@@ -1773,7 +1775,7 @@ namespace py::cpp::_winrt
         if (auto const iid_class = runtime_class_of(iid_obj))
         {
             auto const iid_type = reinterpret_cast<PyTypeObject*>(iid_obj);
-            if (iid_type == iid_class->py_type)
+            if (iid_type == iid_class->py_type.get())
             {
                 PyErr_Format(
                     PyExc_TypeError,
@@ -1788,7 +1790,7 @@ namespace py::cpp::_winrt
                 "get_activation_factory() takes an interface or a uuid.UUID, "
                 "not '%s', a subclass of the runtime class '%s'",
                 iid_type->tp_name,
-                iid_class->py_type->tp_name);
+                iid_class->py_type.get()->tp_name);
             return nullptr;
         }
 

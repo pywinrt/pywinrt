@@ -1530,7 +1530,7 @@ namespace py::interp
         switch (info->category)
         {
         case table::category::class_:
-            if (type != info->py_type)
+            if (type != info->py_type.get())
             {
                 return true;
             }
@@ -1542,7 +1542,7 @@ namespace py::interp
 
             break;
         case table::category::interface_:
-            if (type != info->implements)
+            if (type != info->implements.get())
             {
                 return true;
             }
@@ -1550,7 +1550,7 @@ namespace py::interp
             break;
         case table::category::struct_:
         case table::category::enum_:
-            if (type != info->py_type)
+            if (type != info->py_type.get())
             {
                 return true;
             }

@@ -326,7 +326,7 @@ namespace py::interp
         // takes an entry with a vtable to be built, and a build that failed
         // part of the way would otherwise leave one with no type behind.
         entry.reverse = std::move(reverse);
-        entry.py_type = type.detach();
+        entry.py_type = std::move(type);
 
         return true;
     }

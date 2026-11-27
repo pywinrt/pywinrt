@@ -28,6 +28,7 @@
 #include <functional>
 #include <memory>
 #include <utility>
+#include <vector>
 
 namespace py::cpp::_winrt
 {
@@ -41,7 +42,7 @@ namespace py::cpp::_winrt
         py::interp::type_entry const& info, PyObject* cls) noexcept
     {
         return info.category == py::table::category::interface_
-               && reinterpret_cast<PyTypeObject*>(cls) == info.py_type;
+               && reinterpret_cast<PyTypeObject*>(cls) == info.py_type.get();
     }
 
     /**
@@ -81,7 +82,7 @@ namespace py::cpp::_winrt
 
             // The metaclass that carries a class's statics is remembered with
             // the class's entry, and it implements nothing.
-            if (reinterpret_cast<PyTypeObject*>(base) == entry->statics)
+            if (reinterpret_cast<PyTypeObject*>(base) == entry->statics.get())
             {
                 continue;
             }
@@ -900,14 +901,21 @@ namespace py::cpp::_winrt
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
 
-        state->object_meta_type.close();
-        state->object_type.close();
-        state->array_type.close();
-        state->mapping_iter_type.close();
-        state->projected_method_type.close();
-        state->to_uuid_func.close();
-        state->uuid_type.close();
-        Py_CLEAR(state->wrap_async_func);
+        // Everything is moved out of the state first and let go of when this
+        // returns, as Py_CLEAR() empties its argument before it lets go.
+        // Letting go of an object can run Python code, which then finds the
+        // state empty, and none runs while the projections are walked below,
+        // which that code could change.
+        py::pytype_handle const object_meta_type{std::move(state->object_meta_type)};
+        py::pytype_handle const object_type{std::move(state->object_type)};
+        py::pytype_handle const array_type{std::move(state->array_type)};
+        py::pytype_handle const mapping_iter_type{std::move(state->mapping_iter_type)};
+        py::pytype_handle const projected_method_type{
+            std::move(state->projected_method_type)};
+        py::pyobj_handle const to_uuid_func{std::move(state->to_uuid_func)};
+        py::pytype_handle const uuid_type{std::move(state->uuid_type)};
+        py::pyobj_handle const wrap_async_func{
+            std::exchange(state->wrap_async_func, nullptr)};
 
         // Nothing here takes the cache lock, and traverse and free do not
         // either. The collector calls them with the world stopped on a
@@ -915,16 +923,33 @@ namespace py::cpp::_winrt
         // let go of it.
         //
         // The types a projection built hold descriptors that point back at it,
-        // so letting go of them here is what breaks the cycle. The descriptors
+        // so letting go of them is what breaks the cycle. The descriptors
         // themselves are freed with the state, below, because a type that
         // outlives this call still has them bound.
         state->type_entries.clear();
         state->generic_types.clear();
 
+        std::vector<py::pytype_handle> types;
+        std::vector<py::pyobj_handle> failures;
+
         for (auto& [name, projection] : state->projections)
         {
-            py::interp::release_types(*projection);
-            projection->failure.close();
+            py::interp::take_types(*projection, types);
+
+            if (!projection->failure)
+            {
+                continue;
+            }
+
+            // A failure that cannot be moved stays with its projection, which
+            // lets go of it when the state is freed.
+            try
+            {
+                failures.push_back(std::move(projection->failure));
+            }
+            catch (...)
+            {
+            }
         }
 
         // Its references are released as it goes out of scope, with the map

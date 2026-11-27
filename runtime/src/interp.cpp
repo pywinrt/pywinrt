@@ -397,7 +397,7 @@ namespace py::interp
             return &entry;
         }
 
-        auto* const definition = find_type_entry(entry.py_type);
+        auto* const definition = find_type_entry(entry.py_type.get());
 
         return definition ? definition : &entry;
     }
@@ -647,7 +647,7 @@ namespace py::interp
         {
             entry.owner = &owner;
             entry.index = type;
-            entry.py_type = reinterpret_cast<PyTypeObject*>(Py_NewRef(py_type));
+            entry.py_type.attach(reinterpret_cast<PyTypeObject*>(Py_NewRef(py_type)));
             entry.category = record.get_category();
             entry.parameterized
                 = (record.flags() & table::type_flags::parameterized) != 0;
@@ -840,7 +840,7 @@ namespace py::interp
                 throw python_exception();
             }
 
-            auto const borrowed = Py_IS_TYPE(value, info->py_type);
+            auto const borrowed = Py_IS_TYPE(value, info->py_type.get());
             auto const storage = in_storage(arg, frame);
 
             struct_from_python(*info, value, storage);
@@ -867,8 +867,9 @@ namespace py::interp
 
                 // One that came out of WinRT goes back as itself rather than
                 // as a Python callable wrapped in a second delegate.
-                abi = Py_IS_TYPE(value, info->py_type) ? unwrap_abi(value, info->guid)
-                                                       : make_delegate(*info, value);
+                abi = Py_IS_TYPE(value, info->py_type.get())
+                          ? unwrap_abi(value, info->guid)
+                          : make_delegate(*info, value);
 
                 if (!abi)
                 {
@@ -977,11 +978,12 @@ namespace py::interp
                         return nullptr;
                     }
 
-                    return PyLong_Type.tp_new(info->py_type, token_args.get(), nullptr);
+                    return PyLong_Type.tp_new(
+                        info->py_type.get(), token_args.get(), nullptr);
                 }
 
                 return PyObject_CallOneArg(
-                    reinterpret_cast<PyObject*>(info->py_type), value.get());
+                    reinterpret_cast<PyObject*>(info->py_type.get()), value.get());
             }
             case table::type_code::interface_:
             case table::type_code::class_:
@@ -1013,10 +1015,10 @@ namespace py::interp
 
                 if (arg.query_interface)
                 {
-                    return wrap_activated_abi(info->py_type, info->guid, abi);
+                    return wrap_activated_abi(info->py_type.get(), info->guid, abi);
                 }
 
-                return wrap_abi(info->py_type, abi);
+                return wrap_abi(info->py_type.get(), abi);
             }
             case table::type_code::reference:
             {

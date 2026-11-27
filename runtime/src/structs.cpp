@@ -253,7 +253,7 @@ namespace py::interp
 
                 struct_from_python(*info, value, slot);
 
-                if (Py_IS_TYPE(value, info->py_type))
+                if (Py_IS_TYPE(value, info->py_type.get()))
                 {
                     // A nested struct copied out of a wrapper is borrowed, and
                     // this field has to own what it holds.
@@ -379,7 +379,7 @@ namespace py::interp
     {
         throw_if_pyobj_null(obj);
 
-        if (Py_IS_TYPE(obj, info.py_type))
+        if (Py_IS_TYPE(obj, info.py_type.get()))
         {
             std::memcpy(
                 out,
@@ -398,7 +398,7 @@ namespace py::interp
             PyErr_Format(
                 PyExc_TypeError,
                 "expected '%s' or a tuple of its fields, not '%s'",
-                info.py_type ? info.py_type->tp_name : info.winrt_name,
+                info.py_type ? info.py_type.get()->tp_name : info.winrt_name,
                 Py_TYPE(obj)->tp_name);
             throw python_exception();
         }
@@ -408,7 +408,7 @@ namespace py::interp
             PyErr_Format(
                 PyExc_TypeError,
                 "'%s' has %zd fields, not %zd",
-                info.py_type ? info.py_type->tp_name : info.winrt_name,
+                info.py_type ? info.py_type.get()->tp_name : info.winrt_name,
                 static_cast<Py_ssize_t>(info.fields.size()),
                 PyTuple_GET_SIZE(obj));
             throw python_exception();
@@ -440,7 +440,7 @@ namespace py::interp
      */
     PyObject* struct_take_python(type_entry& info, void* blob) noexcept
     {
-        auto const self = info.py_type->tp_alloc(info.py_type, 0);
+        auto const self = info.py_type.get()->tp_alloc(info.py_type.get(), 0);
         if (!self)
         {
             return nullptr;
@@ -460,7 +460,7 @@ namespace py::interp
      */
     PyObject* struct_to_python(type_entry& info, void const* blob) noexcept
     {
-        auto const self = info.py_type->tp_alloc(info.py_type, 0);
+        auto const self = info.py_type.get()->tp_alloc(info.py_type.get(), 0);
         if (!self)
         {
             return nullptr;
@@ -512,7 +512,7 @@ namespace py::interp
                 PyErr_Format(
                     PyExc_TypeError,
                     "'%s' takes at most %zd arguments",
-                    info.py_type->tp_name,
+                    info.py_type.get()->tp_name,
                     static_cast<Py_ssize_t>(info.fields.size()));
                 return false;
             }
@@ -556,7 +556,7 @@ namespace py::interp
                         PyErr_Format(
                             PyExc_TypeError,
                             "'%s' got two values for '%U'",
-                            info.py_type->tp_name,
+                            info.py_type.get()->tp_name,
                             key);
                         return false;
                     }
@@ -571,7 +571,7 @@ namespace py::interp
                     PyErr_Format(
                         PyExc_TypeError,
                         "'%s' has no field '%U'",
-                        info.py_type->tp_name,
+                        info.py_type.get()->tp_name,
                         key);
                     return false;
                 }
@@ -756,7 +756,7 @@ namespace py::interp
 
             pyobj_handle theirs{};
 
-            if (Py_IS_TYPE(other, info->py_type))
+            if (Py_IS_TYPE(other, info->py_type.get()))
             {
                 theirs = struct_as_tuple(other, *info);
                 if (!theirs)
@@ -818,7 +818,7 @@ namespace py::interp
                 return nullptr;
             }
 
-            pyobj_handle copy{info->py_type->tp_alloc(info->py_type, 0)};
+            pyobj_handle copy{info->py_type.get()->tp_alloc(info->py_type.get(), 0)};
             if (!copy)
             {
                 return nullptr;
@@ -903,7 +903,7 @@ namespace py::interp
                         PyErr_Format(
                             PyExc_TypeError,
                             "'%s' has no field '%U'",
-                            info->py_type->tp_name,
+                            info->py_type.get()->tp_name,
                             key);
                         return nullptr;
                     }
@@ -1182,10 +1182,10 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = type.detach();
-        entry.statics = statics.detach();
+        entry.py_type = std::move(type);
+        entry.statics = std::move(statics);
 
-        return remember(entry, entry.py_type);
+        return remember(entry, entry.py_type.get());
     }
 
     namespace
@@ -1301,8 +1301,8 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = type.detach();
+        entry.py_type = std::move(type);
 
-        return remember(entry, entry.py_type);
+        return remember(entry, entry.py_type.get());
     }
 } // namespace py::interp

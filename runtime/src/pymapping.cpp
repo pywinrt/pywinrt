@@ -257,7 +257,7 @@ namespace py::interp
                     auto entry = pair(slot);
 
                     pyobj_handle wrapper{wrap_abi(
-                        entry.info->py_type,
+                        entry.info->py_type.get(),
                         build_collection(
                             *entry.info, std::move(entry.calls), entry.info->guid))};
 

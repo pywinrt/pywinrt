@@ -318,7 +318,7 @@ namespace py::interp
         type_entry* cache{};
         auto const info = resolve(proj, index, cache);
 
-        return info ? info->py_type : nullptr;
+        return info ? info->py_type.get() : nullptr;
     }
 
     /**
@@ -493,7 +493,7 @@ namespace py::interp
     {
         auto const entry = ensure_entry(proj, index);
 
-        return entry ? entry->py_type : nullptr;
+        return entry ? entry->py_type.get() : nullptr;
     }
 
     /**
@@ -584,7 +584,7 @@ namespace py::interp
     {
         auto const entry = find_registered_entry(qualified_name);
 
-        return entry ? entry->py_type : nullptr;
+        return entry ? entry->py_type.get() : nullptr;
     }
 
     /**
@@ -836,19 +836,42 @@ namespace py::interp
     }
 
     /**
-     * Lets go of the Python types @p proj built, which is what breaks the
-     * cycle between a type and the descriptors bound to it. The descriptors
-     * themselves stay until the module state is freed, because a type that
-     * outlives this call still has them bound, and so do the names they
-     * answer to.
+     * Moves the Python types @p proj built into @p types, for the caller to
+     * let go of once it has finished with every projection. Letting go of a
+     * type can run Python code, which can change the projections, and it is
+     * what breaks the cycle between a type and the descriptors bound to it.
+     * The descriptors themselves stay until the module state is freed,
+     * because a type that outlives the caller still has them bound, and so do
+     * the names they answer to.
+     *
+     * A type stays with its entry when @p types cannot grow to take it, and
+     * the entry lets go of it when the state is freed.
      */
-    void release_types(projection& proj) noexcept
+    void take_types(projection& proj, std::vector<pytype_handle>& types) noexcept
     {
-        for (auto& entry : proj.types)
+        try
         {
-            Py_CLEAR(entry.py_type);
-            Py_CLEAR(entry.statics);
-            Py_CLEAR(entry.implements);
+            for (auto& entry : proj.types)
+            {
+                if (entry.py_type)
+                {
+                    types.push_back(std::move(entry.py_type));
+                }
+
+                if (entry.statics)
+                {
+                    types.push_back(std::move(entry.statics));
+                }
+
+                if (entry.implements)
+                {
+                    types.push_back(std::move(entry.implements));
+                }
+            }
+        }
+        catch (...)
+        {
+            // push_back() moves nothing when it cannot grow the vector.
         }
     }
 } // namespace py::interp

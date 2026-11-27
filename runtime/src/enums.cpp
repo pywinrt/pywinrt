@@ -162,8 +162,8 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = reinterpret_cast<PyTypeObject*>(type.detach());
+        entry.py_type.attach(reinterpret_cast<PyTypeObject*>(type.detach()));
 
-        return remember(entry, entry.py_type);
+        return remember(entry, entry.py_type.get());
     }
 } // namespace py::interp

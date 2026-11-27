@@ -312,14 +312,20 @@ namespace py::interp
         /// against a census without its call shape - and they want different
         /// errors, so the flag is kept rather than the table consulted.
         bool parameterized;
+        // The three types are owned. take_types() moves them out when the
+        // module is cleared, for the clear to let go of ahead of the
+        // descriptors bound to them, and an entry is destroyed only with the
+        // module state, which the module's free does on a thread attached to
+        // the interpreter.
+
         /// The wrapper type, which for an interface is the one bound to the
         /// underscored name.
-        PyTypeObject* py_type;
-        /// The metaclass that carries the statics of a class, or @c nullptr.
-        PyTypeObject* statics;
+        py::pytype_handle py_type;
+        /// The metaclass that carries the statics of a class, or empty.
+        py::pytype_handle statics;
         /// The abstract type a Python implementation of an interface derives
-        /// from, bound to the interface's public name, or @c nullptr.
-        PyTypeObject* implements;
+        /// from, bound to the interface's public name, or empty.
+        py::pytype_handle implements;
         /// The IID that an instance of @c py_type holds a pointer to: the
         /// interface itself, or a class's default interface. @c nullptr for a
         /// static class, a struct, an enum or a delegate.
@@ -381,7 +387,6 @@ namespace py::interp
         /// Borrowed: the module's dict is what the types are put into, and the
         /// module owns them.
         PyObject* module;
-        std::vector<type_entry> types;
         /// The types this namespace defines, by the name they are bound to.
         std::unordered_map<std::string_view, uint32_t> by_py_name;
         /// Names that a descriptor points at and the table does not spell:
@@ -402,6 +407,10 @@ namespace py::interp
         std::vector<std::unique_ptr<PyMethodDef[]>> method_defs;
         /// Interned attribute names, kept alive for the descriptors.
         std::vector<py::pyobj_handle> names;
+        /// Declared after the descriptors and the names, so that a type an
+        /// entry still holds when the projection is destroyed goes before what
+        /// is bound to it.
+        std::vector<type_entry> types;
         /// The thread that is executing the package's __init__.py, which
         /// builds every type the namespace binds.
         unsigned long loader;

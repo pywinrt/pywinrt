@@ -29,6 +29,7 @@
 
 #include <cstdint>
 #include <string_view>
+#include <utility>
 #include <vector>
 
 namespace py::interp
@@ -209,7 +210,7 @@ namespace py::interp
 
         if (auto const built = find_instance_type(record.signature()))
         {
-            entry.py_type = reinterpret_cast<PyTypeObject*>(Py_NewRef(built));
+            entry.py_type.attach(reinterpret_cast<PyTypeObject*>(Py_NewRef(built)));
             publish(entry.ready, true);
 
             return true;
@@ -281,9 +282,15 @@ namespace py::interp
             return false;
         }
 
-        entry.py_type = remembered == type.get()
-                            ? type.detach()
-                            : reinterpret_cast<PyTypeObject*>(Py_NewRef(remembered));
+        if (remembered == type.get())
+        {
+            entry.py_type = std::move(type);
+        }
+        else
+        {
+            entry.py_type.attach(
+                reinterpret_cast<PyTypeObject*>(Py_NewRef(remembered)));
+        }
 
         publish(entry.ready, true);
 

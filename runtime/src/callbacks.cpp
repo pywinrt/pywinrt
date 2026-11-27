@@ -402,7 +402,7 @@ namespace py::interp
                 throw python_exception();
             }
 
-            auto const abi = Py_IS_TYPE(value, info->py_type)
+            auto const abi = Py_IS_TYPE(value, info->py_type.get())
                                  ? unwrap_abi(value, info->guid)
                                  : make_delegate(*info, value);
 
@@ -426,7 +426,7 @@ namespace py::interp
             // Python object it belongs to goes on holding what is in it, so
             // the strings and interface pointers of the copy are its own. One
             // built from a tuple already owns what store_field() put in it.
-            auto const borrowed = Py_IS_TYPE(value, info->py_type);
+            auto const borrowed = Py_IS_TYPE(value, info->py_type.get());
 
             struct_from_python(*info, value, storage);
 
