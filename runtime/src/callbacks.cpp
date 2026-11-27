@@ -9,8 +9,7 @@
 // handed over.
 //
 // A Python exception has nowhere to be raised, because WinRT is the caller. It
-// goes to sys.unraisablehook and WinRT is told that one happened, which is
-// what a generated delegate did too.
+// goes to sys.unraisablehook and WinRT is told that one happened.
 
 #include <Python.h>
 

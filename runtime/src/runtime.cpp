@@ -184,11 +184,11 @@ PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
         }
     }
 
-    // A projection package's types are built from its table rather than
-    // imported from an extension module, so the table is asked first. It is
-    // registered before a single type is built, which is what lets a namespace
-    // that two packages refer to each other through resolve while one of them
-    // is still executing its __init__.py.
+    // The tables are asked first. A package's table is registered before any
+    // of its types is built, which is what lets two packages that refer to
+    // each other resolve while one of them is still executing its
+    // __init__.py. A type that no table describes is looked up on its module
+    // below.
     if (auto from_table = py::interp::find_registered_type(qualified_name))
     {
         return remember_python_type(

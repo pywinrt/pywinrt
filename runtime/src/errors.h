@@ -4,7 +4,8 @@
 //
 // py::python_exception is the marker thrown once a Python error is already set,
 // so the unwinding path does not have to carry the error with it, and
-// py::to_PyErr() is the catch-all that every projected method ends with.
+// py::to_PyErr() is the catch-all that a function Python calls ends with, so
+// that no C++ exception leaves it.
 //
 // Which Python exception any of this becomes is decided in errors.cpp rather
 // than here: this header classifies what it caught into one of the PODs below

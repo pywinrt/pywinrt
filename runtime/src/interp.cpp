@@ -1,15 +1,16 @@
-// Making one WinRT call from the descriptors that types.cpp built.
+// Making one WinRT call from the descriptors that members.cpp built.
 //
-// Everything a generated thunk used to do in code, this does from data: it
+// The call is made from data rather than from code written for the member: it
 // fills the argument buffer the trampoline reads, queries the object for the
 // interface that declares the member, calls the vtable slot with the GIL
 // released, and converts the outputs back. Which conversion to run is decided
 // by the parameter's type code, which is the only thing the table says about
 // it.
 //
-// The conversions themselves are the ones in convert.h, so a value crosses the
-// boundary the same way here as it did through a thunk. What is new is the
-// switch that picks one.
+// A scalar, an enum, a string, a GUID or a time is converted by convert.h. An
+// object, a struct, a delegate or an IReference is converted by the file that
+// knows that kind of type: objects.cpp, structs.cpp, delegates.cpp or
+// generics.cpp. What this file adds is the switch that picks one.
 
 // keeps <windows.h> from defining min and max as macros
 #ifndef NOMINMAX
@@ -2087,9 +2088,9 @@ namespace py::interp
             }
 
             // The return value comes first and the declared outputs follow in
-            // order, which is what the stubs say and what the generated thunks
-            // packed - the metadata puts the return value last, so this is the
-            // one place the two orders differ.
+            // order, which is what the stubs say - the metadata puts the
+            // return value last, so this is the one place the two orders
+            // differ.
             pyobj_handle result{};
 
             if (overload.out_count != 1)

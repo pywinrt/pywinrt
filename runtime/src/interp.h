@@ -1,12 +1,12 @@
 // Calling a WinRT member that a projection table describes, and the
 // descriptors every other file here is written in terms of.
 //
-// A projection package says what its members are and no longer how to call
-// them, so the descriptors below are what members.cpp builds out of a table
-// once, at import, and what interp.cpp reads on every call. They hold what the
-// call path would otherwise have to look up again each time: where each
-// argument sits in the buffer the trampoline reads, which interface the object
-// has to be queried for, and which Python type a wrapped value belongs to.
+// A projection package says what its members are and not how to call them, so
+// the descriptors below are what members.cpp builds out of a table once, at
+// import, and what interp.cpp reads on every call. They hold what the call path
+// would otherwise have to look up again each time: where each argument sits in
+// the buffer the trampoline reads, which interface the object has to be queried
+// for, and which Python type a wrapped value belongs to.
 //
 // The table itself stays the source of truth. Nothing here is written down
 // twice: a descriptor is a resolved view of the records in table.h, and
@@ -357,10 +357,10 @@ namespace py::interp
         uint32_t blob_offset;
         std::vector<field_desc> fields;
         /// Whether any field holds a string or an interface pointer, so that
-        /// copying or releasing this struct is more than a memcpy. A wrapper no
-        /// longer holds a C++ value whose constructor and destructor did that,
-        /// so a blittable struct is told apart here instead: it gets the dealloc
-        /// that only frees the object.
+        /// copying or releasing this struct is more than a memcpy. A wrapper
+        /// holds the struct's bytes, with no C++ constructor or destructor to
+        /// copy or release them, so a blittable struct is told apart here:
+        /// it gets the dealloc that only frees the object.
         bool owns_resources;
         /// Which of the Windows.Foundation.Numerics structs this is, for the
         /// arithmetic on them that no metadata describes. numerics.h says what

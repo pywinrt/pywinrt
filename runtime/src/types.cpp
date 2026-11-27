@@ -1,12 +1,11 @@
 // Loading one namespace's projection table and making its Python types.
 //
-// A projection package ships a table and no compiled code, so the types its
-// __init__.py used to import from an extension module are created here instead,
-// straight into the package's own module. This file is the part that is the
-// same whatever kind of type it is: mapping the table, keeping track of what
-// has been built, and finding a type by name. What a class, an interface, a
-// struct or an enum actually is belongs to objects.cpp, structs.cpp and
-// enums.cpp, and the members bound to them to members.cpp.
+// A projection package ships a table and no compiled code, so its types are
+// created here, straight into the package's own module. This file is the part
+// that is the same whatever kind of type it is: mapping the table, keeping
+// track of what has been built, and finding a type by name. What a class, an
+// interface, a struct or an enum actually is belongs to objects.cpp,
+// structs.cpp and enums.cpp, and the members bound to them to members.cpp.
 //
 // A table is mapped once per process and never unmapped, because the names and
 // descriptors built from it point into it and a type outlives the import that

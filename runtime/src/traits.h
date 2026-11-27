@@ -25,9 +25,9 @@ namespace py
      * Gets the WinRT name of @p T as a NUL-terminated UTF-8 string suitable
      * for the "%s" conversion of PyErr_Format().
      *
-     * This is used instead of typeid(T).name() so that the projection does not
-     * need RTTI (the type descriptors it emits cost about 15% of the size of a
-     * module). A WinRT name also reads better in an error message than an MSVC
+     * This is used instead of typeid(T).name() so that the runtime can be built
+     * without RTTI, whose type descriptors would only make the module larger.
+     * A WinRT name also reads better in an error message than an MSVC
      * mangled name.
      */
     template<typename T>

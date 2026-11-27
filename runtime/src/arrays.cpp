@@ -2,11 +2,10 @@
 //
 // The elements a caller passes or lends are never copied: they are borrowed
 // from a Python object that exports a buffer whose format and item size match
-// the element type exactly, which is how the generated projection read one
-// too. Only the elements a call hands back are owned here, and they are owned
-// the way winrt::com_array owns them - allocated by CoTaskMemAlloc, each
-// string and interface pointer released one by one - because that is what the
-// callee allocated them as.
+// the element type exactly. Only the elements a call hands back are owned here,
+// and they are owned the way winrt::com_array owns them - allocated by
+// CoTaskMemAlloc, each string and interface pointer released one by one -
+// because that is what the callee allocated them as.
 //
 // The element conversions themselves are the ones every other value goes
 // through, in interp.cpp and callbacks.cpp. What this file adds is the buffer
@@ -105,8 +104,7 @@ namespace py::interp
          * Appends the PEP 3118 format of one value to @p out.
          *
          * A struct is spelled out field by field, each one named, which is
-         * what memoryview shows and what the generated projection wrote down
-         * per struct.
+         * what memoryview shows.
          *
          * @returns @c false with a Python error set.
          */

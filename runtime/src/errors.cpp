@@ -359,10 +359,9 @@ void py::set_error(py::error_info const& info) noexcept
 
     case error_kind::unknown:
     default:
-        // Nothing that is thrown on purpose lands here. Reaching it means an
-        // exception of a type the projection does not know about escaped a
-        // WinRT call, which used to terminate the process on the way out of
-        // the noexcept function that caught it.
+        // Nothing that is thrown on purpose lands here. It is reached from the
+        // catch (...) in py::to_PyErr(), for an exception of a type the
+        // runtime does not know about.
         PyErr_SetString(
             PyExc_RuntimeError, "a C++ exception of an unknown type was thrown");
         break;

@@ -1,11 +1,10 @@
 // Reading a projection table.
 //
 // A projection package ships one _table.pywinrt per WinRT namespace and no
-// compiled code at all, so everything a namespace used to say in C++ - its
-// types, their members, the vtable slots those members sit in, and what to
-// convert each argument as - is in there. The format is written up in
-// table-format.md; this is the reader, and table.cpp is the only place that
-// knows the byte offsets.
+// compiled code at all, so everything about a namespace - its types, their
+// members, the vtable slots those members sit in, and what to convert each
+// argument as - is in there. The format is written up in table-format.md. This
+// is the reader, and table.cpp is the only place that knows the byte offsets.
 //
 // It also declares read_table(), which is winrt._winrt.read_table().
 //

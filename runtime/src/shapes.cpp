@@ -3,7 +3,7 @@
 // shapes-generated.h is a census of every ABI call shape in the metadata the
 // tree projects, and including it emits one trampoline per shape. That is a
 // few hundred small functions, so it is compiled once, here, and everything
-// else reaches them through the two accessors below.
+// else reaches them through the accessors below.
 
 #include <Python.h>
 

@@ -3,8 +3,8 @@
 # Python ships the C runtime next to python3xx.dll and the UCRT is an operating
 # system component, but the C++ standard library is neither, so a module that
 # imports MSVCP140.dll fails to load on any machine where the Visual C++
-# redistributable was never installed. No wheel carries a copy of it any more -
-# runtime/src/throw_helpers.h is what keeps the import out.
+# redistributable was never installed. No wheel carries a copy of it, and
+# runtime/src/throw_helpers.h is what keeps the import out of the runtime.
 #
 # This is worth checking mechanically because the dependency appears in no build
 # file. It arrives through an #include and a use of a standard container that
@@ -53,9 +53,9 @@ foreach (import IN LISTS imports)
             "${MODULE} imports ${import}.\n"
             "Python does not ship the C++ runtime, so this module would fail to "
             "load wherever the Visual C++ redistributable is not installed. "
-            "Something here now uses a part of the standard library that is not "
-            "header-only - see runtime/src/throw_helpers.h, which covers the "
-            "parts the projection used to need."
+            "This module uses a part of the standard library that is not "
+            "header-only. runtime/src/throw_helpers.h shows how the runtime "
+            "keeps the two helpers its containers call out of the import table."
         )
     endif()
 
