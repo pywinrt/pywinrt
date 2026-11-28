@@ -706,29 +706,6 @@ namespace py::interp
         }
 
         /**
-         * The WinRT class @p type is composed into: the first one its chain of
-         * bases reaches.
-         */
-        type_entry* composed_class_of(PyTypeObject* type) noexcept
-        {
-            for (auto* base = type; base; base = base->tp_base)
-            {
-                auto* const entry = find_type_entry(base);
-                if (!entry)
-                {
-                    continue;
-                }
-
-                if (entry->category == table::category::class_)
-                {
-                    return entry;
-                }
-            }
-
-            return nullptr;
-        }
-
-        /**
          * Refuses @p cls unless every base it adds to the WinRT class it is
          * composed into is a WinRT interface, which the object implements
          * itself. That class's own bases, and the Python classes already
@@ -737,7 +714,7 @@ namespace py::interp
          */
         bool check_composed_bases(PyTypeObject* cls) noexcept
         {
-            auto const* const composed = composed_class_of(cls);
+            auto const* const composed = class_of(cls);
             if (!composed)
             {
                 return true;
@@ -785,7 +762,7 @@ namespace py::interp
                     }
                 }
 
-                if (composed_class_of(base))
+                if (class_of(base))
                 {
                     auto const* const first
                         = chain == cls ? composed->py_type.get() : chain;

@@ -73,16 +73,9 @@ namespace py::interp
         return abi;
     }
 
+    type_entry* class_of(PyTypeObject* type) noexcept;
+
     bool compose_after_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept;
-
-    /**
-     * The name every interface pointer capsule carries. A capsule of this
-     * name holds one reference to a COM interface, which its destructor
-     * releases, and is how compiled code outside the runtime hands one over.
-     */
-    inline constexpr char interface_capsule_name[] = "winrt.interface";
-
-    PyObject* new_interface_capsule(void* abi) noexcept;
 
     PyObject* wrap_abi(PyTypeObject* type, void* abi) noexcept;
 
@@ -101,6 +94,8 @@ namespace py::interp
 
     PyObject* deprecated_from(PyObject* cls, PyObject* arg) noexcept;
 
+    PyObject* qualified_name_of(PyTypeObject* type) noexcept;
+
     PyObject* object_as(PyObject* self, PyObject* arg) noexcept;
 
     PyObject* iids_of(winrt::Windows::Foundation::IInspectable object) noexcept;
@@ -108,17 +103,6 @@ namespace py::interp
     PyObject* runtime_class_name_of(
         winrt::Windows::Foundation::IInspectable object) noexcept;
 } // namespace py::interp
-
-namespace py::cpp::_winrt
-{
-    PyObject* as_interface(PyObject* /*unused*/, PyObject* args) noexcept;
-
-    PyObject* get_activation_factory(PyObject* /*unused*/, PyObject* args) noexcept;
-
-    PyObject* wrap_interface(PyObject* /*unused*/, PyObject* args) noexcept;
-
-    PyObject* interface_pointer(PyObject* /*unused*/, PyObject* obj) noexcept;
-} // namespace py::cpp::_winrt
 
 namespace py
 {

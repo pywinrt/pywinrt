@@ -60,6 +60,7 @@ setup(
                 "src/generics.cpp",
                 "src/handles.cpp",
                 "src/implements.cpp",
+                "src/interop.cpp",
                 "src/interp.cpp",
                 "src/members.cpp",
                 "src/numerics-buffer.cpp",

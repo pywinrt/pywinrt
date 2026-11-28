@@ -12,7 +12,7 @@
 
 #include "errors.h"
 #include "handles.h"
-#include "objects.h"
+#include "interop.h"
 #include "prelude.h"
 
 #include <cstdint>
